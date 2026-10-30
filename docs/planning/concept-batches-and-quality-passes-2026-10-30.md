@@ -856,3 +856,23 @@ the executor's inside the order's authority or the next pass's amendment.
   (b), the platform's records are public and the critic may read them; reopen
   when a committed study states a relationship the platform's role skills or
   control records contradict.
+
+## Addendum of 23:17Z: item 6 of the block to core revised
+
+After the handoff the operator asked whether the rule the session took from
+their correction (D16) is this session's alone, why the kit does not already
+enforce it, and whether the block to core carries that ask (messages 6 and 7
+of the capture, SHA-256 `5f67acc054b1aef5db3935dbfc914b1997639afc058066f5b3f9962b0407630e`). The answers: the rule is durable only as
+role text in the operator record; the kit wraps a target order's publish
+through the worktree publish helper, which reads the registration and names
+the repository, but opens no pull request for the launchpad's own update and
+planning branches, which a session spells with raw `gh`; and item 6 asked
+core only for a README sentence. Item 6 is revised below to ask for the
+helper and the hook refusal; the pasted block in the handoff carries the
+revised text, and the register's C5 (`FUP-49dda4781fa64b25`) keeps the
+operator's own `gh repo set-default` as the setting that closes the gap in
+this clone today.
+
+```text
+6. A trap from today, and a kit ask: in a fork clone with an upstream remote, gh pr create, gh pr list and gh issue list without -R resolve the fork's parent repository (the starter), not the fork. The fork's session opened the update pull request as DylanBWood/DotLn-Enterprise-Starter#1 before reading the URL, closed it with a comment, and reopened it on the fork as #41; its earlier open-pull-request and open-issue reads had silently gone to the parent and reported nothing. The kit wraps a target order's publish (the worktree publish helper reads the registration and names the repository, and raw gh forms get no admission there) but not the launchpad's own branches: update and planning pull requests are opened by the session with raw gh, and the README's update route says only that the session opens a pull request against main. Ask: (a) a kit helper that opens the launchpad's own update and planning pull requests on origin's repository, as the target publish helper does for a registered target, so a session never spells gh for them; (b) a hook refusal, in a clone whose origin and upstream remotes differ, of gh pr and gh issue commands that name no repository, naming -R <origin repository> in the message; (c) until those land, one sentence in the README's update route naming -R <fork> or gh repo set-default as the way a fork's session names its own repository. The fork's operator record now carries the rule as role text (a denied outward command is diagnosed for its destination before any retry; every outward command names its repository); the fork cannot add the hook itself without drifting from the generated bundle. Blocks nothing; medium priority, because the failure is silent.
+```
