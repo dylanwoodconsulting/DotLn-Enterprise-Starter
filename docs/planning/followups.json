@@ -4423,6 +4423,13 @@
           "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
           "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator said a drained queue is the signal (message 1). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
           "missing": false
+        },
+        {
+          "hash": "e428aa3d6178030fdf1173ccde07f886fd4ebd7196b892c39ccdc60589ab4012",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
+          "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator named a drained queue as the signal (message 1, capture `8e8cdbeb…`). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
+          "missing": false
         }
       ],
       "dispositions": [
