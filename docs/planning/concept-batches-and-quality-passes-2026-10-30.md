@@ -693,6 +693,52 @@ host lanes held by another checkout. The commits: the subject `c690180`
 (22:51:48Z); then the receipt (the helper's commit) and the commit that
 carries the rest of this section.
 
+Refutation: one fresh `dotln-worker` (the default type; the dispatch line
+named no Fable worker), spawned in the background at 22:59:55Z with the
+canonical prompt the helper printed (`npm run plan -- refute`, pass scope,
+about 95 KB of JSON at base `58d48b6`) saved to the session scratch and the
+instruction to write the frozen JSON and a one-line statement to two files
+there, reading nothing else. Its statement names what it read: the prompt
+file in full and in parts and one listing of the scratch directory, whose
+other files it opened none of; no repository file, planning document,
+receipt, intake, web page or prior judgment; local python only to parse the
+prompt and check its result against the schema; no model tool, no
+repository write, no Git command, no subagent; model and effort not read
+back from the host, so the launch attestation is the parent's (the type's
+pins). It judged the seven orders and the sequence with the four road orders
+carried by hash and returned `aligned-with-findings` for every order and for
+the plan, with twenty-three known-issue findings and no hold (§Known issues
+below). Worker time 542 s, 136,552 worker tokens, 13 tool uses at the
+hand-back (23:08:57Z). The receipt helper refused the statement once for a
+private absolute path (the scratch path of the prompt file, `receipt.md:13`);
+the same worker rewrote the statement in place with the `<tmp>/` placeholder
+and no other change (12.6 s, 1,160 more tokens, 2 tool uses), and the helper
+filed the pair at the second attempt. The two files were copied unchanged
+into ignored intake (`docs/intake/refutation-2026-10-30-second/`; the
+result's SHA-256 `c7ce8f5e…` before and after, the statement's `97784207…`
+as first written and `5625349a…` as repaired). Receipt
+`2026-10-30-planning-18e7afc23edf14c3-015` (`docs/planning/refutations/`),
+worker type `dotln-worker`, scope `pass`, 802,483 ms from the dispatch
+marker to the file (13 min 22 s), judged subject `sha256:ffeabbca…` equal to
+the committed and workspace subjects, carried 4; the gate after it: 15
+receipts, 15 passes, no advisory; the helper's commit `eb4389d`.
+Dispositions: none needed (no hold). `npm run test:docs` after the receipt:
+14 passed (14 fresh suites, exit 0, under a minute with the lanes free);
+`npm run plan -- check` no advisory; `work-orders index --check` current on
+both pages.
+
+Session cost at the handoff (`node scripts/harness.mjs usage`, source
+`claude-transcript-message-usage`, scope `dispatch`) is recorded in the
+handoff response; one subagent of the cap of 20, 19 remaining. Wall-clock:
+the dispatch at 21:58:18Z; the preview at 22:07:06Z; the update's merge at
+22:09:38Z and its index commit at 22:14:14Z; the planning branch at about
+22:18Z; the mistaken pull request at 22:17:24Z, closed 22:20:52Z; #41 at
+22:20:54Z; the subject commit at 22:51:19Z; the refuter dispatched at
+22:59:55Z; the receipt at about 23:13Z.
+
+`npm run test:docs` and `npm run plan -- check` after the receipt, on the
+tree that carries this section, are reported in the pull request.
+
 ### Known issues from this pass's receipt
 
 The worker's twenty-three findings, every one a known issue and none a hold
