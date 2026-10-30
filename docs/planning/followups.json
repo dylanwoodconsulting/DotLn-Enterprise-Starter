@@ -3622,6 +3622,20 @@
           "reopenWhen": "The operator names enrichment as the next member or asks how the depth extends to the catalog; the pass that hears it files the authoring-system order with the backlog as data in the app and D030's work as a step.",
           "targets": [],
           "at": "2026-10-30T09:11:01.411Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D3 to D5 and §Register: the operator named the batches on 2026-10-30 (capture 8e8cdbeb…); the concept-enrichment program is filed as five target orders, WO-020 (the record, its check, the motion and timeline families, addressable readings, the studied marks and twenty movement studies) and WO-021 to WO-024 (twenty studies each for RxJS, the messaging patterns, the enterprise application patterns, and GEB with Team Topologies), a hundred concepts selected by the most-related rule.",
+          "reopenWhen": "The next hundred are cut when the operator drains the queue (the pass's C2); a defect in the record's shape after WO-020 merges is a new schema version.",
+          "targets": [
+            "WO-020",
+            "WO-021",
+            "WO-022",
+            "WO-023",
+            "WO-024"
+          ],
+          "at": "2026-10-30T22:48:30.593Z"
         }
       ]
     },
@@ -3654,6 +3668,14 @@
           "reopenWhen": "The operator asks for the search controls before WO-018, or the pass before WO-018 activates writes them in (then this row is settled onto that amendment).",
           "targets": [],
           "at": "2026-10-30T09:11:01.376Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D5: WO-020 adds only a studied facet to the existing work, kind and status facets; the explicit search controls (visible filtering and sorting, counts, active-filter removal, a preselected book the reader can keep or remove) stay WO-018's carry-in, written in by the pass before WO-018 activates, because the operator asked for a note, not a redesign.",
+          "reopenWhen": "The operator asks for the controls sooner, a concept-study batch's executor finds them needed to find studies, or the pass before WO-018 activates writes them in.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.667Z"
         }
       ]
     },
@@ -3694,6 +3716,14 @@
           "reopenWhen": "A starter release carries core's WO-207 (the preview or update --finish then names a derived instance file), or an update of this fork refuses or conflicts on an instance file the preview did not name.",
           "targets": [],
           "at": "2026-10-30T09:11:01.439Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D1 and §Requests to core item 7: update #41 (v0.103.1) carried README.md through the Git merge with no instance action declared, the fifth such carrier in two updates; reported to core for WO-207's row; WO-025 excludes README.md from its quality pass for the same reason (an instance edit would fork it from every later update).",
+          "reopenWhen": "WO-207 lands in a starter release (then the pass that takes it decides whether the instance owns its README), or an update refuses a template-derived file the fork edited.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.677Z"
         }
       ]
     },
@@ -3798,6 +3828,14 @@
           "reopenWhen": "A starter release carries core's WO-237; the pass that takes it names the seed in its update pull request and records the window the operator chooses.",
           "targets": [],
           "at": "2026-10-30T09:11:01.448Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §Core's answers item 6: v0.103.1 (core WO-239) does not carry WO-237, which is second in core's queue and takes WO-019's lost journals as evidence in its Observed gap; WO-015's release close of 2026-10-30 removed its worktrees and journals too, the second such loss here; the operator's window is set when the carrying release lands.",
+          "reopenWhen": "A starter release carries core's WO-237; the pass that takes it sets docs/control/budgets.json's retention for closed journals or records the operator's null.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.688Z"
         }
       ]
     },
@@ -4083,6 +4121,16 @@
           "reopenWhen": "The pass before WO-018 activates writes the carry-ins, or the mining-store order replaces the loader first, or the operator brings either change into an active order.",
           "targets": [],
           "at": "2026-10-30T09:11:01.393Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D5: addressable readings (ChildPaths.Reading = 'catalog/:toolId', Back and shared links return to a reading) and the Tools home rendered from catalog-summary.json, studies-summary.json and the persisted history without loading a work's chunk are WO-020's, the catalog's next order; removed from WO-018's carry-ins (WO-018 keeps D017's search controls).",
+          "reopenWhen": "WO-020's verification judges it; reopen if the mining-store order replaces the loader first.",
+          "targets": [
+            "WO-020"
+          ],
+          "at": "2026-10-30T22:48:30.616Z"
         }
       ]
     },
@@ -4107,6 +4155,16 @@
           "reopenWhen": "The enrichment program is filed (then this row is its carry-in), or a defect in the Arrive study's state or geometry appears (then the order that touches the study takes it).",
           "targets": [],
           "at": "2026-10-30T09:11:01.402Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D5: the Arrive study's maintainability work (geometry and prose values derived from the model, the facade as the single source of each section's open state, the study owning its focus, per-instance element ids) is WO-020's, in its visual families and study composite, named in its Design and Known issues.",
+          "reopenWhen": "WO-020's verification judges it; reopen on a defect in a study's state or geometry after WO-020 merges.",
+          "targets": [
+            "WO-020"
+          ],
+          "at": "2026-10-30T22:48:30.605Z"
         }
       ]
     },
@@ -4131,6 +4189,14 @@
           "reopenWhen": "Core answers the question, or a WO-015 criterion or the kit's completion starts to consume a launchpad complete row for a target order.",
           "targets": [],
           "at": "2026-10-30T09:11:01.420Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D2 and §Core's answers item 3: core answered on 2026-10-30 that a target order whose criteria name only its target gate and npm run test:docs owes no launchpad complete run at closeout (completion consumes rows only for the checks the criteria name; product 07 §Preflight before the full gate says so); core files WO-243 for one scope selection the role text, the integrate helper and completion read; until that release the fork's executors read the closeout sentence under WO-019-D031's reading.",
+          "reopenWhen": "Never on its own; the release that carries WO-243 is read by the pass that takes it.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.626Z"
         }
       ]
     },
@@ -4203,6 +4269,14 @@
           "reopenWhen": "npm run plan -- failures reports the first boundStops row, or a DispatchBoundAccepted event is recorded; the pass that reads it weighs the observed stop against the session it interrupted and records the fork's values in docs/control/budgets.json with a dated acceptance or keeps the seed with its reason.",
           "targets": [],
           "at": "2026-10-30T09:11:01.457Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D11: the first acceptance was observed (WO-015's two DispatchBoundAccepted events of 2026-10-30T14:01Z, both metrics, ceiling unlimited, recorded by the executor 5 h 31 min into an attended implementation that ran 9 h 24 min against a resolved bound of 8 h 0 min, on the operator's ordinary-language direction, exactly the route of WS-001 rule 25); no stop or refusal occurred and nothing was interrupted; the kit's seed (local-median and three complete runs) is kept, since a numeric value would have been wrong in either direction for that attended session and the route cost one command; reported to core as item 2 of the pass's block.",
+          "reopenWhen": "npm run plan -- failures reports the first stop row (a refusal past the bound), or the operator asks for a different bound; the pass that reads it weighs the stop against the session it interrupted.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.646Z"
         }
       ]
     },
@@ -4227,6 +4301,14 @@
           "reopenWhen": "WO-015 merges, or the operator activates WO-016 before a pass runs (then its executor meets receipt 012's items inside the order's authority and this row waits for WO-008).",
           "targets": [],
           "at": "2026-10-30T09:11:01.465Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) D12: WO-015 merged at 21:46Z (the condition occurred), and the amendments move to the pass before WO-016 activates: WO-016's base stays provisional (the merge-base publish makes it right and the executor fast-forwards), receipt 012's known issues for WO-016, WO-008, WO-017 and WO-018 and receipt 014's (d) and (f) are written in then, and WO-018's catalog carry-ins shrink to D017 because D029's half is allocated to WO-020; seven orders now precede WO-016 and the batches may surface features the operator adds to the road orders, so one amendment each at that pass costs less than two.",
+          "reopenWhen": "The pass before WO-016 activates writes the amendments, or the operator activates WO-016 before a pass runs (then its executor meets the items inside the order's authority and the row waits for WO-008).",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.657Z"
         }
       ]
     },
@@ -4319,7 +4401,167 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §Reopening observations: WO-015-D020 repaired the mismatch at final review (each text-layer checkbox is controlled: its click is cancelled and the selection alone drives its checked binding), committed the one-task browser regression that fails on the verified bytes and passes on the repaired ones, and passed the target review gate at the repaired tree; D020 records that it settles D017's follow-up.",
+          "reopenWhen": "A later order changes the text layer's selection controls or the selection's publication, or a browser case shows a checkbox out of step with the units again.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.636Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-862baf0e83c307d0",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::45320c0f4389174efeeb7e2a612ccd715c01254df68ad35b05e30ff2b4cc7a8c",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "62e42cae4ee8b7226dab53e02f2564e5805de6cde7abaa6c642fe106792d7ed6",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
+          "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator said a drained queue is the signal (message 1). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
+          "missing": false
+        },
+        {
+          "hash": "e428aa3d6178030fdf1173ccde07f886fd4ebd7196b892c39ccdc60589ab4012",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
+          "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator named a drained queue as the signal (message 1, capture `8e8cdbeb…`). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §NoOps C2 and D4: the next hundred concepts (the AI for Games pathfinding and decision-making chapters, the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, the remaining GEB and Team Topologies rows) are cut by the same most-related rule when the operator drains the first five batches, as they said.",
+          "reopenWhen": "WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the catalog's data at that commit and files the batches.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.709Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-85de3e8d18bab62a",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::621eb02068ea5d8112060800d2e78567e47d3f45bb3a3213b2da070f8429c4b7",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "47677385ba0a81a18fa57ce4fe1b8b3760d15be76306c6f076dd4cec0e34d294",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 A second workstream (WS-002, marked track: separate) for the concept-study batches, listed apart from the sequence.",
+          "summary": "- **C1 A second workstream (WS-002, marked `track: separate`) for the concept-study batches, listed apart from the sequence.** Declined now: the batches land in WS-001's repository under its registration, gate, release policy and house rules, and the operator asked for them at the front of the list, which the sequence expresses (D3). Reopen when more than about ten batches are queued at once, or when the operator wants them off the main list.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §NoOps C1 and D3: the concept-study batches are WS-001 members of a new kind (side members beside the road) because they land in WS-001's repository under its registration, gate, release policy and house rules and the operator asked for them at the front of the list, which the sequence expresses.",
+          "reopenWhen": "More than about ten batches are queued at once, or the operator wants them off the main list.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.698Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-592e538095eaead9",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::a0c56f2744f968258d66af63488b523cbf073654b3b4a71e9077ffc0641facd7",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "33eb7b8007157cc1ee8eff61c0f2ffbb6ddb2dd2437c93b9331852ed77169a6e",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C3 A \"read the study\" link from the scene's inspector to a tool's study, the reverse of the reading's \"runs in the soldier scene\" link.",
+          "summary": "- **C3 A \"read the study\" link from the scene's inspector to a tool's study, the reverse of the reading's \"runs in the soldier scene\" link.** Not now: the scene is WO-015's surface and WO-020 does not touch it; WO-020's executor may take it as a named boy-scout item inside the Tools and scene features' authority. Reopen when WO-020 merges (the first order that next touches the scene's inspector takes it) or the operator asks for it.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §NoOps C3: the scene is WO-015's surface and WO-020 does not touch it; WO-020's Known issues admit the link as a named boy-scout item inside the Tools and scene features' authority.",
+          "reopenWhen": "WO-020 merges (the first order that next touches the scene's inspector takes the link) or the operator asks for it.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.719Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-4fde2cb5fc229dc2",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::fcf09afb437f7fb4569b2b2ce434d359d5be102cdafa585d6330e73c9257d150",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "5a01d588233cc91777ead823e847a40853641c8c1bc7a87d673724ae856b8a74",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C4 A \"see it in the machinery view\" link from a messaging study to the agents' channels.",
+          "summary": "- **C4 A \"see it in the machinery view\" link from a messaging study to the agents' channels.** Not now: WO-016 has not landed the view. Reopen when WO-016 and WO-022 have both merged.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §NoOps C4: WO-016 has not landed the machinery view the link would point into.",
+          "reopenWhen": "WO-016 and WO-022 have both merged.",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.730Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-49dda4781fa64b25",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::fff8a3577ac6098bc8dd16928b9a1a0350ec3591636b226909ca4bba7467d634",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "9222d3c854f9bcb08137a3c7351ba72e1dcd0f0fb68982b24861dad58aa354a4",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C5 The fork's gh default repository: gh repo set-default dylanwoodconsulting/DotLn-Enterprise-Starter in the launchpad's clone, so that a gh command without -R acts on the fork and not on its parent.",
+          "summary": "- **C5 The fork's `gh` default repository: `gh repo set-default dylanwoodconsulting/DotLn-Enterprise-Starter` in the launchpad's clone, so that a `gh` command without `-R` acts on the fork and not on its parent.** Not this session's to set: tool settings are the operator's; the safe default is in force (every `gh` command names its repository, D16). Reopen when the operator sets it, or when a starter release's README names the fork-parent resolution (item 6 of §Requests to core).",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) §NoOps C5 and D16: the gh default repository is the operator's own tool setting; the safe default is in force (every gh command of a session names its repository with -R), recorded in the operator record from the operator's correction of 2026-10-30.",
+          "reopenWhen": "The operator sets the default, or a starter release's README names the fork-parent resolution (item 6 of the pass's block to core).",
+          "targets": [],
+          "at": "2026-10-30T22:48:30.740Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-f85ede7a356345c5",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::25398b7f81f9dce5fde008513acec1d4b8b49153493c7809bbf0e320cd5d8a49",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "28fbf2da6c7643193721e260b226087c9df9fdb001e4f224c8ab5619639b07a9",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C6 The DotLn-Angular title workflow accepting a gitmoji-prefixed title without a conventional type, once the kit's publish lint admits one.",
+          "summary": "- **C6 The DotLn-Angular title workflow accepting a gitmoji-prefixed title without a conventional type, once the kit's publish lint admits one.** Not now: the kit's lint still requires `type(scope)?: subject` after the gitmoji for a target publish, so the workflow's requirement is moot until core lifts it (addendum 2's ask). Reopen when a starter release's lint admits a title without a conventional type; the first target order that next touches `.github/` takes the workflow change, or a small order does.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) addendum 2 and §NoOps C6: the operator's rule is a gitmoji prefix and the subject for pull-request titles and conventional commits for commits; the kit's publish lint (kind pr-title) admits a leading gitmoji but still requires type(scope)?: subject after it, so the DotLn-Angular title workflow's own type requirement (WO-004, the 2026-10-18 pass's D9) is moot until core lifts the lint's; the ask is item 9 of the pass's block to core.",
+          "reopenWhen": "A starter release's publish lint admits a pull-request title without a conventional type, or core lets an instance declare its title convention; then the first target order that next touches .github/ changes the workflow, or a small order does.",
+          "targets": [],
+          "at": "2026-10-30T23:29:44.490Z"
+        }
+      ]
     }
   ]
 }

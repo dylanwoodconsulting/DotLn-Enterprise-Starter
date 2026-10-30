@@ -4,6 +4,25 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-10-30 — planning pass: the second pass of the day, on starter v0.103.1 (the update first, core's answers of 2026-10-30 read, five concept-study batches and two document quality passes filed at the front of the sequence) (operator dispatch of 2026-10-30, second)
+
+Dispatch: a `planning:` request for a standard pass with the latest upstream,
+carrying core's answers of 2026-10-30 to the fork's block of its first pass
+of the day and the operator's direction to cut the catalog's concepts into
+batched orders they can take beside the road, followed by four later messages
+(two more orders for the kit's `quality pass:` procedure over every standing
+document of both repositories, the profile shape they prefer, a status
+question and a correction of the session's retried pull-request command),
+captured verbatim in ignored intake
+(`docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
+`8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`, and
+`docs/intake/notes/planning-2026-10-30-second-messages.md`, SHA-256
+`39b30d94667c52a26d7d6efba61bb6e2f1b55d602831f3f778525953b0765468`). The
+record is [the planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md);
+this heading registers the pass for the plan tooling. No idea is ledgered:
+the pass was not an ideation dispatch; the operator's direction on batches
+and the profile shape are recorded in the operator record and WS-001.
+
 ## 2026-10-30 — planning pass: starter v0.103.0 taken and finished, core's answers of 2026-10-28 read, the standing documents cut (operator dispatch of 2026-10-30)
 
 Dispatch: a `planning:` request for a standard pass with the latest upstream,

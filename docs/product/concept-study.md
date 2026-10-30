@@ -61,8 +61,11 @@ step-through drawing, a concrete example, ordinary and RxJS pseudocode, limits
 and checked public references. It supplements the existing catalog content; it
 does not claim equivalent enrichment for all 3,463 concepts. The example uses
 the existing browser stack without a new runtime dependency. Its visual is a
-teaching example, not the WO-015 scene engine. Broader coverage and a production
-media-authoring pipeline remain candidates for subsequent planning.
+teaching example, not the WO-015 scene engine. Broader coverage is the
+concept-study batches WO-020 to WO-024 carry: the study record, the visual
+families, the check and a hundred studies across the six works, selected by
+the 2026-10-30 second planning pass; a production media-authoring pipeline
+remains a candidate.
 
 Revisit this slice if the comparison shows that it fails to connect the views
 of the concept, if reference checks contradict the example, or if the operator
