@@ -6,7 +6,16 @@ Two entries between blank lines are a lane pair; the entries after the last
 pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
-- WO-015 — The soldier scene
+- WO-025 — A quality pass over the launchpad's standing documents
+- WO-026 — A quality pass over DotLn-Angular's standing documents
+
+- WO-020 — Concept studies I: the movement tools and the study record
+
+- WO-021 — Concept studies II: RxJS, with executable marble examples
+- WO-022 — Concept studies III: the messaging patterns
+
+- WO-023 — Concept studies IV: the enterprise application patterns
+- WO-024 — Concept studies V: levels, loops and teams
 
 - WO-016 — The machinery view
 

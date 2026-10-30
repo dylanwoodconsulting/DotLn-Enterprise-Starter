@@ -24,8 +24,8 @@ the starter, the starter this fork, and the fork the app in turn.
 gate in its target worktree (`node scripts/target-gate.mjs WO-NNN --review`),
 its change reaches the operator as a pull request they read before it merges,
 and its write-backs keep `docs/dev-reference` and `docs/ai-reference` in the
-target current. The workstream is delivered when WO-004 to WO-008 and WO-013 to WO-019 are merged and `apps/dotln` runs locally with the sub-app menu, the catalog as something to read, the soldier scene over it, the machinery view over the recorded orders, the twin's first lane, the toy shelf, login, permissions and i18n, with the component taxonomy demonstrated in every sub-app and every page accepted by use (rule 24). The operator judges delivery by using the app and merging the last member's pull request.
-**Delivery state:** active (WO-003 to WO-007, WO-011 to WO-014 and WO-019 merged and closed, the target at `DotLn Angular v0.5.0`; WO-015 final-reviewed, its pull request DotLn-Angular #9 open for the operator to merge; WO-016, WO-008, WO-017 and WO-018 filed; §Delivery states carries each member's record)
+target current. The workstream is delivered when WO-004 to WO-008, WO-013 to WO-019 and WO-020 to WO-026 are merged and `apps/dotln` runs locally with the sub-app menu, the catalog as something to read with a hundred studied concepts, the soldier scene over it, the machinery view over the recorded orders, the twin's first lane, the toy shelf, login, permissions and i18n, with the component taxonomy demonstrated in every sub-app and every page accepted by use (rule 24). The operator judges delivery by using the app and merging the last member's pull request.
+**Delivery state:** active (WO-003 to WO-007, WO-011 to WO-015 and WO-019 merged and closed, the target at `DotLn Angular v0.6.0`; WO-016, WO-008, WO-017 and WO-018 filed on the road; WO-020 to WO-026 filed beside it on 2026-10-30; §Delivery states carries each member's record)
 
 ## Member orders
 
@@ -46,6 +46,13 @@ target current. The workstream is delivered when WO-004 to WO-008 and WO-013 to 
 | WO-008 | dotln-angular | provisional; the pass after WO-016 merges may set it | authentication and permissions, legitimate from the Angular side |
 | WO-017 | dotln-angular | provisional; the pass after WO-008 merges may set it | the digital twin's first lane: patience over WO-221 on virtual time, judged by results, variants kept as code |
 | WO-018 | dotln-angular | provisional; the pass after WO-017 merges may set it | The Art of War mapped into the catalog from its public text with its maxims, the run's nineteen toys and six new ones as full records, the toy shelf |
+| WO-025 | self          | this launchpad's `main` at activation      | a quality pass over this launchpad's standing documents under the kit's `quality pass:` procedure; the repository profile rewritten to the shape the operator chose |
+| WO-026 | dotln-angular | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` (WO-015's merge) | a quality pass over DotLn-Angular's standing documents under the same procedure |
+| WO-020 | dotln-angular | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` (WO-015's merge) | the concept-study program's pilot: the study record and its check, the `motion` and `timeline` families, addressable readings, the studied marks, and twenty movement studies |
+| WO-021 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty RxJS studies with executable marble examples and the `marbles` family |
+| WO-022 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty Enterprise Integration Patterns studies and the `flow` family |
+| WO-023 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty enterprise application pattern studies with executable models and the `states` family |
+| WO-024 | dotln-angular | provisional; the pass after WO-020 merges may set it | ten Gödel, Escher, Bach and ten Team Topologies studies and the `relations` family |
 
 Proposed later members, not yet filed (§The app and its sub-apps below and
 the planning document of 2026-10-24 §10 record each with its reopening
@@ -53,17 +60,23 @@ condition): the mining store and the app's own HTTP API, replacing the
 committed data and the stopgap copies; the Babylon.js painter behind the
 scene's renderer seam; manim in the monorepo; the remaining toys of the
 operator's 2026-10-22 run as later members, by their ids; the twin's later
-lanes; typed translation keys and their lint; the WoW app and its
+lanes; the next hundred concept studies, cut when the operator drains the
+first five batches; typed translation keys and their lint; the WoW app and its
 non-TypeScript libraries; the example API and a real identity provider behind
 the auth port; a production environment with file replacements and a `.env`
 primer, if WO-005 leaves any of it out.
 
 ## Dependency and compatibility plan
 
-The members form one serial chain in the sequence's order, today WO-015,
+The road members form one serial chain in the sequence's order, today
 WO-016, WO-008, WO-017, WO-018 (the planning pass of 2026-10-24, D11; the
 2026-10-26 pass, D10; a closed member leaves the sequence): each
-target order's base is the merge commit of the member before it. The kit
+target order's base is the merge commit of the member before it. Beside the
+road, the concept-study batches (WO-020, then WO-021 to WO-024) and the two
+document orders (WO-025, WO-026) are side members the operator takes between
+road orders (the 2026-10-30 second pass, D3 and D9): WO-020 depends on
+WO-019 and WO-015, the four batches on WO-020, WO-026 on WO-015, and none of
+them on a road order or a road order on them. The kit
 creates a target worktree at the commit the order's `**Repository:**` line
 names, so a filed successor carries the repository's only commit as a
 provisional base. Since starter v0.96.1 (core WO-230) the target publish
@@ -91,11 +104,18 @@ WO-006 activates (planning pass of 2026-10-20, D2 and D7). Once WO-012
 declares the policy, every `dotln-angular` member needs exactly one
 `Target release classification` header before it activates, because the kit
 checks the header only at the close (minor for the feature members). No two
-members run side by side: every member edits `nx.json`,
+road members run side by side: every road member edits `nx.json`,
 `tsconfig.base.json`, the ESLint configuration and the generator log, so
-their surfaces overlap. A member that needs something a later member delivers
+their surfaces overlap. The side members are the exception: a study batch
+adds records, modules, one visual family and its evidence and edits no
+workspace configuration, and a document order edits documents only, so
+WO-025 and WO-026, WO-021 and WO-022, and WO-023 and WO-024 are lane pairs
+in the sequence (two entries between blank lines), the second publisher of a
+study pair integrating the target's `main` and regenerating the studies
+summary before its publish; the operator may run any pair one at a time
+(the 2026-10-30 second pass, D9). A member that needs something a later member delivers
 ships the smallest honest stand-in and names the replacement in its known
-issues. The typed edges: WO-013 on WO-007 (the stores and the error surface); WO-014 on WO-013 (the Tools menu group); WO-019 on WO-014 (the catalog it rebuilds); WO-015 on WO-019 (the definitions and the typed scene tools); WO-016 on WO-013 (the machinery route); WO-008 on WO-007 (the interceptors and stores it extends); WO-017 on WO-016 and WO-008; WO-018 on WO-014, WO-019 and WO-017. WO-008 runs after the first four sub-app orders because
+issues. The typed edges: WO-013 on WO-007 (the stores and the error surface); WO-014 on WO-013 (the Tools menu group); WO-019 on WO-014 (the catalog it rebuilds); WO-015 on WO-019 (the definitions and the typed scene tools); WO-016 on WO-013 (the machinery route); WO-008 on WO-007 (the interceptors and stores it extends); WO-017 on WO-016 and WO-008; WO-018 on WO-014, WO-019 and WO-017; WO-020 on WO-019 and WO-015; WO-021, WO-022, WO-023 and WO-024 on WO-020; WO-026 on WO-015; WO-025 on nothing typed. WO-008 runs after the first four sub-app orders because
 the operator's sandbox is served soonest by the menu, the catalog, the scene
 and the machinery view, none of which gates a route, and the twin's lane,
 the first content about the operator, lands after permissions exist; the
@@ -518,8 +538,15 @@ than filled. Not every representation is owed in every order: it is the
 vision the work trends toward. WO-019 demonstrates it with one authored
 Arrive study beside the joined definition, and the product document
 `docs/product/concept-study.md` carries the direction once WO-019's records
-merge; the catalog-wide program that extends it is a candidate of the
-2026-10-28 pass (its §10 C2), filed when the operator says where it goes.
+merge; the catalog-wide program that extends it is the concept-study batches
+(the 2026-10-30 second pass, D3 to D5): WO-020 lands the study record, its
+check, the `motion` and `timeline` families, addressable readings, the
+studied marks and twenty movement studies, and WO-021 to WO-024 land twenty
+studies each for RxJS, the messaging patterns, the enterprise application
+patterns, and Gödel, Escher, Bach with Team Topologies, a hundred concepts
+selected by the most-related rule that pass recorded (D4), each batch landing
+the visual family its ideas need; a later pass cuts the next hundred when
+the operator drains the queue.
 
 **The actor board (WO-006), the first screen until the scene lands, and its data path (WO-007).**
 The actor board, `uifa-board-v1`: five panels in the document's order
@@ -614,13 +641,22 @@ operator's own research run (planning pass of 2026-10-24, D2 and D13).
 Tools (WO-013); the actor board over the app's own API (WO-006, WO-007); the
 catalog (WO-014) read as six works on a shelf, a chapter and its concepts, a
 definition in a reading measure with its relations and hooks, the scene's
-tools typed, and one authored Arrive study (WO-019). What lies ahead, in the
+tools typed, and one authored Arrive study (WO-019); the soldier scene as the
+root route, the pure engine, the rail of sixteen tools with their
+definitions, flock, arrive and the formations, released as `DotLn Angular
+v0.6.0` (WO-015). What lies ahead, in the
 sequence's order, then the later members with their reopening conditions
 (the planning document of 2026-10-24 §10 carries the NoOp records):
 
 | Member or candidate | What the operator sees or does | State or reopening condition |
 | --- | --- | --- |
-| WO-015 the scene | the root route: twenty units on a dark field, a rail of the tools the engine runs with their definitions, RTS selection, flock, arrive, formation, the instruments, trials, the first look | final-reviewed; DotLn-Angular #9 open |
+| WO-025 the launchpad's documents | nothing on screen; every standing document of this launchpad read as what is so, the profile in the shape the operator chose | filed |
+| WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference and the AI reference read as what is so | filed |
+| WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | filed |
+| WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | filed |
+| WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | filed |
+| WO-023 the enterprise pattern studies | twenty patterns with state drawings and small executable models, and where the app embodies each | filed |
+| WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
 | WO-016 the machinery view | one order's agents in their slots over the six-field copies; a mechanism change dropped on an agent; ideas saved | filed |
 | WO-008 authentication and permissions | sign-in and permissions through the mocked provider; an account page they can read; nothing playable, required by the operator's standing rule on security | filed |
 | WO-017 the twin's first lane | patience over WO-221 on virtual time, judged by results, variants kept as code | filed |
@@ -669,12 +705,19 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-013 | merged   | DotLn-Angular #6, `DotLn Angular v0.3.0`, its records #30; [evidence](../evidence/WO-013/README.md) |
 | WO-014 | merged   | DotLn-Angular #7, `DotLn Angular v0.4.0`, its records #31; [evidence](../evidence/WO-014/README.md) |
 | WO-019 | merged   | DotLn-Angular #8, `DotLn Angular v0.5.0`, its records #37; [evidence](../evidence/WO-019/README.md) |
-| WO-015 | final-reviewed | DotLn-Angular #9 on `feat/soldier-scene`, opened as a draft at verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-015/README.md) |
+| WO-015 | merged   | DotLn-Angular #9, `DotLn Angular v0.6.0`, its records #40; [evidence](../evidence/WO-015/README.md) |
 | WO-016 | filed    | base provisional until WO-015 merges; [the order](../work-orders/WO-016-machinery-view.md) |
 | WO-008 | filed    | base provisional until WO-016 merges; [the order](../work-orders/WO-008-authentication-and-permissions.md) |
 | WO-017 | filed    | base provisional until WO-008 merges; [the order](../work-orders/WO-017-digital-twin-patience-lane.md) |
 | WO-018 | filed    | base provisional until WO-017 merges; [the order](../work-orders/WO-018-art-of-war-map-and-toys.md) |
+| WO-025 | filed    | a self order on `main`; [the order](../work-orders/WO-025-quality-pass-launchpad-documents.md) |
+| WO-026 | filed    | base WO-015's merge; [the order](../work-orders/WO-026-quality-pass-dotln-angular-documents.md) |
+| WO-020 | filed    | base WO-015's merge; [the order](../work-orders/WO-020-concept-studies-movement.md) |
+| WO-021 | filed    | base provisional until WO-020 merges; [the order](../work-orders/WO-021-concept-studies-rxjs.md) |
+| WO-022 | filed    | base provisional until WO-020 merges; [the order](../work-orders/WO-022-concept-studies-eip.md) |
+| WO-023 | filed    | base provisional until WO-020 merges; [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
+| WO-024 | filed    | base provisional until WO-020 merges; [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
 
 <!-- dotln-workstream:start -->
-{ "id": "WS-001", "members": [{ "workOrderId": "WO-003", "repositoryId": "self" }, { "workOrderId": "WO-004", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-011", "repositoryId": "self" }, { "workOrderId": "WO-005", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-012", "repositoryId": "self" }, { "workOrderId": "WO-006", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-007", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-013", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-014", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-019", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-015", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-016", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-008", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-017", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-018", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-003", "to": "WO-004", "relation": "hard" }, { "from": "WO-004", "to": "WO-005", "relation": "hard" }, { "from": "WO-011", "to": "WO-005", "relation": "hard" }, { "from": "WO-005", "to": "WO-006", "relation": "hard" }, { "from": "WO-012", "to": "WO-006", "relation": "hard" }, { "from": "WO-006", "to": "WO-007", "relation": "hard" }, { "from": "WO-007", "to": "WO-013", "relation": "hard" }, { "from": "WO-013", "to": "WO-014", "relation": "hard" }, { "from": "WO-014", "to": "WO-019", "relation": "hard" }, { "from": "WO-019", "to": "WO-015", "relation": "hard" }, { "from": "WO-013", "to": "WO-016", "relation": "hard" }, { "from": "WO-007", "to": "WO-008", "relation": "hard" }, { "from": "WO-016", "to": "WO-017", "relation": "hard" }, { "from": "WO-008", "to": "WO-017", "relation": "hard" }, { "from": "WO-014", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-018", "relation": "hard" }, { "from": "WO-017", "to": "WO-018", "relation": "hard" }] }
+{ "id": "WS-001", "members": [{ "workOrderId": "WO-003", "repositoryId": "self" }, { "workOrderId": "WO-004", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-011", "repositoryId": "self" }, { "workOrderId": "WO-005", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-012", "repositoryId": "self" }, { "workOrderId": "WO-006", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-007", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-013", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-014", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-019", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-015", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-016", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-008", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-017", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-018", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-025", "repositoryId": "self" }, { "workOrderId": "WO-026", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-020", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-021", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-022", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-023", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-024", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-003", "to": "WO-004", "relation": "hard" }, { "from": "WO-004", "to": "WO-005", "relation": "hard" }, { "from": "WO-011", "to": "WO-005", "relation": "hard" }, { "from": "WO-005", "to": "WO-006", "relation": "hard" }, { "from": "WO-012", "to": "WO-006", "relation": "hard" }, { "from": "WO-006", "to": "WO-007", "relation": "hard" }, { "from": "WO-007", "to": "WO-013", "relation": "hard" }, { "from": "WO-013", "to": "WO-014", "relation": "hard" }, { "from": "WO-014", "to": "WO-019", "relation": "hard" }, { "from": "WO-019", "to": "WO-015", "relation": "hard" }, { "from": "WO-013", "to": "WO-016", "relation": "hard" }, { "from": "WO-007", "to": "WO-008", "relation": "hard" }, { "from": "WO-016", "to": "WO-017", "relation": "hard" }, { "from": "WO-008", "to": "WO-017", "relation": "hard" }, { "from": "WO-014", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-018", "relation": "hard" }, { "from": "WO-017", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-020", "relation": "hard" }, { "from": "WO-015", "to": "WO-020", "relation": "hard" }, { "from": "WO-020", "to": "WO-021", "relation": "hard" }, { "from": "WO-020", "to": "WO-022", "relation": "hard" }, { "from": "WO-020", "to": "WO-023", "relation": "hard" }, { "from": "WO-020", "to": "WO-024", "relation": "hard" }, { "from": "WO-015", "to": "WO-026", "relation": "hard" }] }
 <!-- dotln-workstream:end -->

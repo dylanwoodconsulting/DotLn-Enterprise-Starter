@@ -50,7 +50,10 @@ audience beyond the operator.
   through the permission prompt at once while the operator is present and is
   never reported as a block; a command that runs for minutes runs in the
   background so the operator's messages land (2026-10-28, capture
-  `457e3001…`).
+  `457e3001…`). A denied outward command is diagnosed for its destination
+  before any retry, and every outward command names the repository it acts
+  on (2026-10-30, capture
+  `39b30d94667c52a26d7d6efba61bb6e2f1b55d602831f3f778525953b0765468`).
 - A pasted block is the text of the session that wrote it, whatever its
   grammatical person; only the operator's own typed words are the operator's
   words, and their statement binds over a prompt another session drafted for
@@ -104,7 +107,22 @@ audience beyond the operator.
   sides (images and animations, RxJS and ordinary pseudocode, implementations
   elsewhere and other references), the vision the work trends toward without
   every representation in every order (2026-10-26, capture `5742f0a7…`;
-  WO-019-D005; `docs/product/concept-study.md` in WO-019's worktree).
+  WO-019-D005; `docs/product/concept-study.md`).
+- Depth in batches (2026-10-30, capture
+  `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`): the
+  catalog's concepts enter the app as batches of concept studies, about a
+  hundred concepts in five orders per planning pass, selected by planning
+  and placed at the front of the sequence as side work the operator takes
+  between road orders and while waiting on core; a drained queue is refilled
+  by the next pass; a feature a batch surfaces goes into a road order as a
+  scope expansion or a follow-up.
+- Standing documents in the shape of a profile that leads with a table of
+  facts, then task-named sections (what it is for, run it, find the
+  implementation, publish, close, versions and provenance, references), with
+  history only where it explains a boundary or a recovery route; the
+  `dotln-angular` profile core's WO-235 restart proposed is the operator's
+  example of the shape, kept in ignored intake at SHA-256 `0986e1d5…`
+  (2026-10-30, capture `39b30d94…`; WO-025 applies it).
 - Speed and efficiency first-party in every decision and never the goal;
   throughput first, in the sense of the Theory of Constraints; no dedicated
   leanness passes (2026-10-21, capture

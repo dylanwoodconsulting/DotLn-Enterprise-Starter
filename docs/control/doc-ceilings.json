@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "documents": {
     "concept-study.md": {
-      "ceiling": 4142,
-      "nonExemptBytesAtLanding": 4060,
-      "date": "2026-10-26",
-      "decision": "WO-019-D010: land the operator-authorized concept-study product synthesis at 4060 non-exempt bytes plus two per cent, rounded upward."
+      "ceiling": 4584,
+      "nonExemptBytesAtLanding": 4167,
+      "date": "2026-10-30",
+      "decision": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md \u00a7Write-backs and ceilings): the direction's last paragraph names the concept-study batches WO-020 to WO-024 as the broader coverage; measured 4167 non-exempt bytes plus one tenth."
     },
     "purpose.md": {
       "ceiling": 2305,
       "nonExemptBytesAtLanding": 2095,
       "date": "2026-10-24",
-      "decision": "2026-10-24 planning pass: the product paragraph restated for the corrected subject of the DotLn-Angular work; measured 2095 non-exempt bytes plus one tenth (docs/planning/mining-run-orders-2026-10-24.md §13)."
+      "decision": "2026-10-24 planning pass: the product paragraph restated for the corrected subject of the DotLn-Angular work; measured 2095 non-exempt bytes plus one tenth (docs/planning/mining-run-orders-2026-10-24.md \u00a713)."
     }
   }
 }

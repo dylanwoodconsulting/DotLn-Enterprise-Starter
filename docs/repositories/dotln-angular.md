@@ -4,7 +4,7 @@
 
 **Base branch:** `main`
 
-**Checked:** `0df9db56`, WO-015's reviewed head (`1eb63058`, the verified tree, and the review's checkbox repair) over WO-019's merge `38f8afd`, open as DotLn-Angular #9; the latest release is `DotLn Angular v0.5.0`.
+**Checked:** `6268de9`, WO-015's merge (DotLn-Angular #9, merged 2026-10-30); the latest release is `DotLn Angular v0.6.0`.
 
 **Toolchain:** Node 26.9.0, npm 11.19.1, Nx 23.3.0, Angular 22.2.3, TypeScript
 6.0.3 and Vitest 5.0.5.
