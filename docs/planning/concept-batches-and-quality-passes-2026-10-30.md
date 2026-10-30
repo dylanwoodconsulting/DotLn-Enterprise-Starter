@@ -84,7 +84,7 @@ corrects the session's conduct. The dispatch's aim stayed first.
 | Upstream | one refresh commit past the v0.103.0 base: `185afc7` (starter refresh to v0.103.1; core WO-239 at core `4090d70d`, #255; core's Release 2026-10-30T13:37:41Z); the preview from the detached worktree at `refs/upstream-releases/v0.103.1` reported replaced and added kit files only, no removal, no refusal, no instance action declared, 260 ms under the bounded wrapper | `git fetch --no-tags upstream refs/tags/v0.103.1:refs/upstream-releases/v0.103.1`, `gh release view v0.103.1 -R DylanBWood/DotLn`, the preview |
 | The update | one merge commit (58 files, 2,037 insertions, 627 deletions, no conflict); the Git merge carried one instance seed the fork never edited, `README.md`, with no instance action declared (item 7 of §Requests to core); `npm ci`; `harness emit` 35 surfaces, no drift; the lineage index unchanged; the work-order index regenerated in one commit; `npm run sync` every artifact current; kit manifest 1,038 to 1,042 files | the merge, `git diff --name-only`, the commands on the branch |
 | The gates on the update branch | `harness check` 35 surfaces; `launchpad verify` 1,042 files at `4090d70d`; `npm test` 7 passed; `npm run test:docs` 14 passed; `plan check` no advisory; `work-orders index --check` current on both pages; 41.5 s in all, in the background | the gate summaries |
-| Pull request #41 | `:arrow_up: chore: take starter v0.103.1`, opened ready on the fork at about 22:21Z; the host classifier denied the first command that pushed and opened the request together; the push alone was admitted; the first `gh pr create` without a repository argument resolved the fork's parent and opened #1 on `DylanBWood/DotLn-Enterprise-Starter`, closed with a comment two minutes later; the operator corrected the retry (ledger message 5; D1, D16) | `git push`, `gh pr create`, `gh pr close 1 -R DylanBWood/DotLn-Enterprise-Starter`, `gh pr view 41 -R dylanwoodconsulting/DotLn-Enterprise-Starter` |
+| Pull request #41 | `:arrow_up: chore: take starter v0.103.1`, opened ready on the fork at about 22:21Z; the host classifier denied the first command that pushed and opened the request together; the push alone was admitted; the first `gh pr create` without a repository argument resolved the fork's parent and opened #1 on `DylanBWood/DotLn-Enterprise-Starter`, closed with a comment three and a half minutes later (created 22:17:24Z, closed 22:20:52Z; #41 created 22:20:54Z); the operator corrected the retry (ledger message 5; D1, D16) | `git push`, `gh pr create`, `gh pr close 1 -R DylanBWood/DotLn-Enterprise-Starter`, `gh pr view 41 -R dylanwoodconsulting/DotLn-Enterprise-Starter` |
 | `plan start` | the branch and the nine-heading skeleton created at about 22:18Z; the start's census and counts were not retained by this session (its output was read from the tail, a known gap of this pass, not of the kit) | `npm run plan -- start concept-batches-and-quality-passes` |
 | The failure feed | two items, WO-015's two `DispatchBoundAccepted` off-ramps; no failed verdict, repair, correction or amendment since receipt 014; phase medians over the control record: implementation 49 min, verification 15 min 47 s, final review 32 min 22 s, repair 22 min 11 s; 0 repeated gate runs; 8 recent closes, 7 delivery and 1 machinery | `npm run plan -- failures` |
 | Conditions | 0 holding, 0 unknown; 249 decision conditions and 131 register rows not evaluated by the mechanical read | `npm run plan -- conditions` |
@@ -198,7 +198,7 @@ starter with the pass on top of it; #41 was opened ready in twenty-three
 minutes from the dispatch and waits for the operator's merge, after which
 the session finishes it on `main` and merges `main` into this branch (D1).
 The error on the way, a pull request opened on the fork's parent, was
-corrected within two minutes and the operator's correction of the retry is
+corrected within four minutes and the operator's correction of the retry is
 recorded as a rule (D16).
 
 **Core's answers, read against the records.** One answer settles a row (item
@@ -632,7 +632,7 @@ or scene-link order for completeness (both stay carry-ins or candidates);
 sweeping generalization in the quality-pass orders (the censuses exclude
 records, generated pages, judged texts, kit files and README with reasons);
 retrying a denied outward command blind (it happened once, was corrected
-within two minutes and became a rule, D16). The outcome matched the aim as
+within four minutes and became a rule, D16). The outcome matched the aim as
 read at entry, with one error on the way: the update was opened ready in
 twenty-three minutes from the dispatch and the seven orders stand at the
 front of the sequence with their rules written down.
@@ -645,7 +645,7 @@ failures and conditions reads under a second each; the read-only reads of
 the target and core's checkout under a second each. Wall-clock from the
 dispatch at 21:58:18Z to #41 ready at about 22:21Z was twenty-three minutes,
 spent reading the records, the release and the catalog's data before the
-merge; the wrong pull request cost two minutes. Document ceilings: one
+merge; the wrong pull request cost three and a half minutes. Document ceilings: one
 re-set (D13). Session cost at the handoff (`node scripts/harness.mjs
 usage`) is recorded in the handoff response; one subagent of the cap of 20,
 19 remaining.
@@ -659,3 +659,36 @@ recorded here when they ran: `npm run meta`, `npm run plan -- followups
 `npm run publication:check`, `npm run plan -- check`, `npm run test:docs`.
 The results, the commits, the refutation and the session cost are recorded
 below as they ran.
+
+Results on the subject before its commit: `followups --sync` minted the
+five rows of §NoOps (C1 `FUP-85de3e8d18bab62a`, C2 `FUP-862baf0e83c307d0`,
+C3 `FUP-592e538095eaead9`, C4 `FUP-4fde2cb5fc229dc2`, C5
+`FUP-49dda4781fa64b25`; revision `b7953989…`); `--apply` took the fifteen
+dispositions of §Register and §NoOps in one batch from the contained ignored
+request file `docs/intake/followups-apply-2026-10-30-second.json` (revision
+`f6347631…`) at the first attempt; the register afterwards: 136 rows, 41
+pending, all deferred, 71 settled, 9 declined, 11 allocated, 4 duplicates,
+none untriaged. `followups --touching` over the seven orders, WS-001, the
+profile, the operator record, the sequence and the concept-study direction
+listed 2 rows (WO-004-D013's trust entry and the template-derived files, the
+second re-disposed above), neither with a seam these edits open, so each is
+left as it is. `work-orders index` was regenerated after the sequence edit
+and the seven orders (the index reads the three pairs and the seven new
+edges); `lineage index` regenerated; `npm run meta` no budget breach (WO-015
+tokens 209,840,225; first verification failed in 2 of the last 8 closed
+orders; 0 reopen candidates); `docs-check` PASS (2 product documents,
+`concept-study.md` at 4,167 non-exempt bytes under its new 4,584 ceiling,
+`purpose.md` at 2,095 under 2,305; 46 declared historical link occurrences;
+the three pre-existing operator-word advisories on WO-003-D003, WO-019-D022
+and a 2026-10-26 paragraph, and two from this document's first draft, which
+quoted the operator record's section names in sentences naming the operator,
+corrected to section references before the third commit); `publication:check`
+reporting no editions declared; `plan check` before the receipt reports that
+this pass needs its receipt, as expected. `npm run test:docs` on the workspace
+before the receipt: 12 passed, 2 failed, the two being the `plan` and
+`plan-refutation-current` suites, which refuse a dated pass without its
+receipt by design; the run took 7 minutes, of which 6 were spent waiting for
+host lanes held by another checkout. The commits: the subject `c690180`
+(22:51:19Z); the cost table `3eddd77`; the corrected section names `58d48b6`
+(22:51:48Z); then the receipt (the helper's commit) and the commit that
+carries the rest of this section.
