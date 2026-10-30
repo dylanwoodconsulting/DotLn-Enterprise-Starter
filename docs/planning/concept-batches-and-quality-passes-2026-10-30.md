@@ -692,3 +692,121 @@ host lanes held by another checkout. The commits: the subject `c690180`
 (22:51:19Z); the cost table `3eddd77`; the corrected section names `58d48b6`
 (22:51:48Z); then the receipt (the helper's commit) and the commit that
 carries the rest of this section.
+
+### Known issues from this pass's receipt
+
+The worker's twenty-three findings, every one a known issue and none a hold
+(the three trap observations show no worsening and the subject supplies no
+vision passage id); each with the pass's reading and its reopening
+observation. The orders are frozen by the receipt, so a duty these add is
+the executor's inside the order's authority or the next pass's amendment.
+
+- **WO-025 (five).** (a) Criterion 6 names no byte-identity check for the
+  locked Clean Room and Secrets sections of `CLAUDE.md`'s floor, which the
+  Cost line puts in the edit set: the Design keeps them verbatim; the
+  verifier reads `git diff <base> HEAD -- CLAUDE.md` for those sections and
+  the census states them byte-identical; reopen when that diff touches a
+  line inside either section. (b) Criterion 4's equal multisets of capture
+  digests and dates can only be met by keeping a duplicate citation where a
+  narrated passage is removed: the Design keeps both captures when two
+  directions merge, so the multiset holds; reopen when the census's before
+  and after lists differ only by the count of an entry still present, or the
+  executor records keeping a duplicate solely for the criterion. (c) The
+  profile's opening table (last reviewed source, latest release) goes stale
+  at the next release close: every target order's launchpad write-back step
+  touches the profile and that table's rows are the first thing it updates;
+  reopen when, after WO-026's close, the profile names an older release than
+  that close produced. (d) Nothing records whether the profile's wording was
+  synthesized or copied from the intake draft: the order calls the draft a
+  shape to follow, never text to copy, and the draft is core's session's text
+  about a public repository, outside the clean room's subject; reopen when
+  the committed profile shares a sentence-length passage with the draft and
+  the evidence does not name its provenance. (e) The pass edits documents
+  every role reads at start and can raise cold-start bytes with no size goal:
+  usefulness is the operator's test and the cost table observes; reopen when
+  the first cost-table observation after the merge shows the shared
+  cold-start component above 7,240 bytes without the census naming the edit.
+- **WO-026 (three).** (a) WO-020 to WO-024 each add to `catalog.md`,
+  `catalog-rules.md` and, for WO-023, `events-and-state.md` after this pass
+  integrates them, so the appended form the pass removes can return: every
+  role's standing-document rule integrates a change into its section rather
+  than appending, and the batches' criteria say "gains", not "appends";
+  reopen when, after WO-024, §Studies or the rules read as per-batch
+  paragraphs, or a later pass proposes another quality pass over those
+  files. (b) Criterion 4 requires every rule-document command to exit 0 as
+  written, and a serve or watch command does not terminate: the executor
+  records the command's observed start and its reason instead of deleting
+  it; reopen when the census or the diff shows a command removed or
+  rewritten for that reason alone. (c) Criterion 3's grep names three of the
+  four removed surfaces and not the filter row: the verifier adds
+  `filter row` to the same grep under the criterion's prose; reopen when
+  that grep prints a document describing the filter row as present.
+- **WO-020 (six).** (a) WO-008 sits ninth while the purpose names
+  authentication on the critical path: the sequence is the operator's road
+  and their direction of 2026-10-30 placed the side members first (receipt
+  012's item (b) made the same observation); reopen when a critical-path
+  record places WO-008 before the studies or an order records waiting on
+  WO-008. (b) Criterion 2's two named reviewers are the fan-out's own
+  critics and nothing requires a reviewer to be distinct from the record's
+  author or to appear in the fan-out record: the critics are workers other
+  than the authors by the Design and the verifier's reading is independent
+  (criterion 1); reopen when a record's reviewers include its author or a
+  named reviewer has no line in `review.md` or `fan-out.md`. (c) No e2e case
+  opens a reading whose study is absent, malformed or names a missing model:
+  `ReadingView.study` is nullable by the Design and the definition renders
+  regardless, which the verifier probes; reopen when such a reading shows an
+  error or an empty page instead of the mined definition. (d) The `<dl` ban
+  can push name-and-value groups into markup with no semantics: the ban is
+  the operator's direction (rule 24, G6) against hollow label-value pages,
+  and lists and labelled groups carry the semantics; reopen when a
+  screen-reader walkthrough or an axe rule beyond the board threshold finds
+  pairs with no programmatic association. (e) Five batch-specific rules
+  appended to `catalog-rules.md` with no statement of how they compose: the
+  standing-document rule integrates each into the rules' body; reopen when
+  a record satisfies one rule while violating another, or the five stand as
+  separate appended paragraphs after WO-024. (f) Five comparisons each
+  ending only on the operator's word is a load on the operator: it is the
+  method the operator chose (rule 25) and the burden observation shows no
+  worsening; reopen when a batch's directions exceed WO-014's six, rise
+  across three batches, or a batch stalls waiting for the word.
+- **WO-021 (two).** (a) WO-020's criterion 3 writes `executable.module`
+  where the record defines `pseudocode.executable.module`, and WO-021 names
+  the full path: one path, the record's; WO-020's shorthand reads as it;
+  reopen when the merged schema defines the reference elsewhere or WO-021's
+  diff changes the schema or the check to admit a second path. (b) Nothing
+  checks that the app file a study names contains the operator: the factual
+  critic's brief includes the check inside the order's authority (the Design
+  gives the critic the references and the rows; the file is one more);
+  reopen when a committed study names a file that does not use the operator.
+- **WO-022 (two).** (a) Criterion 3 sets no minimum of executable records
+  while the Design lists eight patterns that carry one: the Design binds
+  the executor and the verifier judges the criteria as written; reopen when
+  the decisions file lists `executable: null` for more than half the records
+  or for Aggregator, Publish-Subscribe Channel or Competing Consumers. (b)
+  The platform analogies are checked against the authors' own description of
+  the platform: the platform's repository, role skills and control records
+  are public and the critic may read them; reopen when a committed analogy
+  describes a behaviour the platform's role skills or records do not perform.
+- **WO-023 (three).** (a) Criterion 4 confirms a named file exists, not
+  that it embodies the pattern, and admits no "not embodied" outcome: the
+  Design's "where a pattern or its cousin lives" admits the honest answer
+  that the app does not embody one, with the public implementations first;
+  reopen when a study names a file whose code does not implement the pattern
+  as the study defines it, or no study records "not embodied". (b) The title
+  says each study has an executable model while criterion 3 admits `null`
+  with a reason: the Design names the structural patterns that mark `null`,
+  and the release notes say "most"; reopen when more than a quarter are
+  `null` or a coverage row claims a model for every study. (c) Links from
+  `events-and-state.md` to studies may point at app routes no check covers:
+  the executor links the record files by repository path, which WO-026's and
+  the batches' link checks cover; reopen when such a link neither opens the
+  study in the served build nor resolves to its record.
+- **WO-024 (two).** (a) The title says each concept has a relations drawing
+  while criterion 3 admits `visual: null` with a reason: `concept-study.md`
+  keeps missing material missing and the Design says so; reopen when the
+  decisions file lists `visual: null` for a record while the title, release
+  notes or a coverage row still claim a drawing for each. (b) The platform
+  claims in the situations are unchecked against the platform: as WO-022
+  (b), the platform's records are public and the critic may read them; reopen
+  when a committed study states a relationship the platform's role skills or
+  control records contradict.
