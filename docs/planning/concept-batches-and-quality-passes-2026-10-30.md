@@ -445,7 +445,7 @@ each sequenced order lands (WS-001 rule 24):
   names the repository it acts on (`-R dylanwoodconsulting/DotLn-Enterprise-Starter`
   for `gh`; `origin` for `git push`) and a denied command is diagnosed for
   its destination before any retry; the rule enters the operator record's
-  "How the operator directs a session" with its date and capture. The
+  §How the operator directs a session with its date and capture. The
   `gh repo set-default` setting that would make the fork the default is the
   operator's own tool setting (C5). Rejected: setting the default in this
   session (axis: tool settings are the operator's). Reopen when the operator
@@ -564,9 +564,8 @@ batches on WO-020, WO-026 on WO-015; no edge inside a pair).
   road table loses WO-015 and gains the seven rows; the delivery states read
   WO-015 merged and the seven filed; the `dotln-workstream` block gains the
   seven members and seven edges.
-- `docs/operator/README.md` (D14, D16): the outward-command rule in "How the
-  operator directs a session"; "Depth in batches" and the standing-document
-  shape in "What the operator wants"; one citation corrected.
+- `docs/operator/README.md` (D14, D16): the outward-command rule in §How the operator directs a session; depth in batches and the standing-document
+  shape in §What the operator wants; one citation corrected.
 - `docs/repositories/dotln-angular.md`: the `Checked:` line reads WO-015's
   merge and `DotLn Angular v0.6.0` (the rest is WO-025's).
 - `docs/product/concept-study.md` (D13): the last paragraph names the
@@ -628,8 +627,7 @@ bound in their own words. Traps named before the material choices: taking
 the paste as direction (core's document was read and matched); anchoring the
 cut on the operator's example numbers as a requirement (they were taken as
 the size with the alternatives weighed, and the operator's message 1
-(capture `8e8cdbeb…`) called the exact
-number is not important); seeking the wrong goal by filing a search-controls
+(capture `8e8cdbeb…`) says the exact number is not important); seeking the wrong goal by filing a search-controls
 or scene-link order for completeness (both stay carry-ins or candidates);
 sweeping generalization in the quality-pass orders (the censuses exclude
 records, generated pages, judged texts, kit files and README with reasons);
