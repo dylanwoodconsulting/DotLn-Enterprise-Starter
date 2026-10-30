@@ -192,9 +192,13 @@ audience beyond the operator.
 ## Standing preferences
 
 - Commits: conventional commits in the present imperative. Pull-request
-  titles: conventional, with a gitmoji in front; where the kit's outward lint
-  refuses the gitmoji, a repository workflow adds it after the pull request
-  opens.
+  titles: a gitmoji prefix and the subject, no conventional type (2026-10-17,
+  capture `4f14c6c0…`; restated 2026-10-30, capture `58331059…`). Where a
+  lint requires a conventional type in a title (the kit's publish lint for a
+  target order, and the DotLn-Angular title workflow WO-004 added under the
+  2026-10-18 pass's D9), the type is that lint's requirement and not the
+  operator's preference; the fork asks core to lift it and keeps the
+  workflow until an order changes it.
 - Merges: merge commits whose message is the pull-request title. The operator
   sets repository settings themselves; sessions do not change them (the one
   directed exception was WO-010's branch rules, 2026-10-18).

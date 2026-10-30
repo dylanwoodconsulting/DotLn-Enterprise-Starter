@@ -515,6 +515,14 @@ in §Validation.
   Reopen when the operator sets it, or when a starter release's README names
   the fork-parent resolution (item 6 of §Requests to core).
 
+- **C6 The DotLn-Angular title workflow accepting a gitmoji-prefixed title
+  without a conventional type, once the kit's publish lint admits one.** Not
+  now: the kit's lint still requires `type(scope)?: subject` after the
+  gitmoji for a target publish, so the workflow's requirement is moot until
+  core lifts it (addendum 2's ask). Reopen when a starter release's lint
+  admits a title without a conventional type; the first target order that
+  next touches `.github/` takes the workflow change, or a small order does.
+
 ### Carried candidates of earlier passes
 
 Their conditions are unchanged except where §Register says otherwise: the
@@ -875,4 +883,33 @@ this clone today.
 
 ```text
 6. A trap from today, and a kit ask: in a fork clone with an upstream remote, gh pr create, gh pr list and gh issue list without -R resolve the fork's parent repository (the starter), not the fork. The fork's session opened the update pull request as DylanBWood/DotLn-Enterprise-Starter#1 before reading the URL, closed it with a comment, and reopened it on the fork as #41; its earlier open-pull-request and open-issue reads had silently gone to the parent and reported nothing. The kit wraps a target order's publish (the worktree publish helper reads the registration and names the repository, and raw gh forms get no admission there) but not the launchpad's own branches: update and planning pull requests are opened by the session with raw gh, and the README's update route says only that the session opens a pull request against main. Ask: (a) a kit helper that opens the launchpad's own update and planning pull requests on origin's repository, as the target publish helper does for a registered target, so a session never spells gh for them; (b) a hook refusal, in a clone whose origin and upstream remotes differ, of gh pr and gh issue commands that name no repository, naming -R <origin repository> in the message; (c) until those land, one sentence in the README's update route naming -R <fork> or gh repo set-default as the way a fork's session names its own repository. The fork's operator record now carries the rule as role text (a denied outward command is diagnosed for its destination before any retry; every outward command names its repository); the fork cannot add the hook itself without drifting from the generated bundle. Blocks nothing; medium priority, because the failure is silent.
+```
+
+## Addendum 2 of 23:27Z: pull-request titles are gitmoji and subject, not gitmoji and type
+
+The operator asked who introduced the conventional type beside the gitmoji in
+pull-request titles, since their rule is a gitmoji prefix for pull requests
+and conventional commits for commits (messages 8 and 9 of the capture,
+SHA-256 `58331059e353d8c7c5ea2dc167312bf4cec97fa978d533324e4128d4719a4d65`). The records answer: the operator's dictation of
+2026-10-17 said conventional commits and gitmoji titles; the 2026-10-18 pass's
+D9 met the kit's publish lint of that day, which required `type(scope)?:
+subject` and refused a leading shortcode, by having WO-004 add a workflow that
+prepends the gitmoji for the type after a target pull request opens, and
+recorded the result as the title the operator wants; the operator record's
+bullet then read "conventional, with a gitmoji in front", a form the operator
+never gave. The fork's planning and update pull requests kept the operator's
+form (`:memo: Plan …`, `:arrow_up: Take starter …`) until today, when this
+pass titled #41 and #42 by the record's bullet and the review-record pull
+requests' form (`:memo: docs: …`), copying the drift rather than the rule.
+The kit's lint now admits a leading gitmoji (D9's reopening condition has
+occurred) but still requires the conventional type after it, and the
+DotLn-Angular workflow requires the type to choose its gitmoji, so a target
+member's title still carries both. Done here: the operator record's bullet
+and WS-001 rule 20 restated to the operator's rule with the lint named as the
+constraint; #42 retitled `:memo: Plan the concept-study batches and the
+document quality passes`; candidate C6 added for the workflow change; and
+one more item for the block to core:
+
+```text
+9. Pull-request titles: the fork's operator rule is a gitmoji prefix and the subject for pull requests and conventional commits for commits. The kit's publish lint (outward-lint, kind pr-title) now admits a leading gitmoji but still requires type(scope)?: subject after it, so a target order's title carries both, and the fork's 2026-10-18 pass added a DotLn-Angular workflow that prepends the gitmoji for the type to meet the earlier lint. Core's own merged titles read as gitmoji and subject without a type (#255, #257). Ask: let an instance declare its pull-request title convention, or admit a gitmoji-prefixed title without a conventional type for the pr-title kind while keeping the commit kind conventional, so the fork's workflow and the type can go. Blocks nothing; low priority.
 ```

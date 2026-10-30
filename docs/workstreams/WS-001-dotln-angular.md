@@ -277,9 +277,15 @@ an order's recorded decision, never silently.
     records for target orders land under `docs/dotln/` so they stay apart from
     the reference material.
 20. **Commits and pull requests.** Conventional commits in the present
-    imperative. Pull-request titles are conventional; a repository workflow
-    prepends the gitmoji for the type after the pull request opens, because the
-    kit's outward lint requires the bare conventional subject. Merge commits
+    imperative. Pull-request titles are a gitmoji prefix and the subject, with
+    no conventional type (the operator's rule of 2026-10-17, restated on
+    2026-10-30). For a target order the kit's publish lint admits the leading
+    gitmoji but still requires `type(scope)?: subject` after it, and the
+    repository's title workflow (WO-004, the 2026-10-18 pass's D9) requires
+    the type to choose the gitmoji it prepends, so a member's title carries
+    both until core lifts the type requirement and an order changes the
+    workflow (the 2026-10-30 second pass, addendum 2); the launchpad's own
+    pull requests carry the gitmoji and the subject only. Merge commits
     carry the pull-request title (repository setting, operator-owned). The
     draft at verified is the kit's `--draft` form of `worktree publish`, run
     by the session that records the verification pass and reused by the final

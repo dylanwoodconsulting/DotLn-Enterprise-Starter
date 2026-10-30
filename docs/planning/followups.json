@@ -4538,6 +4538,30 @@
           "at": "2026-10-30T22:48:30.740Z"
         }
       ]
+    },
+    {
+      "id": "FUP-f85ede7a356345c5",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::25398b7f81f9dce5fde008513acec1d4b8b49153493c7809bbf0e320cd5d8a49",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "28fbf2da6c7643193721e260b226087c9df9fdb001e4f224c8ab5619639b07a9",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C6 The DotLn-Angular title workflow accepting a gitmoji-prefixed title without a conventional type, once the kit's publish lint admits one.",
+          "summary": "- **C6 The DotLn-Angular title workflow accepting a gitmoji-prefixed title without a conventional type, once the kit's publish lint admits one.** Not now: the kit's lint still requires `type(scope)?: subject` after the gitmoji for a target publish, so the workflow's requirement is moot until core lifts it (addendum 2's ask). Reopen when a starter release's lint admits a title without a conventional type; the first target order that next touches `.github/` takes the workflow change, or a small order does.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md) addendum 2 and §NoOps C6: the operator's rule is a gitmoji prefix and the subject for pull-request titles and conventional commits for commits; the kit's publish lint (kind pr-title) admits a leading gitmoji but still requires type(scope)?: subject after it, so the DotLn-Angular title workflow's own type requirement (WO-004, the 2026-10-18 pass's D9) is moot until core lifts the lint's; the ask is item 9 of the pass's block to core.",
+          "reopenWhen": "A starter release's publish lint admits a pull-request title without a conventional type, or core lets an instance declare its title convention; then the first target order that next touches .github/ changes the workflow, or a small order does.",
+          "targets": [],
+          "at": "2026-10-30T23:29:44.490Z"
+        }
+      ]
     }
   ]
 }
