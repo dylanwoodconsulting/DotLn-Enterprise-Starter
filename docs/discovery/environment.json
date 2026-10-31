@@ -107,6 +107,34 @@
               "readbackChannelPresent": true
             },
             "observedEffort": "xhigh"
+          },
+          {
+            "classification": "observed",
+            "value": "2.1.314",
+            "observedAt": "2026-10-31T03:04:05.328Z",
+            "line": "2.1",
+            "probe": {
+              "versionChannel": "CLAUDE_CODE_EXECPATH",
+              "versionExitCode": 0,
+              "helpExitCode": 0,
+              "effortSelectorPresent": true,
+              "effortSelector": {
+                "classification": "observed",
+                "control": "--effort",
+                "values": [
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max"
+                ],
+                "source": "CLI --help; selected effort control, not effective-effort readback"
+              },
+              "configSelectorPresent": false,
+              "readbackChannel": "CLAUDE_EFFORT",
+              "readbackChannelPresent": true
+            },
+            "observedEffort": "max"
           }
         ],
         "versionLines": [
@@ -115,6 +143,13 @@
             "line": "2.1",
             "newestPatch": "2.1.299",
             "observedAt": "2026-10-14T09:08:27.503Z",
+            "source": "bounded-cli-probe:CLAUDE_CODE_EXECPATH"
+          },
+          {
+            "classification": "observed",
+            "line": "2.1",
+            "newestPatch": "2.1.314",
+            "observedAt": "2026-10-31T03:04:05.328Z",
             "source": "bounded-cli-probe:CLAUDE_CODE_EXECPATH"
           }
         ],
@@ -142,7 +177,8 @@
             "high",
             "xhigh",
             "max"
-          ]
+          ],
+          "source": "CLI --help; selected effort control, not effective-effort readback"
         },
         "persistedEffortSelector": {
           "classification": "observed",
@@ -155,9 +191,9 @@
           "channel": "CLAUDE_EFFORT",
           "setBy": "the Claude Code host for its own session; DotLn never sets it (its transports pass the parent environment through and select effort with --effort)",
           "scope": "selected, not effective",
-          "value": "xhigh",
-          "harnessVersion": "2.1.299",
-          "observedAt": "2026-10-14T09:08:27.503Z"
+          "value": "max",
+          "harnessVersion": "2.1.314",
+          "observedAt": "2026-10-31T03:04:05.328Z"
         },
         "settingsSources": {
           "classification": "observed",
@@ -188,6 +224,27 @@
               "readbackChannel": "unavailable",
               "readbackChannelPresent": false
             }
+          },
+          {
+            "classification": "observed",
+            "value": "0.166.0",
+            "observedAt": "2026-10-31T03:04:05.666Z",
+            "line": "0.166",
+            "probe": {
+              "versionChannel": "PATH",
+              "versionExitCode": 0,
+              "helpExitCode": 0,
+              "effortSelectorPresent": true,
+              "effortSelector": {
+                "classification": "observed",
+                "control": "-c model_reasoning_effort=<value>",
+                "values": "unknown",
+                "source": "CLI --help declares the config override; scripts/probe-codex-effort.mjs records this key. This help does not establish accepted effort values or effective effort."
+              },
+              "configSelectorPresent": true,
+              "readbackChannel": "unavailable",
+              "readbackChannelPresent": false
+            }
           }
         ],
         "versionLines": [
@@ -196,6 +253,13 @@
             "line": "0.162",
             "newestPatch": "0.162.1",
             "observedAt": "2026-10-14T09:08:27.771Z",
+            "source": "bounded-cli-probe:PATH"
+          },
+          {
+            "classification": "observed",
+            "line": "0.166",
+            "newestPatch": "0.166.0",
+            "observedAt": "2026-10-31T03:04:05.666Z",
             "source": "bounded-cli-probe:PATH"
           }
         ],
@@ -265,6 +329,35 @@
               "readbackChannel": "unavailable",
               "readbackChannelPresent": false
             }
+          },
+          {
+            "classification": "observed",
+            "value": "1.0.94",
+            "observedAt": "2026-10-31T03:04:06.152Z",
+            "line": "1.0",
+            "probe": {
+              "versionChannel": "PATH",
+              "versionExitCode": 0,
+              "helpExitCode": 0,
+              "effortSelectorPresent": true,
+              "effortSelector": {
+                "classification": "observed",
+                "control": "--reasoning-effort",
+                "values": [
+                  "none",
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max"
+                ],
+                "source": "CLI --help; selected effort control, not effective-effort readback"
+              },
+              "configSelectorPresent": false,
+              "readbackChannel": "unavailable",
+              "readbackChannelPresent": false
+            }
           }
         ],
         "versionLines": [
@@ -273,6 +366,13 @@
             "line": "1.0",
             "newestPatch": "1.0.94",
             "observedAt": "2026-10-14T09:08:28.228Z",
+            "source": "bounded-cli-probe:PATH"
+          },
+          {
+            "classification": "observed",
+            "line": "1.0",
+            "newestPatch": "1.0.94",
+            "observedAt": "2026-10-31T03:04:06.152Z",
             "source": "bounded-cli-probe:PATH"
           }
         ],
@@ -302,7 +402,7 @@
             "xhigh",
             "max"
           ],
-          "source": "copilot --help"
+          "source": "CLI --help; selected effort control, not effective-effort readback"
         },
         "persistedEffortSelector": {
           "classification": "observed",
