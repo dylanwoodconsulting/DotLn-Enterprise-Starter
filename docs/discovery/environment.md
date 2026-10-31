@@ -27,6 +27,30 @@ from a scratch directory outside the repository
 so this launchpad's hooks and its one-writer reservation stayed out of it.
 Every command is listed in [Commands](#commands).
 
+## Current readings
+
+Read again on 2026-10-30 by WO-025's executor, from a linked worktree
+([WO-025-D008](../evidence/WO-025/decisions.md#wo-025-d008)). Where a value here
+differs from the inspection below, this table is the current one, and everything
+else stands as the inspection observed it. `npm run discover -- harness <name>` added
+these harness versions to `environment.json` on the same date.
+
+| Item              | Label    | Value                                                                  |
+| ----------------- | -------- | ---------------------------------------------------------------------- |
+| Node, npm, Git    | observed | v26.9.0, 11.19.1, 2.55.0                                               |
+| OS                | observed | macOS 27.0.1 (build 26A434), Darwin 27.0.0 arm64                       |
+| Claude Code       | observed | 2.1.314                                                                |
+| Codex CLI         | observed | 0.166.0                                                                |
+| Copilot CLI       | observed | 1.0.94                                                                 |
+| `gh`              | observed | 2.98.0                                                                 |
+| Generated surfaces | observed | 35, from `node scripts/harness.mjs check` at starter v0.103.1          |
+| Git worktrees     | observed | the main checkout, and one linked worktree per order that needs one    |
+| Host sandbox      | observed | not in force, in a linked worktree with no local settings file; the cause is unobserved ([posture](../../AI-HARNESS-SECURITY.md#settings-locations)) |
+| Host lock         | observed | kernel advisory lock acquired and released twice                       |
+
+[`AI-HARNESS-SECURITY.md`](../../AI-HARNESS-SECURITY.md) records what these mean
+for each harness's posture.
+
 ## Operator note: local Claude Code settings
 
 **operator-attested.** The operator had to create `.claude/settings.local.json`
@@ -35,7 +59,7 @@ every project; this ignored project-local file turns it off here. The operator
 reports that sandbox and lock-acquisition checks had failed before the change
 and asked for them to be retried.
 
-**observed.** The file is ignored by Git (`.gitignore` line 18). Its top-level
+**observed.** The file is ignored by Git (`git check-ignore -v`). Its top-level
 keys are `permissions.allow` (14 rules, not copied) and `sandbox`
 (`enabled: false`, `autoAllowBashIfSandboxed: false`). User settings carry
 `sandbox.enabled: true`.
@@ -97,7 +121,7 @@ code: 'ERR_MODULE_NOT_FOUND', url: 'file:///<repo>/corpus/harness/bounded-findin
 ```
 
 The file belongs to the core-only `runner-fixtures` suite
-(`scripts/test-runner.mjs` line 999), which this launchpad's `npm test` does
+(the `runner-fixtures` row of `scripts/test-runner.mjs`), which this launchpad's `npm test` does
 not select; the export ships the test without its fixture. The failure is a
 packaging gap, not a sandbox refusal
 ([WO-001-D004](../evidence/WO-001/decisions.md#wo-001-d004-shipped-host-guard-test-imports-an-unshipped-fixture)).

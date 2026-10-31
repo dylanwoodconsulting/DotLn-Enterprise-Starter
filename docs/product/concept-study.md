@@ -7,7 +7,7 @@ starting point. It is not the intended depth of the finished product.
 The operator supplied this direction during WO-019 on 2026-10-26. The
 [ideation receipt](../evidence/WO-019/ideation.md) records its provenance and
 bounded implementation slice. This is an instance product direction; it does
-not change the upstream kit or silently schedule the whole vision into WO-019.
+not change the upstream kit.
 
 ## Several ways into the same idea
 
@@ -45,9 +45,9 @@ selected for the whole catalog by this ideation.
 
 Any shipped visual needs a text equivalent, legible narrow-screen treatment and
 deliberate motion controls. An animation should reveal a mechanism, not consume
-attention while leaving the reader unable to inspect it. Examples can later
-connect to the soldier scene, but the reading surface remains useful before the
-scene exists.
+attention while leaving the reader unable to inspect it. A reading of a tool the
+soldier scene runs links to the scene, and the reading surface stays useful on
+its own.
 
 ## Learning the interface through comparisons
 

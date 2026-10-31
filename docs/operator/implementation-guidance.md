@@ -4,9 +4,9 @@ The operator asked during the 2026-10-26 repair to retain the kinds of direction
 given throughout this order, including execution and verification, for future
 orders. These are instance-owned defaults, applied in the relevant domain;
 they do not expand a later order's authority, make every idea mandatory, or
-replace its criteria. The source record is
-[WO-014 decisions](../evidence/WO-014/decisions.md), including the earlier
-executor and verifier decisions D002, D006, D010–D015 and repair D016–D021.
+replace its criteria. The source record is WO-014's decisions in the target,
+`docs/dotln/evidence/WO-014/decisions.md`, including the earlier executor and
+verifier decisions D002, D006, D010–D015 and repair D016–D021.
 
 New directions are paraphrased from ignored captures:
 
@@ -23,7 +23,7 @@ New directions are paraphrased from ignored captures:
 
 | Direction | Apply it in future work | Boundary |
 | --- | --- | --- |
-| Resource limits serve the work | Allocate workers around independent useful tasks, reuse them for targeted corrections, and record actual cost and uncertainty. | The cap of forty was specific to WO-014; restore twenty at its final review or the next activation unless separately authorized. It is not a permanent preference for more workers. |
+| Resource limits serve the work | Allocate workers around independent useful tasks, reuse them for targeted corrections, and record actual cost and uncertainty. | The cap of forty was specific to WO-014, and `subagentCap` in `docs/control/budgets.json` is back at twenty. It is not a permanent preference for more workers. |
 | Preserve semantic honesty | Report shortfalls, unsupported claims and untyped concepts explicitly. Improve evidence or seek a real contract decision when needed. | Never force an example into an executable category to meet a quota. The criterion 3 amendment was explicit authorization, not permission to waive future criteria. |
 | Catch avoidable inefficiency early | Attribute bundle growth, unnecessary loading, rendering work and costly processes while implementing, before verification finds them. | A disclosed warning or a green exit code does not establish efficiency; a raw size alone does not establish user experience. |
 | Calibrate meaningful budgets | Compare equivalent builds and user journeys, remove avoidable cost, and revise a justified budget with evidence and alternatives in the same change. | Routine overrun diagnosis is engineering work. Ask the operator only for a real scope/product tradeoff, not each calibration. Never raise a ceiling merely to silence output. |
@@ -56,20 +56,18 @@ The [planning handoff](../evidence/WO-014/planning-handoff.md) retains the
 cross-area exploration and authoring questions. The earlier target concept
 guide preserves representative examples and the limited coverage already run.
 
-## Fork-specific behavior and next planning
+## Where this guidance is carried
 
-This guidance is a candidate for fork-specific interactions: local preferences
-can survive core updates without editing generated kit code. The installed
-Contributor overlay declaration inspected in this repair accepts identity,
-authority narrowing and grants. That interface does not establish a local
-interaction-extension mechanism. Product 08's implementation overlay describes
-publication composition, a different concern; its local-policy promise is not
-evidence that this runtime behavior is implemented.
+Instance-owned text carries these directions, so they survive core updates
+without editing generated kit code: the orders, WS-001 and the operator record
+(the [2026-10-26 pass](../planning/acceptance-by-use-2026-10-26.md), D4 and D12).
+No supported route adds duty text to a generated role today. An instance owns its
+support switches, its grants file and its `hostRules`, and the extension contract
+is core's deferred candidate 8; the [v0.101.0 pass](../planning/standard-pass-v0-101-0-2026-10-28.md)
+records that answer and `FUP-6855f3bdf797428a` holds this fork's row. Product 08's
+implementation overlay describes publication composition, a different concern; its
+local-policy promise is not evidence that this runtime behavior is implemented.
 
-The next planning pass must inspect the supported extension mechanism, map the
-rules above to existing supports or appropriate local compositions, and preserve
-ownership and update behavior. If core support is missing, provide the operator
-a paste-ready prompt requesting a core update, with evidence and acceptance
-conditions. The [planning handoff](../evidence/WO-014/planning-handoff.md) supplies
-that starting prompt. No core modification, issue submission or platform message
-is authorized or performed by writing this record.
+The [planning handoff](../evidence/WO-014/planning-handoff.md) keeps the original
+request. No core modification, issue submission or platform message is authorized
+or performed by writing this record.
