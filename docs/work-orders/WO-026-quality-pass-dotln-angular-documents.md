@@ -12,7 +12,8 @@
 coherence or organization, the target's standing documents (`README.md`,
 `docs/dev-reference/README.md`, the eight architecture documents, the four
 workspace documents, `docs/ai-reference/README.md` and the six rule
-documents; about 22 files, 170 KB); adds `docs/dotln/evidence/WO-026/`
+documents; about 22 files, 170 KB; and the 33 READMEs under `libs/`, 7 KB, added
+by WO-026-D013); adds `docs/dotln/evidence/WO-026/`
 records through the kit's route and `docs/evidence/WO-026/census.md` in the
 launchpad. Removes nothing tracked. Wall-clock: about 4 to 8 hours of
 executor work plus the fixed cycle; unknown until run. Context bytes: the
@@ -79,7 +80,10 @@ sections current and none read the set as a whole; the README names the
 scene, the board and the catalog but not the sub-app menu; the generator log
 is an append-only record of generator invocations and `scripts.md` is checked
 by `check:scripts` on every change; `THIRD-PARTY-NOTICES.md` is licence text;
-`docs/dotln/` holds the orders' immutable records.
+`docs/dotln/` holds the orders' immutable records. This paragraph first omitted
+the 33 READMEs under `libs/`, each a library's public page: nineteen are Nx's
+generated text, one says its library has no test runner when it has one, and one
+says arriving page (WO-026-D013).
 
 **Design:**
 
@@ -94,7 +98,8 @@ by `check:scripts` on every change; `THIRD-PARTY-NOTICES.md` is licence text;
   `docs/dev-reference/architecture/{catalog,component-taxonomy,concept-mapping,console,events-and-state,foundation,performance,scene,sub-apps}.md`,
   `docs/dev-reference/workspace/{conventions,scripts,storybook}.md`,
   `docs/ai-reference/README.md` and
-  `docs/ai-reference/{catalog,component,foundation,scene,state,sub-app}-rules.md`.
+  `docs/ai-reference/{catalog,component,foundation,scene,state,sub-app}-rules.md`,
+  and the 33 READMEs under `libs/` (WO-026-D013).
   The census is checked against the tree at activation and corrected there.
 - **The procedure**, per document, in the census's order: the executor runs
   the `quality pass:` procedure the role text defines (read the document's
@@ -115,7 +120,8 @@ by `check:scripts` on every change; `THIRD-PARTY-NOTICES.md` is licence text;
   every command in a rule document runs as written; `scripts.md` keeps every
   tool script's purpose and status (rule 26; `npm run check:scripts`); the
   README names the sub-app menu, the scene as the root, the board and the
-  catalog, and links the three reference indexes; no document describes a
+  catalog, and links the three reference indexes; a library README says what
+  the library holds, how it is imported and how it is tested; no document describes a
   removed surface (the arriving pages, `provideSceneTestKit`, the `tool-list`
   composite, the filter row); the taxonomy's role names are used
   consistently with WS-001 §Design.
@@ -163,9 +169,11 @@ for the patch release.
    `sub-apps.md` with `sub-app-rules.md`, `scene.md` with `scene-rules.md`,
    `catalog.md` and `concept-mapping.md` with `catalog-rules.md`; then
    `console.md`, `performance.md`, `conventions.md`, `scripts.md`,
-   `storybook.md` and the two indexes. Check: for each pair, every command
+   `storybook.md` and the two indexes; then the 33 library READMEs, each against
+   its library's public API. Check: for each pair, every command
    the rule document names exits 0 when run as written (recorded in the
-   census), and `npm run check:scripts` exits 0 after `scripts.md`.
+   census), `npm run check:scripts` exits 0 after `scripts.md`, and every command
+   a library README names exits 0.
 5. The relative-link check over the census's standing documents, recorded in
    the evidence README. Check: zero unresolved.
 6. `npx nx format:check` and `npm run i18n:check`. Check: both exit 0.
@@ -210,7 +218,8 @@ and review once each.
    extraction and the check with zero missing), and no standing document
    names `provideSceneTestKit`, the arriving pages, `tool-list` or the filter
    row (`grep -rlE "provideSceneTestKit|arriving page|tool-list" README.md
-   docs/dev-reference docs/ai-reference` prints nothing).
+   docs/dev-reference docs/ai-reference` prints nothing, and the same pattern over
+   the files `git ls-files 'libs/**/README.md'` prints finds nothing).
 4. Every command a rule document under `docs/ai-reference/` names exits 0
    when run as written at the reviewed tree (the census records each with
    its exit code); `npm run check:scripts` exits 0.
@@ -218,7 +227,7 @@ and review once each.
    resolves (the evidence README records the check with zero unresolved);
    `npx nx format:check` exits 0.
 6. `git diff --name-only <base> HEAD` in the target names no file outside
-   `README.md`, `docs/dev-reference/`, `docs/ai-reference/`,
+   `README.md`, the READMEs under `libs/`, `docs/dev-reference/`, `docs/ai-reference/`,
    `RELEASE-NOTES.md` and `docs/dotln/`; `package.json`'s `dependencies`
    keys equal the base's.
 7. `node scripts/target-gate.mjs WO-026 --review` records a passing row for

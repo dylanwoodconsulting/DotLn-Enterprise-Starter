@@ -4804,6 +4804,14 @@
           "reopenWhen": "WO-026 activates.",
           "targets": [],
           "at": "2026-10-31T03:32:07.354Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-026-D006: the target's docs/dev-reference/workspace/scripts.md now lists npm run typecheck:e2e in the gate's table and in the plain selection, and no longer as a helper; npm run check:scripts passes.",
+          "reopenWhen": "WO-026 does not merge, or the registered gate's commands change without this document.",
+          "targets": [],
+          "at": "2026-10-31T16:08:25.648Z"
         }
       ]
     },
@@ -4838,6 +4846,230 @@
           "at": "2026-10-31T10:15:54.463Z"
         }
       ]
+    },
+    {
+      "id": "FUP-ba8e848d7a66d1f1",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d002",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "44cb65b6b2286ca95827af9e0d9987e8244997804f35e2a567f183212c45935c",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d002",
+          "title": "WO-026-D002: Pass the 33 library READMEs under libs/ with the quality pass: procedure: correct libs/shared/models/README.md, which says the library has no test runner and describes board types alone,…",
+          "summary": "{ \"id\": \"WO-026-D002\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Give the 33 library READMEs under libs/ the census kind standing, read each of them, check their names, commands and links read-only, and leave their bytes alone because criterion 6 fences them. Each row says unchanged and names the fact a pass with edit authority would correct. The pass's edited subject stays the 21 documents the Design lists. The one false statement among the 33 and the wider thinness of the generator stubs go to one follow-up.\", \"evidence\": [ \"git ls-files '*.md' '**/*.md' prints 94 files in the target at 6268de9: 38 under docs/dotln/, the generator log, THIRD-PARTY-NOTICES.md, the 21 do",
+          "missing": false
+        },
+        {
+          "hash": "fa09d15fe95bf14f07d33b3bd9e6c46c6941593f40d6fb723d94babd263dc794",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d002",
+          "title": "WO-026-D002: Pass the 33 library READMEs under libs/ with the quality pass: procedure: correct libs/shared/models/README.md, which says the library has no test runner and describes board types alone,…",
+          "summary": "{ \"id\": \"WO-026-D002\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Give the 33 library READMEs under libs/ the census kind standing, read each of them, check their names, commands and links read-only, and leave their bytes alone because criterion 6 fences them. Each row says unchanged and names the fact a pass with edit authority would correct. The pass's edited subject stays the 21 documents the Design lists. The one false statement among the 33 and the wider thinness of the generator stubs go to one follow-up.\", \"evidence\": [ \"git ls-files '*.md' '**/*.md' prints 94 files in the target at 6268de9: 38 under docs/dotln/, the generator log, THIRD-PARTY-NOTICES.md, the 21 do",
+          "missing": false
+        },
+        {
+          "hash": "181bdae0a2995473870b01245da68d093d179238d023171f17303ed0fd6b52f5",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d002",
+          "title": "WO-026-D002: Pass the 33 library READMEs under libs/ with the quality pass: procedure: correct libs/shared/models/README.md, which says the library has no test runner and describes board types alone,…",
+          "summary": "{ \"id\": \"WO-026-D002\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Superseded by D013 on the operator's direction: the 33 READMEs were passed. As first decided: give the 33 library READMEs under libs/ the census kind standing, read each of them, check their names, commands and links read-only, and leave their bytes alone because criterion 6 fences them. Each row says unchanged and names the fact a pass with edit authority would correct. The pass's edited subject stays the 21 documents the Design lists. The one false statement among the 33 and the wider thinness of the generator stubs go to one follow-up.\", \"evidence\": [ \"git ls-files '*.md' '**/*.md' prints 94 files in the",
+          "missing": false
+        },
+        {
+          "hash": "d2d1cf14cb4b5f97c8847b6e90f0dd20558836e8b4a9ec142a5f14c267331bf0",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d002",
+          "title": "WO-026-D002: Pass the 33 library READMEs under libs/ with the quality pass: procedure: correct libs/shared/models/README.md, which says the library has no test runner and describes board types alone,…",
+          "summary": "{ \"id\": \"WO-026-D002\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Superseded by D013 on the operator's direction: the 33 READMEs were passed. As first decided: give the 33 library READMEs under libs/ the census kind standing, read each of them, check their names, commands and links read-only, and leave their bytes alone because criterion 6 fences them. Each row says unchanged and names the fact a pass with edit authority would correct. The pass's edited subject stays the 21 documents the Design lists. The one false statement among the 33 and the wider thinness of the generator stubs go to one follow-up.\", \"evidence\": [ \"git ls-files '*.md' '**/*.md' prints 94 files in the",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-026-D002: criterion 6 fences the 33 library READMEs out of this order's diff, so the pass read them and checked their names, commands and links without editing them. Reading them found one false statement, in libs/shared/models/README.md, and nineteen generated stubs.",
+          "reopenWhen": "The operator widens WO-026 by scope expand:, or the next planning pass names the library READMEs, or a later order touches libs/shared/models.",
+          "targets": [],
+          "at": "2026-10-31T16:08:25.659Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-026-D002 and D004: criterion 6 fences the 33 library READMEs out of this order's diff, so the pass read them and checked their names, commands and links without editing them. Reading them found one false statement, in libs/shared/models/README.md, one line that says arriving page in libs/features/machinery/README.md, and nineteen generated stubs.",
+          "reopenWhen": "The operator widens WO-026 by scope expand:, or the next planning pass names the library READMEs, or a later order touches libs/shared/models or the machinery view.",
+          "targets": [],
+          "at": "2026-10-31T16:41:36.787Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "settled",
+          "reason": "WO-026-D013: the operator directed the widening, the order was amended, and the 33 READMEs under libs/ were passed: 29 changed, the false statement in libs/shared/models/README.md corrected, libs/features/machinery/README.md says placeholder, and the nineteen generator stubs replaced.",
+          "reopenWhen": "WO-026 does not merge.",
+          "targets": [],
+          "at": "2026-10-31T17:19:47.470Z"
+        },
+        {
+          "sourceRevision": 4,
+          "status": "settled",
+          "reason": "WO-026-D013: the operator directed the widening, the order was amended, and all 33 READMEs under libs/ were passed: the false statement in libs/shared/models/README.md corrected, libs/features/machinery/README.md says placeholder, and the nineteen generator stubs replaced.",
+          "reopenWhen": "WO-026 does not merge.",
+          "targets": [],
+          "at": "2026-10-31T17:34:13.057Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-d97544c4254dadd4",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d011",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "e010c0669cac75ba6bd694d8d0c376bf822b20120dd9ed56c70081c5f1317e7e",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d011",
+          "title": "WO-026-D011: Decide whether npm run check:scripts should also cover tools/.mjs and tools/scripts/catalog/ or WS-001 rule 26's wording should narrow to what it checks, and whether WO-026's…",
+          "summary": "{ \"id\": \"WO-026-D011\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Keep the relative-link check ad hoc, in this order's evidence, and state in the documents what npm run check:scripts covers rather than what rule 26 says of it. The Design lets the executor commit the check as a helper only if it earns its place; it cannot do so in this order, and whether either tool should grow is a later order's judgment.\", \"evidence\": [ \"The Design offers a link check run ad hoc and recorded, or committed as a helper with its scripts.md entry. A helper belongs under tools/scripts/, which criterion 6's fence excludes.\", \"tools/scripts/check-script-reference.mjs reads the top of tools/scri",
+          "missing": false
+        },
+        {
+          "hash": "0a095894c62da05708852773bc984f8e4955d17726fb6afa20eec877b1d2dd77",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d011",
+          "title": "WO-026-D011: Decide whether npm run check:scripts should also cover tools/.mjs and tools/scripts/catalog/ or WS-001 rule 26's wording should narrow to what it checks, and whether WO-026's…",
+          "summary": "{ \"id\": \"WO-026-D011\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Keep the relative-link check ad hoc, in this order's evidence, and state in the documents what npm run check:scripts covers rather than what rule 26 says of it. The Design lets the executor commit the check as a helper only if it earns its place; it cannot do so in this order, and whether either tool should grow is a later order's judgment.\", \"evidence\": [ \"The Design offers a link check run ad hoc and recorded, or committed as a helper with its scripts.md entry. A helper belongs under tools/scripts/, which criterion 6's fence excludes.\", \"tools/scripts/check-script-reference.mjs reads the top of tools/scri",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-026-D011: criterion 6 fences tools/ out of this order, and whether check:scripts widens, rule 26 narrows or the link check earns a gate slot is a judgment for a later order under rule 26. Every tool file is named in scripts.md at this tree.",
+          "reopenWhen": "A later pass finds a broken link in a standing document, a tool script goes unnamed in scripts.md, or a planning pass takes it up.",
+          "targets": [],
+          "at": "2026-10-31T16:41:36.808Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-026-D011: criterion 6 fences tools/ out of this order, and whether check:scripts widens, rule 26 narrows or the link check earns a gate slot is a judgment for a later order under rule 26. Every tool file is named in scripts.md at this tree, individually or by the tools/*.test.mjs glob.",
+          "reopenWhen": "A later pass finds a broken link in a standing document, a tool script goes unnamed in scripts.md, or a planning pass takes it up.",
+          "targets": [],
+          "at": "2026-10-31T16:52:54.451Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-35187266d29e00dc",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d012",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "2a8f8070438a6e0aa7113bf3608cc47340c06f652fc72343d8f784d5a3bedf8c",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d012",
+          "title": "WO-026-D012: WO-016 carries into its documents step the places that describe the /machinery placeholder: README.md's menu table, docs/dev-reference/README.md's first paragraph,…",
+          "summary": "{ \"id\": \"WO-026-D012\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next\", \"decision\": \"Leave WO-016's order text alone and record a carry-in for it. The passed documents describe the placeholder at /machinery as what is so, and the order that replaces it does not name them.\", \"evidence\": [ \"docs/work-orders/WO-016-machinery-view.md's Documents line names machinery.md and machinery-rules.md and pointers. The placeholder is described in README.md's menu table, docs/dev-reference/README.md's first paragraph, docs/dev-reference/architecture/sub-apps.md and docs/dev-reference/workspace/storybook.md.\", \"sub-apps.md's steps now name the tables a new sub-app updates, but WO-016 replaces a page rather",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-026-D012: WO-016 replaces the /machinery placeholder and its documents step names none of the documents that describe it. A judged order's text changes through a planning pass or amend-order, which this order has neither of.",
+          "reopenWhen": "The planning pass before WO-016 activates, or WO-016 activates.",
+          "targets": [],
+          "at": "2026-10-31T16:41:36.797Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-83dc180d25c50ccc",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d014",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "3ae3f7469aefcbfc7e6532086d9b8a19af486e6bac7dcaff25d40c64d780c0e1",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d014",
+          "title": "WO-026-D014: Take the library README standard into WS-001 rule 19, and decide whether workspace-tools:lint refuses the two generated texts, This library was generated with and Secondary entry point…",
+          "summary": "{ \"id\": \"WO-026-D014\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next; operator direction after the handoff\", \"decision\": \"Write the standard the amended Design sets for a library README into the target's conventions, so the next library does not ship the stubs this pass replaced. Rule 19, docs/ai-reference/README.md, sub-apps.md's first step and sub-app-rules.md now say that a library's README says what the library is for, how it is imported and how it is tested and names the document to read next, and that a testing entry point's says what it exports and how to use it. The 17 library READMEs carry all of that; the 16 entry points say what they export and how they are imported, and ui/menu",
+          "missing": false
+        },
+        {
+          "hash": "cb3c46fc8bf9e437054f17ba2a458c171ed14c6fa29021dc8b10f700d0636153",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d014",
+          "title": "WO-026-D014: Take the library README standard into WS-001 rule 19, and decide whether workspace-tools:lint refuses the two generated texts, This library was generated with and Secondary entry point…",
+          "summary": "{ \"id\": \"WO-026-D014\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: next; operator direction after the handoff\", \"decision\": \"Write the standard the amended Design sets for a library README into the target's conventions, so the next library does not ship the stubs this pass replaced. Rule 19 and docs/ai-reference/README.md now say that a library's README says what the library is for, how it is imported and how it is tested and names the document to read next, and that a testing entry point's says what it exports and how to use it, and sub-apps.md's fifth step and sub-app-rules.md send a session to replace the generated text. The 17 library READMEs carry all of that; the 16 entry points say wha",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-026-D014: the standard is in the target's conventions. WS-001's text is outside this order's non-goals line and a check is code, which criterion 6 excludes, so both wait for a planning pass.",
+          "reopenWhen": "The next planning pass, or a library ships a generated README again.",
+          "targets": [],
+          "at": "2026-10-31T17:34:13.067Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-026-D014: the standard is in the target's conventions. WS-001 is among the launchpad documents this order's non-goals leave out, and a check is code, which criterion 6 excludes, so both wait for a planning pass.",
+          "reopenWhen": "The next planning pass, or a library ships a generated README again.",
+          "targets": [],
+          "at": "2026-10-31T17:38:25.581Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-026-D014: the standard is in the target's conventions. WS-001 is among the launchpad documents this order's non-goals leave out, and a check is code, which criterion 6 excludes, so both wait for a planning pass.",
+          "reopenWhen": "The next planning pass, or a library ships a generated README again.",
+          "targets": [],
+          "at": "2026-10-31T17:39:02.770Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-895e3973b6c107a8",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d016",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "dfdb2e04b131d879505009b8fba42a9502b5c746aad17376cc83fd8b14f3fb3a",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d016",
+          "title": "WO-026-D016: Take WS-001 rule 5, which says nearly every injectable exposes a kit, and rule 11, which says <Feature>Paths enums, to what the target's conventions and code hold: each @Injectable class…",
+          "summary": "{ \"id\": \"WO-026-D016\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: final review\", \"decision\": \"Pass the final review on the reproduced criteria with no edit to the verified documents, commit that tree as two reviewed commits and write the workstream's delivery states. Integration took in nothing in either repository. The reviewed commit 01e7b6e03fb13946b5164733d91827e737d1d766 has tree 7156c5bc0a9ebd79728c0b4a903012bac8ca7e6c, the tree VER-001 judged, the draft carries and the review gate row covers, so the target gate does not rerun. No launchpad complete run is owed: no launchpad code changed, and criterion 7 names the target gate and the document gate. WO-025's two rows in WS-001 still rea",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-719c7f1b9fa85ad6",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d017",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "59bd4bf125fde98cb78f9b16984651a74d4f6148f4bd9dd07d348aa94297f25b",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d017",
+          "title": "WO-026-D017: After WO-026's release close, set the Last reviewed target source and Latest target release rows of docs/repositories/dotln-angular.md to that merge and release, and decide who holds…",
+          "summary": "{ \"id\": \"WO-026-D017\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: final review\", \"decision\": \"Keep the profile's Last reviewed target source and Latest target release rows as D008 left them, and register their refresh. Neither new value exists until the operator merges and release close runs. Release close does not edit the profile, and the planning receipt's known issue on those rows names this order's close as its condition, so without a row they go stale at the first target release after WO-025 with nobody holding the edit.\", \"evidence\": [ \"docs/repositories/dotln-angular.md reads 6268de9fc3cae84bf66091c1fbcc30d344411cd2 and DotLn Angular v0.6.0. Receipt 2026-10-30-planning-18e7afc23edf14",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-9faab11ab1ea2a32",
+      "key": "decision:docs/evidence/WO-026/decisions.md#wo-026-d018",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "0620b042a0ca6e95d906972a0281a890dfb9549df4df970569d3e6687e5eb986",
+          "ref": "docs/evidence/WO-026/decisions.md#wo-026-d018",
+          "title": "WO-026-D018: Ask core for a route from ready-to-verify back to the executor when the operator widens an order after its handoff, so that the handoff's ledger, its gate rows and status's unmet…",
+          "summary": "{ \"id\": \"WO-026-D018\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: final review\", \"decision\": \"Uphold D013's route and register the lifecycle gap behind it. Verification judged the whole final tree, so no work after the first handoff went unjudged and no other route was needed. What the gap leaves is a record older than the work: ImplementationReady's target gate names a tree before the widening, and status still lists criterion 1 unmet from that handoff's ledger, which the dispatch briefing repeats. Two document orders running have met this, so it belongs in the register rather than in two reopening conditions.\", \"evidence\": [ \"ImplementationReady's targetGate binds tree 0c153e73e6e6f64a2d30",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

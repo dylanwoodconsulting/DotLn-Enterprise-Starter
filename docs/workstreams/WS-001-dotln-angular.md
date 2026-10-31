@@ -674,8 +674,8 @@ sequence's order, then the later members with their reopening conditions
 
 | Member or candidate | What the operator sees or does | State or reopening condition |
 | --- | --- | --- |
-| WO-025 the launchpad's documents | nothing on screen; every standing document of this launchpad read as what is so, the profile in the shape the operator chose | active |
-| WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference and the AI reference read as what is so | filed |
+| WO-025 the launchpad's documents | nothing on screen; every standing document of this launchpad read as what is so, the profile in the shape the operator chose | merged; #43, `Launchpad v0.3.4` |
+| WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference, the AI reference and the library READMEs read as what is so | final-reviewed; DotLn-Angular #10 open |
 | WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | filed |
 | WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | filed |
 | WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | filed |
@@ -734,8 +734,8 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-008 | filed    | [the order](../work-orders/WO-008-authentication-and-permissions.md) |
 | WO-017 | filed    | [the order](../work-orders/WO-017-digital-twin-patience-lane.md) |
 | WO-018 | filed    | [the order](../work-orders/WO-018-art-of-war-map-and-toys.md) |
-| WO-025 | active   | a self order on `main`; [the order](../work-orders/WO-025-quality-pass-launchpad-documents.md), [evidence](../evidence/WO-025/README.md) |
-| WO-026 | filed    | [the order](../work-orders/WO-026-quality-pass-dotln-angular-documents.md) |
+| WO-025 | merged   | #43, `Launchpad v0.3.4`; [evidence](../evidence/WO-025/README.md) |
+| WO-026 | final-reviewed | DotLn-Angular #10 on `docs/quality-pass-reference-documents`, opened as a draft at verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-026/README.md) |
 | WO-020 | filed    | [the order](../work-orders/WO-020-concept-studies-movement.md) |
 | WO-021 | filed    | [the order](../work-orders/WO-021-concept-studies-rxjs.md) |
 | WO-022 | filed    | [the order](../work-orders/WO-022-concept-studies-eip.md) |
