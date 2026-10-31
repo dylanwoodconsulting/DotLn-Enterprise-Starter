@@ -117,4 +117,26 @@ WO-015's surviving link as proof that such a link was safe, and it is a declared
 `docs/control/doc-baseline.json`. Both links now name the target path as plain text, which needs
 no exception. No filed report or target byte changed, and the gate reran after the repair.
 
-The publish invocations, the hook's decision and the host's are appended below after the result.
+### The final publish
+
+From this launchpad worktree's root, after `final-review-result pass`, `target-records` (records
+commit `b2a3d6769d76ced04a0ccd6cc5aae757d8ad4897`) and the instance records commit `329876a`, the
+exact registered helper ran plainly, with no environment prefix, pipe or redirect:
+
+```sh
+node scripts/worktree.mjs publish WO-026 --target-worktree --branch docs/quality-pass-reference-documents --title "docs: pass the reference documents for usefulness and currency" --body-file docs/final-reviews/WO-026/PR.md
+```
+
+It exited 0 with no host refusal. Its one output line: pushed the branch at `b2a3d676…` over the
+draft `4ee26ca5…` and marked pull request 10 on `github.com/DylanBWood/DotLn-Angular` ready. The
+kit's pre-tool admission line is not part of the command's output and was not otherwise surfaced.
+
+A read-only forge read at 18:54:49Z confirmed `isDraft` false, head `b2a3d676…` and the three
+commits in order. A second, at 19:04:58Z after waiting on CI, read `checks`, `title` and `visual`
+passed on that head, merge state `CLEAN`, and no review, comment or thread;
+[the preview record](preview-pr.json) holds it. The published body is PR.md with the helper's
+Change and Target checks sections. Its only launchpad identifiers are the four record paths in
+the generated Change table, which the kit judges apart from the reviewed prose.
+
+The records branch publish follows this section's commit, so its result is in the review
+session's closing message rather than here.

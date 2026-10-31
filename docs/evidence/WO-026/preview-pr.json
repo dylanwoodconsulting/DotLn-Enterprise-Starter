@@ -102,5 +102,63 @@
         "note": "the 33 READMEs under libs/; this commit's tree is the verified tree the draft carries, and review gate row target-gate:b990e0e6-db44-412a-9f5c-4604ce0524b0 covers it"
       }
     ]
+  },
+  "finalPublish": {
+    "observedAt": "2026-10-31T19:04:58Z",
+    "command": "node scripts/worktree.mjs publish WO-026 --target-worktree --branch docs/quality-pass-reference-documents --title \"docs: pass the reference documents for usefulness and currency\" --body-file docs/final-reviews/WO-026/PR.md",
+    "exitCode": 0,
+    "headSha": "b2a3d6769d76ced04a0ccd6cc5aae757d8ad4897",
+    "overDraft": "4ee26ca5ced01232f211ccc32907e43686f8475c",
+    "commits": [
+      "675a80926894b2d3e9a8e13cf2d36e6bd183cda1",
+      "01e7b6e03fb13946b5164733d91827e737d1d766",
+      "b2a3d6769d76ced04a0ccd6cc5aae757d8ad4897"
+    ],
+    "state": "OPEN",
+    "isDraft": false,
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 41231672052,
+        "workflow": "CI",
+        "conclusion": "success"
+      },
+      {
+        "id": 41231673002,
+        "workflow": "Pull request title",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:54:40Z",
+        "completedAt": "2026-10-31T19:04:23Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:54:41Z",
+        "completedAt": "2026-10-31T18:54:51Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:54:41Z",
+        "completedAt": "2026-10-31T18:58:00Z"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the pull request waits for the operator to read and merge it"
   }
 }

@@ -12,11 +12,11 @@ This branch files the instance records of WO-026, the quality pass over DotLn-An
 
 ## Validation
 
-- The target's declared review gate (install, lint, e2e type check, unit tests, format, build, e2e and visual) passed at tree `7156c5bc0a9ebd79728c0b4a903012bac8ca7e6c` with no tracked-byte mutation, after the Preflight line. CI passed `checks`, `visual` and `title` on that tree from a clean checkout. The reviewed commit `01e7b6e03fb13946b5164733d91827e737d1d766` has that tree, so the gate was not rerun.
+- The target's declared review gate (install, lint, e2e type check, unit tests, format, build, e2e and visual) passed at tree `7156c5bc0a9ebd79728c0b4a903012bac8ca7e6c` with no tracked-byte mutation, after the Preflight line. CI passed `checks`, `visual` and `title` on that tree from a clean checkout, and again on the final head `b2a3d6769d76ced04a0ccd6cc5aae757d8ad4897`. The reviewed commit `01e7b6e03fb13946b5164733d91827e737d1d766` has that tree, so the gate was not rerun.
 - This review reran the evidence script at the reviewed commit (94 tracked, 94 rows; 492 names; 122 repository links; 0 problems), extracted the rule-document and library-README commands independently and found exactly the census's 39 and 41, and resolved all 83 identifiers the library READMEs name.
 - The kit's pre-review commit lint passes over the two described commits at the result transition.
 - All seven criteria are met; no waiver, correction or override was recorded. Criterion 1, the verifier's, is met on VER-001's independent walkthrough; the executor's ledger entry for it predates that walkthrough.
-- Gates in this worktree: `npm run test:docs` passed after the review's last record edit and again after the records moved into the target. No launchpad complete run is owed, because no launchpad code changed and the criteria name the target gate and the document gate.
+- Gates in this worktree: `npm run test:docs` passed after the review's last record edit, before the result. Its first run after the records moved failed on two relative links to moved records; the [host qualification](../../evidence/WO-026/host-qualification.md) records the cause and the repair, which needed no declared exception, and it passed after that and again after the publish observations. No launchpad complete run is owed, because no launchpad code changed and the criteria name the target gate and the document gate.
 
 ## Limits and follow-ups
 
