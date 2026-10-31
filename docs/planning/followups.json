@@ -3724,6 +3724,14 @@
           "reopenWhen": "WO-207 lands in a starter release (then the pass that takes it decides whether the instance owns its README), or an update refuses a template-derived file the fork edited.",
           "targets": [],
           "at": "2026-10-30T22:48:30.677Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D013 and D014: on the operator's direction of 2026-10-30 the root README.md stays a template-derived carrier and the launchpad's own page lives at docs/launchpad-readme.md; FUP-9958a2830a81ad0c carries the swap, and the operator takes the question of where the kit's directions should live to core's next planning pass.",
+          "reopenWhen": "WO-207 lands in a starter release, or an update refuses a template-derived file the fork edited.",
+          "targets": [],
+          "at": "2026-10-31T03:12:21.508Z"
         }
       ]
     },
@@ -4560,6 +4568,274 @@
           "reopenWhen": "A starter release's publish lint admits a pull-request title without a conventional type, or core lets an instance declare its title convention; then the first target order that next touches .github/ changes the workflow, or a small order does.",
           "targets": [],
           "at": "2026-10-30T23:29:44.490Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-038b001b4b40c345",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d003",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "0b0fab54744ccbfa926eb02e6af51190d87136283e9790b490237da50c1619e7",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d003",
+          "title": "WO-025-D003: Keep a self order's path exclusions compatible with release prepare: an order that classifies a release and excludes README.md or docs/work-orders/WO-.md must carve out the generated…",
+          "summary": "{ \"id\": \"WO-025-D003\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Run npm run release -- prepare --local as the role directs, which assigns this order's patch version in its heading and rewrites README.md's generated claim line, and judge criterion 6 unmet for exactly that reason rather than met. Criteria 6 and 8 cannot both hold as written: the pass itself edits neither path, the two writes are the release command's, and the verifier and the operator see the conflict plainly and decide it through the waiver route.\", \"evidence\": [ \"Criterion 6 requires git diff --name-only <base> HEAD to name no file under docs/work-orders/WO-*.md or README.md. The order's Non-goals repea",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D003: criteria 6 and 8 of this order could not both hold as written, because release prepare writes README.md's claim line and the order's heading; the same trap waits in any later self order with those exclusions. Deferred to planning, which owns order text.",
+          "reopenWhen": "The next planning pass files a self order, or the operator waives or amends WO-025's criterion 6.",
+          "targets": [],
+          "at": "2026-10-31T01:33:33.579Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-025-D013: WO-025's amended criterion 6 no longer excludes README.md and names the order's own file, and no other open order is a self order, so nothing else carries the exclusion that collided with release prepare.",
+          "targets": [],
+          "reopenWhen": "A self order again excludes a path release prepare writes.",
+          "at": "2026-10-31T03:12:21.517Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-63ce6b9d99120991",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d004",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "b49d687ca3d76381e60757bdbb3c2690f50fb11f8be5ab3d4e244b9f1a82183d",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d004",
+          "title": "WO-025-D004: The next planning pass rereads the purpose block against the app: the critical-path sentence describes a path mostly run, and the data sentence states the mining store as purpose.…",
+          "summary": "{ \"id\": \"WO-025-D004\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Leave docs/product/purpose.md unchanged. Its purpose block is bound by the latest planning receipt, so a currency edit there belongs to a planning pass; nothing outside the block is wrong. Name the block's forward-looking sentences as unresolved facts in the census, and state the binding once in docs/product/README.md so the next editor does not meet it by surprise.\", \"evidence\": [ \"scripts/lib/plan-subject.mjs composes the purpose block into the goal standard, and scripts/lib/plan-continuation.mjs requires the judged and current goal standard to be the same.\", \"A one-word probe inside the block made npm ru",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D004: the purpose block is bound by receipt 015 and a currency edit fails plan check, so it waits for a planning pass under its own refutation.",
+          "reopenWhen": "The next planning pass that restates the purpose or takes a new goal standard.",
+          "targets": [],
+          "at": "2026-10-31T01:33:33.590Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-025-D016: the purpose block states purpose throughout and no sentence in it is false of that purpose, so the reread finds no defect.",
+          "targets": [],
+          "reopenWhen": "A planning pass restates the purpose or takes a new goal standard.",
+          "at": "2026-10-31T03:12:21.527Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-b6399de280f00c80",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d008",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "15efaeed8bbdf8d0d8a9e625ec3eaf4fd7a7db892ced27b9d4db99068bc6f1cd",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d008",
+          "title": "WO-025-D008: Refresh docs/discovery/environment.json for the installed harness versions so attestations stop printing the discovery advisory. Touches docs/discovery/environment.json under an order…",
+          "summary": "{ \"id\": \"WO-025-D008\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Keep the environment truth as the dated inspection it is and add a Current readings section at its top, re-read today, rather than rewriting its findings. Leave docs/discovery/environment.json untouched: it is not Markdown, this order changes no control or configuration record, and the attestation advisory it causes is informational.\", \"evidence\": [ \"The page's probes and labels are a bounded inspection with its own commands; re-running every one would be a new inspection, not a document pass. Node, npm, Git and the OS are unchanged; Claude Code moved from 2.1.299 to 2.1.314, Codex CLI from 0.162.1 to 0.166",
+          "missing": false
+        },
+        {
+          "hash": "748b38bbac04a28a87b5ff95a5713d67bee4c50bbd96110bdb25cb8591cbc214",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d008",
+          "title": "WO-025-D008: Refresh docs/discovery/environment.json for the installed harness versions so attestations stop printing the discovery advisory. Touches docs/discovery/environment.json under an order…",
+          "summary": "{ \"id\": \"WO-025-D008\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Keep the environment truth as the dated inspection it is and add a Current readings section at its top, re-read today, rather than rewriting its findings. Leave docs/discovery/environment.json untouched: it is not Markdown, this pass writes no control or configuration record, and the attestation advisory it causes is informational.\", \"evidence\": [ \"The page's probes and labels are a bounded inspection with its own commands; re-running every one would be a new inspection, not a document pass. Node, npm, Git and the OS are unchanged; Claude Code moved from 2.1.299 to 2.1.314, Codex CLI from 0.162.1 to 0.166.0",
+          "missing": false
+        },
+        {
+          "hash": "688ec4d6cf923df42dd3bdcdf03071f26c097cc56a9981d4e27a027bac0c10dd",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d008",
+          "title": "WO-025-D008: Refresh docs/discovery/environment.json for the installed harness versions so attestations stop printing the discovery advisory. Touches docs/discovery/environment.json under an order…",
+          "summary": "{ \"id\": \"WO-025-D008\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Keep the environment truth as the dated inspection it is and add a Current readings section after its introduction, re-read today, rather than rewriting its findings. Leave docs/discovery/environment.json untouched: it is not Markdown, this pass writes no control or configuration record, and the attestation advisory it causes is informational.\", \"evidence\": [ \"The page's probes and labels are a bounded inspection with its own commands; re-running every one would be a new inspection, not a document pass. Node, npm, Git and the OS are unchanged; Claude Code moved from 2.1.299 to 2.1.314, Codex CLI from 0.162.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D008: the discovery record stays at WO-001's versions; the advisory it causes is informational and this order changes no record outside its documents.",
+          "reopenWhen": "An order owns the discovery record, or a session needs an attestation without the advisory.",
+          "targets": [],
+          "at": "2026-10-31T01:33:33.600Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-025-D008: the discovery record stays at WO-001's versions; the advisory it causes is informational and this pass writes no record outside its documents.",
+          "reopenWhen": "An order owns the discovery record, or a session needs an attestation without the advisory.",
+          "targets": [],
+          "at": "2026-10-31T02:05:13.976Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "WO-025-D008: the discovery record stays at WO-001's versions; the advisory it causes is informational and this pass writes no record outside its documents.",
+          "reopenWhen": "An order owns the discovery record, or a session needs an attestation without the advisory.",
+          "targets": [],
+          "at": "2026-10-31T02:14:03.339Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "settled",
+          "reason": "WO-025-D016: npm run discover refreshed docs/discovery/environment.json for Claude Code 2.1.314, Codex CLI 0.166.0 and Copilot CLI 1.0.94.",
+          "targets": [],
+          "reopenWhen": "A harness moves to a version line the discovery record does not hold.",
+          "at": "2026-10-31T03:12:21.536Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-0c52723152a08626",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d009",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "2c25283efe8222ea9dfffd878335829273b2847c8107534652ca2202696430a6",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d009",
+          "title": "WO-025-D009: The next planning pass reads the census's gaps with the operator: the session directions no pass recorded, WO-015-D022's follow-up absent from the register, the unused…",
+          "summary": "{ \"id\": \"WO-025-D009\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Pass the operator record with no rule added, removed or changed in substance. Give every item a bold lead, group the standing preferences under four headings, merge the one direction carried twice, correct two stale phrases and drop a phrase that called a paraphrase the operator's words. Name the digests that do not resolve and the directions no pass recorded as gaps for the next pass; write none of them as rules.\", \"evidence\": [ \"The digest and date multisets before and after are equal (37 digest tokens, 47 dates; both diffs empty, recorded in the census). The bullets fall from 46 to 45 by the one merge: t",
+          "missing": false
+        },
+        {
+          "hash": "672a139e8a044713a9fbf69451b8759cd98d768f9d18441129f695b0ce2045e3",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d009",
+          "title": "WO-025-D009: The next planning pass reads the census's gaps with the operator: the session directions no pass recorded, WO-015-D022's follow-up absent from the register, the unused…",
+          "summary": "{ \"id\": \"WO-025-D009\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Pass the operator record with no rule added, removed or changed in substance. Give every item a bold lead, group the standing preferences under four headings, move two items to better places, split two items so each date governs its own text, merge the one direction carried twice, correct three stale phrases and drop a phrase that called a paraphrase the operator's words. Name the digests that do not resolve and the directions no pass recorded as gaps for the next pass; write none of them as rules.\", \"evidence\": [ \"The digest and date multisets before and after are equal (37 digest tokens, 47 dates; both di",
+          "missing": false
+        },
+        {
+          "hash": "490a87dc1e71d0ccb816c38167c51eeb584052006fffccdb64039e19da367d0a",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d009",
+          "title": "WO-025-D009: The next planning pass reads the census's gaps with the operator: the session directions no pass recorded, WO-015-D022's follow-up absent from the register, the unused…",
+          "summary": "{ \"id\": \"WO-025-D009\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next\", \"decision\": \"Pass the operator record with no rule added, removed or changed in substance. Give every item a bold lead, group the standing preferences under four headings, move two items to better places, split two items so each date governs its own text, merge the one direction carried twice, correct three stale phrases and drop a phrase that called a paraphrase the operator's words. Name the digests that do not resolve and the directions no pass recorded as gaps for the next pass; write none of them as rules.\", \"evidence\": [ \"The digest and date multisets before and after are equal (37 digest tokens, 47 dates; both di",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D009: the census names the unrecorded session directions, WO-015-D022's follow-up absent from the register, the unused implementation-guidance row in doc-baseline.json and the unresolvable digest 39b30d94; each is the next pass's to read with the operator.",
+          "reopenWhen": "The next planning pass after WO-025 merges.",
+          "targets": [],
+          "at": "2026-10-31T01:33:33.610Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-025-D009: the census names the unrecorded session directions, WO-015-D022's follow-up absent from the register, the unused implementation-guidance row in doc-baseline.json, the unresolvable digest 39b30d94, rule 10's unrecorded default and the four open orders that name the profile's old section; each is the next pass's to read with the operator.",
+          "reopenWhen": "The next planning pass after WO-025 merges.",
+          "targets": [],
+          "at": "2026-10-31T02:05:13.987Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "WO-025-D009: the census names the unrecorded session directions, WO-015-D022's follow-up absent from the register, the unused implementation-guidance row in doc-baseline.json, the unresolvable digest 39b30d94 and the four open orders that name the profile's old section; each is the next pass's to read with the operator.",
+          "reopenWhen": "The next planning pass after WO-025 merges.",
+          "targets": [],
+          "at": "2026-10-31T02:14:03.349Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "settled",
+          "reason": "WO-025-D016 and D017: every gap this row names is closed in this order: the directions no pass recorded are in the operator record or left out with a reason, typecheck:e2e is in the registered gate, the baseline row is gone, the digest is proved over the file's first 965 bytes, and the profile answers the four open orders' old section name.",
+          "reopenWhen": "The operator says a direction is missing from the record.",
+          "targets": [],
+          "at": "2026-10-31T03:16:52.149Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-9958a2830a81ad0c",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d014",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "3e3f02f6ca9a47a0d876ced841e53f6f510019a47cab3396235d5eab2d6729a0",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d014",
+          "title": "WO-025-D014: Replace the root README.md with docs/launchpad-readme.md, keeping the release block the kit reads, and archive the old page unless the kit has moved its instruction text to another…",
+          "summary": "{ \"id\": \"WO-025-D014\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next; operator direction after the handoff\", \"decision\": \"Hold the launchpad's own README at docs/launchpad-readme.md, written in the operator's table-first shape, with nothing else at the root changing. The page says why it is not at the root and what moves it there. It carries no release block, because the release surfaces read only the root page's.\", \"evidence\": [ \"Operator direction in docs/intake/notes/wo-025-session-2026-10-30.md, SHA-256 75779a72a7d069063d3789fecd0e3ba15f45010d9f6f310a426d8a6197965cbd, entries 3 to 6.\", \"scripts/lib/release-preparation.mjs and scripts/release.mjs read the release block from the root REA",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D014, on the operator's direction of 2026-10-30: replace the root README.md with docs/launchpad-readme.md and archive the old page, unless the kit has moved its instruction text elsewhere, in which case that location is the reference and no archive is needed.",
+          "reopenWhen": "The upstream kit no longer causes merge issues with the main README.",
+          "targets": [],
+          "at": "2026-10-31T03:12:21.498Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-f8216ece83a3e7a6",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d015",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "fb7a86076d9590bc49c530339db5e3210bae41183c5caa595cb9b32d675f7022",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d015",
+          "title": "WO-025-D015: WO-026 moves typecheck:e2e from the helpers to the registered gate in the target's docs/dev-reference/workspace/scripts.md, which still lists it as a helper because the registration…",
+          "summary": "{ \"id\": \"WO-025-D015\", \"date\": \"2026-10-30\", \"dispatch\": \"resume: next; operator direction after the handoff\", \"decision\": \"Add npm run typecheck:e2e to the dotln-angular registered gate in both selections, which closes the gap WO-015-D022 named through the registration route it offered, and update the profile to say so. No filed order's Preflight needs a change, because each target order's gate reads the registration.\", \"evidence\": [ \"In a throwaway clone of the target at 6268de9, npm ci exited 0, the gate's command exited 0 on the clean tree and exited 2 after a mistyped line was added to apps/dotln-e2e/src/scene.spec.ts, with error TS2322. The registered clone stayed at 6268de9 with no st",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-025-D015: the target's docs/dev-reference/workspace/scripts.md still lists typecheck:e2e as a helper; a self order does not write the target, and WO-026 passes that document.",
+          "reopenWhen": "WO-026 activates.",
+          "targets": [],
+          "at": "2026-10-31T03:32:07.354Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-3436884063e324de",
+      "key": "decision:docs/evidence/WO-025/decisions.md#wo-025-d019",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "90588fa7fc1033db2094fb7f2f1a5a1bf2a944a0a4a3c9a932976bb08a1fc90d",
+          "ref": "docs/evidence/WO-025/decisions.md#wo-025-d019",
+          "title": "WO-025-D019: WO-025 census repair, VER-001 F1 and F2: separate prospective phase outputs from the current file inventory, update its kind totals and equality evidence, and remove the repeated…",
+          "summary": "{ \"id\": \"WO-025-D019\", \"date\": \"2026-10-31\", \"dispatch\": \"resume: verify\", \"decision\": \"Judge criterion 2 unmet in VER-001 and return its census repair to this order. The asserted inventory must equal the reviewed candidate's files, including new untracked Markdown, without counting absent future reports. Keep prospective outputs outside the asserted inventory until they exist, update the kind totals at the same cutoff and preserve every real document's classification and standing outcome. The verifier leaves the implementation unchanged. Remove the duplicated explanatory sentence in the census as adjacent cleanup during that repair; it is a follow-up and does not independently block a crite",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by the WO-025 repair (resume: fix) on 2026-10-31, WO-025-D020: the census's tables count only files that exist, its Later reports list counts a path once it exists, its totals read 183 records and 278 files at that cutoff, and F2's repeated sentence is gone. The documented equality script exits 0 on the candidate and with VER-002.md filed, and exits 1 on an unlisted report, a stray document, a removed file and a duplicate row.",
+          "reopenWhen": "A fresh verification of WO-025 finds the two sides of the census's assertion disagree, or a later phase files Markdown the Later reports list does not name.",
+          "targets": [],
+          "at": "2026-10-31T09:46:32.610Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by the WO-025 repair (resume: fix) on 2026-10-31, WO-025-D020, in the form that survived review, which replaces this row's earlier wording: the census's inventory rows name only files that exist, its Later reports table counts a row once Git lists its file, its totals read 183 records and 278 files at that cutoff, and F2's repeated sentence is gone. The evidence README's script exits 0 on the candidate, with VER-002.md filed and at a real commit with all four reports, and exits 1 on an unlisted report, a stray document, a removed file, a duplicate row and an off-shape row.",
+          "reopenWhen": "A fresh verification of WO-025 finds the census's assertion disagrees with the tree, or a later phase files Markdown the Later reports table does not name.",
+          "targets": [],
+          "at": "2026-10-31T10:15:54.463Z"
         }
       ]
     }

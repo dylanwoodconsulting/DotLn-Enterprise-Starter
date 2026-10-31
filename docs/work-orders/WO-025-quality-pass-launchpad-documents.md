@@ -1,11 +1,12 @@
-# WO-025 — A quality pass over every standing document of this launchpad under the kit's `quality pass:` procedure, with the repository profile rewritten to the shape the operator chose (version assigned at activation)
+# WO-025 — A quality pass over every standing document of this launchpad under the kit's `quality pass:` procedure, with the repository profile rewritten to the shape the operator chose (v0.3.4)
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** machinery
-**Release classification:** patch. Documents of this instance change; no kit
-file, configuration, grant or control record changes.
+**Release classification:** patch. Documents of this instance, its discovery
+record, one document-baseline row and the `dotln-angular` registered gate change;
+no kit file or grant changes.
 **Cost:** rewrites `docs/repositories/dotln-angular.md` to the shape of the
 proposed profile kept in ignored intake; edits, where the pass finds a
 defect of usefulness, currency, coherence or organization, the other
@@ -77,7 +78,10 @@ the dependency plan saying what is so today, the sub-app section without a
 diary. They open the purpose and the concept-study direction and read
 sentences that are true of the app as it is. They open the environment
 truth, the harness-security note and the directory READMEs and find each
-says what a reader needs and nothing that is stale. What the operator learns
+says what a reader needs and nothing that is stale. They open the launchpad's
+own README at `docs/launchpad-readme.md` and read, in the same table-first shape,
+what this repository is, how to run it, where everything is and how a change
+lands. What the operator learns
 is that every document a session reads at start says what is so; what they
 decide is whether the record of their directions is complete.
 
@@ -118,7 +122,8 @@ document since starter v0.103.0 carried it.
   `docs/operator/implementation-guidance.md`, `docs/product/purpose.md`,
   `docs/product/concept-study.md`, `docs/product/README.md`,
   `docs/planning/sequence.md`, `docs/discovery/environment.md`,
-  `AI-HARNESS-SECURITY.md`, the hand-written floor of `CLAUDE.md` (above its
+  `AI-HARNESS-SECURITY.md`, `docs/launchpad-readme.md`, the hand-written floor of
+  `CLAUDE.md` (above its
   generated block; `AGENTS.md` is its symlink), and the directory READMEs
   under `docs/` (`docs/README.md`, `control`, `decisions`, `discovery`,
   `observations`, `planning`, `publication`, `releases`, `repositories`,
@@ -172,6 +177,19 @@ document since starter v0.103.0 carried it.
   rules; `node scripts/harness.mjs check` confirms the generated block is
   untouched. `AI-HARNESS-SECURITY.md` is read against the settings actually
   loaded (the README's first-steps rule) and says what is so.
+- **The README** (amended on the operator's direction of 2026-10-30,
+  WO-025-D013): the root `README.md` stays the starter's text, changed only by
+  the release claim line `release prepare` writes, because the starter's updates
+  rewrite it through Git merges and a fixed page there would conflict on them.
+  The launchpad's own fixed page is `docs/launchpad-readme.md`, a standing
+  document in the profile's shape, until the upstream kit no longer causes merge
+  issues with the root page.
+- **The gaps the pass finds** (the same amendment): the pass closes what it can
+  instead of listing it. `typecheck:e2e` joins the `dotln-angular` registered
+  gate, `docs/discovery/environment.json` is refreshed for the installed
+  harnesses, the unused link row leaves `docs/control/doc-baseline.json`, and
+  standing directions no pass recorded enter the operator record with their
+  dates and captures.
 - **Checks**: `npm run test:docs`, `node scripts/docs-check.mjs`,
   `npm run publication:check`, `node scripts/harness.mjs check`,
   `npm run work-orders -- index --check` (the sequence and WS-001's block
@@ -218,7 +236,8 @@ with the checks run and the link-check record.
    prints 26 and the `dotln-workstream` JSON block is byte-identical to the
    base's (`git diff --stat` on the block's lines prints nothing).
 6. The product documents, the floor, the security note, the environment
-   truth, the sequence and the directory READMEs passed. Check:
+   truth, the sequence and the directory READMEs passed, and
+   `docs/launchpad-readme.md` written. Check:
    `node scripts/docs-check.mjs` and `npm run publication:check` exit 0, any
    ceiling advisory recorded in the census; `node scripts/harness.mjs check`
    exits 0.
@@ -229,7 +248,7 @@ with the checks run and the link-check record.
    both report current with no advisory from this order.
 9. `npm test` and `npm run test:docs`. Check: both exit 0.
 10. The publish, review and records steps as WO-012 steps 8 to 10, with the
-    branch `docs/quality-pass-launchpad-documents`, the title `docs: pass
+    branch `docs/quality-pass-launchpad-documents`, the title `:memo: Pass
     the launchpad's standing documents for usefulness and currency`,
     `docs/evidence/WO-025/` and `docs/final-reviews/WO-025/`.
 
@@ -266,9 +285,11 @@ with the checks run and the link-check record.
    check with zero unresolved).
 4. `docs/operator/README.md`: the multiset of capture digests cited (every
    `[0-9a-f]{8}…` or 64-hex token) and the multiset of dates cited before and
-   after the pass are equal (the census records both lists and the diff,
-   empty), and `node scripts/docs-check.mjs` reports no new operator-word
-   advisory for the record.
+   after the pass are equal apart from the directions the pass records on the
+   operator's direction of 2026-10-30, each listed in the census (the census
+   records both lists and the diff, which holds only those), and
+   `node scripts/docs-check.mjs` reports no new operator-word advisory for the
+   record.
 5. `docs/workstreams/WS-001-dotln-angular.md` carries house rules 1 to 26
    under their numbers (`grep -c "^[0-9]*\. \*\*" …` prints 26 and the
    numbers are consecutive, asserted in the census) and its
@@ -278,13 +299,23 @@ with the checks run and the link-check record.
    exits 0; `node scripts/harness.mjs check` reports the generated surfaces
    at their pinned bytes; `git diff --name-only <base> HEAD` names no file
    under `scripts/`, `packages/`, `.claude/`, `.agents/`, `.codex/`,
-   `docs/work-orders/WO-*.md`, `docs/planning/*-20*.md`,
-   `docs/planning/refutations/`, `docs/evidence/WO-0[01]*/`, `README.md` or
-   `KIT-MANIFEST.json`.
+   `docs/planning/*-20*.md`, `docs/planning/refutations/`,
+   `docs/evidence/WO-0[01]*/` or `KIT-MANIFEST.json`, and no work order but this
+   one; `README.md` differs from the base by the one release claim line
+   `release prepare` writes, and this order's file by its release label and the
+   amendment of 2026-10-30.
 7. `npm run work-orders -- index --check` reports both pages current and
    `npm run plan -- check` reports no advisory attributable to this order.
 8. `npm test` and `npm run test:docs` pass at the reviewed tree; the
    Preflight line ran before the full run.
+9. The `dotln-angular` registration's `gate` runs `npm run typecheck:e2e` in the
+   plain and review selections. In a throwaway clone of the target at `6268de9`
+   that command exits 0, and exits nonzero after a mistyped line is added to an
+   e2e spec, recorded in the evidence README.
+10. `docs/launchpad-readme.md` opens with a table of facts, then task-named
+    sections, and says how to run the launchpad and its gates, where its
+    documents are and how a change lands; every `](…)` link in it that names a
+    repository path resolves; it carries no release block.
 
 **Evidence gate:** the gate rows, `docs/evidence/WO-025/census.md`,
 `docs/evidence/WO-025/README.md` and
@@ -297,19 +328,20 @@ preference of 2026-10-30 for core's WO-235 restart's draft; that draft names
 `DotLn Angular v0.4.0`, the root at `/board` and WO-019 as active, all
 superseded, and links to the fork by absolute URL, which this order makes
 relative; the draft is a shape to follow, never text to copy. `README.md`
-is excluded as a template-derived carrier until core's WO-207 lands
-(`FUP-c9f1e0a81d3ddaba`); the next pass after WO-207 decides whether the
-instance owns its README. A standing direction the operator gave in a
-session and no pass recorded is a gap the census names for the next pass,
-not a rule this order writes. A planning pass that runs between filing and
+stays the starter's text as a template-derived carrier, with
+`docs/launchpad-readme.md` holding the launchpad's fixed page until the upstream
+kit no longer causes merge issues with it. A standing direction the operator
+gave in a session and no pass recorded enters the operator record with its date
+and capture; an order-scoped one stays in that order's decisions. A planning pass that runs between filing and
 activation may edit the same standing documents; the executor integrates
 `main` at activation and passes what is there. The order's version is
 assigned at activation.
 
 **Non-goals:** editing records, generated documents, judged order texts, kit
-files or `README.md`; changing any house rule's substance, any operator
-direction's substance, the sequence, WS-001's JSON block or any
-configuration; the target's documents (WO-026); a byte or size goal.
+files or `README.md` beyond its release claim line; changing any house rule's
+substance, any operator direction's substance, the sequence, WS-001's JSON block
+or any configuration beyond the registered gate's `typecheck:e2e`; the target's
+documents (WO-026); a byte or size goal.
 
 **Operator-review assumptions:** the operator reads the rewritten profile and
 the operator record's diff in the pull request before final review, accepts
