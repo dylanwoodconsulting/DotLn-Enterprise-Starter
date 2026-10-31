@@ -2,53 +2,66 @@
 
 A registered target repository (`dotln.config.json` → `repositories.<id>`) may
 declare one profile document here, `docs/repositories/<id>.md`, treated as
-repo-native authority. Once core's WO-073 lands, the role skill loads it on
-demand for the active order, never at cold start; this kit revision's scripts
-do not yet read it. Policy layers launchpad → class → repository: the more
-specific layer adds to and narrows the wider one, and a profile's conventions
-prevail over its class's where it states them. Keep a profile to what a session
-needs in order to act in that repository; name no credential, hostname or
-internal service. The convention is defined by core's WO-073; a later kit
-revision carries its final text and this file is replaced with it.
+repo-native authority. The executor reads it on demand for an order's
+`Repository:` id, never at cold start. Policy layers launchpad → class →
+repository: the more specific layer adds to and narrows the wider one, and a
+profile's conventions prevail over its class's where it states them. Keep a
+profile to what a session needs in order to act in that repository; name no
+credential, hostname or internal service.
+
+The template below is the shape the operator chose on 2026-10-30, which
+[dotln-angular.md](dotln-angular.md) demonstrates. The kit's own template is
+`scripts/kit/repository-profile.template.md`, and a later starter update that
+changes it reaches this file through a Git merge.
 
 ## Template
 
 ~~~markdown
-# <repository id> — profile
+# <repository id> — repository profile
 
-**Class:** <repository class>
-**Base branch:** <branch>
-**Checked:** <date or commit this profile was last checked against the repository>
+| Fact | Value |
+| --- | --- |
+| Repository class | <repository class> |
+| Base branch | <branch> |
+| Application | <path> |
+| Evidence root | <path in the target> |
+| Workstream | <link to the workstream> |
+| Last reviewed target source | <commit, its merge and date> |
+| Latest target release | <release, or none> |
 
-## Purpose and standards to emulate
+Which orders read this profile, where its authority comes from, and how far its
+facts hold past the last reviewed source.
 
-What the repository is for and which of its existing modules, tests or
-documents a change should resemble.
+## What this repository is for
 
-## Commands
+What the repository is for, what exists today and what does not.
 
-| Purpose | Command | Notes |
-| ------- | ------- | ----- |
-| install | `<command>` | |
-| test    | `<command>` | |
-| lint    | `<command>` | |
-| build   | `<command>` | |
+## Run the app and its checks
 
-## Local application startup
+How to run the application locally, what it needs and how to tell it is up. Then
+the registered gate as a table of check, command, selection and notes.
 
-How to run the application locally, what it needs, and how to tell it is up.
+## Find the implementation
 
-## Branch and pull-request policy
+The patterns the repository already demonstrates, as a table per area with one
+path each, so a change follows them instead of introducing another.
 
-Branch naming, the base branch, required reviews and checks, and what a session
-may never do here (push to the base branch, merge, tag).
+## Publish a change
 
-## Demonstrated architecture
+Branch naming, the base branch, required reviews and checks, the publication
+route, and what a session may never do here (push to the base branch, merge, tag).
 
-The patterns the repository already demonstrates, with one path each, so a
-change follows them instead of introducing another.
+## Close a release and handle local files
 
-## Upstream references
+The release policy, what close deletes, retains or refuses, and which local files
+stay undeclared.
+
+## Versions, provenance and recovery context
+
+Versions and releases as tables, and history only where it explains a boundary or
+a recovery route, each with its record linked.
+
+## Upstream and copied-contract references
 
 - `owner/repo@tag path#anchor` — one line on why this section matters here
 ~~~

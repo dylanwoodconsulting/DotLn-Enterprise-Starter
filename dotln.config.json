@@ -88,6 +88,17 @@
             ],
             "timeoutMs": 600000
           },
+          "typecheck": {
+            "argv": [
+              "env",
+              "NX_DAEMON=false",
+              "NX_ISOLATE_PLUGINS=false",
+              "npm",
+              "run",
+              "typecheck:e2e"
+            ],
+            "timeoutMs": 600000
+          },
           "test": {
             "argv": [
               "env",
@@ -154,12 +165,14 @@
         "plain": [
           "install",
           "lint",
+          "typecheck",
           "test",
           "format"
         ],
         "review": [
           "install",
           "lint",
+          "typecheck",
           "test",
           "format",
           "build",

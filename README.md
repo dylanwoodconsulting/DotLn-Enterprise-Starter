@@ -392,7 +392,7 @@ still needs normal planning/refutation; do not create a fictitious pass to
 enable amendment.
 
 <!-- DOTLN-RELEASE-BEGIN -->
-This source prepares Launchpad `v0.3.3`.
+This source prepares Launchpad `v0.3.4`.
 <!-- DOTLN-RELEASE-END -->
 
 Release surfaces check this block, component versions and workspace pins,
