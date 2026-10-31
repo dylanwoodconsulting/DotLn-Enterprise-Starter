@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-026",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 10,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/10",
+  "title": ":memo: docs: pass the reference documents for usefulness and currency",
+  "baseBranch": "main",
+  "headBranch": "docs/quality-pass-reference-documents",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-026 --target-worktree --draft --branch docs/quality-pass-reference-documents --title \"docs: pass the reference documents for usefulness and currency\" --body-file docs/evidence/WO-026/draft-pr-body.md",
+      "exitCode": 0,
+      "headAndIndexUnchanged": true,
+      "session": "the verifying Codex session, after verification-result pass"
+    },
+    "headSha": "4ee26ca5ced01232f211ccc32907e43686f8475c",
+    "tree": "7156c5bc0a9ebd79728c0b4a903012bac8ca7e6c",
+    "verification": {
+      "id": "VER-001",
+      "path": "docs/verifications/WO-026/VER-001.md",
+      "verdict": "pass"
+    },
+    "source": "docs/evidence/WO-026/host-qualification.md; the verifying session recorded the publish there rather than in this file, which the final review writes",
+    "notes": [
+      "The canonical publisher opened this draft after verification-result pass; final publication reuses this branch and pull request.",
+      "The title workflow added the configured gitmoji."
+    ]
+  },
+  "finalReview": {
+    "observedAt": "2026-10-31T18:40:45Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "4ee26ca5ced01232f211ccc32907e43686f8475c",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 41229165392,
+        "workflow": "CI",
+        "conclusion": "success",
+        "steps": [
+          "npm ci",
+          "npx playwright install --with-deps chromium",
+          "npx nx format:check",
+          "npx nx run workspace-tools:lint",
+          "npm run typecheck:e2e",
+          "npm run boards",
+          "npm run check:bundle",
+          "npx nx affected -t lint test build e2e --exclude=workspace-tools",
+          "npx nx e2e-visual dotln-e2e"
+        ]
+      },
+      {
+        "id": 41229165347,
+        "workflow": "Pull request title",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:23:18Z",
+        "completedAt": "2026-10-31T18:29:35Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:23:18Z",
+        "completedAt": "2026-10-31T18:23:29Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T18:23:19Z",
+        "completedAt": "2026-10-31T18:26:12Z"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the final publish reuses this pull request, pushes the two reviewed commits and the records commit over the draft and marks it ready",
+    "reviewedCommits": [
+      {
+        "sha": "675a80926894b2d3e9a8e13cf2d36e6bd183cda1",
+        "subject": "docs: pass the reference documents for usefulness and currency",
+        "tree": "77bc599706ecf874f88c92c36a2a6f4140c83c9c",
+        "note": "the root README and everything under docs/dev-reference and docs/ai-reference, 21 files"
+      },
+      {
+        "sha": "01e7b6e03fb13946b5164733d91827e737d1d766",
+        "subject": "docs: say what each library is for and how to use it",
+        "tree": "7156c5bc0a9ebd79728c0b4a903012bac8ca7e6c",
+        "note": "the 33 READMEs under libs/; this commit's tree is the verified tree the draft carries, and review gate row target-gate:b990e0e6-db44-412a-9f5c-4604ce0524b0 covers it"
+      }
+    ]
+  }
+}

@@ -32,7 +32,7 @@ a toy the operator plays with, and what works is promoted as a GitHub issue on t
 platform's repository.
 
 The menu has three groups today. **Scene** is the soldier scene at the root
-route. **Machinery** holds the actor board at `/board` and an arriving page at
+route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
 shelf, contents and a reading; `/tools` is a home page above it.
 
@@ -103,7 +103,7 @@ changes a tracked file fails the gate.
 The package scripts `lint`, `test`, `format:check`, `build` and `e2e` mirror those
 Nx commands. Playwright starts its own server at `http://127.0.0.1:4200`, refuses
 to reuse an existing process, and checks the heading, document title and absence
-of page errors. The e2e target builds the local Storybook catalog as a dependency.
+of page errors. The e2e target builds the local Storybook as a dependency.
 Baselines under the e2e source tree are tracked inputs, not disposable output.
 
 The `workspace-tools` project's uncached `lint` target runs, in this order,
@@ -114,8 +114,9 @@ The `workspace-tools` project's uncached `lint` target runs, in this order,
 its lint command.
 
 Every tool script states its purpose and whether it runs in a gate, as a helper
-or as a module in the target's `docs/dev-reference/workspace/scripts.md`, which
-`check:scripts` enforces (rule 26). These helpers run outside the gate:
+or as a module in the target's `docs/dev-reference/workspace/scripts.md`, and
+`check:scripts` refuses an npm script or a file directly under `tools/scripts` that the
+document does not name (rule 26). These helpers run outside the gate:
 
 | Helper | What it is for |
 | --- | --- |
@@ -134,9 +135,8 @@ The gate runs `typecheck:e2e` because ESLint does not type-check and Playwright
 strips types, so a type error in an e2e spec would otherwise pass every other command
 and fail only in CI, as it did on WO-015's pull request (the target's
 `docs/dotln/evidence/WO-015/decisions.md`, D022). `check:bundle` and `boards` stay
-CI's. The registration lives in the launchpad, so at the reviewed source the target's
-`docs/dev-reference/workspace/scripts.md` still calls `typecheck:e2e` a helper; the
-gate table is right.
+CI's. The target's `docs/dev-reference/workspace/scripts.md` lists the same gate; the
+registration lives in the launchpad, so a change to one is written back to the other.
 
 ### Why Angular's additional disk cache is disabled
 
@@ -168,9 +168,9 @@ every feature. Where each area came from is under
 | Responsibility | Source |
 | --- | --- |
 | Standalone bootstrap | `apps/dotln/src/main.ts` |
-| Zoneless, router and fetch HTTP providers | `apps/dotln/src/app/app.config.ts` |
+| App provider composition | `apps/dotln/src/app/app.config.ts` |
 | Projected shell and lazy routes | `apps/dotln/src/app/app.ts`, `apps/dotln/src/app/app.routes.ts` |
-| Provider composition | `libs/shared/core/src/lib/providers/provide-dotln-core.ts` |
+| Zoneless, router and fetch HTTP providers | `libs/shared/core/src/lib/providers/provide-dotln-core.ts` |
 | Typed environment and token | `libs/shared/core/src/lib/environment/environment-config.ts` |
 | Route enums, builder and base-path token | `libs/shared/core/src/lib/paths/routes.ts`, `libs/shared/core/src/lib/paths/app-base-path.ts` |
 | Reusable i18n | `libs/shared/i18n/src/lib/provide-i18n.ts` |
@@ -204,8 +204,8 @@ assertions, and the house R/RA entry points expose application-used functions on
 | Not-found page | `libs/dotln/shell/src/lib/containers/not-found-page/not-found-page.ts` |
 
 The app projects the menu's groups and router links; the menu owns the navigation
-landmark, and the group owns its list fallback. Machinery's arriving container
-composes the house empty-state template. The final wildcard renders a translated
+landmark, and the group owns its list fallback. Machinery's placeholder container,
+`MachineryArrivingPage`, composes the house empty-state template. The final wildcard renders a translated
 not-found page with a link back to the scene. A wrapper may own a browser drawing
 API, as the target's `docs/dev-reference/architecture/component-taxonomy.md`
 records.
@@ -489,7 +489,7 @@ observations, not floating recommendations.
 | --- | --- |
 | Runtime and workspace | Node 26 (`.node-version`; 26.9.0 observed), npm 11.19.1, Nx 23.3.0, TypeScript 6.0.3 |
 | Angular | Angular 22.2.3, Angular Aria 22.2.3, CDK 22.2.3 |
-| Tests and catalog | Vitest 5.0.5 with aligned UI and coverage packages, Playwright 1.64.1, Storybook 10.6.3, axe-core for Playwright 4.14.0 |
+| Tests and Storybook | Vitest 5.0.5 with aligned UI and coverage packages, Playwright 1.64.1, Storybook 10.6.3, axe-core for Playwright 4.14.0 |
 | Foundations | Transloco 8.4.0, Ramda 0.32.0, Ramda Adjunct 6.1.0, AnalogJS 2.9.1 |
 | State and mocks | NgRx Signals 22.0.1, Angular Architects NgRx toolkit 22.0.0, MSW 3.0.3, RxJS 7.8.2 |
 | Other | Ajv 8.20.0, Inter variable font 5.3.0, sass-embedded 1.105.2, ESLint 10.13.0, Prettier 3.9.10 |

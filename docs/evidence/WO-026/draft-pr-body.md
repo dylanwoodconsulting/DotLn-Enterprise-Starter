@@ -1,0 +1,7 @@
+The README, the developer reference, the AI reference and the library READMEs now read as what is so at this commit, and every command a rule document or a library README names runs as written.
+
+The README leads with what the app is, the menu's three groups, and how to run and check it. The developer reference goes from a question to one document and the file that demonstrates it, with new passages on how a feature library is laid out and where state lives. `scene.md` and `catalog.md` read as wholes, with accumulated additions moved into the paragraphs they belong to. `scripts.md` now matches the registered gate and CI. Facts that had gone stale are corrected, including the taxonomy's account of the board, the conventions' account of the final publish, and the scene rule for regenerating its fixture, which left the tree failing the format check. Each library's README now says what it holds, how it is imported and how it is tested, replacing nineteen generator stubs and a false claim that the models library has no test runner.
+
+Documents only: nothing outside `README.md`, the READMEs under `libs/`, `docs/dev-reference/` and `docs/ai-reference/` changed, and no dependency moved.
+
+Validation: the registered lint, type-check, unit, formatting, build, browser and visual gates pass, every command a rule document or a library README names exits 0, and a check of every route, alias, script, path and link the standing documents name found none missing.
