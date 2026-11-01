@@ -99,3 +99,17 @@ confirmed the request is open, draft, targeting `main`, with the named branch an
 implementation HEAD remained `52ba4c7eef7cc30c1c92f77a9602a5aa02656d85`; both HEAD and the draft
 commit have tree `18e79e8409e334c35c7e1d9eec7a97e19dee556a`, and target Git status remained empty.
 The order is verified and ready for final review; this dispatch makes no final-review verdict.
+
+## Final review and publication
+
+The final review ran under Claude Code 2.1.316, with the model `claude-opus-5-5` and the effort `max` read from `CLAUDE_EFFORT` (the selected value; effective effort has no readback). It launched no worker. Its target publish was one plain helper call from the launchpad worktree root, after `final-review-result pass`, `target-records`, the product-gate correction and the instance records commit:
+
+```sh
+node scripts/worktree.mjs publish WO-021 --target-worktree --branch feat/rxjs-concept-studies --title 'feat: add RxJS concept studies with executable marble examples' --body-file docs/final-reviews/WO-021/PR.md
+```
+
+It exited 0 and printed that it pushed `feat/rxjs-concept-studies` at `e97855b442523cc7039c1db6ad21d352a4063c57` over draft `e5caa48e8eb405ab0e8fee39cd238acc95a33674` and marked pull request #12 ready; no term needed confirming. The hook's admission line is not surfaced in a tool result, so its decision is known only by its effect: the call ran with no prompt and no denial, and the ignored publication log records `PullRequestOpened` with the draft it reused. The title is the draft's, since the order's 80-character title cannot pass the outward limit.
+
+Because step 2 changed `dotln.config.json`, the launchpad's code identity differs from `main`'s, so the records publish reads a reviewed product gate. `npm test -- --review` ran once at that identity (seven suites, all fresh, all passing), complete run 1 of the 3 the dispatch allows, and `npm run resume -- correct 10 --set productGate=<its evidence reference>` bound it to the final review.
+
+The live-gate guard refused two read commands while that gate ran, each carrying a `cd` it cannot judge; neither ran, and the reads went through the file tool. The shell diagnostic reported five mistakes in this session's own commands (unquoted patterns and words beginning with `=`), each rerun corrected. No other refusal fired, and no setting or bound was changed.

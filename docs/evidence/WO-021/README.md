@@ -1,7 +1,8 @@
 # WO-021 execution evidence
 
-RxJS now has twenty studied concepts: the operators and subjects the app itself runs on, each with
-an executable marble example that the study's drawing and its test share. The shelf counts them, a
+RxJS now has twenty studied concepts: the operators and subjects most related to the rest of the
+work, nine of which the app itself uses, each with an executable marble example that the study's
+drawing and its test share. The shelf counts them, a
 chosen work lists them, and each opens to a study written for this app on one example: the idea and
 a situation it serves, a marble diagram the reader steps by hand or plays, with a text equivalent,
 the ordinary pseudocode with the worked frames, the RxJS reading whose code is the module the spec
