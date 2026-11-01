@@ -5488,7 +5488,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D3 and Requests to core item 1: a waiver recorded without the operator's word has no retraction route in the kit (scripts/resume.mjs correct takes no waiver); the request goes to core in this pass's block.",
+          "reopenWhen": "A starter release carries a waiver retraction, or another order records a direct edit of a control segment.",
+          "targets": [],
+          "at": "2026-11-01T08:58:07.858Z"
+        }
+      ]
     },
     {
       "id": "FUP-6f24c707f401ecac",
@@ -5503,7 +5512,40 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D1: WO-022's step 2 and criterion 9 are removed, not moved. The residue declaration they repeated is WO-021's, on both mains since its merge (DotLn-Angular #12, launchpad #48); the kit judges what the criterion checked: the release close refuses undeclared leftover material and an unclean worktree, and final-review-result pass refuses an unclean target after the reviewed commit (reviewedTargetSubject).",
+          "reopenWhen": "A planning pass writes a release close's or final review's own judgment into an order's acceptance criteria again, or WO-022's close is refused on residue the kit's checks did not report before the merge.",
+          "targets": [],
+          "at": "2026-11-01T08:58:07.846Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-56e567e35faa01c7",
+      "key": "candidate:docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::f6b605291c7623ca6df2dcd51497a127f617ebf1a6915f614b3448aa386e89c3",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "2c343d634ab184386ce8142063f00f3c5a78c587472f056247e9c3df08b8ad22",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes.",
+          "summary": "- **C1 WO-008's criterion 1 and WO-017's registry check read `HEAD` for the order's own changes.** WO-008 lists its changed files with `git diff --name-only $(git merge-base HEAD origin/main)..HEAD`, and WO-017's check compares \"the manifest at `HEAD`\" with the base's. `HEAD` is the base until the final review commits, so at verification the first list is empty and the second comparison is the base against itself: both pass while checking nothing. In each case the fix is to read the working tree against the base (`git diff --name-only <base>` together with `git ls-files --others --exclude-standard`, and the working tree's manifest). Not in this pass: the defect is outside the dispatch's subj",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) §NoOps C1: WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes, which checks nothing before the final review's commit; outside the dispatch's subject, put to the operator rather than widened.",
+          "reopenWhen": "The operator asks, a pass amends WO-008 or WO-017, or before either activates.",
+          "targets": [],
+          "at": "2026-11-01T09:01:07.431Z"
+        }
+      ]
     }
   ]
 }

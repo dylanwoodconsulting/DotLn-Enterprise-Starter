@@ -12,20 +12,16 @@
 `flow` family under `libs/features/tools/src/lib/composites/study-visuals/flow/`,
 the executable modules and specs the records name under
 `libs/features/tools/src/lib/studies/eip/`, one coverage row and one rule,
-about 40 source files plus twenty data records; in the launchpad order
-worktree eighteen `disposable` entries in `dotln.config.json` and in the
-target one `.gitignore` line, the same bytes as WO-021's step 2, so the
-target's release close meets none of the three undeclared-material blockers
-that cost WO-020's close four attempts (the 2026-11-01 pass, D3); adds no
-runtime dependency.
+about 40 source files plus twenty data records; adds no runtime dependency.
 Removes nothing. Wall-clock: about 6 to 10 hours of executor work, of which
 the fan-out runs in parallel, plus the fixed cycle; unknown until run.
 Context bytes: WO-020's record, check, families and rules as it leaves them,
 `catalog.md` §Studies, the twenty catalog rows with their hooks, this order,
 about 180 KB for the executor; each author reads two rows, the contract and
 the public pattern pages it cites. Commands added: none. Tokens: unknown
-until run; recorded per worker. Steps: 13. Re-mints: none. Refutations paid:
-the 2026-10-30 second pass's receipt and the 2026-11-01 pass's.
+until run; recorded per worker. Steps: 12. Re-mints: none. Refutations paid:
+the 2026-10-30 second pass's receipt, the 2026-11-01 pass's and the
+2026-11-01 second pass's.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`); the
@@ -174,65 +170,34 @@ the link check, the walkthrough and its screenshots, and the design record.
    that integrated commit is the baseline of every later comparison;
    activation as WO-005 step 1; read the harness usage and record the
    subagent remainder; record the publishing decision as WO-020 did.
-2. The target close's residue declared, byte-identical with WO-021's step 2
-   so the pair's second merge meets no conflict. In the launchpad order
-   worktree, `dotln.config.json` `classes.angular-nx-monorepo.disposable`
-   becomes exactly these thirty entries in this order: `.angular`, `.nx`,
-   `.runtime`, `__screenshots__`, `coverage`, `dist`, `docs/control/local`,
-   `libs/dotln/shell/node_modules`,
-   `libs/features/board-data-access/node_modules`,
-   `libs/features/board/node_modules`, `libs/features/machinery/node_modules`,
-   `libs/features/scene-data-access/node_modules`,
-   `libs/features/scene/node_modules`, `libs/features/tools/node_modules`,
-   `libs/shared/catalog/node_modules`, `libs/shared/core/node_modules`,
-   `libs/shared/data-access/node_modules`, `libs/shared/events/node_modules`,
-   `libs/shared/i18n/node_modules`, `libs/shared/models/node_modules`,
-   `libs/shared/scene-engine/node_modules`, `libs/shared/state/node_modules`,
-   `libs/shared/ui/node_modules`, `libs/shared/utils/node_modules`,
-   `node_modules`, `out-tsc`, `playwright-report`, `test-output`,
-   `test-results`, `tmp` (the entry
-   `docs/control/local/harness/memory-incidents.jsonl` is replaced by its
-   directory; the seventeen nested roots are the project roots that carry a
-   Vite config, whose Vitest caches the close has refused as undeclared on
-   every target close since WO-007). In the target worktree, `.gitignore`
-   gains the line `/.runtime/` after `/docs/control/local/`, because the
-   kit's temporary-root module writes `.runtime/.metadata_never_index` and
-   its ledger into whichever repository a session runs in, and an untracked
-   file fails the close's clean check before any disposable rule is read.
-   Check: in the launchpad order worktree
-   `node -e "const d=require('./dotln.config.json').classes['angular-nx-monorepo'].disposable;console.log(d.length,d.includes('.runtime'),d.includes('docs/control/local'),d.filter(p=>/^libs\/[^/]+\/[^/]+\/node_modules$/.test(p)).length)"`
-   prints `30 true true 17` and `npm run test:docs` passes; in the target
-   worktree `grep -c '^/\.runtime/$' .gitignore` prints 1. WO-021 lands the
-   same two edits first, so this step finds them on `main` and runs only
-   the check.
-3. The `flow` family with stories `StudyFlow` and a spec that renders a
+2. The `flow` family with stories `StudyFlow` and a spec that renders a
    three-stage model to its text equivalent. Check: `npx nx test tools` exits
    0; `npm run lint:components` exits 0.
-4. The first rendered pair (A pipeline, B swim lanes) at 1440 and 360; the
+3. The first rendered pair (A pipeline, B swim lanes) at 1440 and 360; the
    rounds; the rejected implementation removed with its record. Check:
    `grep -c "Round" docs/evidence/WO-022/design/comparisons.md` is at least 1.
-5. The authors' brief with the analogy rule into `fan-out.md`; dispatch the
+4. The authors' brief with the analogy rule into `fan-out.md`; dispatch the
    ten authors; merge the twenty drafts. Check: `npx nx test tools` exits 0
    over the executable modules' specs.
-6. Dispatch the two critics; dispose the findings; rewrite through the same
+5. Dispatch the two critics; dispose the findings; rewrite through the same
    authors; set `checked`. Check: `npm run studies:check` exits 0 over
    `studies/eip/`.
-7. The link check into `docs/evidence/WO-022/README.md`. Check: every URL has
+6. The link check into `docs/evidence/WO-022/README.md`. Check: every URL has
    a status.
-8. e2e `apps/dotln-e2e/src/catalog.spec.ts`: EIP shows twenty studied;
+7. e2e `apps/dotln-e2e/src/catalog.spec.ts`: EIP shows twenty studied;
    Aggregator's study steps its flow under reduced motion with the text
    equivalent naming the message; Publish-Subscribe Channel's and Competing
    Consumers' studies open from the contents; the Correlation Identifier link
    opens its reading; axe; no overflow at 360, 768 and 1440. Check:
    `npx nx e2e dotln-e2e` exits 0.
-9. The walkthrough as WO-020 step 11, under `docs/evidence/WO-022/`. Check:
+8. The walkthrough as WO-020 step 11, under `docs/evidence/WO-022/`. Check:
    the files exist.
-10. Documents: the coverage row, the family and the rule. Check:
-    `grep -c "analogy" docs/ai-reference/catalog-rules.md` is at least 1.
-11. Dependency check as WO-015 step 15; `npm run check:bundle`. Check: prints
+9. Documents: the coverage row, the family and the rule. Check:
+   `grep -c "analogy" docs/ai-reference/catalog-rules.md` is at least 1.
+10. Dependency check as WO-015 step 15; `npm run check:bundle`. Check: prints
     nothing; the chunk sizes recorded.
-12. Gate plain and review. Check: passing rows, no tracked-byte mutation.
-13. Launchpad write-back (the profile's implementation map names the `flow`
+11. Gate plain and review. Check: passing rows, no tracked-byte mutation.
+12. Launchpad write-back (the profile's implementation map names the `flow`
     family; WS-001's delivery states by the final review); then the publish,
     review and records steps as WO-007 steps 15 to 17, with the branch
     `feat/eip-concept-studies`, the title `feat: add concept studies for the
@@ -278,7 +243,7 @@ each.
 4. `docs/evidence/WO-022/fan-out.md`, `review.md` and `README.md` as WO-020's
    criterion 4, the review record also listing each study's platform analogy
    as checked.
-5. `npx nx e2e dotln-e2e` exits 0 and includes the step 8 cases, axe at the
+5. `npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the `flow` family and the records in lazy chunks,
@@ -293,23 +258,10 @@ each.
    decisions file records the operator's word that ended the rounds; the
    decisions file names the removed candidate's files and `ls` on each prints
    nothing.
-9. The target close's residue is declared (step 2): in the launchpad order
-   worktree the step's `node -e` one-liner prints `30 true true 17` and
-   `npm run test:docs` passes; in the target worktree
-   `grep -c '^/\.runtime/$' .gitignore` prints 1; and after the review gate
-   of criterion 10, in the target worktree,
-   `git ls-files --others --ignored --exclude-standard` lists no path
-   outside the thirty declared roots and the files the target harness
-   bundle's manifest installs (the verifier filters the listing by those
-   roots as prefixes and records the command and its empty remainder), and
-   `git status --porcelain --untracked-files=all` prints no line other than
-   a `.DS_Store`, the close's own clean judgment of the worktree; the
-   close's separate judgment of the base checkout under the registration's
-   `judge-only` policy is the close's and is not claimed here.
-10. `node scripts/target-gate.mjs WO-022 --review` records a passing row for
-    every declared command with no tracked-byte mutation, and
-    `npm run test:docs` passes in the launchpad order worktree; the Preflight
-    line ran before the first full gate.
+9. `node scripts/target-gate.mjs WO-022 --review` records a passing row for
+   every declared command with no tracked-byte mutation, and
+   `npm run test:docs` passes in the launchpad order worktree; the Preflight
+   line ran before the first full gate.
 
 **Evidence gate:** the gate rows, the recorded command outputs,
 `docs/evidence/WO-022/README.md`, `fan-out.md`, `review.md`,
@@ -317,10 +269,15 @@ each.
 `docs/evidence/WO-022/host-qualification.md`.
 
 **Known issues and carry-ins:** The base line is WO-020's merge commit
-(`4c21c58`, DotLn-Angular #11), set by the 2026-11-01 pass. Step 2 is byte
-for byte the same edit as WO-021's step 2, which lands first, so the step
-finds it on `main` and only verifies; the pass that follows this order's
-close reads its close record (one attempt, no blocker). This order follows
+(`4c21c58`, DotLn-Angular #11), set by the 2026-11-01 pass. The target
+close's residue declaration this order once repeated from WO-021's step 2
+is on both `main`s since WO-021's merge (DotLn-Angular #12, launchpad #48),
+and the kit judges what its criterion checked: the release close refuses
+undeclared leftover material and an unclean worktree, and
+`final-review-result pass` refuses an unclean target after the reviewed
+commit; the 2026-11-01 second pass removed the step and its criterion
+([planning document](../planning/criterion-9-phase-2026-11-01.md), D1).
+This order follows
 WO-021 and depends on it (the study model's family discriminator and the
 `marbles` family; the 2026-11-01 pass, D4, on all three of its reviews):
 it fast-forwards to the target's `main` with WO-021's merge at activation
