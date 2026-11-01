@@ -1,0 +1,39 @@
+# Add concept studies for the messaging patterns
+
+## Summary
+
+A reader of Enterprise Integration Patterns can now study twenty of its messaging patterns, the ones most related to the rest of the work, instead of reading their mined definitions alone: Aggregator, Publish-Subscribe Channel, Correlation Identifier, Request-Reply, Competing Consumers, Control Bus, Message Translator, Transactional Client, Process Manager, Recipient List, Message Store, Content-Based Router, Guaranteed Delivery, Message Expiration, Canonical Data Model, Channel Adapter, Command Message, Resequencer, Message Dispatcher and Event Message. The shelf counts them, the work lists them, and each opens at its own address.
+
+Each study explains one pattern on one example from the platform's or this app's public vocabulary, stated as an analogy and never as a claim that the platform implements the pattern that way: the idea and the situation it serves, a flow of endpoints and channels whose messages step along the lines on command with a sentence naming what moved where, ordinary pseudocode explained step by step on the example, an RxJS reading whose comments name the pattern's parts, how Apache Camel and Spring Integration and one further public project implement it, the pattern's public page and the book as references, the limits with a visible failure, and the nearby patterns as links.
+
+Eleven of the twenty run. Their flows are built from the marble example a spec beside the module runs under the TestScheduler, so the flow, the marble diagram and the test read the same strings, and the reader can switch to that run's marble diagram at the same step. The other nine are structures, protocols or kinds of message, each marked not executable with its reason recorded; four of them carry an RxJS sketch marked illustrative, and five carry none.
+
+What carries this:
+
+- **The `flow` family.** Endpoints are boxes and channels are pipes, standing in a column per stage left to right on a wide screen and a row per stage top to bottom below 600 pixels. A box holds its name, its state in short prose and the messages it holds; a message moving at the step is a green token resting a little past the middle of its line, and the nodes it leaves or reaches are outlined in green; messages that cannot sit apart on one line share one capsule, and a line that skips a stage runs round the boxes through a gutter. A messaging study opens at its start. Under a reduced-motion preference nothing glides. The owner chose the look over eight rendered comparisons.
+- **The two builders.** `flowModel` reads a flow written step by step: nodes, links, messages, and each step's moves, states and holdings carried forward. `flowFromMarbles` builds a flow from a marble example that runs, routing each delivered emission onto a link, so a frame of the diagram is a step of the flow. Both refuse a flow that names a node, link, message, moment or step it does not have, and the marble builder refuses a line the example does not run.
+- **The study model, mapper and composite.** The study model gains the `flow` family beside `motion` and `marbles`; the mapper draws a flow and, where the example runs, its marble diagram with the diagram's own legend and caption; the composite offers the Flow and Marbles switch and its slider counts steps. The record check requires a flow drawn over an executable example to read that module and holds the messaging work to the RxJS work's rule that a reading either runs or says why not.
+- **The documents.** The catalog architecture describes the family, the builders and the coverage row; the catalog rules gain the messaging rule and the analogy rule: a study's analogy to the platform or this app is stated as one, names the public record it reads and cites it, and where the analogy breaks belongs in the limits.
+- **One repair beyond the order's files.** The catalog's sticky shelf and contents slid over the reading history at the foot of the page, at 768 pixels before this change and at 1280 once the shelf grew a line; the three columns now have a grid of their own and stop above the history, with a browser test that scrolls a short window to the end at both widths.
+
+No runtime dependency changes. The twenty records load as one lazy chunk when a messaging study is first read, each model module as its own lazy chunk, and the flow family rides in the Tools feature chunk. The production initial bundle is 405,832 bytes, 2.4 kB over the previous batch's final figure, with no catalog, study or Tools module in the initial graph.
+
+## Validation
+
+The declared review gate (install, lint, e2e type check, unit tests, format, build, e2e and visual) passed on the reviewed tree with no tracked-byte mutation, after the Preflight commands ran as written. The Tools suite passes uncached at 81 files and 703 tests, the twenty example specs among them. CI's `checks`, `visual` and `title` jobs passed from a clean checkout on the draft, whose tree differs from the reviewed one by six sentences of the Control Bus study's explanation, and they run again on this head.
+
+An independent verifier performed the owner's reading session in the served production build at 360, 768 and 1440 pixels through an isolated browser: Enterprise Integration Patterns counted twenty studied, Aggregator stepped through its eight moments with the moving report named and the pseudocode, limits and streams reading opened, the Flow and Marbles switch holding the step, Publish-Subscribe Channel and Competing Consumers opened from the contents and compared at step 2, and Request-Reply's Correlation Identifier link followed into its reading. Every one of the twenty flows was stepped through every frame at the three widths with no horizontal overflow and no drawing text outside its viewBox, and axe found no serious or critical violation. The final review repeated the owner's session the same way on the reviewed tree.
+
+## Review
+
+The final review read the whole diff: the flow family and its builders, the study model, mapper and composite, the record check and its tests, the browser tests and the documents, and all twenty records against their modules and specs, with the critics' and the three independent reviewers' records. It reran every acceptance command and the record check, confirmed the fifteen dependency keys equal the base's, and made one repair: the Control Bus study said in six places that the executor never sees the bus, while its own flow delivers the status question to the executor at step 5 and carries the answer back at step 6; the explanation now says the pause is addressed to the verifier alone, so the executor keeps putting evidence on the work queue. The pull request had no threads or reviews.
+
+## Limits and follow-ups
+
+None of these blocks the change.
+
+- Nine studies do not run, each for a recorded reason: Request-Reply, Guaranteed Delivery, Control Bus, Message Store, Transactional Client, Canonical Data Model, Channel Adapter, Command Message and Event Message are protocols, durability boundaries, structures or kinds of message, and a forced stream would mislead.
+- The browser suite opens Aggregator, Publish-Subscribe Channel, Competing Consumers, Request-Reply and Correlation Identifier; the other fifteen are covered by their specs, the record check, the critics' two readings and the verifier's probes of every flow state at three widths.
+- The flow family lays out at most four stages, four nodes a stage and eight nodes, in columns by stage; a flow that branches or loops back in a way a column per stage cannot lay out is a later batch's question.
+- The next batch to publish integrates `main` and rewrites `studies-summary.json` with `npm run studies:check -- --write-summary`.
+- All 102 addresses the studies cite answered 200 on 2026-11-01; link rot after this merges is the next batch's link check to report.

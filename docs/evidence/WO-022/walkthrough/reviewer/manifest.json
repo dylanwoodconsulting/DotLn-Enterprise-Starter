@@ -1,0 +1,899 @@
+{
+  "date": "2026-11-01T19:22:23.547Z",
+  "tool": "Playwright, the target's installed package, driving a headless Chromium in an isolated context",
+  "configuration": "the production build in dist/apps/dotln/browser, served as static files with the single-page fallback",
+  "reducedMotion": "reduce",
+  "widths": {
+    "360": {
+      "steps": [
+        {
+          "step": "choose Enterprise Integration Patterns",
+          "shelf": "Enterprise Integration Patterns288 concepts20 studiedchannels",
+          "heading": "20 studied concepts",
+          "links": 20,
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": null,
+            "catalog": "312 (scroll 312)",
+            "columns": "312 (scroll 312)",
+            "reading": "312 (scroll 312)",
+            "study": null,
+            "spilling": [],
+            "clipped": [
+              "ol: 1090>312"
+            ]
+          }
+        },
+        {
+          "step": "Aggregator opens",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:110",
+          "label": "Step 0 of 8",
+          "play": 0,
+          "moving": [],
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-flow: 316>312",
+              "tools-study-scrubber: 316>312"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator step 5",
+          "label": "Step 5 of 8",
+          "moving": [
+            "C"
+          ],
+          "note": "Consistency sends C, its report on order 32. Order 32's set now holds a report from all three reviewers, so it is complete.",
+          "equivalent": "Step 5: C (order 32, from Consistency, findings 1) moves from Consistency to Aggregator; Aggregator holds a, c, A, B, C; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c · 32:A,B,C; Next phase: no set yet. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 6",
+          "label": "Step 6 of 8",
+          "moving": [
+            "2"
+          ],
+          "note": "The Aggregator sends order 32's complete set on to the Next phase as one message, 2, with its findings added up, and forgets the set. Order 31's set still waits for Design.",
+          "equivalent": "Step 6: 2 (order 32: 2 findings from 3 reviewers) moves from Aggregator to Next phase; Aggregator holds a, c; Next phase holds 2; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c; Next phase: has set 2 (order 32). Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 8",
+          "label": "Step 8 of 8",
+          "moving": [
+            "1"
+          ],
+          "note": "The Aggregator sends order 31's set on to the Next phase as 1. Order 32 went first, although the first report to arrive was on order 31, and the Aggregator now holds nothing.",
+          "equivalent": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator text equivalent at step 8",
+          "reading": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator expanded",
+          "mechanismOpens": true,
+          "lostReportLimit": true,
+          "rxjsLabel": "Executable: this code runs and a spec tests it.",
+          "rxjsSpec": "This exact code ran in the test suite against the marbles drawn above, in libs/features/tools/src/lib/studies/eip/aggregator.spec.ts.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-flow: 316>312",
+              "tools-study-scrubber: 316>312"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator as marbles",
+          "label": "Frame 8 of 8"
+        },
+        {
+          "step": "Aggregator back to flow",
+          "label": "Step 8 of 8"
+        },
+        {
+          "step": "Publish-Subscribe Channel step 2",
+          "via": "contents",
+          "moving": [
+            "a",
+            "a",
+            "a"
+          ],
+          "note": "The Order topic gives a copy of order 31 to Session 1, Session 2 and Session 3, and keeps no copy itself.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-flow: 316>312",
+              "tools-study-scrubber: 316>312"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Competing Consumers step 2",
+          "via": "contents",
+          "moving": [
+            "a"
+          ],
+          "note": "The Order queue gives order 31 to Session 1, the first free session in line. Only Session 1 has it; Sessions 2 and 3 never see it.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-flow: 316>312",
+              "tools-study-scrubber: 316>312"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Request-Reply nearby",
+          "href": "/tools/catalog/eip:87",
+          "why": "Correlation IdentifierReach for it as soon as more than one request can be outstanding. The request carries an id and the reply copies it back, so each reply says which request it answers: replies can then share one chan",
+          "fits": true
+        },
+        {
+          "step": "Correlation Identifier opened",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:87",
+          "heading": "Correlation Identifier",
+          "fits": true,
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-flow: 316>312",
+              "tools-study-scrubber: 316>312"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Arrive, a movement study, for comparison",
+          "layout": {
+            "innerWidth": 360,
+            "documentScrollWidth": 360,
+            "scrubberOverhang": [
+              "input right 338 vs 336"
+            ],
+            "catalog": "312 (scroll 316)",
+            "columns": "312 (scroll 316)",
+            "reading": "312 (scroll 316)",
+            "study": "312 (scroll 316)",
+            "spilling": [
+              "section.study: 316>312",
+              "figure: 316>312",
+              "tools-study-motion: 316>312",
+              "tools-study-scrubber: 316>312",
+              "label: 316>312",
+              "label: 316>312"
+            ],
+            "clipped": []
+          }
+        }
+      ],
+      "errors": []
+    },
+    "768": {
+      "steps": [
+        {
+          "step": "choose Enterprise Integration Patterns",
+          "shelf": "Enterprise Integration Patterns288 concepts20 studiedchannels",
+          "heading": "20 studied concepts",
+          "links": 20,
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": null,
+            "catalog": "694 (scroll 694)",
+            "columns": "694 (scroll 694)",
+            "reading": "483 (scroll 483)",
+            "study": null,
+            "spilling": [],
+            "clipped": [
+              "ol: 1090>694"
+            ]
+          }
+        },
+        {
+          "step": "Aggregator opens",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:110",
+          "label": "Step 0 of 8",
+          "play": 0,
+          "moving": [],
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-flow: 487>483",
+              "tools-study-scrubber: 487>483"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator step 5",
+          "label": "Step 5 of 8",
+          "moving": [
+            "C"
+          ],
+          "note": "Consistency sends C, its report on order 32. Order 32's set now holds a report from all three reviewers, so it is complete.",
+          "equivalent": "Step 5: C (order 32, from Consistency, findings 1) moves from Consistency to Aggregator; Aggregator holds a, c, A, B, C; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c · 32:A,B,C; Next phase: no set yet. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 6",
+          "label": "Step 6 of 8",
+          "moving": [
+            "2"
+          ],
+          "note": "The Aggregator sends order 32's complete set on to the Next phase as one message, 2, with its findings added up, and forgets the set. Order 31's set still waits for Design.",
+          "equivalent": "Step 6: 2 (order 32: 2 findings from 3 reviewers) moves from Aggregator to Next phase; Aggregator holds a, c; Next phase holds 2; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c; Next phase: has set 2 (order 32). Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 8",
+          "label": "Step 8 of 8",
+          "moving": [
+            "1"
+          ],
+          "note": "The Aggregator sends order 31's set on to the Next phase as 1. Order 32 went first, although the first report to arrive was on order 31, and the Aggregator now holds nothing.",
+          "equivalent": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator text equivalent at step 8",
+          "reading": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator expanded",
+          "mechanismOpens": true,
+          "lostReportLimit": true,
+          "rxjsLabel": "Executable: this code runs and a spec tests it.",
+          "rxjsSpec": "This exact code ran in the test suite against the marbles drawn above, in libs/features/tools/src/lib/studies/eip/aggregator.spec.ts.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-flow: 487>483",
+              "tools-study-scrubber: 487>483"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator as marbles",
+          "label": "Frame 8 of 8"
+        },
+        {
+          "step": "Aggregator back to flow",
+          "label": "Step 8 of 8"
+        },
+        {
+          "step": "Publish-Subscribe Channel step 2",
+          "via": "contents",
+          "moving": [
+            "a",
+            "a",
+            "a"
+          ],
+          "note": "The Order topic gives a copy of order 31 to Session 1, Session 2 and Session 3, and keeps no copy itself.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-flow: 487>483",
+              "tools-study-scrubber: 487>483"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Competing Consumers step 2",
+          "via": "contents",
+          "moving": [
+            "a"
+          ],
+          "note": "The Order queue gives order 31 to Session 1, the first free session in line. Only Session 1 has it; Sessions 2 and 3 never see it.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-flow: 487>483",
+              "tools-study-scrubber: 487>483"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Request-Reply nearby",
+          "href": "/tools/catalog/eip:87",
+          "why": "Correlation IdentifierReach for it as soon as more than one request can be outstanding. The request carries an id and the reply copies it back, so each reply says which request it answers: replies can then share one chan",
+          "fits": true
+        },
+        {
+          "step": "Correlation Identifier opened",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:87",
+          "heading": "Correlation Identifier",
+          "fits": true,
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-flow: 487>483",
+              "tools-study-scrubber: 487>483"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Arrive, a movement study, for comparison",
+          "layout": {
+            "innerWidth": 768,
+            "documentScrollWidth": 768,
+            "scrubberOverhang": [
+              "input right 733 vs 731"
+            ],
+            "catalog": "694 (scroll 698)",
+            "columns": "694 (scroll 698)",
+            "reading": "483 (scroll 487)",
+            "study": "483 (scroll 487)",
+            "spilling": [
+              "section.study: 487>483",
+              "figure: 487>483",
+              "tools-study-motion: 487>483",
+              "tools-study-scrubber: 487>483",
+              "label: 487>483",
+              "label: 487>483"
+            ],
+            "clipped": []
+          }
+        }
+      ],
+      "errors": []
+    },
+    "1440": {
+      "steps": [
+        {
+          "step": "choose Enterprise Integration Patterns",
+          "shelf": "Enterprise Integration Patterns288 concepts20 studiedchannels",
+          "heading": "20 studied concepts",
+          "links": 20,
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": null,
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": null,
+            "spilling": [],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator opens",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:110",
+          "label": "Step 0 of 8",
+          "play": 0,
+          "moving": [],
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-flow: 690>686",
+              "tools-study-scrubber: 690>686"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator step 5",
+          "label": "Step 5 of 8",
+          "moving": [
+            "C"
+          ],
+          "note": "Consistency sends C, its report on order 32. Order 32's set now holds a report from all three reviewers, so it is complete.",
+          "equivalent": "Step 5: C (order 32, from Consistency, findings 1) moves from Consistency to Aggregator; Aggregator holds a, c, A, B, C; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c · 32:A,B,C; Next phase: no set yet. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 6",
+          "label": "Step 6 of 8",
+          "moving": [
+            "2"
+          ],
+          "note": "The Aggregator sends order 32's complete set on to the Next phase as one message, 2, with its findings added up, and forgets the set. Order 31's set still waits for Design.",
+          "equivalent": "Step 6: 2 (order 32: 2 findings from 3 reviewers) moves from Aggregator to Next phase; Aggregator holds a, c; Next phase holds 2; Criteria: sent 31 and 32; Design: sent 32; 31 to go; Consistency: sent 31 and 32; Aggregator: 31:a,c; Next phase: has set 2 (order 32). Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator step 8",
+          "label": "Step 8 of 8",
+          "moving": [
+            "1"
+          ],
+          "note": "The Aggregator sends order 31's set on to the Next phase as 1. Order 32 went first, although the first report to arrive was on order 31, and the Aggregator now holds nothing.",
+          "equivalent": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator text equivalent at step 8",
+          "reading": "Step 8: 1 (order 31: 3 findings from 3 reviewers) moves from Aggregator to Next phase; Next phase holds 2, 1; Criteria: sent 31 and 32; Design: sent 31 and 32; Consistency: sent 31 and 32; Aggregator: no sets; Next phase: has sets 2 and 1. Reports on both orders reach the Aggregator mixed, over one shared channel; it files each under the order it names (the correlation) and, once an order's set holds a report from all 3 reviewers (the completion condition), sends the set on to the Next phase in the next step."
+        },
+        {
+          "step": "Aggregator expanded",
+          "mechanismOpens": true,
+          "lostReportLimit": true,
+          "rxjsLabel": "Executable: this code runs and a spec tests it.",
+          "rxjsSpec": "This exact code ran in the test suite against the marbles drawn above, in libs/features/tools/src/lib/studies/eip/aggregator.spec.ts.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-flow: 690>686",
+              "tools-study-scrubber: 690>686"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Aggregator as marbles",
+          "label": "Frame 8 of 8"
+        },
+        {
+          "step": "Aggregator back to flow",
+          "label": "Step 8 of 8"
+        },
+        {
+          "step": "Publish-Subscribe Channel step 2",
+          "via": "contents",
+          "moving": [
+            "a",
+            "a",
+            "a"
+          ],
+          "note": "The Order topic gives a copy of order 31 to Session 1, Session 2 and Session 3, and keeps no copy itself.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-flow: 690>686",
+              "tools-study-scrubber: 690>686"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Competing Consumers step 2",
+          "via": "contents",
+          "moving": [
+            "a"
+          ],
+          "note": "The Order queue gives order 31 to Session 1, the first free session in line. Only Session 1 has it; Sessions 2 and 3 never see it.",
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-flow: 690>686",
+              "tools-study-scrubber: 690>686"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Request-Reply nearby",
+          "href": "/tools/catalog/eip:87",
+          "why": "Correlation IdentifierReach for it as soon as more than one request can be outstanding. The request carries an id and the reply copies it back, so each reply says which request it answers: replies can then share one chan",
+          "fits": true
+        },
+        {
+          "step": "Correlation Identifier opened",
+          "url": "http://127.0.0.1:4311/tools/catalog/eip:87",
+          "heading": "Correlation Identifier",
+          "fits": true,
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-flow: 690>686",
+              "tools-study-scrubber: 690>686"
+            ],
+            "clipped": []
+          }
+        },
+        {
+          "step": "Arrive, a movement study, for comparison",
+          "layout": {
+            "innerWidth": 1440,
+            "documentScrollWidth": 1440,
+            "scrubberOverhang": [
+              "input right 1332 vs 1330"
+            ],
+            "catalog": "1302 (scroll 1302)",
+            "columns": "1302 (scroll 1302)",
+            "reading": "769 (scroll 769)",
+            "study": "686 (scroll 690)",
+            "spilling": [
+              "section.study: 690>686",
+              "figure: 690>686",
+              "tools-study-motion: 690>686",
+              "tools-study-scrubber: 690>686",
+              "label: 690>686",
+              "label: 690>686"
+            ],
+            "clipped": []
+          }
+        }
+      ],
+      "errors": []
+    }
+  },
+  "screenshots": [
+    {
+      "file": "1440-01-eip-count.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "eeeb440c11a8d991902aa41affddf6b469ced9e849ff3099f7241340671ecc30"
+    },
+    {
+      "file": "1440-02-aggregator-start.png",
+      "width": 687,
+      "height": 2709,
+      "sha256": "eca5970af26e8a03554f0912d60544605707629ff67422e0aea3f7d5715c9618"
+    },
+    {
+      "file": "1440-03-aggregator-step-5.png",
+      "width": 687,
+      "height": 729,
+      "sha256": "67f2e38537bcbbffafaf42547beaed86049775a5fd4051ee6d11e6f5681f0de7"
+    },
+    {
+      "file": "1440-03-aggregator-step-6.png",
+      "width": 687,
+      "height": 729,
+      "sha256": "b177be9a8a01c62d6359ad29615f35ac7be2abb143baf62614b73c96840888a8"
+    },
+    {
+      "file": "1440-03-aggregator-step-8.png",
+      "width": 687,
+      "height": 729,
+      "sha256": "ccf2489e969e5436440f47032eb15a70ab643b671ef62fab2052dcf7881639e0"
+    },
+    {
+      "file": "1440-04-aggregator-mechanism.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "6695b119af312cb25e104385fc10ef36efb45c8c4a3b61aaa2b77581c8caa5b2"
+    },
+    {
+      "file": "1440-05-aggregator-limits.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "e966feaba9b7fcd607ddc31207b412357d481a453c2729ecbe05a0b01a1d8f36"
+    },
+    {
+      "file": "1440-06-aggregator-marbles.png",
+      "width": 687,
+      "height": 758,
+      "sha256": "6fe920b724cb0626949389e93d80429cb2b16e1531a40bb0ba5195ccb404e202"
+    },
+    {
+      "file": "1440-07-publish-subscribe-step-2.png",
+      "width": 687,
+      "height": 763,
+      "sha256": "15b0e7a0ee84bc6466e52201139a3b5f7d9c0ead9e9ac88babaa3a2dc306880f"
+    },
+    {
+      "file": "1440-08-competing-consumers-step-2.png",
+      "width": 687,
+      "height": 801,
+      "sha256": "149944958cfcfbc0c401b48d0a276a0e63c013fd79bb5e3a50cdb6ccb803a9e8"
+    },
+    {
+      "file": "1440-09-request-reply-nearby.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "cb0a03521a6b238ab20fef94662940194ce9d49ad61674d0ecff7462cab3db48"
+    },
+    {
+      "file": "1440-10-correlation-identifier.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "a0110873180319eb75114dc4058c7719e1a1049236e15082cb55ca299febcab1"
+    },
+    {
+      "file": "768-01-eip-count.png",
+      "width": 768,
+      "height": 1100,
+      "sha256": "92f7d5b53b82aa79c947c1df557995e251cc8927f2daa0c39d7640e4f4170b37"
+    },
+    {
+      "file": "768-02-aggregator-start.png",
+      "width": 484,
+      "height": 2975,
+      "sha256": "1581eeb4fd3885d2c37dbd7297d58462c5a2b54dc6ee66d375387a4283ee0797"
+    },
+    {
+      "file": "768-03-aggregator-step-5.png",
+      "width": 484,
+      "height": 595,
+      "sha256": "162cfa530da512bea3c630dfcc1f2d798158625e1df0a062d15a47af115a845d"
+    },
+    {
+      "file": "768-03-aggregator-step-6.png",
+      "width": 484,
+      "height": 620,
+      "sha256": "353e96a8aa0862f8bc2fad9939f08f4471c969641f964f811fb2271c4ca6c568"
+    },
+    {
+      "file": "768-03-aggregator-step-8.png",
+      "width": 484,
+      "height": 620,
+      "sha256": "98fa037512992132b7e84f928e9a1087fa3c8d1be570f40c01f1370c87b3c35e"
+    },
+    {
+      "file": "768-04-aggregator-mechanism.png",
+      "width": 768,
+      "height": 1100,
+      "sha256": "8c8b0660c049584ed09c5fbcaf5d8d4deaee359c05a21ce77bf4fa0fcec9098d"
+    },
+    {
+      "file": "768-05-aggregator-limits.png",
+      "width": 768,
+      "height": 1100,
+      "sha256": "30a690a011d59782a73e5bc7958942c43b7eab93fe60177117da0c2f56a43681"
+    },
+    {
+      "file": "768-06-aggregator-marbles.png",
+      "width": 484,
+      "height": 712,
+      "sha256": "a50cb85085cc8321f19086a69c3776df674a9dc9148fa484b0366c7db1341fcc"
+    },
+    {
+      "file": "768-07-publish-subscribe-step-2.png",
+      "width": 484,
+      "height": 647,
+      "sha256": "b263c50bb5a0167da62ea960701d03e4f21a67ed8dddb3770acc49179f778c7b"
+    },
+    {
+      "file": "768-08-competing-consumers-step-2.png",
+      "width": 484,
+      "height": 647,
+      "sha256": "664d6a9f8f24b5f371a12b8ac2452fc8712386f94dd2d4a199d66ccf7c952112"
+    },
+    {
+      "file": "768-09-request-reply-nearby.png",
+      "width": 768,
+      "height": 1100,
+      "sha256": "ee794d338846b781f0867ac470aae373ffa22af26a6df66b65e7e3fa75490b67"
+    },
+    {
+      "file": "768-10-correlation-identifier.png",
+      "width": 768,
+      "height": 1100,
+      "sha256": "f5b21fc67d38eb1bf1f27c5c42a839c9f93f5312c99f0b03e6ad64353a84ad00"
+    },
+    {
+      "file": "360-01-eip-count.png",
+      "width": 360,
+      "height": 1400,
+      "sha256": "cc0c024d4d78720a5530b3e7655eca6e5c455797fb44c431f8ce48416df13354"
+    },
+    {
+      "file": "360-02-aggregator-start.png",
+      "width": 312,
+      "height": 3921,
+      "sha256": "2c5be979e154835f77df15cbcab5f4c5365a0b8354320356008f338de1edce85"
+    },
+    {
+      "file": "360-03-aggregator-step-5.png",
+      "width": 312,
+      "height": 735,
+      "sha256": "c45032836d0ffe4c336eeff543ef8d4a1e44ed2c2ffe15a587a2772737345e20"
+    },
+    {
+      "file": "360-03-aggregator-step-6.png",
+      "width": 312,
+      "height": 760,
+      "sha256": "c606fccb9061b2c8f0c54a5b390d7f211320a4de12bb43b9986e579573516389"
+    },
+    {
+      "file": "360-03-aggregator-step-8.png",
+      "width": 312,
+      "height": 760,
+      "sha256": "765c12737dea6b547c173d09a1cb04fc794c43d936d20b30e0796abf9a9eaf91"
+    },
+    {
+      "file": "360-04-aggregator-mechanism.png",
+      "width": 360,
+      "height": 1400,
+      "sha256": "9904054657a528276cfcfc79bd9775edead7f649dc5857aed3c94a9e7aacbfd8"
+    },
+    {
+      "file": "360-05-aggregator-limits.png",
+      "width": 360,
+      "height": 1400,
+      "sha256": "bbdb58f5305248848ea2ef2e2c05777af9348a8a1150612879e2b99827809ebd"
+    },
+    {
+      "file": "360-06-aggregator-marbles.png",
+      "width": 312,
+      "height": 762,
+      "sha256": "2745404ba27cd4a1e560a9da2413142ea85b80e90cb0b810e6b28a7cc925883c"
+    },
+    {
+      "file": "360-07-publish-subscribe-step-2.png",
+      "width": 312,
+      "height": 736,
+      "sha256": "a70df64a6be11b33ccd157781cd701fabebcb93a4783a10c0b016506cafcb1bb"
+    },
+    {
+      "file": "360-08-competing-consumers-step-2.png",
+      "width": 312,
+      "height": 757,
+      "sha256": "2941a31ca21e569a26b0bbb6657d261007b2a666099e63f4689c787af07abd4f"
+    },
+    {
+      "file": "360-09-request-reply-nearby.png",
+      "width": 360,
+      "height": 1400,
+      "sha256": "888f8b722abd3c458f8e33b01961731f58a0b87e7dfd41828fbc6b4ed25664cc"
+    },
+    {
+      "file": "360-10-correlation-identifier.png",
+      "width": 360,
+      "height": 1400,
+      "sha256": "520e8bc507d33b979792019ee4eda1d10a8d95fd9cc2f6aa0b59c461cfa3f1af"
+    }
+  ]
+}

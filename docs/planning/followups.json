@@ -5608,6 +5608,45 @@
           "at": "2026-11-01T14:10:47.450Z"
         }
       ]
+    },
+    {
+      "id": "FUP-ed42d6ffb20aede0",
+      "key": "decision:docs/evidence/WO-022/decisions.md#wo-022-d029",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "8265c569b6478dda7968c2020fa9920afc1b89b800259df7ec4ba1e8542c9be0",
+          "ref": "docs/evidence/WO-022/decisions.md#wo-022-d029",
+          "title": "WO-022-D029: The next planning pass carries the operator's Playwright-only browser-verification preference into standing guidance: native desktop or existing-browser control requires explicit…",
+          "summary": "{ \"id\": \"WO-022-D029\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: verify; operator correction of the verifier's unauthorized native computer interaction\", \"decision\": \"Classify the verifier's use of native desktop automation without asking the operator as CRITICAL, the highest process-error severity, as the operator directed. Stop native computer interaction and exclude its observations from acceptance evidence. Use Playwright in an isolated browser for the independent production walkthrough. Work-order verification authority did not authorize control of the operator's desktop or existing browser profile. The error is owned by this verifier and is not a defect attributed to the product imple",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-69d2c425527eacf2",
+      "key": "decision:docs/evidence/WO-022/decisions.md#wo-022-d031",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "d851c8d4a5252425943a8c224cce850f7a6400840223a9f654b3c69021df85b6",
+          "ref": "docs/evidence/WO-022/decisions.md#wo-022-d031",
+          "title": "WO-022-D031: WO-022-F1: at the next authorized repair or messaging-study content change, replace the claims that the executor never sees the bus with the precise statement that the verifier-directed…",
+          "summary": "{ \"id\": \"WO-022-D031\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: verify; VER-001 finding F1\", \"decision\": \"Route the Control Bus wording contradiction as a non-blocking content follow-up. The model delivers a status question to the executor at step 5, but its step 10 note and the record's ordinary pseudocode and second limit say that the executor never sees the control bus. The intended distinction is that the executor does not receive the pause addressed to the verifier. Preserve the status request and reply and the continued arrival of evidence while the verifier is paused. This new study was absent from the integrated baseline, and the wording breaks none of the order's nine criteria or ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Repaired in WO-022's final review (WO-022-D032): the Control Bus module, record and spec now say the pause is addressed to the verifier alone, so the executor, which was sent no pause, keeps putting evidence on the work queue; the record check and the spec pass and the review gate passed at the repaired tree.",
+          "reopenWhen": "A reader of the Control Bus study still finds the executor's part in the bus unclear, or a later messaging batch changes how a pause is addressed.",
+          "targets": [],
+          "at": "2026-11-01T19:21:14.411Z"
+        }
+      ]
     }
   ]
 }
