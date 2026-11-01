@@ -676,6 +676,14 @@
           "reopenWhen": "A hook-admitted target publish is denied by the host classifier, or the next planning pass rules on the registration trust entry.",
           "targets": [],
           "at": "2026-10-26T03:25:35.810Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D1 and §Validation: the host classifier denied the launchpad's own plain git push of the update branch twice and admitted the identical command on the third attempt; no hook-admitted target publish was denied. The kit helper core's WO-246 files for the launchpad's own pull requests is the admitted form to wait for; the registration trust entry stays unruled.",
+          "reopenWhen": "A hook-admitted target publish is denied by the host classifier, a starter release carries core's WO-246, or the operator asks for the trust entry.",
+          "targets": [],
+          "at": "2026-11-01T01:58:33.040Z"
         }
       ]
     },
@@ -3390,6 +3398,14 @@
           "reopenWhen": "WO-015 merges and the operator says the shell or the board is next, or a toy page measures the same shift.",
           "targets": [],
           "at": "2026-10-28T07:39:03.072Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §Reopening observations: no operator direction names the shell or the board; the 2026-10-28 pass's reading stands.",
+          "reopenWhen": "The operator names the shell's or the board's look, or an order changes the shell's line boxes or the board's loading geometry.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.337Z"
         }
       ]
     },
@@ -3732,6 +3748,14 @@
           "reopenWhen": "WO-207 lands in a starter release, or an update refuses a template-derived file the fork edited.",
           "targets": [],
           "at": "2026-10-31T03:12:21.508Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D2: README.md was carried again by the v0.105.0 update (#46) with no instance action declared; core's WO-245 moves the kit's guide to docs/KIT.md and makes the root page the instance's (core's item 1 of 2026-10-31).",
+          "reopenWhen": "A starter release carries core's WO-245.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.267Z"
         }
       ]
     },
@@ -3844,6 +3868,14 @@
           "reopenWhen": "A starter release carries core's WO-237; the pass that takes it sets docs/control/budgets.json's retention for closed journals or records the operator's null.",
           "targets": [],
           "at": "2026-10-30T22:48:30.688Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §Reopening observations: starter v0.105.0 does not carry core's WO-237 (third in core's queue).",
+          "reopenWhen": "A starter release carries core's WO-237; the operator's choice of window is recorded then.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.307Z"
         }
       ]
     },
@@ -4285,6 +4317,14 @@
           "reopenWhen": "npm run plan -- failures reports the first stop row (a refusal past the bound), or the operator asks for a different bound; the pass that reads it weighs the stop against the session it interrupted.",
           "targets": [],
           "at": "2026-10-30T22:48:30.646Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §Reopening observations: no stop row exists (plan failures reports 0 bound stops); the kit's seed and the accept-overrun route stand.",
+          "reopenWhen": "The first stop row in plan failures, or the operator's word on a bound value.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.317Z"
         }
       ]
     },
@@ -4317,6 +4357,14 @@
           "reopenWhen": "The pass before WO-016 activates writes the amendments, or the operator activates WO-016 before a pass runs (then its executor meets the items inside the order's authority and the row waits for WO-008).",
           "targets": [],
           "at": "2026-10-30T22:48:30.657Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D11: WO-016's base, receipt 012's known issues for the four road orders and receipt 014's (d) and (f) are written in by the pass before WO-016 activates; four orders precede it.",
+          "reopenWhen": "The planning pass before WO-016 activates, or the operator activates WO-016 before a pass runs.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.327Z"
         }
       ]
     },
@@ -4448,6 +4496,14 @@
           "reopenWhen": "WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the catalog's data at that commit and files the batches.",
           "targets": [],
           "at": "2026-10-30T22:48:30.709Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D12: the operator named a drained queue as the signal for the next hundred; WO-024 has not merged and the operator has not asked.",
+          "reopenWhen": "WO-024 merges, or the operator asks for the next cut.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.346Z"
         }
       ]
     },
@@ -4496,6 +4552,14 @@
           "reopenWhen": "WO-020 merges (the first order that next touches the scene's inspector takes the link) or the operator asks for it.",
           "targets": [],
           "at": "2026-10-30T22:48:30.719Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §Reopening observations: WO-020 merged, but neither WO-021 nor WO-022 touches the scene's inspector.",
+          "reopenWhen": "The first order that touches the scene's inspector activates (WO-018, or an executor names it as a boy-scout item), or the operator asks for the link.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.257Z"
         }
       ]
     },
@@ -4544,6 +4608,14 @@
           "reopenWhen": "The operator sets the default, or a starter release's README names the fork-parent resolution (item 6 of the pass's block to core).",
           "targets": [],
           "at": "2026-10-30T22:48:30.740Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D2: core filed WO-246 (a kit helper for the launchpad's own pull requests, a hook refusal of a bare gh in a clone whose remotes differ, the guide sentence); the operator's gh default stays theirs and the fork's rule stands.",
+          "reopenWhen": "A starter release carries core's WO-246, or the operator sets the default.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.287Z"
         }
       ]
     },
@@ -4568,6 +4640,14 @@
           "reopenWhen": "A starter release's publish lint admits a pull-request title without a conventional type, or core lets an instance declare its title convention; then the first target order that next touches .github/ changes the workflow, or a small order does.",
           "targets": [],
           "at": "2026-10-30T23:29:44.490Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D2: core's WO-246 admits a gitmoji and a subject with no conventional type for the pr-title kind and keeps the commit kind conventional (core's item 9 of 2026-10-31).",
+          "reopenWhen": "A starter release carries core's WO-246; the first target order after it drops the DotLn-Angular title workflow's type.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.297Z"
         }
       ]
     },
@@ -4780,6 +4860,14 @@
           "reopenWhen": "The upstream kit no longer causes merge issues with the main README.",
           "targets": [],
           "at": "2026-10-31T03:12:21.498Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D2: the root README stays the starter's until the release that carries core's WO-245, after which the page is the instance's and docs/launchpad-readme.md can replace it.",
+          "reopenWhen": "A starter release carries core's WO-245.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.277Z"
         }
       ]
     },
@@ -5023,6 +5111,14 @@
           "reopenWhen": "The next planning pass, or a library ships a generated README again.",
           "targets": [],
           "at": "2026-10-31T17:39:02.770Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D7 and §Register: rule 19 now carries the library README standard WO-026-D014 wrote into the target's conventions; the lint half (workspace-tools:lint refusing the two generated texts) is code the pass cannot write.",
+          "reopenWhen": "WO-016 or WO-017 activates (the next new library); its executor takes the lint as a named boy-scout item or records why not.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.237Z"
         }
       ]
     },
@@ -5039,7 +5135,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D7: WS-001 rule 5 reads each @Injectable class and token ships a kit, enforced by check:kits, and rule 11 names BasePaths and ChildPaths, as WO-026-D016 found the target's conventions and code to hold.",
+          "reopenWhen": "The target's conventions move again; the target's files win and the next pass follows.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.228Z"
+        }
+      ]
     },
     {
       "id": "FUP-719c7f1b9fa85ad6",
@@ -5054,7 +5159,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D8: the profile's Last reviewed target source and Latest target release rows read WO-020's merge 4c21c58 (#11) and DotLn Angular v0.7.0; each planning pass sets them from the latest target close, because the close edits no instance document.",
+          "reopenWhen": "A pass finds the two rows older than the latest target close.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.218Z"
+        }
+      ]
     },
     {
       "id": "FUP-9faab11ab1ea2a32",
@@ -5069,7 +5183,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §Register: WO-026-D018's route from ready-to-verify back to the executor is a kit route; carried to core as item 5 of the pass's block.",
+          "reopenWhen": "Core answers the item, or a third order meets the widened-after-handoff gap.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.247Z"
+        }
+      ]
     },
     {
       "id": "FUP-4a1b75d959226303",
@@ -5098,7 +5221,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 3,
+          "status": "allocated",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D4 and §Register: WO-020-D018 names WO-021, the first family without motion frames, as the carrier of the study model's family discriminator; written into WO-021 step 4 and criterion 10.",
+          "reopenWhen": "WO-021 designs the marbles model without the discriminator, or a later family finds a shared helper's rule wrong.",
+          "targets": [
+            "WO-021"
+          ],
+          "at": "2026-11-01T01:57:26.208Z"
+        }
+      ]
     },
     {
       "id": "FUP-27fad100153e0220",
@@ -5113,7 +5247,177 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) D4 and §Register: WO-020-D020 names WO-021 as the carrier of the three repairs the final review boarded; written into WO-021 step 3 and criterion 10.",
+          "reopenWhen": "WO-021 lands without the three repairs, or another order repairs them first.",
+          "targets": [
+            "WO-021"
+          ],
+          "at": "2026-11-01T01:57:26.197Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-205c7278eb568fe2",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::5265a46585439975cc35f5661c797a019640f40be37f09d09fe5eb031bb8c61d",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "72ad727d0e3f4e007c2154d260361c642471853f0304029a387a0a2d75e1e8fe",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 A small self order carrying the registration's thirty disposable entries and the target's ignore line on their own.",
+          "summary": "- **C1 A small self order carrying the registration's thirty disposable entries and the target's ignore line on their own.** Declined: WO-021 and WO-022 are the next activations and carry the two edits byte for byte (D3); a self order would pay activation, verification, final review and release close for them alone. Reopen if neither order activates within two weeks of this pass while a target close is attempted, or if the operator asks for the fix before the pair.",
+          "missing": false
+        },
+        {
+          "hash": "5f738dd683b313096cdc4bfb7999d7e228f8ff2ef597299f7261901f7a063a2a",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 A small self order carrying the registration's thirty disposable entries and the target's ignore line on their own.",
+          "summary": "- **C1 A small self order carrying the registration's thirty disposable entries and the target's ignore line on their own.** Deferred: WO-021 and WO-022 are the next activations and carry the two edits byte for byte (D3); a self order would pay activation, verification, final review and release close for them alone. Reopen if neither order activates within two weeks of this pass while a target close is attempted, or if the operator asks for the fix before the pair.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C1: WO-021 and WO-022 carry the registration's thirty disposable entries and the target's ignore line byte for byte (D3); a self order would pay the fixed cycle for them alone.",
+          "reopenWhen": "Neither WO-021 nor WO-022 activates within two weeks of the pass while a target close is attempted, or the operator asks for the fix before the pair.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.356Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C1, re-disposed after the consistency review (R8) made the candidate's own word match this deferral: WO-021 and WO-022 carry the registration's thirty disposable entries and the target's ignore line byte for byte (D3); a self order would pay the fixed cycle for them alone.",
+          "reopenWhen": "Neither WO-021 nor WO-022 activates within two weeks of the pass while a target close is attempted, or the operator asks for the fix before the pair.",
+          "targets": [],
+          "at": "2026-11-01T02:23:59.657Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-038033632f4116e6",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::a1d4331874e1dbbce89c5fe92fe3219d38ae9d6ac2756a807a37546044d8a038",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "90ad80ce20731668bfee72efe07336a395297e588a384745e69ce6d23bf245e2",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C5 The worktree-removal step's time at a target close (58 s to 3 min 28 s on 2026-10-31) recorded by what it spends it on, and the finish's full-repository scratch fetch.",
+          "summary": "- **C5 The worktree-removal step's time at a target close (58 s to 3 min 28 s on 2026-10-31) recorded by what it spends it on, and the finish's full-repository scratch fetch.** Core's: asked as items 3(e) and 7. Reopen when a close record shows the step above five minutes, when a finish stalls again, or when core answers.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C5: core's to carry; asked as items 3(e) and 7 of the pass's block.",
+          "reopenWhen": "A close record shows the worktree-removal step above five minutes, a finish stalls again, or core answers.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.394Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-18453d87e5fb7aa4",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::a8557f3e360248f827910966cee2612bc8a3ce46aac1d30443fd44d6d4fdaaab",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "76f1d79defe51a0259f4b545a153742d492f5c9f34b6409725f0b5f3aec4341e",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 A fork document check that fails npm run test:docs when a project root of the target carries a Vite config and the registration declares no node_modules entry under it.",
+          "summary": "- **C2 A fork document check that fails `npm run test:docs` when a project root of the target carries a Vite config and the registration declares no `node_modules` entry under it.** Not now: code the pass cannot write, and the first new project root is the right moment to see whether the declaration is remembered. Reopen when a close is blocked by a nested cache again after WO-021 or WO-022 merges.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C2: a check is code the pass cannot write; the first new project root shows whether the declaration is remembered.",
+          "reopenWhen": "A target close is blocked by a nested cache again after WO-021 or WO-022 merges.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.366Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-4091de8ba4313b4c",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::a9eb7a84324fe4c57e95c24e6a56d5b14eb89e364bd2dfd35a712161a0f5b0fd",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "5bc864924b0d6d03833f75e063b3bb69928477eaa66cd0f732c924b4aa370edd",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C6 The three independent reviews as a kit step of the planning pass.",
+          "summary": "- **C6 The three independent reviews as a kit step of the planning pass.** Not this fork's to add: the pass ran them by a session-scratch launcher; whether every pass should is the operator's word (message 7) and core's shape (item 6 of the block). Reopen when the operator says so or core files it.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C6: the pass ran the three reviews by a session-scratch launcher at the operator's direction for this pass; whether every pass should is the operator's word and core's shape (item 6 of the block).",
+          "reopenWhen": "The operator says the reviews are every planning pass's, or core files the step.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.403Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-48bdda2088d435b7",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::e4f1f3aff7163ed4570dadec1614740b37b0317bb040a4b22293c4749e0ac073",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "f26a70ecb974ae407a15737d159799f09fcd680b22014ca2e88fe00c3af3bfb8",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C4 The close owning the kit's own residue in a target (docs/control/local/, .runtime/) and the remedy taking no writer reservation there.",
+          "summary": "- **C4 The close owning the kit's own residue in a target (`docs/control/local/`, `.runtime/`) and the remedy taking no writer reservation there.** Core's: asked as items 3(b) and 3(c). Reopen when core answers.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C4: core's to carry; asked as items 3(b) and 3(c) of the pass's block.",
+          "reopenWhen": "Core answers the items, or a close is refused on the kit's own residue after WO-021 or WO-022 merges.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.385Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-9a1ea6db27a8f371",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::fa89805fc99779d7520aa99dc155d867acf7873858a704b8c067004010324cad",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "de3e364272ff9d4b30b42e476d008d686527fc7631658e78966871bddd3bfd90",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C3 The registration's declaration matching at any depth (",
+          "summary": "- **C3 The registration's declaration matching at any depth (`**/node_modules`), or a class default for nested package-manager caches.** Core's: asked as item 3(a) of the block. Reopen when a starter release carries it; the pass that takes it collapses the seventeen entries to one.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md) §NoOps C3: core's to carry; asked as item 3(a) of the pass's block.",
+          "reopenWhen": "A starter release carries an any-depth or class-default declaration; the pass that takes it collapses the seventeen entries to one.",
+          "targets": [],
+          "at": "2026-11-01T01:57:26.375Z"
+        }
+      ]
     }
   ]
 }

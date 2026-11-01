@@ -339,7 +339,7 @@ audience beyond the operator.
 - **Target executions** run under Claude Code as well as Codex since 2026-10-26;
   starter v0.101.0's executor-only `target-worktree` grant is what that needs.
 - **A planning pass reviews the orders before it refutes them** (2026-10-31,
-  capture `b61731507a532d3b6beb91525b2f921cdcbb2e7a2b77a8c7864d51b4f13b7172`):
+  capture `78a4e370f49ff4d8b035873a0eb189c37517f41900d80f1356c3e0e548d221ab`):
   before the refuter is dispatched, the three independent reviews the
   executor and the fix dispatch run (the criteria adversary, the design
   improver and the consistency reviewer) run over every work order, new and

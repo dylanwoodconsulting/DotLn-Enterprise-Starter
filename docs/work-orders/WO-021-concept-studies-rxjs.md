@@ -26,8 +26,9 @@ record, check, families and rules as it leaves them, `catalog.md` §Studies,
 the twenty catalog rows, this order, about 180 KB for the executor; each
 author reads two rows, the contract and the RxJS documentation pages it
 cites. Commands added: none (`studies:check` and `studies:report` exist).
-Tokens: unknown until run; recorded per worker. Steps: 12. Re-mints: none.
-Refutations paid: the 2026-10-30 second pass's receipt.
+Tokens: unknown until run; recorded per worker. Steps: 14. Re-mints: none.
+Refutations paid: the 2026-10-30 second pass's receipt and the 2026-11-01
+pass's.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`): a
@@ -161,10 +162,14 @@ the link check, the walkthrough and its screenshots, and the design record.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-021; fast-forward the
-   target worktree to the target's `main` (WO-014-D001); read the harness
-   usage and record the subagent remainder; record the publishing decision as
-   WO-020 did.
+1. Base guard read with WO-014-D001, for WO-021: the target's `main` must
+   contain the Repository pin (`git merge-base --is-ancestor <pin>
+   origin/main` exits 0; a `main` that has left the pin behind, as WO-005
+   step 1 refuses, stops for a planning pass), then the target worktree
+   fast-forwards to the target's `main` and that integrated commit is the
+   baseline of every later comparison; activation as WO-005 step 1; read the
+   harness usage and record the subagent remainder; record the publishing
+   decision as WO-020 did.
 2. The target close's residue declared, byte-identical with WO-022's step 2
    so the pair's second merge meets no conflict. In the launchpad order
    worktree, `dotln.config.json` `classes.angular-nx-monorepo.disposable`
@@ -204,8 +209,10 @@ the link check, the walkthrough and its screenshots, and the design record.
    the studied concepts beside `/tools/catalog` and `/tools`, as
    `docs/dev-reference/architecture/sub-apps.md` does. Check:
    `node tools/scripts/catalog/check-studies.mjs <a file holding the text { not json>`
-   exits 1 and prints a `FAIL check-studies` line; `grep -n 'step()'` over
-   the explanation component's `.html` and `.ts` prints nothing;
+   exits 1 and prints a `FAIL check-studies` line;
+   `grep -c 'readonly step = computed' libs/features/tools/src/lib/composites/study-explanation/study-explanation.ts`
+   prints 0 (the declaration at line 26 of the base is the defect; no
+   template or spec calls it, so a search for calls proves nothing);
    `grep -c '/tools/catalog/<tool id>' README.md` is at least 1.
 4. The study model discriminated by family before the first family without
    motion frames (WO-020-D018): in
@@ -280,12 +287,15 @@ each.
    `libs/features/tools/src/lib/studies/rxjs/` with a spec beside it that
    runs the example under `TestScheduler` against the marble strings the
    record's visual draws (a spec in the family asserts the strings come from
-   the module), and `npx nx test tools` exits 0 with the twenty specs
-   counted in its output.
+   the module), except a record that marks `rxjs` illustrative with its
+   reason in the record and in the decisions file, which the known issues
+   admit for at most two (observeOn's scheduling, materialize's
+   notifications); `npx nx test tools` exits 0 with one spec per executable
+   record counted in its output, twenty less the recorded exceptions.
 4. `docs/evidence/WO-021/fan-out.md`, `review.md` and `README.md` as WO-020's
    criterion 4, the review record also carrying each module's spec result
    from the factual critic.
-5. `npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the
+5. `npx nx e2e dotln-e2e` exits 0 and includes the step 9 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the `marbles` family and the records in lazy chunks,
@@ -300,24 +310,54 @@ each.
    decisions file records the operator's word that ended the rounds; the
    decisions file names the removed candidate's files and `ls` on each prints
    nothing.
-9. `node scripts/target-gate.mjs WO-021 --review` records a passing row for
-   every declared command with no tracked-byte mutation, and
-   `npm run test:docs` passes in the launchpad order worktree; the Preflight
-   line ran before the first full gate.
+9. The target close's residue is declared (step 2): in the launchpad order
+   worktree the step's `node -e` one-liner prints `30 true true 17` and
+   `npm run test:docs` passes; in the target worktree
+   `grep -c '^/\.runtime/$' .gitignore` prints 1; and after the review gate
+   of criterion 11, in the target worktree,
+   `git ls-files --others --ignored --exclude-standard` lists no path
+   outside the thirty declared roots and the files the target harness
+   bundle's manifest installs (the verifier filters the listing by those
+   roots as prefixes and records the command and its empty remainder), and
+   `git status --porcelain --untracked-files=all` prints no line other than
+   a `.DS_Store`, the close's own clean judgment of the worktree; the
+   close's separate judgment of the base checkout under the registration's
+   `judge-only` policy is the close's and is not claimed here.
+10. The two carry-ins hold by their checks: step 3's
+    `node tools/scripts/catalog/check-studies.mjs <a file holding the text { not json>`
+    exits 1 and prints a `FAIL check-studies` line, with the case present in
+    `tools/studies.test.mjs`;
+    `grep -c 'readonly step = computed' libs/features/tools/src/lib/composites/study-explanation/study-explanation.ts`
+    prints 0; `grep -c '/tools/catalog/<tool id>' README.md` is at least 1;
+    and step 4's spec with a record whose family has no motion frames is
+    counted in `npx nx test tools`'s passing output.
+11. `node scripts/target-gate.mjs WO-021 --review` records a passing row for
+    every declared command with no tracked-byte mutation, and
+    `npm run test:docs` passes in the launchpad order worktree; the Preflight
+    line ran before the first full gate.
 
 **Evidence gate:** the gate rows, the recorded command outputs,
 `docs/evidence/WO-021/README.md`, `fan-out.md`, `review.md`,
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-021/host-qualification.md`.
 
-**Known issues and carry-ins:** The base line is provisional and publishes
-right under starter v0.96.1's merge-base publish; a pass may set it to
-WO-020's merge commit. This order and WO-022 are a lane pair in the sequence:
-their surfaces are disjoint (each writes its own records, modules, family and
-evidence), no edge joins them, and the second of the two to publish
-integrates the target's `main` and rewrites `studies-summary.json` with
-`npm run studies:check -- --write-summary` before its publish; the operator
-may also run them one at a time. A record whose example cannot be expressed
+**Known issues and carry-ins:** The base line is WO-020's merge commit
+(`4c21c58`, DotLn-Angular #11), set by the 2026-11-01 pass. Step 2 is byte
+for byte the same edit as WO-022's step 2, so WO-022's step finds it on
+`main` and only verifies; the pass that follows this order's close reads
+its close record (one attempt, no blocker) and carries core's answer on an
+any-depth declaration (that pass's §Requests to core, item 3). The two
+carry-ins are WO-020-D018 (the study model's family discriminator, before
+the `marbles` family; register row `FUP-4a1b75d959226303`) and WO-020-D020
+(the three repairs the final review boarded; `FUP-27fad100153e0220`),
+written into steps 3 and 4 and criterion 10. WO-022 follows this order in
+the sequence and depends on it: its `flow` family is the second family
+without motion frames, so it needs the discriminator step 4 lands, and its
+executable arm is drawn by the `marbles` family (the 2026-11-01 pass, D4,
+on all three of its reviews); the two are no longer a lane pair. The order
+that publishes after this one integrates the target's `main` and rewrites
+`studies-summary.json` with `npm run studies:check -- --write-summary`
+before its publish. A record whose example cannot be expressed
 as a marble diagram (observeOn's scheduling, materialize's notifications) may
 mark `rxjs` illustrative with its reason in the record and the decisions
 file; the rule the order adds says so. The RxJS patterns rows (`rxp`) and the

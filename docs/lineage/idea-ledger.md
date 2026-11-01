@@ -9,14 +9,18 @@ Insert this instance's dated sessions below, newest first.
 Dispatch: a `planning:` request for a standard pass with the latest upstream,
 carrying core's answers of 2026-10-31 to the fork's block of its second pass
 of 2026-10-30 and the operator's question why release close keeps failing,
-followed by five later messages (the executor's three independent reviews
+followed by thirteen later messages (the executor's three independent reviews
 run as Codex workers over every order before the refuter; a question about a
-denied push; and three corrections of the session's handing them a command),
+denied push and three corrections of the session's handing them a command;
+the record's bullet allowed for now and two corrections of the session's
+record keeping; the merge of the update; three questions and corrections on
+the finish's delay; and a question on the first review launch's failure),
 captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-31.md`, SHA-256
 `79014dd3753f72ad948127e463570edd1446baaec1815e8ebd71c11bd6cb973f`, and
 `docs/intake/notes/planning-2026-10-31-messages.md`, SHA-256
-`b61731507a532d3b6beb91525b2f921cdcbb2e7a2b77a8c7864d51b4f13b7172`). The
+`78a4e370f49ff4d8b035873a0eb189c37517f41900d80f1356c3e0e548d221ab` as of
+its fourteenth message). The
 record is [the planning document](../planning/standard-pass-v0-105-0-2026-11-01.md);
 this heading registers the pass for the plan tooling. The pass filed no order
 and amended two; no idea enters the ledger, because the pass was not an

@@ -7,6 +7,7 @@ pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
 - WO-021 — Concept studies II: RxJS, with executable marble examples
+
 - WO-022 — Concept studies III: the messaging patterns
 
 - WO-023 — Concept studies IV: the enterprise application patterns
