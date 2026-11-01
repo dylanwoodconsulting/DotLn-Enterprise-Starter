@@ -1,0 +1,2029 @@
+{
+  "schemaVersion": "plan-refutation-receipt-v1",
+  "receiptId": "2026-11-01-planning-f26bb956de3abb86-017",
+  "pass": {
+    "id": "planning-f26bb956de3abb86",
+    "kind": "planning",
+    "heading": "2026-11-01 — planning pass: the second pass of the day, criterion 9 out of WO-022 (operator dispatch of 2026-11-01)"
+  },
+  "ordinal": 17,
+  "previousReceiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e",
+  "subject": {
+    "schemaVersion": "plan-subject-v1",
+    "revision": "11460c07d8f1ff9889a06e8c85e07e8500d60d75",
+    "hash": "sha256:abcfdcbc27e4b99ea218e928cd3422723ce34d189c40ad67f46cb61d7a3f73a0",
+    "sequenceHash": "sha256:aa44cdbb9f2b2ce94530ea170add4dddc39a3345057d5a4e8fa634e4c8d0c06c",
+    "inputs": [
+      {
+        "name": "sequence",
+        "hash": "sha256:aa44cdbb9f2b2ce94530ea170add4dddc39a3345057d5a4e8fa634e4c8d0c06c"
+      },
+      {
+        "name": "docs/work-orders/WO-022-concept-studies-eip.md",
+        "hash": "sha256:a517ecaefd401dbd4a4b767b1f26dc0d3f5c37d45f886ad0e5679f4e482c3085"
+      },
+      {
+        "name": "docs/work-orders/WO-023-concept-studies-poeaa.md",
+        "hash": "sha256:5811090b9ea2e4880f8258e99f7a8bc5f93456a89967dc8144d3e2b6f96f20e5"
+      },
+      {
+        "name": "docs/work-orders/WO-024-concept-studies-geb-and-team-topologies.md",
+        "hash": "sha256:cef94279dd33374ad5d67c6f468cf49e86dad81faa1bf2cb1e5a68f38e69744d"
+      },
+      {
+        "name": "docs/work-orders/WO-016-machinery-view.md",
+        "hash": "sha256:4a7715e99af5ed3ce9872be6525bf331370f92c503739b65e85524f5caf8fd1b"
+      },
+      {
+        "name": "docs/work-orders/WO-008-authentication-and-permissions.md",
+        "hash": "sha256:818e6ef496d5b0388f96cfb5853f3729b6f76abc34a4cb0e5c86d54e55fee8f1"
+      },
+      {
+        "name": "docs/work-orders/WO-017-digital-twin-patience-lane.md",
+        "hash": "sha256:3c4505296365c9fbc5c2fce995905e557980e1a6db8f227dfdcd1cd6911fb5f8"
+      },
+      {
+        "name": "docs/work-orders/WO-018-art-of-war-map-and-toys.md",
+        "hash": "sha256:1215e350c6626d397b2b2940bc8a6a877aeaf35fb1747ee0920e68780e68105c"
+      },
+      {
+        "name": "vision:unavailable",
+        "hash": "sha256:65e325c17ca6b3c6219d1e9ef62b815b236ce63a5d8b2563ac9e08eb0e6c8df5"
+      },
+      {
+        "name": "vision:what-dotln-is-not",
+        "hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "roles",
+        "hash": "sha256:50fce8a97c8d1fe03e3975fd318c6ee8021d6c155294b5eddbe7fecf44b7453a"
+      },
+      {
+        "name": "capability:unavailable",
+        "hash": "sha256:eeb378703698eaa12a1105f5874dc17930699970f4b6dcdd1b737238df89795f"
+      },
+      {
+        "name": "goal-review",
+        "hash": "sha256:fcf065181e577f9072a8e73c422ead144d3832fc315d88e0662bb2ddb795e6b8"
+      },
+      {
+        "name": "cost-table",
+        "hash": "sha256:f3d0ebae29bd14bfdb5a32245432e8fbe66887014145ba7e877d8c930d4c3d50"
+      }
+    ],
+    "standard": {
+      "theses": [],
+      "exclusions": [],
+      "roles": [],
+      "rolesTable": "",
+      "capabilities": [],
+      "unavailable": [
+        "docs/product/00-vision.md",
+        "docs/product/13-uifa-roles.md",
+        "docs/planning/capability-table.md"
+      ]
+    },
+    "orders": [
+      {
+        "workOrderId": "WO-022",
+        "path": "docs/work-orders/WO-022-concept-studies-eip.md",
+        "title": "WO-022 — Concept studies III: the twenty messaging patterns of agents in concert, from Enterprise Integration Patterns, each with a flow drawing that steps messages through channels",
+        "objective": "(the operator's session, WS-001 rule 24) the operator opens\nTools, Catalog, chooses Enterprise Integration Patterns and sees twenty\nstudied concepts; they open Aggregator and read its study: the idea in plain\nwords (many related messages become one when the set is complete) and a\nsituation it serves (three reviewers' findings on one order gathered before\nthe order moves), a flow drawing of that example they step message by\nmessage, with the channels, the correlation and the completion condition\nnamed in the text equivalent, the ordinary pseudocode of the aggregator's\nstate, an RxJS reading of the same flow labelled executable when its module\nand spec exist, how Apache Camel and Spring Integration name and implement\nit, the public pattern page and the book as references, the limits (a lost\nmessage holds the set forever without a timeout) and the nearby patterns as\nlinks (Correlation Identifier, Resequencer, Splitter). They open\nPublish-Subscribe Channel and Competing Consumers and watch the same message\nreach every subscriber in one and one consumer in the other. They open\nRequest-Reply and follow the Correlation Identifier link into its own study.\nWhat the operator learns is the vocabulary of agents handing records through\nchannels and where each pattern fails; what they decide is which pattern the\nmachinery view or a toy should show next.",
+        "cost": "adds `libs/shared/catalog/src/studies/eip/` (twenty records), the\n`flow` family under `libs/features/tools/src/lib/composites/study-visuals/flow/`,\nthe executable modules and specs the records name under\n`libs/features/tools/src/lib/studies/eip/`, one coverage row and one rule,\nabout 40 source files plus twenty data records; adds no runtime dependency.\nRemoves nothing. Wall-clock: about 6 to 10 hours of executor work, of which\nthe fan-out runs in parallel, plus the fixed cycle; unknown until run.\nContext bytes: WO-020's record, check, families and rules as it leaves them,\n`catalog.md` §Studies, the twenty catalog rows with their hooks, this order,\nabout 180 KB for the executor; each author reads two rows, the contract and\nthe public pattern pages it cites. Commands added: none. Tokens: unknown\nuntil run; recorded per worker. Steps: 12. Re-mints: none. Refutations paid:\nthe 2026-10-30 second pass's receipt, the 2026-11-01 pass's and the\n2026-11-01 second pass's.",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in\n   the served production build: open Tools, Catalog; choose Enterprise\n   Integration Patterns and read the studied count; open Aggregator and step\n   its flow, expand the pseudocode and the limits; open Publish-Subscribe\n   Channel and Competing Consumers; open Request-Reply and follow the\n   Correlation Identifier link. The VER report carries a `## Walkthrough`\n   section with the dated steps and the screenshots at 360, 768 and 1440\n   under `docs/evidence/WO-022/walkthrough/` (`ls docs/evidence/WO-022/walkthrough | wc -l`\n   prints at least 15), and states in the verifier's own words when an\n   aggregator completes, how the two channel patterns deliver differently,\n   and what a correlation identifier is for, as read from the studies alone.\n   Met only when every step completed and that statement is present."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/eip/`\n   with exactly the twenty ids this order names (or one recorded\n   substitution), every record `checked` with at least two reviewers, every\n   reference complete, and `studies-summary.json` current."
+          },
+          {
+            "id": "criterion:3",
+            "text": "The eight records whose mechanism the Design names as a stream\n   transformation (Aggregator, Resequencer, Content-Based Router, Recipient\n   List, Message Filter, Message Expiration, Competing Consumers,\n   Publish-Subscribe Channel) carry `executable` naming a module under\n   `libs/features/tools/src/lib/studies/eip/` with a marble spec beside it,\n   with at most one recorded substitution under the rule; every other\n   record with `executable` does the same; every record with\n   `executable: null` carries its reason in the decisions file (the file\n   names each, and names none of the eight); and `npx nx test tools` exits\n   0 with those specs counted in its output."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`docs/evidence/WO-022/fan-out.md`, `review.md` and `README.md` as WO-020's\n   criterion 4, the review record also listing each study's platform analogy\n   as checked."
+          },
+          {
+            "id": "criterion:5",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the\n   board spec's threshold and no horizontal overflow at 360, 768 and 1440."
+          },
+          {
+            "id": "criterion:6",
+            "text": "`npx nx build dotln --configuration=production` exits 0 within the\n   declared budgets with the `flow` family and the records in lazy chunks,\n   `npm run check:bundle` passes with the chunk sizes recorded, and\n   `package.json`'s `dependencies` keys equal the base's."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`docs/dev-reference/architecture/catalog.md` §Studies lists Enterprise\n   Integration Patterns with twenty studied, and\n   `docs/ai-reference/catalog-rules.md` states the analogy rule\n   (`grep -c \"analogy\" docs/ai-reference/catalog-rules.md` is at least 1)."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`docs/evidence/WO-022/design/comparisons.md` records the first pair (A\n   pipeline, B swim lanes) and every later round with its pick, and the\n   decisions file records the operator's word that ended the rounds; the\n   decisions file names the removed candidate's files and `ls` on each prints\n   nothing."
+          },
+          {
+            "id": "criterion:9",
+            "text": "`node scripts/target-gate.mjs WO-022 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight\n   line ran before the first full gate."
+          }
+        ],
+        "nonGoals": "the machinery view or any runtime channel in the app; typing\nfurther EIP rows for the `channels` scene; the remaining patterns; the general\nsearch controls (WO-018)."
+      },
+      {
+        "workOrderId": "WO-023",
+        "path": "docs/work-orders/WO-023-concept-studies-poeaa.md",
+        "title": "WO-023 — Concept studies IV: the twenty enterprise application patterns behind the app's data and state layers, from Patterns of Enterprise Application Architecture, each with a state drawing and a small executable model",
+        "objective": "(the operator's session, WS-001 rule 24) the operator opens\nTools, Catalog, chooses Patterns of Enterprise Application Architecture and\nsees twenty studied concepts; they open Unit of Work and read its study: the\nidea in plain words (one object remembers everything a business transaction\nchanged and writes it out once) and the situation it serves (a scene's saved\ncompositions written together, or not at all), a state drawing of one\nexample they step through as objects become new, dirty, clean and removed\nwith the text equivalent naming each register, the ordinary pseudocode of\nregistering and committing, the executable TypeScript model with the note\nthat it ran in the test suite, how Doctrine, Hibernate and a TypeScript ORM\nname and implement it, the public catalog page and the book as references,\nthe limits (a long-lived unit of work holds stale objects; nothing coordinates\ntwo units) and the nearby patterns as links (Identity Map, Data Mapper, Lazy\nLoad). They open Identity Map and step a lookup that hits and one that misses;\nthey open Optimistic and Pessimistic Offline Lock side by side and read where\neach fails; they open Data Transfer Object and Remote Facade and read why the\npair exists. What the operator learns is which pattern their stores and data\naccess already embody, under what name, and where each breaks; what they\ndecide is which pattern to make explicit in the app or to show a colleague.",
+        "cost": "adds `libs/shared/catalog/src/studies/poeaa/` (twenty records), the\n`states` family under `libs/features/tools/src/lib/composites/study-visuals/states/`,\nthe executable TypeScript models and specs the records name under\n`libs/features/tools/src/lib/studies/poeaa/`, one coverage row and one rule,\nabout 40 source files plus twenty data records; adds no runtime dependency.\nRemoves nothing. Wall-clock: about 6 to 10 hours of executor work, of which\nthe fan-out runs in parallel, plus the fixed cycle; unknown until run.\nContext bytes: WO-020's record, check, families and rules as it leaves them,\n`catalog.md` §Studies, the twenty catalog rows, this order,\n`docs/dev-reference/architecture/events-and-state.md` and `foundation.md`\n(the app's own stores, data access and persistence), about 190 KB for the\nexecutor; each author reads two rows, the contract and the public catalog\npages it cites. Commands added: none. Tokens: unknown until run; recorded\nper worker. Steps: 12. Re-mints: none. Refutations paid: the 2026-10-30\nsecond pass's receipt.",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in\n   the served production build: open Tools, Catalog; choose Patterns of\n   Enterprise Application Architecture and read the studied count; open Unit\n   of Work and step its states, expand the pseudocode, the executable model\n   and the limits; open Identity Map and step a hit and a miss; open the two\n   offline locks; open Data Transfer Object and Remote Facade. The VER report\n   carries a `## Walkthrough` section with the dated steps and the\n   screenshots at 360, 768 and 1440 under `docs/evidence/WO-023/walkthrough/`\n   (`ls docs/evidence/WO-023/walkthrough | wc -l` prints at least 15), and\n   states in the verifier's own words what a unit of work tracks, what an\n   identity map prevents, and when an optimistic lock is the wrong choice, as\n   read from the studies alone. Met only when every step completed and that\n   statement is present."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/poeaa/`\n   with exactly the twenty ids this order names (or one recorded\n   substitution), every record `checked` with at least two reviewers, every\n   reference complete, and `studies-summary.json` current."
+          },
+          {
+            "id": "criterion:3",
+            "text": "Every record with `executable` names a module under\n   `libs/features/tools/src/lib/studies/poeaa/` with a spec beside it that\n   drives the model through the study's example, every record with\n   `executable: null` carries its reason in the decisions file (the file\n   names each), and `npx nx test tools` exits 0 with those specs."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`docs/evidence/WO-023/fan-out.md`, `review.md` and `README.md` as WO-020's\n   criterion 4, the review record also listing, per study, the app file the\n   embodiment sentence names and the critic's confirmation that it exists at\n   the base."
+          },
+          {
+            "id": "criterion:5",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the\n   board spec's threshold and no horizontal overflow at 360, 768 and 1440."
+          },
+          {
+            "id": "criterion:6",
+            "text": "`npx nx build dotln --configuration=production` exits 0 within the\n   declared budgets with the `states` family and the records in lazy chunks,\n   `npm run check:bundle` passes with the chunk sizes recorded, and\n   `package.json`'s `dependencies` keys equal the base's."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`docs/dev-reference/architecture/catalog.md` §Studies lists PoEAA with\n   twenty studied; `docs/ai-reference/catalog-rules.md` states the\n   embodiment rule (`grep -c \"embod\" docs/ai-reference/catalog-rules.md` is at\n   least 1); `docs/dev-reference/architecture/events-and-state.md` names the\n   patterns the stores embody with links to their studies\n   (`grep -c \"Unit of Work\" docs/dev-reference/architecture/events-and-state.md`\n   is at least 1)."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`docs/evidence/WO-023/design/comparisons.md` records the first pair (A\n   register table, B state machine) and every later round with its pick, and\n   the decisions file records the operator's word that ended the rounds; the\n   decisions file names the removed candidate's files and `ls` on each prints\n   nothing."
+          },
+          {
+            "id": "criterion:9",
+            "text": "`node scripts/target-gate.mjs WO-023 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight\n   line ran before the first full gate."
+          }
+        ],
+        "nonGoals": "refactoring the app's stores or data access toward a pattern;\na database or API dependency; the remaining patterns; the general search\ncontrols (WO-018)."
+      },
+      {
+        "workOrderId": "WO-024",
+        "path": "docs/work-orders/WO-024-concept-studies-geb-and-team-topologies.md",
+        "title": "WO-024 — Concept studies V: levels, loops and teams, ten concepts from Gödel, Escher, Bach and ten from Team Topologies, each with a relations drawing, the two works whose vocabulary describes the platform itself",
+        "objective": "(the operator's session, WS-001 rule 24) the operator opens\nTools, Catalog, chooses Gödel, Escher, Bach and sees ten studied concepts;\nthey open Levels of description and read its study: the idea in plain words\n(the same system is truly described at several levels, each with its own\nvocabulary, and no level is the real one) and a situation it serves (a\nplanning pass, an order, a gate row and a hook refusal are four descriptions\nof one afternoon's work), a relations drawing they step through level by\nlevel with the text equivalent naming each level and what it sees of the\nnext, the ordinary pseudocode of a chunking procedure, an illustrative RxJS\nreading where a stream of low-level events becomes a stream of higher-level\nones, public treatments of the idea introduced on their own terms, the\nreferences, the limits (a sealed-off level hides what leaks through) and the\nnearby concepts as links (Chunking, Sealed-off levels, Strange loop). They\nopen Strange loop and step the drawing until it returns to where it began;\nthey open Isomorphism and Gödel numbering and see one idea become the other's\nmechanism, with a small executable encoder they can read the spec of. They\nchoose Team Topologies, open Collaboration mode, X-as-a-Service mode and\nFacilitating mode and read, in one drawing per mode, how two teams exchange\nwork and where each mode should end; they open Conway's law and read the\nhomomorphism the drawing shows between a team graph and a system graph, with\nthe Reverse Conway manoeuvre as its nearby inverse. What the operator learns\nis the vocabulary for the levels the platform's mechanisms live on and the\nmodes its five roles work in; what they decide is which loop or mode to make\nvisible in the machinery view or a toy next.",
+        "cost": "adds `libs/shared/catalog/src/studies/geb/` (ten records) and\n`libs/shared/catalog/src/studies/tt/` (ten records), the `relations` family\nunder `libs/features/tools/src/lib/composites/study-visuals/relations/`, the\nexecutable TypeScript models and specs the records name under\n`libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, two coverage\nrows and one rule, about 35 source files plus twenty data records; adds no\nruntime dependency. Removes nothing. Wall-clock: about 6 to 10 hours of\nexecutor work, of which the fan-out runs in parallel, plus the fixed cycle;\nunknown until run. Context bytes: WO-020's record, check, families and rules\nas it leaves them, `catalog.md` §Studies, the twenty catalog rows with their\nhooks, this order, about 180 KB for the executor; each author reads two rows,\nthe contract and the public references it cites. Commands added: none.\nTokens: unknown until run; recorded per worker. Steps: 12. Re-mints: none.\nRefutations paid: the 2026-10-30 second pass's receipt.",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in\n   the served production build: open Tools, Catalog; choose Gödel, Escher,\n   Bach and read the studied count; open Levels of description and step its\n   drawing, expand the pseudocode and the limits; open Strange loop and step\n   it round; open Isomorphism and Gödel numbering and read the encoder's spec\n   note; choose Team Topologies; open the three interaction modes; open\n   Conway's law and follow the Reverse Conway link. The VER report carries a\n   `## Walkthrough` section with the dated steps and the screenshots at 360,\n   768 and 1440 under `docs/evidence/WO-024/walkthrough/`\n   (`ls docs/evidence/WO-024/walkthrough | wc -l` prints at least 15), and\n   states in the verifier's own words what a level of description is, what\n   makes a loop strange, and when collaboration mode should end, as read from\n   the studies alone. Met only when every step completed and that statement\n   is present."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/geb/`\n   and `studies/tt/` with exactly the twenty ids this order names (or one\n   recorded substitution per work), every record `checked` with at least two\n   reviewers, every reference complete, and `studies-summary.json` current."
+          },
+          {
+            "id": "criterion:3",
+            "text": "Every record with `executable` names a module under\n   `libs/features/tools/src/lib/studies/geb/` or `studies/tt/` with a spec\n   beside it, every record with `executable: null` or `visual: null` carries\n   its reason in the decisions file (the file names each), and `npx nx test\n   tools` exits 0 with those specs."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`docs/evidence/WO-024/fan-out.md`, `review.md` and `README.md` as WO-020's\n   criterion 4, the review record also confirming per study that no passage\n   of either book is quoted and no sentence characterizes the operator."
+          },
+          {
+            "id": "criterion:5",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the\n   board spec's threshold and no horizontal overflow at 360, 768 and 1440."
+          },
+          {
+            "id": "criterion:6",
+            "text": "`npx nx build dotln --configuration=production` exits 0 within the\n   declared budgets with the `relations` family and the records in lazy\n   chunks, `npm run check:bundle` passes with the chunk sizes recorded, and\n   `package.json`'s `dependencies` keys equal the base's."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`docs/dev-reference/architecture/catalog.md` §Studies lists Gödel, Escher,\n   Bach and Team Topologies with ten studied each, and\n   `docs/ai-reference/catalog-rules.md` states the absent-material rule\n   (`grep -c \"absent\" docs/ai-reference/catalog-rules.md` is at least 1)."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`docs/evidence/WO-024/design/comparisons.md` records the first pair (A\n   stack, B ring) and every later round with its pick, and the decisions file\n   records the operator's word that ended the rounds; the decisions file\n   names the removed candidate's files and `ls` on each prints nothing."
+          },
+          {
+            "id": "criterion:9",
+            "text": "`node scripts/target-gate.mjs WO-024 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight\n   line ran before the first full gate."
+          }
+        ],
+        "nonGoals": "a formal-system or team-topology sub-app or toy; studies of\nthe remaining rows; the general search controls (WO-018); the machinery view."
+      },
+      {
+        "workOrderId": "WO-016",
+        "path": "docs/work-orders/WO-016-machinery-view.md",
+        "title": "WO-016 — The machinery view: one recorded order's agents in their role slots over scrubbed, field-reduced copies of the platform's WO-221 and WO-226 segments, each agent's active gems, supports and prose sections readable, a mechanism change the operator drops on an agent redrawing the example use case with the before as a ghost, the operator's own ideas persisted in the browser and saved to ignored intake through a local sink, and the shared records and replay libraries",
+        "objective": "at `/machinery` the operator sees one recorded order (WO-221,\nswitchable to WO-226) as a strip of beats left to right in recorded time,\nthe distance between beats proportional to the minutes between rows; above\nit the four role slots (executor, verifier, repairer, reviewer) and the\noperator as a figure at the edge; stepping the anchor fills a slot with the\nagent that made the next row, labelled by harness, model and effort, with a\nhand-back card reading pass, fail or no verdict; a refilled slot keeps the\nearlier occupant as a ghost; opening an agent shows its declared obligation,\nthe mechanisms it runs with (the role's active gems and supports by id and\nits prose sections by key, from the launchpad's own role files at the\nstarter version named) and what it waited on; a shelf holds the operator's\nown ideas, each a titled mechanism change (remove or add a gem or support,\nnarrow the knowledge to listed inputs, set the rung, add a wait with its\ncause, replace a prose section with the operator's own words); selecting an\nidea then an agent redraws that agent's card and the use case's beats under\nthe idea's caption with the before as a ghost and a band saying presentation\nonly, nothing written (the caption names what the change shows in the use\ncase and says so when the beats are unchanged); a refused drop stays visible\nwith its reason; the\noperator's ideas and applied state persist in browser storage and, when the\nlocal sink runs, every dropped idea is also appended to the repository's\nignored intake; nothing else leaves the browser.",
+        "cost": "adds `machinery.ts` to `libs/shared/models`, `libs/shared/records`\n(reader, folds, fixture pack, kit), `libs/shared/replay` (the virtual-time\nclock), the `machinery` feature's page, strip, slots, cards, shelf, editor,\nfacade and store, `libs/features/machinery-data-access`, the segment reducer\nand the record fixture check, the idea sink process, three fixtures, two\ndocuments, about 75 source files; adds no runtime dependency. Removes the\narriving page WO-013 shipped for `/machinery`. Wall-clock: about 8 to 12\nhours of executor work plus the fixed cycle; unknown until run. Context\nbytes: WS-001 §The app and its sub-apps, design A §1 and §1.6, the UI\nvision §4 and V7 read at the run's folder, the fork's role skill stamps,\nthis order, about 190 KB. Commands added in the target: `npm run idea-sink`.\nTokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: five (receipts 008 to 011 on the earlier texts; the 2026-10-28 pass's receipt on this one).",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "`libs/shared/records/testing/src/fixtures/segments/order-221.json` and\n   `order-226.json` validate against `control-event-lite-v0.schema.json` with\n   `additionalProperties: false` over the fields `ordinal`, `type`,\n   `recordedAt`, `workOrderId`, `actor`, `verdict`, carry a `source.commit`\n   and no absolute path (`npm run check:fixtures` exits 0), a spec asserts `order-221.json` carries 16 rows and `order-226.json` 6, the reducer's tooling test proves a value carrying a run of 32 or more hexadecimal characters or a UUID shape fails the scrub, and `ls libs/shared/records/testing/src/fixtures/segments | grep -ciE '^wo-'`\n   prints 0."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`npx nx test records` exits 0 with specs asserting: the WO-221 fold has 8\n   operator beats and the seven gaps 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and\n   5.9 minutes within one second each, the first following a hand-back with\n   no verdict; the WO-226 fold has gaps of 316.0 and 31.7 minutes; an\n   unknown `type` yields an `unknown` beat and a row whose actor is the\n   planner, refuter or release-close role yields an `unknown`-slot beat\n   naming the role; the verifier slot carries one\n   ghost after its refill; and `applyIdeas` refuses a card whose `appliesTo`\n   excludes the target with a reason while the scene stays unchanged."
+          },
+          {
+            "id": "criterion:3",
+            "text": "`role-mechanisms.json` lists, for the executor, planner, refuter,\n   release-close, reviewer and verifier, the ids each role's Origin stamp\n   carries at the starter the launchpad carried at activation, each role\n   naming its source file and that starter version (a spec asserts each role's count against the counts the executor recorded in the decisions file from the files read at activation; no starter's figures are written here, because they change with the starter; and the verifier recounts the ids in each role's Origin stamp independently and records the recount beside the spec's in the VER report),\n   the `repairer` slot reads the executor's entry and its card states that\n   the repairer runs the executor role at `resume: fix` (a spec asserts the\n   card's text), and\n   `grep -c \"/Users/\" libs/shared/records/testing/src/fixtures/role-mechanisms.json`\n   prints 0."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`grep -rl \"generated\" libs/features/machinery/src/testing/fixtures`\n   prints nothing and the shelf's fixture of ideas is empty at first render\n   (a spec asserts zero cards before the operator creates one)."
+          },
+          {
+            "id": "criterion:5",
+            "text": "The tooling test for the idea sink passes (`npm run test:tooling` exits\n   0): one post appends one JSON line to a temporary ignored directory, a\n   body over 16 KB is refused, a request whose `Origin` is not the development origin or whose `Host` is not the loopback is refused, and the sink refuses to start on a directory that is not Git-ignored or that lies outside the Git root of the checkout it runs from;\n   `environment.prod.ts` sets `ideaSinkUrl` to `null` and\n   `grep -rl \"127.0.0.1\" dist/apps/dotln/browser` prints nothing after\n   `npx nx build dotln --configuration=production`."
+          },
+          {
+            "id": "criterion:6",
+            "text": "The persisted-state spec asserts every key written starts with\n   `dotln-angular.machinery` and no other storage, cookie or network write\n   occurs except the sink post when `ideaSinkUrl` is set, a spec with that post failing asserts the dropped idea is applied and persisted, a spec seeding `dotln-angular.machinery` with a value that does not parse asserts the shelf renders empty and the strip renders; and\n   `grep -rlE \"from 'node:|from \\\"node:|require\\(\" libs/shared/records/src libs/shared/replay/src libs/features/machinery/src libs/features/machinery-data-access/src --include='*.ts' | grep -v spec`\n   prints nothing."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes: sixteen beat buttons, four\n   role slots and the operator figure on `/machinery`; the executor slot filled at the second beat;\n   a ghost in the verifier slot after the eighth; an idea created, applied\n   and redrawn with the ghost, the presentation-only band and a caption\n   naming what changed; a refused drop\n   visible with its reason; the idea present after a reload; the keyboard\n   path across the beats and the shelf; axe at the board spec's threshold;\n   no horizontal overflow at 360, 768 and 1440."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`docs/dev-reference/architecture/machinery.md` and\n   `docs/ai-reference/machinery-rules.md` exist and the rules file states\n   that the fold decides nothing and that no card is generated from records\n   (`grep -c \"generated\" docs/ai-reference/machinery-rules.md` is at least 1);\n   `package.json`'s `dependencies` keys equal the base's."
+          },
+          {
+            "id": "criterion:9",
+            "text": "`node scripts/target-gate.mjs WO-016 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate."
+          },
+          {
+            "id": "criterion:10",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in the served production build: open `/machinery` on WO-221; step the anchor to the second beat and read the executor's card; step past the eighth and find the verifier's ghost; open an agent and read its obligation, its mechanisms and what it waited on; create an idea in the shelf, apply it to the verifier and read the caption and the band; apply a refused drop and read its reason; reload and find the idea; switch to WO-226. The VER report carries a `## Walkthrough` section with the dated steps and names the screenshots at 360, 768 and 1440 under `docs/evidence/WO-016/walkthrough/` (`ls docs/evidence/WO-016/walkthrough | wc -l` prints at least 12), and states in the verifier's own words what the applied idea changed in the use case. The criterion is met only when every step completed and that statement is present."
+          }
+        ],
+        "nonGoals": "a live connection to any resident or to core; drag; generated\nidea cards; agents in concert beyond one order's slots (the fleet, the\nblackboard room and the flow instruments of the run are later members,\ncandidate C5); the digital twin's lane (WO-017); any write outside browser\nstorage and the local sink; a token axis."
+      },
+      {
+        "workOrderId": "WO-008",
+        "path": "docs/work-orders/WO-008-authentication-and-permissions.md",
+        "title": "WO-008 — Authentication and permissions for DotLn-Angular, legitimate from the Angular side: `auth` with an OpenID Connect authorization-code-with-PKCE client behind a port, in-memory token handling with single-flight refresh, expiry and invalid-token paths, the auth and permission stores, route and feature permission checks from a declared adjacency list, the mocked identity provider through MSW, and the failure-case matrix in unit and e2e tests",
+        "objective": "a visitor to `apps/dotln` signs in through an OpenID Connect\nauthorization-code flow with PKCE against a mocked provider, holds tokens only\nin memory, is refreshed once when a request meets an expired token and\nsigned out when refresh fails or a token is invalid, sees only the routes and\nfeatures the declared permission model grants, and every failure case in the\nmatrix below has a passing test; swapping the mocked provider for a real one\nchanges configuration and nothing in the Angular code.",
+        "cost": "adds `libs/shared/auth` with its kit, the mocked identity provider\nhandlers (whose development signing key pair is generated when the mock\nstarts and is never committed), the `authHttpEvents` and\n`sessionEvents` groups, guards, the permission directive, the `/login`,\n`/denied` and `/account` routes, about 60 source files; adds one OpenID\nConnect client library to `dependencies` and `jose` (development signing in\nthe mock) to `devDependencies`.\nRemoves nothing. Wall-clock: about 8 to 12 hours of executor work plus the\nfixed cycle; unknown until run. Context bytes: WS-001 house rule 17, the\nevents and state documents, the client library's documentation, this order,\nabout 160 KB. Commands added in the target: none. Tokens: unknown until run.\nSteps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order, and the 2026-10-28 pass's receipt judges this text.",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "`grep -rlE \"localStorage|sessionStorage\" libs/shared/auth/src --include='*.ts' | grep -v spec`\n   prints nothing, and the same grep over the files under `apps/dotln/src`\n   this order adds or changes\n   (`git diff --name-only $(git merge-base HEAD origin/main)..HEAD -- apps/dotln/src`)\n   prints nothing; `grep -rc \"console.log\" libs/shared/auth/src --include='*.ts' | grep -v \":0\"`\n   prints nothing; and an e2e step after the sign-in reads every key of `localStorage` and `sessionStorage`, every object store of every IndexedDB database, every Cache Storage entry and every cookie, and asserts that no value matches the JWT shape (three dot-separated base64url segments) and that no value\n   equals or contains any token the mocked provider issued in that session\n   (the handlers keep the tokens they issued behind a test-only knob the e2e\n   reads), which covers opaque refresh tokens and the client library's own\n   stores as well as house code."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`libs/shared/auth/src/lib/session/transitions.ts` declares the transition\n   table for the six states and `transitions.spec.ts` asserts every state and\n   event pair (the spec iterates the table and the event list, so an\n   unhandled pair fails); `npx nx test auth` exits 0."
+          },
+          {
+            "id": "criterion:3",
+            "text": "Unit specs exist and pass for each matrix row: timeout on exchange,\n   `invalid_grant`, expired-then-refresh-then-replay, refresh failure to\n   sign-out, invalid signature, wrong audience, skew within and beyond\n   tolerance, two concurrent `401`s producing one refresh request (asserted\n   through the MSW handler's call count), `state` mismatch, redirect loop stop, cross-tab sign-out, page reload during a session."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`core` exports `routePermissions` covering every `BasePaths` member\n   (a spec asserts the record's keys equal the enum's values and that\n   `Board`, `Scene`, `Machinery` and `Tools` map to an empty list), guards\n   use it, the `board`, `scene`, `machinery` and `catalog` e2e specs run\n   unchanged without a session, and `npx nx e2e dotln-e2e` includes: sign in\n   through the mocked provider and land on `returnTo` at `/account`;\n   `/account` as the `denied` user redirecting to `/denied`; an element hidden by `*dotlnHasPermission` for a user without the permission; a reload at `/account` keeping the session or returning to `/login` with `returnTo`; token expiry during use followed by a transparent refresh; refresh failure\n   returning to `/login`."
+          },
+          {
+            "id": "criterion:5",
+            "text": "The production build contains no mock provider code:\n   `npx nx build dotln --configuration=production` exits 0, and for the\n   development signing key's identifier (the `kid` constant) and for the\n   mock's marker string `dotln-mock-idp` (both listed in the evidence\n   README), `grep -rl \"<value>\" dist/apps/dotln/browser` prints nothing (the\n   mock's endpoint paths are not grepped, because a client library\n   legitimately contains such paths; every mock module carries the marker\n   instead); the bearer token is attached only to requests under\n   `apiBaseUrl` (a spec asserts a request to another origin carries no\n   `Authorization` header); `jose` is listed under `devDependencies` and not\n   under `dependencies` (the step 2 check prints nothing); and with `auth` at\n   `null` the four public routes' guards admit an anonymous visitor and the\n   login page renders the unavailable state (two specs assert it)."
+          },
+          {
+            "id": "criterion:6",
+            "text": "`docs/dev-reference/security/authentication.md` states the storage rule,\n   the refresh rule, the matrix, the provider swap and that the server\n   enforces authorization while client checks shape presentation only\n   (`grep -c \"server enforces authorization\" docs/dev-reference/security/authentication.md`\n   is at least 1), and `docs/ai-reference/auth-rules.md` exists."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`node scripts/target-gate.mjs WO-008 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate."
+          },
+          {
+            "id": "criterion:8",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in the served `mocked` configuration build (criterion 5 keeps the mock out of the production build, so the walkthrough runs on the configuration that carries it): open `/account` anonymously and be sent to `/login`; sign in and land back on `/account` and read, as prose, who is signed in, what they may do and when the session expires (`grep -rlE \"<dl|dotln-key-value-list\" libs/shared/auth/src apps/dotln/src/app` prints nothing); reload and keep the session or be returned to `/login` with `returnTo`; sign in as the `denied` user and land on `/denied`; drive the expiry knob and watch a request succeed through a transparent refresh; drive the refresh-failure knob and land on `/login`; open a second tab, sign out there and watch the first tab follow. The VER report carries a `## Walkthrough` section with the dated steps and names the screenshots at 360, 768 and 1440 under `docs/evidence/WO-008/walkthrough/` (`ls docs/evidence/WO-008/walkthrough | wc -l` prints at least 12), and states in the verifier's own words what each page said at each step. The criterion is met only when every step completed and that statement is present."
+          }
+        ],
+        "nonGoals": "a real identity provider or API; a backend-for-frontend;\nmulti-factor flows; user management screens; social login."
+      },
+      {
+        "workOrderId": "WO-017",
+        "path": "docs/work-orders/WO-017-digital-twin-patience-lane.md",
+        "title": "WO-017 — The digital twin's first lane: the operator's patience after a hand-back as RxJS that runs on virtual time over the recorded WO-221, judged by the results of the order it would have run and never by agreement with the operator's beats, with every variant of the model kept as code and old versions never deleted",
+        "objective": "at `/twin` the operator sees WO-221 as one time axis with its\nsixteen beats as glyphs, a recorded lane carrying the operator's eight beats\nas reference marks, and a twin lane carrying where the chosen variant of the\ntwin's patience stream fires after each hand-back when the order is replayed\non virtual time; the result cell beside the lanes states what the order would\nhave cost under the twin: the virtual close time, the twin's total waiting\nminutes and the number of times it fired before anything was ready, each next\nto the recorded order's 1,110.3 minutes and the operator's 227.0 waiting\nminutes; a variant picker lists every variant ever written with its version\nand lineage, and a flip (a duration or a multiplier changed) redraws the twin\nlane at once with a near-transparent ghost of the previous position and\nrecomputes the result cell; the operator saves a kept flip as a new variant\nby exporting the TypeScript the UI generates, because the RxJS that describes\nthe operator is the RxJS that runs; the recorded lane never moves and no\nagreement figure against it is computed or shown; WO-226 is the second order.",
+        "cost": "adds `libs/shared/twin-model` (the variants as RxJS code, the\nregistry, the results fold), the `twin` feature's page, lanes, variant picker,\nflips, result cell, facade and store, the derivation script and its fixture, the variant registry check, the `twin:read` entry in `routePermissions` and the claim on the mocked provider's default user, two documents, about 55 source files; adds no\nruntime dependency. Removes nothing. Wall-clock: about 6 to 9 hours of\nexecutor work plus the fixed cycle; unknown until run. Context bytes: WS-001\n§The app and its sub-apps and §The operator's model, design C §1.4, §2, §3,\nC1 and §5.2 to §5.3 read at the run's folder, the records and replay\nlibraries, this order, about 170 KB. Commands added in the target:\n`npm run twin:derive`, `npm run twin:check`. Tokens: unknown until run.\nSteps: 15. Re-mints: none. Refutations paid: five (receipts 008 to 011 on the earlier texts; the 2026-10-28 pass's receipt on this one).",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "`npm run twin:derive` exits 0 and `order-221-derived-v0.json` records 8\n   operator rows, seven gaps of 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and 5.9\n   minutes, a waiting total of 227.0 minutes and a span of 1,110.3 minutes,\n   with the first gap's preceding row carrying no verdict (a spec asserts\n   each)."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`npx nx test twin-model` exits 0 with marble specs asserting that the\n   baseline replay with the recorded dispatches reproduces the recorded close\n   time within one virtual second, that waiting minutes and early fires are\n   counted from each hand-back's completion row, that the patience-table variant's three result figures are computed, that the derivation script's figures equal the fold's baseline figures, and that a flip changes the twin's figures and lane and nothing on the recorded lane."
+          },
+          {
+            "id": "criterion:3",
+            "text": "`grep -rliE \"hit ?rate|hits/n|tolerance band\" libs/shared/twin-model/src libs/features/twin/src libs/features/twin-data-access/src --include='*.ts'`\n   prints nothing, and the result cell's `vm` type has no field named `hits`\n   (a spec asserts the field set: virtual close, waiting minutes, early\n   fires, each with its baseline)."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`variants.json` lists at least three variants with files that exist,\n   `npm run twin:check` exits 0, a tooling test proves a manifest with a\n   removed id fails the check, and a second tooling test proves the check\n   fails, not passes, when the base commit is absent, with a message naming\n   the commit and the fetch to run."
+          },
+          {
+            "id": "criterion:5",
+            "text": "`grep -rlE \"JSON.parse|new Function|eval\\(\" libs/shared/twin-model/src --include='*.ts' | grep -v spec` prints nothing and a spec asserts every registry entry's module exports `describe` as a function (no interpreted model), and the export spec type-checks a generated variant against `TwinVariant`."
+          },
+          {
+            "id": "criterion:6",
+            "text": "The persisted-state spec asserts every key written starts with `dotln-angular.twin` and no other storage, cookie or network write occurs, and a second spec seeds that key with a value that does not parse and with one naming an unknown variant and asserts the facade yields the first registry entry with no flips;\n   `grep -rlE \"from 'node:|from \\\"node:|require\\(\" libs/shared/twin-model/src libs/features/twin/src libs/features/twin-data-access/src --include='*.ts' | grep -v spec`\n   prints nothing."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes: a sign-in through WO-008's\n   mocked provider, then the two lanes and the result cell with the recorded\n   baseline on `/twin` (`routePermissions` maps `BasePaths.Twin` to `['twin:read']`, WO-008's coverage spec passes, and the `denied` user reaching `/twin` lands on `/denied`); three variants in the picker;\n   a flip redrawing the twin lane and leaving the recorded marks; the export\n   dialog showing TypeScript; the chosen variant present after a reload; the\n   keyboard path over every flip; axe at the board spec's threshold; no\n   horizontal overflow at 360, 768 and 1440."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`docs/dev-reference/architecture/twin.md` records the scheduler chosen\n   (the replay library's), the frame cap observed and that readiness is the\n   hand-back's completion row, `docs/ai-reference/twin-rules.md` states that\n   a variant is never deleted and that the twin is judged by results only\n   (`grep -c \"judged by results\" docs/ai-reference/twin-rules.md` and `grep -c \"never by agreement\" docs/ai-reference/twin-rules.md` are each at least 1),\n   `package.json`'s `dependencies` keys equal the base's, and the production\n   build's budget output names no twin chunk over budget (each variant a\n   lazy chunk)."
+          },
+          {
+            "id": "criterion:9",
+            "text": "`node scripts/target-gate.mjs WO-017 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate."
+          },
+          {
+            "id": "criterion:10",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session in the served `mocked` configuration build (WO-008 keeps the mock out of the production build): sign in through the mocked provider; open `/twin` on WO-221 and read the two lanes and the result cell against the recorded baseline; pick each of the three variants; flip one parameter and watch the twin lane and the figures change while the recorded lane stays; export the kept flip and read the TypeScript; reload and find the chosen variant; switch to WO-226. The VER report carries a `## Walkthrough` section with the dated steps and names the screenshots at 360, 768 and 1440 under `docs/evidence/WO-017/walkthrough/` (`ls docs/evidence/WO-017/walkthrough | wc -l` prints at least 12), and states in the verifier's own words what the three figures were before and after the flip. The criterion is met only when every step completed and that statement is present."
+          }
+        ],
+        "nonGoals": "a fidelity or agreement figure against the operator's beats;\nthe dozen-order grid, the blind replay and the ring; a live route, journal\ndigests or presence; a wait policy shipped to the platform (a graduated idea\ngoes to core as a GitHub issue); any write outside browser storage."
+      },
+      {
+        "workOrderId": "WO-018",
+        "path": "docs/work-orders/WO-018-art-of-war-map-and-toys.md",
+        "title": "WO-018 — The first public mining into the app's own store: The Art of War mapped from its public-domain text into catalog rows and typed into tools through the catalog pipeline, the run's nineteen toys carried in full and six new toys designed for the mined sources that have none (Meadows, Pirsig, Poincaré, Gladwell, Taleb and the 5S set), and the toy shelf where the operator reads what each toy would show and picks the next one to build",
+        "objective": "(the operator's session, WS-001 rule 24) the operator opens Tools, Toys and\nsees twenty-five toys on a shelf, grouped by the five purposes the run gave\nthem (agents in concert, the toolbox and the toy scene, the operator-model\ntestbed, the planning and riff surface, flow and the constraint) and the\nsix new ones under their sources; each toy shows its title, its source\nworks, its one-line question and its status (designed, built, graduated,\ndid not stick). They open The Twenty and read, in a measure set for reading,\nwhat the toy is (its purpose), what they would see on screen, the question\nit answers, the evidence it would produce, what it would graduate into, the\nrecords it replays, and the tools it needs as links into the catalog, where\neach tool reads; its status says built and links to the scene. They open\nThe patience lane and read the same. They open a new toy, Meadows' leverage\npoints as a scene, and read its question, its scene type, its metric and\nthe tools designed for it, each typed from the work and linked. They filter\nto one source and to designed toys, and decide which to build next; the\ncard says how to say so (a GitHub issue on the platform's repository, the\ngraduation route). The catalog now carries The Art of War: they open it on\nthe catalog's shelf, read a chapter, read a maxim's row with the maxim\nitself where the maxim is the concept, and see the tactics typed for the\ncommander scene to come. What the operator learns is what every toy in the\nrun would show them; what they decide is the next one to build.",
+        "cost": "adds `map-artofwar.json` and `tools-artofwar.json` to the catalog\ndata, `toy-v0.schema.json` and `toys.ts` to the models, `toys.json` (the\nrun's nineteen toys in full and the six new ones), the toy-source tool\nfiles, the toy shelf and the toy page under Tools, the map and toy checks,\ntwo document sections, about 32 source files plus about 300 data rows; adds\nno runtime dependency. Removes nothing. Wall-clock: about 4 to 6 hours of\nexecutor work, of which two fan-outs run in parallel, plus the fixed cycle;\nunknown until run. Context bytes: WS-001 §The app and its sub-apps, the\ncatalog rules as WO-019 leaves them, the maps README, design B §3 and\n`toys.jsonl` read at the run's folder, this order, about 190 KB for the\nexecutor; the mappers read one public-domain text. Commands added in the\ntarget: `npm run toys:check`; `npm run catalog:check` and `catalog:join`\nalready cover the new files. Tokens: unknown until run; recorded per worker.\nSteps: 14. Re-mints: none. Refutations paid: three (the 2026-10-24 pass's\nreceipt on the first text, the 2026-10-26 pass's on the rewrite, the\n2026-10-28 pass's on this one).",
+        "criteria": [
+          {
+            "id": "criterion:1",
+            "text": "**Use (WS-001 rule 24).** The verifier performs the Objective's session\n   in the served production build: open Tools, Toys; open The Twenty and\n   follow a tool into the catalog and its status into the scene; open The\n   patience lane; open the Meadows toy; filter to one source and to\n   designed toys; open The Art of War on the catalog's shelf and read a\n   maxim's row. The VER report carries a `## Walkthrough` section with the\n   dated steps and names the screenshots at 360, 768 and 1440 under\n   `docs/evidence/WO-018/walkthrough/` (`ls docs/evidence/WO-018/walkthrough | wc -l`\n   prints at least 12), and states in the verifier's own words what each of\n   the three opened toys would show. The criterion is met only when every\n   step completed and that statement is present."
+          },
+          {
+            "id": "criterion:2",
+            "text": "`node tools/scripts/catalog/check-map.mjs` exits 0 over\n   `libs/shared/catalog/src/maps/map-artofwar.json`: every row has `id`,\n   `work`, `chapter`, `section`, `concept`, `type`, `definition`, `related`,\n   `hooks` and `verified`, thirteen chapters are present, at least one row\n   per chapter carries a `maxim`, `npm run check:fixtures` runs the map\n   check (its output names `check-map`), and the evidence README records the\n   public text's source and SHA-256 and the critic's sampled row count."
+          },
+          {
+            "id": "criterion:3",
+            "text": "`npm run catalog:check` exits 0 with `tools-artofwar.json` present and\n   every one of its rows carrying a definition, and `npm run catalog:report`\n   lists `artofwar` with a scene type and at least three tools whose\n   transform kinds are members of `TransformKind`."
+          },
+          {
+            "id": "criterion:4",
+            "text": "`npm run toys:check` exits 0 over `toys.json` with 25 records: 19 with\n   `origin: 'run-2026-10-22'` each carrying `purpose`, `question`,\n   `youWouldSee`, `evidence`, `sources` and `tools` (a spec asserts no\n   empty field among them), and 6 with `origin: 'this-app'` (one each for\n   `meadows`, `pirsig`, `poincare`, `gladwell`, `taleb`, `fives`) carrying a\n   scene type, a question, a metric and at least one tool id that exists in\n   the catalog; every `public-work` tool carries a `definition` and a\n   `source` string naming its work and chapter or concept; a tooling test\n   proves a toy naming an unknown tool id fails the check."
+          },
+          {
+            "id": "criterion:5",
+            "text": "`docs/evidence/WO-018/README.md` lists at most twelve workers across the\n   two fan-outs with their labels and one-line statements, each saying no\n   quarantine file was read, with the launchpad's read observation beside\n   each (the harness journal's row count for the quarantine path, or\n   `unobserved`), records each worker's token total and the session's own\n   beside WO-014's recorded order total with the decision that stopped the\n   fan-out if their sum passed it, and records the subagent count from\n   `node scripts/harness.mjs usage <session>` at handoff."
+          },
+          {
+            "id": "criterion:6",
+            "text": "`npx nx e2e dotln-e2e` exits 0 and includes the step 10 cases, axe at the\n   board spec's threshold and no horizontal overflow at 360, 768 and 1440;\n   `grep -rlE \"<dl|dotln-key-value-list\" libs/features/tools/src` prints\n   nothing; `npx nx build dotln --configuration=production` exits 0 within\n   the declared budgets with the shelf and the toy page in the lazy Tools\n   chunks, and the evidence README records each catalog and toys chunk's\n   size beside WO-019's figures."
+          },
+          {
+            "id": "criterion:7",
+            "text": "`docs/dev-reference/architecture/catalog.md` carries the headings\n   `Mining a new work` and `Toys`, and `docs/ai-reference/catalog-rules.md`\n   states that a map row may carry the public text's maxim and that a toy\n   enters with its full design (`grep -c \"full design\"\n   docs/ai-reference/catalog-rules.md` is at least 1); `package.json`'s\n   `dependencies` keys equal the base's."
+          },
+          {
+            "id": "criterion:8",
+            "text": "`node scripts/target-gate.mjs WO-018 --review` records a passing row for\n   every declared command with no tracked-byte mutation, and\n   `npm run test:docs` passes in the launchpad order worktree; the Preflight\n   line ran before the first full gate."
+          }
+        ],
+        "nonGoals": "building any of the six toys; the commander scene; mining\nGladwell book by book or any further work; a live agent; the graduation\nroute's issue export (candidate C4)."
+      }
+    ],
+    "deferrals": [],
+    "costTable": {
+      "schemaVersion": 1,
+      "subjectSourceHash": "sha256:28ec578dffae6cf70df5fd6545c81c8dd89d5d4485216088de868e50e3f3e1d2",
+      "acceptances": [],
+      "observedAt": "2026-11-01T09:13:44.592Z",
+      "subjectRevision": "07e972d356a4bdbfa5a04db05c2df13739e35a3b",
+      "rows": [
+        {
+          "workOrder": "WO-022",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-023",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-024",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-016",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-008",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-017",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        },
+        {
+          "workOrder": "WO-018",
+          "observedAt": "2026-11-01T09:13:44.592Z",
+          "metrics": null
+        }
+      ],
+      "traps": [
+        {
+          "id": "rule-beating",
+          "signal": "Read-obligation bytes against diff bytes; Stop refusals and re-announcements",
+          "metric": "readAmplification",
+          "series": [
+            {
+              "workOrder": "WO-015",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-025",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-026",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-020",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-021",
+              "value": null,
+              "delta": null
+            }
+          ],
+          "indicators": [
+            {
+              "metric": "readAmplification",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "stopRefusals",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 0,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "reAnnouncements",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            }
+          ],
+          "worsening": [],
+          "reopenCandidate": false
+        },
+        {
+          "id": "seeking-the-wrong-goal",
+          "signal": "Machinery share of elapsed time; phase durations against code-change size",
+          "metric": "machineryShare",
+          "series": [
+            {
+              "workOrder": "WO-015",
+              "value": 0.09981631142129248,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-025",
+              "value": 0.2068221284327706,
+              "delta": 0.10700581701147811
+            },
+            {
+              "workOrder": "WO-026",
+              "value": 0.37145755686127246,
+              "delta": 0.16463542842850187
+            },
+            {
+              "workOrder": "WO-020",
+              "value": 0.16000223685372092,
+              "delta": -0.21145532000755154
+            },
+            {
+              "workOrder": "WO-021",
+              "value": 0.13071943437084685,
+              "delta": -0.02928280248287407
+            }
+          ],
+          "indicators": [
+            {
+              "metric": "machineryShare",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": 0.09981631142129248,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 0.2068221284327706,
+                  "delta": 0.10700581701147811
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": 0.37145755686127246,
+                  "delta": 0.16463542842850187
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": 0.16000223685372092,
+                  "delta": -0.21145532000755154
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": 0.13071943437084685,
+                  "delta": -0.02928280248287407
+                }
+              ]
+            },
+            {
+              "metric": "elapsedPerCodeByte",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            }
+          ],
+          "worsening": [],
+          "reopenCandidate": false
+        },
+        {
+          "id": "shifting-the-burden-to-the-intervenor",
+          "signal": "Operator corrections and directions, manual closeout steps and emergency planning passes",
+          "corrections": [
+            {
+              "workOrder": "WO-015",
+              "total": null,
+              "byPhase": null,
+              "byUnit": null,
+              "byPhaseAndUnit": null,
+              "source": "unavailable"
+            },
+            {
+              "workOrder": "WO-025",
+              "total": 3,
+              "byPhase": {
+                "implementation": 2,
+                "repair": 1
+              },
+              "byUnit": {
+                "unnamed": 3
+              },
+              "byPhaseAndUnit": {
+                "implementation": {
+                  "unnamed": 2
+                },
+                "repair": {
+                  "unnamed": 1
+                }
+              },
+              "source": "session-journal"
+            },
+            {
+              "workOrder": "WO-026",
+              "total": null,
+              "byPhase": null,
+              "byUnit": null,
+              "byPhaseAndUnit": null,
+              "source": "unavailable"
+            },
+            {
+              "workOrder": "WO-020",
+              "total": null,
+              "byPhase": null,
+              "byUnit": null,
+              "byPhaseAndUnit": null,
+              "source": "unavailable"
+            },
+            {
+              "workOrder": "WO-021",
+              "total": null,
+              "byPhase": null,
+              "byUnit": null,
+              "byPhaseAndUnit": null,
+              "source": "unavailable"
+            }
+          ],
+          "directions": [
+            {
+              "workOrder": "WO-015",
+              "total": 4,
+              "byKind": {
+                "scopeExpand": 0,
+                "operatorOverride": 0,
+                "analysis": 0,
+                "conversationOnly": 0,
+                "qualityPass": 0,
+                "operatorLabel": 0,
+                "resumeCorrection": 0,
+                "resumeDirection": 3,
+                "resumeScopeExpansion": 0,
+                "resumeOverride": 0,
+                "resumeTakeover": 0,
+                "resumeAnswer": 0,
+                "OperatorOverrideRecorded": 1,
+                "RecordCorrected": 0,
+                "CriterionWaived": 0
+              },
+              "source": "committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events"
+            },
+            {
+              "workOrder": "WO-025",
+              "total": 6,
+              "byKind": {
+                "scopeExpand": 0,
+                "operatorOverride": 0,
+                "analysis": 0,
+                "conversationOnly": 0,
+                "qualityPass": 0,
+                "operatorLabel": 0,
+                "resumeCorrection": 0,
+                "resumeDirection": 6,
+                "resumeScopeExpansion": 0,
+                "resumeOverride": 0,
+                "resumeTakeover": 0,
+                "resumeAnswer": 0,
+                "OperatorOverrideRecorded": 0,
+                "RecordCorrected": 0,
+                "CriterionWaived": 0
+              },
+              "source": "committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events"
+            },
+            {
+              "workOrder": "WO-026",
+              "total": 2,
+              "byKind": {
+                "scopeExpand": 0,
+                "operatorOverride": 0,
+                "analysis": 0,
+                "conversationOnly": 0,
+                "qualityPass": 0,
+                "operatorLabel": 0,
+                "resumeCorrection": 0,
+                "resumeDirection": 2,
+                "resumeScopeExpansion": 0,
+                "resumeOverride": 0,
+                "resumeTakeover": 0,
+                "resumeAnswer": 0,
+                "OperatorOverrideRecorded": 0,
+                "RecordCorrected": 0,
+                "CriterionWaived": 0
+              },
+              "source": "committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events"
+            },
+            {
+              "workOrder": "WO-020",
+              "total": 2,
+              "byKind": {
+                "scopeExpand": 0,
+                "operatorOverride": 0,
+                "analysis": 0,
+                "conversationOnly": 0,
+                "qualityPass": 0,
+                "operatorLabel": 0,
+                "resumeCorrection": 0,
+                "resumeDirection": 2,
+                "resumeScopeExpansion": 0,
+                "resumeOverride": 0,
+                "resumeTakeover": 0,
+                "resumeAnswer": 0,
+                "OperatorOverrideRecorded": 0,
+                "RecordCorrected": 0,
+                "CriterionWaived": 0
+              },
+              "source": "committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events"
+            },
+            {
+              "workOrder": "WO-021",
+              "total": 4,
+              "byKind": {
+                "scopeExpand": 0,
+                "operatorOverride": 0,
+                "analysis": 0,
+                "conversationOnly": 0,
+                "qualityPass": 0,
+                "operatorLabel": 0,
+                "resumeCorrection": 0,
+                "resumeDirection": 3,
+                "resumeScopeExpansion": 0,
+                "resumeOverride": 0,
+                "resumeTakeover": 0,
+                "resumeAnswer": 0,
+                "OperatorOverrideRecorded": 0,
+                "RecordCorrected": 1,
+                "CriterionWaived": 0
+              },
+              "source": "committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events"
+            }
+          ],
+          "metric": "operatorCorrections",
+          "series": [
+            {
+              "workOrder": "WO-015",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-025",
+              "value": 3,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-026",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-020",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-021",
+              "value": null,
+              "delta": null
+            }
+          ],
+          "indicators": [
+            {
+              "metric": "operatorCorrections",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 3,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "operatorDirections",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": 4,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 6,
+                  "delta": 2
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": 2,
+                  "delta": -4
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": 2,
+                  "delta": 0
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": 4,
+                  "delta": 2
+                }
+              ]
+            },
+            {
+              "metric": "manualCloseoutSteps",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "emergencyPasses",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            }
+          ],
+          "worsening": [],
+          "reopenCandidate": false,
+          "planningCaptures": [
+            {
+              "pass": "planning-f26bb956de3abb86",
+              "date": "2026-11-01",
+              "captures": 1
+            },
+            {
+              "pass": "planning-534673481277a9fc",
+              "date": "2026-11-01",
+              "captures": 2
+            },
+            {
+              "pass": "planning-18e7afc23edf14c3",
+              "date": "2026-10-30",
+              "captures": 2
+            },
+            {
+              "pass": "planning-363b8def6172c500",
+              "date": "2026-10-30",
+              "captures": 2
+            },
+            {
+              "pass": "planning-79fa2937a6b5812e",
+              "date": "2026-10-28",
+              "captures": 1
+            },
+            {
+              "pass": "planning-7f5e44638facd299",
+              "date": "2026-10-28",
+              "captures": 1
+            },
+            {
+              "pass": "planning-99f4ffe8f2227691",
+              "date": "2026-10-26",
+              "captures": 1
+            },
+            {
+              "pass": "planning-8cf1b240128e3b80",
+              "date": "2026-10-25",
+              "captures": 1
+            },
+            {
+              "pass": "planning-d693ddbce103291d",
+              "date": "2026-10-24",
+              "captures": 1
+            },
+            {
+              "pass": "planning-45059c186a40389b",
+              "date": "2026-10-24",
+              "captures": 1
+            },
+            {
+              "pass": "planning-668813faab47b0ee",
+              "date": "2026-10-23",
+              "captures": 1
+            },
+            {
+              "pass": "planning-24597b606f20e33d",
+              "date": "2026-10-21",
+              "captures": 1
+            },
+            {
+              "pass": "planning-fc1c0ec6bba3073a",
+              "date": "2026-10-21",
+              "captures": 1
+            },
+            {
+              "pass": "planning-56357ae66bd3a7f6",
+              "date": "2026-10-20",
+              "captures": 1
+            },
+            {
+              "pass": "planning-e0dd1f8a7a5b84af",
+              "date": "2026-10-19",
+              "captures": 1
+            },
+            {
+              "pass": "planning-14fefa7dc1ee9d3b",
+              "date": "2026-10-18",
+              "captures": 1
+            },
+            {
+              "pass": "planning-afc1740dd0afc954",
+              "date": "2026-10-18",
+              "captures": 1
+            }
+          ]
+        },
+        {
+          "id": "drift-to-low-performance",
+          "signal": "Subject length, gate step count and cold-start byte series",
+          "metric": "coldStartBytes",
+          "series": [
+            {
+              "workOrder": "WO-015",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-025",
+              "value": 36427,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-026",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-020",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-021",
+              "value": null,
+              "delta": null
+            }
+          ],
+          "indicators": [
+            {
+              "metric": "coldStartBytes",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 36427,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "subjectCharacters",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": 72,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": 74,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": 75,
+                  "delta": 1
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": 65,
+                  "delta": -10
+                }
+              ]
+            },
+            {
+              "metric": "gateStepCount",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 7,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": 7,
+                  "delta": null
+                }
+              ]
+            }
+          ],
+          "worsening": [],
+          "reopenCandidate": false,
+          "coldStart": {
+            "comparisonEdition": "v0.3.4",
+            "profiles": [
+              {
+                "role": "executor",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-executor/SKILL.md",
+                "skillBytes": 30671,
+                "bytes": 37950,
+                "previousBytes": 36427,
+                "previousCause": null,
+                "delta": 1523,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.executor",
+                "verdict": "unset"
+              },
+              {
+                "role": "verifier",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-verifier/SKILL.md",
+                "skillBytes": 25504,
+                "bytes": 32783,
+                "previousBytes": 31423,
+                "previousCause": null,
+                "delta": 1360,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.verifier",
+                "verdict": "unset"
+              },
+              {
+                "role": "reviewer",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-reviewer/SKILL.md",
+                "skillBytes": 28274,
+                "bytes": 35553,
+                "previousBytes": 33871,
+                "previousCause": null,
+                "delta": 1682,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.reviewer",
+                "verdict": "unset"
+              },
+              {
+                "role": "release-close",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-release-close/SKILL.md",
+                "skillBytes": 15776,
+                "bytes": 23055,
+                "previousBytes": 22685,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.release-close",
+                "verdict": "unset"
+              },
+              {
+                "role": "planner",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-planner/SKILL.md",
+                "skillBytes": 16584,
+                "bytes": 23863,
+                "previousBytes": 23493,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.planner",
+                "verdict": "unset"
+              },
+              {
+                "role": "refuter",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-refuter/SKILL.md",
+                "skillBytes": 15398,
+                "bytes": 22677,
+                "previousBytes": 22307,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.refuter",
+                "verdict": "unset"
+              },
+              {
+                "role": "router",
+                "skillsRoot": ".claude/skills",
+                "path": ".claude/skills/dotln-router/SKILL.md",
+                "skillBytes": 7784,
+                "bytes": 15063,
+                "previousBytes": null,
+                "previousCause": "edition-snapshot-unavailable",
+                "delta": null,
+                "ceiling": 16384,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.router",
+                "verdict": "within"
+              },
+              {
+                "role": "executor",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-executor/SKILL.md",
+                "skillBytes": 30671,
+                "bytes": 37950,
+                "previousBytes": 36427,
+                "previousCause": null,
+                "delta": 1523,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.executor",
+                "verdict": "unset"
+              },
+              {
+                "role": "verifier",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-verifier/SKILL.md",
+                "skillBytes": 25504,
+                "bytes": 32783,
+                "previousBytes": 31423,
+                "previousCause": null,
+                "delta": 1360,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.verifier",
+                "verdict": "unset"
+              },
+              {
+                "role": "reviewer",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-reviewer/SKILL.md",
+                "skillBytes": 28274,
+                "bytes": 35553,
+                "previousBytes": 33871,
+                "previousCause": null,
+                "delta": 1682,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.reviewer",
+                "verdict": "unset"
+              },
+              {
+                "role": "release-close",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-release-close/SKILL.md",
+                "skillBytes": 15776,
+                "bytes": 23055,
+                "previousBytes": 22685,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.release-close",
+                "verdict": "unset"
+              },
+              {
+                "role": "planner",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-planner/SKILL.md",
+                "skillBytes": 16584,
+                "bytes": 23863,
+                "previousBytes": 23493,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.planner",
+                "verdict": "unset"
+              },
+              {
+                "role": "refuter",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-refuter/SKILL.md",
+                "skillBytes": 15398,
+                "bytes": 22677,
+                "previousBytes": 22307,
+                "previousCause": null,
+                "delta": 370,
+                "ceiling": null,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.refuter",
+                "verdict": "unset"
+              },
+              {
+                "role": "router",
+                "skillsRoot": ".agents/skills",
+                "path": ".agents/skills/dotln-router/SKILL.md",
+                "skillBytes": 7784,
+                "bytes": 15063,
+                "previousBytes": null,
+                "previousCause": "edition-snapshot-unavailable",
+                "delta": null,
+                "ceiling": 16384,
+                "lastAcceptance": {
+                  "date": null,
+                  "ceiling": null,
+                  "revision": null,
+                  "source": null,
+                  "bytes": null,
+                  "delta": null,
+                  "cause": "no-acceptance"
+                },
+                "metric": "coldStartBytes.router",
+                "verdict": "within"
+              }
+            ]
+          }
+        },
+        {
+          "id": "policy-resistance",
+          "signal": "Guard refusals, bypass tools and ad hoc scripts",
+          "metric": "guardRefusals",
+          "series": [
+            {
+              "workOrder": "WO-015",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-025",
+              "value": 0,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-026",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-020",
+              "value": null,
+              "delta": null
+            },
+            {
+              "workOrder": "WO-021",
+              "value": null,
+              "delta": null
+            }
+          ],
+          "indicators": [
+            {
+              "metric": "guardRefusals",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": 0,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "bypassTools",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            },
+            {
+              "metric": "adHocScripts",
+              "series": [
+                {
+                  "workOrder": "WO-015",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-025",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-026",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-020",
+                  "value": null,
+                  "delta": null
+                },
+                {
+                  "workOrder": "WO-021",
+                  "value": null,
+                  "delta": null
+                }
+              ]
+            }
+          ],
+          "worsening": [],
+          "reopenCandidate": false
+        }
+      ],
+      "firstVerifications": {
+        "counted": 8,
+        "failed": 3,
+        "orders": [
+          {
+            "workOrder": "WO-013",
+            "firstVerification": "pass"
+          },
+          {
+            "workOrder": "WO-014",
+            "firstVerification": "fail"
+          },
+          {
+            "workOrder": "WO-019",
+            "firstVerification": "pass"
+          },
+          {
+            "workOrder": "WO-015",
+            "firstVerification": "pass"
+          },
+          {
+            "workOrder": "WO-025",
+            "firstVerification": "fail"
+          },
+          {
+            "workOrder": "WO-026",
+            "firstVerification": "pass"
+          },
+          {
+            "workOrder": "WO-020",
+            "firstVerification": "pass"
+          },
+          {
+            "workOrder": "WO-021",
+            "firstVerification": "fail"
+          }
+        ],
+        "source": "canonical control fold: the first completed verification of each of the last eight orders by close time"
+      }
+    },
+    "goalReview": {
+      "platformStandard": "the point is to create a platform, not to prove every\nconstructible case before filing, and the refutation pass must be made worth\nits cost before a later pass pays it again.",
+      "goalStandard": "## Goal-aligned decisions\n\nThe [sequence](../planning/sequence.md) and selected work order determine\ncurrent placement and authority. The mission is the outcome; the critical path\nis the dependency route to the next outcome. Useful prerequisite or\nrisk-reduction work must name the blocked outcome it enables. Process activity,\nreceipt volume and agent utilization are not progress by themselves. Goal\nalignment grants no authority to reorder or expand work. In all phases, the Goal\nAlignment and Process Cost procedure lives in the generated role skills\n[WO-043, 2026-09-11].\n\nAccuracy takes priority over agreement in every phase. The already-equipped\nCorrectness over Sycophancy rule applies to operator suggestions and the agent's\nown premises equally: challenge unsupported claims, distinguish observation\nfrom inference, state material uncertainty, and correct mistakes when evidence\nchanges. A confident request or an earlier decision is not proof of correctness.\nRecord material disagreement and its evidence in the same decision or phase\nreceipt; do not manufacture dissent or seek approval for ordinary judgment.\n\n| Lens                                  | Decision question                                                                                         |\n| ------------------------------------- | --------------------------------------------------------------------------------------------------------- |\n| Policy resistance / fixes that fail   | Will local goals or guards undo one another?                                                              |\n| Tragedy of the commons                | Does the solution consume shared compute, context or operator attention without accounting for the total? |\n| Drift to low performance              | Does it improve an explicit outcome standard rather than normalize a worse baseline?                      |\n| Escalation                            | Will additional process provoke more process or workarounds?                                              |\n| Success to the successful             | Are credible alternatives excluded merely because the current mechanism already has investment?           |\n| Shifting the burden to the intervenor | Does the solution remove recurring operator rescue or depend on it?                                       |\n| Rule beating                          | Can the evidence pass without the intended behavior occurring?                                            |\n| Seeking the wrong goal                | Does it advance operator flow and the selected product outcome rather than a proxy?                       |\n\nNaive Interventionism adds the existing system's useful functions, affected\nconsumers, second-order harm, reversibility and smallest useful probe. NoOp\nrecords what happens if nothing changes, why action or inaction wins, and the\nevidence that would reopen the choice. Scale detail to consequence: explain\napplicable risks and briefly group immaterial lenses with a reason; do not\nmanufacture eight repetitive paragraphs for routine edits.\n\nRecord evidence of benefit and the risks of intervening in existing behavior;\nverification and handoff compare observed outcomes with the promised benefit.\nRequired legal or release actions retain their existing authority; NoOp is a\nconsidered alternative, not an ambient veto or permission to abandon authorized\nwork.\n\n\n\nMaterial choices and rationales go in existing phase evidence: per-order\n`docs/evidence/WO-NNN/decisions.md` and cited product sections for work-order\ndecisions; planning dispositions/candidate records for planning choices; the\nindependent report or refutation receipt for its judgment; retained closeout\nevidence for release decisions. The decisions index exposes per-order records.\nReuse and link a current rationale until its assumptions change; do not create\na parallel decision log or an extra approval ritual.\n\n\nThis launchpad is the operator's own DotLn instance. Its purpose is to plan and\nrun bounded, evidence-gated work orders across the operator's repositories, so\nthat every change arrives as a pull request the operator reads before it merges,\nwhile the kit itself stays upstream and reaches this fork only through starter\nupdates. The first workstream is DotLn-Angular, an Nx and Angular monorepo that\nserves two outcomes at once: the operator's reference Angular workspace, which a\ncolleague should recognize as the way the operator builds Angular, and the\noperator's sandbox app, one app with sub-apps behind a menu: a scene for\nauthoring game AI from a toolbox mined from the works the operator reads, a\nview of DotLn's machinery where a change to an agent's mechanisms shows what\nchanges in an example use case, the operator's own digital twin, and side\nutilities. Every new idea lives there first as a toy the operator plays with\nbefore promoting the ones that work, for the five UIFA roles, people and\nsoftware actors alike. The app is not wired to DotLn core: its data comes from\npublic mining into its own store, served to the UI through its own API, and it\ninforms the platform through GitHub issues, never by writing a control record,\nso that the app improves the platform, the platform the starter, the starter\nthis fork, and the fork the app in turn. The critical path runs from registering\nthat repository in this launchpad, through one witnessed target order that\nscaffolds the workspace, to a foundation where a feature is added by convention:\nshared libraries, the component taxonomy, events and stores, the sub-app shell,\nand a legitimate client-side authentication and permission model. Later\nworkstreams join the same way: one registration and one planning pass each,\nwith the fork's own machinery changes cut as self orders beside them.\n",
+      "criticalPath": "unavailable: docs/planning/critical-path-2026-09-08.md; this instance has not declared a critical path",
+      "evidenceHash": "sha256:4b29d9ef4b840d6b58579bd5c3bf6eee22a2aeb9b497fe8ac60d54a8b0a191af",
+      "observations": [
+        {
+          "id": "docs/planning/cost-table.json#trap:rule-beating",
+          "text": "{\"id\":\"rule-beating\",\"signal\":\"Read-obligation bytes against diff bytes; Stop refusals and re-announcements\",\"metric\":\"readAmplification\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}],\"indicators\":[{\"metric\":\"readAmplification\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"stopRefusals\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":0,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"reAnnouncements\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]}],\"worsening\":[],\"reopenCandidate\":false}"
+        },
+        {
+          "id": "docs/planning/cost-table.json#trap:seeking-the-wrong-goal",
+          "text": "{\"id\":\"seeking-the-wrong-goal\",\"signal\":\"Machinery share of elapsed time; phase durations against code-change size\",\"metric\":\"machineryShare\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":0.09981631142129248,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":0.2068221284327706,\"delta\":0.10700581701147811},{\"workOrder\":\"WO-026\",\"value\":0.37145755686127246,\"delta\":0.16463542842850187},{\"workOrder\":\"WO-020\",\"value\":0.16000223685372092,\"delta\":-0.21145532000755154},{\"workOrder\":\"WO-021\",\"value\":0.13071943437084685,\"delta\":-0.02928280248287407}],\"indicators\":[{\"metric\":\"machineryShare\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":0.09981631142129248,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":0.2068221284327706,\"delta\":0.10700581701147811},{\"workOrder\":\"WO-026\",\"value\":0.37145755686127246,\"delta\":0.16463542842850187},{\"workOrder\":\"WO-020\",\"value\":0.16000223685372092,\"delta\":-0.21145532000755154},{\"workOrder\":\"WO-021\",\"value\":0.13071943437084685,\"delta\":-0.02928280248287407}]},{\"metric\":\"elapsedPerCodeByte\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]}],\"worsening\":[],\"reopenCandidate\":false}"
+        },
+        {
+          "id": "docs/planning/cost-table.json#trap:shifting-the-burden-to-the-intervenor",
+          "text": "{\"id\":\"shifting-the-burden-to-the-intervenor\",\"signal\":\"Operator corrections and directions, manual closeout steps and emergency planning passes\",\"corrections\":[{\"workOrder\":\"WO-015\",\"total\":null,\"byPhase\":null,\"byUnit\":null,\"byPhaseAndUnit\":null,\"source\":\"unavailable\"},{\"workOrder\":\"WO-025\",\"total\":3,\"byPhase\":{\"implementation\":2,\"repair\":1},\"byUnit\":{\"unnamed\":3},\"byPhaseAndUnit\":{\"implementation\":{\"unnamed\":2},\"repair\":{\"unnamed\":1}},\"source\":\"session-journal\"},{\"workOrder\":\"WO-026\",\"total\":null,\"byPhase\":null,\"byUnit\":null,\"byPhaseAndUnit\":null,\"source\":\"unavailable\"},{\"workOrder\":\"WO-020\",\"total\":null,\"byPhase\":null,\"byUnit\":null,\"byPhaseAndUnit\":null,\"source\":\"unavailable\"},{\"workOrder\":\"WO-021\",\"total\":null,\"byPhase\":null,\"byUnit\":null,\"byPhaseAndUnit\":null,\"source\":\"unavailable\"}],\"directions\":[{\"workOrder\":\"WO-015\",\"total\":4,\"byKind\":{\"scopeExpand\":0,\"operatorOverride\":0,\"analysis\":0,\"conversationOnly\":0,\"qualityPass\":0,\"operatorLabel\":0,\"resumeCorrection\":0,\"resumeDirection\":3,\"resumeScopeExpansion\":0,\"resumeOverride\":0,\"resumeTakeover\":0,\"resumeAnswer\":0,\"OperatorOverrideRecorded\":1,\"RecordCorrected\":0,\"CriterionWaived\":0},\"source\":\"committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events\"},{\"workOrder\":\"WO-025\",\"total\":6,\"byKind\":{\"scopeExpand\":0,\"operatorOverride\":0,\"analysis\":0,\"conversationOnly\":0,\"qualityPass\":0,\"operatorLabel\":0,\"resumeCorrection\":0,\"resumeDirection\":6,\"resumeScopeExpansion\":0,\"resumeOverride\":0,\"resumeTakeover\":0,\"resumeAnswer\":0,\"OperatorOverrideRecorded\":0,\"RecordCorrected\":0,\"CriterionWaived\":0},\"source\":\"committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events\"},{\"workOrder\":\"WO-026\",\"total\":2,\"byKind\":{\"scopeExpand\":0,\"operatorOverride\":0,\"analysis\":0,\"conversationOnly\":0,\"qualityPass\":0,\"operatorLabel\":0,\"resumeCorrection\":0,\"resumeDirection\":2,\"resumeScopeExpansion\":0,\"resumeOverride\":0,\"resumeTakeover\":0,\"resumeAnswer\":0,\"OperatorOverrideRecorded\":0,\"RecordCorrected\":0,\"CriterionWaived\":0},\"source\":\"committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events\"},{\"workOrder\":\"WO-020\",\"total\":2,\"byKind\":{\"scopeExpand\":0,\"operatorOverride\":0,\"analysis\":0,\"conversationOnly\":0,\"qualityPass\":0,\"operatorLabel\":0,\"resumeCorrection\":0,\"resumeDirection\":2,\"resumeScopeExpansion\":0,\"resumeOverride\":0,\"resumeTakeover\":0,\"resumeAnswer\":0,\"OperatorOverrideRecorded\":0,\"RecordCorrected\":0,\"CriterionWaived\":0},\"source\":\"committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events\"},{\"workOrder\":\"WO-021\",\"total\":4,\"byKind\":{\"scopeExpand\":0,\"operatorOverride\":0,\"analysis\":0,\"conversationOnly\":0,\"qualityPass\":0,\"operatorLabel\":0,\"resumeCorrection\":0,\"resumeDirection\":3,\"resumeScopeExpansion\":0,\"resumeOverride\":0,\"resumeTakeover\":0,\"resumeAnswer\":0,\"OperatorOverrideRecorded\":0,\"RecordCorrected\":1,\"CriterionWaived\":0},\"source\":\"committed decision dispatches (control prefixes, legacy operator labels and the operator step a lifecycle dispatch names) and control events\"}],\"metric\":\"operatorCorrections\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":3,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}],\"indicators\":[{\"metric\":\"operatorCorrections\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":3,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"operatorDirections\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":4,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":6,\"delta\":2},{\"workOrder\":\"WO-026\",\"value\":2,\"delta\":-4},{\"workOrder\":\"WO-020\",\"value\":2,\"delta\":0},{\"workOrder\":\"WO-021\",\"value\":4,\"delta\":2}]},{\"metric\":\"manualCloseoutSteps\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"emergencyPasses\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]}],\"worsening\":[],\"reopenCandidate\":false,\"planningCaptures\":[{\"pass\":\"planning-f26bb956de3abb86\",\"date\":\"2026-11-01\",\"captures\":1},{\"pass\":\"planning-534673481277a9fc\",\"date\":\"2026-11-01\",\"captures\":2},{\"pass\":\"planning-18e7afc23edf14c3\",\"date\":\"2026-10-30\",\"captures\":2},{\"pass\":\"planning-363b8def6172c500\",\"date\":\"2026-10-30\",\"captures\":2},{\"pass\":\"planning-79fa2937a6b5812e\",\"date\":\"2026-10-28\",\"captures\":1},{\"pass\":\"planning-7f5e44638facd299\",\"date\":\"2026-10-28\",\"captures\":1},{\"pass\":\"planning-99f4ffe8f2227691\",\"date\":\"2026-10-26\",\"captures\":1},{\"pass\":\"planning-8cf1b240128e3b80\",\"date\":\"2026-10-25\",\"captures\":1},{\"pass\":\"planning-d693ddbce103291d\",\"date\":\"2026-10-24\",\"captures\":1},{\"pass\":\"planning-45059c186a40389b\",\"date\":\"2026-10-24\",\"captures\":1},{\"pass\":\"planning-668813faab47b0ee\",\"date\":\"2026-10-23\",\"captures\":1},{\"pass\":\"planning-24597b606f20e33d\",\"date\":\"2026-10-21\",\"captures\":1},{\"pass\":\"planning-fc1c0ec6bba3073a\",\"date\":\"2026-10-21\",\"captures\":1},{\"pass\":\"planning-56357ae66bd3a7f6\",\"date\":\"2026-10-20\",\"captures\":1},{\"pass\":\"planning-e0dd1f8a7a5b84af\",\"date\":\"2026-10-19\",\"captures\":1},{\"pass\":\"planning-14fefa7dc1ee9d3b\",\"date\":\"2026-10-18\",\"captures\":1},{\"pass\":\"planning-afc1740dd0afc954\",\"date\":\"2026-10-18\",\"captures\":1}]}"
+        },
+        {
+          "id": "docs/planning/cost-table.json#trap:drift-to-low-performance",
+          "text": "{\"id\":\"drift-to-low-performance\",\"signal\":\"Subject length, gate step count and cold-start byte series\",\"metric\":\"coldStartBytes\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":36427,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}],\"indicators\":[{\"metric\":\"coldStartBytes\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":36427,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"subjectCharacters\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":72,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":74,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":75,\"delta\":1},{\"workOrder\":\"WO-021\",\"value\":65,\"delta\":-10}]},{\"metric\":\"gateStepCount\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":7,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":7,\"delta\":null}]}],\"worsening\":[],\"reopenCandidate\":false,\"coldStart\":{\"comparisonEdition\":\"v0.3.4\",\"profiles\":[{\"role\":\"executor\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-executor/SKILL.md\",\"skillBytes\":30671,\"bytes\":37950,\"previousBytes\":36427,\"previousCause\":null,\"delta\":1523,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.executor\",\"verdict\":\"unset\"},{\"role\":\"verifier\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-verifier/SKILL.md\",\"skillBytes\":25504,\"bytes\":32783,\"previousBytes\":31423,\"previousCause\":null,\"delta\":1360,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.verifier\",\"verdict\":\"unset\"},{\"role\":\"reviewer\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-reviewer/SKILL.md\",\"skillBytes\":28274,\"bytes\":35553,\"previousBytes\":33871,\"previousCause\":null,\"delta\":1682,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.reviewer\",\"verdict\":\"unset\"},{\"role\":\"release-close\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-release-close/SKILL.md\",\"skillBytes\":15776,\"bytes\":23055,\"previousBytes\":22685,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.release-close\",\"verdict\":\"unset\"},{\"role\":\"planner\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-planner/SKILL.md\",\"skillBytes\":16584,\"bytes\":23863,\"previousBytes\":23493,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.planner\",\"verdict\":\"unset\"},{\"role\":\"refuter\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-refuter/SKILL.md\",\"skillBytes\":15398,\"bytes\":22677,\"previousBytes\":22307,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.refuter\",\"verdict\":\"unset\"},{\"role\":\"router\",\"skillsRoot\":\".claude/skills\",\"path\":\".claude/skills/dotln-router/SKILL.md\",\"skillBytes\":7784,\"bytes\":15063,\"previousBytes\":null,\"previousCause\":\"edition-snapshot-unavailable\",\"delta\":null,\"ceiling\":16384,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.router\",\"verdict\":\"within\"},{\"role\":\"executor\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-executor/SKILL.md\",\"skillBytes\":30671,\"bytes\":37950,\"previousBytes\":36427,\"previousCause\":null,\"delta\":1523,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.executor\",\"verdict\":\"unset\"},{\"role\":\"verifier\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-verifier/SKILL.md\",\"skillBytes\":25504,\"bytes\":32783,\"previousBytes\":31423,\"previousCause\":null,\"delta\":1360,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.verifier\",\"verdict\":\"unset\"},{\"role\":\"reviewer\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-reviewer/SKILL.md\",\"skillBytes\":28274,\"bytes\":35553,\"previousBytes\":33871,\"previousCause\":null,\"delta\":1682,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.reviewer\",\"verdict\":\"unset\"},{\"role\":\"release-close\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-release-close/SKILL.md\",\"skillBytes\":15776,\"bytes\":23055,\"previousBytes\":22685,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.release-close\",\"verdict\":\"unset\"},{\"role\":\"planner\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-planner/SKILL.md\",\"skillBytes\":16584,\"bytes\":23863,\"previousBytes\":23493,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.planner\",\"verdict\":\"unset\"},{\"role\":\"refuter\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-refuter/SKILL.md\",\"skillBytes\":15398,\"bytes\":22677,\"previousBytes\":22307,\"previousCause\":null,\"delta\":370,\"ceiling\":null,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.refuter\",\"verdict\":\"unset\"},{\"role\":\"router\",\"skillsRoot\":\".agents/skills\",\"path\":\".agents/skills/dotln-router/SKILL.md\",\"skillBytes\":7784,\"bytes\":15063,\"previousBytes\":null,\"previousCause\":\"edition-snapshot-unavailable\",\"delta\":null,\"ceiling\":16384,\"lastAcceptance\":{\"date\":null,\"ceiling\":null,\"revision\":null,\"source\":null,\"bytes\":null,\"delta\":null,\"cause\":\"no-acceptance\"},\"metric\":\"coldStartBytes.router\",\"verdict\":\"within\"}]}}"
+        },
+        {
+          "id": "docs/planning/cost-table.json#trap:policy-resistance",
+          "text": "{\"id\":\"policy-resistance\",\"signal\":\"Guard refusals, bypass tools and ad hoc scripts\",\"metric\":\"guardRefusals\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":0,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}],\"indicators\":[{\"metric\":\"guardRefusals\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":0,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"bypassTools\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]},{\"metric\":\"adHocScripts\",\"series\":[{\"workOrder\":\"WO-015\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-025\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-026\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-020\",\"value\":null,\"delta\":null},{\"workOrder\":\"WO-021\",\"value\":null,\"delta\":null}]}],\"worsening\":[],\"reopenCandidate\":false}"
+        }
+      ],
+      "costEvidenceStatus": "current"
+    }
+  },
+  "episode": {
+    "kind": "direct-session",
+    "workerType": "dotln-worker",
+    "harness": "unknown",
+    "harnessVersion": "unknown",
+    "model": "unknown",
+    "effort": "unknown",
+    "settingsVerification": "unverified",
+    "profileId": "plan-refutation-v1",
+    "completedAt": "2026-11-01T09:20:09.899Z",
+    "resultHash": "sha256:16fd6682a35b3f789faed6708a53dc4ffdf4a6662df27f5db29d2e23a0a2297e",
+    "judgmentBasis": "canonical-subject-and-protocol",
+    "independence": "session-attested",
+    "contextIsolation": "not-enforced",
+    "modelTools": "available",
+    "statement": "Plan refuter (Entropy Reducer, Contra-Auguste mask, architecture-and-semantics lens) for WO-022: I read only refute-prompt.txt, all of it, using local python3 -I reads that printed every key (identity, mask, lens, role, workOrder, the whole subject with its standard, goalReview and five trap observations, orders, scope, sequence, deferrals and costTable, plus outputInstructions, resultSchema and workerInstructions). Before reading it I listed the scratch directory once, which showed only file names and sizes; I opened none of the other files there. I read no repository file, planning document, receipt, intake, web page or prior judgment. The host put CLAUDE.md instructions and a git status snapshot into the session context, and the judgment does not draw on them. I used no model tools or subagents and made no repository or Git writes. I wrote only refute-result.json and this statement. I checked the result against the prompt's resultSchema with an inline python3 check that read only those two files (jsonschema was not installed) and it reported no errors. Judgment: WO-022 is aligned-with-findings with eight known-issue findings, each with its reopening observation; planVerdict aligned-with-findings; no holdReasons, because no trap observation records worsening or a reopen candidate and the subject supplies no vision passage id.",
+    "review": {
+      "scope": "pass",
+      "judgedOrderIds": [
+        "WO-022"
+      ],
+      "carried": [
+        {
+          "workOrderId": "WO-023",
+          "orderHash": "sha256:539def0d162ca142ed3f79bcb279ac124bd46b8f84637343efc01ff9d1759c4a",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        },
+        {
+          "workOrderId": "WO-024",
+          "orderHash": "sha256:1d4aaaacd18a6f4abf94ba7910d2efd2e6f2d3637fe50ba256db3545e3b14035",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        },
+        {
+          "workOrderId": "WO-016",
+          "orderHash": "sha256:220d9cc3c4b9f6c59619218675d792f30877ae88abd1a95b71b1b0d023fad5df",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        },
+        {
+          "workOrderId": "WO-008",
+          "orderHash": "sha256:741226b39166b50a2ea4146a801c0aba57c584f0d7a599aea9a9963b018b27ab",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        },
+        {
+          "workOrderId": "WO-017",
+          "orderHash": "sha256:7bb45486e2d358ebe3505e9572894ce2a9ad46fe5b3882946d9196668530967f",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        },
+        {
+          "workOrderId": "WO-018",
+          "orderHash": "sha256:89ff4618219d2d491496d51834fce85b22b4a3b07ef056fa07ca2dadd27ae6ff",
+          "receiptId": "2026-11-01-planning-534673481277a9fc-016",
+          "receiptHash": "sha256:e31533fcf701f6b820e759677e5d890d9868582d9d665fe94c33468e9c2d592e"
+        }
+      ],
+      "dispatchedAt": "2026-11-01T09:13:53.001Z",
+      "durationMs": 376898
+    }
+  },
+  "result": {
+    "schemaVersion": "plan-goal-review-v1",
+    "orders": [
+      {
+        "workOrderId": "WO-022",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "Gate unblocked: none on a declared route. The critical-path record is unavailable (goalReview.criticalPath: 'this instance has not declared a critical path'). The only route the subject supplies is the goal standard's mission paragraph: register the repository, one witnessed scaffold order, then a foundation where a feature is added by convention (shared libraries, component taxonomy, events and stores, sub-app shell, a legitimate client-side authentication and permission model). WO-022 unblocks none of those gates. It is catalog content for the sandbox app's toolbox outcome ('a toolbox mined from the works the operator reads'). Its Objective names its downstream use as the operator's choice of which pattern the machinery view (WO-016, fourth in the sequence) or a toy shows next. That is an input to WO-016, not a gate: WO-016 is not stated to depend on it, and WO-022's non-goals exclude the machinery view. The one named foundation item still in the horizon, WO-008 (authentication and permissions), is fifth, behind three study orders and WO-016. Goal alignment grants no authority to reorder, so this is recorded and not held. NoOp cost in the records: none. The compiled order carries no NoOp line, and the cost-table row for WO-022 has metrics: null (observedAt 2026-11-01T09:13:44.592Z). The NoOp inferred from the Cost line: the twenty EIP catalog rows and their hooks stay unstudied; about 40 source files, twenty records, a coverage row and a rule are not added; and the operator has no channel-pattern vocabulary when WO-016 is planned. Unknown cost stays unknown and is not a structural hold.",
+        "systemTraps": "Policy resistance (trap:policy-resistance): guardRefusals is recorded only for WO-025 (0); the other values are null and worsening is empty, so there is no observed failure. WO-022 adds no commands. Its one new local guard is criterion 9's clause that Preflight runs before the first full gate, and that clause can conflict with the executor's ordinary gate loop (finding on criterion 9). Tragedy of the commons (no observation supplied): authors read two rows each and every one of the twenty records needs at least two reviewers. Tokens are unknown until run and are counted only per worker. Executor context is about 180 KB, roughly 4.7 times the executor cold start of 37,950 bytes. Three refutations have already been paid on this order, and the planning-captures series shows seventeen passes from 2026-10-18 to 2026-11-01, two of them on 2026-11-01. The platform standard requires a refutation to be made worth its cost before a later pass pays it again. Drift to low performance (trap:drift-to-low-performance): executor cold start went from 36,427 to 37,950 bytes (+1,523), verifier +1,360 and reviewer +1,682, all with ceiling null, verdict unset and no acceptance; worsening is empty. WO-022 adds no commands, but it adds an analogy rule to catalog-rules.md that WO-023 and WO-024 authors will read, and it retires none. Escalation (no observation): the analogy rule, a coverage row, the Preflight-ordering clause and design rounds with no bound all add process. Success to the successful (no observation): the order reuses WO-020's pipeline and the twenty-per-order shape that WO-023 (twenty) and WO-024 (ten plus ten) repeat. The subject weighs no smaller first probe. firstVerifications shows 3 of 8 failed, including WO-021, the most recent. Reusing the pipeline is reasonable, and no credible alternative is shown to be excluded. Shifting the burden to the intervenor (trap:shifting-the-burden-to-the-intervenor): operatorDirections is 2 at WO-020 and 4 at WO-021; corrections are unavailable for both; manualCloseoutSteps and emergencyPasses are null; worsening is empty. The order's own process needs the operator's word to end the design rounds (criterion 8), and once the criterion 9 ordering is missed it can close only by waiver. Rule beating (trap:rule-beating; readAmplification null for all five orders): criterion 1's ls | wc -l of at least 15 counts any files, but the verifier's own-words statement backs it. Criterion 7's grep -c analogy of at least 1 passes on the bare word. Criterion 2's 'checked with at least two reviewers' is asserted in the record itself and is attested only by review.md. Seeking the wrong goal (trap:seeking-the-wrong-goal): machineryShare is 0.160 at WO-020 and 0.131 at WO-021, the lowest since WO-015's 0.100. The order's outcome is an operator session in the production build (criterion 1), not receipt volume, so it is aligned. The exception is criterion 9's Preflight-ordering clause, a process proxy inside a product acceptance.",
+        "removalBalance": "No. The Cost line says 'Removes nothing.' It adds libs/shared/catalog/src/studies/eip/ (twenty records), the flow family under libs/features/tools/src/lib/composites/study-visuals/flow/, the executable modules and marble specs under libs/features/tools/src/lib/studies/eip/, one coverage row and one rule: about 40 source files plus twenty data records. It adds no runtime dependency, no commands and no re-mints. The only removal in the order is criterion 8's deletion of the losing design candidate's files, which takes out the order's own temporary addition, not anything already in the base. The product additions are the order's outcome and are not a defect. The net-growth concern is on the process side. The analogy rule in docs/ai-reference/catalog-rules.md and the coverage row join the read set of every later study order (WO-023, WO-024) and no rule is retired, while executor cold start has already grown by 1,523 bytes with no ceiling or acceptance (trap:drift-to-low-performance). Addition exceeds removal. This is a known issue, not a hold.",
+        "failureBehavior": "Mostly degrades, with three points that refuse. Paths that degrade: (a) a record without its module and spec stays a study with pseudocode, executable: null and a reason in the decisions file, so it does not fail the catalog. (b) Criteria 2 and 3 admit one recorded substitution instead of refusing the whole set. (c) The studies are new records over existing EIP catalog rows and hooks, so removing or failing them returns the row to its unstudied state. No runtime dependency is added (criterion 6), and the records load in lazy chunks, which isolates a broken study from the rest of the app. The subject does not say whether the catalog shows a fallback when a lazy study chunk fails to load (unknown). (d) studies:check and the target gate refuse at gate time, which is the intended gate, not a runtime refusal. Points that refuse: (1) Criterion 9's 'the Preflight line ran before the first full gate' is a condition on history. Once a first full gate runs before Preflight, no rework can satisfy it, and closure needs a waiver or override, which is operator rescue. (2) Criterion 8 ends the design rounds only on the operator's word, with no round limit and no default pick. If the word does not come, the order stalls instead of falling back to the first pair's pick. (3) Criterion 3's substitution allowance conflicts with 'names none of the eight' when the substitution touches one of the eight, so the degrade path can itself be refused at verification.",
+        "findings": [
+          {
+            "criterionId": "criterion:3",
+            "kind": "known-issue",
+            "reason": "The acceptance text conflicts with itself. Criterion 2 admits 'one recorded substitution' among the twenty ids. Criterion 3 admits 'at most one recorded substitution under the rule' among the eight stream-transformation records, and it also requires the decisions file to name every executable: null record while it 'names none of the eight'. That leaves three readings. Read as one shared substitution, a substituted-in record must itself be executable, which the text never says. Read as two separate allowances, the order may differ from its named set in two places. If the substitution means one of the eight ships with executable: null, the decisions file must both name it and name none of the eight. The compiled subject does not identify 'the rule', so a verifier cannot tell which reading was meant, and the degrade path the criterion grants can be refused at verification.",
+            "evidence": null,
+            "reopenWhen": "WO-022's decisions file records a substitution that touches Aggregator, Resequencer, Content-Based Router, Recipient List, Message Filter, Message Expiration, Competing Consumers or Publish-Subscribe Channel, or the VER report or final review records a dispute over how many substitutions criteria 2 and 3 allow."
+          },
+          {
+            "criterionId": "criterion:9",
+            "kind": "known-issue",
+            "reason": "'The Preflight line ran before the first full gate' is a condition on the order's history, not on its result. Once a first full gate runs before Preflight, no rework, repair or re-run can make it true. The failure is then permanent and closes only through a criterion waiver or an operator override, which is operator rescue (shifting the burden to the intervenor). The clause also turns a cost-saving habit of ordering into a pass/fail product criterion whose evidence is a log line (seeking the wrong goal, rule beating). There is no current failure: the shifting-the-burden observation shows CriterionWaived 0 across the five recorded orders, one OperatorOverrideRecorded at WO-015, and worsening empty.",
+            "evidence": null,
+            "reopenWhen": "WO-022's first full gate is recorded before its Preflight line, or WO-022's directions record a CriterionWaived or OperatorOverrideRecorded event for criterion 9."
+          },
+          {
+            "criterionId": "criterion:8",
+            "kind": "known-issue",
+            "reason": "The design comparison fixes a first pair (A pipeline, B swim lanes), but 'every later round' is unbounded, and the rounds end only on the operator's word recorded in the decisions file. With no round limit and no default pick for when that word does not come, the order stalls instead of falling back to the first pair's pick, and every round spends operator attention (escalation; shifting the burden to the intervenor). In the shifting-the-burden observation, operatorDirections rose from 2 at WO-020 to 4 at WO-021. That series is not flagged as worsening, so this is a risk, not a failure.",
+            "evidence": null,
+            "reopenWhen": "docs/evidence/WO-022/design/comparisons.md records more than two rounds after the first pair, or WO-022's operatorDirections total exceeds WO-021's 4."
+          },
+          {
+            "criterionId": "criterion:7",
+            "kind": "known-issue",
+            "reason": "Removal balance and rule growth. The Cost line says 'Removes nothing' while the order adds a flow family, executable modules with specs, twenty records, a coverage row and a new analogy rule in docs/ai-reference/catalog-rules.md. The product files are the outcome. The rule is process: it joins the read set of every later study author (WO-023 and WO-024 run the same pipeline) and no rule is retired or merged. Meanwhile executor cold start has already grown from 36,427 to 37,950 bytes (+1,523) with ceiling null, verdict unset and no acceptance. Criterion 7's floor, grep -c analogy of at least 1, passes on the bare word, so only the verifier's reading shows the rule is actually stated (rule beating).",
+            "evidence": null,
+            "reopenWhen": "docs/ai-reference/catalog-rules.md grows across WO-022 to WO-024 with no rule removed or merged while a study author's recorded read bytes rise, or a VER report passes criterion 7 on the grep count while no sentence states the analogy rule."
+          },
+          {
+            "criterionId": "criterion:3",
+            "kind": "known-issue",
+            "reason": "Dependency direction and a single source of truth. Records in libs/shared/catalog/src/studies/eip/ name executable modules by path under libs/features/tools/src/lib/studies/eip/. That is a shared-to-feature reference carried as data, which module-boundary lint does not see, so a move or rename in the feature library leaves the shared record pointing at nothing unless studies:check resolves the path. Separately, the goal standard's mission paragraph says the app's data comes from public mining into its own store, served through its own API, and WO-018 in this horizon is the first mining into that store. WO-022 adds twenty more bundled source records to the in-repo catalog before that store exists, so a later migration or a second catalog source is likely. No vision passage id is supplied (standard.theses is empty; docs/product/00-vision.md is unavailable), so this cannot be a vision-contradiction hold.",
+            "evidence": null,
+            "reopenWhen": "A rename or move under libs/features/tools/src/lib/studies/ leaves a record's executable path unresolved while npm run studies:check still exits 0, or, after WO-018 lands, EIP study data exists both in libs/shared/catalog and in the app's store."
+          },
+          {
+            "criterionId": "criterion:2",
+            "kind": "known-issue",
+            "reason": "Most of the process cost is unknown, and planning has already spent a lot on this order. Tokens are 'unknown until run'. Executor context is about 180 KB, roughly 4.7 times the executor cold start of 37,950 bytes, and readAmplification is null for all five recorded orders, so there is no baseline to compare against. The fan-out (authors reading two rows each, at least two reviewers on each of twenty records) spends shared compute that is counted only per worker. The Cost line lists three refutations already paid on this order (the 2026-10-30 second pass, 2026-11-01 and the 2026-11-01 second pass), and the planning-captures series shows seventeen passes from 2026-10-18 to 2026-11-01. The platform standard requires a refutation to be made worth its cost before a later pass pays it again. Unknown cost is unknown, so this is not a hold.",
+            "evidence": null,
+            "reopenWhen": "A fourth refutation is paid on WO-022 before it executes without a changed observation, or WO-022's recorded per-worker tokens or readAmplification, once measured, exceed WO-020's and WO-021's, or emergencyPasses records a value above 0."
+          },
+          {
+            "criterionId": "criterion:1",
+            "kind": "known-issue",
+            "reason": "WO-022 names no critical-path gate. The critical-path record is unavailable ('this instance has not declared a critical path'). The only supplied route, the goal standard's mission paragraph, ends in a legitimate client-side authentication and permission model, which is WO-008, fifth in the sequence behind WO-022, WO-023, WO-024 and WO-016. WO-022's Objective names its downstream use as the operator's choice of which pattern the machinery view or a toy shows next. That is an input to WO-016, not a gate, and the order's non-goals exclude the machinery view. The order does serve the sandbox app's toolbox outcome directly, and goal alignment grants no authority to reorder, so this is a note on placement only.",
+            "evidence": null,
+            "reopenWhen": "A declared critical path excludes WO-022 while WO-008 stays behind it, or WO-016's planned design cites no WO-022 study as an input."
+          },
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "The order is anchored on WO-020. The executor's context is 'WO-020's record, check, families and rules as it leaves them', and criterion 4 is defined 'as WO-020's criterion 4'. WO-021 closed after WO-020 in every recorded series and failed its first verification. Going by the numbering it is probably concept studies II, between WO-020 and this order, though that is an inference: the subject does not say what WO-021 contains. If WO-021 changed the study record, studies:check, the visual families or catalog-rules.md, then WO-022's read set and its criterion 4 point at an outdated state, and the executor builds against a contract the base no longer has.",
+            "evidence": null,
+            "reopenWhen": "WO-021's merged diff touched the study record schema, the studies:check script, the study-visual families, catalog-rules.md or its fan-out and review evidence format, and WO-022's text still names only WO-020's."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-023",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "No critical path is declared. WO-023 depends on WO-020 and unblocks no order. Of the content batches it serves the reference workspace most directly, naming 'which pattern their stores and data access already embody, under what name', and it touches the foundation's events and stores by documentation only (its nonGoals exclude refactoring the stores). It does not touch WO-008. NoOp in the records: metrics: null for its row; nothing measured. From the order: the stores and data access stay undocumented by pattern name and the PoEAA rows stay mined definitions. Action wins if the embodiment sentences are true; it loses value if they are stretched (finding on criterion:4).",
+        "systemTraps": "Policy resistance: criterion 4 asks, per study, for the app file the embodiment sentence names and confirms only that the file exists, while the nonGoals forbid refactoring toward a pattern; for patterns a client-side app plausibly does not embody, the guards together push toward a stretched claim (finding on criterion:4). Tragedy of the commons: fan-out within WO-020's bound, about 190 KB executor context, tokens unknown; accounted. Drift to low performance: about 40 source files; check:bundle guards. Escalation: the states family and the embodiment rule (WO-020's finding on criterion:7), plus an edit to events-and-state.md after WO-026 integrated it (WO-026's finding on criterion:1). Success to the successful: reuses WO-020's contract. Shifting the burden to the intervenor: one more design pair on the operator's word, counted under WO-020's finding on criterion:8. Rule beating: the title promises 'each with a state drawing and a small executable model', criterion 3 admits executable: null, and only Unit of Work's model is required by the walkthrough (finding on criterion:3); the reference document's new links into study readings sit outside the link checks the plan names (finding on criterion:7). Seeking the wrong goal: the verifier's statement on what a unit of work tracks, what an identity map prevents and when optimistic locking is wrong measures understanding.",
+        "removalBalance": "No. The Cost line says 'Removes nothing.' It adds twenty records, the states family, the executable models and specs the records name, one coverage row and one rule, about 40 source files, and an edit to events-and-state.md.",
+        "failureBehavior": "Degrades: executable: null with a reason keeps an illustrative study, studies stay additive below the mined definition, and the app's stores are unchanged. It inherits WO-020's untested fallback for a missing or malformed study. The new links from events-and-state.md into study readings point from a reference document into catalog content, so a renamed study id or route leaves a broken reference rather than the old text (finding on criterion:7).",
+        "findings": [
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "Criterion 4 lists, per study, the app file the embodiment sentence names, with the critic confirming that the file exists at the base. Existence is not embodiment, and the criterion has no 'not embodied' outcome; for patterns a client-side app plausibly does not embody, the author must still name some file, and the check passes on any file that exists. The order's learning goal, which pattern the stores already embody under what name, depends on those sentences being true.",
+            "evidence": null,
+            "reopenWhen": "A committed WO-023 study's embodiment sentence names a file whose code does not implement the pattern as the study defines it, or the review record shows no study recorded as not embodied in the app."
+          },
+          {
+            "criterionId": "criterion:3",
+            "kind": "known-issue",
+            "reason": "The title promises 'each with a state drawing and a small executable model'; criterion 3 admits executable: null with a reason in the decisions file and sets no minimum, and criterion 1 requires only Unit of Work's executable model. The title and the criterion describe different deliverables, and the gate checks the weaker one.",
+            "evidence": null,
+            "reopenWhen": "The WO-023 decisions file lists executable: null for more than a quarter of the twenty records, or the release notes or the catalog coverage row claim an executable model for every PoEAA study while some are null."
+          },
+          {
+            "criterionId": "criterion:7",
+            "kind": "known-issue",
+            "reason": "Criterion 7 requires events-and-state.md, a developer reference document, to name the patterns the stores embody 'with links to their studies'. If those links point at the app's reading route or study ids rather than repository paths, neither WO-026's link check (repository paths only) nor studies:check (records only) covers them, and a renamed study id or route breaks the reference silently.",
+            "evidence": null,
+            "reopenWhen": "A link from docs/dev-reference/architecture/events-and-state.md to a study does not open that study in the served build or resolve to its record, and no check in the target reported it."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-024",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "No critical path is declared. WO-024 depends on WO-020 and unblocks no order. Its decision, 'which loop or mode to make visible in the machinery view or a toy next', feeds WO-016, which does not name it as a prerequisite, and its nonGoals exclude the machinery view. Of the seven it is the furthest from the narrated route and from either outcome's foundation: its value is vocabulary for the levels the platform's mechanisms live on and the modes its five roles work in. NoOp in the records: metrics: null for its row; nothing measured. From the order: the GEB and Team Topologies rows stay mined definitions. Action wins only on the operator's choice of these works; deferring it behind WO-016 or WO-008 has no recorded cost either way.",
+        "systemTraps": "Policy resistance: criterion 4 confirms that no passage of either book is quoted and no sentence characterizes the operator, which keeps the clean-room and operator-record boundaries; no guard pulls against another. Tragedy of the commons: fan-out within WO-020's bound, about 180 KB executor context, tokens unknown; accounted. Drift to low performance: about 35 source files and twenty records; check:bundle guards. Escalation: the relations family and the absent-material rule, the fifth catalog rule (WO-020's finding on criterion:7). Success to the successful: reuses WO-020's contract and admits both visual: null and executable: null, the widest escape of the five batches (finding on criterion:3). Shifting the burden to the intervenor: the fifth design pair on the operator's word, counted under WO-020's finding on criterion:8. Rule beating: the situations describe the platform itself (a planning pass, an order, a gate row and a hook refusal as levels; the five roles' interaction modes), and the critic is asked about quotation and characterization but not whether the platform claims are true (finding on criterion:4). Seeking the wrong goal: the risk is vocabulary as the goal; criterion 1's verifier statement on levels of description, strange loops and when collaboration mode should end measures understanding, which is the stated goal.",
+        "removalBalance": "No. The Cost line says 'Removes nothing.' It adds twenty records in two directories, the relations family, the executable models and specs the records name, two coverage rows and one rule, about 35 source files.",
+        "failureBehavior": "Degrades: a concept that resists a drawing or a model ships with visual: null or executable: null and its reason, keeping a text study below the mined definition. It inherits WO-020's untested fallback for a missing or malformed study. The degradation is wide enough to empty the title's promise (finding on criterion:3).",
+        "findings": [
+          {
+            "criterionId": "criterion:3",
+            "kind": "known-issue",
+            "reason": "The title says each concept comes 'with a relations drawing'; criterion 3 admits visual: null as well as executable: null with a reason, and criterion 1 steps drawings only for Levels of description, Strange loop, the three interaction modes and Conway's law. The gate checks the weaker promise.",
+            "evidence": null,
+            "reopenWhen": "The WO-024 decisions file lists visual: null for any of the twenty records while the title, the release notes or a coverage row still says each carries a relations drawing."
+          },
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "WO-024's situations describe the platform (a planning pass, an order, a gate row and a hook refusal as four levels of one afternoon's work; the modes the five roles work in). Criterion 4's critic confirms no passage is quoted and no sentence characterizes the operator, but nothing checks the platform claims against the platform, which the app's authors see only through their own description. A study stating that roles collaborate where the platform separates them by design would teach a false account of the operator's machinery.",
+            "evidence": null,
+            "reopenWhen": "A committed WO-024 study states a relationship between platform roles, records or gates that the platform's role skills or control records contradict."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-016",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "Gate: the shared-libraries member of the foundation the goal standard's prose names: libs/shared/records (reader, folds, fixture pack, kit) and libs/shared/replay (the virtual-time clock). WO-017 consumes both (its context reads 'the records and replay libraries'), so WO-016 sits on WO-017's dependency route, not on WO-008's. It also delivers the sandbox outcome the vision names: 'a view of DotLn's machinery where a change to an agent's mechanisms shows what changes in an example use case'. NoOp in the records: metrics null and no acceptances, so the records hold no NoOp cost. The implied NoOp is /machinery staying WO-013's arriving page and WO-017 lacking the libraries it reads. The cost is unknown, and unknown is not a structural hold.",
+        "systemTraps": "Rule beating: c2 pins exact fold figures: eight operator beats, and gaps of 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and 5.9 minutes, which sum to 227.0 and agree with WO-017's waiting total. c10 requires the verifier's own statement of what the applied idea changed. c3's role-count spec compares against counts the same executor recorded, so by itself it can pass without the intended behaviour, but the verifier's independent recount of each Origin stamp closes that gap. Seeking the wrong goal: the presentation-only band, the 'nothing written' caption, and the rule that no card is generated from records (c4, c8) keep the view from posing as a control surface, which matches the vision's 'never by writing a control record'. Shifting the burden: ideas persist in browser storage and, when the operator runs the sink, in an ignored intake directory. Moving them on to planning or a GitHub issue stays a manual operator step; the vision promises no automatic path, so none is owed. Tragedy of the commons: adds a long-running local process (npm run idea-sink) and about 190 KB of context; five refutations paid. Drift to low performance: 17 steps and ten criteria. Cold-start bytes rose for every role profile in the drift series with no ceiling; this order neither causes nor improves that. Escalation: one new target command and one new local service with its own refusal rules (Origin, Host, 16 KB body limit, ignored directory, Git root), all bounded by the c5 tooling test. Policy resistance: the scrub rule and the source.commit requirement in c1 can work against each other (finding). Success to the successful: WO-221 and WO-226 are reused because they are recorded; carrying a second order guards against fitting the fold to one segment. Clean room: the fixtures copy the platform's recorded segments, reduced to six fields and scrubbed. The scrub's stated patterns do not cover every private identifier shape (finding).",
+        "removalBalance": "No. It removes WO-013's arriving page for /machinery. It adds machinery.ts to the shared models, two shared libraries (records, replay), the machinery feature (page, strip, slots, cards, shelf, editor, facade, store), a data-access library, the segment reducer, a record fixture check, the idea sink process and its command, three fixtures, two documents and about 75 source files. The addition is far larger than the removal.",
+        "failureBehavior": "Degrades. A failing sink post still applies and persists the dropped idea (c6). A stored value that does not parse renders an empty shelf and the strip (c6). An unknown row type becomes an unknown beat, and a planner, refuter or release-close row becomes an unknown-slot beat naming the role (c2). A refused drop stays visible with its reason and leaves the scene unchanged (c2, c7). The sink refuses to start on a directory that is not Git-ignored or lies outside its Git root. That is a refusal, but it is the safety boundary of a local write, and the browser path continues without the sink; production sets ideaSinkUrl to null and ships no loopback address (c5).",
+        "findings": [
+          {
+            "criterionId": "criterion:1",
+            "kind": "known-issue",
+            "reason": "c1 requires each segment fixture to carry a source.commit, and it requires the reducer's scrub to fail any value carrying a run of 32 or more hexadecimal characters. A full Git commit id is 40 hexadecimal characters. Either source.commit is exempt from the scrub or the commit must be abbreviated, and the criterion says neither, so the executor and the verifier can read the same text differently.",
+            "evidence": null,
+            "reopenWhen": "The executor's fixture carries a 40-character source.commit and npm run check:fixtures or the scrub's tooling test rejects it, or the decisions file records an exemption or abbreviation for source.commit."
+          },
+          {
+            "criterionId": "criterion:1",
+            "kind": "known-issue",
+            "reason": "The scrub's stated patterns are hex runs of 32 or more characters, UUID shapes and absolute paths. They do not cover e-mail addresses, host names or account names. The kept fields include actor, which the objective labels by harness, model and effort, and the subject does not show what actor carries in the platform's segments. The vision says the app's data comes from public mining into its own store; the subject does not establish that these copied segments are publishable.",
+            "evidence": null,
+            "reopenWhen": "Any value in order-221.json or order-226.json is observed carrying an e-mail address, a host name or an account identifier, or the source segments are observed to come from records the owner cannot publish."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-008",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "Gate: the last member of the foundation the goal standard's prose names, 'a legitimate client-side authentication and permission model', so it is the only judged order that closes a named critical-path gate. It also unblocks WO-017, whose /twin maps to twin:read and whose e2e signs in through this order's mocked provider. The subject's criticalPath field reports no declared critical path, and the sequence places WO-008 fourth, behind WO-019, WO-015 and WO-016 (finding). c4 requires the board, scene, machinery and catalog e2e specs to run unchanged without a session, which bounds the cost of that ordering. NoOp in the records: metrics null and no acceptances, so the records hold no NoOp cost. The implied NoOp is no session, no permission model and no consumer for WO-017's twin:read. The cost is unknown, and unknown is not a structural hold.",
+        "systemTraps": "Rule beating: strong. The post-sign-in e2e reads every Web Storage key, IndexedDB object store, Cache Storage entry and cookie, checking for the JWT shape and for every token the mock issued (c1). The transition spec iterates the full state and event table (c2). Single-flight refresh is asserted through the MSW handler's call count (c3). The production bundle is grepped for the kid and the mock marker (c5). The reload criterion accepts either keeping the session or returning to /login with returnTo, so it proves only that a reload never strands the visitor; with tokens held only in memory, that is the honest bound. c8's '<dl' grep is the same markup proxy noted on WO-015. Seeking the wrong goal: the order is security shape rather than operator flow, but it is the named foundation member, and c6 records that the server enforces authorization while client checks shape presentation only, which is what 'legitimate' requires. Shifting the burden: c8's walkthrough drives knobs in the mocked build, and no recurring operator step follows the order. Tragedy of the commons and escalation: the decisive process cost is planning, not execution. Eleven refutation receipts (001 to 011) name this order and this pass is the twelfth, against a platform standard that says the refutation pass must be made worth its cost before a later pass pays it again. The shifting-the-burden observation lists twelve planning captures from 2026-10-18 to 2026-10-28 (finding). Drift to low performance: about 160 KB of context, 15 steps, eight criteria. Policy resistance: in-memory tokens, cross-tab sign-out and the ban on localStorage and sessionStorage in house code are compatible (a broadcast channel suffices); guard-refusal series 0 or null. Success to the successful: one OIDC client library behind a port; the port keeps the library replaceable, and the provider swap is configuration only.",
+        "removalBalance": "No. It removes nothing. It adds libs/shared/auth with its kit, the mocked identity provider handlers, two event groups, guards, a permission directive, three routes (/login, /denied, /account) and about 60 source files. It also adds one runtime dependency, an OpenID Connect client library and the only runtime dependency the horizon adds, plus jose as a development dependency.",
+        "failureBehavior": "Degrades where it should and refuses where credentials require it. With auth at null, the four public routes admit an anonymous visitor and /login renders the unavailable state (c5), and the board, scene, machinery and catalog specs run unchanged without a session (c4), which is the old behaviour. Refresh failure and an invalid signature, audience or skew sign the visitor out to /login, the correct fail-closed path for tokens. One consequence for later orders: production carries no mock and a real provider is a non-goal, so in the production build any permission-gated route refuses (see WO-017).",
+        "findings": [
+          {
+            "criterionId": "criterion:7",
+            "kind": "known-issue",
+            "reason": "This is a plan-level process cost, attached to WO-008 because it carries the most. WO-008's Cost line records eleven refutation receipts plus this pass's judgment on an order that has not run. Across the five judged orders, the Cost lines record 28 refutations paid (3, 5, 12, 5 and 3). The shifting-the-burden observation lists twelve planning captures in eleven days, and its operator-direction series reached 6 at WO-014. The goal standard says process activity is not progress, and the platform standard says the point is a platform, not proof of every constructible case before filing. This pass finds no observed failure, so repeating judgment on unchanged texts would spend cost without new evidence.",
+            "evidence": null,
+            "reopenWhen": "A later planning pass commits a refutation receipt naming WO-008 while WO-008's text and the cost table's trap observations are unchanged from this pass's evidence, or WO-008's run records a failure that one of its earlier refutations would have caught."
+          },
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "Two parts of the subject disagree. The criticalPath field says this instance has not declared a critical path, while the goal standard's prose declares one that ends at the client-side authentication and permission model. Under the prose, WO-008 is the only judged order that closes a named gate, yet it is sequenced after three feature orders; under the field, no judged order can be said to unblock any gate. The plan's first question therefore has no single source of truth. Goal alignment grants no authority to reorder, so this is reported, not acted on, and c4's unchanged-e2e rule bounds the ordering's cost.",
+            "evidence": null,
+            "reopenWhen": "WO-015 or WO-016 records a decision, rework or route change caused by the missing permission model, or WO-008's run changes an earlier feature's route or e2e spec beyond its routePermissions entry."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-017",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "Gate: no member of the stated foundation. It is the first feature to consume the permission model (twin:read on BasePaths.Twin and the default user's claim), so it shows the foundation's 'feature added by convention' for permissions, and it delivers the vision's 'operator's own digital twin'. It depends on WO-016 (the records and replay libraries) and on WO-008 (the mocked provider and routePermissions), and the sequence respects both. NoOp in the records: metrics null and no acceptances, so the records hold no NoOp cost. The implied NoOp is no twin, with /account remaining the permission model's only gated consumer. The cost is unknown, and unknown is not a structural hold.",
+        "systemTraps": "Seeking the wrong goal: explicitly guarded. The twin is judged by the replayed order's results (virtual close, waiting minutes and early fires, set against 1,110.3 and 227.0 minutes) and never by agreement with the operator's beats; c3 enforces that with a vm field-set spec and a 'hit rate|tolerance band' grep. Rule beating: the baseline replay must reproduce the recorded close within one virtual second, and the derivation script must equal the fold (c1, c2), so the figures cannot pass without the replay working. c3's grep is a proxy, but the field-set spec carries the weight. Policy resistance: the permission gate on /twin serves a local goal, exercising WO-008, and works against the operator using the twin in the production build, which has no provider (finding). Drift to low performance and escalation: 'every variant kept, never deleted', plus a check that fails on a removed id, makes the registry grow by policy. Each variant is a lazy chunk and c8 checks budgets, but no removal path exists (finding). Shifting the burden: a graduated idea goes to core as a GitHub issue filed by hand, consistent with the vision. Tragedy of the commons: about 170 KB of context, 6 to 9 hours, five refutations paid, two new commands. Success to the successful: RxJS on virtual time is chosen because the RxJS that describes the operator is the RxJS that runs. Exporting generated TypeScript instead of interpreting JSON (c5) is a deliberate, coherent architecture, not inertia.",
+        "removalBalance": "No. It removes nothing. It adds libs/shared/twin-model (variants, registry, results fold), the twin feature (page, lanes, picker, flips, result cell, facade, store), a derivation script and fixture, the variant registry check, a routePermissions entry, a provider claim, two documents, about 55 source files and two commands (twin:derive, twin:check). Its never-delete rule also forbids future removal inside the registry.",
+        "failureBehavior": "In the browser it degrades: a stored value that does not parse, or one naming an unknown variant, yields the first registry entry with no flips (c6). Two mechanisms refuse instead. First, twin:check fails when the base commit is absent (c4), deliberately and with a message naming the fetch; because c9 needs a passing row for every declared command, a shallow or pruned checkout fails the gate rather than degrading. Second, /twin requires twin:read, so without a session, and in a production build that carries neither the mock nor a real provider, the route lands on /login or /denied rather than on the old behaviour.",
+        "findings": [
+          {
+            "criterionId": "criterion:10",
+            "kind": "known-issue",
+            "reason": "WO-008 keeps the mock out of the production build and makes a real provider a non-goal, so the production configuration has no identity provider. WO-017 maps /twin to twin:read, and for that reason its use walkthrough runs on the mocked configuration. The operator's served production app therefore cannot open the twin, unlike /scene, /machinery and Tools, whose walkthroughs run in production. The vision describes the twin as a sub-app the operator plays with.",
+            "evidence": null,
+            "reopenWhen": "The served production build is observed sending the operator to /login (unavailable) or /denied at /twin, or the operator records that the twin must open in the production build."
+          },
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "twin:check fails, not passes, when the base commit is absent. c9 requires a passing row for every declared command in the target gate, so a shallow clone or a pruned base turns a never-delete safeguard into a gate refusal rather than a degraded pass with a warning.",
+            "evidence": null,
+            "reopenWhen": "A target gate, verifier or CI run records twin:check failing for an absent base commit."
+          },
+          {
+            "criterionId": "criterion:8",
+            "kind": "known-issue",
+            "reason": "Every variant is kept as code, old versions are never deleted, and the registry check fails a manifest with a removed id. The registry, the lazy chunks and the picker can therefore only grow. This adds entropy by policy with no recorded ceiling on variant count or total twin bytes; c8 checks only each chunk against its own budget.",
+            "evidence": null,
+            "reopenWhen": "The production build's budget output names a twin chunk over budget, or the operator directs a variant's removal and twin:check refuses it."
+          }
+        ]
+      },
+      {
+        "workOrderId": "WO-018",
+        "verdict": "aligned-with-findings",
+        "criticalPathAndNoOp": "Gate: no member of the stated foundation. It delivers the vision's 'data comes from public mining into its own store' for one work and the toy shelf where 'every new idea lives there first as a toy', and it types the tactics a later commander scene needs. It depends on WO-019's catalog pipeline and rules ('the catalog rules as WO-019 leaves them'). NoOp in the records: metrics null and no acceptances, so the records hold no NoOp cost. The implied NoOp is a catalog without The Art of War, with the operator reading the run's toys outside the app to choose the next build. The cost is unknown, and unknown is not a structural hold.",
+        "systemTraps": "Tragedy of the commons: the only order with a fan-out (two fan-outs, at most twelve workers), and it accounts for it. c5 records per-worker token totals, the session's own total, a stop decision if the sum passes WO-014's recorded total, and the harness's subagent count; twelve stays under the default subagent cap of 20. Rule beating: c5 accepts each worker's own statement that no quarantine file was read and admits 'unobserved' as the launchpad's read observation, so the clean-room evidence can pass with no observation behind it (finding). Seeking the wrong goal: aligned. The walkthrough ends with the operator deciding the next toy, and the graduation route stays a GitHub issue. Shifting the burden: the operator files the 'build next' issue by hand, and issue export is a non-goal (candidate C4). Drift to low performance: about 190 KB of executor context, 14 steps and about 300 data rows. Escalation: one new command; catalog:check and catalog:join are reused. Policy resistance: the fan-out stop rule and the completeness criteria (thirteen chapters, 25 toys) can work against each other (finding). Success to the successful: tools are typed through the existing catalog pipeline rather than a new one, which is reuse, not lock-in. Clean room: the six new toys type tools from works that are not in the public domain (Meadows, Pirsig, Gladwell, Taleb), and the nineteen toys are carried 'in full' from the run's folder. The criteria check structure, the public text's source and SHA-256, and that a maxim appears only for the public text; they do not check that definitions drawn from non-public works are written in the owner's own words (finding).",
+        "removalBalance": "No. It removes nothing. It adds two catalog data files, a toy schema and model, toys.json with 25 records, toy-source tool files, the toy shelf and toy page, map and toy checks, two document sections, about 32 source files, about 300 data rows and one command (toys:check).",
+        "failureBehavior": "At check time it refuses, appropriately: a toy naming an unknown tool id fails toys:check, and the map check fails rows that lack required fields. At run time the subject states no fallback for the shelf or the toy page. In the process, the fan-out stop rule has no degraded acceptance: stopping on budget leaves the thirteen chapters or the 25 toys short, which fails c2 or c4 instead of shipping a partial mining. The stop threshold is WO-014's recorded order total, which this subject's cost table does not show (finding).",
+        "findings": [
+          {
+            "criterionId": "criterion:5",
+            "kind": "known-issue",
+            "reason": "The clean-room evidence for the fan-out rests on each worker's own statement that no quarantine file was read. The launchpad's read observation beside it may be 'unobserved', so the criterion can pass without any observation that the intended behaviour occurred.",
+            "evidence": null,
+            "reopenWhen": "WO-018's evidence README records any worker's read observation as 'unobserved', or a non-zero harness journal row count for the quarantine path."
+          },
+          {
+            "criterionId": "criterion:5",
+            "kind": "known-issue",
+            "reason": "The stop rule (stop the fan-out if the token sum passes WO-014's recorded order total) has no degraded acceptance path, because c2 requires all thirteen chapters and c4 all 25 toys; a stop refuses the order instead of shipping part of the mining. The threshold depends on a recorded WO-014 token total, and this subject's cost table carries no token figures for any order.",
+            "evidence": null,
+            "reopenWhen": "The fan-outs' token sum passes WO-014's recorded order total before thirteen chapters are mapped, or WO-014's order token total is unavailable when the fan-out starts."
+          },
+          {
+            "criterionId": "criterion:4",
+            "kind": "known-issue",
+            "reason": "The six new toys' tools are 'typed from the work' for sources that are not in the public domain, and the nineteen toys enter 'in full' from the run's folder. c4 checks only that each public-work tool carries a definition and a source string, and c7 limits verbatim maxims to the public text. No criterion confirms that definitions drawn from non-public works are the owner's own words, or that the Art of War translation used is in the public domain.",
+            "evidence": null,
+            "reopenWhen": "Any toys.json record or tool definition is observed carrying verbatim text from a work not in the public domain, or the recorded Art of War source is a translation still under copyright."
+          }
+        ]
+      }
+    ],
+    "planVerdict": "aligned-with-findings",
+    "holdReasons": []
+  },
+  "holds": [],
+  "dispositions": [],
+  "localTerms": {
+    "status": "present"
+  },
+  "receiptHash": "sha256:6073950df3889ab89b1b67edb6c6e23d284647be0c7f6698d8dbd1a82fa7d260"
+}
