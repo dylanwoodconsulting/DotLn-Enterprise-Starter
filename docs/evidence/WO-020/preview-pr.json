@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-020",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 11,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/11",
+  "title": ":sparkles: feat: add concept studies for the movement tools and the study record",
+  "baseBranch": "main",
+  "headBranch": "feat/movement-concept-studies",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "not filed: the verifying session recorded no publish call in VER-001 or the host-qualification record; the repository profile's --draft form is the route that produces a pushed commit with HEAD and index unchanged, and that is what the object store and the forge show",
+      "exitCode": null,
+      "headAndIndexUnchanged": true,
+      "session": "the verifying Codex session, after verification-result pass (VerificationCompleted 2026-10-31T23:38:31Z)"
+    },
+    "headSha": "a2f0a612a9bcb2473630ba43266ec39cee378173",
+    "parent": "eb9eeec80eec0cfacbd973351222cab39fdc7919",
+    "tree": "4e6b3e4b93d6c5226e31f2e819006d0723911dbf",
+    "committedAt": "2026-10-31T23:38:46Z",
+    "openedAt": "2026-10-31T23:39:50Z",
+    "body": "the bytes of docs/evidence/WO-020/PULL-REQUEST.md above the helper's Change table",
+    "verification": {
+      "id": "VER-001",
+      "path": "docs/verifications/WO-020/VER-001.md",
+      "verdict": "pass",
+      "treeHash": "4e6b3e4b93d6c5226e31f2e819006d0723911dbf"
+    },
+    "targetGate": "target-gate:613ffe24-4881-4255-9466-65ca82543fd8 at the same tree, recorded 2026-10-31T23:24:30.646Z",
+    "source": "read back by the final review from the forge (gh pr view, gh run list, the GraphQL review-thread count) and the local object store (git cat-file of the draft commit); docs/evidence/WO-020/host-qualification.md records the gap in the verifying session's filing",
+    "notes": [
+      "The draft was opened after verification-result pass on the verified tree; final publication reuses this branch and pull request.",
+      "The title workflow added the configured gitmoji to the plain conventional title."
+    ]
+  },
+  "finalReview": {
+    "observedAt": "2026-11-01T00:02:00Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "a2f0a612a9bcb2473630ba43266ec39cee378173",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 41253465493,
+        "workflow": "CI",
+        "createdAt": "2026-10-31T23:39:54Z",
+        "conclusion": "success"
+      },
+      {
+        "id": 41253465621,
+        "workflow": "Pull request title",
+        "createdAt": "2026-10-31T23:39:54Z",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T23:39:56Z",
+        "completedAt": "2026-10-31T23:51:53Z",
+        "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41253465493/job/124691611772"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T23:39:58Z",
+        "completedAt": "2026-10-31T23:43:40Z",
+        "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41253465493/job/124691611526"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-10-31T23:39:56Z",
+        "completedAt": "2026-10-31T23:40:07Z",
+        "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41253465621/job/124691611888"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the final publish reuses this pull request, pushes the reviewed commit and the records commit over the draft and marks it ready"
+  }
+}
