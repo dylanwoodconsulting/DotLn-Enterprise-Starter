@@ -200,7 +200,31 @@ No product document changed, so the document ceilings are unchanged.
 
 ## Process cost
 
-Recorded at the handoff.
+The session's own counters, read with `node scripts/harness.mjs usage` at
+09:20:56Z (source `claude-transcript-message-usage`, scope dispatch):
+21,063,302 tokens in total, of which 20,606,288 were cached input, 308,458
+cache writes and 148,352 output; dollar cost unknown (the counter is
+unavailable). The workers' counters are under §Validation. Launches: three
+Codex reviewers and one refuter, four of the cap of 20; the harness observed
+the one Claude subagent and has 19 remaining.
+
+Wall-clock, about 43 minutes from the dispatch at 08:38Z to the receipt:
+
+| Moment | Time |
+| --- | --- |
+| Dispatch | 08:38Z |
+| Planning branch opened | 08:52Z |
+| Subject committed (`422980f`) | 09:02Z |
+| Reviews, launch to return | 09:03Z to 09:10Z |
+| Integrated subject (`07e972d`) | 09:13Z |
+| Cost table (`11460c0`) | 09:13Z |
+| Refuter dispatched | 09:14Z |
+| Receipt (`3cceb1a`) | 09:20Z |
+
+The planning branch opened 14 minutes after the dispatch: the session read
+the WO-021 records, and the five corrections arrived in that window. Most
+of the remaining time went to the reviews and the refuter, each about 7
+minutes.
 
 ## Validation
 
@@ -271,7 +295,110 @@ Recorded:
 After the fixes, `--sync` minted C2 and a third batch
 (`docs/intake/followups-apply-2026-11-01-second-c.json`, revision
 `4b2ea28e…`) disposed it and disposed D031's row again with the corrected
-reason.
+reason. The integrated subject was committed as `07e972d`, and the cost
+table, refreshed with `npm run meta -- --plan-cost`, as `11460c0`.
+
+### The refutation
+
+The refuter was one fresh `dotln-worker`, the default type because the
+dispatch line named no Fable worker. It was spawned in the background at
+09:14Z with the canonical prompt from `npm run plan -- refute`, saved to the
+session scratch: pass scope, 59,167 bytes of JSON at base `11460c0`,
+judging WO-022 with the six later orders carried by hash. The worker was
+told to write its frozen JSON and a one-line statement to two files there
+and to read nothing else.
+
+Its statement names what it read: the prompt file in full, through local
+Python reads, and a listing of file names in the scratch directory; no
+repository file, planning document, receipt, intake, web page or prior
+judgment. It used no model tools and no subagent, made no repository or Git
+write, and checked its result against the schema with a local script. It
+judged WO-022 and the plan `aligned-with-findings`, with eight known-issue
+findings and no hold: no trap observation records a worsening, and the
+subject supplies no vision passage id. Worker time was 5 min 31 s, with
+101,816 tokens and 10 tool uses.
+
+The two files were copied unchanged into ignored intake
+(`docs/intake/refutation-2026-11-01-second/`; the result's SHA-256 is
+`fccfae24…`, the statement's `816ba373…`). The receipt helper filed the pair
+at the first attempt:
+
+- Receipt `2026-11-01-planning-f26bb956de3abb86-017`, worker type
+  `dotln-worker`, scope `pass`, six orders carried.
+- 6 min 17 s from dispatch to filing.
+- Judged subject `sha256:abcfdcbc…`, equal to the committed and workspace
+  subjects.
+- The gate after it: 17 receipts, 17 passes, no advisory.
+- The helper's commit: `3cceb1a`.
+
+No disposition was needed, because there was no hold.
+
+### Known issues from this pass's receipt
+
+The worker's eight findings, each with the pass's reading and its
+reopening observation. The receipt freezes WO-022, so any duty these add is
+the executor's, within the order's authority, or a later pass's amendment.
+Seven of them concern text this pass did not touch; the sixth concerns the
+Cost line's refutation count, which it did.
+
+1. **Criterion 3's substitution allowance reads three ways against
+   criterion 2's.** Text this pass did not touch. The executor records any
+   substitution in its decisions and says whether it touches the eight
+   stream patterns. Reopen when the decisions file records a substitution
+   that touches one of the eight, or a VER report or final review records a
+   dispute over how many substitutions criteria 2 and 3 allow.
+2. **"The Preflight line ran before the first full gate" (criterion 9) is a
+   condition on the order's history.** This is the kit's handoff sequence
+   (§Preflight before the full gate), carried by every target order's gate
+   criterion, and the Preflight line names the commands. Reopen when the
+   first full gate is recorded before the Preflight line, or a waiver or
+   override is recorded for criterion 9.
+3. **Criterion 8's rounds are unbounded and end only on the operator's
+   word.** That is the operator's eye doctor test as the operator record
+   states it: the rounds continue until the operator says the process is
+   done, and a preferred candidate is never acceptance. Reopen when
+   `comparisons.md` records more than two rounds after the first pair, or
+   WO-022's operator directions exceed WO-021's four.
+4. **Criterion 7's grep floor passes on the bare word, and the analogy rule
+   joins every later author's read set.** The criterion names the rule as
+   well as the grep, so the verifier reads it. Reopen when `catalog-rules.md`
+   grows across WO-022 to WO-024 with no rule removed or merged while an
+   author's recorded read bytes rise, or a VER report passes criterion 7 on
+   the count alone.
+5. **Records in `libs/shared/catalog` name modules in
+   `libs/features/tools` by path, and the studies ship as bundled data
+   before the app's store exists.** The same reading as the first pass's
+   WO-021 (e) and WO-022 (c): the committed data is the recorded stopgap
+   until the mining store exists (WS-001 rule 23), and `studies:check`
+   matches each record's executable and drawing modules (WO-021's VER-001,
+   criterion 2). Reopen when a rename under `libs/features/tools/src/lib/studies/`
+   leaves a record's path unresolved while `studies:check` exits 0, or EIP
+   study data exists both in the catalog and in the app's store after
+   WO-018.
+6. **Most of the order's process cost is unknown, and three refutations are
+   paid on it.** This pass paid the third for the removal. Reopen when a
+   fourth is paid before WO-022 executes without a changed observation, or
+   its measured per-worker tokens exceed WO-020's and WO-021's.
+7. **WO-022 names no critical-path gate.** The concept batches sit at the
+   front of the sequence as side work between road orders, by the
+   operator's direction of 2026-10-30 (the operator record's "Depth in
+   batches", capture SHA-256
+   `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`).
+   Reopen when a declared critical path excludes WO-022 while
+   WO-008 stays behind it, or WO-016's design cites no WO-022 study.
+8. **The order is anchored on WO-020's record, check, families and
+   rules.** Its reopening observation has occurred: WO-021's merge changed
+   the study model (the family discriminator), the `studies:check` script,
+   the families (`marbles`) and `catalog-rules.md`, while WO-022's text
+   still says "as WO-020 leaves them". The executor works on the integrated
+   base: step 1 fast-forwards to the target's `main` with WO-021's merge,
+   the hard edge names the discriminator and the `marbles` family, and the
+   first pass's receipt reading (WO-022 (b)) already had the executor read
+   the documents as WO-021 leaves them. Criterion 4's "as WO-020's criterion
+   4" names the evidence format, which WO-021 kept. The pointers are frozen
+   by this receipt. Reopen when WO-022's executor or verifier records a
+   conflict between WO-020's and WO-021's versions of the record, check,
+   families or rules.
 
 ## Requests to core
 
