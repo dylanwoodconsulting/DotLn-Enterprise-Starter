@@ -43,3 +43,36 @@ worktree's HEAD and index did not move, which is the helper's `--draft` behaviou
 invocation, the hook's decision and the host's decision were not filed and are unknown to this
 review; the tree it pushed is the verified tree, and [the preview record](preview-pr.json) carries
 what this review read back.
+
+## The final publish
+
+From this launchpad worktree's root, after `final-review-result pass`, `target-records` (the
+target's records commit `0243ea0de2c4cade661ab7e4224ce4f95dcda133` over the reviewed commit
+`77dc9e545e5310ea6e20af6da0b445f754960e9e`) and the instance records commit
+`75307635d643e8dba2963d78cc43befd52295254`, the registered helper ran from this review's Claude Code
+session with the `DOTLN_LAUNCHPAD` prefix the dispatch briefing named (its value was this worktree's
+absolute root, written here as `<worktree>`), chained after that commit in one shell line and with its output redirected to a file in the session's scratchpad:
+
+```sh
+DOTLN_LAUNCHPAD=<worktree> node scripts/worktree.mjs publish WO-020 --target-worktree --branch feat/movement-concept-studies --title "feat: add concept studies for the movement tools and the study record" --body-file docs/final-reviews/WO-020/PR.md
+```
+
+It exited 0. Its one output line: pushed `feat/movement-concept-studies` at `0243ea0d…` over the
+draft `a2f0a612…` and marked pull request 11 on `github.com/DylanBWood/DotLn-Angular` ready. The
+session's pre-tool hook admitted the call; its admission line is not part of the command's output
+and was not surfaced in the tool result. The host ran the command under the session's permission
+mode with no refusal.
+
+A read-only forge read at 2026-11-01T00:24:44Z confirmed `isDraft` false, head `0243ea0d…` on
+`main`, the force push at 00:24:00Z and the ready event at 00:24:01Z, merge state `BLOCKED` while
+the new CI run (41256580793, started 00:24:04Z) was in progress, the title run (41256580797)
+passed, and no review, comment or thread. The published body is PR.md's bytes followed by the
+helper's Change table and Target checks section; the four record paths in the generated Change
+table are the body's only launchpad identifiers, which the kit judges apart from the reviewed
+prose. [The preview record](preview-pr.json) holds the read.
+
+A second read at 2026-11-01T00:37:48Z, after waiting on CI, read `checks` (00:24:06Z to 00:37:29Z)
+and `visual` (to 00:26:28Z) passed in run 41256580793 and `title` passed in run 41256580797, all
+on head `0243ea0d…`, merge state `CLEAN`, and still no review, comment or thread; the preview
+record holds both reads. The records branch publish follows this section's commit, so its result is
+in the review session's closing message rather than here.

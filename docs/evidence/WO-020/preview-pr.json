@@ -88,5 +88,122 @@
     "comments": 0,
     "reviewThreads": 0,
     "routed": "nothing to route; the final publish reuses this pull request, pushes the reviewed commit and the records commit over the draft and marks it ready"
+  },
+  "finalPublish": {
+    "publication": "ready",
+    "publisher": {
+      "command": "DOTLN_LAUNCHPAD=<worktree> node scripts/worktree.mjs publish WO-020 --target-worktree --branch feat/movement-concept-studies --title \"feat: add concept studies for the movement tools and the study record\" --body-file docs/final-reviews/WO-020/PR.md",
+      "invocation": "from the launchpad worktree root, chained after the instance records commit in one shell line, output redirected to a session scratch file",
+      "exitCode": 0,
+      "output": "Pushed feat/movement-concept-studies at 0243ea0de2c4cade661ab7e4224ce4f95dcda133 over draft a2f0a612a9bcb2473630ba43266ec39cee378173 and marked pull request #11 on github.com/DylanBWood/DotLn-Angular ready.",
+      "hookDecision": "admitted; the admission line was not surfaced in the tool result",
+      "hostDecision": "ran under the session's permission mode with no refusal",
+      "session": "the final review's Claude Code session, claude-fable-5-1, after final-review-result pass (2026-11-01) and target-records",
+      "environment": "DOTLN_LAUNCHPAD set to this worktree's absolute root, written here as <worktree>"
+    },
+    "headSha": "0243ea0de2c4cade661ab7e4224ce4f95dcda133",
+    "commits": [
+      {
+        "sha": "77dc9e545e5310ea6e20af6da0b445f754960e9e",
+        "subject": "feat: add concept studies for the movement tools and the study record",
+        "tree": "4e6b3e4b93d6c5226e31f2e819006d0723911dbf"
+      },
+      {
+        "sha": "0243ea0de2c4cade661ab7e4224ce4f95dcda133",
+        "subject": "docs: record reviewed change and validation",
+        "note": "the target-records commit: the work order, decisions.md, VER-001.md and FINAL-001.md under docs/dotln/"
+      }
+    ],
+    "overDraft": "a2f0a612a9bcb2473630ba43266ec39cee378173",
+    "forcePushedAt": "2026-11-01T00:24:00Z",
+    "readyAt": "2026-11-01T00:24:01Z",
+    "instanceRecordsCommit": "75307635d643e8dba2963d78cc43befd52295254",
+    "body": "the bytes of docs/final-reviews/WO-020/PR.md followed by the helper's Change table and Target checks section",
+    "observations": [
+      {
+        "observedAt": "2026-11-01T00:24:44Z",
+        "state": "OPEN",
+        "isDraft": false,
+        "headSha": "0243ea0de2c4cade661ab7e4224ce4f95dcda133",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "BLOCKED",
+        "note": "CI in progress on the new head",
+        "workflowRuns": [
+          {
+            "id": 41256580793,
+            "workflow": "CI",
+            "createdAt": "2026-11-01T00:24:04Z",
+            "status": "in_progress",
+            "conclusion": null
+          },
+          {
+            "id": 41256580797,
+            "workflow": "Pull request title",
+            "createdAt": "2026-11-01T00:24:04Z",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "reviews": 0,
+        "comments": 0
+      },
+      {
+        "observedAt": "2026-11-01T00:37:48Z",
+        "state": "OPEN",
+        "isDraft": false,
+        "headSha": "0243ea0de2c4cade661ab7e4224ce4f95dcda133",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "CLEAN",
+        "workflowRuns": [
+          {
+            "id": 41256580793,
+            "workflow": "CI",
+            "createdAt": "2026-11-01T00:24:04Z",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 41256580797,
+            "workflow": "Pull request title",
+            "createdAt": "2026-11-01T00:24:04Z",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ],
+        "checks": [
+          {
+            "name": "checks",
+            "workflow": "CI",
+            "status": "COMPLETED",
+            "conclusion": "SUCCESS",
+            "startedAt": "2026-11-01T00:24:06Z",
+            "completedAt": "2026-11-01T00:37:29Z",
+            "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41256580793/job/124700916893"
+          },
+          {
+            "name": "visual",
+            "workflow": "CI",
+            "status": "COMPLETED",
+            "conclusion": "SUCCESS",
+            "startedAt": "2026-11-01T00:24:06Z",
+            "completedAt": "2026-11-01T00:26:28Z",
+            "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41256580793/job/124700916680"
+          },
+          {
+            "name": "title",
+            "workflow": "Pull request title",
+            "status": "COMPLETED",
+            "conclusion": "SUCCESS",
+            "startedAt": "2026-11-01T00:24:16Z",
+            "completedAt": "2026-11-01T00:24:27Z",
+            "url": "https://github.com/DylanBWood/DotLn-Angular/actions/runs/41256580797/job/124700916774"
+          }
+        ],
+        "reviews": 0,
+        "comments": 0,
+        "reviewThreads": 0,
+        "routed": "nothing to route; the pull request is ready for the operator to merge"
+      }
+    ]
   }
 }
