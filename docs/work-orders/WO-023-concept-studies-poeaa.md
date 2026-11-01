@@ -56,8 +56,9 @@ pass may set it to WO-020's merge commit).
 (house rules 7, 8, 15, 17, 23, 24, 25, 26; §The app and its sub-apps,
 §Design direction); `docs/repositories/dotln-angular.md`;
 `docs/product/concept-study.md`; `docs/control/budgets.json` (`subagentCap`);
-the target's `catalog.md` §Studies and `catalog-rules.md` as WO-020 leaves
-them, `docs/dev-reference/architecture/events-and-state.md` and
+the target's `catalog.md` §Studies and `catalog-rules.md` as the target's
+`main` leaves them at activation (WO-020's, with WO-021's and WO-022's
+changes), `docs/dev-reference/architecture/events-and-state.md` and
 `foundation.md`; WO-020's `fan-out.md`.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens

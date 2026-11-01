@@ -381,6 +381,45 @@ After the fixes, `--sync` minted C2 and a third batch
 reason. The integrated subject was committed as `07e972d`, and the cost
 table, refreshed with `npm run meta -- --plan-cost`, as `11460c0`.
 
+### The second round, after the operator's return
+
+The amendment (D4) was committed as `dae49ed`. Before that commit,
+`npm run test:docs` passed 12 tasks and failed the 2 that ask for a receipt
+matching the changed subject. The three reviews then ran again, with
+briefs scoped to the seven orders' changes, beside the orders' prior text,
+in `docs/intake/reviews-2026-11-01-second/round-2/`. They were launched at
+14:12:51Z and all were back at 14:22:13Z (9 min 22 s); each exited 0 and
+stayed read-only.
+
+| Reviewer | Files read | Findings | Input tokens (cached) | Output tokens |
+| --- | --- | --- | --- | --- |
+| Criteria adversary | 50 | 3 (1 medium, 2 low) | 2,421,292 (2,263,808) | 16,557 |
+| Design improver | 31 | 2 (1 medium, 1 low) | 1,340,801 (1,204,224) | 13,110 |
+| Consistency reviewer | 50 | 2 (1 medium, 1 low) | 2,701,134 (2,541,184) | 16,929 |
+
+The adversary found that the three rewritten criteria 3 name concepts
+present in their lists, and that WO-017's readiness clauses agree with its
+zero-patience reading. The consistency reviewer matched every step and
+criterion reference, and the seven, four and four concept memberships.
+
+Self-review, second round: found 7; fixed 7; recorded 0.
+
+- WO-023's and WO-024's Cites still read the catalog documents "as WO-020
+  leaves them" (adversary R2 and R3, improver R2, consistency R1). Both now
+  read the target's `main` at activation. The session's own sweep had
+  missed them because the phrase wraps across two lines.
+- WO-016's role rule would have refused the kit's `unobserved` sentinel,
+  which `recordingSession` in `scripts/lib/off-ramps.mjs` writes when no
+  harness session was observed (adversary R1). The sentinel now leaves
+  `actor.role` absent, in the types and in step 3's test.
+- WO-024's criterion 3 applied the four-record exclusion to `visual: null`
+  as well, which would have made a drawing mandatory for the four (improver
+  R1). The exclusion now covers `executable: null` only.
+- WO-018's refutation count read four, where five earlier receipts (008 to
+  012) judged it (consistency R2). It now reads six, and WO-022's count
+  names this pass's two receipts. A check of every amended order's count
+  against the receipts' judged orders found the others right.
+
 ### The refutation
 
 The refuter was one fresh `dotln-worker`, the default type because the

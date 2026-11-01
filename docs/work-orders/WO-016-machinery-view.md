@@ -124,7 +124,9 @@ generated cards, ideas saved to ignored intake.
   `executor`, `verifier`, `reviewer`, `planner`, `refuter`,
   `release-close` and `operator`, kept from the role the platform's row
   records for its session, `recordingSession.role` in the kit's segment
-  schema at v0.105.0, and absent where the row records none); `SlotId` (`executor`, `verifier`,
+  schema at v0.105.0, and absent where the row records none or records the
+  kit's `unobserved` sentinel, which `recordingSession` in
+  `scripts/lib/off-ramps.mjs` writes when no harness session was observed); `SlotId` (`executor`, `verifier`,
   `repairer`, `reviewer`); `Beat`, `Episode`, `OrderStrip` (beats,
   episodes, anchor, totals of operator and worker minutes, omissions; named a
   strip, not a scene, so that "scene" stays the scene engine's and the
@@ -268,8 +270,9 @@ data-access library; the idea sink and its tooling test; the two documents;
 3. `machinery.ts` types; `control-event-lite-v0.schema.json`;
    `reduce-control-segment.mjs`; `check-record-fixtures.mjs` wired into
    `check:fixtures`; a tooling test that the reducer drops every field
-   outside the list, keeps `recordingSession.role` as `actor.role`, refuses
-   a role outside the named set and refuses an absolute path. Check:
+   outside the list, keeps `recordingSession.role` as `actor.role`, leaves
+   `actor.role` absent for the kit's `unobserved` sentinel, refuses any
+   other role outside the named set and refuses an absolute path. Check:
    `npm run test:tooling` exits 0.
 4. Produce `segments/order-221.json` and `segments/order-226.json` from the
    platform's public segments at a recorded commit; record the commit and

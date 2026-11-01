@@ -55,8 +55,9 @@ pass may set it to WO-020's merge commit).
 (house rules 23, 24, 25, 26; §Design: the Tipping Point taxonomy, §The app
 and its sub-apps, §Design direction); `docs/repositories/dotln-angular.md`;
 `docs/product/concept-study.md`; `docs/control/budgets.json` (`subagentCap`);
-the target's `catalog.md` §Studies and `catalog-rules.md` as WO-020 leaves
-them, and `docs/dev-reference/architecture/concept-mapping.md` (traps,
+the target's `catalog.md` §Studies and `catalog-rules.md` as the target's
+`main` leaves them at activation (WO-020's, with WO-021's and WO-022's
+changes), and `docs/dev-reference/architecture/concept-mapping.md` (traps,
 levels and the five UIFA roles); WO-020's `fan-out.md`.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens
@@ -250,9 +251,10 @@ each.
    that replaces one of the four brings in a record with a mechanism to run,
    which carries its module and spec the same way, and the decisions file
    names it; every other record with `executable` does the same; every
-   record with `executable: null` or `visual: null` carries its reason in
-   the decisions file (the file names each, and names none of the four or
-   a replacement of one); and `npx nx test tools` exits 0 with those specs
+   record with `executable: null` carries its reason in the decisions file
+   (the file names each, and names none of the four or a replacement of
+   one); every record with `visual: null` carries its reason there too (the
+   file names each); and `npx nx test tools` exits 0 with those specs
    counted in its output.
 4. `docs/evidence/WO-024/fan-out.md`, `review.md` and `README.md` as WO-020's
    criterion 4, the review record also confirming per study that no passage
