@@ -17,7 +17,7 @@ executor work plus the fixed cycle; unknown until run. Context bytes: WS-001
 C1 and §5.2 to §5.3 read at the run's folder, the records and replay
 libraries, this order, about 170 KB. Commands added in the target:
 `npm run twin:derive`, `npm run twin:check`. Tokens: unknown until run.
-Steps: 15. Re-mints: none. Refutations paid: five (receipts 008 to 011 on the earlier texts; the 2026-10-28 pass's receipt on this one).
+Steps: 15. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-017-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):
@@ -128,10 +128,12 @@ operator has decided: results only, variants kept, nothing held back.
 - **The result fold** (`results.ts`, pure): replays the order on virtual time
   with the twin deciding each dispatch moment and the recorded worker
   durations (completion minus request, per phase, from the copy) following
-  each dispatch. A hand-back is ready at the `recordedAt` of its completion
-  row, the only moment the six-field copy carries; waiting minutes count
-  from that moment to the twin's dispatch, and a dispatch before it is
-  early. The fold yields the virtual close time, the twin's total waiting
+  each dispatch. A hand-back is ready when its phase completes in the
+  replay: the replayed dispatch of that phase plus the phase's recorded
+  duration. Waiting minutes count from that moment to the twin's next
+  dispatch, and a dispatch before it is early. The copy's `recordedAt`
+  values give the durations and the recorded baseline, whose replay puts
+  each completion at its recorded moment. The fold yields the virtual close time, the twin's total waiting
   minutes, the count of dispatches fired before the preceding hand-back
   existed (zero by construction for a patience table, counted so a later
   variant that fires on a timer is judged), and the same three figures for
@@ -149,10 +151,15 @@ operator has decided: results only, variants kept, nothing held back.
   follows a hand-back with no verdict.
 - **The registry check** (`tools/scripts/twin/check-variants.mjs`,
   `npm run twin:check`): every manifest id has its file and every file is in
-  the manifest; the manifest at `HEAD` contains every id the manifest at the
-  order's base contains (read with `git show <base>:…`); a removed id fails
-  the check, and so does an absent or unreadable base commit or base
-  manifest: the check never passes vacuously. An absent base commit is
+  the manifest; the working tree's manifest, committed or not, contains
+  every id the manifest at the order's base contains (read with
+  `git show <base>:…`), and each such id's variant file is byte-identical
+  to its file at the base, so a removed id and an overwritten old variant
+  both fail. A base commit that exists but holds no manifest is the
+  introducing order's case (this order's): the base's set is empty and the
+  check judges the working tree alone. An absent base commit, or a base
+  manifest that exists and does not parse, fails: the check never passes
+  vacuously. An absent base commit is
   refused with its own message naming the commit and the fetch that supplies
   it (`git fetch origin <base>` in a shallow or fresh clone), distinct from a
   removed id's; the registered clone the gate runs in is full, so the gate
@@ -206,7 +213,12 @@ library with kits; the menu item; the two documents; `docs/evidence/WO-017/`.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-017.
+1. Base guard read with WO-014-D001, for WO-017: in the target clone, after
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1.
 2. Generate `libs/shared/twin-model` (`scope:shared,type:util`),
    `libs/features/twin` (`scope:dotln,type:feature`) and
    `libs/features/twin-data-access` (`scope:dotln,type:data-access`) with
@@ -217,11 +229,12 @@ library with kits; the menu item; the two documents; `docs/evidence/WO-017/`.
    the 1,110.3-minute span and that the first gap follows a hand-back with
    no verdict. Check: `npm run test:tooling` exits 0.
 4. The three variants, the registry, the manifest and `check-variants.mjs`
-   with `npm run twin:check`; a tooling test removes an id from a copy of
-   the manifest and asserts the check fails, and a second runs the check
-   against an absent base commit and asserts it fails with the message
-   naming the commit and the fetch. Check: `npm run twin:check` exits 0;
-   `npm run test:tooling` exits 0.
+   with `npm run twin:check`; tooling tests assert that the check fails when
+   an id is removed from a copy of the manifest, fails when an old variant's
+   file changes under its id and filename, fails against an absent base
+   commit with the message naming the commit and the fetch, and passes
+   against a base commit that holds no manifest. Check: `npm run twin:check`
+   exits 0; `npm run test:tooling` exits 0.
 5. `results.ts` with marble specs: the baseline replay reproduces the
    recorded close within one virtual second and the operator's 227.0
    waiting minutes; the patience-table variant yields its own three figures;
@@ -231,8 +244,9 @@ library with kits; the menu item; the two documents; `docs/evidence/WO-017/`.
    library's virtual scheduler with the resolution parameter; recorded in
    `twin.md` with the frame cap observed and the statement that the twin
    shares the replay clock's tick contract and defines readiness as the
-   completion row. Check: a spec flushes a full WO-221 replay at one
-   frame per recorded second.
+   replayed completion (the replayed dispatch plus the phase's recorded
+   duration). Check: a spec flushes a full WO-221 replay at one frame per
+   recorded second.
 7. `TwinStore` with `withPersistedState` under `dotln-angular.twin`. Check:
    the persisted-state spec over a fake storage asserts the key prefix and
    no other write.
@@ -282,16 +296,19 @@ each.
 2. `npx nx test twin-model` exits 0 with marble specs asserting that the
    baseline replay with the recorded dispatches reproduces the recorded close
    time within one virtual second, that waiting minutes and early fires are
-   counted from each hand-back's completion row, that the patience-table variant's three result figures are computed, that the derivation script's figures equal the fold's baseline figures, and that a flip changes the twin's figures and lane and nothing on the recorded lane.
+   counted from each hand-back's replayed completion (the replayed dispatch
+   plus the phase's recorded duration), that a variant which moves a dispatch
+   moves the following completion with it, that the patience-table variant's three result figures are computed, that the derivation script's figures equal the fold's baseline figures, and that a flip changes the twin's figures and lane and nothing on the recorded lane.
 3. `grep -rliE "hit ?rate|hits/n|tolerance band" libs/shared/twin-model/src libs/features/twin/src libs/features/twin-data-access/src --include='*.ts'`
    prints nothing, and the result cell's `vm` type has no field named `hits`
    (a spec asserts the field set: virtual close, waiting minutes, early
    fires, each with its baseline).
 4. `variants.json` lists at least three variants with files that exist,
-   `npm run twin:check` exits 0, a tooling test proves a manifest with a
-   removed id fails the check, and a second tooling test proves the check
-   fails, not passes, when the base commit is absent, with a message naming
-   the commit and the fetch to run.
+   `npm run twin:check` exits 0, and tooling tests prove that the check fails
+   on a manifest with a removed id, fails on an old variant's file changed
+   under its id and filename, fails, not passes, when the base commit is
+   absent, with a message naming the commit and the fetch to run, and passes
+   against a base commit that holds no manifest (this order's own case).
 5. `grep -rlE "JSON.parse|new Function|eval\(" libs/shared/twin-model/src --include='*.ts' | grep -v spec` prints nothing and a spec asserts every registry entry's module exports `describe` as a function (no interpreted model), and the export spec type-checks a generated variant against `TwinVariant`.
 6. The persisted-state spec asserts every key written starts with `dotln-angular.twin` and no other storage, cookie or network write occurs, and a second spec seeds that key with a value that does not parse and with one naming an unknown variant and asserts the facade yields the first registry entry with no flips;
    `grep -rlE "from 'node:|from \"node:|require\(" libs/shared/twin-model/src libs/features/twin/src libs/features/twin-data-access/src --include='*.ts' | grep -v spec`
@@ -305,7 +322,7 @@ each.
    horizontal overflow at 360, 768 and 1440.
 8. `docs/dev-reference/architecture/twin.md` records the scheduler chosen
    (the replay library's), the frame cap observed and that readiness is the
-   hand-back's completion row, `docs/ai-reference/twin-rules.md` states that
+   hand-back's replayed completion, `docs/ai-reference/twin-rules.md` states that
    a variant is never deleted and that the twin is judged by results only
    (`grep -c "judged by results" docs/ai-reference/twin-rules.md` and `grep -c "never by agreement" docs/ai-reference/twin-rules.md` are each at least 1),
    `package.json`'s `dependencies` keys equal the base's, and the production
@@ -340,9 +357,9 @@ the fold, and until then the safe default is the three figures as written.
 `BasePaths.Twin` now carries its `routePermissions` entry and the e2e signs
 in first; `twin:check` fails on an absent base. From receipt 009 (the second
 2026-10-24 pass's refutation), carried into this text by the 2026-10-25
-pass: readiness is the completion row's `recordedAt`, the only moment the
-copy carries, so a zero-patience variant dominates the three figures by
-construction and the fourth result stays the operator's to name (candidate
+pass: a zero-patience variant dominates the three figures by construction
+(readiness as the Design now defines it, below) and the fourth result
+stays the operator's to name (candidate
 C4 of the second 2026-10-24 pass; the fold, step 6, criteria 2 and 8);
 `twin:check` names the commit and the fetch on an absent base (step 4,
 criterion 4); variants are lazy chunks under the budget (the model, criterion
@@ -355,7 +372,18 @@ build, because the production build carries no provider (its item (a), step
 base and the gate's clone is full (b, already in the text); criterion 8's
 grep names the two phrases that matter, "judged by results" and "never by
 agreement" (c); the layout is chosen through the rounds of rule 25 as
-revised on 2026-10-28.
+revised on 2026-10-28. From the 2026-11-01 pass's three reviews (its
+adversary R1, R2 and R7, its design improver R3 and R4), carried into this
+text by the 2026-11-01 second pass: step 1's base guard is an ancestor
+check and the fast-forward; the registry check reads the working tree's
+manifest rather than `HEAD`'s, which is the base until the final review
+commits; it admits a base that holds no manifest as this order's
+introducing case and fails an old variant's file changed under its id; and
+readiness is the replayed completion, because the recorded `recordedAt`
+alone disagrees with the completions a moved dispatch reschedules. The
+zero-patience reading above still holds: such a variant dispatches at each
+replayed completion, waits zero minutes and closes at the recorded
+durations' sum.
 This order activates only on a launchpad whose starter carries core WO-221's
 `--draft` form; the draft pull request and its workflow runs are a
 final-review obligation read from `docs/evidence/WO-017/preview-pr.json`,

@@ -21,9 +21,9 @@ catalog rules as WO-019 leaves them, the maps README, design B §3 and
 executor; the mappers read one public-domain text. Commands added in the
 target: `npm run toys:check`; `npm run catalog:check` and `catalog:join`
 already cover the new files. Tokens: unknown until run; recorded per worker.
-Steps: 14. Re-mints: none. Refutations paid: three (the 2026-10-24 pass's
-receipt on the first text, the 2026-10-26 pass's on the rewrite, the
-2026-10-28 pass's on this one).
+Steps: 14. Re-mints: none. Refutations paid: five (receipts 008 to 012, on
+the texts before the 2026-11-01 second pass's authorized amendment,
+WO-018-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):
@@ -257,7 +257,12 @@ screenshots.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-018; read `node
+1. Base guard read with WO-014-D001, for WO-018: in the target clone, after
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1; read `node
    scripts/harness.mjs usage <session>` and record the subagent remainder;
    record in the decisions file the operator's ruling of 2026-10-26 that the
    run's toy designs and the works they reference lie outside the clean room
@@ -294,9 +299,16 @@ screenshots.
    harness kept no journal rows for that worker.
 8. The run's nineteen toys in full in `toys.json` from `toys.jsonl` and the
    design anchors (origin `run-2026-10-22`), The Twenty and the patience
-   lane marked built with their routes. Check: `npm run toys:check` exits 0
-   over 25 records and a spec asserts the two built toys link to
-   `BasePaths.Scene` and `BasePaths.Twin`.
+   lane marked built with their routes; `toys:check` gains a `--source
+   <toys.jsonl>` mode that verifies the source's SHA-256 and that the
+   records of origin `run-2026-10-22` carry exactly the source's ids with
+   every field the Design maps one to one equal to its source value, and a
+   tooling test proves that a dropped imported toy and a changed mapped
+   value each fail it. Check: `npm run toys:check` exits 0 over 25 records,
+   `npm run toys:check -- --source <the run's toys.jsonl>` prints PASS with
+   its command and output recorded in `docs/evidence/WO-018/README.md`, and
+   a spec asserts the two built toys link to `BasePaths.Scene` and
+   `BasePaths.Twin`.
 9. `ChildPaths.Toys` and `ChildPaths.Toy`, `toys-page`, `toy-page`, the
    facets, the Tools home item, `tools.toys.*` i18n keys, stories `Shelf`
    (the selected form), `ToyBuilt`, `ToyDesigned`, and one story per shelf
@@ -367,7 +379,15 @@ each.
    scene type, a question, a metric and at least one tool id that exists in
    the catalog; every `public-work` tool carries a `definition` and a
    `source` string naming its work and chapter or concept; a tooling test
-   proves a toy naming an unknown tool id fails the check.
+   proves a toy naming an unknown tool id fails the check; and the 19
+   records of origin `run-2026-10-22` are the run's nineteen toys carried in
+   full: `npm run toys:check -- --source <the run's toys.jsonl>` prints PASS
+   against the file whose SHA-256 is
+   `411e486e086218e9988e26c2f290dd302115518b3c049279fef3793e3efea0fb` (the
+   same ids, every field the Design maps one to one equal to its source
+   value; command and output recorded in `docs/evidence/WO-018/README.md`),
+   and a tooling test proves that a dropped imported toy and a changed
+   mapped value each fail that mode.
 5. `docs/evidence/WO-018/README.md` lists at most twelve workers across the
    two fan-outs with their labels and one-line statements, each saying no
    quarantine file was read, with the launchpad's read observation beside
@@ -401,7 +421,12 @@ each.
 
 **Known issues and carry-ins:** The base line is provisional and publishes
 right under starter v0.96.1 (the merge-base publish of core WO-230); a pass
-may set it to the predecessor's merge commit. The six new toys are designed,
+may set it to the predecessor's merge commit. From the 2026-11-01 pass's
+criteria adversary (its R1 and R9), carried into this text by the
+2026-11-01 second pass: step 1's base guard is an ancestor check and the
+fast-forward, and the nineteen imported toys are checked for parity with
+the run's `toys.jsonl` (step 8, criterion 4), because an origin count and
+non-empty fields admit invented replacements. The six new toys are designed,
 not built; building one is a later member the operator picks from the shelf
 (candidate C5). The commander-and-squad scene the tactics serve is a later
 toy. A transform kind the enum lacks stays `untyped` with the proposal in

@@ -5488,7 +5488,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D3 and Requests to core item 1: a waiver recorded without the operator's word has no retraction route in the kit (scripts/resume.mjs correct takes no waiver); the request goes to core in this pass's block.",
+          "reopenWhen": "A starter release carries a waiver retraction, or another order records a direct edit of a control segment.",
+          "targets": [],
+          "at": "2026-11-01T08:58:07.858Z"
+        }
+      ]
     },
     {
       "id": "FUP-6f24c707f401ecac",
@@ -5503,7 +5512,102 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D1: WO-022's step 2 and criterion 9 are removed, not moved. The residue declaration they repeated is WO-021's, on both mains since its merge (DotLn-Angular #12, launchpad #48); the kit judges what the criterion checked: the release close refuses undeclared leftover material and an unclean worktree, and final-review-result pass refuses an unclean target after the reviewed commit (reviewedTargetSubject).",
+          "reopenWhen": "A planning pass writes a release close's or final review's own judgment into an order's acceptance criteria again, or WO-022's close is refused on residue the kit's checks did not report before the merge.",
+          "targets": [],
+          "at": "2026-11-01T08:58:07.846Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D1, as corrected by its reviews: WO-022's step 2 and criterion 9 are removed, not moved. WO-021 settled the declaration they repeated (on both mains since DotLn-Angular #12 and launchpad #48); the kit judges the rest at the phases that own it: final-review-result pass refuses an unclean target after the reviewed commit (reviewedTargetSubject), and the release close refuses undeclared leftover material and an unclean worktree, which its --dry-run runs without effects after the merge.",
+          "reopenWhen": "A planning pass writes a release close's or a final review's own judgment into an order's acceptance criteria again, or WO-022's release close is refused on undeclared residue.",
+          "targets": [],
+          "at": "2026-11-01T09:12:56.403Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-56e567e35faa01c7",
+      "key": "candidate:docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::f6b605291c7623ca6df2dcd51497a127f617ebf1a6915f614b3448aa386e89c3",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "2c343d634ab184386ce8142063f00f3c5a78c587472f056247e9c3df08b8ad22",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes.",
+          "summary": "- **C1 WO-008's criterion 1 and WO-017's registry check read `HEAD` for the order's own changes.** WO-008 lists its changed files with `git diff --name-only $(git merge-base HEAD origin/main)..HEAD`, and WO-017's check compares \"the manifest at `HEAD`\" with the base's. `HEAD` is the base until the final review commits, so at verification the first list is empty and the second comparison is the base against itself: both pass while checking nothing. In each case the fix is to read the working tree against the base (`git diff --name-only <base>` together with `git ls-files --others --exclude-standard`, and the working tree's manifest). Not in this pass: the defect is outside the dispatch's subj",
+          "missing": false
+        },
+        {
+          "hash": "343b9119dcb6a28fcd5aa4bd26c680a8f9ac0119c699ea27ee655815b6419871",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes.",
+          "summary": "- **C1 WO-008's criterion 1 and WO-017's registry check read `HEAD` for the order's own changes.** WO-008 lists its changed files with `git diff --name-only $(git merge-base HEAD origin/main)..HEAD`, and WO-017's check compares \"the manifest at `HEAD`\" with the base's. `HEAD` is the base until the final review commits, so at verification the first list is empty and the second comparison is the base against itself: both pass while checking nothing. In each case the fix is to read the working tree against the base (`git diff --name-only <base>` together with `git ls-files --others --exclude-standard`, and the working tree's manifest). Recorded at the first handoff and put to the operator; sett",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) §NoOps C1: WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes, which checks nothing before the final review's commit; outside the dispatch's subject, put to the operator rather than widened.",
+          "reopenWhen": "The operator asks, a pass amends WO-008 or WO-017, or before either activates.",
+          "targets": [],
+          "at": "2026-11-01T09:01:07.431Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D4, on the operator's return (capture SHA-256 b756e11b…): WO-008's criterion 1 reads its file list from the working tree against the base, and WO-017's registry check reads the working tree's manifest.",
+          "reopenWhen": "A verifier or reviewer of WO-008 or WO-017 reports either clause as unjudgeable on the uncommitted candidate.",
+          "targets": [],
+          "at": "2026-11-01T14:10:47.438Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-fa19568f71ca91fd",
+      "key": "candidate:docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::186ca5d001f5c7a991be3c7b057316f8740643504ed60154ab76239971e21138",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "49d89628da47ecb13d92e2c6dc8ad17fc14f1b29e2d5e38c687be5ac9683d3e6",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 WO-022's criterion 3 does not bind each marble spec to its module.",
+          "summary": "- **C2 WO-022's criterion 3 does not bind each marble spec to its module.** It asks for a module with a marble spec beside it, counted in `npx nx test tools`, but not that the spec imports the module and asserts the depicted example's emissions, as WO-021's criterion 3 does; a spec over an unrelated observable would pass (this pass's criteria adversary, R1). Not in this pass: outside the dispatch's subject, put to the operator with C1. Reopen when the operator asks, when a pass amends WO-022 again, or when WO-022's verification or final review finds a marble spec that does not exercise its module.",
+          "missing": false
+        },
+        {
+          "hash": "d8e9ec1e2623a23e2f64c97f824d4f01eff5fbc523a63b3f0a57a843d99518b1",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 WO-022's criterion 3 does not bind each marble spec to its module.",
+          "summary": "- **C2 WO-022's criterion 3 does not bind each marble spec to its module.** It asks for a module with a marble spec beside it, counted in `npx nx test tools`, but not that the spec imports the module and asserts the depicted example's emissions, as WO-021's criterion 3 does; a spec over an unrelated observable would pass (this pass's criteria adversary, R1). Recorded at the first handoff with C1; settled by D4, which binds each spec to its module in WO-022 and WO-024.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) §NoOps C2: WO-022's criterion 3 asks for a marble spec beside each executable module but not that the spec exercises it (the pass's criteria adversary, R1); outside the dispatch's subject, put to the operator with C1.",
+          "reopenWhen": "The operator asks, a pass amends WO-022 again, or WO-022's verification or final review finds a marble spec that does not exercise its module.",
+          "targets": [],
+          "at": "2026-11-01T09:12:56.392Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D4, on the operator's return (capture SHA-256 b756e11b…): WO-022's criterion 3 names the seven stream transformations among its twenty and binds each marble spec to its module, and WO-024's criterion 3 binds each spec to its module.",
+          "reopenWhen": "WO-022's or WO-024's verification or final review finds a spec that does not exercise its module.",
+          "targets": [],
+          "at": "2026-11-01T14:10:47.450Z"
+        }
+      ]
     }
   ]
 }

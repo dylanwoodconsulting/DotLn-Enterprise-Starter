@@ -19,7 +19,7 @@ Removes nothing. Wall-clock: about 8 to 12 hours of executor work plus the
 fixed cycle; unknown until run. Context bytes: WS-001 house rule 17, the
 events and state documents, the client library's documentation, this order,
 about 160 KB. Commands added in the target: none. Tokens: unknown until run.
-Steps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order, and the 2026-10-28 pass's receipt judges this text.
+Steps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order and the 2026-10-28 pass's receipt judged its text before the 2026-11-01 second pass's authorized amendment (WO-008-D001), which the next planning pass's refutation judges.
 **Nomination provenance:** the 2026-10-18 angular-workstream planning pass
 ([planning document](../planning/angular-workstream-2026-10-18.md) §5 and §8),
 on the operator's direction of 2026-10-17 (ignored intake capture, SHA-256
@@ -214,7 +214,12 @@ provider; the matrix tests; the two documents; `docs/evidence/WO-008/`.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-008.
+1. Base guard read with WO-014-D001, for WO-008: in the target clone, after
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1.
 2. Choose and install the client library (`dependencies`) and `jose`
    (`devDependencies`); record the decision with the alternatives and the
    license. Check: `npm ls` exits 0 and
@@ -285,9 +290,12 @@ then the target gate plain and review once each.
 
 1. `grep -rlE "localStorage|sessionStorage" libs/shared/auth/src --include='*.ts' | grep -v spec`
    prints nothing, and the same grep over the files under `apps/dotln/src`
-   this order adds or changes
-   (`git diff --name-only $(git merge-base HEAD origin/main)..HEAD -- apps/dotln/src`)
-   prints nothing; `grep -rc "console.log" libs/shared/auth/src --include='*.ts' | grep -v ":0"`
+   this order adds or changes, read from the working tree so that the list
+   holds before the final review commits it
+   (`git diff --name-only $(git merge-base HEAD origin/main) -- apps/dotln/src`
+   for the changed files and
+   `git ls-files --others --exclude-standard -- apps/dotln/src` for the new
+   ones), prints nothing; `grep -rc "console.log" libs/shared/auth/src --include='*.ts' | grep -v ":0"`
    prints nothing; and an e2e step after the sign-in reads every key of `localStorage` and `sessionStorage`, every object store of every IndexedDB database, every Cache Storage entry and every cookie, and asserts that no value matches the JWT shape (three dot-separated base64url segments) and that no value
    equals or contains any token the mocked provider issued in that session
    (the handlers keep the tokens they issued behind a test-only knob the e2e
@@ -335,7 +343,7 @@ then the target gate plain and review once each.
 
 **Evidence gate:** the gate rows, the recorded command outputs, `docs/evidence/WO-008/README.md`, and `docs/evidence/WO-008/walkthrough.md` with its screenshots.
 
-**Known issues and carry-ins:** The base line is provisional and publishes right under starter v0.96.1 (the merge-base publish of core WO-230; WO-013's fix dispatch is its first use in this fork); a pass may set it to the predecessor's merge commit. Starter v0.94.0 (update #23 of 2026-10-24) carries
+**Known issues and carry-ins:** The base line is provisional and publishes right under starter v0.96.1 (the merge-base publish of core WO-230; WO-013's fix dispatch is its first use in this fork); a pass may set it to the predecessor's merge commit. From the 2026-11-01 pass's criteria adversary (its R1) and the 2026-11-01 second pass's own reading, carried into this text by that second pass: step 1's base guard is an ancestor check and the fast-forward, because the inherited exact-tip guard stops an order whose pin is behind `main`; and criterion 1 reads its file list from the working tree, because `HEAD` is the base until the final review commits, so the earlier `merge-base..HEAD` list was empty at verification and its grep checked nothing. Starter v0.94.0 (update #23 of 2026-10-24) carries
 core's fix for the plan gate's moved-record reader, so criterion 7's
 `npm run test:docs` clause is judged as written and no waiver is carried.
 Starter v0.96.1's plan gate no longer advises on this order's own launchpad record paths (core's answer of 2026-10-24, item 1); they stay as the kit names them and the publish command's body file must not name them. From receipt 008 (the 2026-10-24 pass's refutation), carried

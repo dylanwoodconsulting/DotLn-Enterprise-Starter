@@ -4,6 +4,18 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-01 — planning pass: the second pass of the day, criterion 9 out of WO-022 (operator dispatch of 2026-11-01)
+
+Dispatch: a `planning:` request for a quick pass on WO-021's verification
+failure on criterion 9, which the day's first pass had written, followed by
+five messages correcting the session's reading of it, captured verbatim in
+ignored intake (`docs/intake/notes/planning-2026-11-01-second.md`, SHA-256
+`121e2f1dbf2e7e5d76362114eca493c4d07a9899ee039a6a786a281c3917cb30`). The
+record is [the planning document](../planning/criterion-9-phase-2026-11-01.md);
+this heading registers the pass for the plan tooling. The pass filed no order
+and amended one; no idea enters the ledger, because the pass was not an
+ideation dispatch.
+
 ## 2026-11-01 — planning pass: starter v0.105.0 opened first, core's answers of 2026-10-31 read, the release close's seven blocked closes answered in the next pair, the three reviews before the refuter (operator dispatch of 2026-10-31)
 
 Dispatch: a `planning:` request for a standard pass with the latest upstream,

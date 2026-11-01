@@ -19,7 +19,7 @@ hours of executor work plus the fixed cycle; unknown until run. Context
 bytes: WS-001 §The app and its sub-apps, design A §1 and §1.6, the UI
 vision §4 and V7 read at the run's folder, the fork's role skill stamps,
 this order, about 190 KB. Commands added in the target: `npm run idea-sink`.
-Tokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: five (receipts 008 to 011 on the earlier texts; the 2026-10-28 pass's receipt on this one).
+Tokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-016-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):
@@ -116,11 +116,17 @@ generated cards, ideas saved to ignored intake.
 
 - **Types** (`libs/shared/models/src/lib/machinery.ts`, `type:models`):
   `ControlEventLite { ordinal, type, recordedAt, workOrderId, actor?: {
-  harness, model, effort, mode? }, verdict?: 'pass' | 'fail' }` and nothing
-  else, the operator's field list (`actor` is one composite object with
-  exactly those keys, declared in the schema with `additionalProperties:
-  false`; a slot label reads its three values as they are, and the reader
-  never splits or derives them); `SlotId` (`executor`, `verifier`,
+  harness, model, effort, mode?, role? }, verdict?: 'pass' | 'fail' }` and
+  nothing else, the operator's field list (`actor` is one composite object
+  with exactly those keys, declared in the schema with
+  `additionalProperties: false`; a slot label reads its three values as
+  they are, and the reader never splits or derives them; `role` is one of
+  `executor`, `verifier`, `reviewer`, `planner`, `refuter`,
+  `release-close` and `operator`, kept from the role the platform's row
+  records for its session, `recordingSession.role` in the kit's segment
+  schema at v0.105.0, and absent where the row records none or records the
+  kit's `unobserved` sentinel, which `recordingSession` in
+  `scripts/lib/off-ramps.mjs` writes when no harness session was observed); `SlotId` (`executor`, `verifier`,
   `repairer`, `reviewer`); `Beat`, `Episode`, `OrderStrip` (beats,
   episodes, anchor, totals of operator and worker minutes, omissions; named a
   strip, not a scene, so that "scene" stays the scene engine's and the
@@ -140,8 +146,10 @@ generated cards, ideas saved to ignored intake.
   implementation hand-back to the executor, a verification completion to the
   verifier, a repair completion to the repairer, a final-review completion
   to the reviewer, every request and the activation to the operator, else
-  `unknown`, and a row whose actor ran as planner, refuter or release-close
-  is an `unknown`-slot beat that names the role, never dropped; gaps from
+  `unknown`, and a row whose `actor.role` is `planner`, `refuter` or
+  `release-close` is an `unknown`-slot beat that names the role, never
+  dropped (the slot table reads `type` and the role reads `actor.role`, so
+  two rows whose other actor labels match are told apart); gaps from
   `recordedAt` differences; a refilled slot's earlier
   occupant kept as a ghost; a `mode: 'subagents'` actor flagged as a colony
   of unknown size); `apply-ideas.ts` (a pure fold of mechanism changes over a
@@ -165,7 +173,8 @@ generated cards, ideas saved to ignored intake.
   writes `{ schema: 'control-event-lite-v0', source: { repository:
   'DylanBWood/DotLn', commit, order }, rows }`, runs `assertScrubbed` over
   every string, each `actor` value included, which must read as a harness,
-  model or effort label (a value carrying `@`, a path separator, a dotted hostname, a run of 32 or more hexadecimal characters or a UUID shape fails), and prints PASS or FAIL without values; the committed fixtures carry the `actor` values the platform's rows recorded (harness, model and effort as observed labels, never a pin); run by hand against the platform's public repository at a recorded commit, as the board fixture was captured; the platform's control segments and its role files are public repositories, so the copies' sources are public, and the fixture's `source` block names the repository.
+  model or effort label, or for `actor.role` as one of the role names the
+  type lists (a value carrying `@`, a path separator, a dotted hostname, a run of 32 or more hexadecimal characters or a UUID shape fails), and prints PASS or FAIL without values; the committed fixtures carry the `actor` values the platform's rows recorded (harness, model and effort as observed labels, never a pin); run by hand against the platform's public repository at a recorded commit, as the board fixture was captured; the platform's control segments and its role files are public repositories, so the copies' sources are public, and the fixture's `source` block names the repository.
   `tools/scripts/check-record-fixtures.mjs` (Ajv against
   `control-event-lite-v0.schema.json` with `additionalProperties: false`,
   plus `assertScrubbed`) wired into `check:fixtures`.
@@ -247,7 +256,12 @@ data-access library; the idea sink and its tooling test; the two documents;
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-016.
+1. Base guard read with WO-014-D001, for WO-016: in the target clone, after
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1.
 2. Generate `libs/shared/records` (`scope:shared,type:data-access`),
    `libs/shared/replay` (`scope:shared,type:util`) and
    `libs/features/machinery-data-access` (`scope:dotln,type:data-access`)
@@ -256,8 +270,10 @@ data-access library; the idea sink and its tooling test; the two documents;
 3. `machinery.ts` types; `control-event-lite-v0.schema.json`;
    `reduce-control-segment.mjs`; `check-record-fixtures.mjs` wired into
    `check:fixtures`; a tooling test that the reducer drops every field
-   outside the list and refuses an absolute path. Check: `npm run
-   test:tooling` exits 0.
+   outside the list, keeps `recordingSession.role` as `actor.role`, leaves
+   `actor.role` absent for the kit's `unobserved` sentinel, refuses any
+   other role outside the named set and refuses an absolute path. Check:
+   `npm run test:tooling` exits 0.
 4. Produce `segments/order-221.json` and `segments/order-226.json` from the
    platform's public segments at a recorded commit; record the commit and
    the row counts (16 and 6) in the decisions file. Check: `npm run
@@ -342,9 +358,12 @@ then the target gate plain and review once each.
    operator beats and the seven gaps 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and
    5.9 minutes within one second each, the first following a hand-back with
    no verdict; the WO-226 fold has gaps of 316.0 and 31.7 minutes; an
-   unknown `type` yields an `unknown` beat and a row whose actor is the
-   planner, refuter or release-close role yields an `unknown`-slot beat
-   naming the role; the verifier slot carries one
+   unknown `type` yields an `unknown` beat; two rows of one `type` whose
+   harness, model, effort and mode match, one with `actor.role` `planner`
+   and one with none, fold to an `unknown`-slot beat naming the planner and
+   to the type's slot respectively, and a `refuter` row and a
+   `release-close` row each yield an `unknown`-slot beat naming its role;
+   the verifier slot carries one
    ghost after its refill; and `applyIdeas` refuses a card whose `appliesTo`
    excludes the target with a reason while the scene stays unchanged.
 3. `role-mechanisms.json` lists, for the executor, planner, refuter,
@@ -418,7 +437,14 @@ the verifier recounts the stamp ids independently (criterion 3); a planner,
 refuter or release-close actor is an `unknown`-slot beat naming the role
 (the fold, criterion 2); the scrub fails a run of 32 or more hexadecimal
 characters and a UUID shape (the reducer, criterion 1); the layout is chosen
-through the rounds of rule 25 as revised on 2026-10-28. This order activates only on a launchpad whose
+through the rounds of rule 25 as revised on 2026-10-28. From the 2026-11-01
+pass's criteria adversary (its R4), carried into this text by the
+2026-11-01 second pass: the reduced `actor` dropped any role, so the fold
+could not name a planner, refuter or release-close row; `actor` now keeps
+the row's recorded session role as an enum, and the types, the reducer,
+step 3 and criterion 2 change together. The same pass replaced the
+inherited exact-tip base guard of step 1 with an ancestor check and the
+fast-forward (that pass's adversary R1). This order activates only on a launchpad whose
 starter carries core WO-221's `--draft` form; the draft pull request and its
 workflow runs are a final-review obligation read from
 `docs/evidence/WO-016/preview-pr.json`, never a criterion. `Target release
