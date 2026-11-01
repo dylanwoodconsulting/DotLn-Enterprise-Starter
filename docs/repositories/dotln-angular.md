@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9`, WO-020's merge (#11), 2026-10-31 |
-| Latest target release | `DotLn Angular v0.7.0`, published 2026-11-01 from that merge |
+| Last reviewed target source | `c0e5a36008828ec5b742d6e740efff619f3cedbe`, WO-021's merge (#12), 2026-11-01 |
+| Latest target release | `DotLn Angular v0.8.0`, published 2026-11-01 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -34,7 +34,7 @@ platform's repository.
 The menu has three groups today. **Scene** is the soldier scene at the root
 route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
-shelf, contents and a reading at `/tools/catalog/<tool id>`, forty of its concepts with an authored
+shelf, contents and a reading at `/tools/catalog/<tool id>`, sixty of its concepts with an authored
 study; `/tools` is a home page above it.
 
 The app owns its data and its API. The board keeps the `uifa-board-v1` response
@@ -277,9 +277,10 @@ relations, hooks and verification notes, across six works.
 | The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
 | The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
-| The visual families, `motion`, `timeline` and `marbles`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
-| The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/study-models.ts` |
-| The executable marble examples, their specs, and the contract and spec helper they share | `libs/features/tools/src/lib/studies/rxjs/`, with `marbles.ts` and `marble-testing.ts` beside the examples |
+| The visual families, `motion`, `timeline`, `marbles` and `flow`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
+| The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/eip/`, `libs/features/tools/src/lib/studies/study-models.ts` |
+| The flow builders: `flowModel` for a flow written step by step, `flowFromMarbles` for one drawn from a marble example that runs | `libs/features/tools/src/lib/studies/flow.ts` |
+| The executable marble examples, their specs, and the contract and spec helper they share | `libs/features/tools/src/lib/studies/rxjs/` and `libs/features/tools/src/lib/studies/eip/`, with `marbles.ts` and `marble-testing.ts` beside the RxJS examples |
 | Menu composition | `libs/shared/ui/menu/`, imported as `@dotln-angular/ui/menu` |
 
 `join-maps.mjs` validates all eleven declared source digests before writing and
@@ -298,13 +299,18 @@ regenerated join never touches. Its drawing runs from a pure model of the record
 calling the scene engine where the engine has the behaviour, and a reader can step it, play it on
 command and change its inputs. A stream study's drawing is a marble diagram the `marbles` family
 reads from the same module its spec runs under the TestScheduler, so the drawing and the test cannot
-disagree. Standalone explanations use Angular `@defer` on first expansion:
+disagree. A messaging study's drawing is a `flow`: endpoints are boxes and channels pipes, and its
+messages step along the lines between them. `flowModel` builds it from steps written by hand;
+where the pattern transforms a stream, `flowFromMarbles` builds it from the marble example the
+study's spec runs, and the reader can switch to that run's marble diagram at the same step.
+Standalone explanations use Angular `@defer` on first expansion:
 closed sections create no explanation view, and visited sections keep theirs on
-collapse. The `flow`, `states` and `relations` families land with the batch that needs each. The
+collapse. The `states` and `relations` families land with the batch that needs each. The
 design comparisons and their outcome are in the launchpad's
 [`docs/evidence/WO-019/design/`](../evidence/WO-019/design/),
-[`docs/evidence/WO-020/design/`](../evidence/WO-020/design/) and
-[`docs/evidence/WO-021/design/`](../evidence/WO-021/design/). Menu behavior and its
+[`docs/evidence/WO-020/design/`](../evidence/WO-020/design/),
+[`docs/evidence/WO-021/design/`](../evidence/WO-021/design/) and
+[`docs/evidence/WO-022/design/`](../evidence/WO-022/design/). Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 
@@ -534,6 +540,7 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.6.0` | WO-015 | #9 | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` | 2026-10-30T21:49:17Z |
 | `DotLn Angular v0.6.1` | WO-026 | #10 | `eb9eeec80eec0cfacbd973351222cab39fdc7919` | 2026-10-31T19:15:55Z |
 | `DotLn Angular v0.7.0` | WO-020 | #11 | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` | 2026-11-01T00:54:57Z |
+| `DotLn Angular v0.8.0` | WO-021 | #12 | `c0e5a36008828ec5b742d6e740efff619f3cedbe` | 2026-11-01T09:35:01Z |
 
 | Area | Order |
 | --- | --- |
@@ -547,6 +554,7 @@ here) and in Git. Earlier versions of this profile are in
 | The scene engine and the soldier scene | WO-015 |
 | The study record, the `motion` and `timeline` families and the movement studies | WO-020 |
 | The `marbles` family and the RxJS studies | WO-021 |
+| The `flow` family and the messaging studies | WO-022 |
 
 ### Recovery context
 

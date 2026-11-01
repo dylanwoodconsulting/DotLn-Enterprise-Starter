@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-01",
+  "tool": "Playwright MCP",
+  "configuration": "production",
+  "isolatedContext": "wo022-ver001",
+  "reducedMotion": "reduce",
+  "screenshots": [
+    {
+      "file": "1440-01-eip-count.png",
+      "width": 1425,
+      "height": 1578,
+      "sha256": "b9cd58e27df8e49b480d35790368e92a54dfd1287c762e8ad2ce65d95aaf7b90"
+    },
+    {
+      "file": "1440-02-aggregator-start.png",
+      "width": 688,
+      "height": 2710,
+      "sha256": "6c10f6f47c52116de5d2aafdf1c8b57c5d50cbe65474f08757a3123f2e97cd36"
+    },
+    {
+      "file": "1440-03-aggregator-step-1.png",
+      "width": 688,
+      "height": 780,
+      "sha256": "62a49ba24434e1f13e8f6d7a99e1fe9b84fe2a7ee67f312185e7587065f39986"
+    },
+    {
+      "file": "1440-03-aggregator-step-5.png",
+      "width": 688,
+      "height": 780,
+      "sha256": "3e915f5a51678aabb1b9f190a10b164452e5c9964f8bda248874eed6c8796e16"
+    },
+    {
+      "file": "1440-03-aggregator-step-6.png",
+      "width": 688,
+      "height": 780,
+      "sha256": "ba4a3317fc3e36038046ef2c13622c56f51827e8a10e60ea4abe874b11016967"
+    },
+    {
+      "file": "1440-03-aggregator-step-8.png",
+      "width": 688,
+      "height": 780,
+      "sha256": "76cf2e07288c1ddf51ecf64f52456e3ec29947682f1bbcaad1c955a89e0d4dc7"
+    },
+    {
+      "file": "1440-04-aggregator-expanded.png",
+      "width": 688,
+      "height": 7780,
+      "sha256": "fdc18d5027f62f3d6ac8fc7a18d972901b4c26f1eb2041fcec92b47f2f51c4d2"
+    },
+    {
+      "file": "1440-05-aggregator-marbles.png",
+      "width": 688,
+      "height": 695,
+      "sha256": "c4eef66b3655913ba4199773ca7b1f13be7b1f2dc1d6c70753e4a77c96ba5678"
+    },
+    {
+      "file": "1440-06-publish-subscribe.png",
+      "width": 688,
+      "height": 2744,
+      "sha256": "196ba8b432ba2d775c39dc1d3eb1f2fc35da0be9e4d290e929ed7cf1dba0fa77"
+    },
+    {
+      "file": "1440-07-competing-consumers.png",
+      "width": 688,
+      "height": 2822,
+      "sha256": "b0c4fb33cd0bca7de81882b583b96930d80853b69b13d746d3c8afb447a427a2"
+    },
+    {
+      "file": "1440-08-request-reply.png",
+      "width": 688,
+      "height": 2453,
+      "sha256": "b78ac9431749d7d33a19bb3c7844ded752d34fcb5aaf814805e2af0cc73d0234"
+    },
+    {
+      "file": "1440-09-correlation.png",
+      "width": 688,
+      "height": 2826,
+      "sha256": "2b2bcdd8d90c3b5403dd2a0f6fb59d1df60ec35634a7a1b72d32fd2a01489d0d"
+    },
+    {
+      "file": "360-01-eip-count.png",
+      "width": 345,
+      "height": 2340,
+      "sha256": "9065e91e345ce5e2302716a87c6cba202f1f25d475bc4f1adb4dd812fe5010f8"
+    },
+    {
+      "file": "360-02-aggregator-start.png",
+      "width": 297,
+      "height": 4017,
+      "sha256": "ed281db00317439c62336a7c985915a0e181004cd1f28e7833566ce6b3ebaff7"
+    },
+    {
+      "file": "360-03-aggregator-step-1.png",
+      "width": 297,
+      "height": 768,
+      "sha256": "fad947df835b3d7c97f617372e16353c8ae52ccfd0bbc91517bb27542c850e6d"
+    },
+    {
+      "file": "360-03-aggregator-step-5.png",
+      "width": 297,
+      "height": 768,
+      "sha256": "a27f33ad3fd50ed3f6da60968e3284589d1ddc8907d6a1cfd80849371c823d40"
+    },
+    {
+      "file": "360-03-aggregator-step-6.png",
+      "width": 297,
+      "height": 792,
+      "sha256": "48c01c0747dca82c5c07852c97fa504ee8505a5ec43c75c657fa16a264e2e510"
+    },
+    {
+      "file": "360-03-aggregator-step-8.png",
+      "width": 297,
+      "height": 792,
+      "sha256": "4a3fb33d2cfea87b2a7494076d3a780a01cb820ded500e295e8f853e5c6fb001"
+    },
+    {
+      "file": "360-04-aggregator-expanded.png",
+      "width": 297,
+      "height": 13310,
+      "sha256": "bc5f3937554117444879303e9ab4b5b7489b57a1ed6059e0a7076aff7288888a"
+    },
+    {
+      "file": "360-05-aggregator-marbles.png",
+      "width": 297,
+      "height": 577,
+      "sha256": "7cc5c2f2cc206cb9f69f4e28a231589637f63fa0c13885e2ea62b72ef23f0ed4"
+    },
+    {
+      "file": "360-06-publish-subscribe.png",
+      "width": 297,
+      "height": 3773,
+      "sha256": "7c42a2b2cff64a243bcbed80c878ef50227f503be2a5d75462403985d6fc6ac0"
+    },
+    {
+      "file": "360-07-competing-consumers.png",
+      "width": 297,
+      "height": 3966,
+      "sha256": "4ea299303b1e407b05facf4ec5f8aea8e5442f906ffbeb7c4c37b7c5c2302138"
+    },
+    {
+      "file": "360-08-request-reply.png",
+      "width": 297,
+      "height": 3695,
+      "sha256": "9db3c106e0a2f237d42ae20583aa99bf4174003e5c032b24214d2685b1cb5710"
+    },
+    {
+      "file": "360-09-correlation.png",
+      "width": 297,
+      "height": 4122,
+      "sha256": "3dfa7ffcf1a37c5a8bf663206036aec68f8562a78efd50261f34296891ef6f12"
+    },
+    {
+      "file": "768-01-eip-count.png",
+      "width": 753,
+      "height": 1634,
+      "sha256": "0fa04aab1849227544f407ea112c776046b3956b25e2fa199b35d49110fffc21"
+    },
+    {
+      "file": "768-02-aggregator-start.png",
+      "width": 473,
+      "height": 3042,
+      "sha256": "063927ffec7660f3d7fd14683ce95ff95310a1d550aa91b7c0c08d62cdaab43b"
+    },
+    {
+      "file": "768-03-aggregator-step-1.png",
+      "width": 473,
+      "height": 639,
+      "sha256": "cca718a79ce3efcc3e9b0ecfdee82b0ac1e16a99ada29c2b5a100dd9cab93ffb"
+    },
+    {
+      "file": "768-03-aggregator-step-5.png",
+      "width": 473,
+      "height": 639,
+      "sha256": "58348b92711a2f502f1f79d85b2c641c7b6d9782cc22527890ad43bff057c001"
+    },
+    {
+      "file": "768-03-aggregator-step-6.png",
+      "width": 473,
+      "height": 664,
+      "sha256": "8d07e04393cf4449e8e20c81ec897a033494d6a8eb90a04ed45787b0ebbee701"
+    },
+    {
+      "file": "768-03-aggregator-step-8.png",
+      "width": 473,
+      "height": 664,
+      "sha256": "8c24743dd97c0236952638be54a5788b54d3cd1151229529db9f53e87d089798"
+    },
+    {
+      "file": "768-04-aggregator-expanded.png",
+      "width": 473,
+      "height": 9442,
+      "sha256": "a6d57e5e03eb59dca5d97426ce86a9ae689ab734125613189a6b6520bd813cd4"
+    },
+    {
+      "file": "768-05-aggregator-marbles.png",
+      "width": 473,
+      "height": 606,
+      "sha256": "48c0401b05e811de5e8e71882b5cb0cdf028b91ec7161b8e605061a9b684d34b"
+    },
+    {
+      "file": "768-06-publish-subscribe.png",
+      "width": 473,
+      "height": 2989,
+      "sha256": "53f6b77ff9bdfe48878b61cec91f53302bf02898e293fc2c4db5fefdcfa10db8"
+    },
+    {
+      "file": "768-07-competing-consumers.png",
+      "width": 473,
+      "height": 3064,
+      "sha256": "bd1ebdbc0e9422b5459a0c79395f2517e0439153d2b81e902c5d29acb39cb57e"
+    },
+    {
+      "file": "768-08-request-reply.png",
+      "width": 473,
+      "height": 2814,
+      "sha256": "4069158b6b58d2463c9a3ec4c1326a771586bfebfca91d0591c002bf00c21ca9"
+    },
+    {
+      "file": "768-09-correlation.png",
+      "width": 473,
+      "height": 3146,
+      "sha256": "2d82f0b64e4cecf1d15654343b7173929b3dff42a122f9711294b39060d58f66"
+    }
+  ]
+}
