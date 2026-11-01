@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `6268de9fc3cae84bf66091c1fbcc30d344411cd2`, WO-015's merge (#9), 2026-10-30 |
-| Latest target release | `DotLn Angular v0.6.0`, published 2026-10-30 from that merge |
+| Last reviewed target source | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9`, WO-020's merge (#11), 2026-10-31 |
+| Latest target release | `DotLn Angular v0.7.0`, published 2026-11-01 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in

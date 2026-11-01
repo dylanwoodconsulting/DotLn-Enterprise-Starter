@@ -4,6 +4,24 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-01 — planning pass: starter v0.105.0 opened first, core's answers of 2026-10-31 read, the release close's seven blocked closes answered in the next pair, the three reviews before the refuter (operator dispatch of 2026-10-31)
+
+Dispatch: a `planning:` request for a standard pass with the latest upstream,
+carrying core's answers of 2026-10-31 to the fork's block of its second pass
+of 2026-10-30 and the operator's question why release close keeps failing,
+followed by five later messages (the executor's three independent reviews
+run as Codex workers over every order before the refuter; a question about a
+denied push; and three corrections of the session's handing them a command),
+captured verbatim in ignored intake
+(`docs/intake/notes/planning-2026-10-31.md`, SHA-256
+`79014dd3753f72ad948127e463570edd1446baaec1815e8ebd71c11bd6cb973f`, and
+`docs/intake/notes/planning-2026-10-31-messages.md`, SHA-256
+`b61731507a532d3b6beb91525b2f921cdcbb2e7a2b77a8c7864d51b4f13b7172`). The
+record is [the planning document](../planning/standard-pass-v0-105-0-2026-11-01.md);
+this heading registers the pass for the plan tooling. The pass filed no order
+and amended two; no idea enters the ledger, because the pass was not an
+ideation dispatch.
+
 ## 2026-10-30 — planning pass: the second pass of the day, on starter v0.103.1 (the update first, core's answers of 2026-10-30 read, five concept-study batches and two document quality passes filed at the front of the sequence) (operator dispatch of 2026-10-30, second)
 
 Dispatch: a `planning:` request for a standard pass with the latest upstream,
