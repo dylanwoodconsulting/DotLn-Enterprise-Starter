@@ -272,10 +272,11 @@ each.
 (`4c21c58`, DotLn-Angular #11), set by the 2026-11-01 pass. The target
 close's residue declaration this order once repeated from WO-021's step 2
 is on both `main`s since WO-021's merge (DotLn-Angular #12, launchpad #48),
-and the kit judges what its criterion checked: the release close refuses
+which settled the declaration's checks; the rest of what its criterion
+checked is the kit's at the phases that own it: the release close refuses
 undeclared leftover material and an unclean worktree, and
 `final-review-result pass` refuses an unclean target after the reviewed
-commit; the 2026-11-01 second pass removed the step and its criterion
+commit. The 2026-11-01 second pass removed the step and its criterion
 ([planning document](../planning/criterion-9-phase-2026-11-01.md), D1).
 This order follows
 WO-021 and depends on it (the study model's family discriminator and the

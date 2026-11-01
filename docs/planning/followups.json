@@ -5520,6 +5520,14 @@
           "reopenWhen": "A planning pass writes a release close's or final review's own judgment into an order's acceptance criteria again, or WO-022's close is refused on residue the kit's checks did not report before the merge.",
           "targets": [],
           "at": "2026-11-01T08:58:07.846Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D1, as corrected by its reviews: WO-022's step 2 and criterion 9 are removed, not moved. WO-021 settled the declaration they repeated (on both mains since DotLn-Angular #12 and launchpad #48); the kit judges the rest at the phases that own it: final-review-result pass refuses an unclean target after the reviewed commit (reviewedTargetSubject), and the release close refuses undeclared leftover material and an unclean worktree, which its --dry-run runs without effects after the merge.",
+          "reopenWhen": "A planning pass writes a release close's or a final review's own judgment into an order's acceptance criteria again, or WO-022's release close is refused on undeclared residue.",
+          "targets": [],
+          "at": "2026-11-01T09:12:56.403Z"
         }
       ]
     },
@@ -5544,6 +5552,30 @@
           "reopenWhen": "The operator asks, a pass amends WO-008 or WO-017, or before either activates.",
           "targets": [],
           "at": "2026-11-01T09:01:07.431Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-fa19568f71ca91fd",
+      "key": "candidate:docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::186ca5d001f5c7a991be3c7b057316f8740643504ed60154ab76239971e21138",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "49d89628da47ecb13d92e2c6dc8ad17fc14f1b29e2d5e38c687be5ac9683d3e6",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 WO-022's criterion 3 does not bind each marble spec to its module.",
+          "summary": "- **C2 WO-022's criterion 3 does not bind each marble spec to its module.** It asks for a module with a marble spec beside it, counted in `npx nx test tools`, but not that the spec imports the module and asserts the depicted example's emissions, as WO-021's criterion 3 does; a spec over an unrelated observable would pass (this pass's criteria adversary, R1). Not in this pass: outside the dispatch's subject, put to the operator with C1. Reopen when the operator asks, when a pass amends WO-022 again, or when WO-022's verification or final review finds a marble spec that does not exercise its module.",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) §NoOps C2: WO-022's criterion 3 asks for a marble spec beside each executable module but not that the spec exercises it (the pass's criteria adversary, R1); outside the dispatch's subject, put to the operator with C1.",
+          "reopenWhen": "The operator asks, a pass amends WO-022 again, or WO-022's verification or final review finds a marble spec that does not exercise its module.",
+          "targets": [],
+          "at": "2026-11-01T09:12:56.392Z"
         }
       ]
     }
