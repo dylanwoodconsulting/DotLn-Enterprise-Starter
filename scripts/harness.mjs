@@ -17,6 +17,7 @@ import {
   harnessInstallation,
 } from "./lib/harness.mjs";
 import { findLaunchpad } from "./lib/config.mjs";
+import { judgeRunningNode } from "./lib/node-engines.mjs";
 import {
   activeGateRuns,
   beginGateRun,
@@ -39,6 +40,13 @@ import {
   measureHarnessUsage,
 } from "../packages/skeleton/dist/src/harness-host.js";
 
+// Emit stays open on any Node, because bootstrap runs it. Check and evidence
+// can report a pass, so they refuse a Node these scripts do not declare.
+function requireDeclaredNode() {
+  const runtime = judgeRunningNode();
+  if (!runtime.admitted) throw new Error(runtime.message);
+}
+
 async function optionalCurrentSession(root, sessionId) {
   try {
     const { currentHarnessSessionReport } =
@@ -54,7 +62,7 @@ async function optionalCurrentSession(root, sessionId) {
 }
 
 const usage =
-  "usage: harness bounded [--budget-bytes <reduced-byte-budget>] -- <command> [args...] | harness emit|check [--loadout contributor] [--profile id] [--out dir] | harness emit|check|remove --target worktree [--runtime-root launchpad] [--profile target-worker-claude|target-worker-codex] | harness evidence [--stop|--fail|--wait [--timeout <seconds>]] | harness lanes | harness usage <session> | harness read-output <path> [--offset <byte>] [--length <bytes>] | harness prune [--apply] | harness writer --show | harness writer --release [--force]";
+  "usage: harness bounded [--budget-bytes <reduced-byte-budget>] [--timeout-seconds <1..21600>] -- <command> [args...] | harness emit|check [--loadout contributor] [--profile id] [--out dir] | harness emit|check|remove --target worktree [--runtime-root launchpad] [--profile target-worker-claude|target-worker-codex] | harness evidence [--stop|--fail|--wait [--timeout <seconds>]] | harness lanes | harness usage <session> | harness read-output <path> [--offset <byte>] [--length <bytes>] | harness prune [--apply] | harness writer --show | harness writer --release [--force]";
 try {
   const root = harnessRoot(process.cwd());
   const [action, ...args] = process.argv.slice(2);
@@ -102,15 +110,19 @@ try {
     console.log(scratch.path);
   } else if (action === "begin") {
     const [session, role, flag, file] = args;
+    const drivenOrder =
+      role === "router" && /^WO-\d{3}$/.test(flag ?? "") ? flag : undefined;
     if (
       !session ||
       !role ||
-      (flag && !["--adopt-current", "--adopt-file"].includes(flag)) ||
+      (flag &&
+        !drivenOrder &&
+        !["--adopt-current", "--adopt-file"].includes(flag)) ||
       args.length > (flag === "--adopt-file" ? 4 : 3) ||
       (flag === "--adopt-file" && !file)
     )
       throw new Error(
-        "usage: harness begin <session> <role> [--adopt-current|--adopt-file <authored-paths.json>]",
+        "usage: harness begin <session> <role> [--adopt-current|--adopt-file <authored-paths.json>|WO-NNN for a router]",
       );
     const adopted =
       flag === "--adopt-file"
@@ -120,7 +132,7 @@ try {
       throw new Error("Authorship adoption must be an explicit path array");
     console.log(
       JSON.stringify({
-        ...beginHarnessSession(root, session, role, adopted),
+        ...beginHarnessSession(root, session, role, adopted, drivenOrder),
         ...(process.env.CODEX_THREAD_ID || process.env.COPILOT_AGENT_SESSION_ID
           ? { currentSession: await optionalCurrentSession(root, session) }
           : {}),
@@ -203,26 +215,30 @@ try {
       throw new Error(
         "wait timeout must be between 0 h 0 min and 1 h 0 min (the --timeout argument is in seconds)",
       );
-    const started = activeGateRuns(root);
+    // A worker in a target worktree waits for its launchpad's gate.
+    const gateRoot = process.env.DOTLN_LAUNCHPAD
+      ? realpathSync(process.env.DOTLN_LAUNCHPAD)
+      : root;
+    const started = activeGateRuns(gateRoot);
     const runIds = started.map((run) => run.runId);
     const deadline = Date.now() + timeout * 1000;
     let active = started;
     while (active.length && Date.now() < deadline) {
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 250);
-      active = activeGateRuns(root);
+      active = activeGateRuns(gateRoot);
     }
     if (active.length) {
       console.log(JSON.stringify({ run: null }));
       process.exitCode = 2;
     } else {
-      const treeHash = gateTreeHash(root);
+      const treeHash = gateTreeHash(gateRoot);
       // Every runner gate records a structural companion row after its own
       // row, at the same timestamp. The wait reports the run's own row; a
       // tree whose only rows are companions has no run row.
-      const row = readGateChecks(root, treeHash).findLast(
+      const row = readGateChecks(gateRoot, treeHash).findLast(
         (entry) => entry.checkId !== "structural",
       );
-      const outcome = latestGateOutcome(root, treeHash, runIds);
+      const outcome = latestGateOutcome(gateRoot, treeHash, runIds);
       const observedAfterStart =
         !runIds.length ||
         (row &&
@@ -273,6 +289,14 @@ try {
         throw new Error(
           "harness evidence accepts no override other than --fail",
         );
+      requireDeclaredNode();
+      // Its records live under the root it judges. A target worktree is not a
+      // launchpad, and a record left there would move the target's gate identity.
+      const launchpad = process.env.DOTLN_LAUNCHPAD;
+      if (launchpad && realpathSync(launchpad) !== root)
+        throw new Error(
+          "harness evidence judges the launchpad; run it from there, not from a target worktree",
+        );
       const active = beginGateRun(root, "node scripts/harness.mjs evidence");
       let treeHash = gateTreeHash(root);
       let outcome = "no-row";
@@ -316,6 +340,7 @@ try {
       }
     } else {
       if (!["emit", "check", "remove"].includes(action)) throw new Error(usage);
+      if (action === "check") requireDeclaredNode();
       const options = {};
       for (let index = 0; index < args.length; index += 2) {
         if (
