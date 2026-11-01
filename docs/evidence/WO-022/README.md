@@ -224,3 +224,14 @@ none of these. The two InformIT addresses are the same book page, one with `and`
 | https://camel.apache.org/components/latest/eips/transactional-client.html | 200 | transactional-client |
 | https://docs.spring.io/spring-integration/reference/transactions.html | 200 | transactional-client |
 | https://docs.particular.net/transports/transactions | 200 | transactional-client |
+
+## Where the records went
+
+After the final review passed on 2026-11-01, `target-records` moved `decisions.md`, the
+verification report and the final review into the target's `docs/dotln/` with its records commit
+`5f7726370cae58c6ab1f0befdd67ebfc0fe3b117`, so the decisions this directory's records cite (D001 to
+D034) are read there, and the verifier's one link to D031 points at that commit. The final review's
+own session is under [walkthrough/reviewer/](walkthrough/reviewer/), beside the executor's and the
+verifier's screenshots, and [preview-pr.json](preview-pr.json) records the draft and the final
+publication of pull request 13.
+

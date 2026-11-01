@@ -112,4 +112,4 @@ contradiction was reproduced.
 Expected: distinguish the verifier-directed pause from status messages sent to both roles. Repair
 the four passages together, retaining the executor's status exchange and ongoing work. No original
 criterion is broken and there is no baseline behavior to regress: the study is new. The named
-follow-up and reopening condition are [WO-022-D031](decisions.md#wo-022-d031).
+follow-up and reopening condition are [WO-022-D031](https://github.com/DylanBWood/DotLn-Angular/blob/5f7726370cae58c6ab1f0befdd67ebfc0fe3b117/docs/dotln/evidence/WO-022/decisions.md#wo-022-d031).
