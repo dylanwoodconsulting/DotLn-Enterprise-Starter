@@ -86,7 +86,11 @@ import {
   createReleaseFixtureContext,
   releaseCases,
 } from "./lib/release-fixtures.mjs";
-import { completeCoverage, suiteEnvironment } from "./lib/suite-evidence.mjs";
+import {
+  completeCoverage,
+  suiteEnvironment,
+  withoutDrivenContext,
+} from "./lib/suite-evidence.mjs";
 import {
   CONFINED_PARTIAL_CHECK,
   OUTSIDE_CONFINEMENT,
@@ -103,6 +107,7 @@ import {
 } from "./lib/generated-artifacts.mjs";
 export { STRUCTURAL_TASKS };
 import { findLaunchpad } from "./lib/config.mjs";
+import { judgeRunningNode } from "./lib/node-engines.mjs";
 import {
   productReadEnvironment,
   productReadObservations,
@@ -240,6 +245,12 @@ export const machinerySources = {
     "scripts/fixtures/copilot-probe-hook.mjs",
     "scripts/lib/subagent-probe.mjs",
     "scripts/fixtures/subagent-probe-hook.mjs",
+    "scripts/lib/agent-identity-probe.mjs",
+    "scripts/lib/target-worktree-fixture.mjs",
+    "scripts/test-target-publication-fixture.mjs",
+    "scripts/test-beacon-fixture.mjs",
+    "scripts/test-target-worktree.fixture-inputs.json",
+    "scripts/fixtures/agent-identity-probe-hook.mjs",
     "scripts/lib/authority-probe.mjs",
     "scripts/fixtures/authority-effect.mjs",
     "scripts/test-authority-probe.mjs",
@@ -251,6 +262,7 @@ export const machinerySources = {
     "packages/skeleton/src/worker-transport.ts",
   ],
   "harness-fixtures": [
+    "scripts/build.mjs",
     "scripts/lib/planning-document.mjs",
     "scripts/lib/off-ramps.mjs",
     "scripts/test-dispatch-bound.mjs",
@@ -293,6 +305,27 @@ export const machinerySources = {
     "packages/skeleton/src/gate-evidence.mjs",
     "packages/skeleton/src/runtime-inputs.mjs",
     "scripts/test-harness.mjs",
+    "scripts/test-drive.mjs",
+    "scripts/drive.mjs",
+    "scripts/fixtures/drive-live.mjs",
+    "scripts/lib/drive-diagnostics.mjs",
+    "scripts/lib/drive-evidence.mjs",
+    "scripts/lib/drive-process.mjs",
+    "scripts/lib/drive-prompts.mjs",
+    "scripts/lib/drive-route.mjs",
+    "scripts/lib/github-repository.mjs",
+    "scripts/lib/drive-session.mjs",
+    "scripts/lib/drive-stream.mjs",
+    "scripts/lib/drive-transport.mjs",
+    "scripts/lib/drive-worker.mjs",
+    "scripts/lib/host-resources.mjs",
+    "scripts/lib/process-budget.mjs",
+    "scripts/lib/release-tags.mjs",
+    "scripts/lib/order-worktree-grants.mjs",
+    "scripts/lib/order-worktrees.mjs",
+    "scripts/lib/target-worktree-fixture.mjs",
+    "scripts/lib/target-worktrees.mjs",
+    "scripts/lib/helpers.mjs",
     "scripts/test-runner.mjs",
     "scripts/lib/harness-prune.mjs",
     // Prune usage retention follows preservation's collision names (WO-171).
@@ -325,6 +358,7 @@ export const machinerySources = {
     "packages/skeleton/src/loadouts/",
   ],
   harness: [
+    "scripts/lib/node-engines.mjs",
     "scripts/lib/host-lanes.mjs",
     "scripts/lib/bounded-command.mjs",
     "scripts/lib/dispatch-bound.mjs",
@@ -371,6 +405,8 @@ export const machinerySources = {
   ],
   "harness-evidence": recordedSources["harness"],
   "plan-refutation": [
+    "scripts/docs-check.mjs",
+    "scripts/lib/front-page-scope.mjs",
     "scripts/lib/planning-document.mjs",
     "scripts/lib/gate-evidence.mjs",
     "scripts/lib/gate-reuse.mjs",
@@ -476,6 +512,7 @@ export const machinerySources = {
     "scripts/lib/document-gate-stubs.mjs",
     "scripts/lib/document-failures.mjs",
     "scripts/lib/evidence-jsonl.mjs",
+    "scripts/lib/node-engines.mjs",
     "scripts/check-registrations.mjs",
     "scripts/test-gate-deadlines.mjs",
     "scripts/test-release-fixtures.mjs",
@@ -593,6 +630,8 @@ export const machinerySources = {
     "packages/skeleton/fixtures/wo185-role-baseline.json",
     "packages/skeleton/fixtures/wo216-role-baseline.json",
     "packages/skeleton/fixtures/wo221-role-baseline.json",
+    "packages/skeleton/fixtures/wo192-role-baseline.json",
+    "packages/skeleton/fixtures/wo192-integration-role-baseline.json",
     "packages/skeleton/fixtures/wo217-role-efficiency-baseline.json",
     "scripts/test-helper-reuse.mjs",
     "scripts/lib/helpers.mjs",
@@ -701,7 +740,7 @@ const protection = {
   "authority-evidence":
     "authority evidence reproduces the registered boundary claims",
   "harness-fixtures":
-    "writer, gate, planning, agent-budget and outside-write refusals preserve their boundaries",
+    "driven routing and writer, gate, planning, agent-budget and outside-write refusals preserve their boundaries",
   harness: "installed hooks and role text match the generated harness bundle",
   "harness-context":
     "role read contracts resolve and remain within cold-start bounds",
@@ -724,7 +763,7 @@ const protection = {
   declarations: "declared suite and copied fixture inputs cover direct imports",
   generated:
     "generated records and installed harness bytes are current before suites start",
-  host: "host memory pressure admits suites only at a normal pressure level",
+  host: "suites start only on a Node inside the package.json engines range and at a normal host memory pressure level",
   "sync-fixtures":
     "regeneration follows dependencies, preserves manual authority and changes no current artifact",
   "runner-fixtures":
@@ -1148,7 +1187,18 @@ export const suites = [
   {
     ...shell("resume", "scripts/test-resume.sh"),
     kit: "core-only: core legacy lifecycle and timing observations WO-030",
+    args: ["--fixtures-only"],
+    preflight: true,
+    protects:
+      "synthetic lifecycle transitions pass before product suites start",
+  },
+  {
+    ...shell("resume-docs", "scripts/test-resume.sh"),
+    kit: "core-only: core legacy lifecycle and timing observations WO-030",
+    args: ["--documents-only"],
     document: true,
+    protects:
+      "recorded legacy lifecycle and timing observations retain their bytes and meaning",
   },
   nodeTests("launchpad", "scripts/test-launchpad-update.mjs", {
     args: [
@@ -1410,6 +1460,8 @@ export const suites = [
     preflight: true,
   }),
   nodeTests("harness-fixtures", "scripts/test-harness.mjs", {
+    args: ["scripts/test-drive.mjs"],
+    fileConcurrency: 1,
     kit: "core-only: Entropy Reducer baseline history and package sources",
     group: "hook-heavy",
     exclusive: true,
@@ -1643,7 +1695,7 @@ export function executeSuite(
       capacity: recordedHostLaneCapacity(hostDirectory),
     });
   let env = row.probe
-    ? { ...(row.executionEnvironment ?? process.env) }
+    ? withoutDrivenContext(row.executionEnvironment ?? process.env)
     : suiteEnvironment(
         row.executionEnvironment ?? process.env,
         row.gateContext,
@@ -2259,6 +2311,7 @@ export async function scheduleSuites(
     reused = new Map(),
     keepGoing = false,
     lightTasks = lightSuiteNames(),
+    structuralOrder = STRUCTURAL_TASKS,
   } = {},
 ) {
   validateSuites(table);
@@ -2465,7 +2518,7 @@ export async function scheduleSuites(
     .filter((row) => row.structural || (row.name === "format" && row.preflight))
     .sort(
       (a, b) =>
-        STRUCTURAL_TASKS.indexOf(a.name) - STRUCTURAL_TASKS.indexOf(b.name),
+        structuralOrder.indexOf(a.name) - structuralOrder.indexOf(b.name),
     );
   for (const row of structural) {
     onActiveChange([row.name]);
@@ -3136,13 +3189,20 @@ async function runGateChecks(
   }
   const judgeDispatchBound =
     !only && !document && !machinery && !confinedPartial;
+  // A runtime outside the declared range fails on whatever it meets first:
+  // Node 22.2.0 stops at the declarations task and never reaches the host
+  // task. The host task's refusal names the cause, so it leads, and no other
+  // task nor the stale-runtime build runs on that runtime. Inside the range it
+  // stays last: the dispatch bound counts a selection only after host
+  // admission, so an earlier structural failure is not charged as a run.
+  const outsideRange = !judgeRunningNode(process.version, repo).admitted;
   // Compile once when needed: a stale runtime is rebuilt before the reuse
   // lookup and the subject capture, so an ordinary package edit reaches the
   // suites instead of a refusal to run npm run sync first. The compiled
   // output lies outside the code identity. A stale installed harness is
   // reported, never installed here: live hooks change only through the
   // explicit sync step.
-  if (!confinedPartial)
+  if (!confinedPartial && !outsideRange)
     for (const { exitCode } of compileStaleRuntime(repo))
       console.log(
         `compiled the stale runtime before the subject was captured${exitCode ? ` (the build exited ${exitCode}; the structural check judges it)` : ""}`,
@@ -3481,6 +3541,9 @@ async function runGateChecks(
       },
       reused,
       keepGoing,
+      structuralOrder: outsideRange
+        ? ["host", ...STRUCTURAL_TASKS.filter((name) => name !== "host")]
+        : STRUCTURAL_TASKS,
       onActiveChange(names) {
         writeFileSync(`${peerFile}.tmp`, JSON.stringify({ tasks: names }));
         renameSync(`${peerFile}.tmp`, peerFile);
@@ -3974,6 +4037,10 @@ if (isMainModule(import.meta.url)) {
   try {
     process.exitCode = (await runGate()).exitCode;
   } catch (error) {
+    // A Node far below the range can throw during gate startup, before any
+    // task, so the host task cannot name the cause; this handler does.
+    const runtime = judgeRunningNode();
+    if (!runtime.admitted) console.error(runtime.message);
     console.error(error.message);
     process.exitCode = 1;
   }

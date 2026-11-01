@@ -1,4 +1,14 @@
-import { delimiter } from "node:path";
+import { delimiter, dirname } from "node:path";
+
+// A driven worker's context belongs to that worker: a process that inherited it
+// would judge its fixtures as driven and charge their spawns to the live drive.
+export function withoutDrivenContext(env) {
+  const clean = { ...env };
+  delete clean.DOTLN_DRIVEN_WORKER;
+  delete clean.DOTLN_DRIVE_DEADLINE_AT;
+  delete clean.DOTLN_DRIVE_PARENT_PID;
+  return clean;
+}
 
 export function suiteEnvironment(env = process.env, gateContext) {
   // Offline fixture execution omits proxy credentials and unrelated session
@@ -25,7 +35,7 @@ export function suiteEnvironment(env = process.env, gateContext) {
     "PATHEXT",
   ]);
   const child = Object.fromEntries(
-    Object.entries(env).filter(
+    Object.entries(withoutDrivenContext(env)).filter(
       ([name]) =>
         (names.has(name) ||
           /^(?:LC_|NODE_|npm_config_|NPM_CONFIG_|DOTLN_|GIT_|XDG_)/.test(
@@ -47,11 +57,18 @@ export function suiteEnvironment(env = process.env, gateContext) {
   // override must not redirect them into that session's live checkout.
   delete child.DOTLN_LAUNCHPAD;
   // Nested npm scripts prepend the same tool directories again. Keep the first
-  // occurrence of each exact entry: executable precedence, relative entries,
-  // the current-directory entry and paths that may be created later all remain.
-  // Repeated failed exec searches are especially costly under a process sandbox.
-  if (typeof child.PATH === "string")
-    child.PATH = [...new Set(child.PATH.split(delimiter))].join(delimiter);
+  // occurrence of each exact entry: below the lead, executable precedence,
+  // relative entries, the current-directory entry and paths that may be created
+  // later all remain. Repeated failed exec searches are especially costly under
+  // a process sandbox. The running Node's whole directory leads, so a suite,
+  // shell script or npm script that finds `node` or `npm` by name stays on the
+  // runtime this gate selected.
+  child.PATH = [
+    ...new Set([
+      dirname(process.execPath),
+      ...(typeof child.PATH === "string" ? child.PATH.split(delimiter) : []),
+    ]),
+  ].join(delimiter);
   // A runner fixture may itself execute under node --test. Its private worker
   // marker would make a nested --test invocation silently omit discovered tests.
   delete child.NODE_TEST_CONTEXT;
