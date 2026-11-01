@@ -17,7 +17,7 @@ executor work plus the fixed cycle; unknown until run. Context bytes: WS-001
 C1 and §5.2 to §5.3 read at the run's folder, the records and replay
 libraries, this order, about 170 KB. Commands added in the target:
 `npm run twin:derive`, `npm run twin:check`. Tokens: unknown until run.
-Steps: 15. Re-mints: none. Refutations paid: six (receipts 008 to 011 and the 2026-10-28 pass's on the earlier texts; the 2026-11-01 second pass's on this one).
+Steps: 15. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-017-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):

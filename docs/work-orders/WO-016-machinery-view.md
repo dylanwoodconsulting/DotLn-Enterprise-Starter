@@ -19,7 +19,7 @@ hours of executor work plus the fixed cycle; unknown until run. Context
 bytes: WS-001 §The app and its sub-apps, design A §1 and §1.6, the UI
 vision §4 and V7 read at the run's folder, the fork's role skill stamps,
 this order, about 190 KB. Commands added in the target: `npm run idea-sink`.
-Tokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: six (receipts 008 to 011 and the 2026-10-28 pass's on the earlier texts; the 2026-11-01 second pass's on this one).
+Tokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-016-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):

@@ -24,7 +24,9 @@ WO-022's changes),
 executor; each author reads two rows, the contract and the public catalog
 pages it cites. Commands added: none. Tokens: unknown until run; recorded
 per worker. Steps: 12. Re-mints: none. Refutations paid: the 2026-10-30
-second pass's receipt and the 2026-11-01 second pass's.
+second pass's receipt, on the text before the 2026-11-01 second pass's
+authorized amendment (WO-023-D001), which the next planning pass's
+refutation judges.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`); the

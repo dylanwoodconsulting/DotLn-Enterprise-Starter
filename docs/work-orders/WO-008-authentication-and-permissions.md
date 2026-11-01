@@ -19,7 +19,7 @@ Removes nothing. Wall-clock: about 8 to 12 hours of executor work plus the
 fixed cycle; unknown until run. Context bytes: WS-001 house rule 17, the
 events and state documents, the client library's documentation, this order,
 about 160 KB. Commands added in the target: none. Tokens: unknown until run.
-Steps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order, the 2026-10-28 pass's receipt judged its earlier text, and the 2026-11-01 second pass's judges this one.
+Steps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order and the 2026-10-28 pass's receipt judged its text before the 2026-11-01 second pass's authorized amendment (WO-008-D001), which the next planning pass's refutation judges.
 **Nomination provenance:** the 2026-10-18 angular-workstream planning pass
 ([planning document](../planning/angular-workstream-2026-10-18.md) §5 and §8),
 on the operator's direction of 2026-10-17 (ignored intake capture, SHA-256

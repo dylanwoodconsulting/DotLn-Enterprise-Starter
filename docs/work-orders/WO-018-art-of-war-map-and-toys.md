@@ -21,8 +21,9 @@ catalog rules as WO-019 leaves them, the maps README, design B §3 and
 executor; the mappers read one public-domain text. Commands added in the
 target: `npm run toys:check`; `npm run catalog:check` and `catalog:join`
 already cover the new files. Tokens: unknown until run; recorded per worker.
-Steps: 14. Re-mints: none. Refutations paid: six (receipts 008 to 012 on
-the earlier texts; the 2026-11-01 second pass's on this one).
+Steps: 14. Re-mints: none. Refutations paid: five (receipts 008 to 012, on
+the texts before the 2026-11-01 second pass's authorized amendment,
+WO-018-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):

@@ -21,9 +21,10 @@ Context bytes: the study record, check, families and rules as the target's
 about 180 KB for the executor; each author reads two rows, the contract and
 the public pattern pages it cites. Commands added: none. Tokens: unknown
 until run; recorded per worker. Steps: 12. Re-mints: none. Refutations paid:
-the 2026-10-30 second pass's receipt, the 2026-11-01 pass's and two of the
-2026-11-01 second pass's (receipt 017 on the text after its D1, and the
-judgment after its D4).
+the 2026-10-30 second pass's receipt, the 2026-11-01 pass's and the
+2026-11-01 second pass's (receipt 017, on the text after its D1; its D4 is
+an authorized amendment, WO-022-D001, which the next planning pass's
+refutation judges).
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`); the
