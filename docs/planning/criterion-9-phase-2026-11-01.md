@@ -310,6 +310,24 @@ the WO-021 records, and the five corrections arrived in that window. Most
 of the remaining time went to the reviews and the refuter, each about 7
 minutes.
 
+The return round took about 32 minutes, from the operator's message at
+13:58Z to the bound amendments at 14:30Z:
+
+| Moment | Time |
+| --- | --- |
+| The operator's message 7 | 13:58Z |
+| Amendment committed (`dae49ed`) | 14:12Z |
+| Second reviews, launch to return | 14:12Z to 14:22Z |
+| Integrated (`80479d7`), cost table (`e416131`) | 14:24Z |
+| Second judgment refused; amendments bound | 14:26Z to 14:28Z |
+| Bound amendments committed (`98fcd06`) | 14:30Z |
+
+The second round adds three Codex reviewers, so the pass made seven
+launches of the cap of 20. The session's counters at 14:30:02Z were
+65,832,979 tokens in total (64,688,596 cached input, 864,910 cache writes,
+279,073 output), with dollar cost unknown. The dispatch standing reads
+5 h 52 min, because it counts the hours between the handoff and the return.
+
 ## Validation
 
 Before the subject commit:
