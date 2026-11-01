@@ -5296,6 +5296,14 @@
           "reopenWhen": "Neither WO-021 nor WO-022 activates within two weeks of the pass while a target close is attempted, or the operator asks for the fix before the pair.",
           "targets": [],
           "at": "2026-11-01T02:23:59.657Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-021 carried the registration's thirty entries and the target's ignore line in its step 2, and the final review reproduced criterion 9's checks, so a self order for them has nothing left to carry.",
+          "reopenWhen": "A target close is refused on residue the declaration was meant to cover, which FUP-18453d87e5fb7aa4 and FUP-48bdda2088d435b7 also watch.",
+          "targets": [],
+          "at": "2026-11-01T08:13:46.472Z"
         }
       ]
     },
@@ -5418,6 +5426,84 @@
           "at": "2026-11-01T01:57:26.375Z"
         }
       ]
+    },
+    {
+      "id": "FUP-e29153797a155406",
+      "key": "decision:docs/evidence/WO-021/decisions.md#wo-021-d025",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "5332f8cd92d5ce9b5414e783767924c33b0a82202dfe6d665ff4e279eb06a386",
+          "ref": "docs/evidence/WO-021/decisions.md#wo-021-d025",
+          "title": "WO-021-D025: WO-021 verification F1: reconcile criterion 9's clean-subject checkpoint with the supported phase ordering through an authorized order amendment/waiver or an authorized preceding…",
+          "summary": "{ \"id\": \"WO-021-D025\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: verify\", \"decision\": \"Return verification fail on criterion 9's clean-status clause. After the fresh review gate, the target has 129 status lines other than a .DS_Store. Its ignored-material remainder is empty, so the residue declaration works; the failure is the clause requiring the uncommitted implementation to be clean during verification. Preserve the candidate and judge the written criterion instead of committing early, hiding it in a stash or treating a passing gate as a clean checkout. The safe default is needs-fix, with no publication.\", \"evidence\": [ \"VER-001 and verification/results.json: current candidate tree 18e79",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-021-D028 supersedes the false blocker. The operator-authorized implementation is committed, the target checkout is clean, and criterion 9 will be recorded met without any waiver.",
+          "reopenWhen": "A new executed check reproduces a residue or clean-subject failure at the committed implementation.",
+          "targets": [],
+          "at": "2026-11-01T07:37:44.035Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-41120ad91f51530b",
+      "key": "decision:docs/evidence/WO-021/decisions.md#wo-021-d026",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "9a476918e5b5a3d1cac9f7f3fab287fa5dd4bfc655b4a82aacd45a6f04aff415",
+          "ref": "docs/evidence/WO-021/decisions.md#wo-021-d026",
+          "title": "WO-021-D026: WO-021 verification F2: in the next authorized repair, update the profile's residue list and surrounding directory-boundary explanation to match the thirty-root declaration; retain the…",
+          "summary": "{ \"id\": \"WO-021-D026\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: verify\", \"decision\": \"Board the profile's stale residue explanation as a nonblocking consistency follow-up. Its What close deletes, retains or refuses section still lists twelve roots and restricts docs/control/local disposal to one diagnostic file, while this order's explicitly required declaration has thirty roots and the directory itself. The actual declaration and ignored-material check meet their portions of criterion 9. No implementation or profile edit is made by this read-only verifier.\", \"evidence\": [ \"verification/results.json: documentedRoots 12, currentRoots 30; the independent post-gate filter has an empty ignored",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-021-D029: the final review repaired the profile's residue section; its list equals the thirty entries of dotln.config.json, compared as JSON, and the paragraph on the local-control directory now says the whole directory is disposable in a target worktree.",
+          "reopenWhen": "The registration's disposable list changes without the profile.",
+          "targets": [],
+          "at": "2026-11-01T08:13:46.461Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-c8f69c4a297dd80c",
+      "key": "decision:docs/evidence/WO-021/decisions.md#wo-021-d030",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "cd572c24a00f82fa11615f72430f968dc224d5326bed12a327d02c76f8c11761",
+          "ref": "docs/evidence/WO-021/decisions.md#wo-021-d030",
+          "title": "WO-021-D030: Core request: a waiver recorded without the operator's authority has no retraction route. Add a lifecycle event that retracts a CriterionWaived and stays in the committed segment, so a…",
+          "summary": "{ \"id\": \"WO-021-D030\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: final review\", \"decision\": \"Accept D028's direct removal of the unauthorized CriterionWaived line as the recovery the operator's direction required, and board the gap that made a direct edit the only route, rather than treat the edit as a precedent. The operator refused the waiver (capture SHA-256 85eacb0d258bbe8b2d69fb6506793abbc04b2044630b0d733fd8334f4e37df3f), and the record it left behind was false; nothing in the kit could retract it. The cost of the recovery is that the committed control segment no longer shows that a waiver was ever recorded: only D028 and an ignored capture do.\", \"evidence\": [ \"docs/intake/notes/wo-021",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-6f24c707f401ecac",
+      "key": "decision:docs/evidence/WO-021/decisions.md#wo-021-d031",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "dc123ce232e01ee020e69fc98d9de4596c6372aea2dd171da2647258cafa92d9",
+          "ref": "docs/evidence/WO-021/decisions.md#wo-021-d031",
+          "title": "WO-021-D031: Next planning pass, before WO-022 activates: keep criterion 9's ignored-listing clause with the verifier, and move its Git status clause to the final review's commit or to the close's…",
+          "summary": "{ \"id\": \"WO-021-D031\", \"date\": \"2026-11-01\", \"dispatch\": \"resume: final review\", \"decision\": \"Board WO-022's criterion 9 for the next planning pass. It carries, word for word, the clause that produced VER-001's false blocker: after the review gate, Git status in the target prints no line other than a .DS_Store. A verifier judges uncommitted work, so that clause cannot hold at verification unless someone commits early, which is what the operator had to direct here. This review does not amend it: WO-022 is a judged order outside this dispatch, and its text changes through a planning pass or amend-order under the operator's scope.\", \"evidence\": [ \"docs/work-orders/WO-022-concept-studies-eip.md ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }
