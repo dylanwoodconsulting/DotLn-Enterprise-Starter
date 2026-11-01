@@ -690,7 +690,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-025 the launchpad's documents | nothing on screen; every standing document of this launchpad read as what is so, the profile in the shape the operator chose | merged; #43, `Launchpad v0.3.4` |
 | WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference, the AI reference and the library READMEs read as what is so | merged; DotLn-Angular #10, `DotLn Angular v0.6.1` |
 | WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | merged; DotLn-Angular #11, `DotLn Angular v0.7.0` |
-| WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | filed |
+| WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | final-reviewed; DotLn-Angular #12 open |
 | WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | filed |
 | WO-023 the enterprise pattern studies | twenty patterns with state drawings and small executable models, and where the app embodies each | filed |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
@@ -750,7 +750,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-025 | merged   | #43, `Launchpad v0.3.4`; [evidence](../evidence/WO-025/README.md) |
 | WO-026 | merged   | DotLn-Angular #10, `DotLn Angular v0.6.1`, its records #44; [evidence](../evidence/WO-026/README.md) |
 | WO-020 | merged   | DotLn-Angular #11, `DotLn Angular v0.7.0`, its records #45; [evidence](../evidence/WO-020/README.md) |
-| WO-021 | filed    | [the order](../work-orders/WO-021-concept-studies-rxjs.md) |
+| WO-021 | final-reviewed | DotLn-Angular #12 on `feat/rxjs-concept-studies`, opened as a draft after verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-021/README.md) |
 | WO-022 | filed    | [the order](../work-orders/WO-022-concept-studies-eip.md) |
 | WO-023 | filed    | [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |

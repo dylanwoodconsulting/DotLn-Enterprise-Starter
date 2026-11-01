@@ -1,0 +1,770 @@
+{
+  "schema": "wo-021-verification-probes-v1",
+  "postGate": {
+    "recordedAt": "2026-11-01T07:18:00.963Z",
+    "gate": {
+      "repositoryId": "dotln-angular",
+      "commit": "4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9",
+      "treeHash": "18e79e8409e334c35c7e1d9eec7a97e19dee556a",
+      "selection": "review",
+      "names": [
+        "install",
+        "lint",
+        "typecheck",
+        "test",
+        "format",
+        "build",
+        "e2e",
+        "visual"
+      ],
+      "durationMs": 76374,
+      "evidenceRef": "target-gate:c61b4b39-1d52-4c67-8927-bd30f5fc5aa7",
+      "recordedAt": "2026-11-01T07:17:20.310Z"
+    },
+    "ignoredCount": 46047,
+    "ignoredRemainder": [],
+    "statusCount": 129,
+    "statusOtherThanDSStore": 129,
+    "sourceCompletion": 14,
+    "outputCompletion": 14,
+    "documentedRoots": 12,
+    "currentRoots": 30
+  },
+  "independentEmissions": {
+    "behavior-subject": {
+      "button$": [
+        [
+          0,
+          "N",
+          "paused"
+        ],
+        [
+          3,
+          "N",
+          "running"
+        ],
+        [
+          7,
+          "N",
+          "running"
+        ],
+        [
+          10,
+          "N",
+          "paused"
+        ]
+      ],
+      "panel$": [
+        [
+          5,
+          "N",
+          "running"
+        ],
+        [
+          7,
+          "N",
+          "running"
+        ],
+        [
+          10,
+          "N",
+          "paused"
+        ]
+      ]
+    },
+    "catch-error": {
+      "board$": [
+        [
+          1,
+          "N",
+          "10:02"
+        ],
+        [
+          4,
+          "N",
+          "10:15"
+        ],
+        [
+          9,
+          "N",
+          "timetable: feed lost"
+        ],
+        [
+          10,
+          "C"
+        ]
+      ]
+    },
+    "combine-latest": {
+      "row$": [
+        [
+          4,
+          "N",
+          "reading, 90% left"
+        ],
+        [
+          6,
+          "N",
+          "writing, 90% left"
+        ],
+        [
+          8,
+          "N",
+          "writing, 40% left"
+        ],
+        [
+          12,
+          "N",
+          "done, 40% left"
+        ],
+        [
+          15,
+          "C"
+        ]
+      ]
+    },
+    "concat-map": {
+      "stored$": [
+        [
+          6,
+          "N",
+          "cat stored"
+        ],
+        [
+          8,
+          "N",
+          "dog stored"
+        ],
+        [
+          11,
+          "N",
+          "owl stored"
+        ],
+        [
+          12,
+          "C"
+        ]
+      ]
+    },
+    "exhaust-map": {
+      "saved$": [
+        [
+          5,
+          "N",
+          "draft 1 saved"
+        ],
+        [
+          12,
+          "N",
+          "draft 3 saved"
+        ],
+        [
+          13,
+          "C"
+        ]
+      ]
+    },
+    "finalize": {
+      "shown$": [
+        [
+          2,
+          "N",
+          "part 1"
+        ],
+        [
+          5,
+          "N",
+          "part 2"
+        ]
+      ],
+      "cleanup$": [
+        [
+          7,
+          "N",
+          "released"
+        ],
+        [
+          7,
+          "N",
+          "hidden"
+        ]
+      ]
+    },
+    "materialize": {
+      "log$": [
+        [
+          1,
+          "N",
+          {
+            "kind": "N",
+            "value": "row 1",
+            "hasValue": true
+          }
+        ],
+        [
+          4,
+          "N",
+          {
+            "kind": "N",
+            "value": "row 2",
+            "hasValue": true
+          }
+        ],
+        [
+          7,
+          "N",
+          {
+            "kind": "E",
+            "error": "row 3 is unreadable",
+            "hasValue": false
+          }
+        ],
+        [
+          7,
+          "C"
+        ]
+      ]
+    },
+    "merge-map": {
+      "stored$": [
+        [
+          4,
+          "N",
+          "dog stored"
+        ],
+        [
+          6,
+          "N",
+          "cat stored"
+        ],
+        [
+          7,
+          "N",
+          "owl stored"
+        ],
+        [
+          8,
+          "C"
+        ]
+      ]
+    },
+    "observe-on": {
+      "bar$": [
+        [
+          3,
+          "N",
+          "10%"
+        ],
+        [
+          3,
+          "N",
+          "30%"
+        ],
+        [
+          7,
+          "N",
+          "60%"
+        ],
+        [
+          7,
+          "E",
+          "connection lost"
+        ]
+      ]
+    },
+    "repeat": {
+      "status$": [
+        [
+          2,
+          "N",
+          "queued"
+        ],
+        [
+          7,
+          "N",
+          "running"
+        ],
+        [
+          12,
+          "N",
+          "passed"
+        ],
+        [
+          13,
+          "C"
+        ]
+      ]
+    },
+    "replay-subject": {
+      "dashboard$": [
+        [
+          1,
+          "N",
+          "lint ok"
+        ],
+        [
+          3,
+          "N",
+          "types ok"
+        ],
+        [
+          5,
+          "N",
+          "tests ok"
+        ],
+        [
+          10,
+          "N",
+          "build ok"
+        ],
+        [
+          13,
+          "N",
+          "docs ok"
+        ],
+        [
+          15,
+          "C"
+        ]
+      ],
+      "verifier$": [
+        [
+          6,
+          "N",
+          "types ok"
+        ],
+        [
+          6,
+          "N",
+          "tests ok"
+        ],
+        [
+          10,
+          "N",
+          "build ok"
+        ],
+        [
+          13,
+          "N",
+          "docs ok"
+        ],
+        [
+          15,
+          "C"
+        ]
+      ],
+      "auditor$": [
+        [
+          18,
+          "N",
+          "build ok"
+        ],
+        [
+          18,
+          "N",
+          "docs ok"
+        ],
+        [
+          18,
+          "C"
+        ]
+      ]
+    },
+    "retry": {
+      "board$": [
+        [
+          5,
+          "N",
+          "10:02"
+        ],
+        [
+          10,
+          "N",
+          "10:02"
+        ],
+        [
+          12,
+          "N",
+          "10:15"
+        ],
+        [
+          13,
+          "C"
+        ]
+      ]
+    },
+    "scan": {
+      "statement$": [
+        [
+          1,
+          "N",
+          15
+        ],
+        [
+          4,
+          "N",
+          12
+        ],
+        [
+          8,
+          "N",
+          16
+        ],
+        [
+          11,
+          "C"
+        ]
+      ],
+      "phone$": [
+        [
+          8,
+          "N",
+          14
+        ],
+        [
+          11,
+          "C"
+        ]
+      ]
+    },
+    "share-replay": {
+      "tile$": [
+        [
+          1,
+          "N",
+          101
+        ],
+        [
+          5,
+          "N",
+          104
+        ],
+        [
+          9,
+          "N",
+          102
+        ],
+        [
+          13,
+          "N",
+          106
+        ]
+      ],
+      "chart$": [
+        [
+          7,
+          "N",
+          104
+        ],
+        [
+          9,
+          "N",
+          102
+        ],
+        [
+          13,
+          "N",
+          106
+        ]
+      ]
+    },
+    "share": {
+      "tile$": [
+        [
+          1,
+          "N",
+          101
+        ],
+        [
+          5,
+          "N",
+          104
+        ],
+        [
+          9,
+          "N",
+          102
+        ],
+        [
+          13,
+          "N",
+          106
+        ]
+      ],
+      "chart$": [
+        [
+          9,
+          "N",
+          102
+        ],
+        [
+          13,
+          "N",
+          106
+        ]
+      ]
+    },
+    "start-with": {
+      "panel$": [
+        [
+          0,
+          "N",
+          "waiting"
+        ],
+        [
+          4,
+          "N",
+          "running"
+        ],
+        [
+          9,
+          "N",
+          "passed"
+        ],
+        [
+          11,
+          "C"
+        ]
+      ],
+      "latePanel$": [
+        [
+          6,
+          "N",
+          "waiting"
+        ],
+        [
+          9,
+          "N",
+          "passed"
+        ],
+        [
+          11,
+          "C"
+        ]
+      ]
+    },
+    "subject": {
+      "painter$": [
+        [
+          2,
+          "N",
+          "press 1"
+        ],
+        [
+          6,
+          "N",
+          "press 2"
+        ],
+        [
+          10,
+          "N",
+          "press 3"
+        ],
+        [
+          14,
+          "C"
+        ]
+      ],
+      "log$": [
+        [
+          6,
+          "N",
+          "press 2"
+        ],
+        [
+          10,
+          "N",
+          "press 3"
+        ],
+        [
+          14,
+          "C"
+        ]
+      ],
+      "latecomer$": [
+        [
+          16,
+          "C"
+        ]
+      ]
+    },
+    "switch-map": {
+      "shown$": [
+        [
+          4,
+          "N",
+          "ant, page 1"
+        ],
+        [
+          10,
+          "N",
+          "cat, page 1"
+        ],
+        [
+          13,
+          "N",
+          "cat, page 2"
+        ],
+        [
+          14,
+          "C"
+        ]
+      ]
+    },
+    "take-until": {
+      "shown$": [
+        [
+          2,
+          "N",
+          "1"
+        ],
+        [
+          4,
+          "N",
+          "2"
+        ],
+        [
+          6,
+          "N",
+          "3"
+        ],
+        [
+          7,
+          "C"
+        ]
+      ]
+    },
+    "timeout": {
+      "pages$": [
+        [
+          5,
+          "N",
+          "page 1"
+        ],
+        [
+          8,
+          "N",
+          "page 2"
+        ],
+        [
+          10,
+          "N",
+          "page 3"
+        ],
+        [
+          14,
+          "E",
+          "Timeout has occurred"
+        ]
+      ]
+    }
+  },
+  "walkthrough": {
+    "startedAt": "2026-11-01T07:14:16.045Z",
+    "finishedAt": "2026-11-01T07:14:29.618Z",
+    "build": "production",
+    "mockedWorkerAbsent": true,
+    "errors": [],
+    "screenshots": [
+      "ver001-rxjs-shelf-360.png",
+      "ver001-switch-map-whole-360.png",
+      "ver001-switch-map-frame5-360.png",
+      "ver001-switch-map-code-360.png",
+      "ver001-exhaust-map-360.png",
+      "ver001-share-360.png",
+      "ver001-share-replay-360.png",
+      "ver001-subject-360.png",
+      "ver001-behavior-subject-360.png",
+      "ver001-replay-subject-360.png",
+      "ver001-catch-error-360.png",
+      "ver001-retry-360.png",
+      "ver001-rxjs-shelf-768.png",
+      "ver001-switch-map-whole-768.png",
+      "ver001-switch-map-frame5-768.png",
+      "ver001-switch-map-code-768.png",
+      "ver001-exhaust-map-768.png",
+      "ver001-share-768.png",
+      "ver001-share-replay-768.png",
+      "ver001-subject-768.png",
+      "ver001-behavior-subject-768.png",
+      "ver001-replay-subject-768.png",
+      "ver001-catch-error-768.png",
+      "ver001-retry-768.png",
+      "ver001-rxjs-shelf-1440.png",
+      "ver001-switch-map-whole-1440.png",
+      "ver001-switch-map-frame5-1440.png",
+      "ver001-switch-map-code-1440.png",
+      "ver001-exhaust-map-1440.png",
+      "ver001-share-1440.png",
+      "ver001-share-replay-1440.png",
+      "ver001-subject-1440.png",
+      "ver001-behavior-subject-1440.png",
+      "ver001-replay-subject-1440.png",
+      "ver001-catch-error-1440.png",
+      "ver001-retry-1440.png",
+      "ver001-play-restart-1440.png",
+      "ver001-reduced-motion-360.png"
+    ],
+    "widths": [
+      {
+        "width": 360,
+        "steps": [
+          "Opened Tools, Catalog, chose RxJS and counted 20 studied concepts",
+          "Stepped switchMap under reduced motion, read executable code/spec and lost-save limit, followed exhaustMap",
+          "Read share, including code, limits and implementations",
+          "Opened shareReplay beside share through the nearby link; compared their late readers at frame 7",
+          "Read share-replay, including code, limits and implementations",
+          "Read subject, including code, limits and implementations",
+          "Read behavior-subject, including code, limits and implementations",
+          "Read replay-subject, including code, limits and implementations",
+          "Read catch-error, including code, limits and implementations",
+          "Read retry, including code, limits and implementations"
+        ],
+        "axeSeriousCritical": 0
+      },
+      {
+        "width": 768,
+        "steps": [
+          "Opened Tools, Catalog, chose RxJS and counted 20 studied concepts",
+          "Stepped switchMap under reduced motion, read executable code/spec and lost-save limit, followed exhaustMap",
+          "Read share, including code, limits and implementations",
+          "Opened shareReplay beside share through the nearby link; compared their late readers at frame 7",
+          "Read share-replay, including code, limits and implementations",
+          "Read subject, including code, limits and implementations",
+          "Read behavior-subject, including code, limits and implementations",
+          "Read replay-subject, including code, limits and implementations",
+          "Read catch-error, including code, limits and implementations",
+          "Read retry, including code, limits and implementations"
+        ],
+        "axeSeriousCritical": 0
+      },
+      {
+        "width": 1440,
+        "steps": [
+          "Opened Tools, Catalog, chose RxJS and counted 20 studied concepts",
+          "Stepped switchMap under reduced motion, read executable code/spec and lost-save limit, followed exhaustMap",
+          "Read share, including code, limits and implementations",
+          "Opened shareReplay beside share through the nearby link; compared their late readers at frame 7",
+          "Read share-replay, including code, limits and implementations",
+          "Read subject, including code, limits and implementations",
+          "Read behavior-subject, including code, limits and implementations",
+          "Read replay-subject, including code, limits and implementations",
+          "Read catch-error, including code, limits and implementations",
+          "Read retry, including code, limits and implementations"
+        ],
+        "axeSeriousCritical": 0
+      }
+    ]
+  },
+  "animation": {
+    "recordedAt": "2026-11-01T07:18:30.908Z",
+    "checks": [
+      "No autoplay without reduced motion",
+      "Play from final frame resets to 0 and lands cursor at the beginning",
+      "Hand step pauses; Play from middle continues from the selected frame",
+      "Changing reduced-motion preference stops playback and removes Play",
+      "Reduced-motion frame 4 hides courier and leaves delivered value visible"
+    ],
+    "restartCursorX": 29.6206
+  }
+}

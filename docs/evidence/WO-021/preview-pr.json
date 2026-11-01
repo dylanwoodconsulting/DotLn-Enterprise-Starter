@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-021",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 12,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/12",
+  "title": ":sparkles: feat: add RxJS concept studies with executable marble examples",
+  "baseBranch": "main",
+  "headBranch": "feat/rxjs-concept-studies",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-021 --target-worktree --draft --branch feat/rxjs-concept-studies --title 'feat: add RxJS concept studies with executable marble examples' --body-file docs/evidence/WO-021/pull-request.md",
+      "exitCode": 0,
+      "headAndIndexUnchanged": true,
+      "session": "the verifying Codex session, after verification-result pass (VerificationCompleted 2026-11-01T07:40:27Z)",
+      "attempts": "host-qualification.md records them: the order's 80-character title refused by the outward lint before any push, then a fetch stall on the shortened title, then this call. The publication log holds the stalled attempt's prepared commit 047e02515252560f79ef9b9b55db4cee1e5bacdd, which was never the pull request's head."
+    },
+    "headSha": "e5caa48e8eb405ab0e8fee39cd238acc95a33674",
+    "parent": "52ba4c7eef7cc30c1c92f77a9602a5aa02656d85",
+    "tree": "18e79e8409e334c35c7e1d9eec7a97e19dee556a",
+    "committedAt": "2026-11-01T07:41:46Z",
+    "openedAt": "2026-11-01T07:45:08Z",
+    "body": "the bytes of docs/evidence/WO-021/pull-request.md above the helper's Change table",
+    "verification": {
+      "id": "VER-002",
+      "path": "docs/verifications/WO-021/VER-002.md",
+      "verdict": "pass",
+      "treeHash": "18e79e8409e334c35c7e1d9eec7a97e19dee556a"
+    },
+    "targetGate": "target-gate:c61b4b39-1d52-4c67-8927-bd30f5fc5aa7 at the same tree, recorded 2026-11-01T07:17:20.310Z",
+    "source": "read back by the final review from the forge (gh pr view, gh pr checks, gh run list, the GraphQL thread, review and comment counts), the local object store (git cat-file of the draft commit) and the ignored publication log",
+    "notes": [
+      "The draft was opened after verification-result pass on the verified tree; final publication reuses this branch and pull request.",
+      "The title workflow added the configured gitmoji to the plain conventional title.",
+      "The title differs from the order's step 14 because that title's 80 characters cannot pass the outward 72-character limit; the shortened title stands (WO-021-D029)."
+    ]
+  },
+  "finalReview": {
+    "observedAt": "2026-11-01T08:10:02Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "e5caa48e8eb405ab0e8fee39cd238acc95a33674",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 41286028499,
+        "workflow": "CI",
+        "createdAt": "2026-11-01T07:45:11Z",
+        "conclusion": "success"
+      },
+      {
+        "id": 41286028562,
+        "workflow": "Pull request title",
+        "createdAt": "2026-11-01T07:45:11Z",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-01T07:45:13Z",
+        "completedAt": "2026-11-01T07:52:55Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-01T07:45:14Z",
+        "completedAt": "2026-11-01T07:49:02Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-01T07:45:14Z",
+        "completedAt": "2026-11-01T07:45:26Z"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the final publish reuses this pull request, pushes the reviewed commit and the records commit over the draft and marks it ready"
+  }
+}

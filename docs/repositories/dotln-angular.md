@@ -34,7 +34,7 @@ platform's repository.
 The menu has three groups today. **Scene** is the soldier scene at the root
 route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
-shelf, contents and a reading at `/tools/catalog/<tool id>`, twenty of its concepts with an authored
+shelf, contents and a reading at `/tools/catalog/<tool id>`, forty of its concepts with an authored
 study; `/tools` is a home page above it.
 
 The app owns its data and its API. The board keeps the `uifa-board-v1` response
@@ -277,8 +277,9 @@ relations, hooks and verification notes, across six works.
 | The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
 | The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
-| The visual families and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
+| The visual families, `motion`, `timeline` and `marbles`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
 | The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/study-models.ts` |
+| The executable marble examples, their specs, and the contract and spec helper they share | `libs/features/tools/src/lib/studies/rxjs/`, with `marbles.ts` and `marble-testing.ts` beside the examples |
 | Menu composition | `libs/shared/ui/menu/`, imported as `@dotln-angular/ui/menu` |
 
 `join-maps.mjs` validates all eleven declared source digests before writing and
@@ -295,12 +296,15 @@ prose.
 A study is authored separately from the source data, as one checked record per concept that a
 regenerated join never touches. Its drawing runs from a pure model of the record's parameters,
 calling the scene engine where the engine has the behaviour, and a reader can step it, play it on
-command and change its inputs. Standalone explanations use Angular `@defer` on first expansion:
+command and change its inputs. A stream study's drawing is a marble diagram the `marbles` family
+reads from the same module its spec runs under the TestScheduler, so the drawing and the test cannot
+disagree. Standalone explanations use Angular `@defer` on first expansion:
 closed sections create no explanation view, and visited sections keep theirs on
-collapse. The other visual families land with the batch that needs each. The design comparisons and
-their outcome are in the launchpad's
-[`docs/evidence/WO-019/design/`](../evidence/WO-019/design/) and
-[`docs/evidence/WO-020/design/`](../evidence/WO-020/design/). Menu behavior and its
+collapse. The `flow`, `states` and `relations` families land with the batch that needs each. The
+design comparisons and their outcome are in the launchpad's
+[`docs/evidence/WO-019/design/`](../evidence/WO-019/design/),
+[`docs/evidence/WO-020/design/`](../evidence/WO-020/design/) and
+[`docs/evidence/WO-021/design/`](../evidence/WO-021/design/). Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 
@@ -435,10 +439,10 @@ rejects that malformed duplicate, which is boarded in
 the same ignored-material and filesystem judgment. The target worktree's declared
 disposable output is still deleted. `loadConfig` composes the class's declaration,
 `classes.angular-nx-monorepo.disposable` in `dotln.config.json`, into this sorted
-list:
+list of thirty roots:
 
 ```json
-[".angular",".nx","__screenshots__","coverage","dist","docs/control/local/harness/memory-incidents.jsonl","node_modules","out-tsc","playwright-report","test-output","test-results","tmp"]
+[".angular",".nx",".runtime","__screenshots__","coverage","dist","docs/control/local","libs/dotln/shell/node_modules","libs/features/board-data-access/node_modules","libs/features/board/node_modules","libs/features/machinery/node_modules","libs/features/scene-data-access/node_modules","libs/features/scene/node_modules","libs/features/tools/node_modules","libs/shared/catalog/node_modules","libs/shared/core/node_modules","libs/shared/data-access/node_modules","libs/shared/events/node_modules","libs/shared/i18n/node_modules","libs/shared/models/node_modules","libs/shared/scene-engine/node_modules","libs/shared/state/node_modules","libs/shared/ui/node_modules","libs/shared/utils/node_modules","node_modules","out-tsc","playwright-report","test-output","test-results","tmp"]
 ```
 
 The entries are relative to each checkout, not directory-name globs:
@@ -451,10 +455,18 @@ close receipt name the base policy and the retained output, and keeping
 dependencies and caches avoids the base reinstall the default `delete` policy
 requires.
 
-The bounded probe wrapper can create
-`docs/control/local/harness/memory-incidents.jsonl` in the target worktree. Treat
-it as private: ignore it and exclude it from review packets. Only that exact
-generated file is disposable, not the surrounding local-control directory.
+The seventeen `libs/*/*/node_modules` entries are the project roots that carry a
+Vite config, whose Vitest caches are the only nested output; each is an exact path,
+and a new project root with a Vite config adds its own entry before its first close.
+`.runtime` is what the kit's temporary-root module writes into whichever repository
+a session runs in, so the target's `.gitignore` carries `/.runtime/` as well and an
+untracked file there cannot fail the close's clean check.
+
+The bounded probe wrapper and the kit's other local diagnostics write under
+`docs/control/local/` in the target worktree, among them
+`docs/control/local/harness/memory-incidents.jsonl`. Treat that directory as private:
+the target ignores it, it stays out of review packets, and the whole directory is
+disposable in a target worktree.
 
 These stay undeclared, and an undeclared ignored file refuses close in either
 checkout:
@@ -520,6 +532,8 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.4.0` | WO-014 | #7 | `1c3a4ff24e38d179d0fd1ad910bc6719c2740045` | 2026-10-26T12:34:52Z |
 | `DotLn Angular v0.5.0` | WO-019 | #8 | `38f8afd6e1507483c58a662f2df7c3974dfd62b0` | 2026-10-29T00:47:51Z |
 | `DotLn Angular v0.6.0` | WO-015 | #9 | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` | 2026-10-30T21:49:17Z |
+| `DotLn Angular v0.6.1` | WO-026 | #10 | `eb9eeec80eec0cfacbd973351222cab39fdc7919` | 2026-10-31T19:15:55Z |
+| `DotLn Angular v0.7.0` | WO-020 | #11 | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` | 2026-11-01T00:54:57Z |
 
 | Area | Order |
 | --- | --- |
@@ -531,6 +545,8 @@ here) and in Git. Earlier versions of this profile are in
 | The catalog pipeline | WO-014 |
 | The reading surface over the catalog and the Arrive study | WO-019 |
 | The scene engine and the soldier scene | WO-015 |
+| The study record, the `motion` and `timeline` families and the movement studies | WO-020 |
+| The `marbles` family and the RxJS studies | WO-021 |
 
 ### Recovery context
 
