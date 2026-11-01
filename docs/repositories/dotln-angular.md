@@ -34,7 +34,8 @@ platform's repository.
 The menu has three groups today. **Scene** is the soldier scene at the root
 route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
-shelf, contents and a reading; `/tools` is a home page above it.
+shelf, contents and a reading at `/tools/catalog/<tool id>`, twenty of its concepts with an authored
+study; `/tools` is a home page above it.
 
 The app owns its data and its API. The board keeps the `uifa-board-v1` response
 shape as its own contract; the platform's resident and its token are not a data
@@ -109,7 +110,7 @@ Baselines under the e2e source tree are tracked inputs, not disposable output.
 The `workspace-tools` project's uncached `lint` target runs, in this order,
 `check:templates`, `check:tokens`, `check:kits`, `i18n:check`,
 `typecheck:foundations`, `test:tooling`, `lint:components`, `check:shared-types`,
-`check:fixtures` (the board and scene fixtures, then `catalog:check`),
+`check:fixtures` (the board and scene fixtures, `catalog:check`, then `studies:check`),
 `lint:hygiene` and `check:scripts`, so the registered gate exercises them through
 its lint command.
 
@@ -124,6 +125,7 @@ document does not name (rule 26). These helpers run outside the gate:
 | `npm run perf:sample` | records controlled local journeys; the target's performance guide separates these from field Core Web Vitals and leaves ordinary calibration to the implementing session |
 | `npm run boards` | counts `// BOARDED:` comments; CI prints the count |
 | `npm run lint:fixtures` | proves a forbidden dependency or role is rejected, when lint policy changes |
+| `npm run studies:report`, `npm run studies:links` | prints each work's studied, checked and total rows; opens every address the studies cite, which no gate does |
 | `npm run env:prime`, `npm run build:configured` | validate public settings and build the `configured` profile |
 
 CI is `.github/workflows/ci.yml`. Its `checks` job runs `nx format:check`, the
@@ -266,12 +268,17 @@ relations, hooks and verification notes, across six works.
 | Contract | `libs/shared/models/src/lib/toolbox.ts`, the closed `tool-v1` schema in `libs/shared/catalog/src/schema/` |
 | Data | `libs/shared/catalog/src/data/` |
 | Join over the source maps | `tools/scripts/catalog/join-maps.mjs` |
-| Loader and provider seam | `libs/shared/catalog/src/lib/catalog-loader.ts`, `libs/shared/catalog/src/lib/catalog-token.ts` |
+| Loader and provider seam, with the study and summary reads | `libs/shared/catalog/src/lib/catalog-loader.ts`, `libs/shared/catalog/src/lib/catalog-token.ts` |
 | Reading state | `libs/shared/catalog/src/lib/catalog-store.ts` |
 | Tools routes | `libs/features/tools/src/lib/tools.routes.ts` |
-| Page and facade | `libs/features/tools/src/lib/containers/catalog-page/catalog-page.ts`, `libs/features/tools/src/lib/facades/tools.facade.ts` |
+| Page, facades and the addressable reading | `libs/features/tools/src/lib/containers/catalog-page/catalog-page.ts`, `libs/features/tools/src/lib/facades/tools.facade.ts`, `libs/features/tools/src/lib/facades/tools-home.facade.ts`, `ChildPaths.Reading` in `libs/shared/core/src/lib/paths/routes.ts` |
 | Reading mapper | `libs/features/tools/src/lib/mappers/reading-mapper/` |
-| The authored Arrive study | `libs/features/tools/src/lib/composites/arrive-study/`, `libs/features/tools/src/lib/arrive-example.ts` |
+| The study record and its schema | `libs/shared/models/src/lib/concept-study.ts`, `libs/shared/catalog/src/schema/concept-study-v0.schema.json` |
+| The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
+| The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
+| The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
+| The visual families and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
+| The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/study-models.ts` |
 | Menu composition | `libs/shared/ui/menu/`, imported as `@dotln-angular/ui/menu` |
 
 `join-maps.mjs` validates all eleven declared source digests before writing and
@@ -279,17 +286,21 @@ resolves only unique exact relation titles within a work; schema, inventory and
 relation checks cover the generated data. The loader keeps a `tool-v0` compatibility
 reader for one release and the explicit `CatalogToken` provider seam. `/tools`
 shows the works and the last reading; `/tools/catalog` composes the shelf, contents,
-reading, search facets and history through its event-backed facade. The last ten
+reading, search facets and history through its event-backed facade, and the address owns the open
+reading, so Back and a shared link return to it. The last ten
 readings and the chosen location persist; the search query and the back stack do
 not. Reading mappers present the full source definition and application faces as
 prose.
 
-The Arrive study is authored separately from the source data. It adds a
-time-scrubbed motion illustration, ordinary and RxJS pseudocode, limits and public
-references. Standalone explanations use Angular `@defer` on first expansion:
+A study is authored separately from the source data, as one checked record per concept that a
+regenerated join never touches. Its drawing runs from a pure model of the record's parameters,
+calling the scene engine where the engine has the behaviour, and a reader can step it, play it on
+command and change its inputs. Standalone explanations use Angular `@defer` on first expansion:
 closed sections create no explanation view, and visited sections keep theirs on
-collapse. The design comparisons and their outcome are in the launchpad's
-[`docs/evidence/WO-019/design/`](../evidence/WO-019/design/). Menu behavior and its
+collapse. The other visual families land with the batch that needs each. The design comparisons and
+their outcome are in the launchpad's
+[`docs/evidence/WO-019/design/`](../evidence/WO-019/design/) and
+[`docs/evidence/WO-020/design/`](../evidence/WO-020/design/). Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 

@@ -1,0 +1,372 @@
+{
+  "schema": "wo-020-verification-evidence-v1",
+  "date": "2026-10-31",
+  "report": "docs/verifications/WO-020/VER-001.md",
+  "subject": {
+    "repository": "dotln-angular",
+    "head": "eb9eeec80eec0cfacbd973351222cab39fdc7919",
+    "tree": "4e6b3e4b93d6c5226e31f2e819006d0723911dbf"
+  },
+  "commands": [
+    {
+      "cwd": "target",
+      "command": "npm run format:check",
+      "exitCode": 0
+    },
+    {
+      "cwd": "target",
+      "command": "npm run check:bundle",
+      "exitCode": 0,
+      "buildCache": "restored current production build by Nx",
+      "initialBytes": 399297,
+      "lazyCodeInInitial": []
+    },
+    {
+      "cwd": "target",
+      "command": "npm test -- --projects=tools,catalog,core --skip-nx-cache",
+      "exitCode": 0,
+      "cache": false
+    },
+    {
+      "cwd": "target",
+      "command": "npm run test:tooling",
+      "exitCode": 0,
+      "tests": 66,
+      "passed": 66,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "cwd": "target",
+      "command": "npm run check:fixtures",
+      "exitCode": 0,
+      "output": "check-studies: 20 records; 0 problems"
+    },
+    {
+      "cwd": "target",
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "walkthrough": {
+    "date": "2026-10-31T23:31:05.354Z",
+    "build": "production; check:bundle completed before serving",
+    "widths": [
+      {
+        "width": 1440,
+        "steps": 16,
+        "errors": []
+      },
+      {
+        "width": 768,
+        "steps": 16,
+        "errors": []
+      },
+      {
+        "width": 360,
+        "steps": 16,
+        "errors": []
+      }
+    ],
+    "screenshots": [
+      "verifier-01-tools-home-1440.png",
+      "verifier-02-shelf-1440.png",
+      "verifier-03-studied-list-1440.png",
+      "verifier-04-chapter-marks-1440.png",
+      "verifier-05-flocking-1440.png",
+      "verifier-06-flocking-stepped-1440.png",
+      "verifier-07-pseudocode-1440.png",
+      "verifier-08-rxjs-1440.png",
+      "verifier-09-reference-1440.png",
+      "verifier-10-nearby-1440.png",
+      "verifier-11-scene-1440.png",
+      "verifier-12-back-from-scene-1440.png",
+      "verifier-13-110-1440.png",
+      "verifier-14-131-1440.png",
+      "verifier-15-177-1440.png",
+      "verifier-16-shared-link-1440.png",
+      "verifier-01-tools-home-768.png",
+      "verifier-02-shelf-768.png",
+      "verifier-03-studied-list-768.png",
+      "verifier-04-chapter-marks-768.png",
+      "verifier-05-flocking-768.png",
+      "verifier-06-flocking-stepped-768.png",
+      "verifier-07-pseudocode-768.png",
+      "verifier-08-rxjs-768.png",
+      "verifier-09-reference-768.png",
+      "verifier-10-nearby-768.png",
+      "verifier-11-scene-768.png",
+      "verifier-12-back-from-scene-768.png",
+      "verifier-13-110-768.png",
+      "verifier-14-131-768.png",
+      "verifier-15-177-768.png",
+      "verifier-16-shared-link-768.png",
+      "verifier-01-tools-home-360.png",
+      "verifier-02-shelf-360.png",
+      "verifier-03-studied-list-360.png",
+      "verifier-04-chapter-marks-360.png",
+      "verifier-05-flocking-360.png",
+      "verifier-06-flocking-stepped-360.png",
+      "verifier-07-pseudocode-360.png",
+      "verifier-08-rxjs-360.png",
+      "verifier-09-reference-360.png",
+      "verifier-10-nearby-360.png",
+      "verifier-11-scene-360.png",
+      "verifier-12-back-from-scene-360.png",
+      "verifier-13-110-360.png",
+      "verifier-14-131-360.png",
+      "verifier-15-177-360.png",
+      "verifier-16-shared-link-360.png"
+    ],
+    "probes": [
+      {
+        "width": 1440,
+        "reference": "https://www.red3d.com/cwr/boids/",
+        "status": 200
+      },
+      {
+        "width": 768,
+        "reference": "https://www.red3d.com/cwr/boids/",
+        "status": 200
+      },
+      {
+        "width": 360,
+        "reference": "https://www.red3d.com/cwr/boids/",
+        "status": 200
+      }
+    ]
+  },
+  "models": {
+    "studies": 20,
+    "cases": 168,
+    "results": [
+      {
+        "slug": "align",
+        "cases": 9,
+        "frames": 161,
+        "engineImports": true
+      },
+      {
+        "slug": "arrive",
+        "cases": 9,
+        "frames": 241,
+        "engineImports": false
+      },
+      {
+        "slug": "equilibrium-fallback",
+        "cases": 9,
+        "frames": 81,
+        "engineImports": true
+      },
+      {
+        "slug": "face",
+        "cases": 9,
+        "frames": 161,
+        "engineImports": true
+      },
+      {
+        "slug": "fixed-formations",
+        "cases": 9,
+        "frames": 51,
+        "engineImports": true
+      },
+      {
+        "slug": "flocking",
+        "cases": 9,
+        "frames": 201,
+        "engineImports": true
+      },
+      {
+        "slug": "formation-pattern-interface",
+        "cases": 9,
+        "frames": 121,
+        "engineImports": true
+      },
+      {
+        "slug": "group-movement",
+        "cases": 3,
+        "frames": 231,
+        "engineImports": true
+      },
+      {
+        "slug": "making-the-creatures",
+        "cases": 9,
+        "frames": 161,
+        "engineImports": true
+      },
+      {
+        "slug": "priority-steering",
+        "cases": 15,
+        "frames": 121,
+        "engineImports": true
+      },
+      {
+        "slug": "pursue",
+        "cases": 3,
+        "frames": 81,
+        "engineImports": true
+      },
+      {
+        "slug": "scalable-formations",
+        "cases": 15,
+        "frames": 51,
+        "engineImports": true
+      },
+      {
+        "slug": "seek",
+        "cases": 3,
+        "frames": 221,
+        "engineImports": true
+      },
+      {
+        "slug": "separation",
+        "cases": 9,
+        "frames": 61,
+        "engineImports": true
+      },
+      {
+        "slug": "slot-assignment",
+        "cases": 3,
+        "frames": 4,
+        "engineImports": true
+      },
+      {
+        "slug": "steering-pipeline",
+        "cases": 9,
+        "frames": 221,
+        "engineImports": true
+      },
+      {
+        "slug": "two-level-formation-steering",
+        "cases": 9,
+        "frames": 121,
+        "engineImports": true
+      },
+      {
+        "slug": "velocity-matching",
+        "cases": 9,
+        "frames": 33,
+        "engineImports": true
+      },
+      {
+        "slug": "wander",
+        "cases": 9,
+        "frames": 101,
+        "engineImports": true
+      },
+      {
+        "slug": "weighted-blending",
+        "cases": 9,
+        "frames": 61,
+        "engineImports": true
+      }
+    ],
+    "findings": []
+  },
+  "checker": {
+    "records": 20,
+    "refusalCases": 16,
+    "fixtureResults": [
+      {
+        "fixture": "study-unknown-id",
+        "exitCode": 1
+      },
+      {
+        "fixture": "study-reference-without-supports",
+        "exitCode": 1
+      },
+      {
+        "fixture": "study-draft",
+        "exitCode": 1
+      }
+    ],
+    "referenceURLs": 31,
+    "dependencyKeysUnchanged": true,
+    "forbiddenMarkupAndRemovedCandidateMatches": 0
+  },
+  "browser": {
+    "date": "2026-10-31T23:33:42.167Z",
+    "checks": [
+      {
+        "width": 360,
+        "axeSeriousOrCritical": 0,
+        "otherAxe": [],
+        "liveReducedMotionStops": true,
+        "facet": {
+          "all": 3463,
+          "studied": 20,
+          "unstudied": 3443
+        },
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "axeSeriousOrCritical": 0,
+        "otherAxe": [],
+        "liveReducedMotionStops": true,
+        "facet": {
+          "all": 3463,
+          "studied": 20,
+          "unstudied": 3443
+        },
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "axeSeriousOrCritical": 0,
+        "otherAxe": [],
+        "liveReducedMotionStops": true,
+        "facet": {
+          "all": 3463,
+          "studied": 20,
+          "unstudied": 3443
+        },
+        "overflow": false
+      },
+      {
+        "unstudied": "aifg-a:1",
+        "definitionSurvives": true,
+        "unknownRouteReadable": true
+      },
+      {
+        "failedModelChunk": true,
+        "definitionSurvives": true,
+        "studyErrorVisible": true
+      }
+    ]
+  },
+  "probeMethod": {
+    "wrapper": "node scripts/harness.mjs bounded -- <command>; one probe at a time",
+    "walkthrough": "Sixteen sequential Objective actions per fresh Chromium context; await each expanded explanation; screenshot every step at each width; assert root overflow and page errors.",
+    "models": "Bundle the original pure model modules and drawing functions in session scratch; run each record default twice on frozen parameters; test each exposed input minimum and maximum and all endpoint combinations; inspect every output frame for finiteness, placeholder values, matching timeline lengths and finite rendered SVG coordinates.",
+    "checker": "Use actual Seek record and real corpus lookup; refuse unknown ids, missing/blank support, draft state, duplicate reviewers, missing references, bad nearby ids, wrong work, absent model, wrong schema, stale summary, misleading chunk declarations and malformed JSON. Mutated collections live only in scratch.",
+    "browser": "Fully expand Flocking under reduced motion at all widths; run axe with board tags; start playback and turn reduced motion on; assert studied and unstudied filtering; read a known unstudied and an unknown id; abort the Flocking model chunk and verify the mined definition plus a local study error.",
+    "scope": "Chromium and the declared records/input controls. No arbitrary external model validity, other browser engines, screen-reader session or remote CI claim."
+  },
+  "probeSourceDigests": {
+    "walkthrough.mjs": "sha256:d91ce82c8b1e3afbf712ed36bb5e219571032a7b08a7a48458fa56a69b33bbf3",
+    "model-probe.mjs": "sha256:761ec337ec9a673f0fb64c7aa79a8ffdedbcbdc7def933a9fb3d0f14231eb559",
+    "check-probe.mjs": "sha256:2cf67f75080b71b184d1626aa150e181b84b73410da6591c86f6aa12e36475ea",
+    "browser-probe.mjs": "sha256:b8b23f6e08418f2216766a384a643ffa20f1f0ada61628da69d67078a7881707"
+  },
+  "consumedTargetGate": {
+    "evidenceRef": "target-gate:613ffe24-4881-4255-9466-65ca82543fd8",
+    "selection": "review",
+    "names": [
+      "install",
+      "lint",
+      "typecheck",
+      "test",
+      "format",
+      "build",
+      "e2e",
+      "visual"
+    ],
+    "recordedAt": "2026-10-31T23:24:30.646Z",
+    "executed": true,
+    "exitCode": 0
+  },
+  "documentGate": "Filed completion consumes the passing exact-candidate document row after all document edits.",
+  "newFindings": [],
+  "existingFollowup": "FUP-4a1b75d959226303 remains recorded by WO-020-D018 for WO-021."
+}
