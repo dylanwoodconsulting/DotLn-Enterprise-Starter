@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "documents": {
     "concept-study.md": {
-      "ceiling": 4584,
-      "nonExemptBytesAtLanding": 4167,
-      "date": "2026-10-30",
-      "decision": "2026-10-30 second planning pass (docs/planning/concept-batches-and-quality-passes-2026-10-30.md \u00a7Write-backs and ceilings): the direction's last paragraph names the concept-study batches WO-020 to WO-024 as the broader coverage; measured 4167 non-exempt bytes plus one tenth."
+      "ceiling": 4528,
+      "nonExemptBytesAtLanding": 4116,
+      "date": "2026-11-01",
+      "decision": "2026-11-01 planning pass (docs/planning/standard-pass-v0-105-0-2026-11-01.md D9): WO-025's quality pass left the document at 4116 non-exempt bytes (4167 when the 2026-10-30 second pass set the ceiling); re-set at the measured bytes plus one tenth."
     },
     "purpose.md": {
       "ceiling": 2305,

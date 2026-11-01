@@ -5,14 +5,20 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 6268de9fc3cae84bf66091c1fbcc30d344411cd2
+**Repository:** dotln-angular @ 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/rxjs/` (twenty records), the
 `marbles` family under `libs/features/tools/src/lib/composites/study-visuals/marbles/`,
 twenty executable modules with marble specs under
 `libs/features/tools/src/lib/studies/rxjs/`, one document section and one
-rule, about 45 source files plus twenty data records; adds no runtime
+rule, about 45 source files plus twenty data records; the family
+discriminator on the study model and the three repairs WO-020's final review
+boarded (WO-020-D018 and D020, about five source files); in the launchpad
+order worktree eighteen `disposable` entries in `dotln.config.json` and in
+the target one `.gitignore` line, so the target's release close meets none
+of the three undeclared-material blockers that cost WO-020's close four
+attempts (the 2026-11-01 pass, D3); adds no runtime
 dependency (RxJS and its `TestScheduler` are installed). Removes nothing.
 Wall-clock: about 6 to 10 hours of executor work, of which the fan-out runs
 in parallel, plus the fixed cycle; unknown until run. Context bytes: WO-020's
@@ -20,8 +26,9 @@ record, check, families and rules as it leaves them, `catalog.md` §Studies,
 the twenty catalog rows, this order, about 180 KB for the executor; each
 author reads two rows, the contract and the RxJS documentation pages it
 cites. Commands added: none (`studies:check` and `studies:report` exist).
-Tokens: unknown until run; recorded per worker. Steps: 12. Re-mints: none.
-Refutations paid: the 2026-10-30 second pass's receipt.
+Tokens: unknown until run; recorded per worker. Steps: 14. Re-mints: none.
+Refutations paid: the 2026-10-30 second pass's receipt and the 2026-11-01
+pass's.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`): a
@@ -36,11 +43,10 @@ by the 2026-10-30 second planning pass
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure this order reuses;
-the base above is provisional: since starter v0.96.1 (core WO-230) the target
-publish describes the change from the merge base of the subject and the
-target's `main` and names the activation base beside it, so activation on
-this base publishes right; the planning pass that runs after WO-020 merges
-may set it to that merge commit, and none is required to).
+the base above is WO-020's merge commit, DotLn-Angular #11, set by the
+2026-11-01 pass; since starter v0.96.1 (core WO-230) the target publish
+describes the change from the merge base of the subject and the target's
+`main`, so a later `main` at activation publishes right too).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -48,7 +54,7 @@ may set it to that merge commit, and none is required to).
   {
     "workOrderId": "WO-020",
     "relation": "hard",
-    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; the base line is provisional and publishes right under starter v0.96.1's merge-base publish"
+    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; the base line is WO-020's merge commit and publishes right under starter v0.96.1's merge-base publish"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -156,39 +162,95 @@ the link check, the walkthrough and its screenshots, and the design record.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-021; fast-forward the
-   target worktree to the target's `main` (WO-014-D001); read the harness
-   usage and record the subagent remainder; record the publishing decision as
-   WO-020 did.
-2. The `marbles` family with stories `StudyMarbles` and a spec that renders
-   `-a--b-|` to its text equivalent. Check: `npx nx test tools` exits 0;
+1. Base guard read with WO-014-D001, for WO-021: the target's `main` must
+   contain the Repository pin (`git merge-base --is-ancestor <pin>
+   origin/main` exits 0; a `main` that has left the pin behind, as WO-005
+   step 1 refuses, stops for a planning pass), then the target worktree
+   fast-forwards to the target's `main` and that integrated commit is the
+   baseline of every later comparison; activation as WO-005 step 1; read the
+   harness usage and record the subagent remainder; record the publishing
+   decision as WO-020 did.
+2. The target close's residue declared, byte-identical with WO-022's step 2
+   so the pair's second merge meets no conflict. In the launchpad order
+   worktree, `dotln.config.json` `classes.angular-nx-monorepo.disposable`
+   becomes exactly these thirty entries in this order: `.angular`, `.nx`,
+   `.runtime`, `__screenshots__`, `coverage`, `dist`, `docs/control/local`,
+   `libs/dotln/shell/node_modules`,
+   `libs/features/board-data-access/node_modules`,
+   `libs/features/board/node_modules`, `libs/features/machinery/node_modules`,
+   `libs/features/scene-data-access/node_modules`,
+   `libs/features/scene/node_modules`, `libs/features/tools/node_modules`,
+   `libs/shared/catalog/node_modules`, `libs/shared/core/node_modules`,
+   `libs/shared/data-access/node_modules`, `libs/shared/events/node_modules`,
+   `libs/shared/i18n/node_modules`, `libs/shared/models/node_modules`,
+   `libs/shared/scene-engine/node_modules`, `libs/shared/state/node_modules`,
+   `libs/shared/ui/node_modules`, `libs/shared/utils/node_modules`,
+   `node_modules`, `out-tsc`, `playwright-report`, `test-output`,
+   `test-results`, `tmp` (the entry
+   `docs/control/local/harness/memory-incidents.jsonl` is replaced by its
+   directory; the seventeen nested roots are the project roots that carry a
+   Vite config, whose Vitest caches the close has refused as undeclared on
+   every target close since WO-007). In the target worktree, `.gitignore`
+   gains the line `/.runtime/` after `/docs/control/local/`, because the
+   kit's temporary-root module writes `.runtime/.metadata_never_index` and
+   its ledger into whichever repository a session runs in, and an untracked
+   file fails the close's clean check before any disposable rule is read.
+   Check: in the launchpad order worktree
+   `node -e "const d=require('./dotln.config.json').classes['angular-nx-monorepo'].disposable;console.log(d.length,d.includes('.runtime'),d.includes('docs/control/local'),d.filter(p=>/^libs\/[^/]+\/[^/]+\/node_modules$/.test(p)).length)"`
+   prints `30 true true 17` and `npm run test:docs` passes; in the target
+   worktree `grep -c '^/\.runtime/$' .gitignore` prints 1.
+3. The three repairs WO-020's final review boarded (WO-020-D020):
+   `tools/scripts/catalog/check-studies.mjs` reads a file named on the
+   command line through `readRecord`, so a file that does not parse is a
+   schema problem under the `FAIL check-studies` prefix, with the case added
+   to `tools/studies.test.mjs`; the unused computed `step` leaves
+   `libs/features/tools/src/lib/composites/study-explanation/study-explanation.ts`;
+   the target `README.md`'s menu table names `/tools/catalog/<tool id>` and
+   the studied concepts beside `/tools/catalog` and `/tools`, as
+   `docs/dev-reference/architecture/sub-apps.md` does. Check:
+   `node tools/scripts/catalog/check-studies.mjs <a file holding the text { not json>`
+   exits 1 and prints a `FAIL check-studies` line;
+   `grep -c 'readonly step = computed' libs/features/tools/src/lib/composites/study-explanation/study-explanation.ts`
+   prints 0 (the declaration at line 26 of the base is the defect; no
+   template or spec calls it, so a search for calls proves nothing);
+   `grep -c '/tools/catalog/<tool id>' README.md` is at least 1.
+4. The study model discriminated by family before the first family without
+   motion frames (WO-020-D018): in
+   `libs/features/tools/src/lib/studies/study-model.ts` the common moments
+   and values are separated from the drawing payload, the payload is
+   discriminated by `visual.family`, and the discriminator is kept through
+   `mapStudy` and the study composite, so playback, prose values and
+   `clampStep` no longer read `motion.frames` for every family; then the
+   `marbles` family with stories `StudyMarbles` and a spec that renders
+   `-a--b-|` to its text equivalent. Check: a spec with a record whose family
+   has no motion frames renders and scrubs; `npx nx test tools` exits 0;
    `npm run lint:components` exits 0.
-3. The first rendered pair (A horizontal, B vertical) at 1440 and 360; the
+5. The first rendered pair (A horizontal, B vertical) at 1440 and 360; the
    rounds; the rejected implementation removed with its record under
    `design/`. Check: `grep -c "Round" docs/evidence/WO-021/design/comparisons.md`
    is at least 1.
-4. The authors' brief with the executable rule into `fan-out.md`; dispatch the
+6. The authors' brief with the executable rule into `fan-out.md`; dispatch the
    ten authors; merge the twenty drafts with their modules and specs. Check:
    `npx nx test tools` exits 0 over the twenty specs.
-5. Dispatch the two critics; dispose the findings; rewrite through the same
+7. Dispatch the two critics; dispose the findings; rewrite through the same
    authors; set `checked`. Check: `npm run studies:check` exits 0 over
    `studies/rxjs/`.
-6. The link check into `docs/evidence/WO-021/README.md`. Check: every URL has
+8. The link check into `docs/evidence/WO-021/README.md`. Check: every URL has
    a status.
-7. e2e `apps/dotln-e2e/src/catalog.spec.ts`: RxJS shows twenty studied;
+9. e2e `apps/dotln-e2e/src/catalog.spec.ts`: RxJS shows twenty studied;
    switchMap's study steps its marbles under reduced motion with the text
    equivalent naming the emission, labels the code executable and names the
    spec; share's and shareReplay's studies open side by side from the nearby
    links; axe; no overflow at 360, 768 and 1440. Check: `npx nx e2e dotln-e2e`
    exits 0.
-8. The walkthrough as WO-020 step 11, under `docs/evidence/WO-021/`. Check:
-   the files exist.
-9. Documents: the coverage row, the family and the rule. Check:
-   `grep -c "marble" docs/ai-reference/catalog-rules.md` is at least 1.
-10. Dependency check as WO-015 step 15; `npm run check:bundle`. Check: prints
+10. The walkthrough as WO-020 step 11, under `docs/evidence/WO-021/`. Check:
+    the files exist.
+11. Documents: the coverage row, the family and the rule. Check:
+    `grep -c "marble" docs/ai-reference/catalog-rules.md` is at least 1.
+12. Dependency check as WO-015 step 15; `npm run check:bundle`. Check: prints
     nothing; the chunk sizes recorded.
-11. Gate plain and review. Check: passing rows, no tracked-byte mutation.
-12. Launchpad write-back (the profile's implementation map names the
+13. Gate plain and review. Check: passing rows, no tracked-byte mutation.
+14. Launchpad write-back (the profile's implementation map names the
     `marbles` family; WS-001's delivery states by the final review); then the
     publish, review and records steps as WO-007 steps 15 to 17, with the
     branch `feat/rxjs-concept-studies`, the title `feat: add concept studies
@@ -225,12 +287,15 @@ each.
    `libs/features/tools/src/lib/studies/rxjs/` with a spec beside it that
    runs the example under `TestScheduler` against the marble strings the
    record's visual draws (a spec in the family asserts the strings come from
-   the module), and `npx nx test tools` exits 0 with the twenty specs
-   counted in its output.
+   the module), except a record that marks `rxjs` illustrative with its
+   reason in the record and in the decisions file, which the known issues
+   admit for at most two (observeOn's scheduling, materialize's
+   notifications); `npx nx test tools` exits 0 with one spec per executable
+   record counted in its output, twenty less the recorded exceptions.
 4. `docs/evidence/WO-021/fan-out.md`, `review.md` and `README.md` as WO-020's
    criterion 4, the review record also carrying each module's spec result
    from the factual critic.
-5. `npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the
+5. `npx nx e2e dotln-e2e` exits 0 and includes the step 9 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the `marbles` family and the records in lazy chunks,
@@ -245,24 +310,54 @@ each.
    decisions file records the operator's word that ended the rounds; the
    decisions file names the removed candidate's files and `ls` on each prints
    nothing.
-9. `node scripts/target-gate.mjs WO-021 --review` records a passing row for
-   every declared command with no tracked-byte mutation, and
-   `npm run test:docs` passes in the launchpad order worktree; the Preflight
-   line ran before the first full gate.
+9. The target close's residue is declared (step 2): in the launchpad order
+   worktree the step's `node -e` one-liner prints `30 true true 17` and
+   `npm run test:docs` passes; in the target worktree
+   `grep -c '^/\.runtime/$' .gitignore` prints 1; and after the review gate
+   of criterion 11, in the target worktree,
+   `git ls-files --others --ignored --exclude-standard` lists no path
+   outside the thirty declared roots and the files the target harness
+   bundle's manifest installs (the verifier filters the listing by those
+   roots as prefixes and records the command and its empty remainder), and
+   `git status --porcelain --untracked-files=all` prints no line other than
+   a `.DS_Store`, the close's own clean judgment of the worktree; the
+   close's separate judgment of the base checkout under the registration's
+   `judge-only` policy is the close's and is not claimed here.
+10. The two carry-ins hold by their checks: step 3's
+    `node tools/scripts/catalog/check-studies.mjs <a file holding the text { not json>`
+    exits 1 and prints a `FAIL check-studies` line, with the case present in
+    `tools/studies.test.mjs`;
+    `grep -c 'readonly step = computed' libs/features/tools/src/lib/composites/study-explanation/study-explanation.ts`
+    prints 0; `grep -c '/tools/catalog/<tool id>' README.md` is at least 1;
+    and step 4's spec with a record whose family has no motion frames is
+    counted in `npx nx test tools`'s passing output.
+11. `node scripts/target-gate.mjs WO-021 --review` records a passing row for
+    every declared command with no tracked-byte mutation, and
+    `npm run test:docs` passes in the launchpad order worktree; the Preflight
+    line ran before the first full gate.
 
 **Evidence gate:** the gate rows, the recorded command outputs,
 `docs/evidence/WO-021/README.md`, `fan-out.md`, `review.md`,
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-021/host-qualification.md`.
 
-**Known issues and carry-ins:** The base line is provisional and publishes
-right under starter v0.96.1's merge-base publish; a pass may set it to
-WO-020's merge commit. This order and WO-022 are a lane pair in the sequence:
-their surfaces are disjoint (each writes its own records, modules, family and
-evidence), no edge joins them, and the second of the two to publish
-integrates the target's `main` and rewrites `studies-summary.json` with
-`npm run studies:check -- --write-summary` before its publish; the operator
-may also run them one at a time. A record whose example cannot be expressed
+**Known issues and carry-ins:** The base line is WO-020's merge commit
+(`4c21c58`, DotLn-Angular #11), set by the 2026-11-01 pass. Step 2 is byte
+for byte the same edit as WO-022's step 2, so WO-022's step finds it on
+`main` and only verifies; the pass that follows this order's close reads
+its close record (one attempt, no blocker) and carries core's answer on an
+any-depth declaration (that pass's §Requests to core, item 3). The two
+carry-ins are WO-020-D018 (the study model's family discriminator, before
+the `marbles` family; register row `FUP-4a1b75d959226303`) and WO-020-D020
+(the three repairs the final review boarded; `FUP-27fad100153e0220`),
+written into steps 3 and 4 and criterion 10. WO-022 follows this order in
+the sequence and depends on it: its `flow` family is the second family
+without motion frames, so it needs the discriminator step 4 lands, and its
+executable arm is drawn by the `marbles` family (the 2026-11-01 pass, D4,
+on all three of its reviews); the two are no longer a lane pair. The order
+that publishes after this one integrates the target's `main` and rewrites
+`studies-summary.json` with `npm run studies:check -- --write-summary`
+before its publish. A record whose example cannot be expressed
 as a marble diagram (observeOn's scheduling, materialize's notifications) may
 mark `rxjs` illustrative with its reason in the record and the decisions
 file; the rule the order adds says so. The RxJS patterns rows (`rxp`) and the

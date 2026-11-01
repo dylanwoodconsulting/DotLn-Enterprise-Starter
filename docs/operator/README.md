@@ -338,6 +338,15 @@ audience beyond the operator.
   xhigh), and the receipt records the type.
 - **Target executions** run under Claude Code as well as Codex since 2026-10-26;
   starter v0.101.0's executor-only `target-worktree` grant is what that needs.
+- **A planning pass reviews the orders before it refutes them** (2026-10-31,
+  capture `78a4e370f49ff4d8b035873a0eb189c37517f41900d80f1356c3e0e548d221ab`):
+  before the refuter is dispatched, the three independent reviews the
+  executor and the fix dispatch run (the criteria adversary, the design
+  improver and the consistency reviewer) run over every work order, new and
+  existing, and whatever else the pass gives them, as Codex DotLn workers
+  (`gpt-6.1-sol` at max, one `codex exec` per reviewer from a Claude Code
+  session); the pass fixes or records every finding before the refutation
+  and names the three reports in its document.
 
 ## When this record changes
 

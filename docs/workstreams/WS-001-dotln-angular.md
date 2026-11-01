@@ -49,8 +49,8 @@ target current. The workstream is delivered when WO-004 to WO-008, WO-013 to WO-
 | WO-025 | self          | this launchpad's `main` at activation      | a quality pass over this launchpad's standing documents under the kit's `quality pass:` procedure; the repository profile rewritten to the shape the operator chose |
 | WO-026 | dotln-angular | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` (WO-015's merge) | a quality pass over DotLn-Angular's standing documents under the same procedure |
 | WO-020 | dotln-angular | `6268de9fc3cae84bf66091c1fbcc30d344411cd2` (WO-015's merge) | the concept-study program's pilot: the study record and its check, the `motion` and `timeline` families, addressable readings, the studied marks, and twenty movement studies |
-| WO-021 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty RxJS studies with executable marble examples and the `marbles` family |
-| WO-022 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty Enterprise Integration Patterns studies and the `flow` family |
+| WO-021 | dotln-angular | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` (WO-020's merge) | twenty RxJS studies with executable marble examples and the `marbles` family |
+| WO-022 | dotln-angular | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` (WO-020's merge) | twenty Enterprise Integration Patterns studies and the `flow` family |
 | WO-023 | dotln-angular | provisional; the pass after WO-020 merges may set it | twenty enterprise application pattern studies with executable models and the `states` family |
 | WO-024 | dotln-angular | provisional; the pass after WO-020 merges may set it | ten Gödel, Escher, Bach and ten Team Topologies studies and the `relations` family |
 
@@ -84,11 +84,15 @@ the two document orders (WO-025, WO-026) are side members the operator takes
 between road orders (the 2026-10-30 second pass, D3 and D9). None of them depends
 on an open road order, or an open road order on them. A study batch adds records, modules, one
 visual family and its evidence and edits no workspace configuration, and a
-document order edits documents only, so WO-025 and WO-026, WO-021 and WO-022, and
-WO-023 and WO-024 are lane pairs in the sequence (two entries between blank
-lines). The second publisher of a study pair integrates the target's `main` and
-regenerates the studies summary before its publish, and the operator may run any
-pair one at a time (the same pass, D9).
+document order edits documents only, so WO-025 and WO-026 were a lane pair and
+WO-023 and WO-024 are one in the sequence (two entries between blank lines).
+WO-021 and WO-022 run one after the other: WO-022's `flow` family is the second
+family without motion frames, so it needs the study model's family discriminator
+WO-021 lands, and its executable arm is drawn by WO-021's `marbles` family (the
+planning pass of 2026-11-01, D4, on all three of its reviews). The second
+publisher of a study pair, and WO-022 after WO-021, integrates the target's
+`main` and regenerates the studies summary before its publish, and the operator
+may run any pair one at a time (the 2026-10-30 second pass, D9).
 
 **The typed edges of the open members:**
 
@@ -101,7 +105,8 @@ pair one at a time (the same pass, D9).
 | WO-025 | nothing typed |
 | WO-026 | WO-015 |
 | WO-020 | WO-019 and WO-015 |
-| WO-021, WO-022, WO-023, WO-024 | WO-020 |
+| WO-021, WO-023, WO-024 | WO-020 |
+| WO-022 | WO-020 and WO-021 (the family discriminator and the `marbles` family) |
 
 [The generated index](../work-orders/README.md) says which of these still block.
 The closed members' edges stay in the block at the end of this document, and each
@@ -182,9 +187,11 @@ directions the operator record holds; a pass that changes one changes the other.
    plugin is the recorded fallback (the operator met that failure in June 2026
    on Angular 22.0 under Nx). Playwright for end-to-end tests, one project per
    app, with axe checks on key pages. MSW serves HTTP in development and in
-   tests. Nearly every injectable ships a test kit (`provide<Name>TestKit()`)
-   in its library's `testing` entry point, so a spec provides a service and its
-   dependencies in one call.
+   tests. Each `@Injectable` class and each injection token ships a test kit
+   (`provide<Name>TestKit()`) in its library's `testing` entry point, so a
+   spec provides a service and its dependencies in one call; the target's
+   `check:kits` enforces it (WO-026-D016; the planning pass of 2026-11-01,
+   D7).
 6. **Style.** Sass (`.scss`), design tokens as CSS custom properties with a
    skin layer of token overrides over them (the plain skin first), no vendor
    component library: the house `ui` library owns every component's API,
@@ -215,9 +222,10 @@ directions the operator record holds; a pass that changes one changes the other.
     reserved for app-tier singletons listed in `core`, today only the app base
     path (WO-005-D005); the operator has not yet ruled on it, so this default
     stands.
-11. **Routing.** Features are lazy. `BasePaths` and `<Feature>Paths` enums live
-    in `core`; canonical route builders produce commands and query parameters
-    from those enums so no feature spells a URL. `AppBasePathToken` reads
+11. **Routing.** Features are lazy. The `BasePaths` and `ChildPaths` enums
+    live in `core` (the target's conventions and code name no `<Feature>Paths`
+    enum; WO-026-D016); canonical route builders produce commands and query
+    parameters from those enums so no feature spells a URL. `AppBasePathToken` reads
     `<base href>` at boot and is injected wherever a sub-path aware URL is
     built.
 12. **Component conventions.** Decorator members in this order: `selector`,
@@ -293,7 +301,12 @@ directions the operator record holds; a pass that changes one changes the other.
 19. **Documentation.** `docs/dev-reference/` for people, `docs/ai-reference/`
     for sessions (short, rule-shaped, with the commands to run). DotLn's own
     records for target orders land under `docs/dotln/` so they stay apart from
-    the reference material.
+    the reference material. A library's README says what the library is for,
+    how it is imported and how it is tested, and names the document to read
+    next; a testing entry point's README says what it exports and how it is
+    used; a session that adds a library or an entry point replaces the
+    generator's text with that, as the target's conventions direct
+    (WO-026-D014; the planning pass of 2026-11-01, D7).
 20. **Commits and pull requests.** Conventional commits in the present
     imperative. Pull-request titles are a gitmoji prefix and the subject, with
     no conventional type (the operator's rule of 2026-10-17, restated on
@@ -675,8 +688,8 @@ sequence's order, then the later members with their reopening conditions
 | Member or candidate | What the operator sees or does | State or reopening condition |
 | --- | --- | --- |
 | WO-025 the launchpad's documents | nothing on screen; every standing document of this launchpad read as what is so, the profile in the shape the operator chose | merged; #43, `Launchpad v0.3.4` |
-| WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference, the AI reference and the library READMEs read as what is so | final-reviewed; DotLn-Angular #10 open |
-| WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | final-reviewed; DotLn-Angular #11 open |
+| WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference, the AI reference and the library READMEs read as what is so | merged; DotLn-Angular #10, `DotLn Angular v0.6.1` |
+| WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | merged; DotLn-Angular #11, `DotLn Angular v0.7.0` |
 | WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | filed |
 | WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | filed |
 | WO-023 the enterprise pattern studies | twenty patterns with state drawings and small executable models, and where the app embodies each | filed |
@@ -735,13 +748,13 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-017 | filed    | [the order](../work-orders/WO-017-digital-twin-patience-lane.md) |
 | WO-018 | filed    | [the order](../work-orders/WO-018-art-of-war-map-and-toys.md) |
 | WO-025 | merged   | #43, `Launchpad v0.3.4`; [evidence](../evidence/WO-025/README.md) |
-| WO-026 | final-reviewed | DotLn-Angular #10 on `docs/quality-pass-reference-documents`, opened as a draft at verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-026/README.md) |
-| WO-020 | final-reviewed | DotLn-Angular #11 on `feat/movement-concept-studies`, opened as a draft at verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-020/README.md) |
+| WO-026 | merged   | DotLn-Angular #10, `DotLn Angular v0.6.1`, its records #44; [evidence](../evidence/WO-026/README.md) |
+| WO-020 | merged   | DotLn-Angular #11, `DotLn Angular v0.7.0`, its records #45; [evidence](../evidence/WO-020/README.md) |
 | WO-021 | filed    | [the order](../work-orders/WO-021-concept-studies-rxjs.md) |
 | WO-022 | filed    | [the order](../work-orders/WO-022-concept-studies-eip.md) |
 | WO-023 | filed    | [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
 
 <!-- dotln-workstream:start -->
-{ "id": "WS-001", "members": [{ "workOrderId": "WO-003", "repositoryId": "self" }, { "workOrderId": "WO-004", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-011", "repositoryId": "self" }, { "workOrderId": "WO-005", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-012", "repositoryId": "self" }, { "workOrderId": "WO-006", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-007", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-013", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-014", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-019", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-015", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-016", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-008", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-017", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-018", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-025", "repositoryId": "self" }, { "workOrderId": "WO-026", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-020", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-021", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-022", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-023", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-024", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-003", "to": "WO-004", "relation": "hard" }, { "from": "WO-004", "to": "WO-005", "relation": "hard" }, { "from": "WO-011", "to": "WO-005", "relation": "hard" }, { "from": "WO-005", "to": "WO-006", "relation": "hard" }, { "from": "WO-012", "to": "WO-006", "relation": "hard" }, { "from": "WO-006", "to": "WO-007", "relation": "hard" }, { "from": "WO-007", "to": "WO-013", "relation": "hard" }, { "from": "WO-013", "to": "WO-014", "relation": "hard" }, { "from": "WO-014", "to": "WO-019", "relation": "hard" }, { "from": "WO-019", "to": "WO-015", "relation": "hard" }, { "from": "WO-013", "to": "WO-016", "relation": "hard" }, { "from": "WO-007", "to": "WO-008", "relation": "hard" }, { "from": "WO-016", "to": "WO-017", "relation": "hard" }, { "from": "WO-008", "to": "WO-017", "relation": "hard" }, { "from": "WO-014", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-018", "relation": "hard" }, { "from": "WO-017", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-020", "relation": "hard" }, { "from": "WO-015", "to": "WO-020", "relation": "hard" }, { "from": "WO-020", "to": "WO-021", "relation": "hard" }, { "from": "WO-020", "to": "WO-022", "relation": "hard" }, { "from": "WO-020", "to": "WO-023", "relation": "hard" }, { "from": "WO-020", "to": "WO-024", "relation": "hard" }, { "from": "WO-015", "to": "WO-026", "relation": "hard" }] }
+{ "id": "WS-001", "members": [{ "workOrderId": "WO-003", "repositoryId": "self" }, { "workOrderId": "WO-004", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-011", "repositoryId": "self" }, { "workOrderId": "WO-005", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-012", "repositoryId": "self" }, { "workOrderId": "WO-006", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-007", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-013", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-014", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-019", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-015", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-016", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-008", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-017", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-018", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-025", "repositoryId": "self" }, { "workOrderId": "WO-026", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-020", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-021", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-022", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-023", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-024", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-003", "to": "WO-004", "relation": "hard" }, { "from": "WO-004", "to": "WO-005", "relation": "hard" }, { "from": "WO-011", "to": "WO-005", "relation": "hard" }, { "from": "WO-005", "to": "WO-006", "relation": "hard" }, { "from": "WO-012", "to": "WO-006", "relation": "hard" }, { "from": "WO-006", "to": "WO-007", "relation": "hard" }, { "from": "WO-007", "to": "WO-013", "relation": "hard" }, { "from": "WO-013", "to": "WO-014", "relation": "hard" }, { "from": "WO-014", "to": "WO-019", "relation": "hard" }, { "from": "WO-019", "to": "WO-015", "relation": "hard" }, { "from": "WO-013", "to": "WO-016", "relation": "hard" }, { "from": "WO-007", "to": "WO-008", "relation": "hard" }, { "from": "WO-016", "to": "WO-017", "relation": "hard" }, { "from": "WO-008", "to": "WO-017", "relation": "hard" }, { "from": "WO-014", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-018", "relation": "hard" }, { "from": "WO-017", "to": "WO-018", "relation": "hard" }, { "from": "WO-019", "to": "WO-020", "relation": "hard" }, { "from": "WO-015", "to": "WO-020", "relation": "hard" }, { "from": "WO-020", "to": "WO-021", "relation": "hard" }, { "from": "WO-020", "to": "WO-022", "relation": "hard" }, { "from": "WO-021", "to": "WO-022", "relation": "hard" }, { "from": "WO-020", "to": "WO-023", "relation": "hard" }, { "from": "WO-020", "to": "WO-024", "relation": "hard" }, { "from": "WO-015", "to": "WO-026", "relation": "hard" }] }
 <!-- dotln-workstream:end -->
