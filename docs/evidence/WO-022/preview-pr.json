@@ -87,5 +87,63 @@
     "comments": 0,
     "reviewThreads": 0,
     "routed": "nothing to route; the final publish reuses this pull request, pushes the reviewed commit and the records commit over the draft and marks it ready (WO-022-D034)"
+  },
+  "finalPublish": {
+    "publication": "ready",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-022 --target-worktree --branch feat/eip-concept-studies --title 'feat: add concept studies for the messaging patterns' --body-file docs/final-reviews/WO-022/PR.md",
+      "invocation": "a plain command from the launchpad worktree root, with no pipe, redirect, directory change or variable prefix",
+      "exitCode": 0,
+      "output": "Pushed feat/eip-concept-studies at 5f7726370cae58c6ab1f0befdd67ebfc0fe3b117 over draft 28b1a4c486f182b74e94ad4046038eda515d2f37 and marked pull request #13 on github.com/DylanBWood/DotLn-Angular ready.",
+      "hookDecision": "known by its effect: the admission line is not surfaced in a tool result, and the call ran with no refusal",
+      "hostDecision": "ran under the session permission mode with no prompt or denial",
+      "session": "the final review's Claude Code session, claude-fable-5-1, after final-review-result pass, target-records and the instance records commit c122dbe81c855d79b96e74ed1b95c5376015d6dd"
+    },
+    "headSha": "5f7726370cae58c6ab1f0befdd67ebfc0fe3b117",
+    "commits": [
+      {
+        "sha": "e71c34a5d4109ea01918f12781b74b818adc26ed",
+        "subject": "feat: add concept studies for the messaging patterns",
+        "tree": "c68f036c2dd08db0f930195870475fc961602ac9"
+      },
+      {
+        "sha": "5f7726370cae58c6ab1f0befdd67ebfc0fe3b117",
+        "subject": "docs: record reviewed change and validation",
+        "tree": "87277b82fc9c9a02c9d6a9e92a3e06ed1167164f"
+      }
+    ],
+    "overDraft": "28b1a4c486f182b74e94ad4046038eda515d2f37",
+    "publishedAt": "2026-11-01T19:31:59.640Z",
+    "instanceRecordsCommit": "c122dbe81c855d79b96e74ed1b95c5376015d6dd",
+    "body": "the bytes of docs/final-reviews/WO-022/PR.md followed by the helper's Change table and Target checks section",
+    "observations": [
+      {
+        "observedAt": "2026-11-01T19:33:26Z",
+        "state": "OPEN",
+        "isDraft": false,
+        "headSha": "5f7726370cae58c6ab1f0befdd67ebfc0fe3b117",
+        "mergeable": "MERGEABLE",
+        "mergeStateStatus": "BLOCKED",
+        "reviews": 0,
+        "comments": 0,
+        "reviewThreads": 0,
+        "workflowRuns": [
+          {
+            "id": 41342216971,
+            "workflow": "CI",
+            "createdAt": "2026-11-01T19:32:09Z",
+            "status": "queued"
+          },
+          {
+            "id": 41342216879,
+            "workflow": "Pull request title",
+            "createdAt": "2026-11-01T19:32:09Z",
+            "status": "in_progress"
+          }
+        ],
+        "note": "The merge state reads BLOCKED while the ruleset's required checks run is queued on the pushed head; the draft's tree passed the same jobs at 18:48Z, and the pushed head adds the Control Bus repair and the records commit.",
+        "routed": "nothing to route; the pull request awaits CI on the pushed head and then the operator"
+      }
+    ]
   }
 }
