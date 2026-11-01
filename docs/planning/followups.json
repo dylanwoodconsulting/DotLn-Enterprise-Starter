@@ -5542,6 +5542,13 @@
           "title": "C1 WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes.",
           "summary": "- **C1 WO-008's criterion 1 and WO-017's registry check read `HEAD` for the order's own changes.** WO-008 lists its changed files with `git diff --name-only $(git merge-base HEAD origin/main)..HEAD`, and WO-017's check compares \"the manifest at `HEAD`\" with the base's. `HEAD` is the base until the final review commits, so at verification the first list is empty and the second comparison is the base against itself: both pass while checking nothing. In each case the fix is to read the working tree against the base (`git diff --name-only <base>` together with `git ls-files --others --exclude-standard`, and the working tree's manifest). Not in this pass: the defect is outside the dispatch's subj",
           "missing": false
+        },
+        {
+          "hash": "343b9119dcb6a28fcd5aa4bd26c680a8f9ac0119c699ea27ee655815b6419871",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C1 WO-008's criterion 1 and WO-017's registry check read HEAD for the order's own changes.",
+          "summary": "- **C1 WO-008's criterion 1 and WO-017's registry check read `HEAD` for the order's own changes.** WO-008 lists its changed files with `git diff --name-only $(git merge-base HEAD origin/main)..HEAD`, and WO-017's check compares \"the manifest at `HEAD`\" with the base's. `HEAD` is the base until the final review commits, so at verification the first list is empty and the second comparison is the base against itself: both pass while checking nothing. In each case the fix is to read the working tree against the base (`git diff --name-only <base>` together with `git ls-files --others --exclude-standard`, and the working tree's manifest). Recorded at the first handoff and put to the operator; sett",
+          "missing": false
         }
       ],
       "dispositions": [
@@ -5552,6 +5559,14 @@
           "reopenWhen": "The operator asks, a pass amends WO-008 or WO-017, or before either activates.",
           "targets": [],
           "at": "2026-11-01T09:01:07.431Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D4, on the operator's return (capture SHA-256 b756e11b…): WO-008's criterion 1 reads its file list from the working tree against the base, and WO-017's registry check reads the working tree's manifest.",
+          "reopenWhen": "A verifier or reviewer of WO-008 or WO-017 reports either clause as unjudgeable on the uncommitted candidate.",
+          "targets": [],
+          "at": "2026-11-01T14:10:47.438Z"
         }
       ]
     },
@@ -5566,6 +5581,13 @@
           "title": "C2 WO-022's criterion 3 does not bind each marble spec to its module.",
           "summary": "- **C2 WO-022's criterion 3 does not bind each marble spec to its module.** It asks for a module with a marble spec beside it, counted in `npx nx test tools`, but not that the spec imports the module and asserts the depicted example's emissions, as WO-021's criterion 3 does; a spec over an unrelated observable would pass (this pass's criteria adversary, R1). Not in this pass: outside the dispatch's subject, put to the operator with C1. Reopen when the operator asks, when a pass amends WO-022 again, or when WO-022's verification or final review finds a marble spec that does not exercise its module.",
           "missing": false
+        },
+        {
+          "hash": "d8e9ec1e2623a23e2f64c97f824d4f01eff5fbc523a63b3f0a57a843d99518b1",
+          "ref": "docs/planning/criterion-9-phase-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 WO-022's criterion 3 does not bind each marble spec to its module.",
+          "summary": "- **C2 WO-022's criterion 3 does not bind each marble spec to its module.** It asks for a module with a marble spec beside it, counted in `npx nx test tools`, but not that the spec imports the module and asserts the depicted example's emissions, as WO-021's criterion 3 does; a spec over an unrelated observable would pass (this pass's criteria adversary, R1). Recorded at the first handoff with C1; settled by D4, which binds each spec to its module in WO-022 and WO-024.",
+          "missing": false
         }
       ],
       "dispositions": [
@@ -5576,6 +5598,14 @@
           "reopenWhen": "The operator asks, a pass amends WO-022 again, or WO-022's verification or final review finds a marble spec that does not exercise its module.",
           "targets": [],
           "at": "2026-11-01T09:12:56.392Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-01 second planning pass (docs/planning/criterion-9-phase-2026-11-01.md) D4, on the operator's return (capture SHA-256 b756e11b…): WO-022's criterion 3 names the seven stream transformations among its twenty and binds each marble spec to its module, and WO-024's criterion 3 binds each spec to its module.",
+          "reopenWhen": "WO-022's or WO-024's verification or final review finds a spec that does not exercise its module.",
+          "targets": [],
+          "at": "2026-11-01T14:10:47.450Z"
         }
       ]
     }

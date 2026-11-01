@@ -15,14 +15,16 @@ the executable TypeScript models and specs the records name under
 about 40 source files plus twenty data records; adds no runtime dependency.
 Removes nothing. Wall-clock: about 6 to 10 hours of executor work, of which
 the fan-out runs in parallel, plus the fixed cycle; unknown until run.
-Context bytes: WO-020's record, check, families and rules as it leaves them,
+Context bytes: the study record, check, families and rules as the
+target's `main` leaves them at activation (WO-020's, with WO-021's and
+WO-022's changes),
 `catalog.md` §Studies, the twenty catalog rows, this order,
 `docs/dev-reference/architecture/events-and-state.md` and `foundation.md`
 (the app's own stores, data access and persistence), about 190 KB for the
 executor; each author reads two rows, the contract and the public catalog
 pages it cites. Commands added: none. Tokens: unknown until run; recorded
 per worker. Steps: 12. Re-mints: none. Refutations paid: the 2026-10-30
-second pass's receipt.
+second pass's receipt and the 2026-11-01 second pass's.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`); the
@@ -155,10 +157,14 @@ the design record.
 
 **Execution plan:**
 
-1. Base guard and activation as WO-005 step 1, for WO-023; fast-forward the
-   target worktree to the target's `main` (WO-014-D001); read the harness
-   usage and record the subagent remainder; record the publishing decision
-   as WO-020 did.
+1. Base guard read with WO-014-D001, for WO-023: in the target clone, after
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1; read
+   the harness usage and record the subagent remainder; record the
+   publishing decision as WO-020 did.
 2. The `states` family with stories `StudyStates` and a spec that renders a
    four-state register to its text equivalent. Check: `npx nx test tools`
    exits 0; `npm run lint:components` exits 0.
@@ -222,11 +228,17 @@ each.
    with exactly the twenty ids this order names (or one recorded
    substitution), every record `checked` with at least two reviewers, every
    reference complete, and `studies-summary.json` current.
-3. Every record with `executable` names a module under
+3. Every record except the four the Design names as structural choices
+   without a mechanism to run (Domain Model, Transaction Script, Template
+   View and Page Controller) carries `executable` naming a module under
    `libs/features/tools/src/lib/studies/poeaa/` with a spec beside it that
-   drives the model through the study's example, every record with
-   `executable: null` carries its reason in the decisions file (the file
-   names each), and `npx nx test tools` exits 0 with those specs.
+   imports that module and drives its model through the study's example; a
+   recorded substitution brings in a record held to the same rule, by the
+   Design's test of whether it has a mechanism to run, and the decisions
+   file names which; every record with `executable: null` carries its
+   reason in the decisions file (the file names each, and names no record
+   outside the four and a substitution it names as structural); and
+   `npx nx test tools` exits 0 with those specs.
 4. `docs/evidence/WO-023/fan-out.md`, `review.md` and `README.md` as WO-020's
    criterion 4, the review record also listing, per study, the app file the
    embodiment sentence names and the critic's confirmation that it exists at
@@ -261,7 +273,13 @@ each.
 
 **Known issues and carry-ins:** The base line is provisional and publishes
 right under starter v0.96.1's merge-base publish; a pass may set it to
-WO-020's merge commit. This order and WO-024 are a lane pair: disjoint
+WO-020's merge commit. From the 2026-11-01 pass's criteria adversary (its
+R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
+base guard is an ancestor check and the fast-forward, and criterion 3 names
+the four records that may mark `executable: null`, because a conditional
+criterion let any mechanism the Design assigns a model take that escape;
+the executor reads the study record, check, families and rules as the
+target's `main` leaves them, which WO-021 and WO-022 change. This order and WO-024 are a lane pair: disjoint
 surfaces, no edge, the second to publish integrates the target's `main` and
 rewrites `studies-summary.json` before its publish; the operator may run them
 one at a time. WO-008 (authentication and permissions) will read the

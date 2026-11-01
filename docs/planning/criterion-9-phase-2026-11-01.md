@@ -28,6 +28,15 @@ The dispatch and the five messages are captured verbatim in ignored intake
 verifier exchange that the first message refers to is captured at
 `dece5654…` and `85eacb0d…` (WO-021-D028).
 
+The operator came back at about 13:58Z, after the first handoff at 09:24Z
+(message 7). They quoted the handoff's two defects that had been recorded
+and offered to them rather than fixed, and asked whether the job had been
+done. It had not. The pass then fixed those two defects, the defects the
+day's first pass had recorded against the orders this pass amends, and the
+receipt's known issues whose reopening observation had occurred (D4).
+Captured in ignored intake (`docs/intake/notes/planning-2026-11-01-second-return.md`,
+SHA-256 `b756e11b06563563e23cd3005bf216dd96570c0e0b07810a026dfe82982aeadd`).
+
 The session ran Claude Code with `claude-opus-5-5` at `max`, the operator's
 selection. It ran as a standard pass with the three reviews before the
 refuter, which the operator record's §Harness has asked for since
@@ -43,8 +52,11 @@ traps and what the pass did about each:
   session proposed it, and messages 3 to 5 showed that it would fail
   verification the same way and duplicate a check the kit already makes.
   The clause and its step are removed instead (D1).
-- Widening into other orders. WO-008's and WO-017's reads of `HEAD` are
-  recorded as C1 and left to the operator.
+- Leaving known defects open. The session first recorded WO-008's and
+  WO-017's reads of `HEAD` and WO-022's unbound marble specs as C1 and C2
+  and asked the operator about them. On the operator's return (message 7)
+  it fixed them, together with the first pass's recorded findings on the
+  orders it amends (D4).
 - Editing kit-owned text. The guide's screens and the verifier's briefing go
   to core (D3).
 
@@ -73,7 +85,8 @@ clause.
 
 ## Orders filed and amended
 
-No order is filed. One is amended.
+No order is filed. Seven are amended: WO-022 by D1 and D4, and WO-008,
+WO-016, WO-017, WO-018, WO-023 and WO-024 by D4.
 
 **D1. WO-022 loses step 2 and criterion 9.** Step 2 repeated WO-021's
 residue declaration (the thirty disposable roots in `dotln.config.json` and
@@ -135,14 +148,74 @@ until a release does; this pass's reviewer briefs carried it. Two more items
 go with it: the waiver retraction that WO-021-D030 boarded (item 1), and the
 waiver route the verifier's briefing offers (item 3).
 
+**D4. The recorded defects in the queued orders are fixed.** On the
+operator's return (message 7, capture `b756e11b…`), the pass fixed three
+sets of defects. The first is what it had itself recorded and asked about.
+The second is what the day's first pass recorded "for the passes that amend
+the orders they name" (its D11), whose condition this pass meets. The third
+is two of receipt 017's known issues, whose observations had occurred.
+
+- **The base guard (high; the first pass's adversary R1).** WO-023, WO-024,
+  WO-016, WO-008, WO-017 and WO-018 inherited WO-005's step 1, which
+  requires `origin/main` to equal the Repository pin. Every one of those
+  pins is behind `main`, so the next activation would have stopped at its
+  first step. Each step 1 now checks that the pin is an ancestor of
+  `origin/main`, fast-forwards, and takes the integrated commit as the
+  baseline, as WO-022's already did; WO-005's route guard and activation
+  stay.
+- **WO-008, criterion 1 (C1).** The file list reads the working tree
+  against the base: `git diff --name-only <merge-base>` for changed files
+  and `git ls-files --others --exclude-standard` for new ones.
+- **WO-017 (C1; the first pass's adversary R2 and R7, its design improver
+  R3 and R4).** The registry check reads the working tree's manifest. A
+  base that holds no manifest is the introducing order's case, with an
+  empty predecessor set. An old variant's file changed under its id now
+  fails. Readiness is the replayed completion, meaning the replayed dispatch
+  plus the phase's recorded duration. Steps 4 and 6 and criteria 2, 4 and 8
+  change with them.
+- **WO-016 (the first pass's adversary R4).** `actor` keeps the row's
+  recorded session role as an enum (`recordingSession.role` in the kit's
+  segment schema), so the fold can name a planner, refuter or release-close
+  row. The types, the reducer's scrub, step 3 and criterion 2 change
+  together.
+- **WO-018 (the first pass's adversary R9).** `toys:check -- --source
+  <toys.jsonl>` checks the nineteen imported toys for parity with the run's
+  file at its digest, covering the ids and every field mapped one to one,
+  with a negative test (step 8, criterion 4).
+- **WO-022 (C2; receipt 017's known issues 1 and 8).** The Design's eight
+  stream transformations included Message Filter, which is not among the
+  twenty concepts criterion 2 fixes, so criterion 3 now names the seven that
+  are. It binds each marble spec to its module and says how criterion 2's
+  one substitution meets it. The Design's list, the Cites and the Cost line
+  read the target's `main` rather than WO-020's state.
+- **WO-023 and WO-024 (the first pass's adversary R6).** Criterion 3 names
+  which records must carry a module: in WO-023 every record but the four
+  structural choices among its twenty, in WO-024 the four mechanisms its
+  Design names. WO-024's spec now exercises its module. Both read the
+  target's `main` rather than WO-020's state.
+
+Each order's Known issues record the carry-in, and each Cost line counts
+this pass's refutation. One finding is left unchanged, with its reason in
+§Validation: step 12's inheritance of WO-007 step 15's opening "Commit".
+`followups --touching` over the seven orders listed no other pending row
+whose condition this amendment meets. Register row `FUP-2ed0c79e62b53dd7`
+holds receipt 012's items for WO-016, WO-008, WO-017 and WO-018, and its
+trigger is the planning pass before WO-016 activates. WO-016 is fifth in
+the sequence, so that trigger has not occurred; the base-line item the row
+names is answered by the new step 1.
+Rejected: recording these defects again for a later pass. That is the list
+of gaps left open that the operator record rules out, and message 7 named
+it. Reopen when a verifier or reviewer of one of the seven orders reports a
+clause D4 wrote as unjudgeable or wrong.
+
 ## Register
 
 | Row | Source | Disposition |
 | --- | --- | --- |
 | `FUP-6f24c707f401ecac` | WO-021-D031 (WO-022's criterion 9, boarded for this pass) | settled (D1): removed, not moved |
 | `FUP-c8f69c4a297dd80c` | WO-021-D030 (a waiver recorded without the operator's word has no retraction route) | deferred to core (item 1); reopen when a starter release carries a retraction, or another order records a direct edit of a control segment |
-| `FUP-56e567e35faa01c7` | C1 of this pass | deferred, as §NoOps reads |
-| `FUP-fa19568f71ca91fd` | C2 of this pass | deferred, as §NoOps reads |
+| `FUP-56e567e35faa01c7` | C1 of this pass | deferred at the first handoff; settled by D4 |
+| `FUP-fa19568f71ca91fd` | C2 of this pass | deferred at the first handoff; settled by D4 |
 
 The first two were applied in one batch from the ignored request file
 `docs/intake/followups-apply-2026-11-01-second.json`, giving register
@@ -163,19 +236,15 @@ and D031's row was disposed again with the reviews' correction
   pass while checking nothing. In each case the fix is to read the working
   tree against the base (`git diff --name-only <base>` together with
   `git ls-files --others --exclude-standard`, and the working tree's
-  manifest). Not in this pass: the defect is outside the dispatch's subject,
-  and the session put it to the operator rather than widen the pass (the
-  anti-oscillation rule). Reopen when the operator asks, when a pass amends
-  either order, or before either activates.
+  manifest). Recorded at the first handoff and put to the operator; settled
+  by D4 on the operator's return, which made these fixes.
 - **C2 WO-022's criterion 3 does not bind each marble spec to its module.**
   It asks for a module with a marble spec beside it, counted in
   `npx nx test tools`, but not that the spec imports the module and asserts
   the depicted example's emissions, as WO-021's criterion 3 does; a spec over
   an unrelated observable would pass (this pass's criteria adversary, R1).
-  Not in this pass: outside the dispatch's subject, put to the operator with
-  C1. Reopen when the operator asks, when a pass amends WO-022 again, or when
-  WO-022's verification or final review finds a marble spec that does not
-  exercise its module.
+  Recorded at the first handoff with C1; settled by D4, which binds each
+  spec to its module in WO-022 and WO-024.
 
 ## Sequence
 
@@ -189,7 +258,21 @@ WO-022's hard edge on WO-021 is met.
 - `docs/work-orders/WO-022-concept-studies-eip.md` (D1): the Cost line,
   step 2 removed and the steps renumbered, criterion 5's step number,
   criterion 9 removed and the gate criterion renumbered 9, the Known issues
-  sentence.
+  sentence. Then (D4): the Design's stream-transformation list, criterion 3,
+  the Cites and the Cost line's context, the Known issues.
+- `docs/work-orders/WO-008-authentication-and-permissions.md` (D4): step 1,
+  criterion 1, the Cost line, the Known issues.
+- `docs/work-orders/WO-016-machinery-view.md` (D4): the types, the fold, the
+  reducer's scrub, steps 1 and 3, criterion 2, the Cost line, the Known
+  issues.
+- `docs/work-orders/WO-017-digital-twin-patience-lane.md` (D4): the result
+  fold, the registry check, steps 1, 4 and 6, criteria 2, 4 and 8, the Cost
+  line, the Known issues.
+- `docs/work-orders/WO-018-art-of-war-map-and-toys.md` (D4): steps 1 and 8,
+  criterion 4, the Cost line, the Known issues.
+- `docs/work-orders/WO-023-concept-studies-poeaa.md` and
+  `docs/work-orders/WO-024-concept-studies-geb-and-team-topologies.md` (D4):
+  step 1, criterion 3, the Cost line, the Known issues.
 - `docs/planning/sequence.md`: WO-021 removed.
 - `docs/lineage/idea-ledger.md`: the registration heading.
 - `docs/planning/followups.json`: the dispositions of §Register.
@@ -335,18 +418,17 @@ No disposition was needed, because there was no hold.
 
 ### Known issues from this pass's receipt
 
-The worker's eight findings, each with the pass's reading and its
-reopening observation. The receipt freezes WO-022, so any duty these add is
-the executor's, within the order's authority, or a later pass's amendment.
-Seven of them concern text this pass did not touch; the sixth concerns the
-Cost line's refutation count, which it did.
+The worker's eight findings on receipt 017, each with the pass's reading
+and its reopening observation. Two of them (1 and 8) were fixed by D4 after
+the operator's return, and the second judgment below re-judges the result.
+At receipt 017, seven of them concerned text the pass had not touched; the
+sixth concerned the Cost line's refutation count.
 
 1. **Criterion 3's substitution allowance reads three ways against
-   criterion 2's.** Text this pass did not touch. The executor records any
-   substitution in its decisions and says whether it touches the eight
-   stream patterns. Reopen when the decisions file records a substitution
-   that touches one of the eight, or a VER report or final review records a
-   dispute over how many substitutions criteria 2 and 3 allow.
+   criterion 2's.** Fixed by D4 after the operator's return. The cause was
+   that Message Filter, one of the eight, is not among the twenty, so
+   criterion 3 now names the seven that are and says how criterion 2's one
+   substitution meets it.
 2. **"The Preflight line ran before the first full gate" (criterion 9) is a
    condition on the order's history.** This is the kit's handoff sequence
    (§Preflight before the full gate), carried by every target order's gate
@@ -387,18 +469,12 @@ Cost line's refutation count, which it did.
    Reopen when a declared critical path excludes WO-022 while
    WO-008 stays behind it, or WO-016's design cites no WO-022 study.
 8. **The order is anchored on WO-020's record, check, families and
-   rules.** Its reopening observation has occurred: WO-021's merge changed
+   rules.** Its reopening observation had occurred: WO-021's merge changed
    the study model (the family discriminator), the `studies:check` script,
-   the families (`marbles`) and `catalog-rules.md`, while WO-022's text
-   still says "as WO-020 leaves them". The executor works on the integrated
-   base: step 1 fast-forwards to the target's `main` with WO-021's merge,
-   the hard edge names the discriminator and the `marbles` family, and the
-   first pass's receipt reading (WO-022 (b)) already had the executor read
-   the documents as WO-021 leaves them. Criterion 4's "as WO-020's criterion
-   4" names the evidence format, which WO-021 kept. The pointers are frozen
-   by this receipt. Reopen when WO-022's executor or verifier records a
-   conflict between WO-020's and WO-021's versions of the record, check,
-   families or rules.
+   the families (`marbles`) and `catalog-rules.md`. Fixed by D4: WO-022's
+   Cites and Cost line, and WO-023's and WO-024's, now read those as the
+   target's `main` leaves them at activation. Criterion 4's "as WO-020's
+   criterion 4" names the evidence format, which WO-021 kept.
 
 ## Requests to core
 
