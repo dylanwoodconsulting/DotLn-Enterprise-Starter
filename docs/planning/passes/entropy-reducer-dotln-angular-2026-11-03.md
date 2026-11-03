@@ -191,7 +191,7 @@ entropy control log.
 | ER-F2 | Accept: WO-027 steps 5 and 6 correct the five command lists to the registered gate's plain tier. No mirror script. |
 | ER-F3 | Accept: WO-027 steps 3 and 4, table-row matching, a stale-row refusal and three in-gate controls for `check:scripts`. |
 | ER-F4 | Accept as a document inconsistency: WS-001 rule 4 already gives the feature shape; WO-027 step 7 states it in the target's conventions. No structural check. |
-| ER-F5 | Accept: WO-023 carries the `tool-v0` reader removal as a bounded cleanup inside `libs/shared/catalog`, which it edits anyway. |
+| ER-F5 | Accept: WO-023 carries the `tool-v0` reader removal and every standing promise of its one release (conventions rule 23, `catalog.md`, `catalog-rules.md`) as a bounded cleanup inside paths it edits anyway. The disposition's reason says no release shipped `tool-v0` data; v0.4.0 did, and the window the reader outlived runs from v0.5.0 (the consistency review's F4). |
 | ER-F6 | Accept: WO-027 step 8, the inline rule, the named repository and path, the dated narration out of `catalog.md`. |
 | ER-F7 | Accept: WO-027 step 9, the `docs/dotln/` index row; record bytes stay as filed; the filing-time link question goes to core. |
 | ER-F8 | Accept: WO-027 step 10, the Angular CLI cache paragraph in conventions rule 2. |
@@ -423,4 +423,26 @@ behind another checkout's gates. These are episode observations, not a
 saving claim. Final session counters stay in ignored receipts and the handoff.
 
 ## Validation
+
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at max) through the kit helper. Today's planning
+lane already held the earlier pass's round 1, and the helper admits a later
+round only as a recheck, so the three single-brief reviewers ran under the
+`WO-027` subject, whose change is this pass's whole diff against `main`
+(WO-027, the WO-023 amendment, the sequence, WS-001 and this document), and
+one combined round ran under the planning subject over the change since
+`397f59f` (the merged update). All four reports are retained in the ignored
+reviews lane (`reviews/planning-2026-11-03/round-1-combined` and
+`reviews/WO-027/round-1-{criteria,design,consistency}`). Self-review:
+found 10 (7 distinct); fixed 10; recorded 0. The four refused helper launches before that
+route (round 1 taken, round 2 without a recheck) ran nothing and count as
+uses in the hook's readback.
+
+| Finding | Disposition |
+| --- | --- |
+| Combined F1, criteria F1 (blocking) | Fixed: WO-027 criterion 6 compares the working tree with the integrated base step 1 records, not the pre-batch commit, and excludes the records-only commit the final-review route adds. |
+| Combined F2, criteria F2 (blocking, should-fix) | Fixed: the Design defines a marker as a comment token at the start of a line, so the scanner's own search string and fixture strings count 0; step 2 and criterion 2 add an inert-string control and replace the `git grep` oracle with a classified read of every hit. |
+| Criteria F3, design F1 (should-fix) | Fixed: WO-023's ER-F5 carry-in covers every standing promise of the one-release support (conventions rule 23, `catalog.md` §Loader, `catalog-rules.md`), with a grep over the four files printing 0 as its check. |
+| Consistency F1, F2, F3 (blocking, should-fix, should-fix) | The same three defects as above, found independently; fixed as above, with the counting unit (one marker per line) added to the gauge's definition. |
+| Consistency F4 (note) | Fixed: WO-023's carry-in said no release shipped `tool-v0` data; v0.4.0 did, and the reader's one promised release was v0.5.0, so the text now states the window it outlived. The entropy disposition's reason for ER-F5 carries the same overstatement in the immutable control log; this row and D5 are its correction. |
 

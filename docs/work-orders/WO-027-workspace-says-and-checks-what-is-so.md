@@ -111,10 +111,14 @@ the root has redirected to `/scene` since #9.
 - **The board gauge** (`tools/board-count.mjs`): visit every tracked text
   file outside `docs/` and `node_modules`, reading `BOARDED:` markers in the
   comment syntax of `.ts`, `.mts`, `.mjs`, `.js`, `.scss`, `.html`, `.yml`
-  and `.yaml`; JSON carries no comment and is not scanned. The count CI
-  prints is the count of markers wherever a defect is boarded. Rule 21's
-  text in `conventions.md` says a boarded target defect leaves its marker at
-  the defect's site, in a workflow or a tool as in a library.
+  and `.yaml`; JSON carries no comment and is not scanned. A marker is a
+  line whose first non-blank characters are the file type's comment token
+  followed by `BOARDED:`; a line holds at most one marker, and an occurrence
+  inside a string or elsewhere on a line is not a marker, so the scanner's
+  own search string and a fixture string count 0. The count CI prints is the count of markers wherever a
+  defect is boarded. Rule 21's text in `conventions.md` says a boarded
+  target defect leaves its marker at the defect's site, in a workflow or a
+  tool as in a library.
 - **The script reference check** (`tools/scripts/check-script-reference.mjs`):
   read `scripts.md`'s tables, refuse an npm script or `tools/scripts/*.mjs`
   file without a row, and refuse a row naming a script or file that does not
@@ -182,11 +186,13 @@ for the patch release.
    55b59c9133056c1d6471274a9676a7d5649196ac HEAD` exits 0 in the target
    worktree.
 2. `tools/board-count.mjs`: the walk over every tracked text file outside
-   `docs/` with the comment syntaxes the Design names. Check: on a scratch
-   copy of the tree with `// BOARDED: probe` appended to `tools/pr-title.mjs`
-   and `# BOARDED: probe` appended to `.github/workflows/ci.yml`,
-   `node tools/board-count.mjs` prints a count two higher than on the
-   candidate.
+   `docs/` with the comment syntaxes and the marker definition the Design
+   names. Check: on a scratch copy of the tree with `// BOARDED: probe`
+   appended to `tools/pr-title.mjs` and `# BOARDED: probe` appended to
+   `.github/workflows/ci.yml`, `node tools/board-count.mjs` prints a count
+   two higher than on the candidate; on a second scratch copy with
+   `const inert = 'BOARDED: not a marker';` appended to `tools/pr-title.mjs`,
+   it prints the candidate's count.
 3. `tools/scripts/check-script-reference.mjs`: table-row matching and the
    stale-row refusal. Check: `npm run check:scripts` exits 0 at the
    candidate.
@@ -250,9 +256,13 @@ for the patch release.
 2. On a scratch copy of the candidate tree with `// BOARDED: probe` appended
    to `tools/pr-title.mjs` and `# BOARDED: probe` appended to
    `.github/workflows/ci.yml`, `node tools/board-count.mjs` prints a count
-   two higher than on the candidate, and on the candidate it prints the
-   number of markers `git grep -c 'BOARDED:' -- ':!docs'` reports summed over
-   files (both runs recorded in the evidence README).
+   two higher than on the candidate; on a second scratch copy with
+   `const inert = 'BOARDED: not a marker';` appended to `tools/pr-title.mjs`
+   it prints the candidate's count; and on the candidate it prints the
+   number of comment markers the evidence README lists after reading every
+   `git grep -l 'BOARDED:'` hit and classifying each occurrence as a comment
+   marker or a string (the scanner's own search string is a string). All
+   three runs are recorded in the evidence README.
 3. `node --test tools/` passes at the candidate and its recorded output shows
    the script-reference check failing on the copy with the `npm run boards`
    row removed and on the copy with a row for `npm run removed:check`, and
@@ -274,10 +284,14 @@ for the patch release.
    states the Angular CLI cache setting, its reason, its cost and its
    reopening; `performance.md` has a scene paragraph that states the
    exclusion, its structural bound and its reopening.
-6. `git diff --name-only 55b59c9133056c1d6471274a9676a7d5649196ac` run in
-   the target worktree against the working tree names no file under `apps/`
-   or `libs/` and no file under `docs/dotln/`, and `package.json`'s
-   `dependencies` keys equal the base's.
+6. `git diff --name-only <integrated base>` run in the target worktree
+   against the working tree, where `<integrated base>` is the target `main`
+   commit step 1 integrated and recorded in the decisions file (the merge
+   base of the candidate and `main`), names no file under `apps/` or
+   `libs/` and no file under `docs/dotln/`, and `package.json`'s
+   `dependencies` keys equal that base's. The records-only commit the
+   final-review route adds under `docs/dotln/` afterwards is outside this
+   comparison.
 7. `node scripts/target-gate.mjs WO-027 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
