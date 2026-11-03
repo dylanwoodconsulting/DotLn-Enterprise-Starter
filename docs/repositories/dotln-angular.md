@@ -176,21 +176,23 @@ and cutoff, and disclose unavailable or overlapping counters. A known subtotal
 already above the stop is enough to stop further worker launches. Preserve
 returned work and allow already-running workers to return; record the stop and
 seek a scoped operator extension only if more workers are needed. An unavailable
-counter is unknown, not zero or an automatic extension. Recover missing readings
-from the session/worker receipts and reconcile overlapping scopes before the next
-launch. If no reliable combined total can be established, admit no further
-launch or re-task until usable readings or a scoped operator authorization
-resolve that uncertainty. Parent work and already-running returns continue;
-unavailable counters do not invalidate the product or its acceptance. No spend
-is represented as money without a money counter.
+counter is unknown, not zero or an automatic extension. Before the next launch,
+try the session/worker receipts for missing readings and reconcile overlapping
+scopes; do not sum a counter twice. When uncertainty remains, record the known
+non-overlapping subtotal if one exists and identify the unknown portions.
+Provided no observed subtotal exceeds the stop, continue within the separately
+tracked use cap, without claiming proven token-limit compliance. Missing
+counters alone require no operator extension and do not block completion; a
+measured overrun still stops new workers under the rule above. No spend is
+represented as money without a money counter.
 
 The subagent cap is separate: every launch, continuation message, resumed
 worker and kit launch consumes a use under the current kit. The declared initial
 fan-out consumes twelve uses in each of WO-018, WO-023 and WO-024; reserve the
 execution's independent review ladder before allocating author re-tasks. The parent can apply a
-critic's bounded corrections itself and records who changed what; a record
-becomes checked only after the required factual and reading judgments cover
-its current contents. Keep a manual total for launches the host cannot observe,
+critic's bounded corrections itself and records who changed what; mark a record
+reviewed only after its order's required critic judgments cover its current
+contents. Keep a manual total for launches the host cannot observe,
 including descendants; do not interpret a smaller observed counter as spare
 capacity. Workers start no test-runner gate.
 
@@ -465,8 +467,12 @@ publication remain with the operator.
 
 The close reads the launchpad's merged `main` registration and grant, removes the
 worktree and the branch, and keeps its retained record under the launchpad's
-ignored control directory. Until core's WO-237 lands it removes the order's
-session journals with the worktree (`FUP-64d1967b092ea18a`).
+ignored control directory. Before removal it retains the order's launchpad and
+target session journals in the launchpad's closed-journal lane. This instance's
+configured window is 720 h 0 min (`docs/control/budgets.json`,
+`retention.closed-journal`); routine retention pruning applies after that
+window. The [2026-11-03 pass](../planning/entropy-reducer-2026-11-03.md#d9-integrate-the-independent-reviews-and-repair-the-unpublished-receipt)
+settles `FUP-64d1967b092ea18a` against the carrying release.
 `**Target release notes:** reviewed` on the order makes the Release body the
 order's reviewed `RELEASE-NOTES.md` at the merged revision, linted as a target's
 text.

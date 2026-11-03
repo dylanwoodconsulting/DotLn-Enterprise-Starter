@@ -450,7 +450,8 @@ in-repo map (its item (c)); the commands and checks this horizon adds are
 recorded against the orders' own rows (its item (d)). From receipt 011 (the
 2026-10-26 pass's refutation), carried into this text by the 2026-10-28
 pass: the fan-out's token ceiling is WO-014's recorded order total, with a
-decision at the stop (the fan-out bullet, criterion 5); the operator's
+decision at the stop (the fan-out Design and shared profile; WO-018-D002
+moves this process accounting out of criterion 5); the operator's
 ruling on the run's designs is recorded at activation (step 1); the
 production build within the declared budgets is criterion 6's; "store" has
 three meanings here, the committed data the app ships (this order's rows),

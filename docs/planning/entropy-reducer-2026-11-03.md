@@ -162,7 +162,7 @@ GitHub's target release and tag resolution confirm v0.9.0 at
 55b59c9133056c1d6471274a9676a7d5649196ac, published 2026-11-01T19:43:12Z;
 PR #13 merged at 19:40:35Z. The profile's source and release rows and WS-001's
 two WO-022 state rows are brought current; WO-022 leaves the sequence. The
-next batch pair remains WO-023/WO-024. There is no open target pull request.
+next batch pair remains WO-023/WO-024. At that reading, no open target pull request was returned.
 
 WO-022-D029 asks this pass to preserve the operator's browser-verification
 preference. The operator record now states it, citing the filed process-error
@@ -268,15 +268,19 @@ round-1-criteria, round-1-design and round-1-consistency-incomplete-scope
 25 order files. The initial consistency report traces the changed producers
 and consumers but lists only WO-020, WO-023 and WO-024 as read order files;
 it is retained as useful evidence and does not establish the required
-all-order scope. A fresh consistency review completes that missing scope.
+all-order scope. The replacement round-1-consistency report lists all 25 order files and adds
+two findings, both fixed below. All three required review types now establish
+the requested coverage.
 
 | Finding | Disposition |
 | --- | --- |
 | Criteria F1 | Fixed in WO-018-D002, WO-023-D004 and WO-024-D004: worker/token ceilings and totals stay in Cost, Design, fan-out.md and decisions. The criteria retain candidate reference quality, critic dispositions, embodiment/analogy checks and quarantine provenance. No closed criterion is edited. |
 | Criteria F2 | Fixed in WO-018-D002 and the shared profile: each re-task consumes a use; twelve initial roles remain, the review ladder is reserved and bounded parent corrections require current critic coverage. |
-| Design F1 | Fixed in the profile: recover missing readings and reconcile overlap before the next admission; without a reliable combined total, no further worker starts until readings or scoped operator authorization resolve it. Parent work and in-flight returns continue; missing cost counters do not fail product acceptance. |
+| Design F1 | Fixed in the profile: recover missing readings and reconcile overlap before the next admission. If readings remain partial, disclose the known non-overlapping subtotal and unknown portions, continue under the tracked use cap unless an observed subtotal exceeds the stop, and claim no proven token compliance. The parent rejected a stop based solely on unavailable counters because the executor role explicitly says they never block completion; no new approval dependency is added. |
 | Design F2 | Fixed by keeping the critical-path declaration about dependencies and linking to the maintained sequence for the delivery schedule, preserving the decision sources. |
-| Consistency F1 | Fixed by the operator-authorized privacy repair described below. Both the immutable-receipt check and Markdown path screen pass after the local commit amendment. |
+| Initial consistency F1 | Fixed by the operator-authorized privacy repair described below. Both the immutable-receipt check and Markdown path screen pass after the local commit amendment. |
+| Full-scope consistency F1 | Fixed the profile's stale release-close paragraph: launchpad and target journals are retained before worktree removal, with the configured 720 h 0 min window. The source is retainWorktreeJournals, docs/KIT.md and the budget. |
+| Full-scope consistency F2 | Fixed WO-018's carry-in pointer to the fan-out Design, shared profile and D002, preserving receipt 011 as history. |
 
 The operator approved one bounded repair on 2026-11-03, captured in ignored
 intake at docs/intake/notes/entropy-refutation-redaction-approval-2026-11-03.txt,
@@ -463,9 +467,10 @@ handoff.
 
 ## Validation
 
-The update's complete document gate passed. First-round self-review: found 5;
-fixed 5; recorded 0. The required consistency coverage completion, independent
-goal-refutation receipt and final planning document gate remain pending.
+The update's complete document gate passed. First-round self-review: found 7;
+fixed 7; recorded 0. All three required review types cover all 25 order files.
+The independent goal-refutation receipt and final planning document gate remain
+pending.
 The entropy check passes for two receipts, twelve dispositions and three packets.
 
 Review scope for the three independent workers: every current work-order file

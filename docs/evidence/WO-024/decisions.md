@@ -88,7 +88,7 @@
   "evidence": [
     "The 2026-11-03 criteria review F1 traced the old cross-reference to WO-020 criterion 4's token totals and stop comparison.",
     "Product 07 Operator-opened planning pass places cost and token measurements in Cost or decisions, not acceptance criteria.",
-    "The design review F1 requires an explicit launch outcome when readings are missing or overlap; the shared profile now names recovery and scoped authorization without changing product acceptance."
+    "The design review F1 requires an explicit launch outcome when readings are missing or overlap; the shared profile names recovery and disclosure, honors the role's nonblocking rule for unavailable counters, and preserves the observed-overrun stop without changing product acceptance."
   ],
   "rejected": [
     {
