@@ -1,43 +1,43 @@
 {
   "schemaVersion": 1,
-  "subjectSourceHash": "sha256:cb09aab532a824c0a8dd63ee4563163050747a0d76d515019606decaae5622ae",
+  "subjectSourceHash": "sha256:ba90f342da092b6416ac7c0eb937f85adb33576027ffeb176d87e3b11738cb81",
   "acceptances": [],
-  "observedAt": "2026-11-03T19:04:26.944Z",
-  "subjectRevision": "56f69432ad9c0d1ba8aa93aec2437f5fa8e5d0a2",
+  "observedAt": "2026-11-03T19:16:01.713Z",
+  "subjectRevision": "77cd5e1e9b8d18efcc6b61836899a7115d9ba6c0",
   "rows": [
     {
       "workOrder": "WO-023",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-024",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-027",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-016",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-008",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-017",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     },
     {
       "workOrder": "WO-018",
-      "observedAt": "2026-11-03T19:04:26.944Z",
+      "observedAt": "2026-11-03T19:16:01.713Z",
       "metrics": null
     }
   ],
