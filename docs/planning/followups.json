@@ -700,6 +700,14 @@
           "reopenWhen": "A hook-admitted publish is denied by the host classifier, WO-246 ships, or the operator asks for the trust entry.",
           "targets": [],
           "at": "2026-11-03T16:55:14.395Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): the row's condition fired: Claude Code 2.1.317 auto mode refused the launchpad's plain git push of the update branch four times (External System Writes on a bundled command, Out-of-Place Publication, a server-side judgment with no reason, Auto-Mode Bypass), and the operator pushed it with the ! prefix (D2). The session's attempt to add a local Bash allow rule was refused by the classifier and by the operator, and the operator record carries that correction; no settings file changed. The open route is core's WO-246 publish helper, asked again with today's four labels.",
+          "reopenWhen": "A starter carries core WO-246, or a hook-admitted target publish is refused by the host classifier.",
+          "targets": [],
+          "at": "2026-11-03T18:57:56.488Z"
         }
       ]
     },
@@ -1425,6 +1433,14 @@
           "reopenWhen": "The operator's `planning: entropy reducer WS-001` dispatch.",
           "targets": [],
           "at": "2026-10-28T07:39:03.065Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): the condition occurred: the operator dispatched planning: entropy reducer dotln-angular, the repository form; REVIEW-002 and REFUTATION-002 are filed over dotln-angular@55b59c9 (0 h 18 min and 0 h 5 min, USD 5.16 and USD 1.61), all ten findings survived and every finding and packet is disposed in this pass (D5); the launchpad's own episode was REVIEW-001 earlier the same day.",
+          "reopenWhen": "A later planning: entropy reducer dispatch over a member repository starts a new sequence; nothing runs a review on a cadence.",
+          "targets": [],
+          "at": "2026-11-03T18:57:56.475Z"
         }
       ]
     },
@@ -4712,6 +4728,14 @@
           "reopenWhen": "A starter release carries core's WO-246, or the operator sets the default.",
           "targets": [],
           "at": "2026-11-01T01:57:26.287Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): observation: gh resolves this checkout to the upstream repository by default, so a read of the fork's pull request without --repo failed in this pass and every gh call named the fork explicitly; the default is a tool setting the operator owns and this pass changes no tool setting (D2).",
+          "reopenWhen": "The operator sets the gh default for this checkout, or a kit helper passes the repository explicitly for every gh call.",
+          "targets": [],
+          "at": "2026-11-03T18:57:56.528Z"
         }
       ]
     },
@@ -5231,6 +5255,14 @@
           "reopenWhen": "WO-016 or WO-017 activates (the next new library); its executor takes the lint as a named boy-scout item or records why not.",
           "targets": [],
           "at": "2026-11-01T01:57:26.237Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): the condition occurred and the text already carries it: WS-001 rule 19 states the library README standard with WO-026-D014 and the 2026-11-01 pass's D7 as its sources; WO-027 touches no library README.",
+          "reopenWhen": "A library README is found generated text at a later order's verification.",
+          "targets": [],
+          "at": "2026-11-03T18:57:56.502Z"
         }
       ]
     },
@@ -5456,6 +5488,14 @@
           "reopenWhen": "A starter carries WO-246, the incoming helper is observed stalling, or a new close exceeds the recorded 0 h 5 min removal threshold.",
           "targets": [],
           "at": "2026-11-03T16:55:14.354Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): new evidence: the v0.112.0 update --finish helper ran live for the first time on 2026-11-03 (#53), fetched origin, fast-forwarded main and bootstrapped in under a minute with no manual route; the WO-246 alternates and already-held skip are still not in v0.113.0 (D1).",
+          "reopenWhen": "A starter carries WO-246, the incoming helper is observed stalling, or a close exceeds the recorded 0 h 5 min removal threshold.",
+          "targets": [],
+          "at": "2026-11-03T18:57:56.515Z"
         }
       ]
     },
@@ -6019,6 +6059,240 @@
           "reopenWhen": "Core ships or answers the receipt correction, or another probe is misread as proof of confinement.",
           "targets": [],
           "at": "2026-11-03T17:05:31.504Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-7697f9d1ab2b0e26",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::08820dcc262ca952552df5e11c90bc6948a7df05ccd6fcc8494b442f617f756c",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "43d6c203510fb0f2b8f25c6f07ee8cbd6e1ff4b8d4823d7e7051f1d7a520433d",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F8-live-rationale-in-dated-log — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — The rationale for a live shared setting sits in a standing document that a session reads before…",
+          "summary": "- **ER-F8-live-rationale-in-dated-log — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — The rationale for a live shared setting sits in a standing document that a session reads before changing it. docs/dev-reference/README.md says to read the conve** Surface `docs/dev-reference/workspace/conventions.md rule 2; docs/dev-reference/workspace/generator-log.md`, severity minor, altitude 6, evidence measured. Observed: nx.json:79-82 disables the Angular CLI cache. Why it does, and what that costs (no dev-server Vite prebundling, plus a warning on every serve), is stated only in the dated generator log (generator-log.md:51-80); no other standing document mentions it. The log als",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F8 accepted (D5): WO-027 step 10 puts the Angular CLI cache setting, reason, cost and reopening in conventions rule 2.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.449Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-0dc1bbd56b5e85d1",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::64894fd87d6ae9ca2ed9f33434063af9514fccdde1ea0bc7c1dfc83d077f935b",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "b8ddb64ad821a855d8d15922da5519d9679a6f869f71c5d44d47ac91e8f01f91",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F2-command-lists-drift — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Session command lists match what CI and the registered gate run. WO-015-D022 recorded that omitting…",
+          "summary": "- **ER-F2-command-lists-drift — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Session command lists match what CI and the registered gate run. WO-015-D022 recorded that omitting typecheck:e2e let an error through every local check and bro** Surface `docs/ai-reference/sub-app-rules.md; README.md; docs/ai-reference/README.md; docs/dev-reference/README.md`, severity minor, altitude 6, evidence measured. Observed: docs/ai-reference/sub-app-rules.md:25-27 omits `npm run typecheck:e2e`. ci.yml runs it, and sub-app work, which adds e2e specs, needs it. The same list re-runs lint:components, lint:hygiene, check:fixtures and i18n:check, which `run-many -t lint` already runs thro",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F2 accepted (D5): WO-027 steps 5 and 6 correct the five command lists to the registered gate plain tier; no mirror script.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.370Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-40f1ef5340cae00a",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::729133f1111a9723af1fedc67eac892b1eff0cd01b734c4ef62f0523678d8b39",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "9cbef86453fea93a817f2edab434fea67f59c92a06b23a05a34b4791ea03ac8d",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F9-perf-loop-omits-root-scene — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — The experience evidence in docs/dev-reference/architecture/performance.md covers the app's…",
+          "summary": "- **ER-F9-perf-loop-omits-root-scene — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — The experience evidence in docs/dev-reference/architecture/performance.md covers the app's first-screen journey; the policy itself notes that 'the actual journe** Surface `tools/scripts/sample-performance.mjs; docs/dev-reference/architecture/performance.md`, severity minor, altitude 8, evidence measured. Observed: Since #9 (2026-10-30) the root has redirected to /scene (app.routes.ts:7). sample-performance.mjs was last changed on 2026-10-28 and samples only Board to Catalog, direct Catalog and warm Catalog. Neither the sampler nor performance.md mentions the scene (0 matches each), alth",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F9 accepted for the policy half (D5): WO-027 step 10 adds the scene paragraph to performance.md; scene sampling waits for an observed scene performance concern.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.462Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-7eef40d25e601f3c",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::a490a11cd41acb9cc1b8c71a9e418f5582a106412796c465ed2b6b7f6b09db7b",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "a36a0d834a6c8fc52a8e57350b022311759cf99d89261be345ec6b3025522a98",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F3-gate-checks-without-negative-control — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — docs/dev-reference/workspace/scripts.md:43 says test:tooling shows that 'the checks…",
+          "summary": "- **ER-F3-gate-checks-without-negative-control — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — docs/dev-reference/workspace/scripts.md:43 says test:tooling shows that 'the checks and helpers here behave as documented'. A gate check needs a negative contro** Surface `tools/scripts/check-script-reference.mjs; tools/*.test.mjs`, severity minor, altitude 8, evidence measured. Observed: No tools/*.test.mjs imports check-script-reference.mjs or check-foundation-types.mjs. The negative controls for check-component-order and check-shared-types exist only in tools/check-taxonomy-fixtures.mjs:143-153, which runs under the hand-run lint:fixtures. Scratch drill (typescript stubbed)",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F3 accepted (D5): WO-027 steps 3 and 4 give check:scripts table-row matching, a stale-row refusal and three in-gate controls.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.384Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-8ff7167a0a0ac903",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::a7bfea9f8bac43cecc385df0887c505305e6ea025e928faae91529359a928d71",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "5135e8d5570768026dc6e1ad8e5e994a9abc818d88f13822037b3cc78f89d492",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F7-records-cite-absent-evidence — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — A receipt filed in this repository cites evidence a reader of this repository can reach, or…",
+          "summary": "- **ER-F7-records-cite-absent-evidence — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — A receipt filed in this repository cites evidence a reader of this repository can reach, or says where that evidence lives.** Surface `docs/dev-reference/README.md; docs/dotln/**`, severity minor, altitude 6, evidence measured. Observed: 322 relative links in docs/dotln resolve to nothing tracked; standing documents have 0. Each evidence directory files only decisions.md, so FINAL and VER verdicts cite walkthroughs, manifests and planning receipts that exist only in the launchpad (for example WO-022 FINAL-001 criteria 1, 4 and 8). docs/dev-reference/README.md:71 describes docs/dotln a",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F7 accepted (D5): WO-027 step 9 makes the docs/dotln index row say where the records' relative links resolve; record bytes stay as filed; the filing-time link question goes to core.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.436Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-3acf533e67323dcc",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::c469f8577bfb9adb9ea0b8ba8067f77896163e3c89b691ed41c893ff20f407a5",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "8bdab550ec79a6b57fbc038fb284786f4a9f0c2aff1d0e4e4f9a7aae31c8647a",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F1-board-gauge-blind — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 21 (docs/dev-reference/workspace/conventions.md:227-232), a settled house rule: an…",
+          "summary": "- **ER-F1-board-gauge-blind — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 21 (docs/dev-reference/workspace/conventions.md:227-232), a settled house rule: an encountered defect is fixed or boarded visibly (a // BOARDED** Surface `tools/board-count.mjs; conventions rule 21; docs/dotln/evidence/*/decisions.md`, severity major, altitude 6, evidence measured. Observed: `npm run boards` prints 0. The tree has 0 skipped tests and no not-implemented surface. Meanwhile 77 decision records under docs/dotln/evidence carry a followup field, and none carries a closure state. Spot checks: five are fixed in code (WO-005-D010 title, WO-006-D024 anchors, WO-007-D008, ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F1 accepted (D5): WO-027 step 2 widens tools/board-count.mjs to every tracked text file outside docs/; the closure-state half is declined because the launchpad register is the follow-up state.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.354Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-af353a48a73ecd01",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::f32efba5f73f9f4a395ce5812005b8838924f057b852c9c3d7bb896f3c818b03",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "cb3d958ef102985b36f4fa729bc53c9e9af2ea58fad940efe589c8587627ca17",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F6-standing-doc-unreachable-pointers — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — A standing document's pointers resolve for its reader, and the document states current…",
+          "summary": "- **ER-F6-standing-doc-unreachable-pointers — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — A standing document's pointers resolve for its reader, and the document states current state rather than process history.** Surface `docs/dev-reference/architecture/catalog.md`, severity minor, altitude 6, evidence measured. Observed: catalog.md:219-220 says the operator's direction for what a study is 'lives in the launchpad's docs/product/concept-study.md'. catalog.md:329-330 cites 'the launchpad's docs/evidence/WO-022/design/'. Both are bare paths with no repository or commit, and neither exists here. The same document narrates when the operator ended design rounds (:207-209, ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F6 accepted (D5): WO-027 step 8 states the study doctrine rule inline, names the launchpad repository and path, and removes dated narration from catalog.md.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.424Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-524229f3c08b6be8",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::f684ad9010c913af10993d1e222fef501d68d36450fc16ae2b8bcf572b47d450",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "b697422a744a5ba3b00bae19ac088c26c3417f26be1e2c6f5f49ffab8af95ef6",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable…",
+          "summary": "- **ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable library's index.ts contains only `export * from './public_** Surface `libs/features/*/src/index.ts; conventions rule 4; sub-apps.md`, severity minor, altitude 5, evidence measured. Observed: The board, machinery and scene index.ts files export their routes directly and have no public_api.ts; tools follows rule 4. docs/dev-reference/architecture/sub-apps.md:26-27 presents board's direct export as the exemplar layout. No check enforces either shape. Expected: Standing doctrine settles on one b",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F4 accepted as a document inconsistency (D5): WO-027 step 7 states the feature exception WS-001 rule 4 already gives; no structural check.",
+          "reopenWhen": "WO-027 carries it (D6); reopen if WO-027 is withdrawn or its final review records the criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-03T18:57:56.397Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-4a640045440848a5",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::fc00ee31a86f539fc2657316740fca494dd685011f518248f35769c3bbce277f",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "0edc55be3ee25304b90ddccb99d06b7a5af1273f9222ae0bd902137363f7906a",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F5-v0-shim-outlived-window — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 23 (conventions.md:248-251): the loader accepts tool-v0 for one compatibility…",
+          "summary": "- **ER-F5-v0-shim-outlived-window — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 23 (conventions.md:248-251): the loader accepts tool-v0 for one compatibility release. catalog-loader.ts:158-160 says to remove the reader when** Surface `libs/shared/catalog/src/lib/catalog-loader.ts; conventions rule 23`, severity minor, altitude 5, evidence measured. Observed: The tool-v0 branch (6 references in catalog-loader.ts) shipped in v0.5.0, v0.6.0, v0.6.1, v0.7.0, v0.8.0 and HEAD. None of those tags ships v0 data; only a fake loader in a spec exercises the branch. Nothing marks or counts its expiry. Expected: The shim is removed after its one release, or its ex",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 entropy-reducer-dotln-angular pass (docs/planning/passes/entropy-reducer-dotln-angular-2026-11-03.md): ER-F5 accepted (D5): WO-023 carries the tool-v0 reader removal as a bounded cleanup inside libs/shared/catalog, recorded in its Known issues and carry-ins.",
+          "reopenWhen": "WO-023 carries it; reopen if WO-023 is withdrawn or its decisions record the removal declined.",
+          "targets": [
+            "WO-023"
+          ],
+          "at": "2026-11-03T18:57:56.411Z"
         }
       ]
     }

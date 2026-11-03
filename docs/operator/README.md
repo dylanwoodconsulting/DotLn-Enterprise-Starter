@@ -173,7 +173,11 @@ audience beyond the operator.
 - **A list of gaps left open:** a report listing gaps the session knows and has
   decided to leave is of no use to the operator (2026-10-30, capture
   `75779a72a7d069063d3789fecd0e3ba15f45010d9f6f310a426d8a6197965cbd`).
-- **A rule recorded as theirs** that they did not give.
+- **A rule recorded as theirs** that they did not give, and a universal rule
+  a session inferred on its own and wrote down as the operator's words: a
+  direction enters this record in the scope and words the operator gave it,
+  and a "never" enters it only when the operator said it (2026-11-03, capture
+  `6228809bccb899ff141ef57913b18251649887ea317991a36606408cd895bbc2`).
 - **Any characterization** of their tone, mood, the intent behind their wording or
   their psychology, in any committed file of this fork or of DotLn-Angular.
   Profanity and intensity are the ordinary register of a correction and carry
