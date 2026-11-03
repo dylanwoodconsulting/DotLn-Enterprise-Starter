@@ -63,7 +63,7 @@
   "evidence": [
     "REVIEW-001 ER-RUN-01 and ER-RUN-02 nominate the concern; the parent read the bound WO-020-D004/D012 and WO-022-D023/D028, the filed fan-out and host qualification, and the shipped review-worker subject/diff construction.",
     "WO-022 fan-out records 277,506,825 combined tokens before the missing stop was corrected; its D028 applied 117,733,609 and stopped further workers. The current kit counts re-tasks as uses.",
-    "The profile section Run concept-study workers carries the current procedure; this pass adds no launcher, budget increase, enforcement claim or retrospective evidence rewrite."
+    "The profile section Run content workers carries the current procedure; this pass adds no launcher, budget increase, enforcement claim or retrospective evidence rewrite."
   ],
   "rejected": [
     {
@@ -76,5 +76,28 @@
     }
   ],
   "reopenWhen": "A later order crosses the stop without declaring it, cannot attribute the observed usage, or core delivers a target-aware worker route and boundary meter."
+}
+```
+
+## WO-023-D004
+
+```json
+{
+  "id": "WO-023-D004",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Replace criterion 4's inherited process-cost bookkeeping with explicit candidate reference-quality and critic-disposition checks. Preserve the worker accounting and inherited stop as process duties in Cost, Design, fan-out.md and decisions; unavailable counters do not decide product acceptance.",
+  "evidence": [
+    "The 2026-11-03 criteria review F1 traced the old cross-reference to WO-020 criterion 4's token totals and stop comparison.",
+    "Product 07 Operator-opened planning pass places cost and token measurements in Cost or decisions, not acceptance criteria.",
+    "The design review F1 requires an explicit launch outcome when readings are missing or overlap; the shared profile now names recovery and scoped authorization without changing product acceptance."
+  ],
+  "rejected": [
+    {
+      "option": "Keep inherited token bookkeeping in the acceptance criterion",
+      "reason": "A supported missing counter would judge the product on an unavailable process measurement."
+    }
+  ],
+  "reopenWhen": "An independent verifier finds the rewritten reference-quality requirement unjudgeable on the candidate, or the current kit changes the process contract."
 }
 ```

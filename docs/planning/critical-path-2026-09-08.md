@@ -17,10 +17,9 @@ except WO-008 are closed. WO-008 remains the open foundation outcome; it does
 not gate the catalog, scene or machinery examples that currently expose no
 authenticated route.
 
-This declaration describes dependencies. The [sequence](sequence.md) describes
-the operator's chosen delivery order: the remaining concept-study batch pair,
-the machinery view, authentication and permissions, the digital twin, then the
-map and toy-shelf work. The [2026-10-24 pass, D11](mining-run-orders-2026-10-24.md)
+This declaration describes dependencies. The [sequence](sequence.md) is the
+maintained record of the operator's chosen delivery order.
+The [2026-10-24 pass, D11](mining-run-orders-2026-10-24.md)
 places the useful sandbox examples before authentication and authentication
 before the twin. The [concept-batch pass](concept-batches-and-quality-passes-2026-10-30.md)
 places the operator's study batches at the front as side work. Declaring the

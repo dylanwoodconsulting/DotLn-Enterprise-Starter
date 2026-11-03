@@ -1,5 +1,14 @@
 # Entropy Reducer pass — 2026-11-03
 
+## Independent review scope
+
+Each of the criteria, design and consistency reviewers must read every one of
+the 25 current `docs/work-orders/WO-*.md` files, including unchanged orders,
+and list that coverage in filesRead. Each also reads this pass's complete diff,
+the sequence and relevant source consumers. Closed orders remain historical
+contracts; the review judges current open obligations without retrofitting
+closed acceptance evidence. The parent is the only writer; no worker runs a gate.
+
 ## Dispatch and capture
 
 The operator dispatched an Entropy Reducer planning pass over the launchpad.
@@ -49,7 +58,9 @@ declaration as a bounded launchpad write-back, with a non-deleting candidate
 probe and the profile update. No product scope is removed. Both orders also make
 the inherited worker stop and current launch/re-task accounting explicit through
 the shared profile.
-The critical-path declaration and README corrections are completed in this pass.
+The review also repairs WO-018's obsolete re-task accounting and moves process
+bookkeeping out of acceptance in WO-018, WO-023 and WO-024. The critical-path
+declaration and README corrections are completed in this pass.
 No new work order is needed for those document changes.
 
 ## Decisions
@@ -248,6 +259,50 @@ would let an undeclared stop or stale source identity become normal. The
 chosen response preserves the useful records, makes the immediate procedures
 explicit, and gives the shared runtime defects to core.
 
+### D9. Integrate the independent reviews and repair the unpublished receipt
+
+The first three Codex workers returned five distinct findings. Their reports
+are retained in the ignored reviews lane for planning-2026-11-03:
+round-1-criteria, round-1-design and round-1-consistency-incomplete-scope
+(each has JSON and Markdown). The criteria and design reports each list all
+25 order files. The initial consistency report traces the changed producers
+and consumers but lists only WO-020, WO-023 and WO-024 as read order files;
+it is retained as useful evidence and does not establish the required
+all-order scope. A fresh consistency review completes that missing scope.
+
+| Finding | Disposition |
+| --- | --- |
+| Criteria F1 | Fixed in WO-018-D002, WO-023-D004 and WO-024-D004: worker/token ceilings and totals stay in Cost, Design, fan-out.md and decisions. The criteria retain candidate reference quality, critic dispositions, embodiment/analogy checks and quarantine provenance. No closed criterion is edited. |
+| Criteria F2 | Fixed in WO-018-D002 and the shared profile: each re-task consumes a use; twelve initial roles remain, the review ladder is reserved and bounded parent corrections require current critic coverage. |
+| Design F1 | Fixed in the profile: recover missing readings and reconcile overlap before the next admission; without a reliable combined total, no further worker starts until readings or scoped operator authorization resolve it. Parent work and in-flight returns continue; missing cost counters do not fail product acceptance. |
+| Design F2 | Fixed by keeping the critical-path declaration about dependencies and linking to the maintained sequence for the delivery schedule, preserving the decision sources. |
+| Consistency F1 | Fixed by the operator-authorized privacy repair described below. Both the immutable-receipt check and Markdown path screen pass after the local commit amendment. |
+
+The operator approved one bounded repair on 2026-11-03, captured in ignored
+intake at docs/intake/notes/entropy-refutation-redaction-approval-2026-11-03.txt,
+SHA-256 0eb4ab17d380e065fcb028bc30c652a08a59163e0309e9c75c663033aa94fca4.
+Only REFUTATION-001 JSON report.attempts[6].evidenceRefs[0] changes: the host
+state location is represented by `<host-state-root>`; its observed relation to
+TMPDIR is preserved. The existing renderer produces the two corrected Markdown
+occurrences. The original pair and control log are retained privately. The
+receipt hash changes from sha256:87d56cdc153b863de46f03132a2c8340e12ab59f095bcb83fb7cec78de1291e0
+to sha256:58a01355a596d4c5b5c2eab429f604e91ec4976d8f028f8a3270b7a85289a119;
+the filing row's receipt/rendered hashes are rebound. All finding outcomes,
+cost, episode, subject and actor observations remain unchanged. The unpublished
+local commit was amended so the rejected public projection is not pushed in
+branch history. No new baseline exception, runtime edit or verdict is made.
+This is the operator's explicit exception to immutability, not a general
+correction route; the missing admission check/repair mechanism goes to core.
+
+The plan checker also identified superseded execution-amendment byte bindings.
+The helper withdraws rows 29, 31 and 32 for WO-018, WO-023 and WO-024. Their
+D001 authorizations and product corrections remain intact; the fresh planning
+judgment covers the changed open orders. No waiver or acceptance off-ramp is
+recorded. Reopen any repair on contrary candidate evidence, failed downstream
+checks or a changed shared contract. Recheck/combined rounds are skipped for
+these documentation-only fixes under product 07's review ladder. Completing
+missing first-round scope is not a recheck loop.
+
 ## Register
 
 The helper's versioned dispositions accompany the decisions below. The pass
@@ -382,11 +437,13 @@ From DotLn-Enterprise-Starter's 2026-11-03 Entropy Reducer pass, docs/planning/e
 
 5. ER-RUN-02: review-worker.mjs resolves the launchpad order and builds its diff/tree from the launchpad root; it has no target-order mode. Please extend the kit route to bind the actual target base/candidate, read-only reviewer, use count and retained report. The profile now names this limitation and the working native DotLn target-worker route. Historical ad hoc Codex launchers are evidence, not qualification of the new helper. This does not block the next order's native route.
 
-6. Two projection/receipt corrections: ER-VER-01 reproduced seven closed passing orders still displaying executor-unmet criterion 1. Keep the executor-ordinal history but distinguish it from the later verification/final-review judgment. ER-RUN-03 reproduced host coordination state outside entropy's copy/TMPDIR inventories; describe that unobserved boundary accurately. The blinded worker also disclosed and corrected a bare mktemp escape. No immutable receipt or event was edited.
+6. Two projection/receipt corrections: ER-VER-01 reproduced seven closed passing orders still displaying executor-unmet criterion 1. Keep the executor-ordinal history but distinguish it from the later verification/final-review judgment. ER-RUN-03 reproduced host coordination state outside entropy's copy/TMPDIR inventories; describe that unobserved boundary accurately. The blinded worker also disclosed and corrected a bare mktemp escape. Historical executor events remain unchanged; item 9 records the separately authorized unpublished receipt repair.
 
 7. ER-MAINT-02: a fresh clone without the ignored target-clone mapping fails docs-check and plan check with recorded target clone unavailable, even after bootstrap. README now names the precondition and registration route. Please add an early bootstrap/setup diagnostic. The critical-path mismatch (ER-ARCH-01) and README's independence wording (ER-VER-02) are repaired locally. Evidence bytes were measured, but an evidence ceiling was declined because no attributable throughput cost was established.
 
 8. Existing WO-012-D008 / FUP-2232a29f1061494f still needs a core disposition: targetReleaseClassification counts only recognized values, so a valid header plus a malformed duplicate escapes that count. The profile's two-count precheck is the working protection. Please file or identify the fix for counting every declaration before validating the sole value; this is not a release blocker or a request to fork kit code.
+
+9. The consistency review found a filing-contract mismatch: entropy fileReceipt screens local terms but does not apply the Markdown private-path rule before making the pair immutable. One ER-RUN-03 evidence reference rendered twice in REFUTATION-001.md and failed docs-check. The operator approved a path-only placeholder repair and hash rebind before publication; the original is retained privately, all eight outcomes are unchanged, and the unpublished local commit was amended. Please screen the rendered Markdown before filing and provide a provenance-preserving correction route for such a rejected public projection. No baseline exemption or kit fork was added.
 ```
 
 ## Process cost
@@ -397,7 +454,8 @@ so no parent total or saving is claimed. The initial worker plan was seven
 launches: one release researcher, two entropy workers, three batched order
 reviewers and one independent planning refuter, against subagentCap 20. A
 follow-up briefing to the release researcher also consumes a use under the new
-kit. The entropy reviewer ran for 0 h 21 min (rounded), 13,949,011 tokens and USD
+kit, and completing the initial consistency review's missing scope consumes
+one more. The planned total is nine known uses against the cap of twenty. The entropy reviewer ran for 0 h 21 min (rounded), 13,949,011 tokens and USD
 6.33618; the blinded refuter for 0 h 3 min (rounded), 998,577 tokens and USD
 0.9567504, both from claude-result-envelope. These are episode observations,
 not a saving claim. Final session counters stay in ignored receipts and the
@@ -405,9 +463,10 @@ handoff.
 
 ## Validation
 
-The update's complete document gate passed. This planning pass still requires
-its three independent order reviews, goal-refutation receipt and final document
-gate; the draft does not claim those checks.
+The update's complete document gate passed. First-round self-review: found 5;
+fixed 5; recorded 0. The required consistency coverage completion, independent
+goal-refutation receipt and final planning document gate remain pending.
+The entropy check passes for two receipts, twelve dispositions and three packets.
 
 Review scope for the three independent workers: every current work-order file
 under `docs/work-orders/WO-*.md`, new and existing, plus this pass's complete

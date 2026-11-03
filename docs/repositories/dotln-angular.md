@@ -156,10 +156,12 @@ of machine-specific configuration. Reopen this choice when Angular supports a
 portable worktree-local cache setting or when dev-server rebuild time becomes a
 concern.
 
-### Run concept-study workers
+### Run content workers
 
-WO-023 and WO-024 reuse WO-020's authoring and critic procedure. Before the first
-worker starts, record the token stop in the activation decisions and `fan-out.md`:
+WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-018 applies
+the same admission and accounting rules to its map and toy-design fan-outs.
+Before the first worker starts, record the token stop in the activation
+decisions and `fan-out.md`:
 use WO-014's order total from `npm run meta` when available; otherwise use the
 recorded 117,733,609 from WO-020-D004. WO-020-D012 lifted it for WO-020 alone;
 that exception does not travel to another order. The
@@ -174,13 +176,18 @@ and cutoff, and disclose unavailable or overlapping counters. A known subtotal
 already above the stop is enough to stop further worker launches. Preserve
 returned work and allow already-running workers to return; record the stop and
 seek a scoped operator extension only if more workers are needed. An unavailable
-counter is unknown, not zero or an automatic extension. No spend is represented
-as money without a money counter.
+counter is unknown, not zero or an automatic extension. Recover missing readings
+from the session/worker receipts and reconcile overlapping scopes before the next
+launch. If no reliable combined total can be established, admit no further
+launch or re-task until usable readings or a scoped operator authorization
+resolve that uncertainty. Parent work and already-running returns continue;
+unavailable counters do not invalidate the product or its acceptance. No spend
+is represented as money without a money counter.
 
 The subagent cap is separate: every launch, continuation message, resumed
-worker and kit launch consumes a use under the current kit. The initial ten
-authors and two critics consume twelve; reserve the execution's independent
-review ladder before allocating author re-tasks. The parent can apply a
+worker and kit launch consumes a use under the current kit. The declared initial
+fan-out consumes twelve uses in each of WO-018, WO-023 and WO-024; reserve the
+execution's independent review ladder before allocating author re-tasks. The parent can apply a
 critic's bounded corrections itself and records who changed what; a record
 becomes checked only after the required factual and reading judgments cover
 its current contents. Keep a manual total for launches the host cannot observe,

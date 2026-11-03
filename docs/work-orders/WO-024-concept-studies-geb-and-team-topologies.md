@@ -21,10 +21,11 @@ rules as the target's `main` leaves them at activation (WO-020's, with
 WO-021's and WO-022's changes), `catalog.md` §Studies, the twenty catalog rows with their
 hooks, this order, about 180 KB for the executor; each author reads two rows,
 the contract and the public references it cites. Commands added: none.
-Tokens: unknown until run; recorded per worker. Steps: 12. Re-mints: none.
-Refutations paid: the 2026-10-30 second pass's receipt, on the text before
-the 2026-11-01 second pass's authorized amendment (WO-024-D001), which the
-next planning pass's refutation judges.
+Tokens: unknown until run. Worker totals, the session total, stop
+comparison and use count are recorded in `fan-out.md` and decisions under the
+profile as process controls, outside acceptance. Steps: 12. Re-mints: none.
+Refutations paid before this pass: the 2026-10-30 second pass's receipt, on the text before
+the 2026-11-01 second pass's authorized amendment (WO-024-D001), which this pass's fresh refutation judges.
 **Nomination provenance:** the operator's direction of 2026-10-30 (ignored
 intake capture `docs/intake/notes/planning-2026-10-30-second.md`, SHA-256
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`); the
@@ -144,7 +145,7 @@ them to the books' vocabulary; no `relations` family exists.
   Seven-to-nine maximum effective team size. One further recorded
   substitution per work under the rule is admitted as in WO-020.
 - **The fan-out**: WO-020's authoring and critic procedure, with the
-  [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-concept-study-workers)
+  [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
   declared before any worker starts, at most twelve initial author/critic launches (ten authors
   with two concepts each, one factual critic who also checks the analogy rule
   and that no study characterizes the operator or quotes the books, one
@@ -259,9 +260,14 @@ each.
    one); every record with `visual: null` carries its reason there too (the
    file names each); and `npx nx test tools` exits 0 with those specs
    counted in its output.
-4. `docs/evidence/WO-024/fan-out.md`, `review.md` and `README.md` as WO-020's
-   criterion 4, the review record also confirming per study that no passage
+4. The candidate studies cite supported, reachable references and obey the
+   analogy rule. Run `cat docs/evidence/WO-024/review.md docs/evidence/WO-024/README.md`:
+   every critic finding has a disposition, every reference and
+   implementation URL has its observed link-check status, and no candidate
+   record cites a URL recorded unreachable or a reference the factual critic
+   marked unsupported. The review record confirms per study that no passage
    of either book is quoted and no sentence characterizes the operator.
+   Worker accounting remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440.
 6. `npx nx build dotln --configuration=production` exits 0 within the
