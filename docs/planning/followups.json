@@ -4868,6 +4868,14 @@
           "reopenWhen": "A starter release carries core's WO-245.",
           "targets": [],
           "at": "2026-11-01T01:57:26.277Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Starter v0.112.0 carries core WO-245 (released in v0.108.0): kit instructions now live in docs/KIT.md and customized front pages are preserved. The authorized WO-025-D014 move is applied on chore/starter-v0.112.0: root README now carries the instance introduction and unchanged release block, links are rebased, and the old path is a compatibility pointer for immutable reports. The local release-surface and document checks pass.",
+          "reopenWhen": "A later starter update overwrites the customized root introduction or the release/document checks find a broken moved link.",
+          "targets": [],
+          "at": "2026-11-03T16:33:51.090Z"
         }
       ]
     },

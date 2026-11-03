@@ -11,7 +11,14 @@ phase in a fresh session at the recorded worktree. It does no implementation or
 review and forwards no worker narrative. Independence means each verifier and
 reviewer reads its own authorized evidence without the preceding conversation;
 the router's continued presence does not make those judgments one actor's.
-The operator still merges, then types the same phrase for release close. See
+The operator still merges, then types the same phrase for release close. A
+drive finishes on a validated release attribution or a recorded no-release close,
+or stops saying why and what to type next: a close the host declines ends at
+`awaiting-close`, whose next step is `resume: release close` in main or, after a
+Codex decline, `node scripts/drive.mjs WO-NNN --host claude`, the one admitted
+host change. Every live receipt names the code identity it ran on, and the
+sandbox a routed run gets is this instance's `drive.sandbox` election (`host` or
+`off`). See
 [the dispatch contract](product/07-execution-guide.md#operator-resume-phrases--how-you-get-dispatched).
 
 | Actor                           | Effort source                                                                                                 | Use for                                                                                                         | Don't use for                                                                                                      |
@@ -105,13 +112,16 @@ are the boundary; tool availability still grants no authority. See the
 [security note](../AI-HARNESS-SECURITY.md)
 and [ADR-0003 amendment](decisions/0003-personal-ai-harness-security.md#amendments).
 Re-check effective settings after upgrades.
-DotLn hooks refuse six conditions: a second writer in one worktree; a write to
+DotLn hooks refuse eight conditions: a second writer in one worktree; a write to
 gate inputs or the success record during any live `npm test`; a repository
-write outside `docs/` and root Markdown on a `planning/` branch; and an
-observable subagent admission beyond `docs/control/budgets.json` `subagentCap`
-(default 20; `null` disables); and a known outside-project write destination
-without an active role or support grant; and a complete gate, bounded probe
-or worker start past the dispatch's bound. That stop names `analysis:` and the
+write outside `docs/` and root Markdown on a `planning/` branch; an
+observable worker use (a launch, a re-task or a kit launch) beyond
+`docs/control/budgets.json` `subagentCap` (default 20; `null` disables); a
+known outside-project write destination without an active role or support
+grant; a complete gate, bounded probe or worker start past the dispatch's
+bound; desktop control and the operator's own browser sessions without the
+instance's `features.desktop-control` election; and a test-runner gate started
+by a `dotln-worker` review or refutation worker. The bound's stop names `analysis:` and the
 operator's `resume accept-overrun` route, retaining diagnosis and focused
 reproductions. Descendants count at their first attributable
 tool call; unresolved direct/child overlap is a reported minimum and unobserved

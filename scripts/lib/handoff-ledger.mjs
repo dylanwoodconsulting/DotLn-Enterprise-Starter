@@ -9,7 +9,7 @@
 // may not.
 import { spawnSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
-import { join, relative } from "node:path";
+import { dirname, join, relative } from "node:path";
 import { docPath, docRelative } from "./config.mjs";
 import { runGitPathList } from "./git.mjs";
 import { containedRegularFile, workOrderAuthorityPath } from "./paths.mjs";
@@ -17,15 +17,21 @@ import { criterionJudgments, criterionLineForms } from "./off-ramps.mjs";
 
 // Presentation wrappers and an optional worker name do not change the three
 // counts. Quotes, prose prefixes and incomplete counts remain outside the form.
+// The review ladder's two optional fields follow the counts: the rounds run,
+// with an optional note such as a skipped round, and the lines no reviewer
+// read, with the reason (none needed when there are none). Prose may follow
+// after a space, but a `;` there must start one of those fields.
 const SELF_REVIEW =
-  /^(?:(?:[-*+]|\d{1,9}[.)])[ \t]+)?self-review(?: \([^()\r\n]{1,100}\))?: found \d+; fixed \d+; recorded \d+(?!\w)/iu;
+  /^(?:(?:[-*+]|\d{1,9}[.)])[ \t]+)?self-review(?: \([^()\r\n]{1,100}\))?: found \d+; fixed \d+; recorded \d+(?:; rounds \d+(?: \([^()\r\n]{1,200}\))?)?(?:; unreviewed (?:0 lines?(?: \([^()\r\n]{1,200}\))?|\d+ lines? \([^()\r\n]{1,200}\)))?(?![\w;])/iu;
 const inlinePresentation = (line) =>
   line.replace(/(\*\*|__|`|\*|_)(?=\S)(.+?\S|\S)\1/gu, "$2");
 
 /**
  * The numbered acceptance criteria an order's text declares, each with the
  * text of its item (wrapped lines included, up to a blank line), or null
- * when the text holds no such list to check against.
+ * when the text holds no such list to check against. The item's text, trimmed
+ * and its wrapped lines joined by one space, is what a defect record hashes,
+ * so a change to that joining rule invalidates every standing record.
  */
 export function declaredCriteria(text) {
   const start = text.search(
@@ -110,6 +116,94 @@ const TARGET_GATE_NAMES = [
 const named = (ids) =>
   `${ids.length === 1 ? "criterion" : "criteria"} ${ids.join(", ")}`;
 
+// A criterion that names a live lifecycle or a live drive stands on its
+// receipts, and a receipt stands on the code it ran on: the live-drive
+// receipts a met criterion's paragraph cites are read and their source
+// identity compared with the handoff identity (WO-247-D005). Mechanism
+// wording ("the live receipt's identity") and a negation ("no live drive")
+// name no run.
+const LIVE_RUN = /\blive (?:lifecycle|drive)s?\b/giu;
+const NEGATED = /\b(?:no|not|never|without)\s+(?:an?\s+|any\s+)?$/iu;
+// One mention that is not itself negated names a run, whatever a later clause
+// says it ran without.
+export const namesLiveRun = (text) =>
+  [...text.matchAll(LIVE_RUN)].some(
+    (match) =>
+      !NEGATED.test(text.slice(Math.max(0, match.index - 24), match.index)),
+  );
+const RECEIPT_REFERENCE = /[\w./-]*live-drive-attempt-\d+\.json/gu;
+const criterionReceipts = (judgments) => {
+  const judged = new Map();
+  for (const judgment of judgments) {
+    if (!judgment.met) continue;
+    const receipts = [
+      ...new Set(judgment.paragraph.match(RECEIPT_REFERENCE) ?? []),
+    ];
+    if (receipts.length) judged.set(judgment.criterionId, receipts);
+  }
+  return judged;
+};
+/** The live receipts the met criteria cite, each read from the ledger's
+ * directory or the evidence root and recorded with its source identity. A
+ * criterion naming a live lifecycle or drive must cite one, and its receipts
+ * must carry the handoff identity; a receipt another criterion cites is
+ * evidence of what it recorded and is admitted with whether it matches. */
+export async function requireLiveReceiptIdentity(root, ledger) {
+  if (!ledger?.checked || !Array.isArray(ledger.judgments)) return [];
+  const cited = criterionReceipts(ledger.judgments);
+  const liveCriteria = ledger.declared
+    .filter(({ id, text }) => ledger.met.includes(id) && namesLiveRun(text))
+    .map(({ id }) => id);
+  const uncited = liveCriteria.filter((id) => !cited.has(id));
+  if (uncited.length)
+    throw new Error(
+      `${ledger.path}: ${named(uncited)} recorded met names a live lifecycle or drive but cites no live-drive-attempt-N.json receipt; cite the receipt whose codeIdentity.source equals the handoff identity, or record the criterion unmet with the reason.`,
+    );
+  if (!cited.size) return [];
+  const { gateCodeIdentity } = await import("./gate-evidence.mjs");
+  const identity = gateCodeIdentity(root);
+  const evidence = docPath(root, "evidence");
+  const results = [];
+  for (const [criterionId, receipts] of cited)
+    for (const reference of receipts) {
+      const candidates = [
+        join(root, dirname(ledger.path), reference),
+        join(evidence, reference),
+      ];
+      const file = candidates.find((candidate) =>
+        containedRegularFile(candidate, evidence),
+      );
+      if (!file)
+        throw new Error(
+          `${ledger.path}: criterion ${criterionId} cites ${reference}, which is not a contained regular file under ${docRelative(root, "evidence")}.`,
+        );
+      let receipt;
+      try {
+        receipt = JSON.parse(readFileSync(file, "utf8"));
+      } catch (error) {
+        throw new Error(
+          `${ledger.path}: criterion ${criterionId} cites ${reference}, which is not readable JSON: ${error.message}.`,
+        );
+      }
+      const source = receipt?.codeIdentity?.source?.codeIdentity;
+      if (typeof source !== "string" || !source)
+        throw new Error(
+          `${ledger.path}: criterion ${criterionId} cites ${reference}, which records no codeIdentity.source; a receipt without one cannot show it ran on the handoff identity ${identity}.`,
+        );
+      if (source !== identity && liveCriteria.includes(criterionId))
+        throw new Error(
+          `${ledger.path}: criterion ${criterionId} cites ${reference}, whose source code identity ${source} differs from the handoff identity ${identity}; the live run did not run on this code. Run it again on the final bytes, or record the criterion unmet with the reason.`,
+        );
+      results.push({
+        criterionId,
+        receipt: relative(root, file),
+        codeIdentity: source,
+        matchesHandoff: source === identity,
+      });
+    }
+  return results;
+}
+
 const readDeclaredCriteria = (root, state) => {
   try {
     return declaredCriteria(
@@ -168,7 +262,7 @@ export function readHandoffLedger(root, state) {
     .some((line) => SELF_REVIEW.test(inlinePresentation(line)))
     ? []
     : [
-        `${path} lacks a self-review: line; summarize this run's three independent reviews as \`self-review: found <n>; fixed <n>; recorded <n>\` and cite all three workers' reports.`,
+        `${path} lacks a self-review: line; summarize this run's review ladder as \`self-review: found <n>; fixed <n>; recorded <n>\`, optionally followed by \`; rounds <n>; unreviewed <n> lines (<reason>)\`, and cite every round's reports.`,
       ];
   const declared = readDeclaredCriteria(root, state);
   if (!declared)
@@ -214,7 +308,16 @@ export function readHandoffLedger(root, state) {
   const met = ids.filter((id) => seen.get(id).met);
   const unmet = ids.filter((id) => !seen.get(id).met);
   const claims = criterionGateClaims(declared, met, state);
-  return { checked: true, path, declared, met, unmet, claims, advisories };
+  return {
+    checked: true,
+    path,
+    declared,
+    met,
+    unmet,
+    claims,
+    advisories,
+    judgments: [...seen.values()],
+  };
 }
 
 // Read the execution selection through the checkout's own runner. Its ordinary
@@ -324,6 +427,12 @@ export async function requireGateClaims(
   const claims = ledger?.checked
     ? ledger.claims
     : { document: [], review: [], plain: [] };
+  // Only the executor's handoff ledger carries judgments; a verifier's report
+  // claims and a hand-built claim set cite no receipts to compare.
+  if (ledger?.checked && Array.isArray(ledger.judgments)) {
+    const receipts = await requireLiveReceiptIdentity(root, ledger);
+    if (receipts.length) result.liveReceipts = receipts;
+  }
   const instead = `record the criterion unmet with the reason instead (criterion lines: ${criterionLineForms})`;
   const productClaims = [...new Set([...claims.plain, ...claims.review])];
   if (state?.repositoryId && productClaims.length) {

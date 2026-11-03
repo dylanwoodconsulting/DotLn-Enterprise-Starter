@@ -7,6 +7,11 @@ import {
 } from "./lib/temporary-roots.mjs";
 import * as gitCommands from "./lib/git.mjs";
 import { copyFixtureFiles } from "./lib/fixture-inputs.mjs";
+import {
+  releaseCloseHandoff,
+  releaseCloseKind,
+  selfCloseKind,
+} from "./lib/release-close-handoff.mjs";
 const { runGit, shellQuote } = gitCommands;
 // The compatibility spelling lets the new behavioral fixtures execute against
 // the named prior revision, where the exported builder does not exist yet.
@@ -112,6 +117,8 @@ import {
   SHELL_DIAGNOSTICS,
   recordCodexDispatch,
   recordOperatorMessage,
+  kitWorkerLaunch,
+  reviewWorkerGate,
 } from "../packages/skeleton/dist/src/harness-host.js";
 import { operatorControl } from "../packages/compiler/src/operator-control.mjs";
 import {
@@ -121,9 +128,13 @@ import {
   harnessInstallation,
   harnessInstructionBlock,
   composeHarnessInstruction,
+  PRE_RECORD_RUNTIME_FILE_LISTS,
   preserveHarnessRuntime,
+  provenRuntimeSnapshot,
   readBuildOverlay,
+  RUNTIME_SNAPSHOT_RECORD,
   runtimePackageInventory,
+  runtimeSnapshotContent,
   runtimeSnapshotPath,
 } from "./lib/harness.mjs";
 import { termsCheck } from "./terms.mjs";
@@ -779,7 +790,12 @@ test("foreground CLI dispatch binds the actual roleless hook session and preserv
     assert.equal(state("stale-verify").role, undefined);
     const report =
       '# Fixture report\n\n**Actor attestation:** {"harness":"codex-cli","harnessVersion":"fixture","model":"fixture","effort":"high","source":"self-reported"}\n\n**Process cost:** unknown; cause no-session\n';
-    write(root, "docs/verifications/WO-999/VER-001.md", report);
+    // A fail names its basis in its findings block (WO-249).
+    write(
+      root,
+      "docs/verifications/WO-999/VER-001.md",
+      `${report}\n<!-- dotln-findings:start -->\n[{"id": "F1", "route": "blocking", "class": "escape", "summary": "A fixture regression.", "basis": {"regression": "the fixture behavior main had"}, "reproduction": "docs/evidence/WO-999/regression.md"}]\n<!-- dotln-findings:end -->\n`,
+    );
     resume("verification-result", "fail", ...actor);
     bind("fix", "executor", "RepairCompleted");
     resume("repair-complete", ...actor);
@@ -978,7 +994,8 @@ test("WO-139 Codex executor and fix completion automatically release after the f
     write(
       root,
       "docs/verifications/WO-999/VER-001.md",
-      '# Fixture finding\n\n**Actor attestation:** {"harness":"codex-cli","harnessVersion":"fixture","model":"fixture","effort":"high","source":"self-reported"}\n\n**Process cost:** unknown; cause no-session\n',
+      // A fail names its basis in its findings block (WO-249).
+      '# Fixture finding\n\n**Actor attestation:** {"harness":"codex-cli","harnessVersion":"fixture","model":"fixture","effort":"high","source":"self-reported"}\n\n**Process cost:** unknown; cause no-session\n\n<!-- dotln-findings:start -->\n[{\"id\": \"F1\", \"route\": \"blocking\", \"class\": \"escape\", \"summary\": \"A fixture regression.\", \"basis\": {\"regression\": \"the fixture behavior main had\"}, \"reproduction\": \"docs/evidence/WO-999/regression.md\"}]\n<!-- dotln-findings:end -->\n',
     );
     pass("verification-result", "fail", ...actor);
     assert.equal(harnessWriterView(root).reserved, false);
@@ -1672,6 +1689,344 @@ function invoke(root, name, payload, removed = false, environment = {}) {
 const allowed = (result) =>
   result.decision !== "block" &&
   result.hookSpecificOutput?.permissionDecision !== "deny";
+
+test("desktop control refuses by default and reads the live election with one advisory", async () => {
+  const root = fixture();
+  try {
+    const run = await fixtureHook(root, "permissions");
+    const tools = [
+      "mcp__computer-use__screenshot",
+      "mcp__remote-devices__computer_click",
+      "enable__mcp__remote-devices__computer",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__Claude_Browser__click",
+      "mcp__remote-devices__Claude_Browser__navigate",
+      "enable__mcp__claude-in-chrome",
+      "enable__mcp__remote-devices__Claude_Browser",
+    ].map((tool_name) => ({ tool_name, tool_input: {} }));
+    tools.push(
+      ...[
+        "anthropic-skills:computer-use",
+        "anthropic-skills:chrome-browser",
+        "anthropic-skills:built-in-browser",
+        "claude-in-chrome",
+      ].map((skill) => ({
+        tool_name: "Skill",
+        tool_input: { skill, args: "verify" },
+      })),
+    );
+    const off = (result) => {
+      assert.equal(allowed(result), false, JSON.stringify(result));
+      const reason = result.hookSpecificOutput.permissionDecisionReason;
+      assert.match(reason, /DOTLN_DESKTOP_CONTROL_REFUSED/);
+      assert.match(reason, /features.desktop-control/);
+      assert.match(reason, /Playwright/);
+      assert.match(reason, /operator must explicitly request/);
+    };
+    for (const tool of tools) off(await run(input(root, "PreToolUse", tool)));
+    off(invoke(root, "permissions", input(root, "PreToolUse", tools[0])));
+    const elect = (value) =>
+      write(
+        root,
+        "dotln.config.json",
+        json({ version: 1, features: { "desktop-control": value } }),
+      );
+    elect(true);
+    const first = invoke(
+      root,
+      "permissions",
+      input(root, "PreToolUse", tools[0]),
+    );
+    assert.equal(allowed(first), true);
+    assert.match(first.systemMessage, /features.desktop-control is on/);
+    assert.match(first.systemMessage, /explicit request in this session/);
+    for (const tool of tools) {
+      const result = await run(input(root, "PreToolUse", tool));
+      assert.equal(allowed(result), true);
+      assert.equal(result.systemMessage, undefined);
+    }
+    elect(false);
+    off(await run(input(root, "PreToolUse", tools[0])));
+    elect({ on: true, note: "Requested verification" });
+    assert.equal(allowed(await run(input(root, "PreToolUse", tools[0]))), true);
+    elect({ on: false, note: "Disabled again" });
+    off(await run(input(root, "PreToolUse", tools[0])));
+    elect({ on: "true" });
+    const invalid = await run(input(root, "PreToolUse", tools[0]));
+    off(invalid);
+    assert.match(
+      invalid.hookSpecificOutput.permissionDecisionReason,
+      /election could not be read/,
+    );
+    assert.match(
+      invalid.hookSpecificOutput.permissionDecisionReason,
+      /features.desktop-control.on must be a boolean/,
+    );
+    for (const election of [false, true]) {
+      elect(election);
+      const result = await run(
+        input(root, "PreToolUse", {
+          session_id: `playwright-${election}`,
+          tool_name: "mcp__playwright__browser_snapshot",
+          tool_input: {},
+        }),
+      );
+      assert.equal(allowed(result), true);
+      assert.match(
+        result.systemMessage,
+        /Unclassified effectful tool: mcp__playwright__browser_snapshot/,
+      );
+      const skill = await run(
+        input(root, "PreToolUse", {
+          tool_name: "Skill",
+          tool_input: { skill: "project:verify" },
+        }),
+      );
+      assert.equal(allowed(skill), true);
+      assert.equal(skill.systemMessage, undefined);
+    }
+  } finally {
+    removeFixture(root, { recursive: true });
+  }
+});
+
+test("desktop control live refusal survives moved cwd and unavailable observation", () => {
+  const root = fixture();
+  const outside = realpathSync(
+    createFixtureRoot(join(tmpdir(), "dotln-desktop-moved-")),
+  );
+  try {
+    const elect = (on) =>
+      write(
+        root,
+        "dotln.config.json",
+        json({
+          version: 1,
+          features: { "desktop-control": on },
+        }),
+      );
+    elect(true);
+    emitHarness(root);
+    assert.ok(
+      !JSON.parse(
+        readFileSync(join(root, ".claude/settings.json"), "utf8"),
+      ).permissions.deny.includes("mcp__computer-use__*"),
+    );
+    elect(false);
+    const nested = join(root, "docs/nested");
+    mkdirSync(nested, { recursive: true });
+    const refused = (extra) => {
+      const result = invoke(
+        root,
+        "permissions",
+        input(root, "PreToolUse", {
+          tool_name: "mcp__computer-use__screenshot",
+          tool_input: {},
+          ...extra,
+        }),
+      );
+      assert.equal(allowed(result), false, JSON.stringify(result));
+      assert.match(
+        result.hookSpecificOutput.permissionDecisionReason,
+        /DOTLN_DESKTOP_CONTROL_REFUSED/,
+      );
+    };
+    for (const cwd of [root, nested, outside]) refused({ cwd });
+    const session = "desktop-observation-unavailable";
+    const journal = join(
+      root,
+      "docs/control/local/harness",
+      `${sha256(session)}.jsonl`,
+    );
+    write(root, "observation-sink.jsonl", "");
+    symlinkSync(join(root, "observation-sink.jsonl"), journal);
+    refused({ session_id: session });
+    assert.equal(
+      readFileSync(join(root, "observation-sink.jsonl"), "utf8"),
+      "",
+    );
+  } finally {
+    removeFixture(root, { recursive: true });
+    removeFixture(outside, { recursive: true });
+  }
+});
+
+test("elected desktop control preserves descendant and router refusals", () => {
+  const root = fixture();
+  try {
+    write(
+      root,
+      "dotln.config.json",
+      json({
+        version: 1,
+        features: { "desktop-control": true },
+      }),
+    );
+    write(root, "docs/control/budgets.json", json({ subagentCap: 0 }));
+    beginHarnessSession(root, "desktop-parent", "executor");
+    const desktop = {
+      tool_name: "mcp__computer-use__screenshot",
+      tool_input: {},
+    };
+    const child = invoke(
+      root,
+      "permissions",
+      input(root, "PreToolUse", {
+        ...desktop,
+        session_id: "desktop-parent",
+        agent_id: "desktop-child",
+      }),
+    );
+    assert.equal(allowed(child), false);
+    assert.match(child.hookSpecificOutput.permissionDecisionReason, /subagent/);
+    invoke(
+      root,
+      "session",
+      input(root, "UserPromptSubmit", { prompt: "drive: WO-999" }),
+    );
+    invoke(
+      root,
+      "permission-denied",
+      input(root, "PermissionDenied", {
+        tool_name: "Bash",
+        tool_input: { command: "node scripts/drive.mjs WO-999" },
+        reason: "fixture driver denial",
+      }),
+    );
+    const router = invoke(
+      root,
+      "permissions",
+      input(root, "PreToolUse", desktop),
+    );
+    assert.equal(allowed(router), false);
+    assert.match(
+      router.hookSpecificOutput.permissionDecisionReason,
+      /DOTLN_ROUTER_LAUNCH_REFUSED/,
+    );
+  } finally {
+    removeFixture(root, { recursive: true });
+  }
+});
+
+test("desktop control emit and check follow configuration and every role carries the rule", () => {
+  const root = fixture();
+  try {
+    const cli = (action) =>
+      spawnSync(process.execPath, ["scripts/harness.mjs", action], {
+        cwd: root,
+        env: { ...process.env, DOTLN_LAUNCHPAD: "" },
+        encoding: "utf8",
+      });
+    const check = (ok) => {
+      const result = cli("check");
+      assert.equal(result.status, ok ? 0 : 1, result.stdout + result.stderr);
+      if (!ok) assert.match(result.stderr, /harness drift/);
+    };
+    const denies = () =>
+      JSON.parse(readFileSync(join(root, ".claude/settings.json"), "utf8"))
+        .permissions.deny;
+    // The copied CLI owns its smaller runtime inventory, unlike the parent's
+    // fixture emitter; establish the bundle through that same CLI first.
+    const initialEmit = cli("emit");
+    assert.equal(
+      initialEmit.status,
+      0,
+      initialEmit.stdout + initialEmit.stderr,
+    );
+    check(true);
+    const initial = denies();
+    for (const election of [
+      true,
+      { on: false, note: "Use project tests" },
+      { on: true },
+    ]) {
+      write(
+        root,
+        "dotln.config.json",
+        json({ version: 1, features: { "desktop-control": election } }),
+      );
+      check(false);
+      const emitted = cli("emit");
+      assert.equal(emitted.status, 0, emitted.stdout + emitted.stderr);
+      check(true);
+      if (election === true || election.on === true) {
+        assert.ok(
+          !denies().some((rule) =>
+            /computer|Claude_Browser|claude-in-chrome|chrome-browser|built-in-browser/.test(
+              rule,
+            ),
+          ),
+        );
+      } else assert.deepEqual(denies(), initial);
+    }
+    for (const file of harnessInstallation().files.filter((file) =>
+      file.path.endsWith("SKILL.md"),
+    )) {
+      const text = readFileSync(join(root, file.path), "utf8");
+      assert.match(
+        text,
+        /Browser verification uses a browser the session launches:/,
+        file.path,
+      );
+      assert.match(
+        text,
+        /DOM and accessibility tree through the Playwright MCP snapshot/,
+        file.path,
+      );
+      assert.match(text, /screenshot and read it as an image/, file.path);
+      assert.match(
+        text,
+        /features.desktop-control \(off by default\).*explicitly requests.*this session/,
+        file.path,
+      );
+    }
+  } finally {
+    removeFixture(root, { recursive: true });
+  }
+});
+
+test("WO-252 every emitted role root gives the prune to the session that needs it and the operator its command only after a recorded host denial, the router running none, and release close removes undeclared output from the launchpad session", () => {
+  const roots = harnessInstallation().files.filter((file) =>
+    file.path.endsWith("/SKILL.md"),
+  );
+  for (const role of ["release-close", "router"])
+    for (const host of [".claude", ".agents"])
+      assert.ok(
+        roots.some(
+          (file) => file.path === `${host}/skills/dotln-${role}/SKILL.md`,
+        ),
+        `${host} ${role}`,
+      );
+  for (const file of roots) {
+    // Every root names the command and the one fallback; only a writing
+    // session runs it, so the read-only router names the phase session.
+    assert.match(
+      file.contents,
+      /`node scripts\/harness\.mjs prune --apply`[^\n]*only after a recorded host denial of that exact command/u,
+      file.path,
+    );
+    if (file.path.includes("/dotln-router/")) {
+      assert.match(
+        file.contents,
+        /The router runs no prune: the phase session it launches runs `node scripts\/harness\.mjs prune --apply` itself under host permissions and records its receipt, handing the operator the printed command only after a recorded host denial of that exact command\./u,
+        file.path,
+      );
+      assert.doesNotMatch(file.contents, /prune --apply` yourself/u, file.path);
+      continue;
+    }
+    assert.match(
+      file.contents,
+      /run `node scripts\/harness\.mjs prune --apply` yourself under host permissions and record its receipt; hand the operator the printed command only after a recorded host denial of that exact command/u,
+      file.path,
+    );
+    if (file.path.includes("/dotln-release-close/"))
+      assert.match(
+        file.contents,
+        /removed from this launchpad session by the target's path, never by a session or writer in the target/u,
+        file.path,
+      );
+  }
+});
 
 // Decision matrices reuse the real pinned runtime; generated-process checks
 // separately cover stdin, stdout, loading and process ownership. Use the full
@@ -3273,6 +3628,16 @@ test("WO-146 three contributors share unique outputs while workers remain explic
     ["claude-code", "codex-cli"],
   );
   const workers = structuredClone(targetWorkerProfiles);
+  const desktopTools = [
+    "mcp__computer-use__*",
+    "mcp__remote-devices__computer_*",
+    "enable__mcp__remote-devices__computer*",
+    "mcp__claude-in-chrome__*",
+    "mcp__Claude_Browser__*",
+    "mcp__remote-devices__Claude_Browser__*",
+    "enable__mcp__claude-in-chrome*",
+    "enable__mcp__remote-devices__Claude_Browser*",
+  ];
   for (const profile of workers) {
     assert.equal(profile.skills.format, "agent-skills");
     delete profile.runtime.skeletonVersion;
@@ -3280,11 +3645,21 @@ test("WO-146 three contributors share unique outputs while workers remain explic
     profile.tools = { ...profile.tools };
     assert.equal(profile.tools.SubagentHandback, "read");
     delete profile.tools.SubagentHandback;
+    // A message to an agent is a re-task, one use against the subagent cap.
+    assert.equal(profile.tools.SendMessage, "retask");
+    delete profile.tools.SendMessage;
+    assert.deepEqual(
+      Object.entries(profile.tools).filter(
+        ([, effect]) => effect === "desktop",
+      ),
+      desktopTools.map((name) => [name, "desktop"]),
+    );
+    for (const name of desktopTools) delete profile.tools[name];
   }
   assert.equal(
     createHash("sha256").update(JSON.stringify(workers)).digest("hex"),
     "9f41bb7cb0176f0b8e73bd9fe760ef628259e69b4ebdbb28fa0a621bd4dba6fb",
-    "pre-profile worker bytes, excluding release labels, native skill format and the separately asserted child return tool",
+    "pre-profile worker bytes, excluding release labels, native skill format and the separately asserted child return, re-task and desktop tools",
   );
   const installation = harnessInstallation();
   assert.equal(
@@ -3564,6 +3939,260 @@ test("WO-139 generated permission, observer, Stop and usage share the root subag
   } finally {
     removeFixture(root, { recursive: true, force: true });
   }
+});
+
+test("WO-250 every use counts: a message, a resumed agent and a helper launch one each, a plan review three, a dry run none; usage reads them by host and the twenty-first is refused", () => {
+  const root = fixture();
+  try {
+    beginHarnessSession(root, "synthetic-session", "executor");
+    const pre = (id, tool_name, tool_input) =>
+      input(root, "PreToolUse", { tool_name, tool_use_id: id, tool_input });
+    const admit = (payload) => invoke(root, "permissions", payload);
+    const uses = () => measureHarnessUsage(root, "synthetic-session").subagents;
+    const spawn = pre("spawn", "Agent", {
+      subagent_type: "dotln-worker",
+      prompt: "Review the diff.",
+    });
+    assert.equal(allowed(admit(spawn)), true);
+    invoke(
+      root,
+      "read-observer",
+      input(root, "PostToolUse", {
+        tool_name: "Agent",
+        tool_use_id: "spawn",
+        tool_input: spawn.tool_input,
+        tool_response: { agentId: "reviewer-1" },
+      }),
+    );
+    assert.equal(uses().count, 1);
+    // Handing the same reviewer more work is a re-task, by message or resume.
+    const message = pre("message", "SendMessage", {
+      to: "reviewer-1",
+      message: "Recheck your findings.",
+    });
+    assert.equal(allowed(admit(message)), true);
+    assert.equal(allowed(admit(message)), true);
+    assert.equal(uses().retasked, 1, "a repeated hook charges once");
+    assert.equal(
+      allowed(
+        admit(
+          pre("resume", "Agent", {
+            resume: "reviewer-1",
+            prompt: "Recheck your findings.",
+          }),
+        ),
+      ),
+      true,
+    );
+    assert.equal(uses().retasked, 2);
+    // A kit command is charged by its literal words, before its process runs.
+    for (const [id, command, count] of [
+      ["worker", "npm run worker -- review --kind criteria --host codex", 4],
+      [
+        "node-worker",
+        "node scripts/worker.mjs review --kind design --host claude",
+        5,
+      ],
+      [
+        "dry",
+        "npm run worker -- review --kind criteria --host codex --dry-run",
+        5,
+      ],
+      ["plan", "npm run plan -- review", 8],
+      ["node-plan", "node scripts/refute-plan.mjs review --host codex", 11],
+      // The same launch inside the bounded wrapper, or past Node's options.
+      [
+        "wrapped",
+        "node scripts/harness.mjs bounded -- npm run worker -- review --kind criteria --host codex",
+        12,
+      ],
+      [
+        "node-option",
+        "node --no-warnings scripts/worker.mjs review --kind design --host claude",
+        13,
+      ],
+    ]) {
+      admit(pre(id, "Bash", { command, description: "fixture" }));
+      assert.equal(uses().count, count, command);
+    }
+    const row = uses();
+    assert.equal(row.launched, 11);
+    assert.equal(row.retasked, 2);
+    assert.deepEqual(row.launchedByHost, {
+      claude: 3,
+      codex: 5,
+      unattributed: 3,
+    });
+    const usage = spawnSync(
+      process.execPath,
+      ["scripts/harness.mjs", "usage", "synthetic-session"],
+      {
+        cwd: root,
+        encoding: "utf8",
+        env: { ...process.env, CODEX_THREAD_ID: "" },
+      },
+    );
+    assert.equal(usage.status, 0, usage.stderr);
+    assert.equal(
+      JSON.parse(usage.stdout).workers,
+      "workers: launched 11 (claude 3, codex 5, unattributed 3), re-tasked 2, cap 20, remaining 7",
+    );
+    for (let index = 14; index <= 20; index++)
+      assert.equal(
+        allowed(
+          admit(
+            pre(`fill-${index}`, "Bash", {
+              command: "npm run worker -- review --kind design --host codex",
+            }),
+          ),
+        ),
+        true,
+        `use ${index}`,
+      );
+    assert.equal(uses().count, 20);
+    for (const refused of [
+      pre("twenty-first", "Bash", {
+        command: "npm run worker -- review --kind consistency --host claude",
+      }),
+      pre("twenty-first-wrapped", "Bash", {
+        command:
+          "node scripts/harness.mjs bounded -- npm run worker -- review --kind consistency --host codex",
+      }),
+      pre("late-message", "SendMessage", { to: "reviewer-1", message: "Go." }),
+      pre("late-spawn", "Agent", { prompt: "One more." }),
+    ])
+      assert.match(
+        admit(refused).hookSpecificOutput.permissionDecisionReason,
+        /^DOTLN_SUBAGENT_CAP_REFUSED: count 20, cap 20;/,
+        refused.tool_name,
+      );
+    assert.equal(uses().count, 20);
+    assert.match(
+      invoke(root, "finish", input(root, "Stop")).systemMessage,
+      /Subagents: 20\/20 uses \(launched 18: claude 3, codex 12, unattributed 3; re-tasked 2\)/,
+    );
+  } finally {
+    removeFixture(root, { recursive: true, force: true });
+  }
+});
+
+test("WO-250 a review or refutation worker's gate is refused naming the bounded single-test form; a phase agent and the session keep their gates", () => {
+  const root = fixture();
+  try {
+    beginHarnessSession(root, "synthetic-session", "executor");
+    let call = 0;
+    const shell = (command, agent = {}) =>
+      input(root, "PreToolUse", {
+        tool_name: "Bash",
+        tool_use_id: `gate-${++call}`,
+        tool_input: { command, description: "fixture" },
+        ...agent,
+      });
+    const reason = (payload) =>
+      String(
+        invoke(root, "permissions", payload).hookSpecificOutput
+          ?.permissionDecisionReason ?? "",
+      );
+    const gates = [
+      "npm test",
+      "npm test -- --only resume",
+      "node scripts/test-runner.mjs --review",
+      "node scripts/target-gate.mjs",
+      "npm run test:docs",
+      "npm run test:full",
+      "node scripts/harness.mjs bounded -- npm test -- --only resume",
+    ];
+    // Node's own options before the script change nothing for a review worker.
+    const optionGates = [
+      "node --no-warnings scripts/test-runner.mjs --review",
+      "node -- scripts/target-gate.mjs",
+      "node --require ./x.cjs scripts/test-runner.mjs",
+    ];
+    for (const type of ["dotln-worker", "dotln-worker-fable"])
+      for (const command of [...gates, ...optionGates])
+        assert.match(
+          reason(shell(command, { agent_id: `${type}-1`, agent_type: type })),
+          /^DOTLN_WORKER_GATE_REFUSED: .*node scripts\/harness\.mjs bounded -- node --test --test-name-pattern <name> <suite file>/,
+          `${type}: ${command}`,
+        );
+    const probe = shell(
+      "node scripts/harness.mjs bounded -- node --test --test-name-pattern x scripts/test-x.mjs",
+      { agent_id: "dotln-worker-1", agent_type: "dotln-worker" },
+    );
+    assert.equal(allowed(invoke(root, "permissions", probe)), true);
+    // The session itself and a driven phase agent keep their gates: the same
+    // commands meet exactly the judgment they met before this refusal.
+    for (const agent of [
+      {},
+      { agent_id: "phase-1", agent_type: "dotln-executor" },
+    ])
+      for (const command of gates)
+        assert.equal(
+          allowed(invoke(root, "permissions", shell(command, agent))),
+          true,
+          `${agent.agent_type ?? "session"}: ${command}`,
+        );
+    const journal = readFileSync(
+      join(
+        root,
+        "docs/control/local/harness",
+        `${sha256("synthetic-session")}.jsonl`,
+      ),
+      "utf8",
+    );
+    assert.match(journal, /"workerGateRefused":"npm test"/);
+  } finally {
+    removeFixture(root, { recursive: true, force: true });
+  }
+});
+
+test("WO-250 a gate or a kit launch is found by its script's path whatever Node options stand before it", () => {
+  const worker = { agent_id: "dotln-worker-1", agent_type: "dotln-worker" };
+  const shell = (command) => ({
+    hook_event_name: "PreToolUse",
+    cwd: "/",
+    session_id: "s",
+    tool_name: "Bash",
+    tool_input: { command },
+    ...worker,
+  });
+  // An option whose value is a separate word, an option that loads the
+  // runner as a module, the wrapper around either, and `--` before it.
+  for (const command of [
+    "node --redirect-warnings /tmp/wo250-warnings.log scripts/test-runner.mjs --review",
+    "node --require scripts/test-runner.mjs -e 0",
+    "node --stack-size 4000 -- scripts/target-gate.mjs WO-250",
+    "node scripts/harness.mjs bounded -- node --redirect-warnings x scripts/test-runner.mjs",
+  ])
+    assert.ok(reviewWorkerGate(shell(command)), command);
+  // A single test stays a probe even when its pattern or its warnings file
+  // names a gate script: Node runs neither value.
+  for (const command of [
+    "node scripts/harness.mjs bounded -- node --test --test-name-pattern x scripts/test-x.mjs",
+    "node scripts/harness.mjs bounded -- node --test --test-name-pattern scripts/test-runner.mjs scripts/test-harness.mjs",
+    "node --redirect-warnings scripts/test-runner.mjs scripts/check-publication.mjs",
+    "node --redirect-warnings x scripts/check-publication.mjs",
+  ])
+    assert.equal(reviewWorkerGate(shell(command)), null, command);
+  assert.deepEqual(
+    kitWorkerLaunch(
+      "node --redirect-warnings /tmp/x.log scripts/worker.mjs review --kind design --host claude",
+    ),
+    { uses: 1, host: "claude" },
+  );
+  assert.deepEqual(
+    kitWorkerLaunch(
+      "npm run harness -- bounded -- node --stack-size 4000 scripts/refute-plan.mjs review --host codex",
+    ),
+    { uses: 3, host: "codex" },
+  );
+  assert.equal(
+    kitWorkerLaunch(
+      "node --redirect-warnings x scripts/worker.mjs record --kind design --from f",
+    ),
+    null,
+    "recording a returned report launches nothing",
+  );
 });
 
 test("WO-139 cap-module-only changes refresh the runtime and snapshot damage is detected", () => {
@@ -3894,6 +4523,242 @@ test("runtime snapshots identify all copied package bytes and restore only exact
     preserveHarnessRuntime(root, current);
     assert.deepEqual(runtimePackageInventory(snapshot), inventory);
     checkHarness(root, options);
+  } finally {
+    removeFixture(root, { recursive: true, force: true });
+  }
+});
+
+test("WO-252 a snapshot carries the input its name hashes, so a later runtime proves it by content, and one installed without it proves itself only by its own package files", () => {
+  const root = fixture();
+  const options = { runtimeRoot: root };
+  try {
+    emitHarness(root, options);
+    const installed = harnessInstallation(options);
+    const input = {
+      files: installed.runtimeFiles,
+      inventory: installed.runtimeInventory,
+    };
+    const snapshot = installed.runtimeSnapshot;
+    const record = join(root, snapshot, RUNTIME_SNAPSHOT_RECORD);
+    // The installer writes the record whose digest is the directory's name,
+    // and the inventory and the snapshot check pass over it.
+    const text = readFileSync(record, "utf8");
+    assert.equal(`.runtime/harness/${fnv1a64(text)}`, snapshot);
+    assert.deepEqual(provenRuntimeSnapshot(root, snapshot), input);
+    assert.deepEqual(
+      runtimePackageInventory(join(root, snapshot)),
+      installed.runtimeInventory,
+    );
+    checkHarness(root, options);
+    assert.deepEqual(
+      runtimeSnapshotContent(input.files, input.inventory).get(
+        RUNTIME_SNAPSHOT_RECORD,
+      ),
+      {
+        kind: "file",
+        bytes: Buffer.byteLength(text),
+        sha256: sha256(text),
+        record: true,
+        text,
+      },
+    );
+    // An existing snapshot is never rewritten to add a record; a fresh
+    // install writes it again.
+    rmSync(record);
+    preserveHarnessRuntime(root, installed);
+    assert.equal(existsSync(record), false);
+    // Without its record, a snapshot proves itself when its own package files
+    // reproduce its name with a pinned list: a serving runtime's, or one a
+    // release before records pinned, as this runtime's list is.
+    assert.deepEqual(provenRuntimeSnapshot(root, snapshot), input);
+    assert.deepEqual(
+      provenRuntimeSnapshot(root, snapshot, [installed.runtimeFiles]),
+      input,
+    );
+    // A changed package byte breaks that proof; a note beside the packages is
+    // not part of the inventory, and the close judges it on its own.
+    const manifest = join(root, snapshot, "packages/kernel/package.json");
+    const bytes = readFileSync(manifest);
+    writeFileSync(manifest, "{}\n");
+    assert.equal(
+      provenRuntimeSnapshot(root, snapshot, [installed.runtimeFiles]),
+      null,
+    );
+    writeFileSync(manifest, bytes);
+    write(root, `${snapshot}/operator-note.txt`, "not the kit's\n");
+    assert.deepEqual(
+      provenRuntimeSnapshot(root, snapshot, [installed.runtimeFiles]),
+      input,
+    );
+    rmSync(join(root, snapshot, "operator-note.txt"));
+    // A record copied under another name proves nothing, and neither do the
+    // packages beside it, whose name is another.
+    const renamed = ".runtime/harness/0123456789abcdef";
+    cpSync(join(root, snapshot), join(root, renamed), {
+      recursive: true,
+      verbatimSymlinks: true,
+    });
+    writeFileSync(join(root, renamed, RUNTIME_SNAPSHOT_RECORD), text);
+    assert.equal(
+      provenRuntimeSnapshot(root, renamed, [installed.runtimeFiles]),
+      null,
+    );
+    // A runtime whose pinned list no release before records pinned installs a
+    // snapshot that only its record proves once that runtime is gone, as a
+    // kit update leaves one behind, and a record edited in place, whose bytes
+    // no longer hash to its directory's name, proves nothing.
+    const earlier = {
+      runtimeFiles: installed.runtimeFiles.slice(1),
+      runtimeInventory: installed.runtimeInventory,
+      sourceRoot: root,
+    };
+    earlier.runtimeSnapshot = runtimeSnapshotPath(
+      earlier.runtimeFiles,
+      earlier.runtimeInventory,
+    );
+    preserveHarnessRuntime(root, earlier);
+    const earlierInput = {
+      files: earlier.runtimeFiles,
+      inventory: earlier.runtimeInventory,
+    };
+    assert.deepEqual(
+      provenRuntimeSnapshot(root, earlier.runtimeSnapshot, [
+        installed.runtimeFiles,
+      ]),
+      earlierInput,
+    );
+    const earlierRecord = join(
+      root,
+      earlier.runtimeSnapshot,
+      RUNTIME_SNAPSHOT_RECORD,
+    );
+    writeFileSync(
+      earlierRecord,
+      readFileSync(earlierRecord, "utf8").replace(/^\{/u, "{ "),
+    );
+    assert.equal(
+      provenRuntimeSnapshot(root, earlier.runtimeSnapshot, [
+        installed.runtimeFiles,
+      ]),
+      null,
+    );
+    rmSync(earlierRecord);
+    assert.equal(
+      provenRuntimeSnapshot(root, earlier.runtimeSnapshot, [
+        installed.runtimeFiles,
+      ]),
+      null,
+    );
+    // Its own list, served, proves it by its package files again.
+    assert.deepEqual(
+      provenRuntimeSnapshot(root, earlier.runtimeSnapshot, [
+        earlier.runtimeFiles,
+      ]),
+      earlierInput,
+    );
+    // A snapshot name reached through a link proves nothing.
+    rmSync(join(root, renamed), { recursive: true });
+    symlinkSync(join(root, snapshot), join(root, renamed));
+    assert.equal(
+      provenRuntimeSnapshot(root, renamed, [installed.runtimeFiles]),
+      null,
+    );
+  } finally {
+    removeFixture(root, { recursive: true, force: true });
+  }
+});
+
+// The names releases before snapshot records gave a snapshot of one small
+// runtime, recorded from each release's own installer. The release-history
+// evidence probe of the order that keeps the lists reruns those installers
+// from history and compares; this regression reads only the fixture.
+const preRecordSnapshots = JSON.parse(
+  readFileSync(
+    join(sourceRoot, "scripts/fixtures/wo252-pre-record-snapshots.json"),
+    "utf8",
+  ),
+);
+
+test("WO-252 a snapshot a release before records installed proves itself by the list that release pinned, with no serving runtime's list, while one named by its pinned files alone does not", () => {
+  const root = realpathSync(
+    createFixtureRoot(join(tmpdir(), "dotln-harness-releases-")),
+  );
+  try {
+    const runtime = join(root, "runtime"),
+      target = join(root, "target");
+    for (const [path, text] of Object.entries(preRecordSnapshots.runtime))
+      write(runtime, path, text);
+    mkdirSync(target);
+    const inventory = runtimePackageInventory(runtime);
+    const pinned = (paths) =>
+      paths.map((path) => ({
+        path,
+        hash: `fnv1a64:${fnv1a64(preRecordSnapshots.runtime[path])}`,
+      }));
+    const named = preRecordSnapshots.releases.filter(
+      (row) => row.naming === "pinned list and package inventory",
+    );
+    // The kept lists are exactly the lists those releases pinned.
+    assert.deepEqual(
+      PRE_RECORD_RUNTIME_FILE_LISTS.map((list) => JSON.stringify(list)).sort(),
+      named.map((row) => JSON.stringify(row.pinned)).sort(),
+    );
+    for (const row of named) {
+      const files = pinned(row.pinned);
+      // Today's naming gives the name the release's own installer gave.
+      assert.equal(
+        runtimeSnapshotPath(files, inventory),
+        row.snapshot,
+        row.release,
+      );
+      preserveHarnessRuntime(target, {
+        runtimeFiles: files,
+        runtimeInventory: inventory,
+        sourceRoot: runtime,
+        runtimeSnapshot: row.snapshot,
+      });
+      // Installed before records, with no serving runtime's list at hand:
+      // its own package files prove it with the list its release pinned.
+      rmSync(join(target, row.snapshot, RUNTIME_SNAPSHOT_RECORD));
+      assert.deepEqual(
+        provenRuntimeSnapshot(target, row.snapshot),
+        { files, inventory },
+        row.release,
+      );
+    }
+    // A changed package byte leaves such a snapshot unproven.
+    const changed = join(
+      target,
+      named[0].snapshot,
+      "packages/compiler/package.json",
+    );
+    const bytes = readFileSync(changed);
+    writeFileSync(changed, "{}\n");
+    assert.equal(provenRuntimeSnapshot(target, named[0].snapshot), null);
+    writeFileSync(changed, bytes);
+    // A release that named a snapshot by its pinned files alone: that name
+    // hashes those files and nothing else, so no list proves its packages.
+    const before = preRecordSnapshots.releases.find(
+      (row) => row.naming === "pinned files",
+    );
+    assert.equal(
+      `.runtime/harness/${fnv1a64(JSON.stringify(pinned(before.pinned)))}`,
+      before.snapshot,
+    );
+    for (const [path, text] of Object.entries(preRecordSnapshots.runtime))
+      write(join(target, before.snapshot), path, text);
+    mkdirSync(join(target, before.snapshot, "node_modules/@dotln"), {
+      recursive: true,
+    });
+    for (const name of ["compiler", "skeleton"])
+      symlinkSync(
+        `../../packages/${name}`,
+        join(target, before.snapshot, "node_modules/@dotln", name),
+      );
+    assert.equal(
+      provenRuntimeSnapshot(target, before.snapshot, [pinned(before.pinned)]),
+      null,
+    );
   } finally {
     removeFixture(root, { recursive: true, force: true });
   }
@@ -7409,7 +8274,9 @@ test("WO-132 generated hooks delegate classification, attribution, scope and run
       }
       return result;
     };
-    for (const name of ["SendMessage", "SomeNewTool"])
+    // Tools the inventory does not class are delegated to host permissions;
+    // SendMessage is classed now, as a re-task the counter admits.
+    for (const name of ["CronCreate", "SomeNewTool"])
       delegated(
         "permissions",
         input(root, "PreToolUse", { tool_name: name, tool_input: {} }),
@@ -9100,6 +9967,63 @@ test("WO-144 repair admits null discards and exposes scratch with single consist
   } finally {
     removeFixture(root, { recursive: true });
     removeFixture(outside, { recursive: true });
+  }
+});
+
+test("harness begin refuses an unknown role, a second begin and a malformed call through its CLI, and admits a router with its order", () => {
+  const root = fixture();
+  try {
+    const begin = (session, ...args) =>
+      spawnSync(process.execPath, ["scripts/harness.mjs", "begin", ...args], {
+        cwd: root,
+        env: { ...process.env, CODEX_THREAD_ID: session },
+        encoding: "utf8",
+      });
+    const refused = (result, pattern) => {
+      assert.notEqual(result.status, 0, result.stdout);
+      assert.match(result.stderr, pattern);
+      assert.equal(result.stdout.trim(), "");
+    };
+    // The refusal path: no role, an unknown role, an unknown flag, a router
+    // flag that is not an order, and a session that already began.
+    refused(begin("wo247-begin", "wo247-begin"), /usage: harness begin/);
+    refused(
+      begin("wo247-begin", "wo247-begin", "operator"),
+      /Invalid harness session/,
+    );
+    refused(
+      begin("wo247-begin", "wo247-begin", "executor", "--adopt-nothing"),
+      /usage: harness begin/,
+    );
+    refused(
+      begin("wo247-begin", "wo247-begin", "router", "WO-99"),
+      /usage: harness begin/,
+    );
+    refused(
+      begin("wo247-begin", "wo247-begin", "executor", "--adopt-file"),
+      /usage: harness begin/,
+    );
+    const first = begin("wo247-begin", "wo247-begin", "executor");
+    assert.equal(first.status, 0, first.stderr);
+    const begun = JSON.parse(first.stdout);
+    assert.match(begun.session, /^[0-9a-f]{64}$/);
+    assert.ok(begun.scratch.endsWith("/scratch"));
+    refused(
+      begin("wo247-begin", "wo247-begin", "executor"),
+      /Session already began; do not erase its observations/,
+    );
+    refused(
+      begin("wo247-begin", "wo247-begin", "verifier"),
+      /Session already began; do not erase its observations/,
+    );
+    // The success path a live Codex router takes: its order rides with it.
+    const router = begin("wo247-router", "wo247-router", "router", "WO-999");
+    assert.equal(router.status, 0, router.stderr);
+    assert.match(JSON.parse(router.stdout).session, /^[0-9a-f]{64}$/);
+    assert.doesNotThrow(() => measureHarnessUsage(root, "wo247-router"));
+    assert.equal(harnessWriterView(root).reserved, false);
+  } finally {
+    removeFixture(root, { recursive: true });
   }
 });
 
@@ -16408,6 +17332,178 @@ test("usage retains its observation and host readback when standing is unavailab
   }
 });
 
+test("usage reads a closed order's session from its retained lane and names that lane", (t) => {
+  const root = fixture();
+  try {
+    const id = "retained-usage-session";
+    const key = sha256(id);
+    const lane = "docs/control/local/retained/WO-951/harness";
+    // Release close moved the session's state and journal here and recorded
+    // the worktree it came from, which no longer exists.
+    const removed = join(root, "removed-worktree");
+    write(
+      root,
+      `${lane}/${key}.json`,
+      JSON.stringify({
+        role: "executor",
+        workOrder: "WO-951",
+        startedAt: "2026-09-11T10:00:30Z",
+        startingEventCount: 0,
+        reads: [],
+      }),
+    );
+    write(
+      root,
+      `${lane}/${key}.jsonl`,
+      JSON.stringify({ event: "PreToolUse", allowed: true }) + "\n",
+    );
+    write(
+      root,
+      `${lane}/sources.jsonl`,
+      JSON.stringify({ worktree: removed, files: 2, bytes: 10 }) + "\n",
+    );
+    const counter = (timestamp, input, cached, output) => ({
+      type: "event_msg",
+      timestamp,
+      payload: {
+        type: "token_count",
+        info: {
+          total_token_usage: {
+            input_tokens: input,
+            cached_input_tokens: cached,
+            output_tokens: output,
+            total_tokens: input + output,
+          },
+        },
+      },
+    });
+    write(
+      root,
+      `.runtime/retained-codex/sessions/${id}.jsonl`,
+      [
+        {
+          type: "session_meta",
+          timestamp: "2026-09-11T10:00:00Z",
+          payload: { id, cwd: removed },
+        },
+        counter("2026-09-11T10:00:00Z", 100, 80, 10),
+        counter("2026-09-11T10:01:00Z", 500, 380, 30),
+      ]
+        .map((row) => JSON.stringify(row))
+        .join("\n") + "\n",
+    );
+    // A session named apart from the Codex thread it ran in keeps that
+    // thread's usage key in its state; its counters are found by that key.
+    const alias = "retained-usage-alias";
+    write(
+      root,
+      `${lane}/${sha256(alias)}.json`,
+      JSON.stringify({
+        role: "verifier",
+        workOrder: "WO-951",
+        startedAt: "2026-09-11T10:00:30Z",
+        usageSessionKey: sha256("retained-codex-thread"),
+        startingEventCount: 0,
+        reads: [],
+      }),
+    );
+    write(
+      root,
+      ".runtime/retained-codex/sessions/retained-codex-thread.jsonl",
+      [
+        {
+          type: "session_meta",
+          timestamp: "2026-09-11T10:00:00Z",
+          payload: { id: "retained-codex-thread", cwd: removed },
+        },
+        counter("2026-09-11T10:00:00Z", 100, 80, 10),
+        counter("2026-09-11T10:02:00Z", 300, 200, 20),
+      ]
+        .map((row) => JSON.stringify(row))
+        .join("\n") + "\n",
+    );
+    // A directory the reader cannot list adds nothing and stops nothing.
+    const locked = join(root, ".runtime/retained-codex/sessions/locked");
+    mkdirSync(locked);
+    chmodSync(locked, 0o000);
+    // Nor does a Copilot state directory it cannot enter.
+    const copilotState = join(root, ".runtime/retained-copilot/session-state");
+    mkdirSync(copilotState, { recursive: true });
+    chmodSync(copilotState, 0o000);
+    // Nor does an unrelated order's lane it cannot enter.
+    const unrelated = join(root, "docs/control/local/retained/WO-953");
+    mkdirSync(unrelated, { recursive: true });
+    chmodSync(unrelated, 0o000);
+    const usageRows = join(root, "docs/control/local/process/usage.jsonl");
+    const rowsBefore = existsSync(usageRows)
+      ? readFileSync(usageRows, "utf8")
+      : null;
+    // An unrelated Copilot session in the environment still reaches the lane.
+    const observe = (session = id) =>
+      spawnSync(process.execPath, ["scripts/harness.mjs", "usage", session], {
+        cwd: root,
+        encoding: "utf8",
+        env: {
+          ...process.env,
+          CODEX_HOME: join(root, ".runtime/retained-codex"),
+          CLAUDE_CONFIG_DIR: join(root, ".runtime/retained-claude"),
+          COPILOT_HOME: join(root, ".runtime/retained-copilot"),
+          CODEX_THREAD_ID: "",
+          COPILOT_AGENT_SESSION_ID: "unrelated-copilot-session",
+        },
+      });
+    const aliased = JSON.parse(observe(alias).stdout);
+    assert.equal(aliased.source, `retained-lane:${lane}`);
+    assert.equal(aliased.counterSource, "codex-transcript-counter");
+    assert.equal(aliased.usage.totalTokens, 210);
+    const run = observe();
+    chmodSync(locked, 0o700);
+    chmodSync(copilotState, 0o700);
+    chmodSync(unrelated, 0o700);
+    assert.equal(run.status, 0, run.stderr);
+    const observed = JSON.parse(run.stdout);
+    assert.equal(observed.source, `retained-lane:${lane}`);
+    assert.equal(observed.counterSource, "codex-transcript-counter");
+    assert.equal(observed.scope, "dispatch");
+    assert.equal(observed.usage.totalTokens, 420);
+    assert.deepEqual(observed.retained, {
+      workOrder: "WO-951",
+      lane,
+      role: "executor",
+      startedAt: "2026-09-11T10:00:30Z",
+    });
+    assert.equal(observed.dispatchStanding.state, "closed");
+    assert.equal(
+      observed.standing,
+      "dispatch standing: closed (WO-951; read from its retained lane)",
+    );
+    assert.ok("subagents" in observed);
+    // A closed dispatch's usage was recorded while it ran; reading it back
+    // records nothing.
+    assert.equal(
+      existsSync(usageRows) ? readFileSync(usageRows, "utf8") : null,
+      rowsBefore,
+    );
+    // Without a recorded source the lane still answers, with unknown cost.
+    rmSync(join(root, lane, "sources.jsonl"));
+    const unsourced = JSON.parse(observe().stdout);
+    assert.equal(unsourced.source, `retained-lane:${lane}`);
+    assert.equal(unsourced.counterSource, "unavailable");
+    assert.equal(unsourced.cause, "retained-session-source-unrecorded");
+    // A session whose state two lanes hold is ambiguous and refused.
+    write(
+      root,
+      `docs/control/local/retained/WO-952/harness/${key}.json`,
+      JSON.stringify({ role: "verifier" }),
+    );
+    const ambiguous = observe();
+    assert.notEqual(ambiguous.status, 0);
+    assert.match(ambiguous.stderr, /retained in 2 lanes \(WO-951, WO-952\)/);
+  } finally {
+    removeFixture(root, { recursive: true });
+  }
+});
+
 test("quality passes deliver the current-session document boundary only for a leading operator command", () => {
   const root = fixture();
   try {
@@ -16736,6 +17832,9 @@ test("router dispatch is metadata only and its exact-phrase guard does not apply
         "npm run plan -- start router-fixture",
         "node scripts/resume.mjs implementation-ready",
         "node -e 0",
+        // The router's text names the prune for the phase session it
+        // launches; the router itself still runs none.
+        "node scripts/harness.mjs prune --apply",
       ].map((command) => ({ tool_name: "Bash", tool_input: { command } })),
     ])
       assert.match(
@@ -17092,5 +18191,132 @@ test("a lifecycle worker's reservation ends with the host's report of its end", 
     assert.equal(admitted(), true);
   } finally {
     removeFixture(root, { recursive: true, force: true });
+  }
+});
+
+test("the release-close handoff states each close's actual effect, by kind", () => {
+  const self = releaseCloseHandoff({
+    kind: "self-release",
+    version: "v0.2.0",
+    latest: "v0.1.0",
+  });
+  assert.equal(
+    self.effect,
+    "This narrowly authorizes the annotated tag v0.2.0 and its matching GitHub Release, above the latest release v0.1.0 the remote holds; never push main.",
+  );
+  // One comparison serves the handoff and the close.
+  assert.equal(selfCloseKind("v0.2.0", "v0.1.0"), "self-release");
+  assert.equal(selfCloseKind("v0.1.0", "v0.2.0"), "self-no-release");
+  assert.equal(selfCloseKind("v0.1.0", "v0.1.0"), "self-existing-release");
+  assert.equal(selfCloseKind("v0.1.0", null), "self-release");
+  assert.equal(selfCloseKind(null, "v0.1.0"), "self-undecided");
+  const existing = releaseCloseHandoff({
+    kind: "self-existing-release",
+    version: "v0.1.0",
+    latest: "v0.1.0",
+  });
+  assert.match(
+    existing.effect,
+    /^This close publishes no new tag and no new GitHub Release: the remote already holds v0\.1\.0/,
+  );
+  assert.match(existing.egress, /the Release it reconciles/);
+  assert.match(self.egress, /the tag push and the Release/);
+  assert.match(
+    releaseCloseHandoff({ kind: "self-release", version: "v0.1.0" }).effect,
+    /the first release/,
+  );
+  const none = releaseCloseHandoff({
+    kind: "self-no-release",
+    version: "v0.1.0",
+    latest: "v0.2.0",
+  });
+  assert.match(
+    none.effect,
+    /^This close publishes no tag and no GitHub Release: the order's version v0\.1\.0 is below the latest release v0\.2\.0/,
+  );
+  assert.match(none.egress, /fetch and ls-remote only/);
+  assert.doesNotMatch(none.egress, /tag push/);
+  const undecided = releaseCloseHandoff({ kind: "self-undecided" });
+  assert.match(
+    undecided.effect,
+    /only when that version stands above the latest release the remote holds/,
+  );
+  const target = releaseCloseHandoff({ kind: "target-release" });
+  assert.match(target.effect, /the target's annotated tag/);
+  assert.match(target.egress, /the target's tag push and its Release/);
+  const quiet = releaseCloseHandoff({ kind: "target-no-release" });
+  assert.match(
+    quiet.effect,
+    /publishes no tag and no GitHub Release: the target's policy is no-release/,
+  );
+  assert.match(quiet.egress, /fetch and ls-remote only/);
+  for (const { effect, egress } of [
+    self,
+    none,
+    undecided,
+    existing,
+    target,
+    quiet,
+  ]) {
+    assert.match(effect, /never push main/);
+    assert.match(
+      egress,
+      /Run the printed --publish command once; --dry-run is optional when a prerequisite/,
+    );
+  }
+  assert.throws(
+    () => releaseCloseHandoff({ kind: "other" }),
+    /unknown release close kind/,
+  );
+  // The kind follows the order's heading and the local release tags, as the
+  // close compares them against the remote's; a reading that cannot settle it
+  // stays undecided, and a registered target follows its release policy.
+  const root = createFixtureRoot(join(tmpdir(), "dotln-close-kind-"));
+  try {
+    writeFileSync(join(root, "WO-099.md"), "# WO-099 — Fixture v0.2.0\n");
+    const state = { workOrderId: "WO-099", workOrderPath: "WO-099.md" };
+    assert.equal(releaseCloseKind(root, state).kind, "self-undecided");
+    runGit(root, ["init", "--quiet", "--initial-branch=main"]);
+    // Without an origin the remote's tags cannot be read: undecided.
+    assert.equal(releaseCloseKind(root, state).kind, "self-undecided");
+    const origin = join(root, "origin.git");
+    runGit(root, ["init", "--quiet", "--bare", origin]);
+    runGit(root, ["remote", "add", "origin", origin]);
+    assert.deepEqual(releaseCloseKind(root, state), {
+      kind: "self-release",
+      version: "v0.2.0",
+      latest: null,
+    });
+    // The remote's tags decide, as the close compares them: a tag the remote
+    // holds above the order's version makes the close a no-release one, and
+    // the order's own version on the remote makes it an existing release.
+    writeFileSync(join(root, "note.txt"), "note\n");
+    runGit(root, ["add", "note.txt"]);
+    runGit(root, [
+      "-c",
+      "user.name=Fixture",
+      "-c",
+      "user.email=fixture@example.invalid",
+      "commit",
+      "-qm",
+      "note",
+    ]);
+    runGit(root, ["tag", "v0.3.0"]);
+    runGit(root, ["push", "-q", "origin", "v0.3.0"]);
+    assert.deepEqual(releaseCloseKind(root, state), {
+      kind: "self-no-release",
+      version: "v0.2.0",
+      latest: "v0.3.0",
+    });
+    writeFileSync(join(root, "WO-099.md"), "# WO-099 — Fixture v0.3.0\n");
+    assert.equal(releaseCloseKind(root, state).kind, "self-existing-release");
+    writeFileSync(join(root, "WO-099.md"), "# WO-099 — Fixture\n");
+    assert.equal(releaseCloseKind(root, state).kind, "self-undecided");
+    assert.deepEqual(
+      releaseCloseKind(root, { ...state, repositoryId: "target" }),
+      { kind: "target-no-release" },
+    );
+  } finally {
+    rmSync(root, { recursive: true, force: true });
   }
 });

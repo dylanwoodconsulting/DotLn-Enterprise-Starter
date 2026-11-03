@@ -7,7 +7,17 @@ import { boundTemporaryRoots } from "./lib/temporary-prune.mjs";
 import { formatPruneReport } from "./lib/temporary-prune-summary.mjs";
 import { isMainModule } from "./lib/paths.mjs";
 import { buildFreshness } from "./lib/build-freshness.mjs";
-import { releaseSteps, withReleaseStep } from "./lib/release-steps.mjs";
+import {
+  addRemovalChild,
+  blockerClassOf,
+  closeBlocker,
+  currentReleaseStep,
+  isRemovalChild,
+  releaseSteps,
+  timeRemovalChild,
+  withBlockerClass,
+  withReleaseStep,
+} from "./lib/release-steps.mjs";
 import {
   hasPackageSources,
   isKitRoot as isKitWorktree,
@@ -64,6 +74,8 @@ import {
   relativeLinkFailures,
   assertGitHubBodyProfile,
   assertPullRequestBodyShape,
+  expectedCriterionRecordLines,
+  processMetered,
   labelledParts,
   withMeterBlockLast,
   withTemporaryBody,
@@ -94,13 +106,21 @@ import {
   ignoredLane,
 } from "./lib/paths.mjs";
 import { materialSummary } from "./lib/material-summary.mjs";
+import {
+  selfCloseKind,
+  targetCloseHandoffLines,
+  targetReleasePolicy,
+} from "./lib/release-close-handoff.mjs";
 import { CONTROL_LOG_SCHEMA_VERSION, statusProjection } from "./resume.mjs";
+import { unrepairedRetraction } from "./lib/control.mjs";
+import { resolveOrderWorktrees } from "./lib/order-worktrees.mjs";
 import {
   readControl,
   readControls,
   controlFromSources,
   addedSegmentEvents,
   eventsForOrder,
+  latestActivationAt,
   latestClosedOrder,
   openOrders,
   branchWorkOrder,
@@ -114,6 +134,7 @@ import {
 import { withHostLock } from "./lib/host-resources.mjs";
 import { releaseListCache } from "./lib/release-list-cache.mjs";
 import {
+  directoryIdentity,
   recordedRepositoryClone,
   targetRecordSources,
   targetWorktreeForOrder,
@@ -130,8 +151,11 @@ import {
   writeReleaseHistory,
 } from "./lib/release-history.mjs";
 import {
+  headingVersion,
   humanLayerFromAnnotation,
+  latestTagVersion,
   manifestFromAnnotation,
+  originTags,
   releaseAnnotations,
 } from "./lib/release-tags.mjs";
 
@@ -500,20 +524,34 @@ export function releaseCloseSummary(record) {
   }
   if (record.targetCleanup) {
     const cleanup = record.targetCleanup;
+    // A pattern's row counts its files across the roots it matched.
+    const named = (row) =>
+      `${row.path} (${row.files}${row.matches ? ` in ${row.matches.length} ${row.matches.length === 1 ? "match" : "matches"}` : ""})`;
     const deleted = [
-      ...(cleanup.disposable?.target?.map(
-        (row) => `${row.path} (${row.files})`,
-      ) ?? []),
+      ...(cleanup.disposable?.target?.map(named) ?? []),
       ...(cleanup.baseDisposablePolicy !== "judge-only"
-        ? (cleanup.disposable?.base?.map(
-            (row) => `base ${row.path} (${row.files})`,
-          ) ?? [])
+        ? (cleanup.disposable?.base?.map((row) => `base ${named(row)}`) ?? [])
         : []),
     ];
+    const residue = cleanup.residue;
+    const kit = residue
+      ? [
+          ...(residue.journals?.files
+            ? [
+                `${residue.journals.files} journal ${residue.journals.files === 1 ? "file" : "files"} ${residue.journals.outcome === "moved" ? "moved" : "to move"} to ${residue.journals.lane}`,
+              ]
+            : []),
+          ...(residue.deleted ?? []).map(
+            (row) =>
+              `${row.kind} ${row.path} ${row.outcome === "deleted" ? "deleted" : "to delete"}`,
+          ),
+        ]
+      : [];
     lines.push(
-      `Target worktree ${cleanup.path}; branch ${cleanup.branch}: ${cleanup.outcome}; base disposable policy ${cleanup.baseDisposablePolicy ?? "delete"}${cleanup.baseDisposablePolicy === "judge-only" ? " (base output retained)" : ""}${deleted.length ? `; disposable output ${record.dryRun ? "would be deleted" : cleanup.outcome === "removed" ? "deleted" : "planned for deletion"}: ${deleted.join(", ")}` : ""}${cleanup.baseCheckoutWrites === null ? "; advisory: gate base-checkout writes unavailable" : cleanup.baseCheckoutWrites?.length ? `; advisory: gate commands wrote into the base checkout: ${cleanup.baseCheckoutWrites.join(", ")}` : ""}.`,
+      `Target worktree ${cleanup.path}; branch ${cleanup.branch}: ${cleanup.outcome}; base disposable policy ${cleanup.baseDisposablePolicy ?? "delete"}${cleanup.baseDisposablePolicy === "judge-only" ? " (base output retained)" : ""}${deleted.length ? `; disposable output ${record.dryRun ? "would be deleted" : cleanup.outcome === "removed" ? "deleted" : "planned for deletion"}: ${deleted.join(", ")}` : ""}${kit.length ? `; the kit's residue: ${kit.join(", ")}` : ""}${cleanup.baseCheckoutWrites === null ? "; advisory: gate base-checkout writes unavailable" : cleanup.baseCheckoutWrites?.length ? `; advisory: gate commands wrote into the base checkout: ${cleanup.baseCheckoutWrites.join(", ")}` : ""}.`,
     );
   }
+  lines.push(...targetCloseHandoffLines(record));
   for (const row of record.cleanup.worktrees)
     lines.push(`Worktree ${row.path}: ${row.outcome}.`);
   for (const row of record.removals ?? [])
@@ -535,6 +573,10 @@ export function releaseCloseSummary(record) {
         `Operator disposable disposition: ${blocker.disposableCommand}`,
       );
   }
+  if (record.blocker)
+    lines.push(
+      `Close stopped: ${record.blocker.class}${record.blocker.step ? ` in step ${record.blocker.step}` : ""}.`,
+    );
   if (publication.outcome === "prepared")
     lines.push(`Publish: ${record.retryCommand}`);
   lines.push(`Full report: ${record.reportPath}`);
@@ -619,42 +661,24 @@ const reportLocalMaterial = (root, listMaterial = false) => {
 // session without egress learns it first, not last (WO-044).
 const ensureOriginReachable = (root) => {
   const repository = resolveGitHubPushTarget(root);
+  // The attended close keeps its terminal here: a credential prompt must be
+  // answerable, so the probe is not detached and its helper may outlive the
+  // limit on a hang the operator sees (WO-247-D012).
   const probe = execute(
     "git",
     ["ls-remote", "--exit-code", "--heads", "origin", "main"],
     { cwd: root, timeout: 60_000 },
   );
   if (probe.status !== 0)
-    throw new Error(
+    throw closeBlocker(
+      "host-denied",
       `release close needs network egress to ${repository.host} (git fetch, git ls-remote, the tag push and the GitHub Release); origin is unreachable from this session: ${failureOf(probe, "git ls-remote failed")}. Run the authorized close from a session with egress; host approval governs any outside-sandbox execution.`,
     );
   return repository;
 };
-const remoteTags = (root) => {
-  const rows = runGit(root, ["ls-remote", "--tags", "origin"]);
-  const tags = new Map();
-  for (const row of rows.split("\n").filter(Boolean)) {
-    const [object, ref] = row.split(/\s+/);
-    const peeled = /\^\{\}$/.test(ref);
-    const name = ref.replace(/^refs\/tags\//, "").replace(/\^\{\}$/, "");
-    const prior = tags.get(name) ?? { name };
-    tags.set(
-      name,
-      peeled
-        ? { ...prior, target: object, annotated: true }
-        : { ...prior, object, target: prior.target ?? object },
-    );
-  }
-  return tags;
-};
-const latestVersion = (...maps) => {
-  const versions = [
-    ...new Set(
-      maps.flatMap((map) => [...map.keys()]).filter((name) => semver(name)),
-    ),
-  ];
-  return versions.sort(compareVersions).at(-1);
-};
+const remoteTags = (root) => originTags(root);
+const latestVersion = (...maps) =>
+  latestTagVersion(new Map(maps.flatMap((map) => [...map]))) ?? undefined;
 // Worktrees share tag refs. A sibling's release is not this subject's baseline
 // until the subject integrates that history; publication still checks origin.
 const ancestralLocalTags = (root) => {
@@ -717,6 +741,15 @@ const controlState = (projection, source) => {
     )
   )
     throw new Error(`cannot read control state: invalid ${source}`);
+  // The waived and defective criteria the pull-request body names (WO-249).
+  const records = (rows) =>
+    Array.isArray(rows)
+      ? rows.map(({ criterionId, ordinal, class: kind }) => ({
+          criterionId,
+          ordinal,
+          ...(kind ? { class: kind } : {}),
+        }))
+      : [];
   return {
     workOrderId: projection.workOrder ?? undefined,
     workOrderPath: projection.workOrderPath ?? undefined,
@@ -727,6 +760,8 @@ const controlState = (projection, source) => {
           baseCommit: projection.baseCommit,
         }
       : {}),
+    waivedCriteria: records(projection.waivedCriteria),
+    defectiveCriteria: records(projection.defectiveCriteria),
   };
 };
 const parseControlState = (root, workOrderId) => {
@@ -782,15 +817,15 @@ const readWorkOrderAuthority = (
   });
   const markdown = repositoryFile(root, state.workOrderPath, revision);
   const heading = markdown.split("\n", 1)[0];
-  const versions = strictVersionsIn(heading);
-  if (versioned && (versions.length !== 1 || !semver(versions[0])))
+  const version = headingVersion(heading);
+  if (versioned && version === null)
     throw new Error(
       `work-order heading must contain exactly one strict vX.Y.Z version: ${heading}`,
     );
   return {
     id: state.workOrderId,
     path: state.workOrderPath,
-    version: versioned ? versions[0] : undefined,
+    version: versioned ? version : undefined,
     title: heading.replace(/^#\s*/, ""),
     objective:
       paragraph(markdown, "Objective") ??
@@ -913,13 +948,14 @@ const releaseBlockRule = (
     .map((line, index) => (line === endMarker ? index : -1))
     .filter((index) => index >= 0);
   if (begins.length !== 1 || ends.length !== 1 || begins[0] >= ends[0]) {
-    const remedy =
-      begins.length === 0 && ends.length === 0 && isKitRoot(root, revision)
-        ? `; on the next order's dispatch follow the refreshed starter README's update-pull-request procedure first, then record the repair in the order's decisions. Only if that update leaves the block absent, add exactly these three lines once: ${JSON.stringify(beginMarker)}, ${JSON.stringify(releaseClaimLine(expected ?? "v0.1.0", displayName))}, ${JSON.stringify(endMarker)}`
-        : "";
+    if (begins.length === 0 && ends.length === 0 && isKitRoot(root, revision))
+      return {
+        pass: true,
+        line: "PASS release-block: not carried (kit root without markers)",
+      };
     return {
       pass: false,
-      line: `FAIL release-block: observed ${begins.length} begin marker(s), ${ends.length} end marker(s), order ${begins[0] < ends[0] ? "begin-before-end" : "invalid"}; expected exactly one ordered block containing exactly the generated version line for ${expectation} ${context}${remedy}`,
+      line: `FAIL release-block: observed ${begins.length} begin marker(s), ${ends.length} end marker(s), order ${begins[0] < ends[0] ? "begin-before-end" : "invalid"}; expected exactly one ordered block containing exactly the generated version line for ${expectation} ${context}`,
     };
   }
   // Between the markers stands the one line release preparation writes and
@@ -1391,6 +1427,19 @@ const changedReleaseNotesAt = (root, parent, commit) => {
     .sort((left, right) =>
       left.path < right.path ? -1 : left.path > right.path ? 1 : 0,
     );
+};
+// The order's latest activation in main's control log, as its close record
+// names it; an unreadable log records the cause, never a guess.
+const latestActivation = (root, workOrderId) => {
+  try {
+    const recordedAt = latestActivationAt(readControl(root), workOrderId);
+    return { recordedAt, source: "control-log-at-close" };
+  } catch (error) {
+    return {
+      recordedAt: null,
+      source: `control-log-unreadable: ${error.code ?? "parse"}`,
+    };
+  }
 };
 const passedFinalReview = (event) =>
   event?.type === "FinalReviewCompleted" &&
@@ -2070,6 +2119,45 @@ export function regeneratedReleaseText(root, tag) {
     sourceRevision = previous;
   }
 }
+// The order's waived and defective criteria as the working tree's record holds
+// them, like the meter's collection; none when the record does not know the
+// order, while a record that cannot be read refuses.
+const recordedCriteria = (root, workOrderId) => {
+  const control = readControl(root);
+  if (!control.orders.has(workOrderId)) return {};
+  return controlState(
+    statusProjection(control, workOrderId),
+    "control segments",
+  );
+};
+// The unrepaired retraction the order's registered worktree records, when the
+// worktree is present and is not this checkout.
+// Its passing final review must be the merged record's: a repair that passed
+// in the worktree but was never merged answers the retraction nowhere the
+// close publishes from. A registry or record that cannot be read refuses.
+const worktreeRetraction = (root, workOrderId, merged) => {
+  let trees;
+  try {
+    trees = resolveOrderWorktrees(root, workOrderId, { allowNoMain: true });
+  } catch (error) {
+    throw new Error(
+      `release close cannot read ${workOrderId}'s registered worktree to judge its retractions: ${error.message}`,
+    );
+  }
+  // Only the launchpad worktree holds the order's record, so it is read
+  // even when a target order's target worktree is gone.
+  if (trees.launchpad === directoryIdentity(root)) return undefined;
+  let events;
+  try {
+    events = eventsForOrder(readControl(trees.launchpad), workOrderId);
+  } catch (error) {
+    throw new Error(
+      `release close cannot read ${workOrderId}'s record in its worktree ${trees.launchpad}: ${error.message}`,
+    );
+  }
+  const retraction = unrepairedRetraction(events, { passedIn: merged });
+  return retraction ? { retraction, worktree: trees.launchpad } : undefined;
+};
 /** A stored pull-request body with its meter block rendered from the current
  * collection and its links written absolute at the given revision. */
 export async function regeneratedPullRequestBody(root, workOrderId, revision) {
@@ -2078,7 +2166,8 @@ export async function regeneratedPullRequestBody(root, workOrderId, revision) {
   const source = readFileSync(join(root, path), "utf8");
   const body = withMeterBlockLast(
     source,
-    renderMetaTable(await collectMeta(root)),
+    renderMetaTable(await collectMeta(root), { workOrderId }),
+    expectedCriterionRecordLines(root, recordedCriteria(root, workOrderId)),
   );
   let repository = null;
   try {
@@ -2092,7 +2181,8 @@ const ensureExistingRelease = (root, tag, head, local, remote, workOrderId) => {
   const localTag = local.get(tag);
   const remoteTag = remote.get(tag);
   if (!remoteTag)
-    throw new Error(
+    throw closeBlocker(
+      "foreign-tag",
       `${tag} exists only locally; inspect it and publish or remove it manually`,
     );
   if (
@@ -2107,7 +2197,8 @@ const ensureExistingRelease = (root, tag, head, local, remote, workOrderId) => {
       head,
     ]).status !== 0
   )
-    throw new Error(
+    throw closeBlocker(
+      "foreign-tag",
       `${tag} already exists remotely for a different or non-annotated object`,
     );
   if (
@@ -2116,7 +2207,10 @@ const ensureExistingRelease = (root, tag, head, local, remote, workOrderId) => {
       localTag.target !== remoteTag.target ||
       localTag.object !== remoteTag.object)
   )
-    throw new Error(`${tag} differs between local and origin`);
+    throw closeBlocker(
+      "foreign-tag",
+      `${tag} differs between local and origin`,
+    );
   if (!localTag)
     runGit(root, ["fetch", "origin", `refs/tags/${tag}:refs/tags/${tag}`]);
   const previousRevision = sourceRevision;
@@ -2130,11 +2224,15 @@ const ensureExistingRelease = (root, tag, head, local, remote, workOrderId) => {
       manifest.workOrder.id !== workOrderId ||
       manifest.release.commit !== remoteTag.target
     )
-      throw new Error(`${tag} belongs to another order or commit`);
+      throw closeBlocker(
+        "foreign-tag",
+        `${tag} belongs to another order or commit`,
+      );
     const expected = tagMessage(root, manifest);
     const actual = tagAnnotation(root, tag);
     if (actual !== expected)
-      throw new Error(
+      throw closeBlocker(
+        "foreign-tag",
         `${tag} annotation differs from its generated manifest and notes`,
       );
     return { manifest, humanLayer: releaseEdition(root, manifest) };
@@ -2146,7 +2244,8 @@ const publishedTag = (name, local, remote) => {
   const remoteTag = remote.get(name);
   const localTag = local.get(name);
   if (!remoteTag?.annotated)
-    throw new Error(
+    throw closeBlocker(
+      "foreign-tag",
       `latest published version ${name} is absent or is not an annotated origin tag`,
     );
   if (
@@ -2155,15 +2254,20 @@ const publishedTag = (name, local, remote) => {
       localTag.object !== remoteTag.object ||
       localTag.target !== remoteTag.target)
   )
-    throw new Error(`${name} differs between local and origin`);
+    throw closeBlocker(
+      "foreign-tag",
+      `${name} differs between local and origin`,
+    );
   return remoteTag;
 };
 const updateMain = (root, listMaterial = false) => {
-  ensureTrackedClean(root);
+  withBlockerClass("not-clean", () => ensureTrackedClean(root));
   reportLocalMaterial(root, listMaterial);
   if (runGit(root, ["symbolic-ref", "--short", "HEAD"]) !== "main")
     throw new Error("release close must run from the main branch checkout");
-  runGit(root, ["fetch", "origin", "main"]);
+  withBlockerClass("base-fetch", () =>
+    runGit(root, ["fetch", "origin", "main"]),
+  );
   runGit(root, ["merge", "--ff-only", "origin/main"]);
   if (
     runGit(root, ["rev-parse", "HEAD"]) !==
@@ -2271,6 +2375,10 @@ const finishPublishedWorktreeOperation = async (
       [])
       for (const saved of attempt.ownedTemporaryRoots ?? [])
         owned.set(saved.path, saved);
+    // A target close in this attempt has already captured the roots its
+    // target's ledger registered, before deleting that ledger.
+    for (const saved of record?.ownedTemporaryRoots ?? [])
+      owned.set(saved.path, saved);
     for (const checkout of new Set([
       ...before.map((row) => row.worktree),
       ...retainedPaths,
@@ -2321,6 +2429,9 @@ const finishPublishedWorktreeOperation = async (
         );
     }
     const outputs = [];
+    // Each kept derived worktree's blocker class, as the finish or settle
+    // process assigned it where that worktree's refusal was raised.
+    const derivedClasses = new Map();
     const actions = subject?.worktree ? ["finish", "settle"] : ["settle"];
     for (const action of actions) {
       try {
@@ -2341,8 +2452,40 @@ const finishPublishedWorktreeOperation = async (
         );
         outputs.push(finished.stdout ?? "");
         if (finished.stdout) writeOutput(finished.stdout);
+        // The class the finish or settle process gave its refusal, where
+        // that refusal was raised.
+        let refusalClass = null;
         for (const line of (finished.stdout ?? "").split("\n"))
-          if (line.startsWith("Scratch removal: ")) {
+          if (line.startsWith("Removal timings: ")) {
+            // What the child spent on each part of this step, measured there.
+            let timings = {};
+            try {
+              timings = JSON.parse(line.slice("Removal timings: ".length));
+            } catch {
+              timings = {};
+            }
+            for (const [name, durationMs] of Object.entries(timings ?? {}))
+              if (isRemovalChild(name))
+                addRemovalChild(record, name, Number(durationMs));
+          } else if (line.startsWith("Close blocker class: "))
+            refusalClass = blockerClassOf(
+              line.slice("Close blocker class: ".length).trim(),
+            );
+          else if (line.startsWith("Derived worktree blocker: ")) {
+            let derived = null;
+            try {
+              derived = JSON.parse(
+                line.slice("Derived worktree blocker: ".length),
+              );
+            } catch {
+              derived = null;
+            }
+            if (typeof derived?.path === "string")
+              derivedClasses.set(
+                resolve(derived.path),
+                blockerClassOf(derived.class),
+              );
+          } else if (line.startsWith("Scratch removal: ")) {
             const removal = JSON.parse(line.slice("Scratch removal: ".length));
             const previous = record?.removals.find(
               (row) =>
@@ -2360,9 +2503,26 @@ const finishPublishedWorktreeOperation = async (
             if (row) row.preservationReceipt = proof.receipt;
             if (proof.subject === subjectPath)
               cleanup.subject.preservationReceipt = proof.receipt;
+          } else if (line.startsWith("Journal retention: ")) {
+            // Where the worktree's session journals went, or why they did
+            // not: a failed move keeps the worktree and names the retry.
+            const { subject: retained, ...journals } = JSON.parse(
+              line.slice("Journal retention: ".length),
+            );
+            if (journals.outcome === "failed")
+              journals.command = releaseCloseCommand(root, workOrderId);
+            const row = cleanup.worktrees.find(
+              (item) => item.path === retained,
+            );
+            if (row) row.journals = journals;
+            if (subjectPath && retained === resolve(subjectPath))
+              cleanup.subject.journals = journals;
           }
         if (finished.status !== 0)
-          throw new Error(failureOf(finished, `${action} failed`));
+          throw closeBlocker(
+            refusalClass ?? "other",
+            failureOf(finished, `${action} failed`),
+          );
       } catch (error) {
         const command = releaseCloseCommand(root, workOrderId);
         cleanup.outcome = "blocked";
@@ -2373,6 +2533,8 @@ const finishPublishedWorktreeOperation = async (
             : {}),
           reason: error.message,
           command,
+          class: blockerClassOf(error.blockerClass),
+          step: currentReleaseStep(record),
         });
         writeOutput(
           `Advisory: ${dryRun ? "prospective" : "published release"} cleanup blocker: ${error.message}\n`,
@@ -2385,11 +2547,13 @@ const finishPublishedWorktreeOperation = async (
     for (const row of cleanup.worktrees) {
       if (!after.has(row.path) && existsSync(row.path)) {
         try {
-          row.preservationReceipt = removeUnregisteredWorktree(
-            root,
-            row.path,
-            workOrderId,
-            { dryRun },
+          row.preservationReceipt = timeRemovalChild(
+            record,
+            "preservation",
+            () =>
+              removeUnregisteredWorktree(root, row.path, workOrderId, {
+                dryRun,
+              }),
           );
           if (dryRun)
             outputs.push(`Derived worktree ${row.path}: would remove`);
@@ -2405,6 +2569,8 @@ const finishPublishedWorktreeOperation = async (
             path: row.path,
             reason: `Leftover directory retained: ${row.path}: ${error.message}`,
             command: releaseCloseCommand(root, workOrderId),
+            class: blockerClassOf(error.blockerClass),
+            step: currentReleaseStep(record),
           });
         }
       }
@@ -2460,6 +2626,8 @@ const finishPublishedWorktreeOperation = async (
             reason: reason.join("\n"),
             command: releaseCloseCommand(root, workOrderId),
             ...(operator ? { operator } : {}),
+            class: derivedClasses.get(resolve(row.path)) ?? "other",
+            step: currentReleaseStep(record),
           };
           row.blockers.push(blocker);
           record?.blockers.push(blocker);
@@ -2470,6 +2638,8 @@ const finishPublishedWorktreeOperation = async (
             path: row.path,
             reason: `Worktree retained: ${row.path}: ${row.inventoryError ?? "cleanup did not remove this path"}`,
             command: releaseCloseCommand(root, workOrderId),
+            class: "other",
+            step: currentReleaseStep(record),
           };
           row.blockers.push(blocker);
           record?.blockers.push(blocker);
@@ -2547,7 +2717,9 @@ const finishPublishedWorktreeOperation = async (
         if (dryRun) cleanup.branch.outcome = "would-delete";
         else {
           if (runGit(root, ["branch", "--list", branch]))
-            removeMergedBranch(root, branch);
+            timeRemovalChild(record, "branch-delete", () =>
+              removeMergedBranch(root, branch),
+            );
           cleanup.branch.outcome = "deleted";
         }
       } catch (error) {
@@ -2555,6 +2727,8 @@ const finishPublishedWorktreeOperation = async (
           action: "branch",
           reason: error.message,
           command: releaseCloseCommand(root, workOrderId),
+          class: blockerClassOf(error.blockerClass),
+          step: currentReleaseStep(record),
         });
       }
     }
@@ -2575,6 +2749,8 @@ const finishPublishedWorktreeOperation = async (
         action: "prune",
         reason: error.message,
         command: releaseCloseCommand(root, workOrderId),
+        class: blockerClassOf(error.blockerClass),
+        step: error.releaseStep ?? currentReleaseStep(record),
       };
       if (record)
         record.prune = {
@@ -2599,6 +2775,8 @@ const finishPublishedWorktreeOperation = async (
       action: "cleanup",
       reason: error.message,
       command: releaseCloseCommand(root, workOrderId),
+      class: blockerClassOf(error.blockerClass),
+      step: error.releaseStep ?? currentReleaseStep(record),
     });
     writeOutput(
       `Advisory: ${dryRun ? "prospective" : "published release"} cleanup blocker: ${error.message}\n`,
@@ -2833,6 +3011,8 @@ const refreshPublishedStartersOperation = async (
       action: "starter-refresh",
       reason: `${row.sibling}: ${row.reason}`,
       command: releaseCloseCommand(root, workOrderId),
+      class: "starter-refresh",
+      step: currentReleaseStep(record),
     });
     process.exitCode = 1;
   }
@@ -2974,10 +3154,11 @@ const prepareTargetRelease = async (
   const repository = loadConfig(root).repositories[state.repositoryId];
   const target = (record.publication.target = {
     repositoryId: state.repositoryId,
-    policy: repository?.release?.policy ?? "no-release",
+    policy: targetReleasePolicy(root, state.repositoryId),
     outcome: "no-release",
     tag: null,
     release: null,
+    reviewedCommit: record.publication.target?.reviewedCommit ?? null,
   });
   if (target.policy !== "declared") return;
   const classification = targetReleaseClassification(root, state, revision);
@@ -3081,7 +3262,8 @@ const prepareTargetRelease = async (
     title: `${repository.release.displayName ?? state.repositoryId} ${tag}`,
   });
   if (existing && existing !== tagged)
-    throw new Error(
+    throw closeBlocker(
+      "foreign-tag",
       `target release tag ${tag} exists on ${forge.selector} at ${existing}, not the ${earlier?.tag ? "recorded release commit" : `merged ${repository.baseBranch}`} ${tagged}; source retained`,
     );
   const authority = readWorkOrderAuthority(root, state, revision, {
@@ -3256,7 +3438,9 @@ const closePrerequisites = (root, workOrderId, parsed, record) => {
     targetWorktreeForOrder(root, workOrderId) ||
     readControl(root).orders.get(workOrderId)?.state.repositoryId;
   const reachable = targetOrder
-    ? (runGit(root, ["ls-remote", "--exit-code", "--heads", "origin", "main"]),
+    ? (withBlockerClass("host-denied", () =>
+        runGit(root, ["ls-remote", "--exit-code", "--heads", "origin", "main"]),
+      ),
       { host: "origin" })
     : ensureOriginReachable(root);
   if (dryRun)
@@ -3264,9 +3448,11 @@ const closePrerequisites = (root, workOrderId, parsed, record) => {
       `Origin reachable: ${reachable.host} (git ls-remote)${targetOrder ? "." : "; publication also needs gh authentication there."}\n`,
     );
   if (dryRun) {
-    ensureTrackedClean(root);
+    withBlockerClass("not-clean", () => ensureTrackedClean(root));
     reportLocalMaterial(root, flags.includes("--list-material"));
-    runGit(root, ["fetch", "origin", "main"]);
+    withBlockerClass("base-fetch", () =>
+      runGit(root, ["fetch", "origin", "main"]),
+    );
     sourceRevision = runGit(root, ["rev-parse", "origin/main"]);
     const ancestor = execute("git", [
       "-C",
@@ -3283,6 +3469,24 @@ const closePrerequisites = (root, workOrderId, parsed, record) => {
   if (state.workOrderId !== workOrderId)
     throw new Error(
       `merged control state is for ${state.workOrderId ?? "none"}, not ${workOrderId}`,
+    );
+  // The operator's merge-time retraction has a consequence the lifecycle
+  // carries: its repair, verification and final review precede the close. A
+  // retraction before the merge is recorded in the order's worktree, which a
+  // branch merged without its repair leaves behind, so the close reads that
+  // record as well as the merged one.
+  const mergedEvents = eventsForOrder(
+    readControl(root, sourceRevision),
+    workOrderId,
+  );
+  const merged = unrepairedRetraction(mergedEvents);
+  const recorded = merged
+    ? undefined
+    : worktreeRetraction(root, workOrderId, mergedEvents);
+  const retraction = merged ?? recorded?.retraction;
+  if (retraction)
+    throw new Error(
+      `release close refused: ${workOrderId}'s retraction of ordinal ${retraction.subject.ordinal} (the ${retraction.subject.type} of criterion ${retraction.subject.criterionId})${recorded ? `, recorded in its worktree ${recorded.worktree},` : ""} is newer than its latest passing final review on origin/main; a repair, a fresh verification and a fresh final review, merged, precede the close`,
     );
   if (state.repositoryId) {
     if (state.phase !== "closed")
@@ -3328,6 +3532,8 @@ const closePrerequisites = (root, workOrderId, parsed, record) => {
           .filter((line) => line.startsWith("FAIL "))
           .join("; ") || "Release surface validation failed",
       command: releaseCloseCommand(root, workOrderId),
+      class: "publication",
+      step: currentReleaseStep(record),
     });
     process.exitCode = 1;
     return undefined;
@@ -3337,14 +3543,25 @@ const closePrerequisites = (root, workOrderId, parsed, record) => {
   const mainStatus = remaining.length
     ? `Main tracked files are clean; in-flight orders: ${remaining.join(", ")}.`
     : "Main tracked files are clean and between work orders.";
-  const context = { state, authority, local, remote, latest, head, mainStatus };
-  if (latest && compareVersions(authority.version, latest) < 0) return context;
+  // The branch this close takes, the comparison the handoff described.
+  const selfKind = selfCloseKind(authority.version, latest ?? null);
+  const context = {
+    state,
+    authority,
+    local,
+    remote,
+    latest,
+    head,
+    mainStatus,
+    selfKind,
+  };
+  if (selfKind === "self-no-release") return context;
   const blockingTag = nestedTagConflict(authority.version, local, remote);
   if (blockingTag)
     throw new Error(
       `release tag ${authority.version} is blocked by nested tag ${blockingTag}`,
     );
-  const existing = latest && compareVersions(authority.version, latest) === 0;
+  const existing = selfKind === "self-existing-release";
   if (existing) {
     const remoteTag = remote.get(authority.version);
     if (remoteTag?.annotated && remoteTag.target === head)
@@ -3386,21 +3603,32 @@ const close = async (root, workOrderId, parsed, record, context) => {
     mainStatus,
     repository,
     tagger,
+    selfKind,
   } = context;
   const { flags, material: overrides, confirmTerms } = parsed;
   const publish = flags.includes("--publish");
   const dryRun = flags.includes("--dry-run");
   if (state.repositoryId) {
     record.publication.outcome = "no-release";
-    const targetPolicy =
-      loadConfig(root).repositories[state.repositoryId]?.release?.policy ??
-      "no-release";
+    const targetPolicy = targetReleasePolicy(root, state.repositoryId);
+    // The commit the final review judged, which the close's handoff names
+    // beside the published tag for the instance's own records. The status
+    // projection omits it; the order's folded control state keeps it.
+    let reviewedCommit = null;
+    try {
+      reviewedCommit =
+        readControl(root, sourceRevision).orders.get(workOrderId)?.state
+          .targetSubject?.commit ?? null;
+    } catch {
+      reviewedCommit = null;
+    }
     record.publication.target = {
       repositoryId: state.repositoryId,
       policy: targetPolicy,
       outcome: targetPolicy === "declared" ? "not-attempted" : "no-release",
       tag: null,
       release: null,
+      reviewedCommit,
     };
     if (targetPolicy === "declared")
       record.publication.outcome = "not-attempted";
@@ -3436,7 +3664,7 @@ const close = async (root, workOrderId, parsed, record, context) => {
       }
       // The target branch is proven merged by the close; a declared target
       // release tags that merged base and creates the target's Release.
-      publishRelease?.();
+      withBlockerClass("publication", () => publishRelease?.());
       await finishPublishedWorktree(
         root,
         workOrderId,
@@ -3453,7 +3681,7 @@ const close = async (root, workOrderId, parsed, record, context) => {
     );
     return;
   }
-  if (latest && compareVersions(authority.version, latest) < 0) {
+  if (selfKind === "self-no-release") {
     record.publication.outcome = "no-release";
     if (!dryRun)
       refreshHarnessRuntime(
@@ -3474,7 +3702,7 @@ const close = async (root, workOrderId, parsed, record, context) => {
     );
     return;
   }
-  if (latest && compareVersions(authority.version, latest) === 0) {
+  if (selfKind === "self-existing-release") {
     if (!dryRun) assertReleaseRuntime(root);
     const inspectExisting = () =>
       ensureExistingRelease(
@@ -3507,12 +3735,14 @@ const close = async (root, workOrderId, parsed, record, context) => {
       return;
     }
     const projection = publish
-      ? ensureGitHubRelease(
-          root,
-          repository,
-          authority.version,
-          projectedReleaseBody(authority.version, existing.humanLayer),
-          releaseTitle(authority.version, existing.humanLayer),
+      ? withBlockerClass("publication", () =>
+          ensureGitHubRelease(
+            root,
+            repository,
+            authority.version,
+            projectedReleaseBody(authority.version, existing.humanLayer),
+            releaseTitle(authority.version, existing.humanLayer),
+          ),
         )
       : undefined;
     record.publication.outcome = "already-published";
@@ -3584,20 +3814,24 @@ const close = async (root, workOrderId, parsed, record, context) => {
     );
     return;
   }
-  const tagObject = publishTag(
-    root,
-    authority.version,
-    head,
-    message,
-    tagger,
-    record.publication,
+  const tagObject = withBlockerClass("publication", () =>
+    publishTag(
+      root,
+      authority.version,
+      head,
+      message,
+      tagger,
+      record.publication,
+    ),
   );
-  const projection = ensureGitHubRelease(
-    root,
-    repository,
-    authority.version,
-    projectedReleaseBody(authority.version, humanLayer),
-    releaseTitle(authority.version, humanLayer),
+  const projection = withBlockerClass("publication", () =>
+    ensureGitHubRelease(
+      root,
+      repository,
+      authority.version,
+      projectedReleaseBody(authority.version, humanLayer),
+      releaseTitle(authority.version, humanLayer),
+    ),
   );
   record.publication.outcome = "published";
   record.publication.release = projection;
@@ -3975,6 +4209,9 @@ const main = async () => {
           schemaVersion: 1,
           workOrderId,
           startedAt: new Date().toISOString(),
+          // The activation this close belongs to: a later reactivation of the
+          // order does not inherit this receipt (WO-192-D099, WO-247).
+          activation: latestActivation(root, workOrderId),
           steps: releaseSteps(),
           dryRun: parsed.flags.includes("--dry-run"),
           listMaterial: parsed.flags.includes("--list-material"),
@@ -4002,6 +4239,9 @@ const main = async () => {
           removals: [],
           overrides: parsed.material,
           blockers: [],
+          // What stopped this attempt, when one stopped: its class from the
+          // closed list, the release step that raised it and its message.
+          blocker: null,
           previousAttempts: [],
           recordAdvisories: [],
           retryCommand: releaseCloseCommand(root, workOrderId),
@@ -4091,13 +4331,32 @@ const main = async () => {
           return result;
         } catch (error) {
           const published = settlePublication(record, error.message);
+          // The refusal that stopped this attempt, classed where it was raised.
+          record.blocker = {
+            class: blockerClassOf(error?.blockerClass),
+            step: error?.releaseStep ?? null,
+            message: error.message,
+          };
           record.blockers.push({
             action: published ? "completion" : "publication",
             reason: error.message,
             command: releaseCloseCommand(root, workOrderId),
+            class: record.blocker.class,
+            step: record.blocker.step,
           });
           throw error;
         } finally {
+          // An attempt that ends with an unresolved blocker stopped there; the
+          // first such blocker is the attempt's.
+          if (!record.blocker) {
+            const first = record.blockers.find((row) => !row.resolved);
+            if (first)
+              record.blocker = {
+                class: blockerClassOf(first.class),
+                step: first.step ?? null,
+                message: first.reason,
+              };
+          }
           await withReleaseStep(record, "record", async () => {
             record.recordedAt = new Date().toISOString();
             try {
@@ -4219,7 +4478,7 @@ const main = async () => {
     );
     // The meter reads every decisions record; read it before any edit, so an
     // unreadable record refuses with nothing written (WO-086).
-    const metering = existsSync(docPath(toolRoot, "control", "budgets.json"));
+    const metering = processMetered(toolRoot);
     const meterModule = metering ? await import("./lib/meta.mjs") : undefined;
     const meta = metering ? await meterModule.collectMeta(toolRoot) : undefined;
     const ancillary = [];
@@ -4243,7 +4502,11 @@ const main = async () => {
       // of the PR draft. A meter snapshot never manufactures review prose.
       if (existsSync(path)) {
         const source = readFileSync(path, "utf8");
-        const next = withMeterBlockLast(source, renderMetaTable(meta));
+        const next = withMeterBlockLast(
+          source,
+          renderMetaTable(meta, { workOrderId: state.workOrderId }),
+          expectedCriterionRecordLines(toolRoot, state),
+        );
         if (next !== source) {
           writeFileSync(path, next);
           ancillary.push(path);

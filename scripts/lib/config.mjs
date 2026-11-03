@@ -105,6 +105,8 @@ const SECTION_KEYS = [
   "build",
   "release",
   "kit",
+  "drive",
+  "features",
   "derivedOrders",
   "portfolios",
   "contributions",
@@ -376,6 +378,25 @@ const validateRelease = (path, declared) => {
   return release;
 };
 
+/** The sandbox a routed run gets on either host (WO-247): `host` keeps the
+ * host's own setting, `off` launches unsandboxed in the form each host
+ * documents. One instance elects it for every phase worker a drive launches;
+ * an operator's own router session keeps the policy it was started with. */
+export const DRIVE_SANDBOX_ELECTIONS = ["host", "off"];
+const validateDrive = (path, declared) => {
+  requireObject(path, declared, "drive");
+  requireKnownKeys(path, declared, ["sandbox"], "drive");
+  if (
+    declared.sandbox !== undefined &&
+    !DRIVE_SANDBOX_ELECTIONS.includes(declared.sandbox)
+  )
+    throw refuse(
+      path,
+      `drive.sandbox must be ${DRIVE_SANDBOX_ELECTIONS.map((election) => JSON.stringify(election)).join(" or ")}; found ${JSON.stringify(declared.sandbox)}`,
+    );
+  return { sandbox: declared.sandbox ?? "host" };
+};
+
 const validateKit = (path, declared) => {
   requireObject(path, declared, "kit");
   requireKnownKeys(path, declared, ["applyInstanceActions"], "kit");
@@ -387,16 +408,39 @@ const validateKit = (path, declared) => {
   return { applyInstanceActions: declared.applyInstanceActions ?? false };
 };
 
+const validateFeatures = (path, declared) => {
+  requireObject(path, declared, "features");
+  requireKnownKeys(path, declared, ["desktop-control"], "features");
+  return Object.fromEntries(
+    Object.entries(declared).map(([id, value]) => {
+      if (typeof value === "boolean") return [id, value];
+      const label = `features.${id}`;
+      requireObject(path, value, label);
+      requireKnownKeys(path, value, ["on", "note"], label);
+      if (typeof value.on !== "boolean")
+        throw refuse(path, `${label}.on must be a boolean`);
+      if (value.note !== undefined && typeof value.note !== "string")
+        throw refuse(path, `${label}.note must be a string`);
+      return [id, { ...value }];
+    }),
+  );
+};
+
 // Regenerable output a close deletes: relative normalized POSIX paths inside
 // the checkout, never absolute, never climbing out (WO-221). A class entry and
-// a registration entry compose; nothing removes a class entry.
+// a registration entry compose; nothing removes a class entry. An entry may
+// carry two wildcard forms: `**` as a whole segment, matching any number of
+// segments, and `*` within a segment, matching inside that one segment. Its
+// last segment keeps a literal part, the floor that keeps any declaration
+// from naming every ignored file, so `*`, `**`, `**/*` and `libs/**` refuse
+// and `**/*.tsbuildinfo` is admitted.
 const validateDisposablePaths = (path, value, label) => {
   if (value === undefined) return [];
   if (!Array.isArray(value) || !value.every(isText))
     throw refuse(path, `${label} must be an array of non-empty strings`);
   // A declared directory may carry a trailing slash; the path is the root.
   const entries = value.map((entry) => entry.replace(/\/+$/u, ""));
-  for (const entry of entries)
+  for (const entry of entries) {
     if (
       !entry ||
       entry.startsWith("/") ||
@@ -416,6 +460,18 @@ const validateDisposablePaths = (path, value, label) => {
         path,
         `${label} entries must be contained relative normalized POSIX paths: ${entry}`,
       );
+    const segments = entry.split("/");
+    if (segments.some((segment) => segment.includes("**") && segment !== "**"))
+      throw refuse(
+        path,
+        `${label} entries use ** only as a whole segment matching any number of segments: ${entry}`,
+      );
+    if (!segments.at(-1).replaceAll("*", ""))
+      throw refuse(
+        path,
+        `${label} entries must end in a segment with a literal part, the floor that keeps a declaration from naming every ignored file: ${entry}`,
+      );
+  }
   return [...new Set(entries)].sort();
 };
 
@@ -988,6 +1044,14 @@ export const validateConfig = (path, source) => {
         ? validateRelease(path, {})
         : validateRelease(path, declared.release),
     kit: validateKit(path, declared.kit === undefined ? {} : declared.kit),
+    drive: validateDrive(
+      path,
+      declared.drive === undefined ? {} : declared.drive,
+    ),
+    features: validateFeatures(
+      path,
+      declared.features === undefined ? {} : declared.features,
+    ),
     ...(declared.contributions === undefined
       ? {}
       : { contributions: validateContributions(path, declared.contributions) }),
@@ -1011,6 +1075,8 @@ const absentConfig = () => ({
   build: { loadout: null, profile: null, overlay: null },
   release: validateRelease(CONFIG_FILENAME, {}),
   kit: { applyInstanceActions: false },
+  drive: validateDrive(CONFIG_FILENAME, {}),
+  features: {},
 });
 
 // One nonblocking descriptor per lookup keeps a launchpad that gains, loses or edits its
@@ -1053,6 +1119,12 @@ export const loadConfig = (root) => {
   } finally {
     closeSync(fd);
   }
+};
+
+/** Resolve the instance election; a reason documents it without granting it. */
+export const readFeatures = (root) => {
+  const value = loadConfig(root).features["desktop-control"];
+  return { "desktop-control": value === true || value?.on === true };
 };
 
 const ascend = (from) => {

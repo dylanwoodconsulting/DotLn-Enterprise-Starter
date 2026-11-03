@@ -1,4 +1,5 @@
 import { basename, isAbsolute, resolve } from "node:path";
+import { desktopControlSkills, desktopControlToolPrefixes, } from "@dotln/compiler";
 /** Classification could not establish an effect; generated hooks advise the host. */
 export class HarnessCommandRefused extends Error {
 }
@@ -7,6 +8,10 @@ export class HarnessCommandRefused extends Error {
  * are delegated to host permissions when their effects cannot be classified.
  */
 export const harnessToolEffects = {
+    ...Object.fromEntries(desktopControlToolPrefixes.map((prefix) => [
+        `${prefix}*`,
+        "desktop",
+    ])),
     Read: "read",
     // Native schema-result submission carries data only; it cannot execute or
     // mutate the worktree. WO-053 observed this tool denied by the unknown-tool
@@ -37,6 +42,9 @@ export const harnessToolEffects = {
     // touches no repository byte, and each subagent's own tool calls pass these
     // same guards.
     Workflow: "spawn",
+    // A message to an agent gives it more work: a re-task, which touches no
+    // repository byte itself and counts one use against the subagent cap.
+    SendMessage: "retask",
     Skill: "interaction",
     TodoWrite: "interaction",
     AskUserQuestion: "interaction",
@@ -48,6 +56,12 @@ export const harnessToolEffects = {
     "functions.exec": "shell",
     "collaboration.spawn_agent": "spawn",
 };
+/** Prefix rules name host namespaces; Skill carries its selection in input. */
+export function isDesktopControlTool(name, input = {}) {
+    return (desktopControlToolPrefixes.some((prefix) => name.startsWith(prefix)) ||
+        (name === "Skill" &&
+            desktopControlSkills.some((skill) => input.skill === skill)));
+}
 const shellPrograms = new Set([
     "bash",
     "sh",
@@ -1839,8 +1853,9 @@ export function drivenCommandEffect(script, args, { role, workOrder }) {
                 return "read";
             return drivenPhaseActions[role]?.includes(action) ? "write" : null;
         case "release":
-            return action === "prepare" &&
-                args.slice(1).every((word) => word === "--local")
+            // The local preparation alone; a preparation that reads origin tags is
+            // the launchpad's own command.
+            return action === "prepare" && args.length === 2 && next === "--local"
                 ? "write"
                 : null;
         case "target-gate":

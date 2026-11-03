@@ -94,6 +94,7 @@ const commonSources = [
   "packages/skeleton/src/entropy-review-protocol.ts",
   "packages/skeleton/src/mission-check-protocol.ts",
   "packages/skeleton/src/vertical-judgment-protocol.ts",
+  "packages/skeleton/src/change-review-protocol.ts",
   // Runtime siblings the registered hosts and protocols import (WO-157).
   "packages/skeleton/src/artifact-identity.ts",
   "packages/skeleton/src/beacon-perception.ts",
@@ -401,7 +402,7 @@ export const evidenceImportExclusions = {
     "scripts/lib/temporary-prune.mjs":
       "Lifecycle cleanup runs after a session or gate ends; no edition invokes those cleanup boundaries. Ownership records are registered separately; harness and runner fixtures judge pruning, retention and parallel-worktree safety.",
     "scripts/lib/temporary-prune-summary.mjs":
-      "Read-only lifecycle census presentation is outside the editions' judged behavior; startup, update and release fixtures judge this best-effort summary and its runtime-unavailable path.",
+      "The prune summary plan start applies and update preview prints is outside the editions' judged behavior; planning, update and release fixtures judge it, its deferred and stopped reports and its runtime-unavailable path.",
     "scripts/lib/config.mjs":
       "Resolves the launchpad and its configured document roots; each edition's inputs are registered by the path it resolves, and its repository and portfolio validation is outside every edition's recorded behaviour.",
     "packages/skeleton/src/local-model-actor.ts":

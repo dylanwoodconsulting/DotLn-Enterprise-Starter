@@ -158,6 +158,9 @@ const shell = (name, file) => ({
 export const machinerySources = {
   "sync-fixtures": [
     "scripts/release.mjs",
+    // The close's step names, blocker classes and removal children, which
+    // release.mjs, worktree.mjs and plan failures import.
+    "scripts/lib/release-steps.mjs",
     "scripts/lib/release-preparation.mjs",
     "scripts/check-role-oracle.mjs",
     "scripts/test-process-debt.mjs",
@@ -173,6 +176,8 @@ export const machinerySources = {
     "scripts/lib/build-freshness.mjs",
   ],
   "launchpad-planning": [
+    // plan start applies the owned-root prune through this summary (WO-237).
+    "scripts/lib/temporary-prune-summary.mjs",
     "scripts/lib/planning-document.mjs",
     "packages/kernel/src/types.ts",
     "packages/compiler/src/harness.ts",
@@ -184,14 +189,18 @@ export const machinerySources = {
     "scripts/target-gate.mjs",
     "scripts/test-target-publication-fixture.mjs",
     "scripts/worktree.mjs",
+    "scripts/lib/release-steps.mjs",
     "scripts/launchpad.mjs",
     "scripts/kit/",
+    "docs/KIT.md",
     "scripts/refute-plan.mjs",
     "scripts/lib/planning-followups.mjs",
     "scripts/lib/planning-conditions.mjs",
     "scripts/lib/plan-",
     "scripts/entropy.mjs",
     "scripts/lib/entropy-review.mjs",
+    // The entropy review launches through the shared worker launch (WO-250).
+    "scripts/lib/worker-launch.mjs",
     "scripts/meta.mjs",
     "scripts/lib/meta.mjs",
     "scripts/docs-check.mjs",
@@ -262,9 +271,14 @@ export const machinerySources = {
     "packages/skeleton/src/worker-transport.ts",
   ],
   "harness-fixtures": [
+    // The retained-usage readback the harness suite exercises (WO-237).
+    "scripts/lib/retained-session.mjs",
+    // The stopped-apply report its temporary-root cases exercise (WO-237).
+    "scripts/lib/temporary-prune-summary.mjs",
     "scripts/build.mjs",
     "scripts/lib/planning-document.mjs",
     "scripts/lib/off-ramps.mjs",
+    "scripts/lib/release-close-handoff.mjs",
     "scripts/test-dispatch-bound.mjs",
     "scripts/test-temporary-roots.mjs",
     "scripts/lib/temporary-prune.mjs",
@@ -305,6 +319,9 @@ export const machinerySources = {
     "packages/skeleton/src/gate-evidence.mjs",
     "packages/skeleton/src/runtime-inputs.mjs",
     "scripts/test-harness.mjs",
+    // The snapshot names releases before records gave, read by the harness
+    // suite's snapshot proof regression (WO-252).
+    "scripts/fixtures/wo252-pre-record-snapshots.json",
     "scripts/test-drive.mjs",
     "scripts/drive.mjs",
     "scripts/fixtures/drive-live.mjs",
@@ -332,6 +349,7 @@ export const machinerySources = {
     "scripts/lib/intake-reconciliation.mjs",
     "scripts/lib/worktree-material.mjs",
     "scripts/lib/worktree-removal.mjs",
+    "scripts/lib/release-steps.mjs",
     "scripts/lib/git.mjs",
     // The observer's journal-read failure case rewrites the control store's
     // reader in its fixture copy.
@@ -349,6 +367,8 @@ export const machinerySources = {
     "packages/skeleton/src/correction-observation.mjs",
     "scripts/test-target-harness.mjs",
     "scripts/lib/harness.mjs",
+    "scripts/lib/harness-instruction.mjs",
+    "scripts/kit/CLAUDE.template.md",
     "packages/compiler/src/harness.ts",
     "packages/skeleton/src/harness-host.ts",
     "packages/skeleton/src/version.ts",
@@ -370,6 +390,8 @@ export const machinerySources = {
     "scripts/lib/target-worktrees.mjs",
     // Direct entry imports and literal first-party script inputs (WO-174).
     "packages/skeleton/src/usage-observation.mjs",
+    // A closed order's session read from its retained lane (WO-237).
+    "scripts/lib/retained-session.mjs",
     "scripts/lib/evidence-preparation.mjs",
     "scripts/lib/harness-prune.mjs",
     "scripts/lib/harness-runtime.mjs",
@@ -378,6 +400,8 @@ export const machinerySources = {
     "packages/skeleton/src/resident-store.ts",
     "scripts/harness.mjs",
     "packages/skeleton/src/harness-host.ts",
+    // Every generated hook embeds its tool map (WO-250).
+    "packages/skeleton/src/harness-command.ts",
     "packages/skeleton/src/version.ts",
     "packages/skeleton/src/subagent-budget.ts",
     "packages/skeleton/src/gate-evidence.mjs",
@@ -405,6 +429,11 @@ export const machinerySources = {
   ],
   "harness-evidence": recordedSources["harness"],
   "plan-refutation": [
+    // Plan failures, which the refutation fixtures import, reads the close's
+    // blocker classes and step names from here.
+    "scripts/lib/release-steps.mjs",
+    // plan start applies the owned-root prune through this summary (WO-237).
+    "scripts/lib/temporary-prune-summary.mjs",
     "scripts/docs-check.mjs",
     "scripts/lib/front-page-scope.mjs",
     "scripts/lib/planning-document.mjs",
@@ -438,6 +467,27 @@ export const machinerySources = {
     "scripts/test-entropy-review.mjs",
     "scripts/entropy.mjs",
     "scripts/lib/entropy-review.mjs",
+    // The shared worker launch and the change review helper it serves, with
+    // the run-time modules its fixtures load and pin: the reviewer briefs and
+    // pins, the worker definition, the counter, the protocol the fake
+    // validates with, the session and journal readers and the duration format
+    // (WO-250).
+    "scripts/lib/worker-launch.mjs",
+    "scripts/lib/review-worker.mjs",
+    "scripts/lib/review-worker-fake.mjs",
+    "scripts/lib/checkpoint.mjs",
+    "scripts/worker.mjs",
+    "scripts/test-review-worker.mjs",
+    "packages/skeleton/src/change-review-protocol.ts",
+    "packages/skeleton/src/loadouts/contributor.ts",
+    "packages/compiler/src/harness.ts",
+    "packages/skeleton/src/subagent-budget.ts",
+    "packages/skeleton/src/verification-protocol.ts",
+    "packages/skeleton/src/worker-protocol.ts",
+    "scripts/lib/dispatch-bound.mjs",
+    "scripts/lib/duration.mjs",
+    "packages/skeleton/src/dispatch-journal.mjs",
+    "packages/skeleton/src/usage-observation.mjs",
   ],
   "runner-fixtures": [
     "scripts/lib/temporary-prune.mjs",
@@ -520,6 +570,7 @@ export const machinerySources = {
     "scripts/test-reader-fixture.mjs",
     "scripts/test-close-admission.mjs",
     "scripts/lib/worktree-removal.mjs",
+    "scripts/lib/release-steps.mjs",
     "packages/skeleton/src/writer-teardown.mjs",
     "scripts/lib/suite-evidence.mjs",
     "scripts/lib/release-fixtures.mjs",
@@ -538,8 +589,12 @@ export const machinerySources = {
     "scripts/lib/target-worktree-fixture.mjs",
   ],
   "process-debt": [
+    // plan start applies the owned-root prune through this summary (WO-237).
+    "scripts/lib/temporary-prune-summary.mjs",
     "scripts/lib/plan-subject.mjs",
     "scripts/lib/planning-document.mjs",
+    // The driven-start figure beside the cold-start meter (WO-247).
+    "scripts/lib/drive-prompts.mjs",
     "scripts/test-gate-followups.mjs",
     "docs/control/budgets.json",
     "CLAUDE.md",
@@ -560,6 +615,7 @@ export const machinerySources = {
     "scripts/harness.mjs",
     "scripts/lib/adjacent-queue.mjs",
     "scripts/lib/gate-evidence.mjs",
+    "scripts/lib/github-body.mjs",
     "scripts/lib/harness.mjs",
     "scripts/lib/plan-receipts.mjs",
     "scripts/lib/release-kit-runtime.mjs",
@@ -575,12 +631,14 @@ export const machinerySources = {
     "scripts/lib/intake-reconciliation.mjs",
     "scripts/lib/worktree-material.mjs",
     "scripts/lib/worktree-removal.mjs",
+    "scripts/lib/release-steps.mjs",
     "scripts/lib/git.mjs",
     "packages/skeleton/src/writer-teardown.mjs",
     "scripts/lib/evidence-preparation.mjs",
     "scripts/lib/planning-followups.mjs",
     "scripts/lib/private-paths.mjs",
     "scripts/lib/planning-conditions.mjs",
+    "docs/planning/followups.json",
     "scripts/build.mjs",
     "scripts/work-orders.mjs",
     "scripts/discover.mjs",
@@ -632,6 +690,13 @@ export const machinerySources = {
     "packages/skeleton/fixtures/wo221-role-baseline.json",
     "packages/skeleton/fixtures/wo192-role-baseline.json",
     "packages/skeleton/fixtures/wo192-integration-role-baseline.json",
+    "packages/skeleton/fixtures/wo247-role-baseline.json",
+    "packages/skeleton/fixtures/wo251-role-baseline.json",
+    "packages/skeleton/fixtures/wo249-role-baseline.json",
+    "packages/skeleton/fixtures/wo249-integration-role-baseline.json",
+    "packages/skeleton/fixtures/wo250-role-baseline.json",
+    "packages/skeleton/fixtures/wo252-role-baseline.json",
+    "packages/skeleton/fixtures/wo252-repair-role-baseline.json",
     "packages/skeleton/fixtures/wo217-role-efficiency-baseline.json",
     "scripts/test-helper-reuse.mjs",
     "scripts/lib/helpers.mjs",
@@ -1214,6 +1279,7 @@ export const suites = [
       "scripts/lib/launchpad-fixture.mjs",
       "scripts/launchpad.mjs",
       "scripts/kit/",
+      "docs/KIT.md",
     ],
     kit: "core-only: package TypeScript and build configuration needed to export",
     // Each file owns two host slots, including its nested kit gates.
@@ -3664,11 +3730,12 @@ async function runGateChecks(
         console.log(
           `${!row.executed ? "SKIP" : row.exitCode === 0 ? "PASS" : "FAIL"} ${row.name} ${formatDuration(row.durationMs)}`,
         );
-        // Successful checks still deliver their explicit diagnostics.
+        // Successful checks still deliver their explicit diagnostics, the
+        // criteria screen's advisories among them (WO-249).
         for (const line of (row.output ?? "").trimEnd().split("\n"))
           if (
             row.exitCode !== 0 ||
-            /^(?:ADVISORY|NEWER)\b/u.test(line) ||
+            /^(?:(?:ADVISORY|NEWER)\b|criteria advisory: )/u.test(line) ||
             (row.name === "kit-verify" && line.startsWith("kit: "))
           )
             console.log(`  [${row.name}] ${line}`);

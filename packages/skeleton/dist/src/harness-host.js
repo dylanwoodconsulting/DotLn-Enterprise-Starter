@@ -1,6 +1,6 @@
 import { createRequire } from "node:module";
 import { DispatchJournalError, dispatchJournalDirectory, readDispatchJournals, } from "./dispatch-journal.mjs";
-import { completeTestSelection, diagnosticTestSelection, npmScriptArgs, } from "./test-selection.mjs";
+import { boundedCommand, completeTestSelection, diagnosticTestSelection, gateInvocation, nodeScriptArgs, npmScriptArgs, } from "./test-selection.mjs";
 import { formatDuration } from "./duration.mjs";
 import { observedSpawnSync as spawnSync } from "./gate-deadlines.mjs";
 import { withWriterRegistration } from "./writer-teardown.mjs";
@@ -18,7 +18,7 @@ import { applyFeedbackCorrection, compileFeedbackUnits, COMPILER_PACKAGE_VERSION
 import { harnessAuthorization } from "./reactor.js";
 import { personalFeedback } from "./loadouts/feedback.js";
 import { qualityPassGuidance } from "./document-quality.js";
-import { HarnessCommandRefused, drivenCommandEffect, drivenResearchCommandKind, LIVE_GATE_READ_LIST, harnessToolEffects, invocationEffects, liveGateReads, patchWriteTargets, shellRedirectTargets, shellWritePaths, shellWriteTargets, commitMessageInputs, shellDiagnostics, shellInvocations, executableShellInvocations, shellGuidance, } from "./harness-command.js";
+import { HarnessCommandRefused, drivenCommandEffect, drivenResearchCommandKind, LIVE_GATE_READ_LIST, harnessToolEffects, isDesktopControlTool, invocationEffects, liveGateReads, patchWriteTargets, shellRedirectTargets, shellWritePaths, shellWriteTargets, commitMessageInputs, shellDiagnostics, shellInvocations, executableShellInvocations, shellGuidance, } from "./harness-command.js";
 import { activeGateRuns, beginGateRun, gateInputPath, gateRecordPath, prospectiveRealpath, gateTreeHash, findGateCheck, readGateChecks, recordGateChecks, gateCodeIdentity, } from "./gate-evidence.mjs";
 import { collectSessionUsage, currentCopilotSession, usageObservation, recordUsageObservation, usageReadbackLine, usageSessionKey, } from "./usage-observation.mjs";
 import { FeedbackRefused, feedbackContentHash, feedbackWriterFacts, } from "./feedback-boundary.js";
@@ -183,6 +183,85 @@ function startsBoundedWork(input, spawn) {
     catch {
         return false;
     }
+}
+/** The agent types a session spawns for review, refutation or research. */
+const REVIEW_WORKER_TYPES = ["dotln-worker", "dotln-worker-fable"];
+/** The gate a review or refutation worker's shell command would start, by
+ * its literal words, or null. The host names the agent's type on each of its
+ * tool calls; a lifecycle phase agent (dotln-executor and the other phase
+ * definitions) keeps its gates, and so does the session itself. What a
+ * program starts by itself stays unobserved, as for every hook refusal. */
+export function reviewWorkerGate(input, tools = harnessToolEffects) {
+    if (!input.agent_id ||
+        !REVIEW_WORKER_TYPES.includes(input.agent_type ?? "") ||
+        tools?.[input.tool_name ?? ""] !== "shell")
+        return null;
+    const command = input.tool_input?.command ?? input.tool_input?.cmd;
+    if (typeof command !== "string")
+        return null;
+    try {
+        return (executableShellInvocations(command)
+            .find((words) => gateInvocation(words))
+            ?.join(" ") ?? null);
+    }
+    catch {
+        // An unreadable command is judged by the other guards, which refuse what
+        // they cannot classify.
+        return null;
+    }
+}
+const workerGateRefusal = (gate) => `DOTLN_WORKER_GATE_REFUSED: a review or refutation worker never starts a test-runner gate (${gate}); probe one test with node scripts/harness.mjs bounded -- node --test --test-name-pattern <name> <suite file>. A gate holds the worktree's live-gate refusal against the session that launched you for its whole run, and that session owns the gate.`;
+/** The workers a kit command launches, by its literal words: the change
+ * review helper (`npm run worker -- review`, `node scripts/worker.mjs
+ * review`) launches one and the planner's review (`npm run plan -- review`,
+ * `node scripts/refute-plan.mjs review`) three, on the host `--host` names;
+ * a `--dry-run` launches none. The helper's own process carries no session
+ * identity a hook could charge, so the hook charges its command. */
+export function kitWorkerLaunch(command) {
+    let invocations;
+    try {
+        invocations = executableShellInvocations(command);
+    }
+    catch {
+        return null;
+    }
+    let uses = 0;
+    let host = null;
+    for (const written of invocations) {
+        // A launch inside the bounded probe wrapper is the same launch.
+        let words = written;
+        for (let inner = boundedCommand(words); inner; inner = boundedCommand(words))
+            words = inner;
+        const script = (name, file) => npmScriptArgs(words, name) ?? nodeScriptArgs(words, file);
+        for (const [args, count] of [
+            [script("worker", /(?:^|\/)scripts\/worker\.mjs$/u), 1],
+            [script("plan", /(?:^|\/)scripts\/refute-plan\.mjs$/u), 3],
+        ]) {
+            const rest = args?.[0] === "--" ? args.slice(1) : args;
+            if (!rest || rest[0] !== "review" || rest.includes("--dry-run"))
+                continue;
+            const named = rest[rest.indexOf("--host") + 1];
+            const launched = rest.includes("--host") && (named === "claude" || named === "codex")
+                ? named
+                : "unattributed";
+            uses += count;
+            host = host === null || host === launched ? launched : "unattributed";
+        }
+    }
+    return uses && host ? { uses, host } : null;
+}
+/** What a tool call uses beyond a spawn: a re-task of an agent, or the
+ * workers a kit command launches. Both permission paths and the live-gate
+ * advisory read it from here, so they agree on what counts. */
+export function workerUse(input, tools = harnessToolEffects) {
+    const effect = tools?.[input.tool_name ?? ""];
+    if (effect === "retask")
+        return { retask: true };
+    const command = input.tool_input?.command ?? input.tool_input?.cmd;
+    const kit = effect === "shell" && typeof command === "string"
+        ? kitWorkerLaunch(command)
+        : null;
+    return kit ? { kit } : {};
 }
 /** A dispatch gets its own budget anchor while session observations retain
  * their original lifetime. Repeating an unfinished phase cannot reset it. */
@@ -3659,8 +3738,36 @@ function feedbackRefusalReason(error, facts, root) {
             : "") +
         ". Read all ranges of each file. For oversized lines, run node scripts/harness.mjs read-output <path> --offset 0 --length 8192 and continue at nextOffset until totalBytes.");
 }
+function desktopControlResponse(event, input, root) {
+    if (!isDesktopControlTool(input.tool_name ?? "", input.tool_input))
+        return null;
+    let on = false;
+    let unavailable;
+    try {
+        const { readFeatures } = createRequire(import.meta.url)(join(root, "scripts/lib/config.mjs"));
+        on = readFeatures(root)["desktop-control"];
+    }
+    catch (error) {
+        // An unreadable election cannot establish the opt-in.
+        unavailable = (error instanceof Error ? error.message : "unknown failure")
+            .replace(/[\u0000-\u001f\u007f]+/g, " ")
+            .slice(0, 240);
+    }
+    const reason = on
+        ? "features.desktop-control is on; desktop control still requires the operator's explicit request in this session. For browser verification use the Playwright MCP in a browser the session launches, or the project's browser tests."
+        : `DOTLN_DESKTOP_CONTROL_REFUSED: desktop control and the operator's own browser sessions require features.desktop-control in dotln.config.json${unavailable !== undefined ? ` (the election could not be read: ${unavailable})` : " (off by default)"}; even when on, the operator must explicitly request their use in this session. Use the Playwright MCP in a browser the session launches: inspect its DOM/accessibility snapshot, then take and read a screenshot as an image, or use the project's browser tests.`;
+    try {
+        record(root, input, { effect: "desktop.control", desktopControl: { on } });
+    }
+    catch {
+        // Optional observation cannot change the election's verdict.
+    }
+    return on ? protocolAdvisory(reason) : protocolRefusal(event, reason);
+}
 export function permissionEffect(input, root, tools = harnessToolEffects, outsideEffect) {
     const args = input.tool_input ?? {};
+    if (isDesktopControlTool(input.tool_name ?? "", args))
+        return "desktop.control";
     const path = typeof args.file_path === "string"
         ? args.file_path
         : typeof args.notebook_path === "string"
@@ -3689,6 +3796,10 @@ export function permissionEffect(input, root, tools = harnessToolEffects, outsid
             throw new HarnessCommandRefused("Remote subagents run outside this host's guards; run the agent locally");
         return "repo.read";
     }
+    // A message to an existing agent reads and writes nothing itself; the
+    // agent's own tool calls pass these same guards.
+    if (tool === "retask")
+        return "repo.read";
     // Ending a task this session started is the session's own process control:
     // it writes no repository byte, and a gate ended this way records completed tasks as stopped, supplying no pass.
     if (tool === "stop")
@@ -4385,6 +4496,12 @@ moved) {
     assertHarnessRuntime(config, root);
     if (input.hook_event_name !== config.event || !input.session_id)
         throw new Error("Hook input contract mismatch");
+    const desktop = config.kind === "permission"
+        ? desktopControlResponse(config.event, input, root)
+        : null;
+    if (desktop?.hookSpecificOutput
+        ?.permissionDecision === "deny")
+        return desktop;
     let outside = null;
     let outsideEffect;
     try {
@@ -4412,18 +4529,20 @@ moved) {
     }
     const outsideDenied = outside?.hookSpecificOutput
         ?.permissionDecision === "deny";
-    // Away from the root only the outside-write judgment is made. The root-bound
-    // refusals keep their stand-down and its advisory (WO-144-D007 follow-up).
+    // Desktop elections and outside destinations belong to the installed
+    // instance even after cwd moves; the other root-bound checks stand down.
     if (moved !== undefined) {
         if (outsideDenied)
             return outside;
+        if (desktop)
+            return desktop;
         throw moved;
     }
     // Grant failure must not skip any existing refusal. Conversely an observer
     // or opaque permission classifier cannot erase a known destination refusal.
     let result;
     try {
-        result = await evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect);
+        result = await evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop);
     }
     catch (error) {
         if (outsideDenied)
@@ -4436,7 +4555,7 @@ moved) {
         ? result
         : (outside ?? result);
 }
-async function evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect) {
+async function evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop = null) {
     if (config.event === "SessionStart" &&
         input.hook_event_name === "SessionStart") {
         const warning = input.agent_id
@@ -4883,6 +5002,14 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                     !managedUsageCommand(input, session)))
                 return protocolRefusal(config.event, "DOTLN_ROUTER_WRITE_REFUSED: a router edits nothing and runs only reads, its driver and its usage command; its phase workers make every change.");
         }
+        // A review or refutation worker probes with single tests: a gate it
+        // started would hold the worktree's live-gate refusal against the session
+        // that launched it for the gate's whole run.
+        const workerGate = reviewWorkerGate(input, config.tools);
+        if (workerGate) {
+            record(root, input, { workerGateRefused: workerGate });
+            return protocolRefusal(config.event, workerGateRefusal(workerGate));
+        }
         // A driven worker's helper reviews beside it; only the worker changes the
         // order's worktrees. Its one write is its own session scratch.
         const drivenLane = drivenHelper(input) ? drivenWorkerContext() : null;
@@ -4895,8 +5022,12 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                 : tool === "shell" && !helperShellRead(input, root, drivenLane))
                 return protocolRefusal(config.event, `DOTLN_HARNESS_REFUSED: ${drivenHelperWrites}`);
         }
+        // Every use counts: a launch, a re-task of an agent and each worker a
+        // kit command launches.
+        const use = workerUse(input, config.tools);
+        const startsWorker = spawn || Boolean(use.retask || use.kit);
         let boundAdvisory;
-        if (startsBoundedWork(input, spawn)) {
+        if (startsBoundedWork(input, startsWorker)) {
             try {
                 const { dispatchStanding, dispatchBoundMessage, recordBoundStop } = await dispatchBounds(root);
                 const standing = dispatchStanding(root, { session: input.session_id });
@@ -4915,18 +5046,18 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                 boundAdvisory = `DotLn advisory: dispatch standing unavailable: ${error instanceof Error ? error.message : String(error)}; existing judgments remain active.`;
             }
         }
-        const admission = spawn || input.agent_id
-            ? admitSubagentTool(root, harnessStateDirectory(root), input, spawn)
+        const admission = startsWorker || input.agent_id
+            ? admitSubagentTool(root, harnessStateDirectory(root), input, spawn, use)
             : undefined;
         if (admission?.refusal)
             return protocolRefusal(config.event, admission.refusal);
-        // Charged last, so a spawn refused above costs the drive nothing.
-        const driven = admitDrivenTool(input, spawn);
+        // Charged last, so a use refused above costs the drive nothing.
+        const driven = admitDrivenTool(input, spawn, use);
         if (driven?.refusal)
             return protocolRefusal(config.event, driven.refusal);
-        const liveGates = spawn ? activeGateRuns(root) : [];
+        const liveGates = startsWorker ? activeGateRuns(root) : [];
         const gateAdvisory = liveGates.length
-            ? `DotLn advisory: spawn admitted during live gate ${liveGates.map((run) => `${run.runId} (${run.kind ?? "unknown"})`).join(", ")}; probes under node, npm and harness bounded will be refused until it ends.`
+            ? `DotLn advisory: ${spawn ? "spawn" : use.retask ? "re-task" : "kit launch"} admitted during live gate ${liveGates.map((run) => `${run.runId} (${run.kind ?? "unknown"})`).join(", ")}; probes under node, npm and harness bounded will be refused until it ends.`
             : undefined;
         if (gateAdvisory)
             record(root, input, { advisory: gateAdvisory });
@@ -4977,6 +5108,8 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
         }
         if (target?.advisory)
             record(root, input, { advisory: target.advisory });
+        if (desktop)
+            return desktop;
         const effect = permissionEffect(input, root, config.tools, outsideEffect);
         const decision = harnessAuthorization(session.correction
             ? {
@@ -5761,12 +5894,16 @@ export async function runTargetHarnessHook(config, boundary) {
                 if (config.kind === "permission") {
                     if (!config.envelope)
                         throw new Error("compiled target authority missing");
+                    const workerGate = reviewWorkerGate(input, config.tools);
+                    if (workerGate)
+                        throw new Error(workerGateRefusal(workerGate));
                     const driven = drivenWorkerContext();
+                    const use = workerUse(input, config.tools);
                     if (driven) {
                         initializeSubagentCounter(harnessStateDirectory(root), input.session_id);
-                        admitSubagentTool(driven.root, harnessStateDirectory(root), input, config.tools?.[input.tool_name ?? ""] === "spawn", { cap: null });
+                        admitSubagentTool(driven.root, harnessStateDirectory(root), input, config.tools?.[input.tool_name ?? ""] === "spawn", { cap: null, ...use });
                     }
-                    const drivenAdmission = admitDrivenTool(input, config.tools?.[input.tool_name ?? ""] === "spawn");
+                    const drivenAdmission = admitDrivenTool(input, config.tools?.[input.tool_name ?? ""] === "spawn", use);
                     if (drivenAdmission?.refusal)
                         throw new Error(drivenAdmission.refusal);
                     const orderGrant = driven
@@ -5921,7 +6058,7 @@ export async function runTargetHarnessHook(config, boundary) {
                         for (const path of paths)
                             protect(path);
                     }
-                    else if ((tool === "spawn" && !driven) ||
+                    else if (((tool === "spawn" || tool === "retask") && !driven) ||
                         tool === "interaction") {
                         throw new Error("target delegation or interaction has no bounded worker adapter");
                     }
