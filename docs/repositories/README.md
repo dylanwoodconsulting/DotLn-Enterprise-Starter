@@ -14,6 +14,14 @@ The template below is the shape the operator chose on 2026-10-30, which
 `scripts/kit/repository-profile.template.md`, and a later starter update that
 changes it reaches this file through a Git merge.
 
+Activation requires the registration's `profile` path to be a readable regular
+file inside the launchpad. A profile is a standing document: it states the
+repository as it is at the commit its `Last reviewed target source` row names.
+When the repository changes, replace the sentences that are now wrong and move
+that row forward; the history of how the repository got there lives in the
+orders and decisions that changed it (starter v0.113.0's template says the same
+with a `Current at:` field).
+
 ## Template
 
 ~~~markdown
