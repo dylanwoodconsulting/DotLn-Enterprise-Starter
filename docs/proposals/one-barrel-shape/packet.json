@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T18:54:51.745Z",
+  "sourceReceiptId": "REVIEW-002",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-002.md",
+  "operatorReason": "The packet alternative is taken: WO-027 step 7 documents the feature exception WS-001 rule 4 already gives, in conventions rule 4 and foundation-rules.md. No structural check is added.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/one-barrel-shape/",
+    "sourceEpisodeId": "ep_entropy_233ab1962fb94025",
+    "provenance": [
+      "work order wo_entropy_review_1",
+      "lens architecture-and-semantics",
+      "finding ER-F4-barrel-doctrine-split"
+    ],
+    "corroboratingEvidenceRefs": [
+      "probe:scratch projects.mjs"
+    ],
+    "dissentingEvidenceRefs": [
+      "docs/dev-reference/architecture/sub-apps.md:26-27 (direct export may be the intended feature shape)"
+    ],
+    "suggestion": {
+      "suggestionId": "one-barrel-shape",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2) via claude-opus-5-5",
+      "problemOrOpportunity": "Two documented barrel shapes coexist: three feature libraries export routes directly, while rule 4 requires a public_api re-export.",
+      "scope": "The operator picks one shape for feature entry points. Align conventions rule 4, foundation-rules.md and sub-apps.md, and add a structural check of each project's src/index.ts to workspace-tools:lint.",
+      "evidenceRefs": [
+        "docs/dev-reference/workspace/conventions.md:57-58",
+        "libs/features/board/src/index.ts:1"
+      ],
+      "affectedUsers": [
+        "coding sessions adding libraries"
+      ],
+      "affectedSystems": [
+        "libs/features/*",
+        "workspace-tools:lint"
+      ],
+      "expectedValue": "New libraries copy one enforced shape.",
+      "altitude": 5,
+      "uncertainty": "Features may intentionally be an exception; this may be purely a documentation reconciliation.",
+      "risks": [
+        "Churn in three libraries",
+        "check-bundle.mjs keys on the tools index.ts entry point"
+      ],
+      "alternatives": [
+        "Document a feature exception in rule 4"
+      ],
+      "duplicationHints": [],
+      "urgencyRationale": "Low; the next sub-app will copy one of the two shapes."
+    }
+  },
+  "deliveredBy": {
+    "workOrderId": "WO-027",
+    "release": null,
+    "recordedAt": "2026-11-03T18:54:51.745Z"
+  }
+}

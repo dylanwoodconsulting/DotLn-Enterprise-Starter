@@ -341,7 +341,23 @@ classification: minor` and `Target release notes: reviewed` are set under
 WO-012's declared policy. The 2026-11-03 Entropy Reducer pass assigns
 FUP-9a1ea6db27a8f371 to this order's launchpad write-back: core WO-252's
 declaration support has shipped. WO-023-D002 records the bounded change and
-why it shares this order rather than opening a separate lifecycle.
+why it shares this order rather than opening a separate lifecycle. The same
+pass assigns REVIEW-002's ER-F5 to this order as a bounded cleanup inside
+`libs/shared/catalog`, which this order already edits: remove the `tool-v0`
+compatibility reader from `catalog-loader.ts` (six references at `55b59c9`),
+the fake-loader branch of its spec that is the reader's only exercise, and
+every standing promise of that one-release support: the sentence in
+conventions rule 23, the paragraph at `catalog.md` §Loader ("accepts
+tool-v0 for one compatibility release") and the rule in
+`docs/ai-reference/catalog-rules.md` that names the compatibility release.
+v0.4.0 shipped eight `tool-v0` data files; v0.5.0 was the one compatibility
+release the reader was promised for, and no release from v0.5.0 to v0.9.0
+ships `tool-v0` data, so the reader has outlived its window by four releases. The removal is checked by
+`grep -c tool-v0 libs/shared/catalog/src/lib/catalog-loader.ts
+docs/dev-reference/architecture/catalog.md docs/ai-reference/catalog-rules.md
+docs/dev-reference/workspace/conventions.md` printing 0 for each file and the
+existing catalog specs passing, and it is recorded in this order's decisions;
+it adds no criterion.
 
 **Non-goals:** refactoring the app's stores or data access toward a pattern;
 a database or API dependency; the remaining patterns; the general search

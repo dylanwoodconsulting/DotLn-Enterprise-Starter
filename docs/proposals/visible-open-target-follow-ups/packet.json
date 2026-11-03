@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T18:54:51.153Z",
+  "sourceReceiptId": "REVIEW-002",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-002.md",
+  "operatorReason": "WO-027 step 2 widens the board gauge to every tracked text file outside docs/. The closure-state half of the packet is not taken: the launchpad register is the follow-up state.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/visible-open-target-follow-ups/",
+    "sourceEpisodeId": "ep_entropy_233ab1962fb94025",
+    "provenance": [
+      "work order wo_entropy_review_1",
+      "subject 233ab1962fb9402553febb1fdb766ae6669fb42c92b21a307bfe2273e5629b55 at 55b59c9",
+      "lens architecture-and-semantics",
+      "findings ER-F1-board-gauge-blind, ER-F5-v0-shim-outlived-window"
+    ],
+    "corroboratingEvidenceRefs": [
+      "probe:scratch drill-boards",
+      "docs/dotln/evidence/WO-004/decisions.md#WO-004-D010"
+    ],
+    "dissentingEvidenceRefs": [
+      "docs/dotln/evidence/WO-015/decisions.md#WO-015-D022 (a launchpad follow-up register exists outside this repository)"
+    ],
+    "suggestion": {
+      "suggestionId": "visible-open-target-follow-ups",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2) via claude-opus-5-5",
+      "problemOrOpportunity": "The broken-windows gauge that CI prints reads 0 while target follow-ups remain open. Follow-ups live only as decision JSON with no closure state, and the gauge cannot see tools/, .github/ or configuration.",
+      "scope": "Widen tools/board-count.mjs to every tracked text file outside docs/, using comment syntax for YAML and MJS. Clarify in rule 21 that a follow-up which boards a target defect, or a temporary shim such as the tool-v0 reader, adds a marker at the defect's site. Record bytes stay unchanged.",
+      "evidenceRefs": [
+        "tools/board-count.mjs:24-25",
+        "docs/dev-reference/workspace/conventions.md:227-232",
+        "libs/shared/catalog/src/lib/catalog-loader.ts:158-160"
+      ],
+      "affectedUsers": [
+        "operator",
+        "coding sessions",
+        "contributors reading CI output"
+      ],
+      "affectedSystems": [
+        "tools/board-count.mjs",
+        "CI checks job",
+        "conventions rule 21"
+      ],
+      "expectedValue": "CI's board count becomes a true count of open target defects, and closure becomes observable as a marker's removal.",
+      "altitude": 6,
+      "uncertainty": "Only 6 of the 77 follow-ups were spot-checked. Many are launchpad-side planning items that should not be boarded in target code, and the launchpad register may already serve the operator.",
+      "risks": [
+        "Marker noise if planning items get boarded",
+        "JSON files cannot carry comments"
+      ],
+      "alternatives": [
+        "Generate an in-repo open-follow-up index from the launchpad register at filing",
+        "Treat the launchpad register as the board and narrow rule 21's wording"
+      ],
+      "duplicationHints": [
+        "WO-004-D010",
+        "launchpad follow-up register named in WO-015-D022"
+      ],
+      "urgencyRationale": "This is the evidenced constraint: a settled rule's only gauge currently misleads, and each new boarded follow-up widens the gap."
+    }
+  },
+  "deliveredBy": {
+    "workOrderId": "WO-027",
+    "release": null,
+    "recordedAt": "2026-11-03T18:54:51.153Z"
+  }
+}

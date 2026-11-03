@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T18:54:51.973Z",
+  "sourceReceiptId": "REVIEW-002",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-002.md",
+  "operatorReason": "WO-027 steps 8, 9 and 10: the inline doctrine rule and named launchpad path in catalog.md, the docs/dotln row, and the Angular cache paragraph in conventions rule 2.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/standing-docs-reachable-sources/",
+    "sourceEpisodeId": "ep_entropy_233ab1962fb94025",
+    "provenance": [
+      "work order wo_entropy_review_1",
+      "lens documents-and-readers",
+      "findings ER-F6-standing-doc-unreachable-pointers, ER-F7-records-cite-absent-evidence, ER-F8-live-rationale-in-dated-log"
+    ],
+    "corroboratingEvidenceRefs": [
+      "probe:scratch links.mjs",
+      "probe:scratch reach.mjs"
+    ],
+    "dissentingEvidenceRefs": [],
+    "suggestion": {
+      "suggestionId": "standing-docs-reachable-sources",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2) via claude-opus-5-5",
+      "problemOrOpportunity": "Standing documents point to launchpad paths that cannot be reached from here, keep a live setting's rationale only in a dated log, and index the records without saying where their links resolve.",
+      "scope": "Replace catalog.md's bare launchpad pointers with pinned URLs or the current rule stated inline. Move dated process narration into the records. Have the docs/dotln row say that relative links resolve in the launchpad. Have conventions rule 2 state the Angular cache tradeoff.",
+      "evidenceRefs": [
+        "docs/dev-reference/architecture/catalog.md:219-220",
+        "docs/dev-reference/README.md:71",
+        "nx.json:79-83"
+      ],
+      "affectedUsers": [
+        "people reading the dev reference",
+        "coding sessions"
+      ],
+      "affectedSystems": [
+        "docs/dev-reference"
+      ],
+      "expectedValue": "Every standing pointer resolves, and a configuration change is preceded by its rationale.",
+      "altitude": 6,
+      "uncertainty": "Concept-study doctrine may deliberately live in the platform; pinning it could freeze a moving direction.",
+      "risks": [
+        "Pinned URLs go stale against platform edits"
+      ],
+      "alternatives": [
+        "Inline a short summary of the study doctrine"
+      ],
+      "duplicationHints": [
+        "WO-026-D011 (relative-link check)",
+        "WO-005-D013",
+        "WO-019-D032"
+      ],
+      "urgencyRationale": "Low; this is reader friction rather than defect risk."
+    }
+  },
+  "deliveredBy": {
+    "workOrderId": "WO-027",
+    "release": null,
+    "recordedAt": "2026-11-03T18:54:51.973Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T18:54:51.520Z",
+  "sourceReceiptId": "REVIEW-002",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-002.md",
+  "operatorReason": "WO-027 steps 3 and 4: the check:scripts negative controls run in the gate through the tools test. The optional typecheck:foundations control and calling the taxonomy fixtures from test:tooling are left out under rule 26 until a vacuous check is observed.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/negative-controls-for-gate-checks/",
+    "sourceEpisodeId": "ep_entropy_233ab1962fb94025",
+    "provenance": [
+      "work order wo_entropy_review_1",
+      "lens verification-and-evidence",
+      "finding ER-F3-gate-checks-without-negative-control"
+    ],
+    "corroboratingEvidenceRefs": [
+      "probe:scratch drill-scripts"
+    ],
+    "dissentingEvidenceRefs": [
+      "tools/check-taxonomy-fixtures.mjs:143-155 (controls exist under lint:fixtures)"
+    ],
+    "suggestion": {
+      "suggestionId": "negative-controls-for-gate-checks",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2) via claude-opus-5-5",
+      "problemOrOpportunity": "check:scripts and typecheck:foundations have no negative control anywhere, and check:scripts passes with a deleted row and a stale row.",
+      "scope": "Add tools/*.test.mjs cases in which check:scripts fails on a removed row and on a stale row, and typecheck:foundations fails on a mistyped fixture. Optionally call the existing pure checkComponentOrder and checkSharedTypes fixtures from test:tooling; whether to do so is the operator's call under the 2026-10-28 tooling cuts.",
+      "evidenceRefs": [
+        "tools/scripts/check-script-reference.mjs:3-12",
+        "docs/dev-reference/workspace/scripts.md:43"
+      ],
+      "affectedUsers": [
+        "coding sessions",
+        "operator"
+      ],
+      "affectedSystems": [
+        "tools/*.test.mjs",
+        "workspace-tools:lint"
+      ],
+      "expectedValue": "A check that silently goes vacuous fails in the gate instead of passing forever.",
+      "altitude": 8,
+      "uncertainty": "Stale-row detection needs table parsing, and a type-check negative control may be slow.",
+      "risks": [
+        "Longer test:tooling runtime",
+        "May overlap the operator's decision to keep lint:fixtures a helper (WO-019-D027)"
+      ],
+      "alternatives": [
+        "Run lint:fixtures in CI only",
+        "Accept the risk"
+      ],
+      "duplicationHints": [
+        "WO-026-D011 (check:scripts scope, a separate question)",
+        "WO-005-D011"
+      ],
+      "urgencyRationale": "Low to moderate: no regression has been observed, but the failure mode is silent."
+    }
+  },
+  "deliveredBy": {
+    "workOrderId": "WO-027",
+    "release": null,
+    "recordedAt": "2026-11-03T18:54:51.520Z"
+  }
+}
