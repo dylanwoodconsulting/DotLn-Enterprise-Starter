@@ -6,8 +6,6 @@ Two entries between blank lines are a lane pair; the entries after the last
 pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
-- WO-022 — Concept studies III: the messaging patterns
-
 - WO-023 — Concept studies IV: the enterprise application patterns
 - WO-024 — Concept studies V: levels, loops and teams
 

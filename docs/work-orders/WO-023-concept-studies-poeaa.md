@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 6268de9fc3cae84bf66091c1fbcc30d344411cd2
+**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/poeaa/` (twenty records), the
@@ -13,7 +13,9 @@
 the executable TypeScript models and specs the records name under
 `libs/features/tools/src/lib/studies/poeaa/`, one coverage row and one rule,
 about 40 source files plus twenty data records; adds no runtime dependency.
-Removes nothing. Wall-clock: about 6 to 10 hours of executor work, of which
+The launchpad write-back replaces the class's explicit node_modules roots with
+the released `**/node_modules` declaration and updates the profile; it deletes
+no output during execution. Wall-clock: about 6 h 0 min to 10 h 0 min of executor work, of which
 the fan-out runs in parallel, plus the fixed cycle; unknown until run.
 Context bytes: the study record, check, families and rules as the
 target's `main` leaves them at activation (WO-020's, with WO-021's and
@@ -39,9 +41,8 @@ WO-020 to WO-024. Planner-synthesized by the 2026-10-30 second planning pass
 ([planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
-composite, the addressable route and the fan-out procedure; the base above is
-provisional and publishes right under starter v0.96.1's merge-base publish; a
-pass may set it to WO-020's merge commit).
+composite, the addressable route and the fan-out procedure). The base above is
+WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -49,7 +50,7 @@ pass may set it to WO-020's merge commit).
   {
     "workOrderId": "WO-020",
     "relation": "hard",
-    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; the base line is provisional and publishes right under starter v0.96.1's merge-base publish"
+    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -132,7 +133,9 @@ family exists.
   Plugin, `poeaa:226` Service Layer, `poeaa:278` Foreign Key Mapping,
   `poeaa:448` Service Stub, `poeaa:330` Page Controller. One recorded
   substitution under the rule is admitted as in WO-020.
-- **The fan-out**: WO-020's procedure, at most twelve workers, with the
+- **The fan-out**: WO-020's authoring and critic procedure, with the
+  [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-concept-study-workers)
+  declared before any worker starts, at most twelve initial author/critic launches, with the
   factual critic also running each model's spec and checking that every
   "where the app embodies it" sentence names a file that exists at the base
   and reads as the author's reading.
@@ -175,11 +178,12 @@ the design record.
    360; the rounds; the rejected implementation removed with its record.
    Check: `grep -c "Round" docs/evidence/WO-023/design/comparisons.md` is at
    least 1.
-4. The authors' brief with the embodiment rule into `fan-out.md`; dispatch
+4. Record the stop figure and the launch/re-task budget in `fan-out.md` as the
+   profile directs. The authors' brief with the embodiment rule goes there; dispatch
    the ten authors; merge the twenty drafts. Check: `npx nx test tools` exits
    0 over the models' specs.
 5. Dispatch the two critics; dispose the findings; rewrite through the same
-   authors; set `checked`. Check: `npm run studies:check` exits 0 over
+   authors or apply the bounded corrections in the parent under the profile; set `checked`. Check: `npm run studies:check` exits 0 over
    `studies/poeaa/`.
 6. The link check into `docs/evidence/WO-023/README.md`. Check: every URL has
    a status.
@@ -198,7 +202,17 @@ the design record.
     nothing; the chunk sizes recorded.
 11. Gate plain and review. Check: passing rows, no tracked-byte mutation.
 12. Launchpad write-back (the profile's implementation map names the `states`
-    family; WS-001's delivery states by the final review); then the publish,
+    family; WS-001's delivery states by the final review). In the launchpad
+    order worktree, replace the seventeen nested node_modules declarations
+    and the redundant root node_modules declaration in
+    `dotln.config.json` `classes.angular-nx-monorepo.disposable` with
+    `**/node_modules`, supported since starter v0.112.0. Preserve every other
+    declaration, the registration's judge-only policy, ignored-only selection,
+    tracked-file and filesystem refusals, and journal retention. Update the
+    profile's effective list and its literal-path explanation to distinguish
+    this pattern. Preserve the closed WO-021/WO-022 evidence and historical
+    exact-root assertions. Record the probe below in `cleanup-declaration.md`;
+    no deletion or target writer is part of this write-back. Then the publish,
     review and records steps as WO-007 steps 15 to 17, with the branch
     `feat/poeaa-concept-studies`, the title `feat: add concept studies for
     the enterprise application patterns`, `docs/evidence/WO-023/` and
@@ -268,15 +282,42 @@ each.
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
    line ran before the first full gate.
+10. The launchpad's effective `dotln-angular` disposable policy matches a
+    root or arbitrarily nested node_modules directory, while a source path
+    and a similarly named directory remain unmatched. In the launchpad order
+    worktree, the following non-deleting probe exits 0; the profile's
+    cleanup section describes the effective declaration and unchanged safety
+    boundaries. `cleanup-declaration.md` records its output and the config diff
+    showing that unrelated declarations and the judge-only policy remain intact.
+
+    ```sh
+    node scripts/harness.mjs bounded -- node --input-type=module --eval '
+    import assert from "node:assert/strict";
+    import { loadConfig } from "./scripts/lib/config.mjs";
+    import { disposableMatchRoot } from "./scripts/lib/target-worktree-close.mjs";
+    const policy = loadConfig(process.cwd()).repositories["dotln-angular"];
+    assert.equal(policy.baseDisposablePolicy, "judge-only");
+    assert.ok(policy.disposable.includes("**/node_modules"));
+    assert.equal(policy.disposable.some(p => p === "node_modules" || p.endsWith("/node_modules") && p !== "**/node_modules"), false);
+    for (const [path, expected] of [
+      ["node_modules/package/index.js", "node_modules"],
+      ["libs/future/deep/project/node_modules/.vite/results.json", "libs/future/deep/project/node_modules"],
+      ["libs/future/deep/project/src/index.ts", null],
+      ["libs/future/node_modules-backup/index.js", null],
+    ]) assert.equal(disposableMatchRoot("**/node_modules", path), expected);
+    console.log("cleanup declaration matches dependencies and excludes source");
+    '
+    ```
 
 **Evidence gate:** the gate rows, the recorded command outputs,
 `docs/evidence/WO-023/README.md`, `fan-out.md`, `review.md`,
 `walkthrough.md` and its screenshots, `design/`, and
-`docs/evidence/WO-023/host-qualification.md`.
+`docs/evidence/WO-023/host-qualification.md`; the launchpad's
+`docs/evidence/WO-023/cleanup-declaration.md`.
 
-**Known issues and carry-ins:** The base line is provisional and publishes
-right under starter v0.96.1's merge-base publish; a pass may set it to
-WO-020's merge commit. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The 2026-11-03 pass sets the base to WO-022's
+merge, released as v0.9.0. Step 1 still integrates the target's current main
+and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that may mark `executable: null`, because a conditional
@@ -293,7 +334,10 @@ whose starter carries core WO-221's `--draft` form; the draft pull request and
 its workflow runs are a final-review obligation read from
 `docs/evidence/WO-023/preview-pr.json`, never a criterion. `Target release
 classification: minor` and `Target release notes: reviewed` are set under
-WO-012's declared policy.
+WO-012's declared policy. The 2026-11-03 Entropy Reducer pass assigns
+FUP-9a1ea6db27a8f371 to this order's launchpad write-back: core WO-252's
+declaration support has shipped. WO-023-D002 records the bounded change and
+why it shares this order rather than opening a separate lifecycle.
 
 **Non-goals:** refactoring the app's stores or data access toward a pattern;
 a database or API dependency; the remaining patterns; the general search

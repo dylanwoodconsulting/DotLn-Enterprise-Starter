@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T17:03:53.884Z",
+  "sourceReceiptId": "REVIEW-001",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-001.md",
+  "operatorReason": "Take the packet's planning-amendment alternative now in WO-023/WO-024 and the shared profile. The automatic general meter is a core request, not a new local launcher. The pass records its NoOp and reopening condition.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/fan-out-spend-stop-meter/",
+    "sourceEpisodeId": "ep_entropy_08baac7f6d7d3051",
+    "provenance": [
+      "Entropy Reducer review episode ep_entropy_08baac7f6d7d3051 at base 06908c79ab3ba9eb95315be1c068875ad4c5557b",
+      "finding ER-RUN-01 (measured)"
+    ],
+    "corroboratingEvidenceRefs": [
+      "docs/evidence/WO-022/handoff.md:28-30",
+      "docs/evidence/WO-022/host-qualification.md:36-39"
+    ],
+    "dissentingEvidenceRefs": [
+      "docs/evidence/WO-020/fan-out.md:12-14"
+    ],
+    "suggestion": {
+      "suggestionId": "fan-out-spend-stop-meter",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2), claude-opus-5-5",
+      "problemOrOpportunity": "The concept-study fan-out's token stop exists only in order prose and is checked by hand. WO-022 passed it without declaring it, and the figure it meters is mostly the root session's cached re-reads.",
+      "scope": "Instance: a tracked launchpad script, or a planning-pass amendment of WO-023/WO-024's fan-out step, that requires the stop figure before the first worker launch, reads `node scripts/harness.mjs usage` at each launch, prints the recorded-decision line once the figure is crossed, and reports worker spend separately from the session's own reading. The stop figure itself is unchanged and remains the operator's.",
+      "evidenceRefs": [
+        "docs/work-orders/WO-020-concept-studies-movement.md:257-260",
+        "docs/evidence/WO-022/fan-out.md:515-528",
+        "docs/control/budgets.json:14"
+      ],
+      "affectedUsers": [
+        "operator",
+        "executor sessions on concept-study orders"
+      ],
+      "affectedSystems": [
+        "WO-020 fan-out procedure",
+        "WO-023",
+        "WO-024",
+        "harness usage readings"
+      ],
+      "expectedValue": "The next lane pair cannot pass its stop silently, and the operator sees worker spend against the figure instead of cached re-reads.",
+      "altitude": 8,
+      "uncertainty": "It is unclear whether harness usage can attribute Codex worker tokens without the launcher's own capture, and whether the operator wants a stop at all, given that they lifted it for WO-020 (D012).",
+      "risks": [
+        "A refusal mid-fan-out could strand half-authored records; the meter should stop new launches, not kill running workers.",
+        "Setting budgets.json tokens would change a planning-owned setting; this suggestion does not."
+      ],
+      "alternatives": [
+        "Have the activation decisions declare the stop, backed by a handoff checklist line (prose only: cheaper, weaker).",
+        "Ask core for a kit-level fan-out meter."
+      ],
+      "duplicationHints": [
+        "WO-022-D023 and WO-022-D028",
+        "WO-020-D004 and WO-020-D012",
+        "target-order-worker-route shares the launcher surface"
+      ],
+      "urgencyRationale": "WO-023 and WO-024 are next in the sequence as a lane pair, and both reuse WO-020's procedure."
+    }
+  }
+}

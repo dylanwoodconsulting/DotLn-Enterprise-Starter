@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T17:03:54.063Z",
+  "sourceReceiptId": "REVIEW-001",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-001.md",
+  "operatorReason": "Take the upstream target-aware helper request and document the working native-worker route now. Decline the alternative instance launcher to avoid duplicating the kit's authority, accounting and retention machinery.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/target-order-worker-route/",
+    "sourceEpisodeId": "ep_entropy_08baac7f6d7d3051",
+    "provenance": [
+      "Entropy Reducer review episode ep_entropy_08baac7f6d7d3051 at base 06908c79ab3ba9eb95315be1c068875ad4c5557b",
+      "finding ER-RUN-02 (measured)"
+    ],
+    "corroboratingEvidenceRefs": [
+      "docs/evidence/WO-020/handoff.md:30-34",
+      "docs/evidence/WO-022/review.md:145-151"
+    ],
+    "dissentingEvidenceRefs": [
+      "docs/evidence/WO-021/self-review.md:3-6"
+    ],
+    "suggestion": {
+      "suggestionId": "target-order-worker-route",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2), claude-opus-5-5",
+      "problemOrOpportunity": "The kit's only Codex launch route reviews the launchpad checkout, so target orders launch Codex workers through ad hoc launchers. Those workers sit outside the subagent cap and the journal, run without the read-only sandbox, and leave no retained review reports.",
+      "scope": "Route upstream: ask core for a target-worktree mode on `npm run worker -- review` that keeps its read-only sandbox, WorkerLaunched row and review lane. Interim instance option: one tracked launcher with the same pins that records each launch. The operator's Codex direction (D003, D007) is unchanged.",
+      "evidenceRefs": [
+        "scripts/lib/review-worker.mjs:104-132",
+        "scripts/lib/review-worker.mjs:598",
+        "docs/product/07-execution-guide.md:3144-3182",
+        "docs/evidence/WO-022/host-qualification.md:21-32"
+      ],
+      "affectedUsers": [
+        "operator",
+        "executors on target orders",
+        "verifiers reading review rounds"
+      ],
+      "affectedSystems": [
+        "scripts/lib/review-worker.mjs (kit)",
+        "subagentCap accounting",
+        "docs/control/local/reviews lane"
+      ],
+      "expectedValue": "Codex reviewers on target orders run read-only, count toward the cap, and leave reports the verifier can read, with no per-order launcher qualification.",
+      "altitude": 5,
+      "uncertainty": "It is unknown whether core already plans a target mode, and whether authoring workers, which must write their own copies, fit a review route at all.",
+      "risks": [
+        "A tracked instance launcher forks behavior from the kit and must be retired once core ships a route.",
+        "Read confinement for Codex is a sandbox property that a launcher cannot add."
+      ],
+      "alternatives": [
+        "Use the hook-observed Agent-tool dotln-worker route for target-order reviewers, as WO-021 did.",
+        "State in the repository profile that Codex workers on target orders are outside the cap and the journal."
+      ],
+      "duplicationHints": [
+        "fan-out-spend-stop-meter shares the launcher",
+        "WO-020-D003; WO-022-D007"
+      ],
+      "urgencyRationale": "The next two dispatches (WO-023, WO-024) reuse the fan-out that ran these launchers."
+    }
+  }
+}

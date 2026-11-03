@@ -691,7 +691,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-026 DotLn-Angular's documents | nothing on screen; the README, the developer reference, the AI reference and the library READMEs read as what is so | merged; DotLn-Angular #10, `DotLn Angular v0.6.1` |
 | WO-020 the movement studies | twenty studied concepts in AI for Games, each a study with a stepped drawing, pseudocode, references, limits and nearby concepts; studied marks on the shelf and in the contents; readings that Back and a shared link return to | merged; DotLn-Angular #11, `DotLn Angular v0.7.0` |
 | WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | merged; DotLn-Angular #12, `DotLn Angular v0.8.0` |
-| WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | final-reviewed; DotLn-Angular #13 ready for the operator's merge |
+| WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | merged; DotLn-Angular #13, `DotLn Angular v0.9.0` |
 | WO-023 the enterprise pattern studies | twenty patterns with state drawings and small executable models, and where the app embodies each | filed |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
 | WO-016 the machinery view | one order's agents in their slots over the six-field copies; a mechanism change dropped on an agent; ideas saved | filed |
@@ -751,7 +751,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-026 | merged   | DotLn-Angular #10, `DotLn Angular v0.6.1`, its records #44; [evidence](../evidence/WO-026/README.md) |
 | WO-020 | merged   | DotLn-Angular #11, `DotLn Angular v0.7.0`, its records #45; [evidence](../evidence/WO-020/README.md) |
 | WO-021 | merged   | DotLn-Angular #12, `DotLn Angular v0.8.0`, its records #48; [evidence](../evidence/WO-021/README.md) |
-| WO-022 | final-reviewed | DotLn-Angular #13 on `feat/eip-concept-studies`, opened as a draft after verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-022/README.md) |
+| WO-022 | merged | DotLn-Angular #13, `DotLn Angular v0.9.0`, its records #50; [evidence](../evidence/WO-022/README.md) |
 | WO-023 | filed    | [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
 

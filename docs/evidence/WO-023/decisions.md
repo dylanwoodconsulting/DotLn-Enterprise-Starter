@@ -27,3 +27,54 @@
   "reopenWhen": "The next planning pass's refutation judges this text, or a verifier or reviewer of this order reports a clause the amendment wrote as unjudgeable or wrong."
 }
 ```
+
+## WO-023-D002
+
+```json
+{
+  "id": "WO-023-D002",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Allocate FUP-9a1ea6db27a8f371 to this order's launchpad write-back: replace the seventeen nested and one root node_modules declarations with **/node_modules, preserve the other disposable entries and safety boundaries, and update the profile from the effective policy. The new criterion uses a non-deleting candidate probe. Implementation remains for this order's authorized execution; this pass changes documents only and independently refutes the amended order.",
+  "evidence": [
+    "The 2026-11-01 pass deferred the change until the starter carried any-depth declarations; v0.112.0 carries core WO-252.",
+    "Core's 2026-11-01 reply, received 2026-11-03 at ignored intake SHA-256 01845ef3adb212ae6bab120a0dc818cdde1aa1102d36cc4368f48690d2055180, first block item 3 confirms the released direction and the existing exact declarations as the working route until it ships.",
+    "scripts/lib/target-worktree-close.mjs exports disposableMatchRoot; scripts/lib/config.mjs composes the class declaration into the registration; dotln.config.json carries seventeen nested and one root node_modules entries.",
+    "The sequence places WO-023 in the next batch pair; its launchpad write-back already changes the same repository profile. Closed WO-021/WO-022 records remain historical evidence.",
+    "The same pass sets this order's provisional Repository pin to WO-022 merge 55b59c9133056c1d6471274a9676a7d5649196ac, confirmed as release v0.9.0; the ancestor guard and integration at activation remain. The preceding pass D11 deferred that refresh to the pass before activation."
+  ],
+  "rejected": [
+    {"option": "Change root configuration on the planning branch", "reason": "The pass is document-only; the implementation belongs in an order worktree."},
+    {"option": "A separate self order for the declaration", "reason": "The bounded configuration and profile change shares the next order's existing launchpad checks and adds no separate critical-path lifecycle."},
+    {"option": "Leave every future Vite project requiring another exact declaration", "reason": "The recorded release condition has occurred and the new pattern removes that repeated close-maintenance obligation without weakening ignored-only selection."}
+  ],
+  "reopenWhen": "A candidate probe shows that the pattern admits a non-node_modules source path, a future close refuses an undeclared output outside node_modules, or core changes the pattern semantics."
+}
+```
+
+## WO-023-D003
+
+```json
+{
+  "id": "WO-023-D003",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Make the inherited fan-out stop explicit before the first launch and check its rollup at each launch or re-task; apply current use accounting and reserve the independent review ladder. Read the shared profile section instead of duplicating a launcher. A prior order-specific stop lift does not carry forward. Target-code reviewers receive the actual target identity; a launchpad-only helper result cannot claim that review.",
+  "evidence": [
+    "REVIEW-001 ER-RUN-01 and ER-RUN-02 nominate the concern; the parent read the bound WO-020-D004/D012 and WO-022-D023/D028, the filed fan-out and host qualification, and the shipped review-worker subject/diff construction.",
+    "WO-022 fan-out records 277,506,825 combined tokens before the missing stop was corrected; its D028 applied 117,733,609 and stopped further workers. The current kit counts re-tasks as uses.",
+    "The profile section Run concept-study workers carries the current procedure; this pass adds no launcher, budget increase, enforcement claim or retrospective evidence rewrite."
+  ],
+  "rejected": [
+    {
+      "option": "Treat unavailable WO-014 metadata or WO-020-specific permission as no stop for this order",
+      "reason": "The bound decisions preserve the recorded fallback figure and scope of the exception."
+    },
+    {
+      "option": "Require every textual critic correction to start another author",
+      "reason": "The parent may make bounded corrections and retain the independent critic coverage while respecting the use budget."
+    }
+  ],
+  "reopenWhen": "A later order crosses the stop without declaring it, cannot attribute the observed usage, or core delivers a target-aware worker route and boundary meter."
+}
+```

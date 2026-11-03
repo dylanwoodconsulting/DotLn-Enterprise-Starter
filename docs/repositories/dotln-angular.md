@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `c0e5a36008828ec5b742d6e740efff619f3cedbe`, WO-021's merge (#12), 2026-11-01 |
-| Latest target release | `DotLn Angular v0.8.0`, published 2026-11-01 from that merge |
+| Last reviewed target source | `55b59c9133056c1d6471274a9676a7d5649196ac`, WO-022's merge (#13), 2026-11-01 |
+| Latest target release | `DotLn Angular v0.9.0`, published 2026-11-01 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -155,6 +155,47 @@ optimized `mocked` build instead. An absolute cache path would keep both at the 
 of machine-specific configuration. Reopen this choice when Angular supports a
 portable worktree-local cache setting or when dev-server rebuild time becomes a
 concern.
+
+### Run concept-study workers
+
+WO-023 and WO-024 reuse WO-020's authoring and critic procedure. Before the first
+worker starts, record the token stop in the activation decisions and `fan-out.md`:
+use WO-014's order total from `npm run meta` when available; otherwise use the
+recorded 117,733,609 from WO-020-D004. WO-020-D012 lifted it for WO-020 alone;
+that exception does not travel to another order. The
+[2026-11-03 planning pass](../planning/entropy-reducer-2026-11-03.md) records this
+clarification from WO-022-D023/D028 and its [fan-out evidence](../evidence/WO-022/fan-out.md#tokens-against-the-stop-figure).
+
+Before every launch or re-task, read the current session's harness usage and
+update the rollup with each worker's latest cumulative reading, including the
+independent reviewers. Count each worker once at its latest reading; distinguish
+parent cached input, other parent tokens and worker tokens, name their source
+and cutoff, and disclose unavailable or overlapping counters. A known subtotal
+already above the stop is enough to stop further worker launches. Preserve
+returned work and allow already-running workers to return; record the stop and
+seek a scoped operator extension only if more workers are needed. An unavailable
+counter is unknown, not zero or an automatic extension. No spend is represented
+as money without a money counter.
+
+The subagent cap is separate: every launch, continuation message, resumed
+worker and kit launch consumes a use under the current kit. The initial ten
+authors and two critics consume twelve; reserve the execution's independent
+review ladder before allocating author re-tasks. The parent can apply a
+critic's bounded corrections itself and records who changed what; a record
+becomes checked only after the required factual and reading judgments cover
+its current contents. Keep a manual total for launches the host cannot observe,
+including descendants; do not interpret a smaller observed counter as spare
+capacity. Workers start no test-runner gate.
+
+At starter v0.112.0, the kit's `worker review` helper binds its diff and tree to
+the launchpad checkout. Use it for launchpad changes; it is not evidence of a
+target-code review. For target code, use the host's native fresh DotLn worker
+route with a brief naming the target path, base and candidate, read-only duties,
+and the pinned model and effort. Retain the returned report in the order's
+review evidence with that target identity and account for its use. A Codex CLI
+bridge requested by the operator needs its actual read-only sandbox, usage and
+report retention demonstrated; an old workspace-write launcher is not that
+qualification. Core owns adding a target-aware mode to the kit helper.
 
 ## Find the implementation
 
@@ -545,6 +586,7 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.6.1` | WO-026 | #10 | `eb9eeec80eec0cfacbd973351222cab39fdc7919` | 2026-10-31T19:15:55Z |
 | `DotLn Angular v0.7.0` | WO-020 | #11 | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` | 2026-11-01T00:54:57Z |
 | `DotLn Angular v0.8.0` | WO-021 | #12 | `c0e5a36008828ec5b742d6e740efff619f3cedbe` | 2026-11-01T09:35:01Z |
+| `DotLn Angular v0.9.0` | WO-022 | #13 | `55b59c9133056c1d6471274a9676a7d5649196ac` | 2026-11-01T19:43:12Z |
 
 | Area | Order |
 | --- | --- |

@@ -510,6 +510,14 @@
           "reopenWhen": "A pull request from a fork is opened against DotLn-Angular, or an order edits .github/workflows/pr-title.yml.",
           "targets": [],
           "at": "2026-10-18T16:52:05.168Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The target has no open pull request and this pass edits no title workflow. WO-004-D010 remains the recorded fork-PR case, with no new host observation.",
+          "reopenWhen": "A fork PR opens against DotLn-Angular or an order edits its title workflow.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.477Z"
         }
       ]
     },
@@ -684,6 +692,14 @@
           "reopenWhen": "A hook-admitted target publish is denied by the host classifier, a starter release carries core's WO-246, or the operator asks for the trust entry.",
           "targets": [],
           "at": "2026-11-01T01:58:33.040Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The present update push and PR creation were admitted. Core WO-246 owns the launchpad publish-helper route; this pass has neither a new host denial nor an operator direction to change host settings.",
+          "reopenWhen": "A hook-admitted publish is denied by the host classifier, WO-246 ships, or the operator asks for the trust entry.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.395Z"
         }
       ]
     },
@@ -1109,6 +1125,14 @@
           "reopenWhen": "The next planning pass allocates structural-inspector hardening, or a listed bypass form appears in production/spec source; repair the latter before relying on that check.",
           "targets": [],
           "at": "2026-10-21T13:47:34.009Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-005-D011 records constructible structural-check bypasses. This launchpad review does not audit current target source; the latest bound final review supplies no new production-bypass observation. No absence claim is made about code not inspected.",
+          "reopenWhen": "A concrete production bypass is observed or an order explicitly allocates structural-check hardening.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.457Z"
         }
       ]
     },
@@ -1457,6 +1481,14 @@
           "reopenWhen": "The next core planning pass considers this parser defect, a starter release carries the fix, or a target authority contains a malformed duplicate.",
           "targets": [],
           "at": "2026-10-21T03:01:24.246Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The shipped release parser still matches only recognized classification values; WO-012-D008 records the valid-plus-malformed-duplicate probe. The profile counts all headers and recognized headers separately. This remains a core parser request, not a kit fork.",
+          "reopenWhen": "Core answers or ships the parser fix, or a target order contains a malformed duplicate.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.384Z"
         }
       ]
     },
@@ -1675,6 +1707,14 @@
           "reopenWhen": "WO-016 merges and the operator asks for the work view over the app's own data, or the mining store (candidate C1 of 2026-10-24) carries the sequence.",
           "targets": [],
           "at": "2026-10-24T05:40:28.112Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-016 has not merged and the operator has not asked for a work view in this pass. The app-own-data boundary remains unchanged.",
+          "reopenWhen": "WO-016 merges and the operator asks for the view, or the mining store carries the sequence.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.467Z"
         }
       ]
     },
@@ -2309,6 +2349,14 @@
           "reopenWhen": "WO-017 merges and the operator names the lane.",
           "targets": [],
           "at": "2026-10-24T05:40:28.150Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 pass: the bounded follow-up feed also exposed the later twin lanes. WO-017 is unactivated, and the operator named no lane; the recorded trigger has not occurred.",
+          "reopenWhen": "WO-017 merges and the operator names the later lane.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.515Z"
         }
       ]
     },
@@ -3692,6 +3740,14 @@
           "reopenWhen": "The operator asks for the controls sooner, a concept-study batch's executor finds them needed to find studies, or the pass before WO-018 activates writes them in.",
           "targets": [],
           "at": "2026-10-30T22:48:30.667Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The two remaining concept batches keep their existing finding routes. No new batch report says explicit search controls are needed; the broader controls remain a WO-018 planning input.",
+          "reopenWhen": "A batch executor reports needing the controls, the pass before WO-018 activates, or the operator asks sooner.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.447Z"
         }
       ]
     },
@@ -3756,6 +3812,14 @@
           "reopenWhen": "A starter release carries core's WO-245.",
           "targets": [],
           "at": "2026-11-01T01:57:26.267Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-245 shipped in v0.108.0; update PR #51 preserves the instance floor and puts the custom introduction at root with docs/KIT.md as the kit guide.",
+          "reopenWhen": "A starter overwrites a customized instance carrier without the declared opt-in or the README migration fails its checks.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.278Z"
         }
       ]
     },
@@ -3876,6 +3940,14 @@
           "reopenWhen": "A starter release carries core's WO-237; the operator's choice of window is recorded then.",
           "targets": [],
           "at": "2026-11-01T01:57:26.307Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): v0.107.0 carries WO-237; PR #51 records the released 720-hour seed explicitly in the budget and preserves closed journals. No different window was directed.",
+          "reopenWhen": "The operator chooses another retention window or a close loses journals within the declared window.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.290Z"
         }
       ]
     },
@@ -4325,6 +4397,14 @@
           "reopenWhen": "The first stop row in plan failures, or the operator's word on a bound value.",
           "targets": [],
           "at": "2026-11-01T01:57:26.317Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The current failure feed reports no dispatch-bound stops; no operator change to the bound was supplied. The slow prune is a startup-control observation, not evidence to raise execution budgets.",
+          "reopenWhen": "A recorded bound stop prevents otherwise authorized work or the operator changes the budget.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.416Z"
         }
       ]
     },
@@ -4560,6 +4640,14 @@
           "reopenWhen": "The first order that touches the scene's inspector activates (WO-018, or an executor names it as a boy-scout item), or the operator asks for the link.",
           "targets": [],
           "at": "2026-11-01T01:57:26.257Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): This pass changes no scene inspector, and WO-018 remains after the machinery, authentication and twin orders. No reverse-link consumer is implemented here.",
+          "reopenWhen": "An order touches the scene inspector, WO-018 activates, or the operator requests the reverse link.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.437Z"
         }
       ]
     },
@@ -4584,6 +4672,14 @@
           "reopenWhen": "WO-016 and WO-022 have both merged.",
           "targets": [],
           "at": "2026-10-30T22:48:30.730Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-022 is closed, but WO-016 has not merged. The two-delivery condition for the messaging-study/machinery link is only partly met.",
+          "reopenWhen": "WO-016 merges, completing the recorded pair of prerequisites, or the operator directs the link sooner.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.426Z"
         }
       ]
     },
@@ -5072,6 +5168,14 @@
           "reopenWhen": "The planning pass before WO-016 activates, or WO-016 activates.",
           "targets": [],
           "at": "2026-10-31T16:41:36.797Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-026-D012 names the WO-016 document-step carry-in. WO-023/WO-024 remain ahead of it; no WO-016 activation occurs in this pass. Preserve the named before-activation repair rather than pretending the placeholders were verified.",
+          "reopenWhen": "The pass before WO-016 activation, WO-016 activation itself, or an earlier order needs those document paths.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.406Z"
         }
       ]
     },
@@ -5199,6 +5303,14 @@
           "reopenWhen": "Core answers the item, or a third order meets the widened-after-handoff gap.",
           "targets": [],
           "at": "2026-11-01T01:57:26.247Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): v0.110.0 carries WO-249 reopen-handoff before verification is requested, with a fresh handoff ledger after the widened work.",
+          "reopenWhen": "A qualifying handoff cannot reopen or its next completion reuses the stale ledger.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.311Z"
         }
       ]
     },
@@ -5336,6 +5448,14 @@
           "reopenWhen": "A close record shows the worktree-removal step above five minutes, a finish stalls again, or core answers.",
           "targets": [],
           "at": "2026-11-01T01:57:26.394Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-252 delivered named removal timings. The old v0.105.0 update-finish helper again needed the recorded manual route; v0.112.0 source still lacks WO-246 alternates and the already-held-commit skip. The current finish was not exercised live.",
+          "reopenWhen": "A starter carries WO-246, the incoming helper is observed stalling, or a new close exceeds the recorded 0 h 5 min removal threshold.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.354Z"
         }
       ]
     },
@@ -5360,6 +5480,14 @@
           "reopenWhen": "A target close is blocked by a nested cache again after WO-021 or WO-022 merges.",
           "targets": [],
           "at": "2026-11-01T01:57:26.366Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The latest WO-022 close succeeded with the exact declaration; WO-023 now carries the released any-depth pattern. A separate Vite-to-declaration checker would duplicate that coverage and add another maintained check.",
+          "reopenWhen": "A close after the pattern change is blocked by regenerable output the declaration missed.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.375Z"
         }
       ]
     },
@@ -5384,6 +5512,14 @@
           "reopenWhen": "The operator says the reviews are every planning pass's, or core files the step.",
           "targets": [],
           "at": "2026-11-01T01:57:26.403Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-250 delivered the kit review worker and finite ladder, used by this pass under the extant operator-record bullet. Core kept its optional planning routes; WO-244 remains the planning-specific helper. No fork launcher is added.",
+          "reopenWhen": "WO-244 ships or the operator changes the standing planning-review direction.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.364Z"
         }
       ]
     },
@@ -5408,6 +5544,14 @@
           "reopenWhen": "Core answers the items, or a close is refused on the kit's own residue after WO-021 or WO-022 merges.",
           "targets": [],
           "at": "2026-11-01T01:57:26.385Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): v0.112.0 carries WO-252 target journal retention, owned kit-residue handling and launchpad-session remedy. The profile now describes retention before cleanup.",
+          "reopenWhen": "A close on the carrying release refuses the kit residue it owns, loses retained journals or requires a target writer for the remedy.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.333Z"
         }
       ]
     },
@@ -5432,6 +5576,16 @@
           "reopenWhen": "A starter release carries an any-depth or class-default declaration; the pass that takes it collapses the seventeen entries to one.",
           "targets": [],
           "at": "2026-11-01T01:57:26.375Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The release trigger fired: WO-252 is in v0.112.0. WO-023 step 12 and criterion 10 replace the seventeen nested and redundant root node_modules declarations with the segment pattern, update the profile and probe matching without deletion.",
+          "reopenWhen": "A match probe fails, a later close exposes output outside node_modules, or the kit changes matching semantics.",
+          "targets": [
+            "WO-023"
+          ],
+          "at": "2026-11-03T16:55:14.343Z"
         }
       ]
     },
@@ -5504,6 +5658,14 @@
           "reopenWhen": "A starter release carries a waiver retraction, or another order records a direct edit of a control segment.",
           "targets": [],
           "at": "2026-11-01T08:58:07.858Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): v0.110.0 carries WO-249 resume retract and retracted-ordinal refusal. The historical repair stays historical; no segment edit is needed.",
+          "reopenWhen": "A live retraction fails its declared current-activation contract or a report admits a retracted ordinal.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.301Z"
         }
       ]
     },
@@ -5630,7 +5792,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): The operator record now preserves WO-022-D029 and the filed process-error record: isolated Playwright/project browser tests; native control requires explicit authorization. v0.109.0 adds the default-off feature election.",
+          "reopenWhen": "The operator explicitly changes the interaction preference or an observed verification escapes it.",
+          "targets": [],
+          "at": "2026-11-03T16:55:14.322Z"
+        }
+      ]
     },
     {
       "id": "FUP-69d2c425527eacf2",
@@ -5653,6 +5824,201 @@
           "reopenWhen": "A reader of the Control Bus study still finds the executor's part in the bus unclear, or a later messaging batch changes how a pause is addressed.",
           "targets": [],
           "at": "2026-11-01T19:21:14.411Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-8c4dcd0be9399981",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::131b364c1c5aaba0dd4dd487e6ddaad07e542451518601c2a0f8c784411a5c20",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "119c7d35072ec3644e577759f533d6ee5db755d1a9415941a08eb3ede4428fde",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-VER-01 — verification-and-evidence: a generated projection reconciles an executor-recorded unmet criterion with later passing judgments",
+          "summary": "- **ER-VER-01 — verification-and-evidence: a generated projection reconciles an executor-recorded unmet criterion with later passing judgments** Surface `docs/control/current.md projection (scripts/resume.mjs, kit)`, severity minor, altitude 6, evidence measured. Observed: current.md shows WO-022 as 'Phase: closed' and 'Latest verdict: pass', yet also 'Unmet criteria: 1 (recorded unmet by the executor at ordinal 2)'. RECORDS-PR.md says all nine criteria are met. The cause is structural: WS-001 rule 24 assigns the use walkthrough to the verifier, so the executor's met/unmet ledger records criterion 1 as unmet. Seven orders (WO-015, 019, 020, 021, 022, 025, 026) recor Expected: The projection ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass D8: README now explains executor-ordinal history versus later acceptance. D8 sends the display improvement to core and declines manual edits to truthful events or generated current.md.",
+          "reopenWhen": "Core changes the historical/current projection or a consumer treats the historical line as a current block.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.426Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-2135a6aed155859c",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::49807d3a81608078c1370427540286dc0d0c933a3861129048a81c6228d96ca3",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "59f23bb332ee4aeb781c4c924d1c8597a8c11e0a9bb775a7a65a84b9eb2c0c51",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-ARCH-01 — architecture-and-semantics: durable product doctrine and the compiled planning subject agree",
+          "summary": "- **ER-ARCH-01 — architecture-and-semantics: durable product doctrine and the compiled planning subject agree** Surface `docs/product/purpose.md and the plan refutation subject (scripts/lib/plan-subject.mjs)`, severity major, altitude 6, evidence measured. Observed: purpose.md's purpose block declares 'The critical path runs from registering that repository … to a foundation …'. The kit reads a critical-path declaration only from docs/planning/critical-path-2026-09-08.md, which this instance never filed. The compiled subject therefore carries the purpose's critical-path sentence in its goal standard while also reporting goalReview.criticalPath as 'unavailable Expected: The subject reads a si",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass D8: The kit-readable critical-path declaration is filed in this pass, agrees with the purpose and distinguishes dependencies from the settled schedule. No lint or reordering is added.",
+          "reopenWhen": "The compiled subject loses or contradicts the declaration, a prerequisite changes, or the operator changes the intended outcome.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.438Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-4ecb7b052fb6467b",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::5687286641a06d23b02eedaa226a710ae63ab2d91502c512a709da67cc797d77",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "2f5c3615ac19922b53ca5d3b2266adab25357336d9b9ac39e4fbafa2e9eb56e6",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-RUN-01 — runtime-and-authority: a declared resource stop on an effect is enforced, or at least recorded, before the spend it bounds",
+          "summary": "- **ER-RUN-01 — runtime-and-authority: a declared resource stop on an effect is enforced, or at least recorded, before the spend it bounds** Surface `WO-020 fan-out procedure (reused by WO-023, WO-024); docs/control/budgets.json`, severity major, altitude 8, evidence measured. Observed: WO-020's fan-out procedure is reused next by WO-023 and WO-024 as a lane pair. Its token stop exists only in order prose: stop with a recorded decision once worker totals plus the session's own reading pass WO-014's 117,733,609. Nothing executes this check, and budgets.json leaves executor tokens null. WO-020 summed to 269,706,640 after the operator lifted the stop (D012). WO-021 reached 64.6%. WO Expected: T",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-03 Entropy Reducer pass D8: D8 and WO-023/WO-024-D003 allocate explicit pre-launch stop declaration, current readings and use accounting to the next pair; the shared profile is written now. The general automatic meter is asked of core; no fork launcher or changed limit.",
+          "reopenWhen": "A next batch omits the stop, observed usage cannot be attributed, or core delivers the general boundary meter.",
+          "targets": [
+            "WO-023",
+            "WO-024"
+          ],
+          "at": "2026-11-03T17:05:31.448Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-b948f8094f0419e5",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::6da2a74ca6736e283fbb56b7aa1108a12f9327007a142aaacf7ffd2ad44d0f59",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "1809321a1e7f4ff8ab0f333fcdbb134652c553d54725263bac0868594e77b176",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-MAINT-02 — maintainability-and-friction: a later actor can run the documented gates from what the README states",
+          "summary": "- **ER-MAINT-02 — maintainability-and-friction: a later actor can run the documented gates from what the README states** Surface `README.md gate table (instance); scripts/bootstrap.mjs preflight (kit)`, severity minor, altitude 6, evidence measured. Observed: README.md ties the ignored clone map only to publishing. On a fresh clone at the base commit with dependencies installed, `node scripts/docs-check.mjs` and `node scripts/refute-plan.mjs check` both exit 1 with 'recorded target clone unavailable', because the moved-record readers need the map for the document and plan gates. The README's gate table does not mention this. Expected: The README's gate table names the clone map as a precondi",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass D8: README setup is corrected now: document/planning checks require the ignored target-clone map and bootstrap does not create it. The early bootstrap diagnostic is decided as a core request; the documented registration route works.",
+          "reopenWhen": "Core ships or declines the diagnostic, or the documented setup fails on a configured clone.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.459Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-f46cff6dba92f65a",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::7d4f8a68545b8b6e79f5e0f157859a8e6cc1cba316a982c401be7630103addea",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "76fb16392137fda9780cc8746488114e56cb8d49ccf2e744c4e95d2d0fab83c3",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-RUN-02 — runtime-and-authority: worker launches follow the compiled route the guide names, not an unaccounted path",
+          "summary": "- **ER-RUN-02 — runtime-and-authority: worker launches follow the compiled route the guide names, not an unaccounted path** Surface `scripts/lib/review-worker.mjs (kit) and target-order executor practice under WS-001`, severity major, altitude 5, evidence measured. Observed: The guide names `npm run worker -- review --host codex` as the route to a Codex worker from a Claude session: a read-only sandbox, a WorkerLaunched journal row, and reports in the review lane the verifier reads. Its resolveSubject resolves only launchpad order files, and it diffs the launchpad working tree (cwd root, merge-base HEAD main). review-worker.mjs has no target-order mode (0 matches for Expected: Codex workers ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass D8: D8 implements the profile clarification and working native target-review route now. The current helper binds the launchpad diff; the target-aware runtime extension is decided as a core request, with a NoOp for a duplicate instance launcher.",
+          "reopenWhen": "Core ships or answers target-aware review, or an explicitly required Codex target bridge cannot be qualified.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.470Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-23dae594df089c41",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::85e07a1cffceaca356d93ae62ec6ad5eadb4b13b46e12138f798aa0666c2ef5a",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "ce3e1c27d2d16617bb3793c77cd3dae4fd824eb51fec979b4e1bad9665bffc77",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-MAINT-01 — maintainability-and-friction: a repeated cost exported to later actors is measured and bounded",
+          "summary": "- **ER-MAINT-01 — maintainability-and-friction: a repeated cost exported to later actors is measured and bounded** Surface `docs/evidence/ and docs/control/doc-ceilings.json (instance)`, severity major, altitude 8, evidence measured. Observed: docs/evidence holds 211,539,410 of 238,939,913 tracked bytes (88.5%). Of that, 972 PNGs account for 196,952,831 bytes, and comparison-round directories alone for 134,843,858. Recent page orders added 85.4 MB (WO-019), 46.8 MB (WO-020), 36.1 MB (WO-021) and 33.0 MB (WO-022), and the pack is 173.62 MiB. Every order's worktree checks out the whole tree. doc-ceilings.json bounds only purpose.md and co Expected: Each order's evidence size is reported and bo",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-03 Entropy Reducer pass D8: D8 accepts the measured 88.5 percent evidence share but rejects an ungrounded ceiling. Required screenshots serve comparison and acceptance; no attributable throughput cost or preservation-compatible storage remedy was measured.",
+          "reopenWhen": "Measured material checkout/clone cost and a remedy demonstrated to preserve the usefulness of the required evidence.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.482Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-753dd0bb836386a6",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::a45465dc4e3937e3f67489abecd10788301c3c11c6141ac2fbca12c19fa33c9b",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "21a13d63930b7105d98fe0c25bd3d74015bd16bc9e02284e7408c63562f55af5",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-VER-02 — verification-and-evidence: a standing document claims no more than its cited receipts establish",
+          "summary": "- **ER-VER-02 — verification-and-evidence: a standing document claims no more than its cited receipts establish** Surface `README.md (instance)`, severity minor, altitude 6, evidence measured. Observed: README.md says 'an independent refuter judges them before any can run.' All 17 refutation receipts record episode kind direct-session, model unknown, independence session-attested and contextIsolation not-enforced. The guide's procedure spawns a fresh, model-pinned worker, but no receipt attests that pin or the isolation. Expected: The README calls the refuter a fresh worker whose independence the receipt records as session-attested, or receipts carry the attested worker type and model. Repro",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-03 Entropy Reducer pass D8: README now describes the fresh worker and session-attested independence with available model/isolation evidence; older immutable receipts are preserved.",
+          "reopenWhen": "The README again claims isolation or effective model evidence the receipt does not establish.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.493Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-290ea887a40dcd8e",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03::ca4d0b7e87bd84d055e6fb0cb46e9e2ca1e2c0f5367d0e4ea3d788283cf82a94",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "08ce19beea3354fc3fa1da11225cb52b8e1b3281b686ab08f1d14ab7e5308ea5",
+          "ref": "docs/planning/entropy-reviews/REVIEW-001.md#candidates--accepted-entropy-reducer-findings-review-review-001-recorded-2026-11-03",
+          "title": "ER-RUN-03 — runtime-and-authority: an episode's declared writable roots can be satisfied by the repository's own documented checks",
+          "summary": "- **ER-RUN-03 — runtime-and-authority: an episode's declared writable roots can be satisfied by the repository's own documented checks** Surface `scripts/lib/entropy-review.mjs confinement receipt; scripts/lib/host-resources.mjs (kit)`, severity minor, altitude 6, evidence measured. Observed: This episode names the frozen copy and TMPDIR as its only writable roots. hostStateRoot() deliberately ignores TMPDIR and resolves to dotln-host-v1-<uid> under the system user temp directory, and the `npm test` runner imports host-lanes and host-resources, which write there. A reviewer or refuter that reproduces a finding through a gate therefore writes outside both roots. The receipt's confinemen Expec",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-03 Entropy Reducer pass D8: D8 records the confinement observation limit and the disclosed temporary-path escape. Correcting the shared receipt wording belongs to core; immutable receipts and kit code remain intact, with no full-confinement claim.",
+          "reopenWhen": "Core ships or answers the receipt correction, or another probe is misread as proof of confinement.",
+          "targets": [],
+          "at": "2026-11-03T17:05:31.504Z"
         }
       ]
     }

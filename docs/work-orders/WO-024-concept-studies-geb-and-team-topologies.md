@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 6268de9fc3cae84bf66091c1fbcc30d344411cd2
+**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -14,7 +14,7 @@ under `libs/features/tools/src/lib/composites/study-visuals/relations/`, the
 executable TypeScript models and specs the records name under
 `libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, two coverage
 rows and one rule, about 35 source files plus twenty data records; adds no
-runtime dependency. Removes nothing. Wall-clock: about 6 to 10 hours of
+runtime dependency. Removes nothing. Wall-clock: about 6 h 0 min to 10 h 0 min of
 executor work, of which the fan-out runs in parallel, plus the fixed cycle;
 unknown until run. Context bytes: the study record, check, families and
 rules as the target's `main` leaves them at activation (WO-020's, with
@@ -37,9 +37,8 @@ Planner-synthesized by the 2026-10-30 second planning pass
 ([planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
-composite, the addressable route and the fan-out procedure; the base above is
-provisional and publishes right under starter v0.96.1's merge-base publish; a
-pass may set it to WO-020's merge commit).
+composite, the addressable route and the fan-out procedure). The base above is
+WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -47,7 +46,7 @@ pass may set it to WO-020's merge commit).
   {
     "workOrderId": "WO-020",
     "relation": "hard",
-    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; the base line is provisional and publishes right under starter v0.96.1's merge-base publish"
+    "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -144,7 +143,9 @@ them to the books' vocabulary; no `relations` family exists.
   `tt2:90` Platform as a product, `tt3:47` Organizational sensing, `tt1:215`
   Seven-to-nine maximum effective team size. One further recorded
   substitution per work under the rule is admitted as in WO-020.
-- **The fan-out**: WO-020's procedure, at most twelve workers (ten authors
+- **The fan-out**: WO-020's authoring and critic procedure, with the
+  [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-concept-study-workers)
+  declared before any worker starts, at most twelve initial author/critic launches (ten authors
   with two concepts each, one factual critic who also checks the analogy rule
   and that no study characterizes the operator or quotes the books, one
   reading critic).
@@ -188,11 +189,12 @@ screenshots, and the design record.
    and 360; the rounds; the rejected implementation removed with its record.
    Check: `grep -c "Round" docs/evidence/WO-024/design/comparisons.md` is at
    least 1.
-4. The authors' brief with the absent-material rule into `fan-out.md`;
+4. Record the stop figure and the launch/re-task budget in `fan-out.md` as the
+   profile directs. The authors' brief with the absent-material rule goes there;
    dispatch the ten authors; merge the twenty drafts. Check: `npx nx test
    tools` exits 0 over the models' specs.
 5. Dispatch the two critics; dispose the findings; rewrite through the same
-   authors; set `checked`. Check: `npm run studies:check` exits 0 over
+   authors or apply the bounded corrections in the parent under the profile; set `checked`. Check: `npm run studies:check` exits 0 over
    `studies/geb/` and `studies/tt/`.
 6. The link check into `docs/evidence/WO-024/README.md`. Check: every URL has
    a status.
@@ -284,9 +286,9 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The base line is provisional and publishes
-right under starter v0.96.1's merge-base publish; a pass may set it to
-WO-020's merge commit. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The 2026-11-03 pass sets the base to WO-022's
+merge, released as v0.9.0. Step 1 still integrates the target's current main
+and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that must carry a module and binds each spec to it,
