@@ -301,7 +301,15 @@
   "homePaths": {
     "docs/evidence/WO-006/host-qualification.md": [
       "01c044a929279c1e5493f86a5904cff831f86c3b93c2e2e4dd31988bf155902d"
+    ],
+    "docs/instance/entropy-reducer/runs/REFUTATION-002.md": [
+      "6f630944b69ecbba32df8340aa8cb1ec6e6113d1eca39d4f3e76e36dfd6109bc"
+    ],
+    "docs/instance/entropy-reducer/runs/REVIEW-002.md": [
+      "26dd5ec440b7da28dd7e08a9003409bc48fd0509191919778b91d142e9539fb1",
+      "5fdfe22c38246e2e9ef957ef72d50e74d0e6507ea42f3bc9c5e81938290cec4e",
+      "276a955a457bccccc610b60438c9accd8a2b7467451bbdae3b6451611c100f3c"
     ]
   },
-  "homePathsNote": "Line fingerprints of record lines that carry an absolute home path, declared historical: WO-006's host-qualification record line 147 quotes the operator-run publish command of 2026-10-21 with its worktree path, filed by the final review (#20); declared on the starter v0.93.0 update branch of 2026-10-23 (the line fails docs-check on main at 8ba47c1 with the v0.88.0 runtime) and recorded by the 2026-10-23 planning pass."
+  "homePathsNote": "Line fingerprints of record lines that carry an absolute home path, declared historical: WO-006's host-qualification record line 147 quotes the operator-run publish command of 2026-10-21 with its worktree path, filed by the final review (#20); declared on the starter v0.93.0 update branch of 2026-10-23 (the line fails docs-check on main at 8ba47c1 with the v0.88.0 runtime) and recorded by the 2026-10-23 planning pass. REVIEW-002 and REFUTATION-002 (docs/instance/entropy-reducer/runs/, filed 2026-11-03 over dotln-angular@55b59c9) are immutable receipts whose kit renderer prints the frozen copy's absolute temporary path for a target subject (entropy-review.mjs, the Repository line) and whose worker summary names a disclosed stray /tmp write; three REVIEW-002 lines and one REFUTATION-002 line are declared historical by the 2026-11-03 entropy-reducer-dotln-angular planning pass (D5), with the renderer asked of core; the receipts are not edited."
 }
