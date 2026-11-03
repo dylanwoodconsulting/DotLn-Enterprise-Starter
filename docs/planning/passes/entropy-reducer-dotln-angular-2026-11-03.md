@@ -461,3 +461,34 @@ uses in the hook's readback.
 | Consistency F1, F2, F3 (blocking, should-fix, should-fix) | The same three defects as above, found independently; fixed as above, with the counting unit (one marker per line) added to the gauge's definition. |
 | Consistency F4 (note) | Fixed: WO-023's carry-in said no release shipped `tool-v0` data; v0.4.0 did, and the reader's one promised release was v0.5.0, so the text now states the window it outlived. The entropy disposition's reason for ER-F5 carries the same overstatement in the immutable control log; this row and D5 are its correction. |
 
+**Independent refutation.** [Receipt 019](../refutations/2026-11-03-planning-961db9d4bb4b52f3-019.md)
+is the fresh judgment of this pass's compiled subject (WO-023, WO-024, WO-027
+and WO-018, the sequence, the cost table): one `dotln-worker`
+(`claude-opus-5-5` at `xhigh`), launched with the canonical prompt and schema
+only, which read the prompt file in three parts and nothing else, wrote
+nothing and ran no other command. It returned aligned-with-findings for the
+plan and every order, zero holds and sixteen known issues with reopening
+observations; the receipt records 0 h 8 min dispatch to file, session-attested
+independence and three carried judgments. The worker's statement named the
+prompt file by its absolute scratch path; the receipt helper refuses a private
+path, so the parent replaced that one path with the `<tmp>/` placeholder the
+helper prescribes, changing no claim, and filed the pair. After filing, the
+plan gate reports nineteen receipts, the judged, committed and workspace
+subjects equal, no advisories, and the two pre-existing criteria advisories.
+
+The sixteen known issues are NoOps for this pass (kind NoOp; reason: none is an
+observed failure, each names its reopening observation; evidence: the receipt's
+per-order findings; reevaluation: each finding's reopenWhen; usefulWhen: that
+observation showing a repair would improve the stated outcome). Three bear on
+this pass's own text and are answered here without reopening the judged
+bytes: WO-027's Cost line says eight documents and lists ten (the ten listed
+are the set; the count is the planner's slip and the diff is judged by
+criterion 6, not the count); criterion 5's date pattern covers only October
+and November 2026 (a later-dated design round would pass the grep; the
+verifier reads the paragraphs criterion 5 names, and the grep supports, never
+substitutes); and criterion 5 would make the order unsatisfiable if a feature
+barrel deviated at the integrated base (none does at `55b59c9`, and WO-023 and
+WO-024 add no feature library). Each is reopened by its receipt observation.
+
+**Document gate.** `npm run test:docs` is run on the final committed subject
+and its result recorded below after the run.
