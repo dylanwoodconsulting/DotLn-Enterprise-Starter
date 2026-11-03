@@ -490,5 +490,19 @@ substitutes); and criterion 5 would make the order unsatisfiable if a feature
 barrel deviated at the integrated base (none does at `55b59c9`, and WO-023 and
 WO-024 add no feature library). Each is reopened by its receipt observation.
 
-**Document gate.** `npm run test:docs` is run on the final committed subject
-and its result recorded below after the run.
+**Document gate.** `npm run test:docs` on the committed subject at `986c64a`
+passed all fourteen tasks (format, configuration-root, registrations,
+declarations, generated, host, kit-verify, harness-context, license-surfaces,
+docs-check, reader-profiles, entropy, plan, plan-refutation-current) in
+0 h 14 min with zero failures; the unchanged kit verifies 1,095 files, and the
+only advisories are the two pre-existing criteria advisories and the four
+historical operator-word lines. This closing edit to the Validation text is
+the one change after that run; it touches no gate input the tasks judge
+beyond this document's own text.
+
+Outcome against the dispatch: DotLn-Angular at `55b59c9` is reviewed by the
+Entropy Reducer, independently challenged, and every surviving finding and
+packet is disposed here; one order and one carry-in carry the accepted
+corrections; the sequence holds; the operator's corrections of this pass are
+recorded in their scope. Runtime cost savings remain unmeasured. This record
+creates no target implementation or activation.
