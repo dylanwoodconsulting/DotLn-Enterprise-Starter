@@ -33,6 +33,7 @@ import { checkHost } from "./structural-checks.mjs";
 import { suiteEnvironment } from "./lib/suite-evidence.mjs";
 import { classifyDocumentFailures } from "./lib/document-failures.mjs";
 import { budgetVerdict } from "./lib/process-budget.mjs";
+import { followupStatus } from "./lib/planning-followups.mjs";
 
 const fixture = (t) => {
   const root = createFixtureRoot(join(tmpdir(), "dotln-gate-followups-"));
@@ -57,12 +58,19 @@ test("bounded role wording preserves prior savings and records reviewed startup 
     fs.readFileSync(join(sourceRoot, "docs/control/budgets.json"), "utf8"),
   );
   // The role oracles minted since the preceding integrated oracle, newest
-  // first: the integration that combined both branches' role text, then the
-  // upstream oracles it took in. Each names the next as its historical
-  // baseline and starts its startup bytes at the next one's measurement;
-  // test-process-debt.mjs walks every recorded parent link of every oracle
-  // and checks each recorded hash.
+  // first: the router's prune sentence, the shared prune sentence's re-pin,
+  // the review ladder's, the integration that combined both branches' role
+  // text, then the upstream oracles it took in. Each names the next as its
+  // historical baseline and starts its startup bytes at the next one's
+  // measurement; test-process-debt.mjs walks every recorded parent link of
+  // every oracle and checks each recorded hash.
   const chain = [
+    "wo252-repair-role-baseline.json",
+    "wo252-role-baseline.json",
+    "wo250-role-baseline.json",
+    "wo249-integration-role-baseline.json",
+    "wo251-role-baseline.json",
+    "wo247-role-baseline.json",
     "wo192-integration-role-baseline.json",
     "wo239-integration-role-baseline.json",
     "wo235-removal-role-baseline.json",
@@ -126,8 +134,8 @@ test("bounded role wording preserves prior savings and records reviewed startup 
   ]) {
     assert.match(cost.decision, /^WO-\d{3}-D\d{3}$/u);
   }
-  // Historical overruns keep their dispositions; current accepted growth
-  // needs its own measured record, without inventing another deferred item.
+  // Historical overruns retain their original dispositions. Current breaches
+  // are linked to optimization work without raising a ceiling or cutting duties.
   for (const cost of [historical, priorCost]) {
     if (cost.followup !== undefined) {
       assert.match(cost.followup, /^FUP-[a-f0-9]{16}$/u);
@@ -163,17 +171,55 @@ test("bounded role wording preserves prior savings and records reviewed startup 
     baseline.profiles.length + 2,
     "router is added in both installed roots",
   );
+  // Every root over its ceiling follows product 07's one route: its reviewed
+  // rules stay whole and the newest oracle names the optimization follow-up
+  // that the current growth decision boarded, still open, deferred or
+  // allocated.
+  const boardedBreach = (role, bytes, ceiling) => {
+    if (
+      budgetVerdict(budgets, `coldStartBytes.${role}`, bytes, ceiling) !==
+      "breach"
+    )
+      return;
+    const current = chain[0].startupCost.profiles[role];
+    assert.match(
+      current.followup ?? "",
+      /^FUP-[a-f0-9]{16}$/u,
+      `${role}: current overrun names its optimization follow-up`,
+    );
+    const register = JSON.parse(
+      fs.readFileSync(join(sourceRoot, "docs/planning/followups.json"), "utf8"),
+    );
+    const entry = register.entries.find((row) => row.id === current.followup);
+    assert.ok(
+      entry && !entry.revisions.at(-1).missing,
+      `${role}: optimization follow-up remains recorded`,
+    );
+    assert.ok(
+      ["open", "deferred", "allocated"].includes(followupStatus(entry)),
+      `${role}: optimization has a current disposition`,
+    );
+    assert.ok(
+      entry.revisions
+        .at(-1)
+        .ref.endsWith(`#${chain[0].startupCost.decision.toLowerCase()}`),
+      `${role}: follow-up belongs to the current growth decision`,
+    );
+  };
   for (const [file, contents] of profiles) {
     const bytes = Buffer.byteLength(instruction) + Buffer.byteLength(contents);
     const role = file.split("/")[2].slice("dotln-".length);
     const current = chain[0].startupCost.profiles[role];
     assert.equal(bytes, current.bytes, `${file}: reviewed startup bytes`);
-    // The router has no earlier measurement to link to; its own ceiling
-    // bounds it from the first oracle that names it.
+    // The router's first oracle had no earlier measurement to link to; each
+    // later oracle links to the preceding one that names it. Its unchanged
+    // ceiling is judged by the same route as every other root's.
     if (role === "router") {
-      assert.equal(current.beforeBytes, null);
-      assert.equal(current.growthBytes, null);
-      assert.ok(bytes <= budgets.limits.coldStartBytes.router);
+      const earlier = chain[1].startupCost.profiles.router;
+      assert.equal(current.beforeBytes, earlier?.bytes ?? null);
+      assert.equal(current.growthBytes, earlier ? bytes - earlier.bytes : null);
+      assert.equal(current.ceiling, budgets.limits.coldStartBytes.router);
+      boardedBreach(role, bytes, budgets.limits.coldStartBytes.router);
       continue;
     }
     const previous = baseline.profiles.find((profile) => profile.path === file);
@@ -234,11 +280,7 @@ test("bounded role wording preserves prior savings and records reviewed startup 
       `${role}: the operating-cost ceiling stays unchanged`,
     );
     const metric = `coldStartBytes.${role}`;
-    assert.notEqual(
-      budgetVerdict(budgets, metric, bytes, measured.nominalCeiling),
-      "breach",
-      `${role}: current bytes fit the configured or accepted ceiling`,
-    );
+    boardedBreach(role, bytes, measured.nominalCeiling);
     if (measured.ceiling !== measured.nominalCeiling)
       assert.ok(
         budgets.acceptances.some(

@@ -240,11 +240,12 @@ audience beyond the operator.
   2026-10-21, capture
   `9b1e3fe9d122ddc83053b6a8b03ac46f2cb97f90eabd15e3404d3f6b2db913a4`;
   2026-10-24).
-- **The root README:** the root `README.md` stays the starter's so upstream merges stay
-  clean, and the launchpad's own page lives at `docs/launchpad-readme.md` until the
-  upstream kit no longer causes merge issues with the root page; the old page is
-  archived then, unless the kit has moved its instruction text elsewhere
-  (2026-10-30, capture `75779a72…`).
+- **The root README:** the launchpad's introduction belongs at the root once
+  upstream's instructions have a separate home. Keep the checked release block;
+  archive the old instructions only if the kit has not moved them elsewhere.
+  The kit guide is now `docs/KIT.md`, and `docs/launchpad-readme.md` preserves
+  the old links ([WO-025-D014](../evidence/WO-025/decisions.md#wo-025-d014);
+  2026-10-30, capture `75779a72…`).
 - **Requests to core:** every planning pass ends with a paste-ready prompt for the
   next DotLn platform planning pass, written in its requests-to-core section
   and repeated in the handoff; a prompt core wrote earlier is read against the

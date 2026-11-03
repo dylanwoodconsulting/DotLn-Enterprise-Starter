@@ -168,7 +168,10 @@ through the qualified launchpad command; target tool hooks do not supply a
 prompt-time lifecycle dispatch. A registered target runs in its target
 worktree and may write its paired launchpad records through the recorded grant.
 The driver uses the router's native host; `node scripts/drive.mjs WO-NNN --host
-claude` or `--host codex` selects it explicitly and re-entry keeps that selection.
+claude` or `--host codex` selects it explicitly and re-entry keeps that selection,
+with one admitted change: after a Codex close the host declined, `--host claude`
+re-enters for release close only and the record names it as `hostChange`
+([WO-247-D004](../evidence/WO-247/decisions.md#wo-247-d004--a-declined-close-stops-at-awaiting-close-one-host-change-is-admitted)).
 Codex phases use fresh isolated CLI sessions and their generated role text.
 Their tool environment places the launcher's Node directory first in PATH;
 setting only the native process environment did not preserve that runtime
@@ -181,9 +184,25 @@ role and writer entry are explicit, while tool boundaries and per-spawner
 budgets remain role text where hooks are absent. Its native collaboration
 stream contributes only the observed minimum. A configured dollar limit
 refuses Codex launch because that transport supplies no dollar counter.
-The Codex invocation enables outbound command network access for native workers
-and phase research; its filesystem sandbox and automatic approval review remain
-enabled. The Codex router requests one-invocation outside-sandbox approval for
+The sandbox a routed run gets is the instance's election, `drive.sandbox` in
+`dotln.config.json`: `host` (the default) keeps each host's own policy, and
+`off` launches unsandboxed in the form each host documents, for every phase
+worker a drive launches and for the live fixture's own router; an operator's own
+router session keeps the policy it was started with, and a Codex phase under
+`off` is told it has no approval step to request. On Claude, `off` passes `sandbox.enabled false`
+through the launch's own `--settings`, which rank above the checkout's local
+settings. On Codex, `host` keeps automatic approval review under the
+workspace-write sandbox, and `off` passes `--sandbox danger-full-access`, which
+Codex cannot combine with automatic review, under `exec`'s headless default of
+no approvals; the sandboxing page calls that pairing full access. Any other
+value refuses before launch naming the key. Each receipt records the selected
+election and form and, apart from it, what the host applied: Codex names its
+resolved sandbox and approval policy in the phase's own session rollout, Claude's
+init row names its permission mode, and neither stream reports more
+([WO-247-D006](../evidence/WO-247/decisions.md#wo-247-d006--the-sandbox-election-and-the-launch-form-each-host-documents);
+the kit guide names the key). Under the default election the Codex invocation
+enables outbound command network access for native workers and phase research;
+its filesystem sandbox and automatic approval review remain enabled. The Codex router requests one-invocation outside-sandbox approval for
 the literal driver command. Phase workers likewise request normal host approval
 for authorized Git-metadata writes, including lifecycle completion's
 intent-to-add check. Workspace-write protects the Git object database even
@@ -219,7 +238,9 @@ grant no new publication or account-setting authority, and select no new Support
 A reusable research Support remains a possible later composition of these
 capabilities (product 03's optional environment adapters).
 
-The route stops for the operator merge, an operator finding, an off-ramp or typed
+The route stops for the operator merge, an operator finding, an operator's
+recorded direction (a waiver, retraction, reopened handoff, override record or
+withdrawal; a defect record or a bound acceptance does not stop it) or typed
 correction, analysis or override, refused dispatch, three verification failures,
 two final-review failures, two ended incomplete attempts in one phase, or an
 exhausted budget. A stop's facts describe the log the drive last saw, so a
@@ -230,8 +251,34 @@ Release close requires the launchpad merge and, for a target, the target branch'
 ancestry in its registered base branch on the remote, as close itself judges it.
 Status reads local refs; a drive of a closed order fetches both bases first, because a
 hosted merge reaches neither clone by itself and a failed fetch reads as not yet merged. A merge also needs the order's passing final review in its own control record on the base, as close asks of that base, since a branch with no commits of its own is trivially an ancestor. A target merge counts once its branch has reached the remote base, and the drive also requires that branch to have left its recorded base.
-On Codex CLI 0.166.0, which launches under automatic review, `release close WO-NNN --publish` was declined in every qualification run with no reason reported; the worker ends with `native-permission-refused`, the drive stops with `dispatch-refused` rather than retrying, and the cause is unknown
-([native qualification](../evidence/WO-192/native-qualification.md)).
+A close the host declines is not retried. The drive stops at `awaiting-close`
+and names the next step: type `resume: release close` in the launchpad's main
+checkout for the order or, after a Codex decline, re-enter with `--host claude`,
+the one admitted host change, for that activation's release close only; the
+driver refuses any other phase under it, a later activation drives on the host
+recorded before it, and a decline is carried only while it is the order's
+current fact. The drive record keeps the declined item in the enumerated
+vocabulary with the reason the host printed, its URLs, paths and queries masked,
+or that it printed none, and a declined or failed phase's raw stream, stderr and
+Codex session rollouts stay
+beside the record in ignored storage; the live fixture moves them to
+`docs/control/local/live-drive-reports/` before removing its trees
+([WO-247-D003](../evidence/WO-247/decisions.md#wo-247-d003--what-a-declined-phase-retains-and-where)).
+Every live receipt names the code it ran on: `codeIdentity.source` is the
+authoring checkout's gate code identity at the export the fixture installed,
+beside the fixture trees' own hashes as provenance, and each launched role's row
+carries `drivenStart`, the installed root's bytes plus the launch text, recorded
+and not bounded. A met criterion that names a live lifecycle or drive stands on
+its receipts: completion reads every receipt a met criterion cites, refuses such
+a criterion that cites none or whose receipt's source identity differs from the
+handoff identity, naming both, and records every cited receipt with whether it
+matches, so another criterion may cite a receipt from earlier code as evidence of
+what it recorded
+([WO-247-D005](../evidence/WO-247/decisions.md#wo-247-d005--live-receipts-name-the-code-they-ran-on-and-completion-compares-it)).
+How the Codex close of CLI 0.166.0 was declined, and what its reason admitted,
+is in [WO-247's diagnosis](../evidence/WO-247/codex-close-refusal.md) and
+§Model-specific notes; the earlier runs with no reason retained are in
+[WO-192's native qualification](../evidence/WO-192/native-qualification.md).
 Per-spawner `subagentCap` and the shared `drivenSessionCeiling` bound observed
 admissions. Token and dollar limits remain unset by default; unavailable coverage
 is reported, never counted as savings. The optional instance budget
@@ -378,7 +425,10 @@ table includes the shared goal card and the refuter's separate subject boundary.
    | `resume: verify`        | `npm run resume -- verify`                                                                                                                                                                                                 | verify, writing the exact `VER-NNN` path it allocates                                                                                                                                                                                                                    |
    | `resume: final review`  | `npm run resume -- final-review`                                                                                                                                                                                           | review into the allocated `FINAL-NNN`; on pass, record it, commit the reviewed state, push only the WO branch, and open its PR                                                                                                                                           |
    | `resume: release close` | in a main-checkout session, dispatch `npm run resume -- release-close --work-order WO-NNN`, then run its printed `node <main>/scripts/release.mjs close WO-NNN --publish` helper there (`worktree publish` prints it too); a subject dispatch prints this route; use main's copy after subject removal | update main, consume reviewer gate, publish validated tag and Release, attempt cleanup, refresh each declared export sibling through its recorded checkout with one fast-forward commit to that sibling's main carrying core's tag name and the sibling's Release, and write `docs/control/local/retained/WO-NNN/release-close.json`; for a registered target order, fetch and fast-forward the clone's base, delete declared disposable output, remove the order's literal host rules, and tag and release the target only under `release.policy: declared`; rerun from updated main if Release creation fails or a starter refresh refuses |
-   | the operator accepts criterion N unmet (words captured) | `npm run resume -- waive N --reason <text> --capture <intake file> --capture-hash sha256:<digest> <actor-flags>` from the operator's terminal, a verifier or a reviewer session (WO-158) | the report records `**Criterion N:** unmet, waived by <ordinal>`; the order's executor never records a waiver |
+   | the operator accepts criterion N unmet (words captured) | `npm run resume -- waive N --reason <text> --capture <intake file> --capture-hash sha256:<digest> <actor-flags>` from the operator's terminal, a verifier or a reviewer session (WO-158) | the report records `**Criterion N:** unmet, waived by <ordinal>`; the order's executor never records a waiver; a waiver is recorded only from the operator's words asking for that criterion's waiver, never from words that call a criterion wrong or authorize a commit or a pull request (the fork's WO-021, where a Codex verifier recorded one from such words and the segment was repaired by hand; the 2026-11-01 pass); `retract` undoes a waiver recorded without them (WO-249) |
+   | a criterion no candidate can meet as written (the verifier or the final reviewer judges it) | `npm run resume -- defect N --class bookkeeping\|later-phase\|absent-input\|host-behavior\|contradiction --evidence <text> <actor-flags>` in `verifying` or `final-review` (WO-249) | the report records `**Criterion N:** unmet, defective (<class>) by <ordinal>` with its own evidence and the order goes on; the final review carries the same line, a fail whose blocking finding names N disputes it and a `met` line stands over it; the order's executor never records one, and a launchpad order's pull-request body names it for the operator |
+   | the operator retracts a waiver or a defect record (words captured) | `npm run resume -- retract <ordinal> --reason <text> --capture <intake file> --capture-hash sha256:<digest> <actor-flags>` in `verifying`, `verified`, `needs-fix`, `final-review` or `closed` (WO-249) | the record no longer stands and a line citing it is refused; in `closed` with the pull request unmerged the order returns to `needs-fix` and release close refuses until a repair, a verification and a final review follow; after the merge it is recorded from main and changes no phase; after release close it is refused |
+   | the operator widened the order after its handoff (words captured) | `npm run resume -- reopen-handoff --reason <text> --capture <intake file> --capture-hash sha256:<digest> <actor-flags>` in `ready-to-verify` (WO-249) | the order returns to `active` or `repairing`, the phase its handoff left, with no unmet criteria; the next `implementation-ready` or `repair-complete` writes a fresh ledger |
    | the operator withdraws the order (words captured) | `npm run resume -- withdraw --disposition failed\|superseded\|abandoned --reason <text> --capture <intake file> --capture-hash sha256:<digest> <actor-flags>` (WO-158) | stop: `withdrawn` is terminal, and only `npm run resume -- activate` of a changed revision with a new dated `**Reactivation (YYYY-MM-DD):**` note leaves it |
    | a recorded attestation, report path or checkpoint is wrong, or a recorded passing final review carries no product gate | `npm run resume -- correct <ordinal\|report-path> --set <field>=<value> --reason <text> <actor-flags>` (WO-158); `--set productGate=<evidenceRef>` binds a complete passing `npm test` row whose code identity is the one the pass recorded in its checkpoint and still the working tree's, once, and is the only correction legal in `closed` (WO-115) | never correct a verdict or edit a filed report; a wrong verdict takes a later report; a changed subject takes a fresh final review; publication and release close read the bound gate from the committed correction |
    | `operator override: off` | nothing in Claude, whose hook appends `OperatorOverrideRecorded`; otherwise the printed `npm run resume -- override-record ...` command (WO-158) | record what the override changed in the order's decisions |
@@ -790,7 +840,7 @@ run their gates and regenerate meta artifacts. With no mapping in those
 places, the refusal names all three and the required arrangement.
 
 `dotln.config.json` at the launchpad root declares schema `version: 1` and the
-optional sections `roots`, `classes`, `repositories`, `build`, `release`, `kit`, `derivedOrders`, `portfolios` (§Declaring a portfolio), `historicalWorkOrders` and `contributions`. **Its absence
+optional sections `roots`, `classes`, `repositories`, `build`, `release`, `kit`, `drive`, `derivedOrders`, `portfolios` (§Declaring a portfolio), `historicalWorkOrders` and `contributions`. **Its absence
 means today's layout, byte for byte**, with no pre-control historical order and no
 contributor sign-off exemption, so `status --json`, `current.md`, the generated
 index, `times`, `usage` and a release manifest derived over the real log are
@@ -1012,12 +1062,23 @@ sentence nothing checks is a documented condition, not a gate
 ## Operator recovery controls
 
 Cleanup is owned by the workflow, not handed to the operator. `worktree start`
-creates the worktree without running a prune census. `plan start` and kit update
-preview print a read-only census by kind, class, count and candidate bytes.
-`harness prune --apply` remains the explicit recovery route, with fresh
+creates the worktree without running a prune census. `plan start` applies the
+owned-resource prune and prints its report by kind, class, count and bytes, or
+the read-only census while a gate holds the host lanes; kit update preview
+prints a read-only census. `harness prune --apply` remains the explicit
+recovery route, with fresh
 ownership checks under the host lane lock; a live
 gate is named and retained. A host denial is recorded and cleanup stays on the
 release close's retry path. No command changes host permissions to gain access.
+A role that needs expired or retained roots removed runs `harness prune
+--apply` itself under host permissions and records the receipt; it hands
+the printed command to the operator only after a recorded host denial of
+it, the fallback the release-close text keeps for its publish. Every role
+root states that rule (the operator's item 5 of 2026-11-01;
+[decision](../evidence/WO-252/decisions.md#wo-252-d009)). The router, which
+writes nothing and whose boundary refuses the command, says instead that it
+runs no prune and that the phase session it launches runs it under the same
+rule ([decision](../evidence/WO-252/decisions.md#wo-252-d020)).
 
 `analysis:` interrupts the current routine and opens operator-directed diagnosis.
 The agent explains the observed state, constraints and next options, and awaits
@@ -1051,13 +1112,15 @@ by the routes below [[off-ramps pass](../planning/off-ramps-5s-entropy-2026-09-2
 general helper is a preserved requirement, not a claim of implemented recovery
 for every corrupt repository. Source and review duties: [WO-131 ideation receipt](../evidence/WO-131/ideation.md).
 
-Each of the five routes below is a `resume` command that appends its typed
+Each of the eight routes below is a `resume` command that appends its typed
 event with the actor attestation and a recovery checkpoint (except the closed-order
-pending route below), refuses outside its legal phases with
+pending routes below), refuses outside its legal phases with
 those phases and the lifecycle's legal commands, and projects in `status --json`
 (`legalOffRamps`, `waivedCriteria`, `withdrawal`, `corrections`,
-`overrideRecords`, `boundAcceptances`), `current.md` and the work-order index
-[[WO-158](../work-orders/WO-158-lifecycle-off-ramps.md), 2026-09-25]. The
+`overrideRecords`, `boundAcceptances`, `defectiveCriteria`,
+`retractedOffRamps`, `reopenedHandoffs`), `current.md` and the work-order index
+[[WO-158](../work-orders/WO-158-lifecycle-off-ramps.md), 2026-09-25;
+[WO-249](../work-orders/WO-249-criteria-judge-the-product.md), 2026-11-02]. The
 fold validates each event's shape; the route judges its legality.
 
 - `npm run resume -- accept-overrun <wallClockMs|completeRuns> --ceiling <value|unlimited> --reason <text> --capture <path> --capture-hash sha256:<digest> <actor-flags>`
@@ -1139,8 +1202,106 @@ fold validates each event's shape; the route judges its legality.
   fails a criterion: a report judges it on a
   `**Criterion <id>:** unmet, waived by <ordinal>` line, and
   `verification-result` and `final-review-result` refuse a pass over an
-  unwaived `**Criterion <id>:** unmet` line, a waiver the log lacks, and an
-  `unmet` line that omits the waiver the log holds.
+  `**Criterion <id>:** unmet` line with neither a waiver nor a defect
+  record, a waiver the log lacks or a retraction undid, and an `unmet` line
+  that omits the waiver the log holds. A waiver is recorded only from the
+  operator's words asking for that criterion's waiver, and a criterion holds
+  one record, so a criterion recorded defective takes no waiver until
+  `retract` undoes that record (WO-249).
+- `defect <criterion> --class <class> --evidence <text> <actor-flags>`
+  appends `CriterionDefectRecorded` in `verifying` or `final-review`: the
+  verifier's or the final reviewer's record that a criterion no candidate can
+  meet as written is defective in one of five closed classes, the screens of
+  §Operator-opened planning pass. `bookkeeping`: its subject is a count,
+  ceiling, cost, duration or token figure rather than a behavior.
+  `later-phase`: it asks for a judgment the kit makes at final review or
+  release close, or reads `HEAD` or a commit range before the final review's
+  commit. `absent-input`: the data it reads does not exist at the base and no
+  step creates it. `host-behavior`: it needs a behavior of a host, service or
+  operator account the order cannot produce and names no fallback.
+  `contradiction`: it cannot hold together with another criterion or a
+  non-goal. The event carries the class, the evidence and the SHA-256 of the
+  criterion's text as the order's numbered list declares it, so an amended
+  criterion takes a fresh record, which replaces the earlier one; a record for
+  the same text is refused, and so is one for text whose record the operator
+  retracted, until the criterion is amended. A waived criterion takes no
+  defect record. The order's executor is refused by the waiver's
+  rule: it records the criterion unmet with its class named for the verifier
+  and asks the operator nothing. The record neither passes nor fails a
+  criterion: a report judges it on a
+  `**Criterion <id>:** unmet, defective (<class>) by <ordinal>` line whose
+  paragraph states the judge's own evidence; the report's header fields
+  (`**Actor attestation:**`, `**Actor:**`, `**Process cost:**`,
+  `**Verdict:**`, `**Subject:**`, in any case, as a list item or a
+  quotation, with the colon inside or outside the emphasis) are not evidence,
+  and a summary line stands on the evidence of a detailed line that judges the
+  criterion the same way. A pass must judge
+  every standing record of a criterion the order still declares, on that line
+  or a `met` line, which stands over it; a criterion a planning pass struck is
+  judged by no report. The
+  line is refused when the log holds no standing record at that ordinal, its
+  class differs, a retraction undid it, its paragraph is empty, or the
+  criterion's current text no longer hashes to it. A plain `unmet` line over a
+  standing record is refused except in a fail whose blocking finding's basis
+  names the criterion: a judge who finds it judgeable disputes the record in
+  the report, and the repair follows. No operator confirmation precedes the
+  order going on: for a launchpad order in a repository with a process meter,
+  `release prepare` writes one line per defective or waived criterion above
+  the stored pull-request body's process table, which the operator, who
+  merges every pull request by hand, reads before the merge. A record made
+  after preparation would leave the lines stale, and preparation refuses once
+  the order closes, so `final-review-result pass` refuses a stored body whose
+  lines differ from the record while preparation can still rewrite them, and
+  `worktree publish` refuses one changed after the pass; a target order's or
+  an unmetered repository's body names none. `plan failures` counts the
+  records by class, leaving out a record
+  the operator retracted, while the plan start block carries the off-ramp
+  counts by kind and leaves the class breakdown to `plan failures`.
+- `retract <ordinal> --reason <text> --capture <path> --capture-hash sha256:<digest> <actor-flags>`
+  appends `OffRampRetracted` in `verifying`, `verified`, `needs-fix`,
+  `final-review` or `closed` for a standing `CriterionWaived` or
+  `CriterionDefectRecorded` ordinal of the current activation; another
+  event kind, an earlier activation's record, a record already retracted or
+  replaced, and the order's executor are refused. The capture holds the
+  operator's words. In an open phase the retraction changes no phase, and a
+  report judges the criterion without the record. In `closed` it reads the
+  pull request's merge state as release close does, after fetching origin's
+  main: merged means the order's branch is an ancestor of `origin/main` and
+  `origin/main`'s record holds its passing final review, and for a target
+  order that its target branch is merged too. Unmerged, it is recorded in the
+  order's worktree, which a run from main names, and returns the order to
+  `needs-fix` with
+  the retraction as its failure source (`retraction-<ordinal>`, whose capture
+  the repair briefing names), and release close refuses an order whose
+  retraction is newer than its latest passing final review, read from the
+  merged record and from the order's registered worktree, where the record
+  stays when a branch merges without its repair, and judged against
+  `origin/main`'s latest pass, so a repair that passed in the worktree
+  answers it only once merged: a repair, a fresh verification and a fresh
+  final review precede the merge and the close. Merged, the
+  branch cannot be repaired in place: the command runs from main, where the
+  record waits in the ignored pending lane with closed-order override
+  records until the next `worktree start` carries it into the reviewed
+  record; it changes no phase and leaves the follow-up to a planning pass,
+  which reads it in `plan failures`. A second pending retraction of the same
+  record is refused, and so is one a worktree start already carried into a
+  registered worktree's record, until that branch merges, or one the order's
+  own worktree recorded before a merge that left it unrepaired, which the
+  repair there answers, or, once that repair has passed, merging its branch. A
+  fetch that fails
+  refuses, because an
+  unseen merge cannot be told from an open pull request, and a released
+  order (its release close recorded or its tag published) takes no
+  retraction.
+- `reopen-handoff --reason <text> --capture <path> --capture-hash sha256:<digest> <actor-flags>`
+  appends `HandoffReopened` in `ready-to-verify`, where no verification of
+  the handoff has been requested, and returns the order to the phase its
+  handoff left: `active` after `implementation-ready`, `repairing` after
+  `repair-complete`. It clears the recorded unmet criteria, the next
+  completion writes a fresh ledger, and that phase's timing restarts at the
+  reopening. It is the operator's act through a capture, as a waiver is: the
+  operator widened the order after its handoff, and the stale ledger is not
+  edited in place.
 - `withdraw --disposition failed|superseded|abandoned --reason <text> --capture <path> --capture-hash sha256:<digest> <actor-flags>`
   appends `WorkOrderWithdrawn` from any phase but `closed` and `withdrawn`
   (from `none` only for an allocated order) and records the authority's
@@ -1430,6 +1591,13 @@ Preconditions and inputs:
    same-order lifecycle event with its delay; use that data to judge whether an
    intervention helped. `plan start` counts local closes, denials, interventions,
    long phases, repeated gates and eight recent closes' tracks (WO-178).
+   Denials, interventions and stops include each closed order's journals while
+   its retained lane lasts, counted for that order; `retainedJournals` names the
+   lanes read, their window and the oldest lane's start, so one order's counts
+   change once its lane is pruned. The start block's 1 KB bound is measured on
+   compact JSON, and an overrun prints one line naming the command instead of
+   refusing the branch; an acceptance recorded with `--ceiling unlimited` reads
+   `unlimited` (WO-237).
    `plan start` counts numeric reopening conditions; `npm run plan -- conditions`
    lists them without refusing entry (`--slow` for gate timings, WO-175).
    Read the deferred register rows whose reopening condition opens with an
@@ -1816,7 +1984,40 @@ before and after, in its Cost line and its decisions, from a close's step
 timings or `plan conditions`; a cost that is not measured is `unknown`,
 never assumed cheap ([the 2026-10-28
 pass](../planning/document-contract-and-release-close-2026-10-28.md);
-WO-236-D025). A release's Read before
+WO-236-D025). Five more [[the 2026-11-01 pass](../planning/fork-blocks-close-residue-reviews-criteria-desktop-opt-in-2026-11-01.md),
+the operator's item 7 of that day]: a criterion states a behavior
+observable on the uncommitted candidate by a named command; a count, a
+ceiling, a cost, a duration or a token figure is a Cost line or a decisions
+record and never a criterion's subject (WO-173's criterion 5 and WO-197's
+criterion 2 were waived on a byte figure and a timing ceiling; the fork's
+WO-022 carried a token-spend stop its executor asked the operator to lift);
+a judgment the kit makes at a later phase, the final review's clean subject
+or the release close's clean and undeclared-material judgments, stays with
+that phase, and a clause that reads `HEAD` or a commit range for the
+order's own changes before the final review's commit checks nothing (the
+fork's WO-021 criterion 9 failed its VER-001 on 129 uncommitted paths); a
+criterion that reads data names where it exists at the base or which step
+creates it (WO-197's criterion 1 read per-case timing that began on
+2026-10-05); a criterion that depends on a host, a service or an operator
+account names its fallback evidence (WO-192's criterion 17); and the
+criteria are read against each other and the non-goals for a pair that
+cannot both hold. These are the five classes by which a verifier or a final
+reviewer records a criterion defective with `npm run resume -- defect`
+(bookkeeping, later-phase, absent-input, host-behavior, contradiction).
+`npm run work-orders -- index --check` prints `criteria advisory: WO-NNN
+criterion N: <what matched>` for each criterion of an active or open order
+whose wording often marks
+one: a number followed by a unit (`s`, `ms`, `min`, `h`, `bytes`, `KB`,
+`MB`, `GB`, `tokens`, `USD`, `%`) or a dollar amount (`$5`), a median,
+ceiling, budget or cap beside a figure, `HEAD`, `git log`, a `..` or `...` revision range, or the phrases
+"after the review gate", "at release close" and "after the final review".
+It refuses nothing, because a figure can rightly name a record and a
+regular expression over prose is a screen, not a judgment: the planner reads
+each line before filing. `plan check` returns the same lines as its
+`criteriaAdvisories`, and `npm run test:docs` relays them from its passing
+`index` task, as it relays `ADVISORY` lines. `plan failures` counts the
+records by class, and a
+pass that reads one re-reads this list [WO-249]. A release's Read before
 upgrading is also screened: it asks an instance to read, never to edit a
 closed record by hand. A new or tightened kit check must admit records the
 previous release admitted, or the release is held; the `instance-history`
@@ -2029,11 +2230,39 @@ After worktree and branch cleanup, release close runs the owned-resource prune
 with close scope: the closing order's captured owned roots, main's retained
 lane and this checkout's registered temporary roots. It does not enumerate the
 system temporary directory's unrelated gate fixtures. An explicit
-`harness prune` and the read-only census `plan start` prints still walk them,
-but only `harness prune --apply` removes expired roots outside a close's scope.
+`harness prune` and `plan start` still walk them. `plan start` applies that
+prune, so expired roots outside every close's scope leave at the next planning
+pass; while a gate holds the host lanes it prints the read-only census instead.
+`harness prune --apply` removes them on demand.
 Kit update preview's census is limited to its repository, and session
 completion removes only its own scratch and dead captures
-([decision](../evidence/WO-239/decisions.md#wo-239-d020--resolve-the-integrated-reviews-and-state-the-global-walk-as-built)).
+([decision](../evidence/WO-239/decisions.md#wo-239-d020--resolve-the-integrated-reviews-and-state-the-global-walk-as-built),
+[home of the routine prune](../evidence/WO-237/decisions.md#wo-237-d005--plan-start-is-where-expired-roots-outside-every-close-leave)).
+
+Before release close removes an order's worktree, what its sessions recorded
+moves into main's retained lane for the order,
+`docs/control/local/retained/<WO>/harness/`: the session journals and other
+`*.jsonl` logs, the session `*.json` states with their per-session sidecars,
+the gate index `checks.json`, and `suite-success/` and `deadlines/`. Gate
+captures (`runner/`, `check-history/`, `check-output/`), `targets/`,
+`excludes/`, the writer, the started markers and every link stay and fall with
+the worktree or their own classes. The lane is ignored local material, never
+committed, and an owned root of class `closed-journal` whose window the operator
+owns in the budgets file's `retention` (seed 720 hours; `null` keeps; `0`
+removes at the next prune). The prune judges it as it judges every owned root,
+names its class in the report, and keeps the order's retained lane while it
+remains; the lane admits only the entries a close moves into it. The move runs
+under the writer lock after every other removal check, and the cleanup row and
+`release-close.json` record `journals: { lane, files, bytes, outcome }`. A
+rename across volumes copies and then removes; any other failure is the close's
+cleanup blocker: the worktree stays, the row records `journals.outcome: failed`
+with the error and the retry command, and the published release is untouched.
+A retried close merges into the existing lane: a log appends, the gate index
+takes the union of its rows, an identical file is dropped and a differing state
+keeps its earlier bytes beside the newer one. `plan failures` counts a closed
+order's denials, interventions and stops from its lane, and
+`harness usage <session>` reads a closed session there, naming the lane as its
+source ([decision](../evidence/WO-237/decisions.md#wo-237-d001--a-closed-orders-journals-move-into-its-retained-lane)).
 The close's dry run previews the same candidates within its scope. `release-close.json` retains
 `prune.candidates`, `removed`, `retained` and `blockers`. A refusal is a cleanup
 blocker with the same close retry command. Global apply shares the host lane
@@ -2072,9 +2301,36 @@ worktree-removal, publication, starter-refresh, prune and record. Each row has
 `startedAt`, `finishedAt` and `durationMs`; a skipped step has null timestamps
 and zero duration. Durations exclude nested steps; repeated visits accumulate
 in one row. Prune includes session-end cleanup when the writer is released.
+The worktree-removal row also carries `children`, rows on that step and not
+steps: `base-fetch` (the target clone's base fetch and the finish's fetch of
+main), `disposable-deletion` with the `files` and `bytes` it deleted,
+`finder-metadata`, `journal-retention`, `git-worktree-remove`, `branch-delete`
+and `preservation`, each with its `durationMs`, timed in the close and
+reported by the finish and settle processes. Each is measured inside the
+step's own time and outside any nested step, so their sum stays within the
+row's `durationMs`, which still spans the step; the remainder is the
+judgments and listings between them. A close that stops records `blocker: {
+class, step, message }`, null when the attempt completes: the refusal that
+stopped it, or else its first unresolved blocker, with the innermost step
+that raised it. The class is assigned where the refusal is raised, never read
+from its message, from a closed list: `undeclared-ignored-material`,
+`not-clean`, `writer-held`, `preservation-refused`,
+`declared-root-unreadable`, `host-denied`, `base-fetch` (also the bounded fetch
+WO-246 adds), `foreign-tag`, `starter-refresh`, `publication` and `other`;
+the summary prints it ([decision](../evidence/WO-252/decisions.md#wo-252-d006)).
+A derived worktree the close keeps carries the class of the refusal that kept
+it, as the order's own worktree does, and its preservation and journal move
+are timed among the same children
+([decision](../evidence/WO-252/decisions.md#wo-252-d021)).
 `plan failures` reports the median total wall time and the slowest timed step
 over the latest eight attempts carrying timings; older records keep their
-ordinary counts without invented durations. A close is done when
+ordinary counts without invented durations. Its `localReleaseCloses.blockers`
+counts stopped attempts in the window `byClass` and `byOrder` and names as
+`repeated` a class that stopped the closes of three or more distinct orders,
+a successful close between them not resetting it; `plan start` prints each as
+`close blocker repeated: <class> across N orders`, and an attempt recorded
+before the field carries no class ([decision](../evidence/WO-252/decisions.md#wo-252-d007)).
+A close is done when
 the tag and Release exist, no worktree for the order appears in
 `git worktree list`, its directory is gone and `git branch --list wo-NNN` is
 empty, and no starter-refresh blocker remains. The lower-version no-release
@@ -2249,7 +2505,18 @@ manifest and bundle files before the exact
 retry command. It cannot report a clean close with that ownership residue.
 A class or registration declares `disposable` paths (relative and contained;
 the class's entries and the registration's compose into one sorted set and
-nothing removes a class entry). At close, every
+nothing removes a class entry). An entry may carry two wildcard forms: `**`
+as a whole segment matches any number of segments and `*` matches any
+characters within one segment. Its last segment keeps a literal part, the
+floor that keeps a declaration from naming every ignored file, so `*`, `**`,
+`**/*` and `libs/**` are refused at registration and `**/*.tsbuildinfo` is
+admitted. A listed path lies under an entry when a leading run of its
+segments matches the whole entry, and the shortest such run is the matched
+root, so `**/node_modules` is one line for a whole Nx workspace's nested
+caches. The close takes matches from the ignored listing it already holds and
+inspects and prunes each matched root as it does a declared path; a link on
+the way to a match refuses, naming the pattern that matched it
+([decision](../evidence/WO-252/decisions.md#wo-252-d004)). At close, every
 ignored path under a declared path is deleted from the target worktree before
 the ignored-material judgment, and the base checkout's untracked files are
 judged by the fetched base's `.gitignore` blobs, never the pre-merge working
@@ -2271,8 +2538,62 @@ collisions with fetched tracked paths; the default `"delete"` also deletes
 its declared output. Both policies delete the target worktree's declared output.
 Preview, receipt and role text name the policy. Regenerable output selected
 for deletion is deleted, never moved to scratch or offered back;
-preservation is for operator material, evidence and intake. The receipt lists
-the deleted roots with their file counts and repeats the gate's
+preservation is for operator material, evidence and intake. The kit's own
+writes in the target are judged before either refusal and are never refused:
+what a session recorded in the target's `docs/control/local/harness/`, the
+journals, states and gate index a launchpad worktree's lane takes, and the
+order's change reviews move into main's retained lane for the order beside
+the launchpad worktree's; a writer directory the writer protocol proves
+released, the `.runtime/.metadata_never_index` marker, the files of a
+`.runtime/harness/<hash>` snapshot the kit installed, and the temporary-root
+ledger's segments are deleted, the roots that ledger registers carried in
+the record's `ownedTemporaryRoots` for the close's prune, which then judges
+each by its marker once the target is gone. A lane or writer directory the
+close reaches through a link, such as a tracked link to a directory
+elsewhere, is not the target's: it is neither moved nor deleted and stays
+where the link points
+([decision](../evidence/WO-252/decisions.md#wo-252-d028)), and a refused
+journal move is `preservation-refused` in the preview as in the move
+([decision](../evidence/WO-252/decisions.md#wo-252-d029)). The ledger leaves
+only with the target: it is deleted last, immediately before Git removes the
+worktree, so
+a removal that stops earlier leaves it untouched, and when Git's removal
+stops while the target stands each segment is written back byte for byte
+and its residue row reads `restored`, so every root it registers stays as
+prunable as before the attempt
+([decision](../evidence/WO-252/decisions.md#wo-252-d027)). A snapshot is
+proven by its content, whichever runtime installed it, never by its
+directory name: each file must match, by size and digest or as the same
+package link, the name input whose digest is that name. That input is what
+the runtime the target's hooks load, or main's, would install now; or the
+record `.dotln-snapshot.json` that the installer writes into every snapshot
+it creates, which proves the snapshot when its bytes hash to the directory's
+name; or, for a snapshot installed before records, its own package files
+when they reproduce the name with a pinned file list: a serving runtime's,
+or the one its release pinned, which the kit keeps for every release from
+v0.83.0, the first to name a snapshot by its pinned list and package
+inventory, to v0.111.1, the last to write no record. The close writes the
+record into a snapshot it proved without one before deleting any of its
+files, and deletes every snapshot's record after its other files, so a
+deletion that stops part way leaves the rest provable on retry. A file the
+listing names at that path is judged like any other: undeclared, it is
+refused; declared, it is deleted first so the record can take its place. A
+file the listing does not name there, such as one the repository tracks,
+serves only when it is the record byte for byte; otherwise the close stops
+naming it before anything moves. A snapshot from a release before v0.83.0
+is still refused: its name hashes only its pinned files, so no digest the
+kit holds covers its other package files
+([decision](../evidence/WO-252/decisions.md#wo-252-d026)). A held writer
+stops the close before anything moves; any other file in those directories,
+an operator note or a stray `.env`, is judged like any other path, as is a
+snapshot file no proven input lists or one whose bytes differ, and a
+refusal's named directory never covers declared output or the kit's
+residue. Undeclared output is removed from the launchpad session by the
+target's path, never by a session or writer in the target
+([decision](../evidence/WO-252/decisions.md#wo-252-d005)). The receipt lists
+the deleted roots with their file counts, a pattern's row also listing each
+root it matched with its count, names in `residue` what moved and what was
+deleted, and repeats the gate's
 `baseCheckoutWrites` advisory, the untracked files a gate command left in the
 clone's base checkout; an unreadable advisory record is reported as unavailable
 and does not replace or block the checkout judgments. Under the registration's literal host-rule fallback the
@@ -2631,9 +2952,10 @@ three duties in order; choose relevant lenses and state why in the report.
    holds the same contract, what a maintainer will not understand in six
    months, and whether it fits repository principles and the platform lens
    in §Goal-aligned decisions. Propose improvements with concrete evidence.
-3. **Read the three worker reports and reproduce.** Read the current
-   execution or repair's criteria-adversary, design-improver and consistency
-   reports (below), together with the executor's dispositions. Reproduce the
+3. **Read the worker reports and reproduce.** Read the current execution or
+   repair's criteria-adversary, design-improver and consistency reports and
+   every later round's (below), in `docs/control/local/reviews/WO-NNN/`,
+   together with the executor's dispositions. Reproduce the
    claims your verdict rests on. Spawn a fresh `dotln-worker` only to reproduce one named
    claim you cannot run yourself, with only the order and diff. Never
    delegate the verdict [2026-10-07 pass; the operator's direction of
@@ -2671,6 +2993,42 @@ inside them [WO-187 D042, 2026-10-06; 2026-10-11 pass]. §Discipline's Adjacent 
 next repair, if one happens, fixes boarded follow-ups in the declared
 surfaces within the Boy Scout bound. The verifier writes evidence and its
 immutable report, never the implementation it judges.
+
+A blocking finding names the criterion it fails and the supported input
+that reproduces it, or the behavior `main` had and the probe that shows
+the change broke it. An input the verifier constructed outside the
+supported vocabulary, a hardening wish or a design preference is a
+follow-up: WO-247's verifier announced that an injected status string would
+block criterion 1 before any supported input reproduced it, corrected the
+classification before filing and boarded the hardening (D014), and the
+operator's direction of 2026-11-01 is that more findings take that funnel
+and fewer block. A finding against the clean-room floor or an authority or
+credential boundary blocks whatever criterion it misses, as the floor's own
+refusals do. A criterion no candidate can meet because of how it was
+written is not a failure of the product: the verifier records it with
+`npm run resume -- defect` in one of the five classes of §Operator-opened
+planning pass and judges it `unmet, defective (<class>) by <ordinal>` with
+its evidence; the final reviewer confirms it on the same line with its own
+evidence, or, finding it judgeable, fails with a blocking finding whose basis
+names it; and the operator retracts a wrong record (§Operator recovery
+controls). No role records a waiver from words that did not ask for one
+[[the 2026-11-01 pass](../planning/fork-blocks-close-residue-reviews-criteria-desktop-opt-in-2026-11-01.md);
+[WO-249](../work-orders/WO-249-criteria-judge-the-product.md)].
+
+A fail names what it failed on. `verification-result fail` and
+`final-review-result fail` refuse a report whose findings block is absent
+or unreadable, naming the block, and one whose criterion lines are all met,
+waived or defective while its block lists no `blocking` entry ("a fail
+names an unmet criterion or a blocking finding"). A verification report
+lists its findings in the block a final review uses (below). A blocking
+entry also carries `"basis": {"criterion": "<id>"}` or
+`{"regression": "<the behavior main had>"}` and a `"reproduction"` path to
+a file under the order's evidence directory; an entry without them prints
+one advisory for the report and records, and so does a basis naming a
+criterion the order does not declare or the report judges met. A pass keeps the block advisory:
+a passing verification without a readable block prints the advisory and
+records, as a passing final review does. A findings block also ends a
+judgment's paragraph, so it is never read as a defective line's evidence.
 
 For a design defect in the declared surfaces, the verifier names the repair
 rule itself; it is blocking only when a criterion is unmet or a regression
@@ -2712,10 +3070,11 @@ are read separately when the order names them.
 | Authority and private data | Do effects stay authorized and public data stay separate from private inputs? | Hosts, writes, transport and publication |
 | Maintainer in six months | Can the next maintainer explain the rule and change it safely? | Every nontrivial implementation |
 
-Every execution and fix requires three fresh independent `dotln-worker` agents
-before its complete validation run. Launch or restart them only after
-implementation or repair and its write-backs are complete, never as early
-scouts. Give each the current order and diff, with distinct briefs.
+Every execution and fix runs its independent reviews as a ladder with an end,
+before its complete validation run and only after implementation or repair
+and its write-backs are complete, never as early scouts. Round one is three
+fresh independent `dotln-worker` reviewers over the whole diff against the
+merge base, each given the current order and diff with a distinct brief.
 The criteria adversary seeks concrete
 counterexamples, failed acceptance criteria and missing regression tests;
 design cleanup is outside its brief. The design improver seeks simpler
@@ -2739,25 +3098,105 @@ replacing incidental prose coupling with semantic assertions. Report concrete
 producer/consumer pairs, their disposition and unsearched boundaries.
 It does not duplicate criterion attacks or design review.
 An issue discovered in another reviewer's brief is transferred,
-not reviewed twice. The executor fixes or records every distinct finding and writes a line in
-`handoff.md` that starts `self-review: found N; fixed N; recorded N`, then
-names all three workers and their reports. The executor's own separate pass is not
-a substitute for an independent worker. Return changes that materially
-affect a finding to its reviewer. Reviews belong to the execution or repair
-run; ordinary edits do not expire them or require new reviewers. After any new
-set of code changes, restart all three existing reviewers on the current diff
-and finish their rechecks before the next complete run. This includes repairs
-after a failed gate; reuse the same workers within the execution or repair. All three
-reviewers must finish before the complete run starts; resolve their findings
-and return material changes for recheck before that run. Do not restart them
-after a successful complete run. The executor owns the final handoff and
-write-backs before the document check. A list
-marker, balanced inline emphasis or code wrappers may decorate the line;
-case and a parenthetical worker label are tolerated. The three integer counts
-remain required. The advisory checks line shape only; a summary line does
-not prove a review occurred. Both completion commands retain the
-existing advisory when the summary is absent; the mandatory review is the
-executor's duty. No additional receipt or hash check is required.
+not reviewed twice. The executor fixes or records every distinct finding.
+Round two is the recheck: each reviewer whose findings were fixed rechecks
+those fixes on the current diff and nothing else, and a new finding is
+admitted only when it breaks an acceptance criterion or a behavior `main`
+had, the verifier's own standard; any other new finding is recorded in the
+handoff, not fixed. Round three, the last, runs only when round two's fixes
+changed code again: one combined worker carrying the three briefs reads the
+delta since round two's reviewed tree under the same rule. After it no
+reviewer runs in that execution or repair; the executor judges the remaining
+delta. A round whose preceding fixes touch only comments, documentation,
+formatting, test names or regenerated files is skipped, and the handoff line
+says so. A repair after a failed complete run takes the same ladder over its
+own diff, and a repair diff under fifty changed source lines starts at round
+three; that threshold is the planner's figure, and the executor records the
+repair diffs that meet it so a later pass can re-read it. The ladder
+finishes before the complete run and no reviewer runs after it passes; the
+executor's own pass and an earlier run's reviewers cannot stand in for a
+round. The admission rule is what ends the ladder: WO-237 ran four recheck
+rounds (19, 13, 4 and 12 distinct findings) and a fifth from one reviewer
+before the operator stopped it, because each recheck opened new fronts; the
+rounds found defects, and the loop, not the review, was the defect
+[[the 2026-11-01 pass](../planning/fork-blocks-close-residue-reviews-criteria-desktop-opt-in-2026-11-01.md),
+the operator's items 6 and 6.a of that day;
+[WO-250](../work-orders/WO-250-reviews-converge-and-every-worker-counts.md)].
+
+A recheck resumes the same worker where the host keeps it (Claude's
+`SendMessage`), because that worker holds the diff and its own findings and
+the recheck's question is whether each fix holds, not a new search; where the
+host cannot, a fresh worker reads the prior report. Reuse saves the re-read
+and keeps the findings' wording consistent; the anchoring it brings is
+accepted for that question. Either way the re-task counts one use against
+`subagentCap`, as every launch does: in a Claude session the hook counts each
+`Agent` launch, each re-task (a `SendMessage` or an `Agent` call resuming a
+known agent) and each kit launch by its literal command, and under Codex,
+whose tool calls are unhooked, the helper counts its own launch and the role
+text keeps the explicit count. `node scripts/harness.mjs usage <session>`
+prints `workers: launched N (claude A, codex B), re-tasked M, cap C,
+remaining R`. A full ladder spends seven uses (three round-one workers, three
+rechecks and one combined worker) against a default cap of 20; a skipped round
+spends fewer, so three clean round-one reviews end the ladder at three uses,
+and a worker that returns no report costs its use and a retry; `subagentCap`
+in `docs/control/budgets.json` is the operator's knob.
+
+`npm run worker -- review --kind criteria|design|consistency|combined --host
+codex|claude [--order WO-NNN | --subject planning] [--since <tree>] [--round
+N] [--recheck <report>]... [--dry-run]` launches one review worker with the
+canonical brief: the generated `dotln-worker` definition with its probe
+rule, the reviewer brief this section and the role text state (all three for
+`combined`), the round's admission rule, the order's text (or, with
+`--subject planning` on a `planning/` branch, the branch's changed planning
+documents and orders), the diff stat between the base (the merge base with
+`main` for round one, the last reviewed tree for a recheck) and the working
+tree written as a Git tree, and for a recheck the earlier findings to confirm
+or refute, named by kind and round. It is the route to a Codex worker from a
+Claude session, a Claude print worker from Codex, and a planning subject; in a
+Claude session the `Agent` tool with `dotln-worker` stays the ordinary route.
+It launches through the transports the entropy review uses: Codex at
+`gpt-6.1-sol` and `max` under a read-only sandbox with its tool features on,
+and Claude print at `claude-opus-5-5` and `xhigh` with `Read`, `Grep`, `Glob`
+and a pre-approved list of read commands, every other call denied and the
+project's own instructions and hooks off. The brief gives the worker a budget
+(about 30 minutes and 120 tool calls) to watch and stay within, returning the
+findings it has and naming what it did not reach as it nears either, because a
+worker stopped at a hard limit (60 minutes) returns nothing; the transcript is
+never a limit, since Codex's event stream echoes every command it ran, so the
+final message has its own file and only the stream's tail is kept for its usage
+counters. A round needs what its brief states: a recheck names its report with
+`--recheck`, and the combined round names an earlier report or its base with
+`--since`. It writes
+`docs/control/local/reviews/WO-NNN/round-<N>-<kind>.md` (a repair's under
+`repair-<n>/`, and never over an existing report) and a `.json` beside
+it in the closed findings shape (`id`, `severity` `blocking|should-fix|note`,
+`summary`, `file`, `line` and a `basis` of `{criterion}` or `{regression}`,
+the vocabulary a verifier's blocking entry carries, or null), prints
+`review: <kind> round <N> found <N> (<B> blocking); <elapsed>` or that the
+worker returned no report, and appends a `WorkerLaunched` row to the
+session's journal. The executor records an `Agent` worker's returned text in
+the same lane under the round and kind name with `npm run worker -- record
+--kind <kind> --round <N> --from <file>`, which binds it with the same
+validator and writes the same record, so the verifier reads every round and a
+fresh worker can recheck it whatever the launch route; release close moves the lane into the
+order's retained lane under `reviews/`, beside its journals. The reports are
+the executor's working record; the consolidated account and the handoff line
+are the committed one.
+
+The executor writes a line in `handoff.md` that starts `self-review: found N;
+fixed N; recorded N`, optionally followed by `; rounds R` (with a
+parenthetical note such as a skipped round) and `; unreviewed M lines
+(<reason>)`, and names every round's workers and reports. Reviews belong to
+the execution or repair run; ordinary edits do not expire them or require new
+reviewers. The executor owns the final handoff and write-backs before the
+document check. A list marker, balanced inline emphasis or code wrappers may
+decorate the line; case and a parenthetical worker label are tolerated, and
+prose may follow after a space, but a `;` after the counts must open one of
+the two fields. The three integer counts remain required. The advisory checks
+line shape only; a summary line does not prove a review occurred. Both
+completion commands retain the existing advisory when the summary is absent
+or malformed; the mandatory review is the executor's duty. No additional
+receipt or hash check is required.
 
 Final review is acceptance: the criteria, the integration and the release
 surfaces. A finding outside the criteria that breaks no behavior `main` had
@@ -2780,7 +3219,9 @@ advisory naming the cause: a report without exactly one block (any other line
 whose only letters are a marker's name is a second copy, an example
 included), a block that is not a JSON array, an entry with a bad or repeated
 id, an unlisted route or no one-line summary, or a failed review whose block
-lists no blocking finding. The result records in every case. `plan failures` shows per-order counts (its export includes every
+lists no blocking finding. A passing result records in every case; a failed
+one is refused without a readable block, or with neither an unmet line nor a
+blocking entry (above). `plan failures` shows per-order counts (its export includes every
 order); `plan start` gives escapes per final review across all attempts of
 the ten most recently reviewed orders. Historical events without counts are
 unmeasured, so the rate is unknown until every review in that window is
@@ -3037,7 +3478,7 @@ and generated evidence, including fixtures, manifests and installed guidance.
   indefinitely for approval. The current queue is observed with
   `npm run adjacent -- list`; its chat and channel observations are actor-attested.
   Equipped duties run at entry, including the initial Intent to Act announcement.
-  Settle routine version, waiver-route, live-episode, regeneration and reinstall questions within existing authority. Every phase owns its decision, including no-op or deferred: record the evidence, tradeoffs and reopening condition instead of asking the operator to arbitrate implementation or change criteria [WO-219-D003, 2026-10-23].
+  Settle routine version, waiver-route, live-episode, regeneration and reinstall questions within existing authority. Every phase owns its decision, including no-op or deferred: record the evidence, tradeoffs and reopening condition instead of asking the operator to arbitrate implementation or change criteria [WO-219-D003, 2026-10-23]. An unmet criterion of one of the five defect classes is recorded unmet in the handoff ledger with its class named for the verifier, who records the defect; nothing is asked of the operator [WO-249].
   Ordinary `next`/`fix` projects installed equipment and queue state without
   requiring a named-support prompt. Completion advises about queued/running items;
   complete them or record an explicit disposition, with a public FUP for deferrals.
@@ -3279,6 +3720,21 @@ and generated evidence, including fixtures, manifests and installed guidance.
   when available, never substituted from another session or invented as zero.
   Counters and final timings stay in ignored local observations and the
   response; reports may cite them without causing a product-gate rerun.
+  A pull-request body's final meter block carries one table for that order,
+  with a row per dispatch role and eight columns: dispatch, wall clock,
+  tokens, USD, commands, steps, bound stops and bound acceptances. Each cell
+  holds one value; missing observations say `unknown`, and durations use
+  `N h M min`. Below it, each comparable metric has one sentence naming the
+  latest closed order before the subject in the collector's selection and
+  the difference between their order totals, in that metric's unit. An open
+  order is never the reference; no available closed predecessor means no
+  comparison. The six-order Work table, per-cell deltas and omission footer
+  are absent from the body. `npm run meta` retains all collected metrics and
+  labelled previous-order deltas in its terminal text, with a dispatch table
+  for the latest open order. Release preparation replaces an existing meter
+  block for its named subject; regenerating a closed subject uses its own
+  rows when it is in the collector's selection.
+  [Decision](../evidence/WO-248/decisions.md#wo-248-d002).
   Usage, meta and console actor projections apply canonical `RecordCorrected`
   fields while retaining the original events and correction evidence. A
   per-order meter snapshot records the path and SHA-256 of each retained usage
@@ -3440,15 +3896,49 @@ and generated evidence, including fixtures, manifests and installed guidance.
   and the close consume; release close is the post-merge publish of the tag
   and Release and runs no suite; attested harness, version, model and effort
   are logged as given and never refuse, and `ultra` means `xhigh` with
-  subagents; DotLn has six hook refusals (WO-135, WO-139, WO-144 and WO-234): a second writer in a
+  subagents; DotLn has eight hook refusals (WO-135, WO-139, WO-144, WO-234,
+  WO-251 and WO-250): a second writer in a
   worktree; a write during the live gate; a classified repository write
   outside `docs/` and root Markdown on a `planning/` branch; an observable
-  subagent admission exceeding `docs/control/budgets.json` `subagentCap`
-  (default 20, `null` disables); and a known outside-project write destination
+  worker use exceeding `docs/control/budgets.json` `subagentCap`
+  (default 20, `null` disables), where a use is a launch, a re-task (a
+  `SendMessage` or an `Agent` call resuming a known agent) or a worker a kit
+  command launches (§Verification review and attack); a test-runner gate
+  (`npm test` in any form, `test-runner.mjs`, `target-gate.mjs`, `test:docs`,
+  `test:full`, including inside the bounded wrapper) started by an agent the
+  host names `dotln-worker` or `dotln-worker-fable`, refused with
+  `DOTLN_WORKER_GATE_REFUSED` naming the bounded single-test form, while a
+  lifecycle phase agent and the session itself keep their gates; and a known outside-project write destination
   without a containing root declared by its active role or equipped support
   and admitted through the compiled authority envelope; and a complete gate,
   bounded probe or worker launch past the dispatch bound without recorded
-  contextual operator authorization. Root kinds are system
+  contextual operator authorization; and desktop-control tools or the
+  operator's own browser sessions (Claude in Chrome, the desktop app's
+  browser pane) without the instance's `features.desktop-control` election.
+  That election is off by default. `true`, `false` and `{ "on": boolean,
+  "note": "the operator's reason" }` are accepted in `dotln.config.json`;
+  unknown feature ids refuse by name. An election makes these tools
+  admissible, but the operator must still explicitly request their use in
+  the session. The permission hook reads the election at judgment time;
+  `harness emit` writes the matching server, enable-tool and Skill deny
+  rules into `.claude/settings.json`, and `harness check` detects stale
+  settings. Re-emit after changing the election. Codex tool calls are
+  unhooked and follow the same rule through the role text. The generated
+  refusal count follows its list of classes
+  ([WO-251 decision](../evidence/WO-251/decisions.md#wo-251-d001)).
+
+  Verify a web surface through a browser the session launches or the
+  project's browser tests. Follow product 03's perception hierarchy:
+  structured state, then the DOM and accessibility tree through the
+  Playwright MCP snapshot, then network and event data, then a screenshot
+  read as an image. This does not require installing Playwright. A review
+  worker probes with single tests under the bounded wrapper and starts no
+  gate: the hook refuses one from a spawned `dotln-worker`, and the brief of
+  a Codex worker or a helper-launched Claude print worker, which no hook
+  sees, carries the rule
+  ([WO-250 decision](../evidence/WO-250/decisions.md#wo-250-d004--a-review-workers-gate-is-refused-by-the-agent-type-the-host-names-on-its-call);
+  [the 2026-11-01 pass](../planning/fork-blocks-close-residue-reviews-criteria-desktop-opt-in-2026-11-01.md),
+  the operator's items 6.b and 10 of that day). Root kinds are system
   temporary, DotLn session scratch, the host-printed scratchpad, main's ignored
   intake, an operator-named absolute root, the order's recorded worktrees and
   the registered target worktree; the manifest names declaration and
@@ -3480,9 +3970,12 @@ and generated evidence, including fixtures, manifests and installed guidance.
   writes do not consult this grant. `operator override:` remains recovery.
   Order-named roots do not automatically become grants. Workflow admission needs a remaining unit;
   the workflow call consumes none, and attributable children count at their
-  first tool call. Missing/unreadable counters admit with a cause-specific
-  advisory. Stop and `harness usage` report observed count, cap and unknown
-  remainder; unresolved direct/child overlap is labeled a minimum. Plan the
+  first tool call. A re-task and each worker a kit command launches count
+  one use each, charged once per tool call; a counter written before uses
+  were counted keeps its counts. Missing/unreadable counters admit with a
+  cause-specific advisory. Stop and `harness usage` report observed uses by
+  kind and host, the cap and the unknown remainder; unresolved direct/child
+  overlap is labeled a minimum. Plan the
   whole fan-out against the root's remaining budget before the first spawn,
   state it in the response, and batch review/refutation over item groups:
   one agent judges several items, never one agent per item per pass. A Codex
@@ -3802,9 +4295,41 @@ Within the same gate, a child's explicitly assigned suite keeps its own
 outcome at completion and later prune; a passed parent cannot shorten a failed
 child's diagnosis window.
 Ownership markers describe one physical directory: fixture copies exclude
-them, and fixture seeds keep them out of Git, clones and archives. An invalid
-nested marker retains its tree and fails cleanup rather than qualifying a
-passing row. Application scratch keeps
+them, and fixture seeds keep them out of Git, clones and archives. A root is
+the token in its marker and its inode, and the prune refuses a root whose
+owner keeps a ledger that does not register that token at that path. A device
+number assigned at mount can change across a reboot; when the inode matches
+and the owner's ledger registers that token at that path, the transition is
+ledgered as `device-renumbered` with both numbers and the marker re-stamped
+with the current number, so the root is judged by its class and window. Where
+the owner repository no longer exists, as after a close removed its checkout,
+no ledger remains to hold the root, and its second proof is its marker: the
+marker inside the directory carrying the record's token, with the record's
+inode, re-stamps the device, so `harness prune --apply` removes such a root
+after its window instead of refusing it at every read
+([decision](../evidence/WO-252/decisions.md#wo-252-d008)). A
+different inode, a token the ledger does not register there, or a record naming
+a repository that holds no such registration is still refused, and nothing is
+deleted. A removal deletes only the directory it verified: one rename moves
+the root aside within its parent, and only a moved directory carrying the
+record's inode and token is deleted. A replacement goes back to its path while
+that is free, and a parent that refuses the rename refuses before anything
+inside is deleted. Nothing inside a root is touched until it is verified:
+owned roots nested in it go with it, and the owner record is deleted last. A
+root that a stopped removal left aside as
+`dotln-removing-<token>` is listed there and finished by the next prune
+([decision](../evidence/WO-237/decisions.md#wo-237-d004--a-root-is-its-token-and-its-inode)).
+A root found inside its parent's aside is bound through the parent's
+registration, also at its own aside there, and its removal is recorded under
+its own registration, which ends with it; a ledger segment waits while its
+root may sit in an aside, its own wherever the removal recorded it or an
+absent ancestor's, whichever repository's ledger recorded that move; and the
+empty directory a stop between deleting the owner record and the directory
+leaves under the token's aside name is removed with `rmdir`, which refuses
+anything that appears in it since, while an unmarked aside that still holds
+something keeps it ([decision](../evidence/WO-252/decisions.md#wo-252-d008)).
+An invalid nested marker retains its tree and fails cleanup rather than
+qualifying a passing row. Application scratch keeps
 its explicit operation cleanup; the containing fixture provides fallback cleanup
 for leftovers. Root-token ledger segments are
 retired independently after their gate metrics are durable, so cleanup does
@@ -3825,10 +4350,16 @@ fresh offline `npm ci`. A cold cache adds one installation; a warm run adds none
 A changed hash makes the old cache eligible only after ownership checks.
 `docs/control/budgets.json` and the kit template seed retention hours: passed
 fixtures 0, failed fixtures 24, orphan session scratch 24, worker captures 1,
-legacy backfill 48, warm fixtures 0 after stale, coordination indefinite.
+legacy backfill 48, warm fixtures 0 after stale, coordination indefinite,
+closed orders' journals (`closed-journal`) 720.
 Each key admits `null` to preserve independently owned roots in that class.
+A runtime ignores a key its kit does not define, as a pinned hook snapshot
+meets after its worktree integrates a newer budgets file; the gate's budget
+validation still refuses it.
 When an orphan's actual end was not observed, apply records the first proven
-dead-owner observation and starts its full window then; preview writes nothing.
+dead-owner observation and starts its full window then; preview writes nothing,
+except that reading a root whose volume a reboot renumbered re-stamps that
+root's own owner record and ledger.
 Session completion explicitly tears down only its own scratch and dead captures
 after writer release and observed background work. An ordinary Claude Stop is
 a turn end: a live or unknown host keeps its scratch until the dispatch's
@@ -3887,9 +4418,10 @@ as `npm test -- --only <suite>`, the spelling the handoff reads. The
 executor and each repair finish formatting and regeneration, then start one
 complete run, `npm test -- --review`, in the background and never under the
 bounded probe wrapper. If it fails and a repair changes code, finish the repair
-and its write-backs, format, then restart all three existing reviewers on the
-changed code, resolve their findings
-and wait for all three to finish before starting a fresh complete run.
+and its write-backs, format, then take the repair's diff through the review
+ladder of §Verification review and attack (round three alone when the diff is
+under fifty changed source lines) and finish it before starting a fresh
+complete run.
 Synthetic lifecycle tests belong to the product
 preflight: `resume --fixtures-only` must pass before later product suites,
 including with `--keep-going`. The separate `resume-docs` selection retains
@@ -4081,12 +4613,34 @@ carry the same pins for the phase workers a router spawns. The host's [subagent 
 documents both fields, per-call model precedence and `/tasks` model/effort
 readback (checked 2026-10-05). Codex workers use `spawn_agent` with
 `fork_turns: none`, `model: gpt-6.1-sol`, `reasoning_effort: max`; use the same
-pin for adversaries, reviewers, refuters and research. Generated-definition
+pin for adversaries, reviewers, refuters and research. A review worker on the
+other host launches through `npm run worker -- review --host codex|claude`
+(§Verification review and attack) at these pins, and its `WorkerLaunched`
+journal row records the pinned model and effort with their source and the
+host's own readback where its CLI prints one. Generated-definition
 and call arguments are launch selections, never proof of effective effort.
 Report the host's readback or that it reports none; a root's own selection
 does not decide the worker's. A script that regenerates a dated record keeps the
 model that record names and says so beside it; the attestation records what
 ran.
+
+**Codex CLI 0.166.0 and the driven close (WO-247, read 2026-11-01).** Under
+the default `drive.sandbox: host` election a Codex phase runs under automatic
+review (`--approve-for-me`): a separate reviewer agent judges each request to
+leave the sandbox from a compact transcript and the exact request, and prints
+its verdict on stderr while the `--json` stream shows the item as `declined`
+with no reason. It admitted every lifecycle command of the executor, verifier
+and reviewer and the release-close handoff command, and declined the close
+helper `release.mjs close WO-NNN --publish` because the launchpad's own handoff
+had told it the helper authorizes an annotated tag and a GitHub Release, which
+a no-release close does not do; the handoff now states each order's actual
+effect. The drive retains the declined item with the printed reason, stops at
+`awaiting-close` naming the attended close and the admitted `--host claude`
+re-entry, and never retries a declined launcher. An operator's own Codex drive
+session runs no `harness begin`, so its router usage stays unknown; only the
+live fixture's Codex router begins with its order (WO-192-D101). The diagnosis
+and the runs are in [WO-247's diagnosis](../evidence/WO-247/codex-close-refusal.md)
+and [native qualification](../evidence/WO-247/native-qualification.md).
 
 The opt-in Claude type `.claude/agents/dotln-worker-fable.md` selects
 `claude-fable-5-1` at `xhigh` only when the operator's `planning:` or

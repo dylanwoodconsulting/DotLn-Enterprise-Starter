@@ -39,6 +39,7 @@ import {
   docRelative,
   findLaunchpad,
   loadConfig,
+  readFeatures,
   rootPattern,
   targetDocRelative,
   validReleaseDisplayName,
@@ -191,6 +192,64 @@ test("publication declarations under a configured root require both editions", (
       rmSync(join(root, file));
     }
   }));
+
+test("desktop-control feature elections validate without granting a default", () => {
+  temporary("config-features", (root) => {
+    assert.deepEqual(loadConfig(root).features, {});
+    assert.deepEqual(readFeatures(root), { "desktop-control": false });
+    declared({ root, body: { version: 1 } });
+    assert.deepEqual(readFeatures(root), { "desktop-control": false });
+    for (const value of [
+      true,
+      false,
+      { on: true, note: "Requested browser work" },
+      { on: false },
+      { on: false, note: "" },
+    ]) {
+      declared({
+        root,
+        body: { version: 1, features: { "desktop-control": value } },
+      });
+      assert.deepEqual(loadConfig(root).features["desktop-control"], value);
+      assert.equal(
+        readFeatures(root)["desktop-control"],
+        value === true || value.on === true,
+      );
+    }
+    for (const [features, message] of [
+      [null, /features must be an object/],
+      [[], /features must be an object/],
+      [{ "desktop-controls": true }, /unknown features key "desktop-controls"/],
+      [
+        { "desktop-control": "true" },
+        /features.desktop-control must be an object/,
+      ],
+      [
+        { "desktop-control": null },
+        /features.desktop-control must be an object/,
+      ],
+      [
+        { "desktop-control": { note: "No election" } },
+        /features.desktop-control.on must be a boolean/,
+      ],
+      [
+        { "desktop-control": { on: "true" } },
+        /features.desktop-control.on must be a boolean/,
+      ],
+      [
+        { "desktop-control": { on: true, note: 1 } },
+        /features.desktop-control.note must be a string/,
+      ],
+      [
+        { "desktop-control": { on: true, extra: true } },
+        /unknown features.desktop-control key "extra"/,
+      ],
+    ]) {
+      declared({ root, body: { version: 1, features } });
+      assert.throws(() => loadConfig(root), message);
+    }
+  });
+});
 
 await test("configuration root", async (t) => {
   await t.test(
@@ -707,6 +766,37 @@ await test("configuration root", async (t) => {
         },
         /repositories\.target\.disposable must be an array/,
       );
+      // A declaration whose last segment is wholly a wildcard would name
+      // every ignored file below it; the floor refuses it at registration,
+      // and `**` is admitted only as a whole segment.
+      for (const entry of ["*", "**", "**/*", "libs/**", "libs/*/**"])
+        refuses(
+          {
+            version: 1,
+            repositories: {
+              target: registeredRepository({ disposable: [entry] }),
+            },
+          },
+          new RegExp(
+            `repositories\\.target\\.disposable entries must end in a segment with a literal part, the floor that keeps a declaration from naming every ignored file: ${escape(entry)}$`,
+          ),
+        );
+      for (const entry of ["libs/**dist", "**.tsbuildinfo"])
+        refuses(
+          {
+            version: 1,
+            classes: {
+              "fixture-class": {
+                checks: [],
+                supports: [],
+                disposable: [entry],
+              },
+            },
+          },
+          new RegExp(
+            `classes\\.fixture-class\\.disposable entries use \\*\\* only as a whole segment matching any number of segments: ${escape(entry)}$`,
+          ),
+        );
       refuses(
         {
           version: 1,
@@ -734,7 +824,14 @@ await test("configuration root", async (t) => {
           },
           repositories: {
             target: registeredRepository({
-              disposable: ["node_modules/", "dist", ".angular"],
+              disposable: [
+                "node_modules/",
+                "dist",
+                ".angular",
+                "**/node_modules/",
+                "**/*.tsbuildinfo",
+                "libs/*/dist",
+              ],
               release: { policy: "declared" },
               hostRules: "literal",
             }),
@@ -745,8 +842,11 @@ await test("configuration root", async (t) => {
       const declared = loadConfig(root);
       assert.deepEqual(declared.classes["fixture-class"].disposable, ["dist"]);
       assert.deepEqual(declared.repositories.target.disposable, [
+        "**/*.tsbuildinfo",
+        "**/node_modules",
         ".angular",
         "dist",
+        "libs/*/dist",
         "node_modules",
       ]);
       assert.deepEqual(declared.repositories.target.release, {
@@ -809,6 +909,30 @@ await test("configuration root", async (t) => {
       );
       refuses({ version: 1, build: { loadout: 1 } }, /build\.loadout/);
       refuses({ version: 1, build: { other: "x" } }, /unknown build key/);
+      // The sandbox election a routed run gets (WO-247): host or off, default
+      // host, nothing else, and no other drive key.
+      refuses(
+        { version: 1, drive: { sandbox: "danger-full-access" } },
+        /drive\.sandbox must be "host" or "off"; found "danger-full-access"/,
+      );
+      refuses(
+        { version: 1, drive: { sandbox: true } },
+        /drive\.sandbox must be/,
+      );
+      refuses({ version: 1, drive: { other: "x" } }, /unknown drive key/);
+      refuses({ version: 1, drive: [] }, /drive must be an object/);
+      for (const [declared, expected] of [
+        [{}, "host"],
+        [{ drive: {} }, "host"],
+        [{ drive: { sandbox: "host" } }, "host"],
+        [{ drive: { sandbox: "off" } }, "off"],
+      ]) {
+        writeFileSync(
+          join(root, CONFIG_FILENAME),
+          `${JSON.stringify({ version: 1, classes: { "fixture-class": { checks: [], supports: [] } }, ...declared })}\n`,
+        );
+        assert.deepEqual(loadConfig(root).drive, { sandbox: expected });
+      }
       refuses({ version: 1, release: { corpus: "yes" } }, /release\.corpus/);
       refuses({ version: 1, release: { other: true } }, /unknown release key/);
       for (const displayName of [
@@ -1373,7 +1497,8 @@ await test("configuration root", async (t) => {
         // default-rooted writes left are the Git-ignored local harness lane
         // owned by packages/skeleton, which resolves its own paths until the
         // kit carries this loader (WO-069-D005; deferred by WO-070-D009 to
-        // FUP-a058e82c0bbd9b6d).
+        // FUP-a058e82c0bbd9b6d), and the Git-ignored runtime lane, where every
+        // temporary root's owner record and its Spotlight marker live (WO-233).
         const outside = documents(root).filter(
           (path) =>
             !path.startsWith("records/") &&
@@ -1382,6 +1507,7 @@ await test("configuration root", async (t) => {
             path !== ".gitignore" &&
             !path.startsWith("target/") &&
             !path.startsWith(".control-beacons/") &&
+            !path.startsWith(".runtime/") &&
             !path.startsWith("docs/control/local/"),
         );
         assert.deepEqual(

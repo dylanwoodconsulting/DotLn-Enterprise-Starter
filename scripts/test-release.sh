@@ -626,6 +626,15 @@ printf '\nHistorical example outside the release block: `v9.9.9`.\n' >>"$main/RE
 release_command check-surfaces >/dev/null
 printf '# No release block\n' >"$main/README.md"
 assert_surface_failure 'observed 0 begin marker(s), 0 end marker(s)'
+# Close uses this same surface judgment, in both working and committed kit roots.
+printf '{}\n' >"$main/KIT-MANIFEST.json"
+release_command check-surfaces | grep -Fq 'PASS release-block: not carried (kit root without markers)'
+git -C "$main" add README.md KIT-MANIFEST.json
+git -C "$main" -c maintenance.auto=false commit -qm 'test: kit front page without markers'
+release_command check-surfaces --committed WO-099 | grep -Fq 'PASS release-block: not carried (kit root without markers)'
+printf '%s\n' '<!-- DOTLN-RELEASE-BEGIN -->' >"$main/README.md"
+assert_surface_failure 'observed 1 begin marker(s), 0 end marker(s)'
+# Both markers, malformed markers and prose still retain their ordinary refusals.
 printf '%s\n' \
   '<!-- DOTLN-RELEASE-END -->' \
   'This source prepares DotLn `v0.2.1`.' \
@@ -660,6 +669,7 @@ printf '%s\n' \
   'This source prepares DotLn `v0.2.1`, and now also compiles tables.' \
   '<!-- DOTLN-RELEASE-END -->' >"$main/README.md"
 assert_surface_failure 'observed line "This source prepares DotLn `v0.2.1`, and now also compiles tables."; expected exactly the generated line "This source prepares DotLn `v0.2.1`."'
+rm "$main/KIT-MANIFEST.json"
 write_release_block "$main" v0.2.1
 printf '# WO-099 — malformed fixture target, v0.2.1-beta\n\n**Objective:** Reject a non-strict target.\n\n**Non-goals:** No distribution.\n' >"$main/docs/work-orders/WO-099-fixture.md"
 if malformed_authority="$(release_command check-surfaces 2>&1)"; then
@@ -818,7 +828,7 @@ const { guardRefusals, stopRefusals, operatorCorrections } = row.metrics;
 if (others.length || row.workOrder !== "WO-099" || guardRefusals !== 1 || stopRefusals !== 1 || operatorCorrections !== 1 || row.corrections.source !== "session-journal")
   throw new Error(`unexpected snapshot ${JSON.stringify(row.metrics)}`);
 ' "$main/docs/evidence/WO-099/meta.json"
-grep -Fq '| Corrections | Directions |' "$main/docs/final-reviews/WO-099/PR.md"
+grep -Fxq '| Dispatch | Wall clock | Tokens | USD | Commands | Steps | Bound stops | Bound acceptances |' "$main/docs/final-reviews/WO-099/PR.md"
 release_command check-surfaces --local >/dev/null
 # A placeholder heading is assigned from the latest tag and recorded (WO-086).
 printf '# WO-099 — fixture (version assigned at activation)\n\n**Release classification:** patch. Existing scope.\n\n**Objective:** Fixture retiming.\n' >"$main/docs/work-orders/WO-099-fixture.md"
@@ -841,6 +851,9 @@ printf '# WO-099 — fixture (v0.2.0)\n\n**Release classification:** patch. Exis
 printf '# Roadmap\n\n## Release boundary\n\nPreserve the existing boundary.\n' >"$main/docs/product/06-roadmap.md"
 printf '%s\n' '{"schemaVersion":1,"type":"WorkOrderActivated","workOrderId":"WO-099","workOrderPath":"docs/work-orders/WO-099-fixture.md"}' >"$main/docs/control/orders/WO-099.jsonl"
 cp "$script_dir/../docs/control/budgets.json" "$main/docs/control/budgets.json"
+# Another open order must never contribute rows to this order's stored body.
+printf '# WO-100 — other fixture\n' >"$main/docs/work-orders/WO-100-fixture.md"
+printf '%s\n' '{"schemaVersion":1,"type":"WorkOrderActivated","workOrderId":"WO-100","workOrderPath":"docs/work-orders/WO-100-fixture.md"}' >"$main/docs/control/orders/WO-100.jsonl"
 # A stored body whose meter block drifted between the heading and the prose.
 printf '# WO-099\n\n<!-- dotln-process-meter:start -->\n\nstale meter\n\n<!-- dotln-process-meter:end -->\n\nFirst reviewed paragraph.\n\nSecond reviewed paragraph.\n' >"$main/docs/final-reviews/WO-099/PR.md"
 moved="$(release_command prepare --local)"
@@ -853,6 +866,16 @@ assert.ok(block, "meter block present");
 assert.equal(body.slice(0, block.index), "# WO-099\n\nFirst reviewed paragraph.\n\nSecond reviewed paragraph.\n\n", "the prose keeps its bytes and precedes the block");
 assert.equal(body.slice(block.index + block[0].length), "\n", "the block is last");
 assert.doesNotMatch(body, /stale meter/u);
+assert.equal(body.split("\n").filter((line) => line.startsWith("| Dispatch |")).length, 1);
+assert.match(body, /^\| Dispatch \| Wall clock \| Tokens \| USD \| Commands \| Steps \| Bound stops \| Bound acceptances \|$/m);
+assert.match(body, /^\| WO-099\/executor \|/m);
+assert.doesNotMatch(body, /WO-100|\| Work \||omitted|Δ/);
+for (const row of body.split("\n").filter((line) => line.startsWith("| WO-"))) {
+  const cells = row.split("|").slice(1, -1).map((cell) => cell.trim());
+  assert.equal(cells.length, 8);
+  assert.match(cells[1], /^(unknown|\d+ h \d+ min)$/);
+  for (const cell of cells.slice(2)) assert.match(cell, /^(unknown|[\d,]+(?:\.\d+)?)$/);
+}
 JS
 "$node_bin" --input-type=module - "$main" <<'JS'
 import assert from 'node:assert/strict';
@@ -869,6 +892,8 @@ const body=await regeneratedPullRequestBody(root,'WO-099','HEAD');
 assert.match(body,/^# WO-099\n\nFirst reviewed paragraph\.\n\nSecond reviewed paragraph\.\n\n<!-- dotln-process-meter:start -->/u);
 assert.match(body,/<!-- dotln-process-meter:end -->\n$/u);
 assert.doesNotMatch(body,/old/u);
+assert.match(body,/^\| WO-099\/executor \|/m);
+assert.doesNotMatch(body,/WO-100|\| Work \||omitted|Δ/);
 writeFileSync(path, stored);
 JS
 # The shape check judges the current order's stored body at check-surfaces.
@@ -883,6 +908,129 @@ printf '# WO-099\n\nParagraph.\n\n<!-- dotln-process-meter:start -->\n\nmeter\n\
 shaped="$(release_command check-surfaces --local)"
 grep -Fq 'PASS github-body-profile: observed docs/final-reviews/WO-099/PR.md' <<<"$shaped"
 printf 'release prepare keeps the meter block last and check-surfaces judges the stored body shape of the current order only\n'
+}
+
+release_case_criterion_records() {
+make_repo criterion_records
+"$node_bin" "$script_dir/test-reader-fixture.mjs" "$main"
+git -C "$main" switch -c wo-099 >/dev/null 2>&1
+mkdir -p "$main/docs/control/orders" "$main/docs/product" "$main/docs/final-reviews/WO-099"
+printf '# WO-099 — fixture (v0.2.0)\n\n**Release classification:** patch. Existing scope.\n\n**Objective:** Fixture criterion records.\n\n**Acceptance criteria (all required)**\n\n1. One.\n2. Two.\n3. Three.\n' >"$main/docs/work-orders/WO-099-fixture.md"
+printf '# Roadmap\n\n## Release boundary\n\nPreserve the existing boundary.\n' >"$main/docs/product/06-roadmap.md"
+local actor='{"harness":"human","harnessVersion":"not-applicable","model":"human","effort":"unknown","source":"operator-attested"}'
+local digest
+digest="sha256:$(printf 'a%.0s' {1..64})"
+# One waived and one defective criterion of the order, at ordinals 4 and 5.
+printf '%s\n' \
+  '{"schemaVersion":1,"type":"WorkOrderActivated","workOrderId":"WO-099","workOrderPath":"docs/work-orders/WO-099-fixture.md"}' \
+  '{"schemaVersion":1,"type":"ImplementationReady","workOrderId":"WO-099"}' \
+  '{"schemaVersion":1,"type":"VerificationRequested","workOrderId":"WO-099","verificationId":"VER-001","reportPath":"docs/verifications/WO-099/VER-001.md"}' \
+  "{\"schemaVersion\":1,\"type\":\"CriterionWaived\",\"workOrderId\":\"WO-099\",\"criterionId\":\"2\",\"reason\":\"Fixture waiver.\",\"capture\":\"docs/intake/waiver.md\",\"captureHash\":\"$digest\",\"actor\":$actor}" \
+  "{\"schemaVersion\":1,\"type\":\"CriterionDefectRecorded\",\"workOrderId\":\"WO-099\",\"criterionId\":\"3\",\"criterionHash\":\"$digest\",\"class\":\"bookkeeping\",\"evidence\":\"Its subject is a count.\",\"actor\":$actor}" \
+  >"$main/docs/control/orders/WO-099.jsonl"
+cp "$script_dir/../docs/control/budgets.json" "$main/docs/control/budgets.json"
+printf '# WO-099\n\nReviewed paragraph.\n' >"$main/docs/final-reviews/WO-099/PR.md"
+local prepared
+prepared="$(release_command prepare --local)"
+grep -Fxq '  docs/final-reviews/WO-099/PR.md' <<<"$prepared"
+"$node_bin" - "$main/docs/final-reviews/WO-099/PR.md" <<'JS'
+const assert = require("node:assert/strict"), fs = require("node:fs");
+const body = fs.readFileSync(process.argv[2], "utf8");
+const records = body.indexOf("<!-- dotln-criterion-records:start -->");
+const meter = body.indexOf("<!-- dotln-process-meter:start -->");
+assert.ok(records > 0 && records < meter, "the records stand above the process table");
+assert.ok(body.indexOf("Reviewed paragraph.") < records, "the reviewer's prose stays first");
+const lines = body.slice(records, meter).split("\n").filter((line) => line.startsWith("- "));
+assert.deepEqual(lines, [
+  "- Criterion 2: waived by ordinal 4; npm run resume -- retract 4 --work-order WO-099 in the order's worktree undoes a waiver the operator's words did not ask for.",
+  "- Criterion 3: defective (bookkeeping) by ordinal 5; npm run resume -- retract 5 --work-order WO-099 in the order's worktree undoes a wrong record before the merge.",
+]);
+JS
+# The pass and the publication read the prepared lines as release
+# preparation wrote them, from the record as the fold holds it.
+"$node_bin" --input-type=module - "$main" <<'JS'
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
+const [root] = process.argv.slice(2);
+const load = (path) => import(pathToFileURL(join(root, path)).href);
+const { criterionRecordRefusal } = await load("scripts/lib/github-body.mjs");
+const { readControl } = await load("scripts/lib/control-store.mjs");
+const state = readControl(root).orders.get("WO-099").state;
+const body = readFileSync(join(root, "docs/final-reviews/WO-099/PR.md"), "utf8");
+assert.equal(criterionRecordRefusal(root, body, state), null);
+JS
+# The github-body-profile check passes over the stored body.
+release_command check-surfaces --local >/dev/null
+printf 'release preparation names each waived and defective criterion above the process table, the pass and publication read the same lines, and the body keeps its profile\n'
+}
+
+release_case_unrepaired_retraction() {
+make_repo unrepaired_retraction
+commit_candidate "$main" WO-099 v0.2.1
+local log="$main/docs/control/resume.jsonl"
+local actor='{"harness":"human","harnessVersion":"not-applicable","model":"human","effort":"unknown","source":"operator-attested"}'
+local digest waiver output
+digest="sha256:$(printf 'a%.0s' {1..64})"
+printf '%s\n' "{\"schemaVersion\":1,\"type\":\"CriterionWaived\",\"workOrderId\":\"WO-099\",\"criterionId\":\"2\",\"reason\":\"Fixture waiver.\",\"capture\":\"docs/intake/waiver.md\",\"captureHash\":\"$digest\",\"actor\":$actor}" >>"$log"
+waiver="$(wc -l <"$log" | tr -d ' ')"
+# The operator retracted the waiver before the merge, and the merged record
+# holds no repair after it: the close refuses and publishes nothing.
+printf '%s\n' "{\"schemaVersion\":1,\"type\":\"OffRampRetracted\",\"workOrderId\":\"WO-099\",\"subject\":{\"ordinal\":$waiver,\"type\":\"CriterionWaived\",\"criterionId\":\"2\"},\"reason\":\"Fixture retraction.\",\"capture\":\"docs/intake/retraction.md\",\"captureHash\":\"$digest\",\"pullRequest\":\"unmerged\",\"actor\":$actor}" >>"$log"
+git -C "$main" add docs/control
+git -C "$main" -c maintenance.auto=false commit -qm 'WO-099 retraction before its repair'
+git -C "$main" push origin main >/dev/null 2>&1
+if output="$(release_close WO-099 --publish 2>&1)"; then printf 'error: release close published over an unrepaired retraction\n' >&2; exit 1; fi
+if ! grep -Fq "release close refused: WO-099's retraction of ordinal $waiver (the CriterionWaived of criterion 2) is newer than its latest passing final review" <<<"$output"; then
+  printf 'error: release close did not name the unrepaired retraction:\n%s\n' "$output" >&2
+  exit 1
+fi
+assert_no_candidate_tag "$main" "$origin"
+printf 'release close refuses an order whose retraction is newer than its latest passing final review\n'
+}
+
+release_case_worktree_retraction() {
+make_repo worktree_retraction
+commit_candidate "$main" WO-099 v0.2.1
+git -C "$main" push origin main >/dev/null 2>&1
+local work="$fixture/project-wo-099"
+git -C "$main" worktree add -q -b wo-099 "$work" main
+local log="$work/docs/control/resume.jsonl"
+local actor='{"harness":"human","harnessVersion":"not-applicable","model":"human","effort":"unknown","source":"operator-attested"}'
+local digest waiver output identity
+digest="sha256:$(printf 'a%.0s' {1..64})"
+printf '%s\n' "{\"schemaVersion\":1,\"type\":\"CriterionWaived\",\"workOrderId\":\"WO-099\",\"criterionId\":\"2\",\"reason\":\"Fixture waiver.\",\"capture\":\"docs/intake/waiver.md\",\"captureHash\":\"$digest\",\"actor\":$actor}" >>"$log"
+waiver="$(wc -l <"$log" | tr -d ' ')"
+# The operator retracted the waiver in the order's worktree, and the branch
+# merged without its repair: main's record never held the retraction, so the
+# close reads it where it was recorded and publishes nothing.
+printf '%s\n' "{\"schemaVersion\":1,\"type\":\"OffRampRetracted\",\"workOrderId\":\"WO-099\",\"subject\":{\"ordinal\":$waiver,\"type\":\"CriterionWaived\",\"criterionId\":\"2\"},\"reason\":\"Fixture retraction.\",\"capture\":\"docs/intake/retraction.md\",\"captureHash\":\"$digest\",\"pullRequest\":\"unmerged\",\"actor\":$actor}" >>"$log"
+identity="$(cd "$work" && pwd -P)"
+if output="$(release_close WO-099 --publish 2>&1)"; then printf 'error: release close published over a retraction its worktree holds\n' >&2; exit 1; fi
+if ! grep -Fq "release close refused: WO-099's retraction of ordinal $waiver (the CriterionWaived of criterion 2), recorded in its worktree $identity, is newer than its latest passing final review" <<<"$output"; then
+  printf 'error: release close did not name the worktree retraction:\n%s\n' "$output" >&2
+  exit 1
+fi
+# The repair then passes in the worktree, but the branch is never merged
+# again: origin/main's pass is still the one the retraction is newer than, so
+# the close still refuses and publishes nothing.
+local retraction
+retraction="$(wc -l <"$log" | tr -d ' ')"
+printf '%s\n' \
+  "{\"schemaVersion\":1,\"type\":\"RepairRequested\",\"workOrderId\":\"WO-099\",\"sourceFindingId\":\"retraction-$retraction\",\"sourceReportPath\":\"docs/intake/retraction.md\"}" \
+  "{\"schemaVersion\":1,\"type\":\"RepairCompleted\",\"workOrderId\":\"WO-099\",\"sourceVerificationId\":\"retraction-$retraction\"}" \
+  '{"schemaVersion":1,"type":"VerificationRequested","workOrderId":"WO-099","verificationId":"VER-002","reportPath":"docs/verifications/WO-099/VER-002.md"}' \
+  '{"schemaVersion":1,"type":"VerificationCompleted","workOrderId":"WO-099","verificationId":"VER-002","reportPath":"docs/verifications/WO-099/VER-002.md","verdict":"pass"}' \
+  '{"schemaVersion":1,"type":"FinalReviewRequested","workOrderId":"WO-099","finalReviewId":"FINAL-002","reportPath":"docs/final-reviews/WO-099/FINAL-002.md"}' \
+  '{"schemaVersion":1,"type":"FinalReviewCompleted","workOrderId":"WO-099","finalReviewId":"FINAL-002","reportPath":"docs/final-reviews/WO-099/FINAL-002.md","verdict":"pass"}' >>"$log"
+if output="$(release_close WO-099 --publish 2>&1)"; then printf 'error: release close published over a repair origin/main never received\n' >&2; exit 1; fi
+if ! grep -Fq "release close refused: WO-099's retraction of ordinal $waiver (the CriterionWaived of criterion 2), recorded in its worktree $identity, is newer than its latest passing final review on origin/main" <<<"$output"; then
+  printf 'error: release close did not refuse the unmerged repair:\n%s\n' "$output" >&2
+  exit 1
+fi
+assert_no_candidate_tag "$main" "$origin"
+printf 'release close refuses an order whose worktree holds a retraction newer than its latest passing final review on origin/main, repaired there or not\n'
 }
 
 release_case_license_surfaces() {
@@ -1168,6 +1316,24 @@ test -f "$main/docs/control/local/harness/writer.json"
 grep -Fq "Derived worktree $derived_clean: removed" <<<"$derived_output"
 grep -Fq "Derived worktree $derived_dirty: kept (uncommitted changes)" <<<"$derived_output"
 grep -Fq 'below latest release v0.2.0' <<<"$derived_output"
+# The dirty derivative's blocker keeps the class settle raised it with, in its
+# row and as the stopped attempt's blocker, so the feed counts it as dirt.
+"$node_bin" - "$main/docs/control/local/retained/WO-099/release-close.json" "$derived_dirty" <<'JS'
+const assert = require("node:assert/strict"), fs = require("node:fs");
+const record = JSON.parse(fs.readFileSync(process.argv[2], "utf8"));
+const dirty = fs.realpathSync(process.argv[3]);
+const kept = record.blockers.filter(
+  (blocker) =>
+    blocker.action === "settle" &&
+    typeof blocker.path === "string" &&
+    fs.existsSync(blocker.path) &&
+    fs.realpathSync(blocker.path) === dirty,
+);
+assert.ok(kept.length, JSON.stringify(record.blockers));
+for (const blocker of kept) assert.equal(blocker.class, "not-clean");
+assert.equal(record.blocker.class, "not-clean");
+assert.equal(record.blocker.step, "worktree-removal");
+JS
 test ! -e "$derived_clean"
 test -f "$derived_dirty/notes.txt"
 git -C "$main" worktree remove --force "$derived_dirty" >/dev/null
@@ -1785,6 +1951,17 @@ mkdir -p "$main/docs/control/local/harness" "$subject/docs/control/local/harness
 printf 'retained main terms\n' >"$main/docs/control/local/terms.txt"
 printf 'main cache\n' >"$main/docs/control/local/harness/fixture.json"
 printf 'subject cache\n' >"$subject/docs/control/local/harness/fixture.json"
+# What the order's sessions recorded, beside a capture that stays behind.
+journal_session="$(printf 'd%.0s' {1..64})"
+mkdir -p "$subject/docs/control/local/harness/suite-success" "$subject/docs/control/local/harness/runner"
+printf '{"typedEvent":"HostPermissionDenied","workOrder":"WO-099"}\n' >"$subject/docs/control/local/harness/$journal_session.jsonl"
+printf '{"role":"executor","workOrder":"WO-099"}\n' >"$subject/docs/control/local/harness/$journal_session.json"
+printf 'ok\n' >"$subject/docs/control/local/harness/suite-success/fixture"
+printf 'capture\n' >"$subject/docs/control/local/harness/runner/capture.log"
+# The order's change review reports, which the close keeps beside its journals.
+mkdir -p "$subject/docs/control/local/reviews/WO-099"
+printf '# Change review: criteria, round 1, WO-099\n' >"$subject/docs/control/local/reviews/WO-099/round-1-criteria.md"
+printf '{"schemaVersion":1,"kind":"change-review-report"}\n' >"$subject/docs/control/local/reviews/WO-099/round-1-criteria.json"
 printf 'main original\n' >"$main/docs/intake/collision.md"
 printf 'subject original\n' >"$subject/docs/intake/collision.md"
 printf 'subject new note\n' >"$subject/docs/intake/new.md"
@@ -1823,6 +2000,59 @@ if grep -Fq 'DOTLN-MANIFEST-BEGIN' "$gh_state/v0.2.1.body"; then printf 'error: 
 grep -Fq 'build' "$npm_log"
 if grep -q '^ci$\|^test$' "$npm_log"; then printf 'error: close ran an install or suite\n' >&2; exit 1; fi
 test ! -e "$subject"
+# The session journals outlived the worktree in main's retained lane, an
+# owned root of the closed-journal class; the capture fell with the worktree.
+journal_lane="$main/docs/control/local/retained/WO-099/harness"
+if [[ -d "$journal_lane" ]]; then
+  printf 'journal lane after close: %s\n' "$(cd "$journal_lane" && find . -type f | LC_ALL=C sort | tr '\n' ' ')"
+else
+  printf 'journal lane after close: absent\n'
+fi
+grep -Fxq '{"typedEvent":"HostPermissionDenied","workOrder":"WO-099"}' "$journal_lane/$journal_session.jsonl"
+grep -Fxq '{"role":"executor","workOrder":"WO-099"}' "$journal_lane/$journal_session.json"
+grep -Fxq 'ok' "$journal_lane/suite-success/fixture"
+grep -Fxq '# Change review: criteria, round 1, WO-099' "$journal_lane/reviews/round-1-criteria.md"
+grep -Fxq '{"schemaVersion":1,"kind":"change-review-report"}' "$journal_lane/reviews/round-1-criteria.json"
+test ! -e "$journal_lane/runner"
+test ! -e "$journal_lane/fixture.json"
+"$node_bin" - "$main/docs/control/local/retained/WO-099/release-close.json" "$journal_lane" <<'JS'
+const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path');
+const [file, lane] = process.argv.slice(2);
+const record = JSON.parse(fs.readFileSync(file, 'utf8'));
+const owner = JSON.parse(fs.readFileSync(path.join(lane, '.dotln-owner.json'), 'utf8'));
+assert.equal(owner.class, 'closed-journal');
+assert.equal(owner.owner.workOrder, 'WO-099');
+// The row counts exactly what the lane received.
+const files = [];
+const walk = (directory) => {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true }))
+    if (entry.isDirectory()) walk(path.join(directory, entry.name));
+    else if (!['.dotln-owner.json', 'sources.jsonl'].includes(entry.name)) files.push(path.join(directory, entry.name));
+};
+walk(lane);
+const row = record.cleanup.worktrees.find((item) => item.path === record.cleanup.subject.path);
+assert.equal(row.outcome, 'removed');
+assert.deepEqual(row.journals, {
+  lane: 'docs/control/local/retained/WO-099/harness',
+  files: files.length,
+  bytes: files.reduce((sum, file) => sum + fs.statSync(file).size, 0),
+  outcome: 'moved',
+});
+assert.deepEqual(record.cleanup.subject.journals, row.journals);
+// The worktree-removal row says what the step spent its own time on, within
+// that time.
+assert.deepEqual(record.steps.map((step) => step.name), ['prerequisites', 'runtime', 'worktree-removal', 'publication', 'starter-refresh', 'prune', 'record']);
+const removal = record.steps.find((step) => step.name === 'worktree-removal');
+assert.deepEqual(removal.children.map((child) => child.name), ['base-fetch', 'disposable-deletion', 'finder-metadata', 'journal-retention', 'git-worktree-remove', 'branch-delete', 'preservation']);
+assert.ok(removal.children.every((child) => Number.isFinite(child.durationMs) && child.durationMs >= 0));
+assert.ok(removal.children.reduce((sum, child) => sum + child.durationMs, 0) <= removal.durationMs, JSON.stringify(removal));
+for (const name of ['base-fetch', 'journal-retention', 'git-worktree-remove', 'preservation'])
+  assert.ok(removal.children.find((child) => child.name === name).durationMs > 0, name);
+const deletion = removal.children.find((child) => child.name === 'disposable-deletion');
+assert.ok(Number.isSafeInteger(deletion.files) && Number.isSafeInteger(deletion.bytes));
+JS
+# The fixture removes that owned root itself, as a gate's completion would.
+"$node_bin" "$script_dir/temporary-root.mjs" remove "$journal_lane"
 test "$(git -C "$main" branch --list wo-099)" = ""
 test "$(git -C "$main" status --porcelain)" = ""
 test "$(git -C "$main" rev-parse HEAD)" = "$(git -C "$main" rev-parse origin/main)"
@@ -1838,6 +2068,11 @@ case "$main/node_modules" in "$test_root"/*/node_modules) rm -rf -- "$main/node_
 rerun_builds_before="$(grep -c '^build$' "$npm_log")"
 rerun_output="$(release_close WO-099 --publish)"
 grep -Fq 'v0.2.1 is already published' <<<"$rerun_output"
+# Main's helper completes the retry, so that attempt records no blocker.
+"$node_bin" -e '
+  const record = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8"));
+  if (record.blocker !== null) throw new Error(`retry blocker: ${JSON.stringify(record.blocker)}`);
+' "$main/docs/control/local/retained/WO-099/release-close.json"
 test "$(git -C "$main" rev-parse v0.2.1^{tag})" = "$published_object"
 test "$(grep -c '^release create v0.2.1 ' "$gh_log")" = 1
 test "$(grep -c '^build$' "$npm_log")" = "$rerun_builds_before"
@@ -1902,6 +2137,64 @@ for mutation in commit application component toolchain schema evidence cadence; 
   ' "$mutated" "$mutation"
   if PATH="$bin:$PATH" DOTLN_NPM_LOG="$npm_log" "$node_bin" "$main/scripts/release.mjs" validate "$mutated" >/dev/null 2>&1; then printf 'error: validator accepted %s mutation\n' "$mutation" >&2; exit 1; fi
 done
+}
+
+release_case_journal_failure() {
+make_repo journal_failure
+subject="$fixture/project-wo099"
+git -C "$main" worktree add "$subject" -b wo-099 >/dev/null
+commit_candidate "$subject" WO-099 v0.2.1
+git -C "$subject" push -u origin wo-099 >/dev/null 2>&1
+git clone -c maintenance.auto=false "$origin" "$fixture/integrator" >/dev/null 2>&1
+git -C "$fixture/integrator" config user.email test@example.invalid
+git -C "$fixture/integrator" config user.name "DotLn Release Integrator"
+git -C "$fixture/integrator" switch main >/dev/null 2>&1
+git -C "$fixture/integrator" merge --ff-only origin/wo-099 >/dev/null
+git -C "$fixture/integrator" push origin main >/dev/null 2>&1
+harness="$subject/docs/control/local/harness"
+mkdir -p "$harness"
+journal_session="$(printf 'f%.0s' {1..64})"
+printf '{"typedEvent":"HostPermissionDenied","workOrder":"WO-099"}\n' >"$harness/$journal_session.jsonl"
+# A permission denial: nothing can be moved out of the harness directory.
+record_restricted_release_beacon "$harness"
+chmod 0500 "$harness"
+touch "$npm_log" "$gh_log"
+failed_output="$(release_close WO-099 --publish 2>&1)" || true
+chmod 0700 "$harness"
+grep -Fq 'Published annotated v0.2.1' <<<"$failed_output"
+# The failed move is the close's cleanup blocker: the worktree and its
+# journal stay, the row says why and how to retry, and the release stands.
+test -d "$subject"
+grep -Fxq '{"typedEvent":"HostPermissionDenied","workOrder":"WO-099"}' "$harness/$journal_session.jsonl"
+"$node_bin" - "$main/docs/control/local/retained/WO-099/release-close.json" <<'JS'
+const assert = require('node:assert/strict'), fs = require('node:fs');
+const record = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+assert.equal(record.cleanup.outcome, 'blocked');
+const row = record.cleanup.worktrees.find((item) => item.path === record.cleanup.subject.path);
+assert.equal(row.outcome, 'retained');
+assert.equal(row.journals.outcome, 'failed');
+assert.equal(row.journals.lane, 'docs/control/local/retained/WO-099/harness');
+assert.match(row.journals.error, /^Journal retention stopped at .+: EACCES; the worktree is retained and a retried close merges the rest$/);
+assert.match(row.journals.command, /close WO-099 --publish/);
+assert.ok(record.blockers.some((blocker) => blocker.action === 'finish' && /Journal retention stopped/.test(blocker.reason)));
+assert.ok(['published', 'already-published'].includes(record.publication.tagOutcome));
+// The stopped attempt's blocker carries the class the finish gave it where the
+// move failed, the step it ran in and its message.
+assert.equal(record.blocker.class, 'preservation-refused');
+assert.equal(record.blocker.step, 'worktree-removal');
+assert.match(record.blocker.message, /Journal retention stopped at .+: EACCES/);
+JS
+test "$(grep -c '^release create v0.2.1 ' "$gh_log")" = 1
+retry_output="$(release_close WO-099 --publish)"
+grep -Fq 'v0.2.1 is already published' <<<"$retry_output"
+test ! -e "$subject"
+test "$(grep -c '^release create v0.2.1 ' "$gh_log")" = 1
+journal_lane="$main/docs/control/local/retained/WO-099/harness"
+grep -Fxq '{"typedEvent":"HostPermissionDenied","workOrder":"WO-099"}' "$journal_lane/$journal_session.jsonl"
+# The failed attempt created the lane; the retry merged into it.
+test "$(grep -c '"worktree"' "$journal_lane/sources.jsonl")" = 2
+"$node_bin" "$script_dir/temporary-root.mjs" remove "$journal_lane"
+printf 'release close kept the worktree when its journals could not move, and the retry merged them into the lane\n'
 }
 
 release_case_custom_identity() {
@@ -2254,6 +2547,8 @@ if foreign="$(release_close_summary WO-100 --publish 2>&1)"; then
   printf 'foreign release tag accepted\n' >&2; return 1
 fi
 grep -Fq 'v0.2.1 belongs to another order or commit' <<<"$foreign"
+# The summary names the stopped close's class, assigned where it was refused.
+grep -Fxq 'Close stopped: foreign-tag in step publication.' <<<"$foreign"
 test "$(git --git-dir="$origin" rev-parse 'v0.2.1^{tag}')" = "$published_tag"
 test "$(grep -c '^release create v0.2.1 ' "$gh_log")" = 1
 }

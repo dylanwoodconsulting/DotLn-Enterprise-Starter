@@ -18,6 +18,11 @@ export interface WorkerLaunch {
     readonly timeoutMs: number;
     /** The launch environment; the Codex launcher supplies an isolated home. */
     readonly env?: NodeJS.ProcessEnv;
+    /** Keep only this many trailing stdout bytes instead of stopping the worker
+     * past the 1,000,000-byte default. A worker's event stream is its transcript,
+     * not its deliverable: the final message and the usage counters come last,
+     * so a long transcript costs memory up to this bound and never the run. */
+    readonly stdoutTailBytes?: number;
 }
 export interface ProcessResult {
     readonly stdout: string;
@@ -70,6 +75,10 @@ export interface CodexExecShape {
     readonly leading?: readonly string[];
     /** Everything after the shared flags, ending with the prompt or `-`. */
     readonly rest: readonly string[];
+    /** `false` keeps the episode's session files in its isolated home until
+     * the episode ends, so a declined driven phase can retain them before the
+     * home is removed (WO-247); every other episode stays ephemeral. */
+    readonly ephemeral?: boolean;
 }
 /** The one builder of a Codex `exec` argv. */
 export declare function codexExecArgv(shape: CodexExecShape): string[];
@@ -135,7 +144,7 @@ export declare function staleCodexEpisodeHomes(root?: string, now?: number): str
 export declare function startCodexEpisode(env?: NodeJS.ProcessEnv): CodexEpisode;
 export declare const OBSERVED_CLI_VERSIONS: {
     readonly claude: "2.1.270";
-    readonly codex: "0.154.0";
+    readonly codex: "0.166.0";
 };
 export declare function canonicalWorkerArgs(name: WorkerTransportName, request: TransportRequest, schemaPath: string, harnessVersion?: string, 
 /** The Codex episode's own home; its helper aliases live under it. */

@@ -14,11 +14,13 @@ import {
 import { MANUAL_RECEIPTS, readOverrides } from "./plan-receipts.mjs";
 import { readEntropyControl, readReceipt } from "./entropy-review.mjs";
 import { checksPath, readGateChecks } from "./gate-evidence.mjs";
+import { readRetention, TEMPORARY_OWNER_FILE } from "./temporary-roots.mjs";
 import { bounded } from "./planning-followups.mjs";
 import { completedPhaseAttempts } from "./control-time.mjs";
 import { parseHeader } from "../work-orders.mjs";
 import { measuredFindingCounts } from "./review-findings.mjs";
 import { historicalDependencyIds } from "./dependencies.mjs";
+import { CLOSE_BLOCKER_CLASSES } from "./release-steps.mjs";
 
 // What failed since the pass before, folded from the public record:
 // the control logs, the planning control log and the structured decisions.
@@ -33,6 +35,11 @@ const OFF_RAMPS = new Set([
   "WorkOrderWithdrawn",
   "RecordCorrected",
   "OperatorOverrideRecorded",
+  // A criterion recorded defective, a retracted record and a reopened
+  // handoff (WO-249); defects are also counted by class.
+  "CriterionDefectRecorded",
+  "OffRampRetracted",
+  "HandoffReopened",
 ]);
 const KIND_ORDER = [
   "failed-judgment",
@@ -140,6 +147,13 @@ export function failureRecord(root) {
     const ready = new Set(),
       verified = new Set(),
       judged = new Map();
+    // The defect records the operator retracted, by the ordinal a retraction
+    // names in this segment (WO-249).
+    const retractedOrdinals = new Set(
+      events
+        .filter((event) => event?.type === "OffRampRetracted")
+        .map((event) => event.subject?.ordinal),
+    );
     for (const [index, event] of events.entries()) {
       const order = event.workOrderId,
         recordedAt = event.recordedAt ?? "unknown";
@@ -214,12 +228,24 @@ export function failureRecord(root) {
         });
       else if (OFF_RAMPS.has(event.type)) {
         const subject = events[(event.subject?.ordinal ?? 0) - 1];
+        const criterion = event.criterionId ?? event.subject?.criterionId;
         items.push({
           kind: "off-ramp",
           event: event.type,
           order,
-          ...(typeof event.criterionId === "string"
-            ? { criterion: event.criterionId }
+          ...(typeof criterion === "string" ? { criterion } : {}),
+          ...(event.type === "CriterionDefectRecorded" &&
+          typeof event.class === "string"
+            ? {
+                class: event.class,
+                ...(retractedOrdinals.has(index + 1)
+                  ? { retracted: true }
+                  : {}),
+              }
+            : {}),
+          ...(event.type === "OffRampRetracted" &&
+          typeof event.subject?.type === "string"
+            ? { retracts: event.subject.type }
             : {}),
           ...(event.type === "RecordCorrected" && subject
             ? {
@@ -463,8 +489,18 @@ export function failureWindow(
 export function failureCounts(items, facts) {
   const count = (predicate) => items.filter(predicate).length;
   const offRampEvents = {};
-  for (const item of items.filter((row) => row.kind === "off-ramp"))
+  // What planning reads to stop writing a class: each defect record by class,
+  // leaving out a record the operator retracted as wrong.
+  const defectClasses = {};
+  for (const item of items.filter((row) => row.kind === "off-ramp")) {
     offRampEvents[item.event] = (offRampEvents[item.event] ?? 0) + 1;
+    if (
+      item.event === "CriterionDefectRecorded" &&
+      item.class &&
+      !item.retracted
+    )
+      defectClasses[item.class] = (defectClasses[item.class] ?? 0) + 1;
+  }
   return {
     failedVerifications: count(
       (row) => row.kind === "failed-judgment" && row.phase === "verification",
@@ -480,6 +516,7 @@ export function failureCounts(items, facts) {
     corrections: count((row) => row.kind === "correction"),
     offRamps: count((row) => row.kind === "off-ramp"),
     offRampEvents,
+    defectClasses,
     amendments: count((row) => row.event === "PlanExecutionAmended"),
     withdrawnAmendments: count(
       (row) => row.event === "PlanExecutionAmendmentWithdrawn",
@@ -747,11 +784,129 @@ const closeTiming = (timedCloses) => {
   };
 };
 
+const closeBlockerClasses = new Set(CLOSE_BLOCKER_CLASSES);
+/** Stopped close attempts counted by their blocker's class and by order. A
+ * class is repeated once it has stopped the closes of three or more distinct
+ * orders in the window, whatever closed successfully between them, so one
+ * refusal each order met and an operator cleared by hand still shows. */
+const closeBlockers = (stopped) => {
+  const orders = tally(stopped, "order");
+  const ordersByClass = new Map();
+  for (const row of stopped) {
+    if (!ordersByClass.has(row.class)) ordersByClass.set(row.class, new Set());
+    ordersByClass.get(row.class).add(row.order);
+  }
+  return {
+    byClass: tally(stopped, "class", closeBlockerClasses.size).by,
+    byOrder: orders.by,
+    otherOrderRows: orders.other,
+    repeated: [...ordersByClass]
+      .filter(([, distinct]) => distinct.size >= 3)
+      .map(([name, distinct]) => ({ class: name, orders: distinct.size }))
+      .sort((a, b) => b.orders - a.orders || a.class.localeCompare(b.class)),
+  };
+};
+/** The line `plan start` prints for each repeated close blocker class. */
+export const repeatedCloseBlockerLines = (blockers) =>
+  (blockers?.repeated ?? []).map(
+    (row) => `close blocker repeated: ${row.class} across ${row.orders} orders`,
+  );
+
+/** The closed orders' journal lanes this reader covers. Release close moves an
+ * order's journals into docs/control/local/retained/<WO>/harness/ and the
+ * prune removes that lane after its class window, so one closed order's counts
+ * change once its lane is gone; the output names the lanes read, the window
+ * and the oldest lane's start. A lane's owner record is read as plain data,
+ * never through the identity check that may re-stamp it, because this command
+ * writes nothing. Absolute paths stay out of the output.
+ * @param {string} root @param {string} retained */
+function retainedJournalLanes(root, retained) {
+  const result = {
+    lanes: 0,
+    files: 0,
+    unreadable: 0,
+    orders: [],
+    windowHours: null,
+    oldestCreatedAt: null,
+    read: [],
+  };
+  try {
+    result.windowHours = readRetention(root)["closed-journal"];
+  } catch {
+    result.windowHours = "unknown";
+  }
+  if (!existsSync(retained)) return result;
+  const found = [];
+  for (const order of readdirSync(retained).sort()) {
+    if (!/^WO-\d{3}$/.test(order)) continue;
+    const directory = join(retained, order, "harness");
+    // An order directory this reader cannot inspect, or one pruned since it
+    // was listed, is counted unreadable; the other lanes still count.
+    let info;
+    try {
+      info = lstatSync(directory, { throwIfNoEntry: false });
+      if (info && !lstatSync(join(retained, order)).isDirectory()) info = null;
+    } catch {
+      result.unreadable++;
+      continue;
+    }
+    if (info === undefined) continue;
+    if (!info || !info.isDirectory() || info.isSymbolicLink()) {
+      result.unreadable++;
+      continue;
+    }
+    let createdAt = "unknown";
+    try {
+      createdAt = knownTime(
+        JSON.parse(readFileSync(join(directory, TEMPORARY_OWNER_FILE), "utf8"))
+          .createdAt,
+      );
+    } catch {
+      /* A lane without a readable marker still counts its journals. */
+    }
+    found.push({ directory, order, createdAt });
+  }
+  // Lanes are listed oldest first by creation, a lane whose creation time is
+  // unknown ordered as the oldest and ties by order, so a page's newest are
+  // the most recently closed orders whatever their numbers.
+  found.sort(
+    (a, b) =>
+      (a.createdAt === "unknown" ? "" : a.createdAt).localeCompare(
+        b.createdAt === "unknown" ? "" : b.createdAt,
+      ) || a.order.localeCompare(b.order),
+  );
+  for (const lane of found) {
+    result.lanes++;
+    result.orders.push(lane.order);
+    result.read.push({ directory: lane.directory, order: lane.order });
+    if (
+      lane.createdAt !== "unknown" &&
+      (!result.oldestCreatedAt || lane.createdAt < result.oldestCreatedAt)
+    )
+      result.oldestCreatedAt = lane.createdAt;
+  }
+  return result;
+}
+
+// A page names at most the sixteen most recently created lanes it read, so no
+// retention window can push its metadata past the page bound; the counts and
+// the export keep every lane.
+const PAGE_LANES = 16;
+const pageLanes = (lanes) =>
+  lanes.orders.length <= PAGE_LANES
+    ? lanes
+    : {
+        ...lanes,
+        orders: lanes.orders.slice(-PAGE_LANES),
+        ordersOmitted: lanes.orders.length - PAGE_LANES,
+      };
+
 /** Local observations are kept apart from immutable failed judgments. Page
  * metadata counts them; the export carries only these sanitized projections. */
 export function operationalFailures(root, control, includes) {
   const rows = [],
     timedCloses = [],
+    stoppedCloses = [],
     unreadable = { closes: 0, journals: 0, gates: 0, snapshots: 0 };
   let closeRecords = 0,
     journalRecords = 0;
@@ -806,6 +961,18 @@ export function operationalFailures(root, control, includes) {
               totalMs,
               steps: attempt.steps,
             });
+          // A stopped attempt's blocker class, as the close assigned it.
+          if (
+            typeof attempt.blocker?.class === "string" &&
+            includes({ recordedAt, order: name })
+          )
+            stoppedCloses.push({
+              order: name,
+              class: closeBlockerClasses.has(attempt.blocker.class)
+                ? attempt.blocker.class
+                : "other",
+              recordedAt,
+            });
           if (attempt.blockers.length || !published)
             rows.push({
               kind: "release-close",
@@ -822,14 +989,31 @@ export function operationalFailures(root, control, includes) {
       }
     }
   let hostNotifications = 0;
-  const directory = dirname(checksPath(root));
-  if (existsSync(directory))
-    for (const name of readdirSync(directory).sort()) {
+  // This checkout's journals, then each closed order's journals that release
+  // close moved into its retained lane; a lane's rows count for its order.
+  const journalDirectories = [{ directory: dirname(checksPath(root)) }];
+  const retainedJournals = retainedJournalLanes(root, retained);
+  for (const lane of retainedJournals.read)
+    journalDirectories.push({ directory: lane.directory, order: lane.order });
+  for (const { directory, order: laneOrder } of journalDirectories) {
+    if (!existsSync(directory)) continue;
+    // A directory that cannot be listed, or a lane pruned since it was found,
+    // is counted as unreadable; the other journals still count.
+    let names;
+    try {
+      names = readdirSync(directory).sort();
+    } catch {
+      if (laneOrder) retainedJournals.unreadable++;
+      else unreadable.journals++;
+      continue;
+    }
+    for (const name of names) {
       if (!/^[a-f0-9]{64}\.jsonl$/.test(name)) continue;
       try {
         const file = join(directory, name);
         if (!lstatSync(file).isFile()) throw new Error();
-        journalRecords++;
+        if (laneOrder) retainedJournals.files++;
+        else journalRecords++;
         for (const line of readFileSync(file, "utf8")
           .split("\n")
           .filter(Boolean)) {
@@ -837,11 +1021,12 @@ export function operationalFailures(root, control, includes) {
           try {
             row = JSON.parse(line);
           } catch {
-            unreadable.journals++;
+            if (laneOrder) retainedJournals.unreadable++;
+            else unreadable.journals++;
             continue;
           }
           const context = {
-            order: knownOrder(row.workOrder),
+            order: laneOrder ?? knownOrder(row.workOrder),
             phase: phases.has(row.phase) ? row.phase : "unknown",
             recordedAt: knownTime(row.recordedAt),
           };
@@ -888,11 +1073,14 @@ export function operationalFailures(root, control, includes) {
           }
         }
       } catch {
-        unreadable.journals++;
+        if (laneOrder) retainedJournals.unreadable++;
+        else unreadable.journals++;
       }
     }
-  // Closed worktrees no longer carry their journals. Their filed meter row
-  // retains the same measurements without retaining operator capture text.
+  }
+  // A closed order's journals outlive its worktree only while its retained
+  // lane does. Its filed meter row keeps the same stops without operator
+  // capture text; a stop a journal row already counted is not counted again.
   for (const [order, entry] of control.orders) {
     if (entry.state.phase !== "closed") continue;
     const file = docPath(root, "evidence", order, "meta.json");
@@ -1047,12 +1235,14 @@ export function operationalFailures(root, control, includes) {
       dryRuns: closes.filter((row) => row.dryRun).length,
       noRelease: closes.filter((row) => row.noRelease).length,
       timing: closeTiming(timedCloses),
+      blockers: closeBlockers(stoppedCloses),
     },
     localHostDenials: {
       ...summary("host-denial"),
       journals: journalRecords,
       unreadable: unreadable.journals,
     },
+    retainedJournals: (({ read, ...lanes }) => lanes)(retainedJournals),
     interventions: {
       ...summary("intervention"),
       byClass: tally(interventions, "class", 14).by,
@@ -1084,9 +1274,15 @@ export function operationalFailures(root, control, includes) {
         return {
           source: "session journals and filed order snapshots",
           stops: activity.boundStops.stops.slice(0, 8),
+          // `--ceiling unlimited` is stored as null; the feed says so.
           boundAcceptances: activity.boundAcceptances
             .filter((entry) => includes({ recordedAt: entry.at }))
-            .slice(0, 8),
+            .slice(0, 8)
+            .map((entry) =>
+              entry.ceiling === null
+                ? { ...entry, ceiling: "unlimited" }
+                : entry,
+            ),
           afterStop: activity.afterStop.slice(0, 8),
           omittedStops: Math.max(0, activity.boundStops.count - 8),
         };
@@ -1167,6 +1363,7 @@ export function planningFailures(
         ([key]) => key !== "observations",
       ),
     ),
+    retainedJournals: pageLanes(chosen.operational.retainedJournals),
     items: chosen.items.length,
     rows: chosen.items.slice(offset, offset + ROWS_PER_PAGE),
     next: null,
@@ -1243,8 +1440,13 @@ export function sinceEntropyReview(root, control = readControl(root)) {
 
 /** The `plan start` block: the default window's counts, the command and the
  * Entropy Reducer count, in at most 1 KB. It suggests and schedules nothing,
- * and a count that cannot be computed is one line saying why. */
-export function failuresAtStart(root) {
+ * and a count that cannot be computed is one line saying why. The lines naming
+ * a repeated close blocker class go to `onCloseBlockersRepeated` before the
+ * block is fitted to its bound, so the caller prints every one of them even
+ * when the block itself must drop them.
+ * @param {string} root
+ * @param {{onCloseBlockersRepeated?: (lines: string[]) => void}} [options] */
+export function failuresAtStart(root, { onCloseBlockersRepeated } = {}) {
   const block = { command: FAILURES_COMMAND };
   let control;
   try {
@@ -1257,9 +1459,19 @@ export function failuresAtStart(root) {
     Object.assign(block, {
       since: chosen.view.public.since,
       items: chosen.items.length,
-      counts: chosen.counts.window,
+      // The counts by defect class stay on the failures page, so the block
+      // keeps its bound with every off-ramp kind recorded.
+      counts: (({ defectClasses, ...counts }) => counts)(chosen.counts.window),
       finalReviewEscapes: `${recent.escapes}/${recent.reviews} reviews; ${recent.orders} orders; ${recent.unclassed} unclassed${recent.measured === recent.reviews ? "" : `; rate unknown (${recent.measured} measured)`}`,
       localReleaseCloses: chosen.operational.localReleaseCloses.count,
+      // Present only when a class has stopped three or more orders' closes.
+      ...(() => {
+        const repeated = repeatedCloseBlockerLines(
+          chosen.operational.localReleaseCloses.blockers,
+        );
+        onCloseBlockersRepeated?.(repeated);
+        return repeated.length ? { closeBlockersRepeated: repeated } : {};
+      })(),
       localHostDenials: chosen.operational.localHostDenials.count,
       interventions: {
         count: chosen.operational.interventions.count,
@@ -1268,6 +1480,11 @@ export function failuresAtStart(root) {
       longPhases: chosen.operational.longPhases.count,
       repeatedGateRuns: chosen.operational.repeatedGateRuns.count,
       recentTracks: chosen.operational.recentTracks,
+      retainedJournals: {
+        lanes: chosen.operational.retainedJournals.lanes,
+        files: chosen.operational.retainedJournals.files,
+        windowHours: chosen.operational.retainedJournals.windowHours,
+      },
       localCoverage: "local; Codex dispatch-only; incomplete",
     });
   } catch (error) {
@@ -1278,17 +1495,32 @@ export function failuresAtStart(root) {
   } catch (error) {
     block.sinceEntropyReview = `unknown: ${oneLine(error.message)}`;
   }
-  // A reason is clipped so the block keeps its bound; the counts never are.
+  return fitStartBlock(block);
+}
+
+/** The start block's bound is measured on its compact JSON. Only the two reason
+ * strings are clipped; if the block still overruns, it keeps the command, its
+ * window and item count and says so on one line, because a count never keeps
+ * the planning branch shut (WO-172).
+ * @param {Record<string, unknown>} block @param {number} [bound] */
+export function fitStartBlock(block, bound = START_BYTES) {
+  const size = () => Buffer.byteLength(JSON.stringify(block));
   for (const key of ["unavailable", "sinceEntropyReview"])
     while (
-      Buffer.byteLength(encode(block)) > START_BYTES &&
+      size() > bound &&
       typeof block[key] === "string" &&
       block[key].length > 80
     )
       block[key] = `${block[key].slice(0, block[key].length - 40).trimEnd()}…`;
-  requireFailures(
-    Buffer.byteLength(encode(block)) <= START_BYTES,
-    "the plan start block exceeds 1 KB",
+  if (size() <= bound) return block;
+  const measured = size();
+  const kept = Object.fromEntries(
+    ["command", "since", "items"]
+      .filter((key) => key in block)
+      .map((key) => [key, block[key]]),
   );
-  return block;
+  for (const key of Object.keys(block)) delete block[key];
+  return Object.assign(block, kept, {
+    overrun: `the start block measured ${measured} bytes against ${bound}; read its counts with ${FAILURES_COMMAND}`,
+  });
 }

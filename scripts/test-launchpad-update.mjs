@@ -1031,7 +1031,7 @@ test("export update preserves ownership, validates actions and keeps the exporte
 
   await t.test(
     "unmodified files update; edited and dropped edits keep prior hashes on repeated updates",
-    () => {
+    async () => {
       const target = instance("ownership");
       writeFileSync(join(target, modified), "local kit edit\n");
       writeFileSync(join(target, droppedModified), "local dropped edit\n");
@@ -1124,6 +1124,12 @@ test("export update preserves ownership, validates actions and keeps the exporte
         undefined,
         "instance-owned budgets need no record edit",
       );
+      // The updated kit's own runtime reads the closed-journal seed as a
+      // default where the instance's budgets file lacks the key.
+      const { readRetention } = await import(
+        pathToFileURL(join(older, "scripts/lib/temporary-roots.mjs")).href
+      );
+      assert.equal(readRetention(older)["closed-journal"], 720);
       t.diagnostic(result.stdout.trim());
     },
   );
@@ -1916,6 +1922,24 @@ process.exit(64);
     "-qm",
     "declare starter refresh",
   ]);
+  // Export an older long front page, then migrate it to today's frozen seed.
+  const incomingReadme = readFileSync(
+    join(core, "scripts/kit/README.client.md"),
+    "utf8",
+  );
+  writeFileSync(
+    join(core, "scripts/kit/README.client.md"),
+    readFileSync(join(core, "docs/KIT.md"), "utf8") +
+      "\n<!-- DOTLN-RELEASE-BEGIN -->\nThis source prepares DotLn-Enterprise-Starter `v0.1.0`.\n<!-- DOTLN-RELEASE-END -->\n",
+  );
+  git(core, ["add", "scripts/kit/README.client.md"]);
+  git(core, [
+    "-c",
+    "maintenance.auto=false",
+    "commit",
+    "-qm",
+    "seed historical long guide",
+  ]);
   const map = join(core, "docs/control/local/repository-clones.json");
   mkdirSync(dirname(map), { recursive: true });
   const mapCheckout = (value = checkout) =>
@@ -2314,11 +2338,7 @@ process.exit(64);
   setRemote(remote);
   mapCheckout();
   // Template changes must reach the unmodified starter copies.
-  writeFileSync(
-    join(core, "scripts/kit/README.client.md"),
-    readFileSync(join(core, "scripts/kit/README.client.md"), "utf8") +
-      "\nFixture kit revision.\n",
-  );
+  writeFileSync(join(core, "scripts/kit/README.client.md"), incomingReadme);
   writeFileSync(
     join(core, "scripts/kit/first-order.template.md"),
     readFileSync(join(core, "scripts/kit/first-order.template.md"), "utf8") +
@@ -2388,8 +2408,8 @@ process.exit(64);
     first.coreCommit,
   );
   git(core, ["reset", "--hard", head]);
-  // Every committed customization refuses before a push, including a file
-  // mode, absent path, symlink and an ancestor redirected outside the tree.
+  // README customizations survive the migration and kit publication. Other
+  // seeds still refuse before a push when their changed template is unproven.
   for (const kind of [
     "bytes",
     "mode",
@@ -2434,23 +2454,58 @@ process.exit(64);
     git(checkout, ["push", remote, "main"]);
     const protectedRefs = refs(),
       protectedHead = remoteHead();
+    const readmeKept = ["bytes", "mode", "missing", "symlink"].includes(kind);
+    const heldReadme = git(checkout, [
+      "ls-tree",
+      "HEAD",
+      "--",
+      "README.md",
+    ]).stdout;
     for (const preview of [true, false]) {
-      const refusal = refresh(tag, head, preview)[0];
-      assert.equal(refusal.outcome, "refused", JSON.stringify(refusal));
-      assert.match(
-        refusal.reason,
-        kind === "ancestor"
-          ? /docs\/work-orders\/WO-001/
-          : kind.startsWith("contract-")
-            ? /CLAUDE\.md/
-            : /README\.md/,
-      );
-      assert.equal(refs(), protectedRefs);
-      assert.equal(
-        git(checkout, ["rev-parse", "HEAD"]).stdout.trim(),
-        protectedHead,
-      );
-      assert.deepEqual(refusal.rewrittenSeeds, []);
+      const row = refresh(tag, head, preview)[0];
+      if (readmeKept) {
+        assert.equal(
+          row.outcome,
+          preview ? "preview" : "refreshed",
+          JSON.stringify(row),
+        );
+        assert.deepEqual(row.keptSeeds, [
+          {
+            path: "README.md",
+            reason:
+              kind === "bytes"
+                ? "customized; differs from proven prior exports"
+                : kind === "missing"
+                  ? "missing"
+                  : "not a regular seed file (expected mode 100644)",
+          },
+        ]);
+        assert.ok(!row.rewrittenSeeds.includes("README.md"));
+        assert.equal(
+          git(checkout, ["ls-tree", "HEAD", "--", "README.md"]).stdout,
+          heldReadme,
+        );
+        if (!preview) {
+          assert.equal(manifestOf(checkout).commit, head);
+          assert.equal(remoteHead(), row.after);
+          assert.equal(refresh(tag, head)[0].outcome, "current");
+        }
+      } else {
+        assert.equal(row.outcome, "refused", JSON.stringify(row));
+        assert.match(
+          row.reason,
+          kind === "ancestor" ? /docs\/work-orders\/WO-001/ : /CLAUDE\.md/,
+        );
+        assert.doesNotMatch(row.reason, /README\.md/);
+        assert.deepEqual(row.rewrittenSeeds, []);
+      }
+      if (preview || !readmeKept) {
+        assert.equal(refs(), protectedRefs);
+        assert.equal(
+          git(checkout, ["rev-parse", "HEAD"]).stdout.trim(),
+          protectedHead,
+        );
+      }
     }
     git(checkout, ["reset", "--hard", prior]);
     rewindRemoteMain();
@@ -2629,6 +2684,40 @@ const result=spawnSync(real,args,{stdio:'inherit'});process.exit(result.status??
   assert.equal(unsafePreview.outcome, "refused");
   assert.match(unsafePreview.reason, /scratch identity changed/);
   assert.ok(existsSync(owned.scratch));
+  // A reboot that renumbers the scratch's volume leaves its inode and its
+  // owner token as they were: the cleanup record and the scratch's own owner
+  // record carry the old device and are re-stamped, never refused. A preview
+  // re-stamps only the owner record.
+  const scratchMarker = join(owned.scratch, ".dotln-owner.json");
+  const renumber = () => {
+    writeFileSync(
+      cleanupRecord,
+      JSON.stringify({
+        ...JSON.parse(partialRecord),
+        device: owned.device + 1,
+      }),
+    );
+    const marker = JSON.parse(readFileSync(scratchMarker, "utf8"));
+    writeFileSync(
+      scratchMarker,
+      JSON.stringify({ ...marker, device: owned.device + 1 }) + "\n",
+    );
+  };
+  renumber();
+  const renumberedPreview = refresh(tag, head, true)[0];
+  assert.equal(
+    renumberedPreview.outcome,
+    "preview",
+    JSON.stringify(renumberedPreview),
+  );
+  assert.equal(
+    JSON.parse(readFileSync(cleanupRecord, "utf8")).device,
+    owned.device + 1,
+  );
+  assert.equal(
+    JSON.parse(readFileSync(scratchMarker, "utf8")).device,
+    owned.device,
+  );
   writeFileSync(cleanupRecord, partialRecord);
   const previewCleanup = refresh(tag, head, true)[0];
   assert.equal(previewCleanup.outcome, "preview");
@@ -2639,6 +2728,8 @@ const result=spawnSync(real,args,{stdio:'inherit'});process.exit(result.status??
   const retryTemp = join(root, "different-temporary-base");
   mkdirSync(retryTemp);
   fixtureEnv.TMPDIR = retryTemp;
+  // The recovery itself meets the renumbered device and finishes cleanup.
+  renumber();
   const recovered = measured("cleanup recovery", () => refresh(tag, head)[0]);
   fixtureEnv.TMPDIR = refreshTemp;
   assert.equal(recovered.outcome, "current", JSON.stringify(recovered));
@@ -3065,7 +3156,20 @@ const result=spawnSync(real,args,{stdio:'inherit'});process.exit(result.status??
       ),
       "unchanged template preserves customized seed",
     );
-    assert.deepEqual(JSON.parse(planned.stdout), []);
+    assert.deepEqual(JSON.parse(planned.stdout), {
+      rewrites: [],
+      kept: [
+        {
+          path: "README.md",
+          reason:
+            kind === "custom"
+              ? "customized; differs from proven prior exports"
+              : kind === "missing"
+                ? "missing"
+                : "not a regular seed file (expected mode 100644)",
+        },
+      ],
+    });
     git(checkout, ["reset", "--hard", seedHead]);
   }
   // Verification reads CLAUDE.md as its emit floor and .gitignore as its

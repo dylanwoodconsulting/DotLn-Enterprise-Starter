@@ -471,8 +471,12 @@ untracked file there cannot fail the close's clean check.
 The bounded probe wrapper and the kit's other local diagnostics write under
 `docs/control/local/` in the target worktree, among them
 `docs/control/local/harness/memory-incidents.jsonl`. Treat that directory as private:
-the target ignores it, it stays out of review packets, and the whole directory is
-disposable in a target worktree.
+the target ignores it and it stays out of review packets. Before deleting the
+remaining declared output, release close retains the kit's target session journals
+and change reviews in the launchpad's retained lane for the order. The kit also
+recognizes its released writer, verified runtime snapshots and temporary-root
+ledger; a held writer or unrecognized material still refuses close. The
+[kit guide](../KIT.md#owned-cleanup-and-retention) states the ownership checks.
 
 These stay undeclared, and an undeclared ignored file refuses close in either
 checkout:

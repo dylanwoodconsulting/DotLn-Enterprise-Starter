@@ -27,6 +27,7 @@ export declare const harnessToolEffects: {
     readonly Agent: "spawn";
     readonly Task: "spawn";
     readonly Workflow: "spawn";
+    readonly SendMessage: "retask";
     readonly Skill: "interaction";
     readonly TodoWrite: "interaction";
     readonly AskUserQuestion: "interaction";
@@ -38,6 +39,8 @@ export declare const harnessToolEffects: {
     readonly "functions.exec": "shell";
     readonly "collaboration.spawn_agent": "spawn";
 };
+/** Prefix rules name host namespaces; Skill carries its selection in input. */
+export declare function isDesktopControlTool(name: string, input?: Readonly<Record<string, unknown>>): boolean;
 /** Public token view for diagnostics; classification uses the provenance above. */
 export declare function shellInvocations(source: string): string[][];
 /** Normalize executable operands for admission without requiring an effect

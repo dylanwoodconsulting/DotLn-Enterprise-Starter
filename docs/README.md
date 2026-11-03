@@ -6,7 +6,8 @@ at the repository root moves no root). Each root's README states its convention;
 documents the kit points to, and [PLAYBOOK.md](PLAYBOOK.md) is the kit's operating
 playbook.
 
-- [`docs/launchpad-readme.md`](launchpad-readme.md) — the launchpad's own README, kept off the main page while the starter's updates rewrite the root one
+- [`README.md`](../README.md) — the launchpad's introduction, operating flow and navigation
+- [`docs/KIT.md`](KIT.md) — the starter's instructions for setup, checks, planning, updates and recovery
 - [`docs/operator/`](operator/README.md) — the operator record every session reads, and the reusable guidance it links
 - [`docs/control/`](control/README.md) — control records, the generated current page and this instance's settings
 - [`docs/evidence/`](evidence/README.md) — per-order decisions, handoffs and evidence

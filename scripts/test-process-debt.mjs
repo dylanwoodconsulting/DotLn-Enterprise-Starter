@@ -173,6 +173,10 @@ import {
   observeTypedCorrection,
   scanMessage,
 } from "../packages/skeleton/dist/src/observed-facts.js";
+// plan start applies the owned-root prune. A fixture's prune stays within its
+// own repository, as the gate scopes its product children, so no run of this
+// suite, whatever scope it inherits, removes the host's temporary roots.
+process.env.DOTLN_PRUNE_SCOPE = "repository";
 const source = resolve(import.meta.dirname, "..");
 
 test("WO-141 meter counts journal events under their original order and phase", async (t) => {
@@ -411,8 +415,13 @@ test("WO-170 a closed order's snapshot stands for its journals, and with neither
     renderMeta(await collectMeta(root)),
     /^Operator directions per closed order \(committed decisions and control events\): WO-999 0\.$/m,
   );
-  const table = renderMetaTable(await collectMeta(root));
-  assert.match(table, /^\| WO-999 \|.*\|  \| 0 \| 0 \| 0 \|$/m);
+  const table = renderMetaTable(await collectMeta(root), {
+    workOrderId: "WO-999",
+  });
+  assert.match(
+    table,
+    /^\| WO-999\/release-close \|.*\| unknown \| unknown \| 0 \| 0 \|$/m,
+  );
   assert.ok(
     !table
       .split("\n")
@@ -848,19 +857,23 @@ test("WO-170 operator directions equal a hand count of committed decisions and o
       OperatorOverrideRecorded: 0,
       RecordCorrected: 1,
       CriterionWaived: 0,
+      OffRampRetracted: 0,
+      HandoffReopened: 0,
     },
     source: directionSource,
   });
   const none = meta.orders.find((row) => row.workOrder === "WO-998");
   assert.equal(none.metrics.operatorDirections, 0);
   assert.equal(none.directions.total, 0);
-  const table = renderMetaTable(meta);
+  const terminal = renderMeta(meta);
   assert.match(
-    table,
-    /\| Corrections \| Directions \| Bound stops \| Bound acceptances \|$/m,
+    terminal,
+    /WO-999 metrics \(value; previous-order delta\):[\s\S]*?\n  operatorDirections: 4; Δ /,
   );
-  assert.match(table, /^\| WO-999 \|.*\| 4(?: \(Δ [^)]*\))? \| 0 \| 0 \|$/m);
-  assert.match(table, /^\| WO-998 \|.*\| 0(?: \(Δ [^)]*\))? \|$/m);
+  assert.match(
+    terminal,
+    /WO-998 metrics \(value; previous-order delta\):[\s\S]*?\n  operatorDirections: 0; Δ /,
+  );
   assert.match(
     renderMeta(meta),
     /^WO-999 operator directions: 4; scopeExpand 2, operatorOverride 1, RecordCorrected 1; committed decision dispatches \(control prefixes, legacy operator labels and the operator step a lifecycle dispatch names\) and control events\.$/m,
@@ -897,7 +910,15 @@ test("WO-170 operator directions equal a hand count of committed decisions and o
         "planning: fixture",
         "operatorless: fixture",
       ].map((dispatch) => ({ dispatch })),
-      [{ type: "CriterionWaived" }, { type: "WorkOrderWithdrawn" }],
+      [
+        { type: "CriterionWaived" },
+        { type: "WorkOrderWithdrawn" },
+        // The operator's retraction and reopened handoff are directions; a
+        // defect record is a role's judgment and none (WO-249).
+        { type: "OffRampRetracted" },
+        { type: "HandoffReopened" },
+        { type: "CriterionDefectRecorded" },
+      ],
     ).byKind,
     {
       scopeExpand: 0,
@@ -910,6 +931,8 @@ test("WO-170 operator directions equal a hand count of committed decisions and o
       OperatorOverrideRecorded: 0,
       RecordCorrected: 0,
       CriterionWaived: 1,
+      OffRampRetracted: 1,
+      HandoffReopened: 1,
     },
   );
   // Intake captures are counted per ledger planning pass, never per order.
@@ -1298,6 +1321,8 @@ test("WO-172 the direction reader names the operator step a dispatch records, an
     OperatorOverrideRecorded: 0,
     RecordCorrected: 0,
     CriterionWaived: 0,
+    OffRampRetracted: 0,
+    HandoffReopened: 0,
   });
   assert.equal(directions.total, 10);
   assert.deepEqual(OPERATOR_STEPS, [
@@ -5991,6 +6016,74 @@ test("WO-155 cold-start trends share edition and acceptance evidence across the 
   assert.equal(shallow.cause, "acceptance-history-unavailable");
 });
 
+test("the driven-start figure is read beside the cold-start metric for every host and role, without a ceiling", async () => {
+  const { nativeProfile, drivenStartBytes } =
+    await import("./lib/drive-prompts.mjs");
+  const measured = measureColdStarts(source);
+  for (const host of ["claude", "codex"])
+    for (const role of [
+      "router",
+      "executor",
+      "verifier",
+      "reviewer",
+      "release-close",
+    ]) {
+      const installed = measured.profiles.find(
+        (profile) =>
+          profile.role === role &&
+          profile.skillsRoot ===
+            (host === "codex" ? ".agents/skills" : ".claude/skills"),
+      );
+      const profile = nativeProfile({
+        launchpad: source,
+        role,
+        phrase: role === "router" ? "drive: WO-999" : "resume: next",
+        cwd: source,
+        worker: "worker",
+        definition: { model: "m", effort: "xhigh", prompt: "ROLE" },
+      });
+      const figure = drivenStartBytes({
+        launchpad: source,
+        host,
+        role,
+        profile,
+      });
+      // The installed root is the meter's own measurement; the launch text is
+      // what the drive adds beyond it. Neither side is bounded here.
+      assert.equal(figure.installedBytes, installed.bytes, `${host} ${role}`);
+      assert.ok(figure.launchTextBytes > 0, `${host} ${role} launch text`);
+      assert.equal(
+        figure.bytes,
+        figure.installedBytes + figure.launchTextBytes,
+        `${host} ${role}`,
+      );
+      assert.equal(figure.role, role);
+      assert.equal(figure.host, host);
+      assert.equal(Object.hasOwn(figure, "ceiling"), false);
+      assert.match(figure.method, /recorded, not bounded/);
+      console.log(
+        `driven start ${host} ${role}: ${figure.bytes} bytes (installed ${figure.installedBytes}, launch text ${figure.launchTextBytes}); cold-start ceiling ${installed.ceiling ?? "unset"}`,
+      );
+    }
+  // A launch with no installed root records that as unknown, never zero.
+  const absent = drivenStartBytes({
+    launchpad: join(tmpdir(), "no-such-launchpad"),
+    host: "claude",
+    role: "executor",
+    profile: nativeProfile({
+      launchpad: "/launchpad",
+      role: "executor",
+      phrase: "resume: next",
+      cwd: "/launchpad",
+      worker: "worker",
+      definition: { model: "m", effort: "xhigh", prompt: "ROLE" },
+    }),
+  });
+  assert.equal(absent.installedBytes, null);
+  assert.equal(absent.bytes, null);
+  assert.ok(absent.launchTextBytes > 0);
+});
+
 test("WO-155 missing history and missing role files are explicit unknowns; check remains advisory", (t) => {
   const root = repo(t);
   const budgets = JSON.parse(
@@ -6748,14 +6841,52 @@ test("WO-145 optional economy support preserves historical snapshots through the
   // The combined oracle preserves both independently reviewed role histories.
   // Removing a shared sentence follows the same route as adding one.
   const fixtures = join(source, "packages/skeleton/fixtures");
-  const current = "wo192-integration-role-baseline.json";
+  // The router's prune sentence (WO-252's repair) re-pins the role trees over
+  // WO-252's first oracle, which the shared prune sentence and the
+  // release-close residue and glob clause re-pinned over WO-250's. The review
+  // ladder, the counting of every worker use and the worker gate rule
+  // (WO-250) re-pinned them over the WO-249 integration oracle. That oracle
+  // pins the combined trees of WO-249's criteria rules and WO-251's desktop
+  // and browser boundary through two parents: WO-251's oracle, main's at
+  // integration, as its historical parent and WO-249's as its branch parent,
+  // and both preserve WO-247's oracle, which carries the integrated oracle and
+  // both chains below it.
+  const current = "wo252-repair-role-baseline.json";
   const baseline = JSON.parse(readFileSync(join(fixtures, current), "utf8"));
-  assert.equal(
-    baseline.historicalBaseline,
-    "wo239-integration-role-baseline.json",
+  assert.equal(baseline.historicalBaseline, "wo252-role-baseline.json");
+  const pruneSentence = JSON.parse(
+    readFileSync(join(fixtures, baseline.historicalBaseline), "utf8"),
   );
-  assert.equal(baseline.branchBaseline, "wo192-role-baseline.json");
-  assert.equal(baseline.upstreamBaseline, "wo185-role-baseline.json");
+  assert.equal(pruneSentence.historicalBaseline, "wo250-role-baseline.json");
+  const ladder = JSON.parse(
+    readFileSync(join(fixtures, pruneSentence.historicalBaseline), "utf8"),
+  );
+  assert.equal(
+    ladder.historicalBaseline,
+    "wo249-integration-role-baseline.json",
+  );
+  const integration = JSON.parse(
+    readFileSync(join(fixtures, ladder.historicalBaseline), "utf8"),
+  );
+  assert.equal(integration.historicalBaseline, "wo251-role-baseline.json");
+  assert.equal(integration.branchBaseline, "wo249-role-baseline.json");
+  assert.equal(integration.upstreamBaseline, "wo247-role-baseline.json");
+  for (const name of [
+    integration.historicalBaseline,
+    integration.branchBaseline,
+  ]) {
+    const parent = JSON.parse(readFileSync(join(fixtures, name), "utf8"));
+    assert.equal(parent.historicalBaseline, "wo247-role-baseline.json", name);
+  }
+  const previous = JSON.parse(
+    readFileSync(join(fixtures, integration.upstreamBaseline), "utf8"),
+  );
+  assert.equal(
+    previous.historicalBaseline,
+    "wo192-integration-role-baseline.json",
+  );
+  assert.equal(previous.branchBaseline, "wo192-role-baseline.json");
+  assert.equal(previous.upstreamBaseline, "wo185-role-baseline.json");
   // Follow every recorded parent, not only the historical line: an integrated
   // oracle has two parents, and either parent may carry its own branch
   // history. Every recorded digest must still match, and no oracle may drop
@@ -6850,27 +6981,40 @@ test("WO-145 optional economy support preserves historical snapshots through the
       `${file.path} must not imply an approval path in full-access mode`,
     );
     if (file.path.endsWith("dotln-executor/SKILL.md")) {
-      assert.match(
+      // The reviews are a ladder with an end (WO-250): three reviewers over
+      // the whole diff, a recheck of the fixes alone under the admission
+      // rule, one combined last look, then the executor's own judgment; and
+      // every launch, re-task and kit launch counts against the cap.
+      for (const rule of [
+        /Round 1: three fresh independent `dotln-worker` reviewers over the whole diff against the merge base/,
+        /Round 2, the recheck: each reviewer whose findings were fixed rechecks those fixes on the current diff and nothing else/,
+        /a new finding is admitted only when it breaks an acceptance criterion or a behavior `main` had, and any other new finding is recorded in the handoff, not fixed/,
+        /Round 3, the last: only when round 2's fixes changed code again, one combined worker carrying the three briefs/,
+        /After round 3 no reviewer runs in this execution or repair: you judge the remaining delta/,
+        /Skip a round, and say so, when the fixes before it touch only comments, documentation, formatting, test names or regenerated files/,
+        /starting at round 3 when that diff is under fifty changed source lines/,
+        /`npm run worker -- review --kind criteria\|design\|consistency\|combined --host codex\|claude/,
+        /Every launch, re-task \(a `SendMessage` or a resumed agent\) and kit launch counts one use against subagentCap/,
+        /`self-review: found N; fixed N; recorded N; rounds R; unreviewed M lines \(<reason>\)`/,
+      ])
+        assert.match(file.contents, rule);
+      assert.doesNotMatch(
         file.contents,
-        /All three reviewers must finish before that run starts and must not be restarted after it passes/,
-      );
-      assert.match(
-        file.contents,
-        /After any new set of code changes, restart all three existing reviewers on the current diff and finish their rechecks before the next complete run/,
+        /restart all three existing reviewers|restart all three independent/,
       );
       const completeRunStep = file.contents
         .split("\n")
         .find((line) => /^\d+\. Start one complete run,/.test(line));
       assert.match(
         completeRunStep,
-        /on failure finish.*repair and its write-backs.*format.*restart all three existing reviewers.*wait for all three to finish.*fresh complete run/,
+        /on failure finish.*repair and its write-backs.*format.*review ladder and finish it before starting a fresh complete run/,
       );
       const reviewStep = file.contents
         .split("\n")
         .find((line) => /^\d+\. Finish implementation or repair,/.test(line));
       assert.match(
         reviewStep,
-        /authored outputs before launching or restarting all three.*never use early scouting reviews/,
+        /authored outputs before the review ladder's first round; never use early scouting reviews/,
       );
       assert.doesNotMatch(
         file.contents,
@@ -6914,6 +7058,35 @@ test("WO-145 optional economy support preserves historical snapshots through the
       );
       assert.notEqual(optedOut.contents, file.contents, file.path);
     }
+  }
+  // The criteria rules each role reads (WO-249): every non-router role names
+  // the three off-ramps and the words rule; the verifier carries the funnel,
+  // the reviewer the defective line forms and the planner the five-class
+  // screen and its lint.
+  const sentences = {
+    shared: [
+      "`retract <ordinal>` undoes a waiver or defect record and `reopen-handoff` returns a handoff the operator widened to its phase",
+      "records an unmet criterion only from the operator's words asking for that criterion's waiver",
+      "An executor records an unmet criterion of the five defect classes unmet with its class named for the verifier and asks the operator nothing.",
+    ],
+    verifier: [
+      "an input you constructed outside the supported vocabulary is a follow-up, never a block",
+      "a recorded defect `unmet, defective (<class>) by <ordinal>` with your evidence",
+    ],
+    reviewer: [
+      "`unmet, defective (<class>) by <ordinal>` with your own evidence for the class",
+      'a blocking entry also carrying `"basis": {"criterion": "<id>"}`',
+    ],
+    planner: [
+      "Screen every acceptance criterion before filing against the five defect classes",
+      "prints a `criteria advisory` line",
+    ],
+  };
+  for (const file of roles) {
+    const role = file.path.split("/")[2].slice("dotln-".length);
+    if (role === "router") continue;
+    for (const sentence of [...sentences.shared, ...(sentences[role] ?? [])])
+      assert.ok(file.contents.includes(sentence), `${file.path}: ${sentence}`);
   }
   for (const [index, bundle] of on.bundles.entries()) {
     const manifest = bundle.manifest;
@@ -7554,6 +7727,172 @@ test("follow-up planning entry pages reach every pending record within the byte 
   assert.equal(started.followups.pending, 40);
   assert.ok(started.followups.next);
   assert.equal(started.authority, "document-only planning dispatch");
+});
+
+test("WO-252 plan failures counts stopped closes by blocker class and plan start prints a class repeated across three orders", async (t) => {
+  const root = repo(t);
+  // A close attempt as release close records it: stopped with its blocker,
+  // or completed with none.
+  const attempt = (order, recordedAt, blockerClass = null) => ({
+    schemaVersion: 1,
+    workOrderId: order,
+    startedAt: recordedAt,
+    recordedAt,
+    publication: { tagOutcome: blockerClass ? null : "published" },
+    blockers: blockerClass
+      ? [
+          {
+            action: "publication",
+            reason: `${order} refused`,
+            class: blockerClass,
+            step: "worktree-removal",
+          },
+        ]
+      : [],
+    blocker: blockerClass
+      ? {
+          class: blockerClass,
+          step: "worktree-removal",
+          message: `${order} refused`,
+        }
+      : null,
+  });
+  const retain = (order, attempts) => {
+    const current = attempts.at(-1);
+    write(
+      root,
+      `docs/control/local/retained/${order}/release-close.json`,
+      json({ ...current, previousAttempts: attempts.slice(0, -1) }),
+    );
+  };
+  // The fork's pattern: each order refused once for the same class and then
+  // closed by hand, with an order that closed on its first attempt between two
+  // of them, beside one order stopped by a held writer.
+  for (const [order, day, blockerClass] of [
+    ["WO-901", "01", "undeclared-ignored-material"],
+    ["WO-903", "03", "undeclared-ignored-material"],
+    ["WO-904", "04", "writer-held"],
+    ["WO-905", "05", "undeclared-ignored-material"],
+  ])
+    retain(order, [
+      attempt(order, `2030-01-${day}T00:00:00.000Z`, blockerClass),
+      attempt(order, `2030-01-${day}T00:10:00.000Z`),
+    ]);
+  retain("WO-902", [attempt("WO-902", "2030-01-02T00:00:00.000Z")]);
+  const page = await planMain(["failures", "--all"], root);
+  assert.deepEqual(page.localReleaseCloses.blockers, {
+    byClass: { "undeclared-ignored-material": 3, "writer-held": 1 },
+    byOrder: { "WO-901": 1, "WO-903": 1, "WO-904": 1, "WO-905": 1 },
+    otherOrderRows: 0,
+    repeated: [{ class: "undeclared-ignored-material", orders: 3 }],
+  });
+  // plan start needs a clean main; the retained records are ignored.
+  syncFollowups(root);
+  if (runGit(root, ["status", "--porcelain"], fixtureGitOptions)) {
+    runGit(root, ["add", "."], fixtureGitOptions);
+    runGit(
+      root,
+      ["-c", "maintenance.auto=false", "commit", "-qm", "fixture register"],
+      fixtureGitOptions,
+    );
+  }
+  runGit(root, ["branch", "-m", "main"], fixtureGitOptions);
+  const printed = [];
+  const log = console.log;
+  console.log = (...args) => printed.push(args.join(" "));
+  let started;
+  try {
+    started = await planMain(["start", "close-blockers"], root);
+  } finally {
+    console.log = log;
+  }
+  const line =
+    "close blocker repeated: undeclared-ignored-material across 3 orders";
+  assert.ok(printed.includes(line), printed.join("\n"));
+  assert.deepEqual(started.failures.closeBlockersRepeated, [line]);
+});
+
+test("WO-252 plan start prints every repeated close blocker class even when the start block must drop them to fit its bound", async (t) => {
+  const root = repo(t);
+  const classes = [
+    "undeclared-ignored-material",
+    "not-clean",
+    "writer-held",
+    "preservation-refused",
+    "declared-root-unreadable",
+    "host-denied",
+    "base-fetch",
+    "foreign-tag",
+    "starter-refresh",
+    "publication",
+    "other",
+  ];
+  // Three orders, each stopped once by every class before it closed.
+  for (const order of ["WO-911", "WO-912", "WO-913"]) {
+    const attempts = classes.map((blockerClass, index) => ({
+      schemaVersion: 1,
+      workOrderId: order,
+      startedAt: `2030-02-01T${String(index).padStart(2, "0")}:00:00.000Z`,
+      recordedAt: `2030-02-01T${String(index).padStart(2, "0")}:00:00.000Z`,
+      publication: { tagOutcome: null },
+      blockers: [
+        {
+          action: "publication",
+          reason: "refused",
+          class: blockerClass,
+          step: "publication",
+        },
+      ],
+      blocker: { class: blockerClass, step: "publication", message: "refused" },
+    }));
+    write(
+      root,
+      `docs/control/local/retained/${order}/release-close.json`,
+      json({
+        schemaVersion: 1,
+        workOrderId: order,
+        startedAt: "2030-02-01T12:00:00.000Z",
+        recordedAt: "2030-02-01T12:00:00.000Z",
+        publication: { tagOutcome: "published" },
+        blockers: [],
+        blocker: null,
+        previousAttempts: attempts,
+      }),
+    );
+  }
+  syncFollowups(root);
+  if (runGit(root, ["status", "--porcelain"], fixtureGitOptions)) {
+    runGit(root, ["add", "."], fixtureGitOptions);
+    runGit(
+      root,
+      ["-c", "maintenance.auto=false", "commit", "-qm", "fixture register"],
+      fixtureGitOptions,
+    );
+  }
+  runGit(root, ["branch", "-m", "main"], fixtureGitOptions);
+  const printed = [];
+  const log = console.log;
+  console.log = (...args) => printed.push(args.join(" "));
+  let started;
+  try {
+    started = await planMain(["start", "every-class"], root);
+  } finally {
+    console.log = log;
+  }
+  // The block overran its bound and kept only its command and window.
+  assert.equal(typeof started.failures.overrun, "string");
+  assert.equal(started.failures.closeBlockersRepeated, undefined);
+  assert.deepEqual(
+    printed
+      .filter((text) => text.startsWith("close blocker repeated: "))
+      .sort(),
+    classes
+      .map(
+        (blockerClass) =>
+          `close blocker repeated: ${blockerClass} across 3 orders`,
+      )
+      .sort(),
+  );
 });
 
 test("follow-up handoffs require a live public destination without copying local adjacent text", (t) => {
@@ -10007,7 +10346,9 @@ test("WO-132 generated release-close handoff and preview use the main writer res
   );
   assert.equal(printed.status, 0, printed.stderr);
   const handoff = printed.stdout.match(
-    /from this main checkout: (.+?)\. This narrowly/,
+    // The effect sentence follows the helper, in whichever kind the close
+    // takes for this fixture (WO-247-D007).
+    /from this main checkout: (.+?)\. This (?:narrowly|close)/,
   )[1];
   assert.doesNotMatch(handoff, /^cd /);
   const invoke = (name, event, extra = {}) => {
@@ -11072,73 +11413,158 @@ test("process table names the observed cutoff and evidence sources", () => {
   assert.match(renderMetaTable({ orders: [] }), /Observation cutoff: unknown/);
 });
 
-test("the meter table leaves unavailable observations blank, drops an unobserved dispatch row and counts the omissions once", () => {
-  const metrics = {
-    elapsedMs: 10,
-    attempts: 1,
-    gateMs: null,
-    readObligationCount: 2,
-    readObligationBytes: 3,
-    tokens: null,
-    costUsd: null,
-    declaredPromptTokens: 4,
-    operatorCorrections: 0,
-    operatorDirections: 1,
+test("the subject meter has one value per cell and labelled closed-order comparisons", async () => {
+  const {
+    withMeterBlockLast,
+    assertPullRequestBodyShape,
+    assertGitHubBodyProfile,
+  } = await import("./lib/github-body.mjs");
+  const prior = {
+    workOrder: "WO-997",
+    phase: "closed",
+    metrics: {
+      elapsedMs: 7_260_000,
+      tokens: 1000,
+      costUsd: 0.25,
+      commandsRun: 10,
+      stepCount: 20,
+    },
+    boundStops: { count: 0 },
+    boundAcceptances: [],
+    dispatches: [{ role: "executor", observedTokens: 1000 }],
   };
-  const delta = {
-    ...Object.fromEntries(Object.keys(metrics).map((key) => [key, null])),
-    elapsedMs: 5,
-    readObligationCount: 1,
-  };
-  const keys = [
-    "wallClockMs",
-    "bytesReadIntoContext",
-    "commandsRun",
-    "observedTokens",
-    "stepCount",
-    "observedCostUsd",
-    "declaredPromptTokens",
-  ];
-  const dispatch = (role, value) => ({
-    role,
-    ...Object.fromEntries(keys.map((key) => [key, value])),
-    delta: Object.fromEntries(keys.map((key) => [key, value])),
-  });
-  const rendered = renderMetaTable({
-    observedAt: "2030-01-02T03:04:05.000Z",
-    orders: [
+  const subject = {
+    workOrder: "WO-999",
+    phase: "active",
+    metrics: {
+      elapsedMs: 3_600_000,
+      tokens: 2000,
+      costUsd: 0.5,
+      commandsRun: 7,
+      stepCount: 20,
+    },
+    boundStops: { count: 1 },
+    boundAcceptances: [{}],
+    dispatches: [
       {
-        workOrder: "WO-999",
-        phase: "implementing",
-        metrics,
-        delta,
-        dispatches: [dispatch("executor", 7), dispatch("verifier", null)],
+        role: "executor",
+        wallClockMs: 3_600_000,
+        observedTokens: 2000,
+        observedCostUsd: 0.5,
+        commandsRun: 7,
+        stepCount: 20,
+        declaredPromptTokens: 768,
+        boundStops: { count: 1 },
+        boundAcceptances: [{}],
+        delta: { wallClockMs: -3_660_000, observedTokens: 1000 },
+      },
+      {
+        role: "verifier",
+        wallClockMs: null,
+        observedTokens: null,
+        observedCostUsd: null,
+        commandsRun: null,
+        stepCount: null,
+      },
+      {
+        role: "reviewer",
+        wallClockMs: 0,
+        observedTokens: 0,
+        observedCostUsd: 0,
+        commandsRun: 0,
+        stepCount: 0,
+        boundStops: { count: 0 },
+        boundAcceptances: [],
       },
     ],
-  });
+  };
+  const meta = {
+    observedAt: "2030-01-02T03:04:05.000Z",
+    orders: [
+      { ...prior, workOrder: "WO-996" },
+      prior,
+      { ...prior, workOrder: "WO-998", phase: "active" },
+      subject,
+      { ...prior, workOrder: "WO-995" },
+    ],
+  };
+  const rendered = renderMetaTable(meta, { workOrderId: "WO-999" });
+  const body = withMeterBlockLast(
+    "# WO-999\n\nReviewed explanation.\n",
+    rendered,
+  );
+  assertPullRequestBodyShape(body, "fixture PR.md");
+  assertGitHubBodyProfile(body, "fixture PR.md");
   const rows = rendered.split("\n").filter((line) => line.startsWith("|"));
-  assert.ok(
-    rows.every((line) => !line.includes("unavailable")),
-    rendered,
+  assert.equal(
+    rows.length,
+    5,
+    "one header, one separator and every subject dispatch",
   );
-  assert.match(
-    rendered,
-    /^\| WO-999 \| 0 h 0 min \(Δ 0 h 0 min\) \/ 1 \|  \| 2 \(Δ 1\) \/ 3 \|  \/  \| 4 \| 0 \| 1 \|  \|  \|$/m,
+  assert.equal(
+    rows[0],
+    "| Dispatch | Wall clock | Tokens | USD | Commands | Steps | Bound stops | Bound acceptances |",
   );
-  assert.match(
-    rendered,
-    /^\| WO-999\/executor \| 0 h 0 min \(Δ 0 h 0 min\) \| 7 \(Δ 7\) \| 7 \(Δ 7\) \| 7 \(Δ 7\) \| 7 \(Δ 7\) \| 7 \(Δ 7\) \/ 7 \|  \|  \|$/m,
+  assert.equal(
+    rows[2],
+    "| WO-999/executor | 1 h 0 min | 2,000 | 0.5 | 7 | 20 | 1 | 1 |",
   );
-  assert.ok(!rendered.includes("WO-999/verifier"));
-  assert.match(
-    rendered,
-    /\| Corrections \| Directions \| Bound stops \| Bound acceptances \|$/m,
+  assert.equal(
+    rows[3],
+    "| WO-999/verifier | unknown | unknown | unknown | unknown | unknown | unknown | unknown |",
   );
-  // Three missing values, four missing deltas and the seven cells of the
-  // dropped dispatch row.
-  assert.match(
+  assert.equal(
+    rows[4],
+    "| WO-999/reviewer | 0 h 0 min | 0 | 0 | 0 | 0 | 0 | 0 |",
+  );
+  for (const row of rows.slice(2)) {
+    const cells = row
+      .split("|")
+      .slice(1, -1)
+      .map((value) => value.trim());
+    assert.equal(cells.length, 8);
+    assert.match(cells[0], /^WO-999\/(executor|verifier|reviewer)$/);
+    assert.match(cells[1], /^(unknown|\d+ h \d+ min)$/);
+    for (const value of cells.slice(2))
+      assert.match(value, /^(unknown|[\d,]+(?:\.\d+)?)$/);
+  }
+  assert.doesNotMatch(rendered, /\| Work \||omitted|Δ|declared prompt/);
+  const sentences = rendered
+    .split("\n")
+    .filter((line) => line.startsWith("Against "));
+  assert.deepEqual(
+    sentences,
+    [
+      "wall clock 1 h 1 min less",
+      "tokens 1,000 more",
+      "USD 0.25 more",
+      "commands 3 fewer",
+      "steps unchanged (0 difference)",
+      "bound stops 1 more",
+      "bound acceptances 1 more",
+    ].map((value) => `Against WO-997, the previous closed order: ${value}.`),
+  );
+  subject.phase = "closed";
+  assert.equal(
+    renderMetaTable(meta, { workOrderId: "WO-999" }),
     rendered,
-    /^18 unavailable observations omitted as blank cells or rows; unavailable is not zero; unset ceilings are not approvals of a future limit\.$/m,
+    "a closed subject keeps its own rows",
+  );
+  const noPrevious = renderMetaTable(
+    { orders: [meta.orders[2], subject] },
+    { workOrderId: "WO-999" },
+  );
+  assert.doesNotMatch(noPrevious, /Against /);
+  prior.metrics.tokens = null;
+  subject.metrics.costUsd = undefined;
+  const missing = renderMetaTable(meta, { workOrderId: "WO-999" });
+  assert.doesNotMatch(missing, /previous closed order: (tokens|USD)/);
+  assert.match(missing, /previous closed order: wall clock 1 h 1 min less/);
+  const absent = renderMetaTable(meta, { workOrderId: "WO-994" });
+  assert.doesNotMatch(
+    absent,
+    /\| WO-|Against /,
+    "an absent subject never borrows another order's rows",
   );
 });
 
