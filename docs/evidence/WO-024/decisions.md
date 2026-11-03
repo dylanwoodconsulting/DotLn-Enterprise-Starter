@@ -27,3 +27,75 @@
   "reopenWhen": "The next planning pass's refutation judges this text, or a verifier or reviewer of this order reports a clause the amendment wrote as unjudgeable or wrong."
 }
 ```
+
+## WO-024-D002
+
+```json
+{
+  "id": "WO-024-D002",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Set the Repository pin to WO-022 merge 55b59c9133056c1d6471274a9676a7d5649196ac, published as DotLn Angular v0.9.0. The next batch pair now has the earlier studies integrated. Preserve the ancestor guard, integration at activation and all product scope; remove the obsolete provisional-base wording.",
+  "evidence": [
+    "The 2026-11-01 pass D11 reserves this base refresh for the pass before activation; WO-023/WO-024 are now the next pair.",
+    "gh release view v0.9.0 and gh api repos/DylanBWood/DotLn-Angular/commits/v0.9.0 confirmed the release and target commit on 2026-11-03."
+  ],
+  "rejected": [
+    {
+      "option": "Keep the pre-study provisional pin",
+      "reason": "It no longer describes the integrated prerequisite state the next batch reads."
+    }
+  ],
+  "reopenWhen": "The target main no longer contains the pin, or a new prerequisite changes the study contract before activation."
+}
+```
+
+## WO-024-D003
+
+```json
+{
+  "id": "WO-024-D003",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Make the inherited fan-out stop explicit before the first launch and check its rollup at each launch or re-task; apply current use accounting and reserve the independent review ladder. Read the shared profile section instead of duplicating a launcher. A prior order-specific stop lift does not carry forward. Target-code reviewers receive the actual target identity; a launchpad-only helper result cannot claim that review.",
+  "evidence": [
+    "REVIEW-001 ER-RUN-01 and ER-RUN-02 nominate the concern; the parent read the bound WO-020-D004/D012 and WO-022-D023/D028, the filed fan-out and host qualification, and the shipped review-worker subject/diff construction.",
+    "WO-022 fan-out records 277,506,825 combined tokens before the missing stop was corrected; its D028 applied 117,733,609 and stopped further workers. The current kit counts re-tasks as uses.",
+    "The profile section Run content workers carries the current procedure; this pass adds no launcher, budget increase, enforcement claim or retrospective evidence rewrite."
+  ],
+  "rejected": [
+    {
+      "option": "Treat unavailable WO-014 metadata or WO-020-specific permission as no stop for this order",
+      "reason": "The bound decisions preserve the recorded fallback figure and scope of the exception."
+    },
+    {
+      "option": "Require every textual critic correction to start another author",
+      "reason": "The parent may make bounded corrections and retain the independent critic coverage while respecting the use budget."
+    }
+  ],
+  "reopenWhen": "A later order crosses the stop without declaring it, cannot attribute the observed usage, or core delivers a target-aware worker route and boundary meter."
+}
+```
+
+## WO-024-D004
+
+```json
+{
+  "id": "WO-024-D004",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Replace criterion 4's inherited process-cost bookkeeping with explicit candidate reference-quality and critic-disposition checks. Preserve the worker accounting and inherited stop as process duties in Cost, Design, fan-out.md and decisions; unavailable counters do not decide product acceptance.",
+  "evidence": [
+    "The 2026-11-03 criteria review F1 traced the old cross-reference to WO-020 criterion 4's token totals and stop comparison.",
+    "Product 07 Operator-opened planning pass places cost and token measurements in Cost or decisions, not acceptance criteria.",
+    "The design review F1 requires an explicit launch outcome when readings are missing or overlap; the shared profile names recovery and disclosure, honors the role's nonblocking rule for unavailable counters, and preserves the observed-overrun stop without changing product acceptance."
+  ],
+  "rejected": [
+    {
+      "option": "Keep inherited token bookkeeping in the acceptance criterion",
+      "reason": "A supported missing counter would judge the product on an unavailable process measurement."
+    }
+  ],
+  "reopenWhen": "An independent verifier finds the rewritten reference-quality requirement unjudgeable on the candidate, or the current kit changes the process contract."
+}
+```

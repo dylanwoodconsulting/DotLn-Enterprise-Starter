@@ -332,6 +332,13 @@ audience beyond the operator.
 
 ### Harness
 
+- **Browser verification:** use Playwright in a fresh, isolated browser or the
+  project's browser tests. Verification authority does not authorize native
+  desktop control or use of an existing browser profile; those need the
+  operator's explicit authorization for the interaction. Missing dedicated
+  Playwright tooling does not widen that authority (2026-11-01;
+  [WO-022's process-error record](../evidence/WO-022/verification-process-error.md)
+  and WO-022-D029, bound in the target-record receipt).
 - **Models and effort:** Claude Code at the operator's chosen effort; spawned workers at the
   kit's pinned model and effort; a `planning:` or `resume:` dispatch line that
   names `fable` or `fable 5.1` runs the workers as `dotln-worker-fable`

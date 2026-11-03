@@ -4,6 +4,16 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-03 — planning pass: Entropy Reducer over the launchpad
+
+The operator dispatched an Entropy Reducer planning pass over this instance.
+The dispatch and update-merge confirmation are captured in ignored intake at
+`docs/intake/notes/planning-entropy-reducer-2026-11-03.txt`, SHA-256
+`be5fa3d8bb164921d882265220527e67931d23ab8b3b5a28052d2dc2a9969c6e`.
+The [pass document](../planning/entropy-reducer-2026-11-03.md) records the frozen
+review, blinded refutation, dispositions and resulting plan. This heading
+registers the planning pass; it adds no ideation entry.
+
 ## 2026-11-01 — planning pass: the second pass of the day, criterion 9 out of WO-022 (operator dispatch of 2026-11-01)
 
 Dispatch: a `planning:` request for a quick pass on WO-021's verification

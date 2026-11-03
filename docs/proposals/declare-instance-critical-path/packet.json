@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "FiledProductSuggestionPacket",
+  "filedAt": "2026-11-03T17:03:54.243Z",
+  "sourceReceiptId": "REVIEW-001",
+  "sourceReceiptPath": "docs/instance/entropy-reducer/runs/REVIEW-001.md",
+  "operatorReason": "Implemented in this pass by the kit-readable current declaration. It distinguishes foundation dependencies from the existing operator-selected sequence and creates no new activation priority.",
+  "promotion": "Filing records the packet. Promotion to a work order remains an operator-authorized planning act.",
+  "packet": {
+    "schemaVersion": 1,
+    "kind": "ProductSuggestionPacket",
+    "proposedPath": "docs/proposals/declare-instance-critical-path/",
+    "sourceEpisodeId": "ep_entropy_08baac7f6d7d3051",
+    "provenance": [
+      "Entropy Reducer review episode ep_entropy_08baac7f6d7d3051 at base 06908c79ab3ba9eb95315be1c068875ad4c5557b",
+      "finding ER-ARCH-01 (measured)"
+    ],
+    "corroboratingEvidenceRefs": [
+      "docs/planning/refutations/2026-10-28-planning-7f5e44638facd299-012.md:13",
+      "docs/planning/concept-batches-and-quality-passes-2026-10-30.md:798-803"
+    ],
+    "dissentingEvidenceRefs": [
+      "docs/planning/mining-run-orders-2026-10-24.md:299-312"
+    ],
+    "suggestion": {
+      "suggestionId": "declare-instance-critical-path",
+      "submittedBy": "entropy-reducer@1 (planning-reviewer@2), claude-opus-5-5",
+      "problemOrOpportunity": "The purpose block states a critical path, but the planning subject reads only a dated declaration file this instance never filed. The subject contradicts itself, and 9 of 17 receipts spend judgment on the mismatch.",
+      "scope": "A planning pass files docs/planning/critical-path-2026-09-08.md, the name the kit reads, with a 'The critical path' section restating the purpose's dependency chain and recording that the operator's road (D11; the direction of 2026-10-30) schedules side members first. Optionally, ask core to make the declaration path configurable.",
+      "evidenceRefs": [
+        "docs/product/purpose.md:25-30",
+        "scripts/lib/plan-subject.mjs:635-646",
+        "docs/KIT.md:399-402"
+      ],
+      "affectedUsers": [
+        "operator",
+        "planner sessions",
+        "plan refuter"
+      ],
+      "affectedSystems": [
+        "docs/product/purpose.md",
+        "plan refutation subject"
+      ],
+      "expectedValue": "The refuter judges one consistent subject, and the recurring critical-path observation stops consuming each pass's dispositions.",
+      "altitude": 6,
+      "uncertainty": "A declaration naming WO-008 could trip receipt 015's reopen condition, so it must state dependency and not order. Upstream may also rename the core-dated filename.",
+      "risks": [
+        "The declaration could be read as reopening the settled sequence; it must not be.",
+        "Format validation applies once the file is declared and may refuse a malformed section."
+      ],
+      "alternatives": [
+        "Remove the critical-path sentence from the purpose block, which is a doctrine change requiring an operator decision.",
+        "Ask core to read the critical path from the purpose block."
+      ],
+      "duplicationHints": [
+        "receipt 012's finding on the self-disagreeing subject",
+        "receipt 015, WO-020 item (a), reopen condition"
+      ],
+      "urgencyRationale": "The next planning pass judges the D001 amendments to WO-016, WO-008, WO-017 and WO-018, which will raise the mismatch again."
+    }
+  }
+}

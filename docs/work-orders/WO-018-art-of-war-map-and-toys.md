@@ -13,15 +13,17 @@ data, `toy-v0.schema.json` and `toys.ts` to the models, `toys.json` (the
 run's nineteen toys in full and the six new ones), the toy-source tool
 files, the toy shelf and the toy page under Tools, the map and toy checks,
 two document sections, about 32 source files plus about 300 data rows; adds
-no runtime dependency. Removes nothing. Wall-clock: about 4 to 6 hours of
+no runtime dependency. Removes nothing. Wall-clock: about 4 h 0 min to 6 h 0 min of
 executor work, of which two fan-outs run in parallel, plus the fixed cycle;
 unknown until run. Context bytes: WS-001 §The app and its sub-apps, the
 catalog rules as WO-019 leaves them, the maps README, design B §3 and
 `toys.jsonl` read at the run's folder, this order, about 190 KB for the
 executor; the mappers read one public-domain text. Commands added in the
 target: `npm run toys:check`; `npm run catalog:check` and `catalog:join`
-already cover the new files. Tokens: unknown until run; recorded per worker.
-Steps: 14. Re-mints: none. Refutations paid: five (receipts 008 to 012, on
+already cover the new files. Tokens: unknown until run; worker totals, the
+session total, stop comparison and use count are recorded in fan-out.md and
+decisions under the profile as process controls, outside acceptance.
+Steps: 14. Re-mints: none. Refutations paid before this pass: five (receipts 008 to 012, on
 the texts before the 2026-11-01 second pass's authorized amendment,
 WO-018-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
@@ -192,16 +194,16 @@ commit concept rows that carry the maxim where the maxim is the concept.
   transform kind the enum lacks is recorded as `untyped` with the proposed
   kind in its reason; the enum grows only by a decision (WO-014's rule).
   Together with the map pass (two mappers, one critic, one classifier) the
-  order dispatches at most twelve workers (a mapper's rewrite of the rows
-  the critic names continues that mapper and counts once, as WO-014's reruns
-  did), each a `dotln-worker` or `dotln-worker-fable` on the operator's
-  dispatch, under the launchpad's `subagentCap`; `node scripts/harness.mjs
-  usage <session>` is read before the first spawn and at handoff. The stop
-  rule is declared before the spend: the executor reads each worker's token
-  total as it returns and stops the fan-out with a recorded decision when
-  the workers' totals summed with the session's own pass WO-014's recorded
-  order total as `npm run meta` prints it at activation (117,733,609 tokens
-  on 2026-10-26).
+  order starts twelve authoring/critic workers, each a `dotln-worker` or
+  `dotln-worker-fable` on the operator's dispatch. Every launch and re-task
+  consumes a use; reserve the independent review ladder under subagentCap
+  before allocating corrections. Declare and check the stop, readings and
+  remaining uses before every launch or re-task under the
+  [profile's admission rules](../repositories/dotln-angular.md#run-content-workers).
+  The parent may apply bounded critic corrections, recording who changed
+  what; the required critic judgments must cover the current records. Preserve
+  the declared twelve initial roles and both fan-outs; no prior order's
+  exception travels to this order.
 - **The toy shelf** (`libs/features/tools` gains `ChildPaths.Toys = 'toys'`
   and `ChildPaths.Toy = 'toys/:id'`; `toys-page` and `toy-page` over
   `ToolsFacade`): the shelf as rows grouped by purpose and then by source
@@ -388,14 +390,13 @@ each.
    value; command and output recorded in `docs/evidence/WO-018/README.md`),
    and a tooling test proves that a dropped imported toy and a changed
    mapped value each fail that mode.
-5. `docs/evidence/WO-018/README.md` lists at most twelve workers across the
-   two fan-outs with their labels and one-line statements, each saying no
-   quarantine file was read, with the launchpad's read observation beside
-   each (the harness journal's row count for the quarantine path, or
-   `unobserved`), records each worker's token total and the session's own
-   beside WO-014's recorded order total with the decision that stopped the
-   fan-out if their sum passed it, and records the subagent count from
-   `node scripts/harness.mjs usage <session>` at handoff.
+5. The candidate's mining provenance excludes quarantined material.
+   `cat docs/evidence/WO-018/README.md` shows each map/toy worker's label and
+   one-line statement that no quarantine file was read, beside the launchpad's
+   read observation (the harness journal's row count for the quarantine path,
+   or `unobserved` where that host kept no attributable rows). Worker totals,
+   the stop comparison and subagent accounting remain process duties in the
+   Cost line, Design and decisions, not acceptance measurements.
 6. `npx nx e2e dotln-e2e` exits 0 and includes the step 10 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440;
    `grep -rlE "<dl|dotln-key-value-list" libs/features/tools/src` prints
@@ -449,7 +450,8 @@ in-repo map (its item (c)); the commands and checks this horizon adds are
 recorded against the orders' own rows (its item (d)). From receipt 011 (the
 2026-10-26 pass's refutation), carried into this text by the 2026-10-28
 pass: the fan-out's token ceiling is WO-014's recorded order total, with a
-decision at the stop (the fan-out bullet, criterion 5); the operator's
+decision at the stop (the fan-out Design and shared profile; WO-018-D002
+moves this process accounting out of criterion 5); the operator's
 ruling on the run's designs is recorded at activation (step 1); the
 production build within the declared budgets is criterion 6's; "store" has
 three meanings here, the committed data the app ships (this order's rows),

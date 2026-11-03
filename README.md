@@ -48,7 +48,10 @@ npm run resume -- status
 Bootstrap runs `npm ci` and then the emit that installs the runtime the hooks import;
 until it runs, the hooks report `snapshot-missing` and host permissions alone decide.
 `status` names the selected order, its phase and the next legal action, and adding
-`--json` gives the canonical record.
+`--json` gives the canonical record. An unmet-criteria line attributed to an
+executor ordinal is the historical handoff reading; consult the linked later
+verification and final review for the acceptance judgment. A closed passing
+order can retain that earlier line when the verifier performed its walkthrough.
 
 | Gate | Command | What it runs here |
 | --- | --- | --- |
@@ -61,6 +64,13 @@ until it runs, the hooks report `snapshot-missing` and host permissions alone de
 rows. `node scripts/harness.mjs check` confirms the generated surfaces are at their
 pinned bytes, and `npm run sync` repairs a stale derived artifact.
 
+The document and planning checks read closed orders whose records moved into
+DotLn-Angular. On a fresh machine, register an available target clone with
+`npm run worktree -- clone dotln-angular <absolute-path>` before those checks;
+the ignored clone map is local setup and does not travel with this repository.
+Bootstrap installs the runtime but does not create that mapping. The
+[repository profile](docs/repositories/dotln-angular.md) describes the target.
+
 The gate runner needs host access beyond the checkout: the shared Git metadata for
 linked worktrees, sibling worktree destinations, the ignored local control and
 `.runtime/` directories, and its private host coordination directory, where it
@@ -68,8 +78,7 @@ compiles native helpers and takes kernel locks. A user-level sandbox can prevent
 [`AI-HARNESS-SECURITY.md`](AI-HARNESS-SECURITY.md) records the posture here.
 
 Publishing to a registered repository also needs the ignored local-terms list at
-`docs/control/local/terms.txt` and the clone map that
-`npm run worktree -- clone dotln-angular <absolute-path>` records.
+`docs/control/local/terms.txt`, in addition to the clone mapping above.
 
 ## Find things
 
@@ -89,8 +98,9 @@ Publishing to a registered repository also needs the ignored local-terms list at
 ## How a change lands
 
 1. A planning pass, opened with `planning:` on clean `main`, files orders into the
-   sequence, and an independent refuter judges them before any can run. The pass
-   opens its own pull request.
+   sequence. A fresh worker judges the plan before an order can run; its receipt
+   records the launching session's attestation of independence and the available
+   model and isolation evidence. The pass opens its own pull request.
 2. `npm run worktree -- start WO-NNN docs/work-orders/<file>.md` from `main` creates
    the order's worktree and activates it.
 3. A session in that worktree takes `resume: next` to build, `resume: verify` to

@@ -27,3 +27,26 @@
   "reopenWhen": "The next planning pass's refutation judges this text, or a verifier or reviewer of this order reports a clause the amendment wrote as unjudgeable or wrong."
 }
 ```
+
+## WO-018-D002
+
+```json
+{
+  "id": "WO-018-D002",
+  "date": "2026-11-03",
+  "dispatch": "planning: entropy reducer",
+  "decision": "Move criterion 5's worker/token ceilings and totals into the process record while retaining the quarantine-provenance evidence. Count every launch and re-task, reserve the independent review ladder and permit parent-applied bounded corrections covered by the critics. Apply the shared profile's stop and uncertain-reading recovery without changing the map, toys or product acceptance scope.",
+  "evidence": [
+    "The 2026-11-03 criteria review F1 identifies criterion 5's process-cost bookkeeping; F2 reproduces how counts-once re-tasks exceed the current use cap.",
+    "Starter v0.112.0 role text counts each continuation or re-task separately.",
+    "The twelve initial roles and both fan-outs are preserved. The shared profile records the inherited stop and current admission procedure."
+  ],
+  "rejected": [
+    {
+      "option": "Defer the accounting repair until activation",
+      "reason": "The defect is concrete and this planning pass reviews every open order; leaving contradictory launch instructions supplies no benefit."
+    }
+  ],
+  "reopenWhen": "The current critic coverage cannot be preserved within the available uses, or core changes the shared launch/accounting route."
+}
+```
