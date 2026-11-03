@@ -2,12 +2,12 @@
 
 ## Independent review scope
 
-Each of the criteria, design and consistency reviewers must read every one of
-the 25 current `docs/work-orders/WO-*.md` files, including unchanged orders,
-and list that coverage in filesRead. Each also reads this pass's complete diff,
-the sequence and relevant source consumers. Closed orders remain historical
-contracts; the review judges current open obligations without retrofitting
-closed acceptance evidence. The parent is the only writer; no worker runs a gate.
+The completed criteria, design and consistency reviews each cover all 25
+current `docs/work-orders/WO-*.md` files, including unchanged orders; each
+report lists that coverage in filesRead. Their scope also includes this pass's
+diff, sequence and relevant source consumers. Closed orders remain historical
+contracts. The parent was the only writer; no worker ran a gate. D9 records
+the incomplete first consistency attempt separately and its completed replacement.
 
 ## Dispatch and capture
 
@@ -307,6 +307,33 @@ checks or a changed shared contract. Recheck/combined rounds are skipped for
 these documentation-only fixes under product 07's review ladder. Completing
 missing first-round scope is not a recheck loop.
 
+### D10. Preserve the independent goal judgment and its evidence limits
+
+[Receipt 018](refutations/2026-11-03-planning-961db9d4bb4b52f3-018.md) is the
+fresh Codex spawn-agent judgment of this pass's six compiled open orders and
+sequence. It returns aligned-with-findings for the plan and every order, eleven
+known issues and zero holds, with no carried judgments. The direct episode took
+0 h 5 min (rounded). The worker received only the canonical prompt, schema and
+shared goal standard, read no prior receipts or referenced sources, and changed
+no repository files. The receipt records session-attested independence; no
+stronger isolation or effective-model proof is inferred.
+
+Disposition: kind NoOp for speculative scope or gate changes arising from these
+eleven known issues. Reason: the compiled input supplies no executed failure
+that warrants such an intervention, and the cost table is stale with null
+horizon metrics. Evidence: the receipt's criterion-bound findings, missing
+core vision/role passages and declared runtime fallbacks. Reevaluation is each
+finding's exact reopenWhen observation; usefulWhen is that observation showing
+a repair would improve the promised learning, inspection, security, experiment
+or selection outcome. No savings or larger-removal claim is made.
+
+This preserves the studies' learning checks and operator-directed comparison
+rounds, the machinery view's useful-effect walkthrough and optional sink
+fallback, authentication's declared provider boundary, the twin's explicit
+missing-base diagnostic and simulation assumptions, and the mining order's
+honest provenance limits and usable shelf. A hypothetical concern supplies no
+new design-round cap, implementation expansion, acceptance waiver or gate.
+
 ## Register
 
 The helper's versioned dispositions accompany the decisions below. The pass
@@ -469,15 +496,18 @@ handoff.
 
 The update's complete document gate passed. First-round self-review: found 7;
 fixed 7; recorded 0. All three required review types cover all 25 order files.
-The independent goal-refutation receipt and final planning document gate remain
-pending.
+The independent goal-refutation receipt is filed: aligned-with-findings over
+six orders, eleven known issues and zero holds. The plan check passes for
+eighteen receipts and eighteen passes, with committed and workspace subject
+hashes matching the judgment. The complete `npm run test:docs` gate passed all fourteen tasks with zero
+failures. The unchanged kit verifies all 1,086 files. The two criterion
+advisories are answered by D3; the three historical operator-word advisories
+remain historical. No document, budget or baseline ceiling was raised.
 The entropy check passes for two receipts, twelve dispositions and three packets.
 
-Review scope for the three independent workers: every current work-order file
-under `docs/work-orders/WO-*.md`, new and existing, plus this pass's complete
-diff, sequence and cited source consumers. Closed orders are historical
-contracts, not candidates for retrospective acceptance edits. Review the
-current executable obligations of open orders against the shipped role text,
-including all five criterion defect classes, fan-out uses and the latest
-target prerequisites. Report distinct findings with file evidence; do not
-start any test-runner gate. The parent remains the only repository writer.
+Outcome against the dispatch: the launchpad episode is reviewed, independently
+challenged and fully disposed; local document repairs and the next orders'
+process changes are filed, and the sequence is preserved. Runtime cost savings
+remain unmeasured. This record creates no target implementation or activation.
+The final validation-text update is followed by the same complete document
+gate before publication.
