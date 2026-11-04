@@ -31,8 +31,9 @@ their decisions hold the history.
    [2026-11-04 pass](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md),
    D6.)
 2. **Selection by rule.** Within a work, among the rows the landed family
-   draws, the most-related unstudied rows by resolved in-degree, ties
-   toward typed rows then source order, twenty per order (ten from each
+   draws, the most-related unstudied rows that no filed or active order of
+   the track has already taken, by resolved in-degree, ties toward typed
+   rows then source order, twenty per order (ten from each
    work where an order carries two), with one recorded substitution per
    work; the filing pass runs the rule by script over the catalog's data at
    the order's base and records the list and its next rows in the order.
@@ -68,15 +69,15 @@ their decisions hold the history.
    spend, each in its own worktree beside any sequenced order. A research
    order's surfaces are its work's study directory, its model directory,
    `studies-summary.json`, one coverage row and its e2e cases, disjoint
-   from the road's; of two concurrent batches the second to publish
-   integrates the target's `main` and rewrites `studies-summary.json`
-   before its publish. (The operator's direction of 2026-11-04; the
+   from the road's; a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it. (The operator's direction of 2026-11-04; the
    2026-11-04 pass, D6.)
 6. **Refill.** When fewer than two research orders are queued, or the
    operator asks, the next planning pass cuts the next orders by rule 2, one
-   per work whose landed family still has rows to draw; a work whose
-   drawable rows are exhausted leaves the track until a road order lands the
-   family its remaining rows need. (The operator record §What the operator
+   per work whose landed family still has rows to draw; a work with fewer
+   than twenty drawable rows left (ten in a paired order) gets a smaller
+   final batch, its author count scaled to pairs of rows and recorded in the
+   order; a work whose drawable rows are exhausted leaves the track until a
+   road order lands the family its remaining rows need. (The operator record §What the operator
    wants, Depth in batches; the 2026-11-04 pass, D6.)
 7. **The records.** WS-001's house rules bind a research order's records as
    they bind a batch's (rules 7, 8, 15, 17, 23, 24 and 26; the target's
@@ -104,11 +105,14 @@ the three can run now, in any order or beside one another. WO-031 depends on
 WO-023 and WO-032 on WO-024, the lane pair at the front of WS-001's sequence:
 each activates after the family it draws with has merged, and the pass after
 that merge sets its base. Every member shares `studies-summary.json` and the
-coverage table in `catalog.md` §Studies with every other batch, so the second
-of two concurrent orders to publish integrates the target's `main` and
-rewrites the summary before its publish. The members hold no edge among
+coverage table in `catalog.md` §Studies with every other batch, so a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it. The members hold no edge among
 themselves; each depends only on the road order that landed its family, and
-WS-001's members owe this track nothing.
+WS-001's members owe this track nothing. The edges in the block below run
+from the member to the order it depends on, because the kit admits an edge
+only from a member (`scripts/lib/work-order-workstream.mjs`, the edge
+validation) and the prerequisites here are WS-001's; each order's typed
+dependency block is the contract, and WS-001's own edges, between members,
+run the other way.
 
 ## Delivery states
 

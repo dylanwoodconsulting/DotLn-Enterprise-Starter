@@ -15,8 +15,11 @@ admitted.
 **Cost:** adds ten records under `libs/shared/catalog/src/studies/geb/` and
 ten under `libs/shared/catalog/src/studies/tt/` (the directories WO-024
 makes), the executable models and specs the records name under
-`libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, twenty rows in
-`studies-summary.json`, two changed coverage rows in `catalog.md` §Studies
+`libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, twenty rows in `studies-summary.json`, the work's record chunk under
+`libs/shared/catalog/src/studies/` and the shared model registry
+`libs/features/tools/src/lib/studies/study-models.ts` extended, the
+inventory tests (`tools/studies.test.mjs`), the e2e counts (`catalog.spec.ts`)
+and the catalog's visual baselines (`catalog.visual.spec.ts`) updated, two changed coverage rows in `catalog.md` §Studies
 and one e2e case; about 30 source files plus twenty data records; adds no
 runtime dependency, no family, no composite, no route and no page. Removes
 nothing. Wall-clock: about 4 h 0 min to 8 h 0 min of executor work, of which
@@ -158,6 +161,20 @@ unstudied beyond WO-024's, 185 and 382 of them related to by other rows.
   with `fork_turns: none`, `gpt-6.1-sol` at `max`; under Claude each is a
   `dotln-worker`. Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
+- **The inventory's consumers.** The work's record chunk
+  (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
+  every record and which `check-studies.mjs` holds to the directory) and the
+  shared model registry (`libs/features/tools/src/lib/studies/study-models.ts`,
+  which `study-models.spec.ts` compares with the records' model paths and
+  `ToolsFacade` reads) gain this batch's entries before any check runs;
+  `tools/studies.test.mjs` keeps the first batch's membership check and gains
+  this batch's; `apps/dotln-e2e/src/catalog.spec.ts` derives its studied
+  counts from the integrated `studies-summary.json` rather than a new global
+  pin; the catalog's visual baselines (`catalog.visual.spec.ts`,
+  `catalog-{360,768,1440}.png`) are regenerated for the changed shelf counts
+  and the change recorded in the evidence README, as WO-022's was. A
+  concurrent batch reconciles the chunk, the registry and the summary when it
+  integrates `main`.
 - **Documents.** `catalog.md` §Studies: the two coverage rows read twenty
   studied each and name this batch beside WO-024's. No new rule unless a
   critic finding needs one, recorded in the decisions.
@@ -189,8 +206,8 @@ with `fan-out.md`, `review.md`, `README.md` (the link check),
    the decisions as WO-020 did. Check: the decisions carry them.
 2. The authors' brief into `fan-out.md` from WO-024's brief, with each
    work's index, the twenty rows, the analogy and absent-material rules, the
-   authoring date and the launch form of this host; dispatch the ten
-   authors; merge the twenty drafts. Check: `npx nx test tools` exits 0 over
+   authoring date and the launch form of this host; dispatch the ten authors; merge the twenty drafts into the work's record
+   chunk and register each model in `study-models.ts`. Check: `npx nx test tools` exits 0 over
    the models' specs.
 3. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile;
@@ -204,7 +221,9 @@ with `fan-out.md`, `review.md`, `README.md` (the link check),
    equivalent naming the level; BlooP opens from the contents and the FlooP
    link opens its reading; Exactly one owning team per part of the system
    opens from the Team Topologies contents; axe; no overflow at 360, 768 and
-   1440. Check: `npx nx e2e dotln-e2e` exits 0.
+   1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   the updated `tools/studies.test.mjs`; the regenerated baselines are
+   recorded in `docs/evidence/WO-032/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-032/`. Check:
    the files exist.
 7. Documents: the two coverage rows. Check: `grep -n "Gödel, Escher, Bach\|Team
@@ -272,7 +291,10 @@ each.
    characterizes the operator or quotes either book. Worker accounting
    remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440.
+   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
+   first batch's membership check and this batch's; and the regenerated
+   visual baselines match the integrated shelf.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the records in the works' lazy chunks,
    `npm run check:bundle` passes with the chunk sizes recorded, and
@@ -311,9 +333,9 @@ each.
 - **Beside the road** (WS-002 rule 5): this order edits `studies/geb/`,
   `studies/tt/`, their model directories, the summary, two coverage rows and
   one e2e case, surfaces disjoint from every sequenced order's once WO-024
-  has merged; it may run in its own worktree beside any of them, and
-  whichever of two concurrent batches publishes second integrates the
-  target's `main` and rewrites `studies-summary.json` before its publish.
+  has merged except the shared
+  registry `study-models.ts`, the summary and the e2e counts, which the
+  integration reconciles; it may run in its own worktree beside any of them, and a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it.
 - The draft pull request is opened at the verification pass as every target
   order's is (core WO-221's `--draft` form; its workflow runs are a
   final-review obligation read from `docs/evidence/WO-032/preview-pr.json`,

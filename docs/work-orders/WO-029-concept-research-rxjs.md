@@ -14,8 +14,11 @@ admitted.
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/rxjs/`,
 twenty executable modules with marble specs under
-`libs/features/tools/src/lib/studies/rxjs/`, twenty rows in
-`studies-summary.json`, one changed coverage row in `catalog.md` §Studies
+`libs/features/tools/src/lib/studies/rxjs/`, twenty rows in `studies-summary.json`, the work's record chunk under
+`libs/shared/catalog/src/studies/` and the shared model registry
+`libs/features/tools/src/lib/studies/study-models.ts` extended, the
+inventory tests (`tools/studies.test.mjs`), the e2e counts (`catalog.spec.ts`)
+and the catalog's visual baselines (`catalog.visual.spec.ts`) updated, one changed coverage row in `catalog.md` §Studies
 and one e2e case; about 40 source files plus twenty data records; adds no
 runtime dependency, no family, no composite, no route and no page. Removes
 nothing. Wall-clock: about 4 h 0 min to 8 h 0 min of executor work, of which
@@ -135,10 +138,15 @@ idle between batches.
   module supplies, and a record that still cannot run marks its reading
   illustrative with `// Illustrative: <reason>` as the code's first line and
   the reason in the decisions, as the catalog rule admits.
-- **Implementations and references, as WO-021's.** Where this app uses the
-  operator (a repository path read from the source at the integrated base,
-  introduced as "where this app uses it") and one or two public uses, each
-  introduced on its own terms; the RxJS documentation page of the operator,
+- **Implementations and references, as WO-021's, with one addition.** Where
+  this app uses the operator (a repository path read from the source at the
+  integrated base, introduced as "where this app uses it") and one or two
+  public uses, each introduced on its own terms; an operator the app does
+  not use at the integrated base records that finding in those words, with
+  two public uses in its place (the filing pass's reviewers found no use of `debounceTime`, `throttleTime`,
+  `fromEvent`, `connectable`, `concatAll`, `bufferTime`, `takeLast` or
+  `mergeAll` under `apps/` and `libs/` at `55b59c9`, and the critic confirms
+  each search); the RxJS documentation page of the operator,
   the RxJS GitHub source at the installed version and a treatment in another
   public reference where one exists, each with `accessed` and `supports`;
   own words throughout (WS-001 rule 23).
@@ -151,6 +159,20 @@ idle between batches.
   with `fork_turns: none`, `gpt-6.1-sol` at `max`; under Claude each is a
   `dotln-worker`. Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
+- **The inventory's consumers.** The work's record chunk
+  (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
+  every record and which `check-studies.mjs` holds to the directory) and the
+  shared model registry (`libs/features/tools/src/lib/studies/study-models.ts`,
+  which `study-models.spec.ts` compares with the records' model paths and
+  `ToolsFacade` reads) gain this batch's entries before any check runs;
+  `tools/studies.test.mjs` keeps the first batch's membership check and gains
+  this batch's; `apps/dotln-e2e/src/catalog.spec.ts` derives its studied
+  counts from the integrated `studies-summary.json` rather than a new global
+  pin; the catalog's visual baselines (`catalog.visual.spec.ts`,
+  `catalog-{360,768,1440}.png`) are regenerated for the changed shelf counts
+  and the change recorded in the evidence README, as WO-022's was. A
+  concurrent batch reconciles the chunk, the registry and the summary when it
+  integrates `main`.
 - **Documents.** `catalog.md` §Studies: the RxJS coverage row reads forty
   studied and names this batch beside WO-021's. No new rule unless a critic
   finding needs one, recorded in the decisions.
@@ -183,8 +205,8 @@ its screenshots.
    Check: the decisions carry them.
 2. The authors' brief into `fan-out.md` from WO-021's brief, with the
    work's index, the twenty rows, the marble contract and spec helper, the
-   authoring date and the launch form of this host; dispatch the ten
-   authors; merge the twenty drafts. Check: `npx nx test tools` exits 0 over
+   authoring date and the launch form of this host; dispatch the ten authors; merge the twenty drafts into the work's record
+   chunk and register each model in `study-models.ts`. Check: `npx nx test tools` exits 0 over
    the modules' specs.
 3. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile;
@@ -196,7 +218,9 @@ its screenshots.
    shelf and in the contents; debounceTime's study steps its marbles under
    reduced motion with each emission named; throttleTime opens from the
    contents; the auditTime link opens its reading; axe; no overflow at 360,
-   768 and 1440. Check: `npx nx e2e dotln-e2e` exits 0.
+   768 and 1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   the updated `tools/studies.test.mjs`; the regenerated baselines are
+   recorded in `docs/evidence/WO-029/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-029/`. Check:
    the files exist.
 7. Documents: the coverage row. Check: `grep -n "RxJS"
@@ -251,11 +275,16 @@ each.
    every reference and implementation URL has its observed link-check
    status, no candidate record cites a URL recorded unreachable or a
    reference the factual critic marked unsupported, and the review record
-   lists, per study, the app file its "where this app uses it" entry names
-   and the critic's confirmation that it exists at the integrated base.
-   Worker accounting remains the profile's process duty.
+   lists, per study, either the app file its "where this app uses it" entry
+   names with the critic's confirmation that it exists at the integrated
+   base, or the recorded finding that the app does not use the operator
+   there with the critic's confirmation of the search. Worker accounting
+   remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440.
+   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
+   first batch's membership check and this batch's; and the regenerated
+   visual baselines match the integrated shelf.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the records in the work's lazy chunk,
    `npm run check:bundle` passes with the chunk sizes recorded, and
@@ -286,10 +315,10 @@ each.
   admitted on either host.
 - **Beside the road** (WS-002 rule 5): this order edits `studies/rxjs/`, the
   RxJS module directory, the summary, one coverage row and one e2e case,
-  surfaces disjoint from every sequenced order's; it may run in its own
-  worktree beside any of them, and whichever of two concurrent batches
-  publishes second integrates the target's `main` and rewrites
-  `studies-summary.json` before its publish.
+  surfaces disjoint from every sequenced order's except the shared
+  registry `study-models.ts`, the summary and the e2e counts, which the
+  integration reconciles; it may run in its own
+  worktree beside any of them, and a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it.
 - The draft pull request is opened at the verification pass as every target
   order's is (core WO-221's `--draft` form; its workflow runs are a
   final-review obligation read from `docs/evidence/WO-029/preview-pr.json`,

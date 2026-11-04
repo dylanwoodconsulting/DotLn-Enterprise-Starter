@@ -8,9 +8,10 @@
 standing page rewritten, one declared election and one regenerated
 projection in this instance; no kit file, runtime or registration key
 changes. Assigned at activation under the standing opt-out default.
-**Cost:** moves, by `git mv`, the eighteen dated planning documents the
-planning root still holds
-(`acceptance-by-use-2026-10-26.md`, `angular-workstream-2026-10-18.md`,
+**Cost:** moves, by `git mv`, the nineteen dated planning documents the
+planning root still holds, eighteen pass documents and the critical-path
+declaration
+(`acceptance-by-use-2026-10-26.md`, `critical-path-2026-09-08.md`, `angular-workstream-2026-10-18.md`,
 `concept-batches-and-quality-passes-2026-10-30.md`,
 `criterion-9-phase-2026-11-01.md`, `entropy-reducer-2026-11-03.md`,
 `latest-upstream-2026-10-19.md`, `latest-upstream-and-core-answers-2026-10-20.md`,
@@ -42,7 +43,7 @@ and regenerates `docs/control/current.md` from the canonical fold of the
 control segments through its owner, `refreshControlProjection` exported by
 `scripts/resume.mjs` (the function integration and the lifecycle events
 call; `status` renders the same fold read-only and prints the warning at
-1070), so `npm run resume -- status` stops warning. Removes: eighteen
+1070), so `npm run resume -- status` stops warning. Removes: nineteen
 records from the planning root's listing beside its standing documents; the
 export's one-line planning README; a projection warning on every status
 read; an election the operator decided that the page showed as a default.
@@ -106,7 +107,8 @@ page says the operator chose to keep desktop control off and why; and a
 status read prints the state without warning about its own projection.
 
 **Observed gap (dated 2026-11-04 at `main` `a44ca7dd`, starter v0.115.0):**
-`ls docs/planning` lists eighteen dated pass documents beside `sequence.md`,
+`ls docs/planning` lists nineteen dated documents, eighteen pass documents
+and the critical-path declaration, beside `sequence.md`,
 `README.md`, `followups.json`, `cost-table.json` and the three directories,
 while the kit writes a new pass's document under `passes/` since v0.113.0
 and core moved its 51 under WO-238; the dated documents are records by the
@@ -125,7 +127,9 @@ their explicit request in a session.
 - **Records move; records are not rewritten.** The moves map carries the
   old and new paths so every link written before the move still resolves
   through it, as core's does; only standing documents and the ledger's
-  Record links are rewritten. Rejected: rewriting the links inside the moved
+  Record links are rewritten. A digest manifest of every record taken at
+  activation and compared through the map after the moves is the witness
+  that no record's bytes changed. Rejected: rewriting the links inside the moved
   records and the receipts (axis: a record is never rewritten); leaving the
   records where they are (axis: the kit's layout since v0.113.0, and the
   operator's ask for core's passes here).
@@ -148,27 +152,34 @@ their explicit request in a session.
 **Deliverables:** the moves and the map; the rewritten standing links and
 ledger links; the planning README; the declared election and the regenerated
 features page; the regenerated projection; `docs/evidence/WO-033/` with the
-decisions, the before-and-after of `ls docs/planning`, the link rewrite
-inventory and the handoff.
+decisions, the before-and-after of `ls docs/planning`, the records manifest
+and its comparison, the link rewrite inventory and the handoff.
 
 **Execution plan (the executor follows these steps in order):**
 
 1. Activation as WO-025 step 1 (a self order in its `wo-033` worktree);
    record `ls docs/planning` and `npm run plan -- documents`'s counts before
-   any move in the decisions. Check: the decisions carry them.
-2. `git mv` each of the eighteen documents into `docs/planning/passes/`;
+   any move in the decisions; write `docs/evidence/WO-033/records-before.json`,
+   the SHA-256 of every tracked file under `docs/evidence/`,
+   `docs/verifications/`, `docs/final-reviews/`, `docs/planning/refutations/`,
+   `docs/planning/entropy-reviews/` and `docs/planning/passes/` and of the
+   nineteen documents to be moved, by a script kept beside it. Check: the
+   decisions carry the listings, and the manifest lists every such file.
+2. `git mv` each of the nineteen documents into `docs/planning/passes/`;
    write `docs/control/document-moves.json` with one entry per move naming
    `WO-033`. Check: `node scripts/docs-check.mjs` resolves every old-path
-   link through the map (no broken link named).
+   link through the map (no broken link named); `npm run plan -- subject`
+   still reads the critical-path declaration at its new path.
 3. Rewrite the links to moved documents in the standing documents the Cost
    names and in the idea ledger's Record links, by inventory
    (`grep -rn -E "planning/[a-z0-9-]+-2026-[0-9]{2}-[0-9]{2}\.md"` over the
    standing documents before and after, recorded in
    `docs/evidence/WO-033/links.md`); touch no record. Check: the grep over
-   the standing documents prints nothing; `git diff --stat` names no file
-   under `docs/evidence/`, `docs/verifications/`, `docs/final-reviews/`,
-   `docs/planning/refutations/`, `docs/planning/entropy-reviews/` or
-   `docs/planning/passes/`.
+   the standing documents prints nothing; `node
+   docs/evidence/WO-033/compare-records.mjs` maps every path of
+   `records-before.json` through `document-moves.json` and prints
+   `unchanged <N>` with no `changed` or `missing` line, the order's own
+   `docs/evidence/WO-033/` excluded as new.
 4. Rewrite `docs/planning/README.md` as the Design states. Check:
    `node scripts/docs-check.mjs` passes; the page links `sequence.md`,
    `followups.json`, `cost-table.json`, `passes/`, `refutations/`,
@@ -182,8 +193,10 @@ inventory and the handoff.
    `{ "on": false, "note": "..." }` naming the operator's direction of
    2026-11-01 and the operator record; `npm run meta`. Check: `npm run
    features -- check` passes; `docs/control/FEATURES.md` shows the election
-   with source `dotln.config.json` and the note; every other row reads
-   `default`.
+   with source `dotln.config.json` and the note; the other three `features.*`
+   rows (`tinkerer-economy`, `plan-first`, `private-destination`) read
+   `default`, and the rows the budgets file sets keep
+   `docs/control/budgets.json`.
 7. The projection: run `refreshControlProjection(process.cwd())` from
    `scripts/resume.mjs` under the bounded wrapper (`node
    scripts/harness.mjs bounded -- node --input-type=module --eval 'import
@@ -212,17 +225,20 @@ step 7; `npm run test:docs` when a document changes; each under
 1. `ls docs/planning` lists no dated Markdown document: only `README.md`,
    `sequence.md`, `followups.json`, `cost-table.json` and the directories
    `passes/`, `refutations/` and `entropy-reviews/`; `ls docs/planning/passes`
-   lists the eighteen moved documents beside the passes already there.
-2. `docs/control/document-moves.json` carries one entry per moved document
-   naming `WO-033`, and `node scripts/docs-check.mjs` passes with every
+   lists the nineteen moved documents beside the passes already there.
+2. `docs/control/document-moves.json` carries one entry per moved document,
+   nineteen in all, naming `WO-033`, and `node scripts/docs-check.mjs` passes with every
    old-path link in the records resolved through it (it names no broken
    link).
 3. Over the standing documents the Cost names,
    `grep -rn -E "planning/[a-z0-9-]+-2026-[0-9]{2}-[0-9]{2}\.md"` prints
-   nothing, and the records keep their bytes: the verifier confirms through
-   `npm run plan -- check` that every refutation receipt's recorded hash
-   matches its file and through `git status --short` on the record
-   directories after the moves that nothing but the moves changed them.
+   nothing, and the records keep their bytes: `node
+   docs/evidence/WO-033/compare-records.mjs` maps every path of
+   `records-before.json` through `document-moves.json` and finds every
+   digest equal to the file at its current path, printing no `changed` or
+   `missing` line, with the order's own `docs/evidence/WO-033/` excluded as
+   new; `npm run plan -- check` also finds every refutation receipt's
+   recorded hash matching its file.
 4. `npm run plan -- followups --sync` reports no `sourceMissing` row and
    `npm run plan -- check` passes.
 5. `docs/planning/README.md` names the sequence, the register, the cost
@@ -231,8 +247,10 @@ step 7; `npm run test:docs` when a document changes; each under
    `node scripts/docs-check.mjs` passes on it.
 6. `docs/control/FEATURES.md` shows `desktop-control` effective `false` with
    source `dotln.config.json` and a note naming the operator's direction of
-   2026-11-01; every other row shows source `default`; `npm run features --
-   check` passes.
+   2026-11-01; the other three `features.*` rows (`tinkerer-economy`,
+   `plan-first`, `private-destination`) show source `default`, and the rows
+   the budgets file sets keep `docs/control/budgets.json`; `npm run features
+   -- check` passes.
 7. `npm run resume -- status` prints no projection warning, and
    `docs/control/current.md` equals what the owning command renders (running
    it again changes nothing).
@@ -249,9 +267,9 @@ before-and-after listings and `handoff.md`; `npm test` and
 **Known issues and carry-ins:**
 
 - The critical-path declaration (`docs/planning/critical-path-2026-09-08.md`)
-  is a dated name the kit reads at either its passes or its root location
-  (`plan-subject.mjs` 743 to 744): the executor moves it with the others and
-  confirms `npm run plan -- subject` still reads it (reopen: the subject
+  is among the nineteen and a dated name the kit reads at either its passes
+  or its root location (`plan-subject.mjs` 743 to 744): after the move the
+  executor confirms `npm run plan -- subject` still reads it (reopen: the subject
   reports the declaration absent after the move).
 - The kit's own records (the entropy review pages under
   `docs/planning/entropy-reviews/`, the receipts) link the moved documents by

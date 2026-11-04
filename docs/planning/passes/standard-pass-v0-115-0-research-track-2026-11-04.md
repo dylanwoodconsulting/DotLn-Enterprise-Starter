@@ -139,7 +139,7 @@ at `a44ca7dd`:
 | --- | --- | --- | --- |
 | WO-235 (no artifact shaped by its predecessor; the profile template, the `plan start` skeleton) | rewrote core's profile and workstream shapes | done: WO-025 rewrote the profile in the operator's shape; the skeleton is the kit's | nothing |
 | WO-237 (a closed order keeps its journals) | the 720-hour seed in core's budgets | done: `budgets.json` carries `closed-journal: 720` since v0.105.0 | nothing |
-| WO-238 (a document says what is so) | `documents.json` and the entry points; 51 dated pass documents moved under `passes/` with a moves map and rewritten links; the planning README as the root's page; the map's record divider; product 07 split by reader; `doc-ceilings.json` retired; the first census | half done: the two passes of 2026-11-03 wrote under `passes/`; this pass declares `documents.json` with the front-page entry point, disposes the thirteen red tags and retires `doc-ceilings.json` (D4); the eighteen dated documents still at the planning root, the one-line planning README and the moves map are WO-033's (D7); the product 07 split and the map are the kit's | WO-033 |
+| WO-238 (a document says what is so) | `documents.json` and the entry points; 51 dated pass documents moved under `passes/` with a moves map and rewritten links; the planning README as the root's page; the map's record divider; product 07 split by reader; `doc-ceilings.json` retired; the first census | half done: the two passes of 2026-11-03 wrote under `passes/`; this pass declares `documents.json` with the front-page entry point, disposes the thirteen red tags and retires `doc-ceilings.json` (D4); the nineteen dated documents still at the planning root (eighteen passes and the critical-path declaration), the one-line planning README and the moves map are WO-033's (D7); the product 07 split and the map are the kit's | WO-033 |
 | WO-241 (the features file) | the `features` section in core's configuration with its elections; `FEATURES.md` | half done: the page rendered on the update branch; no election declared | WO-033 declares `desktop-control` with the operator's 2026-11-01 direction and leaves the rest at defaults (D7) |
 | WO-245 (the kit's guide is a kit file; the front page is the instance's) | core's README as the short front page; `docs/KIT.md` | done: #51 put the launchpad's introduction at the root and left `docs/launchpad-readme.md` as the old-path pointer (the 2026-11-03 pass, D2) | nothing; the pointer is classified a record today (D4) |
 | WO-248 (the pull-request table says what its reader can use) | core's PR body renderer | kit; this fork's pull requests render it | nothing |
@@ -152,8 +152,9 @@ at `a44ca7dd`:
 
 ### The research queue, read in the catalog
 
-The operator's "research queue" has no file of that name; the research this
-fork has done is the concept-study program (WO-019's Arrive study, WO-020 to
+The research queue the operator names (capture SHA-256
+`56c7d119bd8cfdf8722ff840d9138920772e1fa40f735605b7fff5664d78ff4e`) has no
+file of that name; the research this fork has done is the concept-study program (WO-019's Arrive study, WO-020 to
 WO-022 merged, WO-023 and WO-024 filed), and the queue is the catalog's
 unstudied rows: 3,463 rows across six works, 60 studied, 40 more in the
 filed pair, 3,363 unstudied. The kinds of research already done are studies
@@ -276,9 +277,9 @@ was recorded in two standing documents and acted on in records:
 - `README.md` §Versions, provenance and recovery context: "A planning pass
   takes the latest starter first…". Rewritten to the same rule.
 - Acted on, not recorded as a rule, in the pass documents of 2026-11-03
-  (the Entropy Reducer pass, D1: "as the operator's standing rule requires";
-  the DotLn-Angular pass, D1: "the operator's standing update rule applies")
-  and in the dispatch rows of the standard passes of 2026-10-28, 2026-10-30
+  (the Entropy Reducer pass, D1, which took the update under the standing
+  rule; the DotLn-Angular pass, D1, which applied the same rule four minutes
+  after the release) and in the dispatch rows of the standard passes of 2026-10-28, 2026-10-30
   and 2026-11-01, each of which the operator had asked for in its own
   session. Records are not rewritten; this decision is their correction.
 
@@ -416,7 +417,7 @@ changes and the touchpoints gain one).
 ### D7. One parity order, sequenced after the pair
 
 WO-033 carries what parity with WO-238 and WO-241 still needs and a planning
-pass cannot do as document work in good order: eighteen `git mv`s with a
+pass cannot do as document work in good order: nineteen `git mv`s with a
 moves map, hundreds of link rewrites in standing documents (the inventory:
 the dated documents are named in 10 to 45 files each), the planning README
 rewritten, one election declared in the registration with the operator's
@@ -579,7 +580,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 | A research order for the pathfinding and decision-making chapters now | A grid or tree drawing is a new family, a page the operator judges by rounds; the track lands no page. Evidence: `FUP-862baf0e83c307d0`'s text named these chapters; the families at `55b59c9`. | A road order lands a family that draws a graph search or a tree, or the operator asks for the chapter before its family. | The chapter's 119 related rows become research work. |
 | Research of other kinds (research workers over a corpus for planning; the mining run's remaining designs) | The operator limited the track to the kinds already done; the only kind done here is the concept study, and the mining run is core's intake the operator routes themselves. Evidence: the operator record's items on the research run. | The operator names another kind of research for the track. | A second kind has a procedure, a check and a reader as the studies do. |
 | Declaring the four feature elections on the update branch or in this pass | An election is an instance choice an order records with its reason; declaring `plan-first`, `private-destination` or `tinkerer-economy` without the operator's word is a rule nobody gave. Evidence: `FEATURES.md`'s defaults; the operator record's 2026-11-01 direction on desktop control only. | The operator decides an election. | The page shows the operator's choice with its reason, as WO-033 does for desktop control. |
-| Moving the eighteen dated planning documents in this pass | The moves are verified by `followups --sync`, `plan check`, the lineage index and the receipts' hashes, an order's verifier's work; a pass's refuter judges orders. Evidence: core did it as WO-238 step 10 with four checks. | Never on its own; WO-033 carries it. | The planning root holds its standing documents and record directories only. |
+| Moving the nineteen dated planning documents in this pass | The moves are verified by `followups --sync`, `plan check`, the lineage index and the receipts' hashes, an order's verifier's work; a pass's refuter judges orders. Evidence: core did it as WO-238 step 10 with four checks. | Never on its own; WO-033 carries it. | The planning root holds its standing documents and record directories only. |
 | Rewriting the records' links to the moved documents | A record is never rewritten; the moves map resolves old paths (core's design). Evidence: core's `document-moves.json`. | Core changes the moves contract. | A reader of a record finds a moved document from its old path. |
 | A launch-boundary meter of the fork's own | Core declined it with a condition (its map, 2026-11-03, item 3); the pair's by-hand rule in the profile serves. Evidence: core's answer item 4. | A second instance order overruns a declared stop, or a host prints a counter a meter could read. | A meter reports unknown as unknown and never as zero. |
 | Setting the `gh` default repository for this checkout | The operator's tool setting; every `gh` call today named `-R`. Evidence: `FUP-49dda4781fa64b25`. | The operator sets it, or a kit helper names the repository on every call. | A read without `-R` resolves to the fork. |
@@ -608,10 +609,13 @@ patterns (WO-031), and Gödel, Escher, Bach with Team Topologies (WO-032).
 
 ## Write-backs
 
-- The operator record: the "Starter updates" item rewritten to the rule the
-  operator gave with its captures (D2); the "Models and effort" item
-  extended with the four options and their defaults (D8); the "Depth in
-  batches" item widened to the research track (D6, D8). Nothing else in the
+- The operator record (captures SHA-256
+  `4c7e47a6548004d909128fdfcc346663fc419280b798d00abec73d7ffb180f83`,
+  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f` and
+  `56c7d119bd8cfdf8722ff840d9138920772e1fa40f735605b7fff5664d78ff4e`): the
+  Starter updates item rewritten to the rule the operator gave (D2); the
+  Models and effort item extended with the four options and their defaults
+  (D8); the Depth in batches item widened to the research track (D6, D8). Nothing else in the
   record changed today.
 - `README.md`: the update sentence rewritten to the rule (D2); the decision
   record named in words instead of linked, because an entry point names
