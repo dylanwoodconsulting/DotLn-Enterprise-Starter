@@ -237,19 +237,19 @@ operator sandbox settings.
    `baseDisposablePolicy: "judge-only"` when the base checkout must retain that
    output while keeping its material checks (the default is `"delete"`). A
    path may use `**` as a whole segment for any number of segments and `*`
-   within one segment, and its last segment keeps a literal part, so one
-   class line covers a whole workspace: an Nx class with Vitest declares
-   `"disposable": ["**/node_modules", "**/.vite", "**/.vitest"]` once for
-   every project's caches, while `*`, `**`, `**/*` and `libs/**` are refused
-   at registration (see [Owned cleanup and retention](#owned-cleanup-and-retention)). Use
+   within one segment, and its last segment keeps a literal part with a letter
+   or digit, so one class line covers a whole workspace: an Nx class with
+   Vitest declares `"disposable": ["**/node_modules", "**/.vite", "**/.vitest"]`
+   once for every project's caches, while `*`, `**`, `**/*`, `libs/**`, `*.*`
+   and `.*` are refused at registration (see [Owned cleanup and retention](#owned-cleanup-and-retention)). Use
    `release: { "policy": "declared", "displayName": "My product" }` with the
    order's `**Target release classification:**` header for a tagged target
    release. The optional name defaults to the registration id and changes the
    Release title and tag message, never the tag name or an existing Release; turn on the forge's
    delete-branch-on-merge setting for the target, since the kit deletes no
    remote branch.
-5. Copy `dotln.config.example.json` to `dotln.config.json` only when this
-   instance moves a document root; an absent file means the default layout
+5. Copy `dotln.config.example.json` to `dotln.config.json` when this
+   instance elects a feature or moves a document root; an absent file means the default layout
    under `docs/`. The example declares only the `docs` base, from which every
    other root derives; a root declared on its own stays where it is declared
    when the base moves. A registered repository declares its own `gate`
@@ -332,6 +332,64 @@ verification. Release preparation and final review run in `wo-001`. Because
 `wo-001` starts from the fork's merged `main`, its pull request carries only
 WO-001's own commits.
 
+## Features
+
+`dotln.config.json` is this instance's configuration file. Its `features`
+section accepts named booleans or an election with your own reason:
+
+```json
+{
+  "version": 1,
+  "features": {
+    "tinkerer-economy": false,
+    "private-destination": { "on": true, "note": "This repository holds our own project records." }
+  }
+}
+```
+
+An absent section keeps the existing defaults: Tinkerer economy on,
+plan-first, private-destination and desktop-control off. `plan-first` is
+reserved for WO-242 and has no consumer yet. A misspelled name refuses with
+the valid names and `npm run features -- list`. Existing keys such as
+`kit.applyInstanceActions`, `release.*`, `build.*`, `drive.sandbox` and the
+budget keys stay where they are; putting their inventory ids in `features`
+refuses and names the key to edit.
+
+Run `npm run features -- list` for the table or add `--json` for structured
+values. `npm run features -- render` writes `docs/control/FEATURES.md`
+(under your configured control root); `npm run features -- check` refuses a
+stale page. `npm run meta` refreshes it, and the document gate checks it.
+Saved `build.loadout` and `build.profile` selections are unread; the harness
+CLI options remain separate. The subagent cap still reads the default
+`docs/control/budgets.json` if you relocate your control root; the table names
+that actual source, while process bounds and retention follow the relocation.
+
+The table comes from `scripts/lib/features.mjs`: each row names its scope,
+default, effective value, source, meaning, election key and consumer.
+`unread` means the switch has no effect; a queued order identifies a future
+consumer. Core rows describe core's choices, not a rule this instance must
+adopt. An order that closes without updating its reader produces a planning
+advisory, not a refusal of another order's gate.
+
+After changing an emitted election, run `node scripts/harness.mjs emit`
+and `node scripts/harness.mjs check`. Turning Tinkerer economy off removes
+its executor support. The old overlay `equip`/`unequip` choice remains
+accepted for this kit release with a migration advisory; move it to
+`features.tinkerer-economy` and remove that overlay entry. Conflicting
+choices refuse instead of silently choosing one.
+
+Private-destination changes only the exported instance's known §Secrets
+paragraph: it admits the owner's ordinary project links and identifiers
+inside that instance. A customized paragraph requires review before the
+election can be emitted. Turning the election off restores the default
+paragraph. Credentials stay excluded everywhere and outward artifacts
+still pass private-terms and publication screens. Core's locked floor is
+unchanged. Desktop-control still requires the operator's explicit request
+in the session after the instance elects it.
+
+The generated harness contract's refusal classes, the single-writer
+reservation and the clean-room floor are not electable. They are the floor.
+
 ## Planning in this instance
 
 The same planning commands run here using this instance's records. Commit the
@@ -387,7 +445,9 @@ Release close refreshes the declared starter's template seeds as well as its
 kit files. A replaced seed must still match a proven prior export. For
 `README.md`, a customized, missing or non-regular copy is kept with its reason
 in `keptSeeds` and never refuses the refresh; a proven older rendering is
-rewritten and listed in `rewrittenSeeds`. Other changed templates still
+rewritten and listed in `rewrittenSeeds`. The close's summary line names both,
+as `seeds published:` and `seeds kept: README.md (<reason>)`, in the preview
+and the real close alike. Other changed templates still
 refuse a customized seed by path before any push. Unchanged templates leave
 customized copies intact; an unusable `CLAUDE.md` or `.gitignore` refuses with
 its remedy before any write. Preserve those customizations and restore the
@@ -942,12 +1002,43 @@ the already-migrated state; keep the output with your review of the update.
 ## Owned cleanup and retention
 
 Release close prunes owned leftovers after its worktree cleanup, scoped to
-the closing order's captured roots, main's retained lane and this checkout's
-registered temporary roots. It does not walk unrelated system temporary roots.
-An explicit `harness prune` and `plan start` still walk them. `plan start`
-applies that prune, so expired roots outside every close's scope leave at the
-next planning pass; while a gate holds the host lanes it prints the read-only
-census instead, and `harness prune --apply` removes them on demand. A session
+the closing order's own roots: those its worktree's ledger registered and its
+integration stashes. This checkout's other registered roots, other orders'
+retained lanes and the system temporary directory are the host-wide remainder.
+`plan start` prunes them, so expired roots outside every close's scope leave
+at the next planning pass; while a gate holds the host lanes it prints the
+read-only census instead, and `harness prune --apply` removes them on demand.
+Both prunes are bounded steps under `prune.startBudgetMs` in
+`docs/control/budgets.json`, 1,800,000 ms (0 h 30 min) when unset and
+unbounded when null, so routine cleanup finishes in the run that starts it
+unless a backlog outlasts thirty minutes.
+The temporary roots go first, listed in batches of 64 entries between asks of
+the budget and judged one at a time; the snapshots, advisories, claims,
+caches, lanes and stashes follow with what the budget leaves. Every walk, byte
+inventory and deletion of a candidate asks the budget as it goes: before each
+directory it lists and each entry it reads or deletes, a planned snapshot's,
+cache's or lane's permission walk and deletion included, and before each tree
+listing and each batch of 32 objects of a stash's inventory. A shell claim's
+retirement and a stash's drop, each a few fixed steps that must finish
+together, are asked about once, before they start. The ledger's
+retirement after a prune that was not stopped is the prune's closing
+bookkeeping and is not bounded.
+An item cut short is kept as `budget`, and an apply the budget stopped prints
+`removed N; remaining M; resume with node scripts/harness.mjs prune --apply`
+and goes on.
+`harness prune --apply` sets no budget and finishes the remainder. A kit-owned
+root is judged and removed on its owner record, with no file read, and the
+report names each removal's proof; only an expired `closed-journal` root, whose proof is kept
+beside its order's lane, and a retained lane, stash, snapshot, advisory or
+cache the plan deletes are byte-inventoried first. One process-table reading
+serves every temporary root's owner-liveness judgment, and a worktree's writer
+is read at most once a second; the plan's own writer read, each pre-delete
+check's, the advisories' and shell claims' owner checks, one by one, and an
+apply's lane lease, for its own registration, read the table again. An entry inside a kit-owned root that its owner
+cannot read is repaired before removal, and what a judgment granted to look
+inside a root it keeps is put back; an entry that cannot be repaired keeps its
+root as `restricted-entry` with its path, as an unreadable owner record does,
+and none of these stops a prune or a close. A session
 that needs expired or retained roots removed runs `node scripts/harness.mjs
 prune --apply` itself under host permissions and records its receipt; it
 hands the printed command to the operator only after a recorded host denial
@@ -1007,9 +1098,11 @@ Retained-material output and removal
 receipts use counts by class and digests. `--list-material` supplies paths
 outside the admitted close commands, so host permissions decide it;
 digest-bound inventory sidecars preserve the full removal proof for retries. A blocker
-keeps the same close retry command. Gate completion removes passing fixtures
-and retains failed ones for diagnosis, including standalone captures and scratch
-owned by those suites. Every gate-owned root is accounted for; live workers,
+keeps the same close retry command. A suite's end removes the fixtures that
+suite registered under the gate when it passed and retains a failed or stopped
+suite's for its diagnosis window, which starts then, including standalone
+captures and scratch owned by those suites; the gate's end finishes what a
+suite left. Every gate-owned root is accounted for; live workers,
 null retention, reusable caches and independent coordination remain protected.
 Repeating completion does not restart the diagnosis window.
 Session completion removes only its own
