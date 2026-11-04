@@ -653,7 +653,7 @@ From DotLn-Enterprise-Starter's 2026-11-04 planning pass, docs/planning/passes/s
 
 5. Observation on `npm run resume -- status`: every read prints `warning: docs/control/current.md disagrees with the canonical fold of control segments; status is read-only and did not rewrite the projection`, and neither the kit guide nor the operator reference names the command that regenerates the projection (refreshControlProjection in scripts/resume.mjs is called by integration and the lifecycle events). Ask: let status print the regenerating command with the warning, or offer `resume -- status --refresh`. Low priority; the fork's WO-033 regenerates it through the exported function.
 
-6. Observation for WO-255 and the four-option rule: the fork's three independent reviews and its refuter ran on Codex today through the kit helper and the refute transport (the counts in the pass document's §Validation). <filled after the reviews>
+6. For your information: the fork's three independent reviews ran on Codex today through npm run worker -- review --host codex under the planning lane (0 h 7 min, 0 h 8 min and 0 h 19 min; 1.5 M, 2.2 M and 6.1 M tokens by the codex-result-envelope; 15 findings, 3 blocking, all answered), and its refuter through npm run plan -- refute --transport codex-cli-exec (0 h 10 min, aligned-with-findings, 0 holds). Both ran on Codex CLI 0.166.0 through the kit's own argv with no code-mode failure. One observation and one ask: the external transport judges the full horizon as the plan subject compiles it, and the subject is built from the sequence, so a separate-track workstream's members (WS-002's five research orders, the main product of this pass) were outside the refutation subject, and the direct route refuses a second judgment of a pass; the fork ran a supplementary Codex goal review over them and records it in its pass document, not as a receipt. Ask: let the plan subject include separate-track members (or let refute name a workstream), so a refutation covers every open order a pass files.
 ```
 
 ## Process cost
@@ -667,7 +667,14 @@ plan stated before the first spawn: three Codex review workers through
 subject), one recheck round if a blocking finding is repaired, and one
 refuter through `npm run plan -- refute --transport codex-cli-exec` on the
 operator's mid-turn direction, each launched once: four to six uses, no
-re-task, no descendant. The counts actually spent are in §Validation.
+re-task, no descendant. Spent: three review launches, one refuter launch and
+one supplementary goal-review launch, plus two launches of the supplementary reviewer that returned no
+worker (the bounded wrapper passes no standard input; an empty working
+directory needs `--skip-git-repo-check`), counted as uses: seven uses
+against the cap of twenty, five with a worker, no re-task, no descendant; the reviews 0 h 7 min, 0 h 8 min and
+0 h 19 min (1,527,458, 2,151,351 and 6,099,082 tokens by the
+codex-result-envelope); the refuter 0 h 10 min, its token count not carried
+into the receipt.
 Wall-clock of the pass's commands: the preview 256 ms; the update's four
 gates 0 h 1 min; `update --finish` 7 s; `plan start` 0 h 0 min 30 s; the
 catalog selection script under a second; the reviews and the refuter in
@@ -678,5 +685,99 @@ behind the pair, and the update's bounded prune repays itself at every
 
 ## Validation
 
-Pending: the three Codex reviews, the refutation and the document gate are
-recorded here when they have run.
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning` under the lane `planning-2026-11-04`, round 1, over
+the change since `a44ca7dd` at tree `6b98a051`, launched together and
+retained in the ignored reviews lane: the criteria adversary 0 h 8 min,
+2,151,351 tokens, 4 findings (1 blocking); the design improver 0 h 7 min,
+1,527,458 tokens, 4 (0 blocking); the consistency reviewer 0 h 19 min,
+6,099,082 tokens, 7 (2 blocking); all by the codex-result-envelope, with the
+effective effort unknown. Self-review: found 15 (12 distinct); fixed 14;
+recorded 1. No recheck round ran: every repair is order and workstream text,
+the precedent of the 2026-11-03 pass for documentation-only repairs under
+product 07's ladder, and the refuter judged the repaired text.
+
+| Finding | Disposition |
+| --- | --- |
+| Criteria F1 and consistency F2 (blocking, WO-029 criterion 4) | Fixed: an operator the app does not use at the integrated base records that finding with two public uses, and criterion 4 admits either the confirmed app file or the recorded finding; the Design names the eight operators the reviewers found unused at `55b59c9`. |
+| Consistency F1 (blocking, WO-033 criterion 6) | Fixed: step 6 and criterion 6 hold only the other three `features.*` rows to `default` and keep the budget rows at `docs/control/budgets.json`. |
+| Criteria F2 (should-fix, WO-031 criterion 3) | Fixed: the criterion judges this order's twenty and leaves WO-023's four exceptions as WO-023's criterion 3 names them. |
+| Criteria F3 and consistency F6 (should-fix, WO-033 criterion 3) | Fixed: step 1 writes a digest manifest of every record before any move, step 3 and criterion 3 compare it through the moves map and exclude the order's own evidence as new; `git status` is no longer the witness. |
+| Criteria F4 and consistency F5 (WO-033 criteria 1 and 2) | Fixed: the inventory is nineteen documents, the critical-path declaration included, in the Cost, step 2, the map and criterion 1; step 2's check reads the declaration through `plan subject` after the move. |
+| Consistency F3 (should-fix, WO-028 to WO-032) | Fixed: each order names the inventory's consumers (`tools/studies.test.mjs` keeps the first batch's membership check and gains this batch's, the e2e counts derive from the integrated summary, the visual baselines are regenerated and recorded) in its Design, step 5 and criterion 5. |
+| Consistency F4 (should-fix, WO-028 to WO-032 and WS-002) | Fixed: each order's Cost, Design and step 2 name the work's record chunk and the shared `study-models.ts` registry, and the integration rule reconciles them beside the summary. |
+| Consistency F7 (note, WO-028) | Fixed: the observed gap reads eighteen Movement studies and two in the design chapters; the Objective reads forty in AI for Games, thirty-eight in the chapter. |
+| Design F1 (should-fix, WS-002 edges) | Recorded, not reversed: the kit admits an edge only from a member (`work-order-workstream.mjs`, the edge validation), so an edge to an external prerequisite can run only from the member; the dependency plan now says so, and each order's typed block is the contract. |
+| Design F2 (should-fix, WS-002 rule 2) | Fixed: the selection excludes rows a filed or active order of the track has taken. |
+| Design F3 (should-fix, WS-002 rule 5 and the five orders) | Fixed: the integration is tied to the target's `main` having moved, before the handoff and before the final publish, regenerating the summary and reconciling the chunk and the registry, with `resume: fix` named for a pull request that stops merging cleanly after a sibling's merge. |
+| Design F4 (note, WS-002 rule 6) | Fixed: a work with fewer drawable rows than a batch gets a smaller final batch with its author count scaled. |
+
+**Independent refutation.** [Receipt 020](../refutations/2026-11-04-planning-1869f40d8d90629f-020.md)
+is the fresh judgment through `npm run plan -- refute --transport
+codex-cli-exec` (`gpt-6.1-sol` at `max`, pinned, effective readback
+unknown), the external transport the operator's mid-turn direction selects
+(D8): aligned-with-findings for the plan and every judged order, zero holds,
+nine known issues with reopening observations, 0 h 10 min dispatch to file,
+the subject `sha256:380d2baa…` at `526600e`, with no carried disposition.
+The transport judges the full horizon as the kit compiles it, and the kit
+compiles the subject from the sequence (`scripts/lib/plan-subject.mjs`, the
+order list), so the eight judged orders are the sequenced ones (WO-023,
+WO-024, WO-033, WO-027, WO-016, WO-008, WO-017, WO-018) and WS-002's five
+members, a separate track with no sequence entry, were outside the receipt's
+subject. The direct pass-scoped route refuses a second judgment of the pass
+(one judgment per pass). The nine known issues are NoOps for this pass (kind
+NoOp; reason: none is an observed failure and each names its reopening
+observation; evidence: the receipt's per-order findings; reevaluation: each
+finding's reopenWhen; usefulWhen: that observation showing a repair would
+improve the stated outcome); the one on WO-033 (a document checker accepting
+an old path through the moves map does not show a reader following a
+historical link arrives) is already the order's first known issue.
+
+**Supplementary goal review of the research track.** Because the receipt's
+subject left WS-002's members out, one further Codex worker (`gpt-6.1-sol`
+at `max`, the kit helper's own `codex exec` argv, read-only sandbox, an
+empty working directory so it read nothing but its brief) judged WS-002 and
+WO-028 to WO-032 against the refuter's questions, with the goal standard the
+kit compiles (the instance purpose and product 07's two marked goal-rules
+blocks) and each order's title, objective, criteria and non-goals: the plan
+aligned-with-findings, zero holds; WO-028, WO-029, WO-030 and WO-032 aligned
+with no finding; WO-031 aligned-with-findings with one known issue; WS-002
+aligned-with-findings with two. 0 h 6 min, 22,829 input and 11,585 output
+tokens (8,276 of them reasoning) by the Codex turn envelope; the brief, the
+returned JSON and the event stream are retained in the ignored reviews lane
+(`supplementary-goal-review.*`). This is a planner-filed judgment recorded
+here, not a kit receipt, because the kit's receipt route judges one subject
+per pass. Dispositions: WO-031's known issue (an embodiment file's existence
+does not establish its behavior, and no truthful-absence branch existed) is
+fixed in WO-031's Design and criterion 4 as WO-029's was, the critic now
+confirming that the named file reads as the pattern or that the finding of
+absence is recorded; WS-002's two (the track's total cost and its effect on
+the road are undeclared until worker and lifecycle accounting shows them;
+in-degree is a proxy for the usefulness of the operator's next toy) are NoOps
+with their reopening observations (kind NoOp; reason: neither is an observed
+failure; evidence: the returned JSON; reevaluation: research consuming
+capacity a sequenced order needed, or a concrete next toy needing a drawable
+concept the ranking excluded; usefulWhen: the observation shows a smaller
+batch or a different rule would serve the operator's next decision better).
+
+**Document gate.** `npm run test:docs` at the tree after the receipt's
+commit (`c44902f`) passed all fourteen tasks (format, configuration-root,
+registrations, declarations, generated, host, kit-verify, harness-context,
+license-surfaces, docs-check, reader-profiles, entropy, plan,
+plan-refutation-current) in 0 h 0 min with zero failures; the unchanged kit
+verifies 1,100 files at `1823a9cd`, and the only advisories are the two
+pre-existing criteria advisories and the four historical operator-word lines.
+The gate runs once more after this closing edit and WO-031's repair, before
+the push, and the handoff names that result.
+
+Outcome against the dispatch: starter v0.115.0 is taken on the operator's
+word; core's nineteen answers are read against their records and the two
+items of core's own recorded; the update rule is struck from the two standing
+documents that carried it and its places named; the parity with core's
+cleanup orders is tabulated, half done here and the rest filed as WO-033; the
+research track is open with five orders the operator can run on spare Codex
+capacity without a design round or a question; every review and the refuter
+ran on Codex as the operator asked. This record creates no target
+implementation or activation.

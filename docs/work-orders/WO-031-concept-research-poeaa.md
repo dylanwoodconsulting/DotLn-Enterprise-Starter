@@ -146,7 +146,9 @@ the patterns WO-023 will name.
   cousin lives (the SignalStores, `withPersistedState`, the data-access
   gateways, the catalog loader), named by repository path and stated as the
   author's reading of the code, never as a claim the pattern was designed
-  in; then two public implementations introduced on their own terms.
+  in, or, for a pattern the app does not embody at the integrated base, the
+  finding that it does not, stated in those words; then two public
+  implementations introduced on their own terms.
   References: the public catalog page of the pattern on the author's site
   and the book's publisher page, each with `accessed` and `supports`. Own
   words; no passage of the book (WS-001 rule 23).
@@ -290,8 +292,10 @@ each.
    every reference and implementation URL has its observed link-check
    status, no candidate record cites a URL recorded unreachable or a
    reference the factual critic marked unsupported, and the review record
-   lists, per study, the app file its embodiment sentence names and the
-   critic's confirmation that it exists at the integrated base. Worker
+   lists, per study, either the app file its embodiment sentence names with
+   the critic's confirmation that it exists at the integrated base and reads
+   as the pattern the study names, or the recorded finding that the app does
+   not embody the pattern there with the critic's confirmation. Worker
    accounting remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440;
