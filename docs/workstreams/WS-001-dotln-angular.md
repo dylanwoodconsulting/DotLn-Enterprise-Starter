@@ -61,8 +61,7 @@ condition): the mining store and the app's own HTTP API, replacing the
 committed data and the stopgap copies; the Babylon.js painter behind the
 scene's renderer seam; manim in the monorepo; the remaining toys of the
 operator's 2026-10-22 run as later members, by their ids; the twin's later
-lanes; the next hundred concept studies, cut when the operator drains the
-first five batches; typed translation keys; the WoW app and its
+lanes; typed translation keys; the WoW app and its
 non-TypeScript libraries; the example API and a real identity provider behind
 the auth port.
 
@@ -586,8 +585,12 @@ studied marks and twenty movement studies, and WO-021 to WO-024 land twenty
 studies each for RxJS, the messaging patterns, the enterprise application
 patterns, and Gödel, Escher, Bach with Team Topologies, a hundred concepts
 selected by the most-related rule that pass recorded (D4), each batch landing
-the visual family its ideas need; a later pass cuts the next hundred when
-the operator drains the queue.
+the visual family its ideas need. The later batches are the research track,
+[WS-002](WS-002-concept-research.md): studies drawn by the families these
+five land, with no new page, family or design round, run on the operator's
+spare Codex capacity apart from this workstream's road and refilled by each
+planning pass while the operator drains it (the operator's direction of
+2026-11-04, capture SHA-256 `56c7d119…`; the 2026-11-04 pass, D6).
 
 **The actor board (WO-006) and its data path (WO-007).**
 The actor board, `uifa-board-v1`: five panels in the document's order

@@ -708,6 +708,14 @@
           "reopenWhen": "A starter carries core WO-246, or a hook-admitted target publish is refused by the host classifier.",
           "targets": [],
           "at": "2026-11-03T18:57:56.488Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 recorded the fourth refusal on WO-246 and amended it (narrow allow rules for the helper's node spellings in the emitted settings; third in core's queue); until that release the push is the operator's by hand and a blocked session says so once. Today's update push was admitted on the first try.",
+          "reopenWhen": "A starter carries core WO-246, or a hook-admitted launchpad publish is refused by the host classifier.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.229Z"
         }
       ]
     },
@@ -1505,6 +1513,14 @@
           "reopenWhen": "Core answers or ships the parser fix, or a target order contains a malformed duplicate.",
           "targets": [],
           "at": "2026-11-03T16:55:14.384Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 allocated the parser fix to its WO-257 step 10 (every classification declaration counted before the sole value is validated; a valid header plus a malformed duplicate refused naming both lines); the profile's two-count precheck stays the working protection.",
+          "reopenWhen": "A starter carries core WO-257, or a target order contains a malformed duplicate before it lands.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.241Z"
         }
       ]
     },
@@ -4600,6 +4616,20 @@
           "reopenWhen": "WO-024 merges, or the operator asks for the next cut.",
           "targets": [],
           "at": "2026-11-01T01:57:26.346Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "allocated",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D6: the operator asked for the research queue to be drained, so the next hundred are cut as the research track's first five orders by the most-related rule within what each landed family draws: WO-028 (Movement), WO-029 (RxJS), WO-030 (messaging), WO-031 (PoEAA, after WO-023), WO-032 (GEB and Team Topologies, after WO-024); the pathfinding and decision-making chapters wait for a road order that lands a family that draws them.",
+          "reopenWhen": "Fewer than two research orders are queued, or the operator asks for the next cut (WS-002 rule 6).",
+          "targets": [
+            "WO-028",
+            "WO-029",
+            "WO-030",
+            "WO-031",
+            "WO-032"
+          ],
+          "at": "2026-11-04T17:17:28.216Z"
         }
       ]
     },
@@ -4624,6 +4654,14 @@
           "reopenWhen": "More than about ten batches are queued at once, or the operator wants them off the main list.",
           "targets": [],
           "at": "2026-10-30T22:48:30.698Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D6: the condition fired, the operator wants the concept batches off the main list as a research track they run on spare Codex capacity; WS-002 (track: separate) is filed with WO-028 to WO-032 as its members.",
+          "reopenWhen": "The operator wants the research orders back in the serial sequence, or the generated index misplaces a separate-track member.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.203Z"
         }
       ]
     },
@@ -5496,6 +5534,14 @@
           "reopenWhen": "A starter carries WO-246, the incoming helper is observed stalling, or a close exceeds the recorded 0 h 5 min removal threshold.",
           "targets": [],
           "at": "2026-11-03T18:57:56.515Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's WO-253 shipped in v0.115.0, taken today, so a target close now prunes only its order's roots and prints where its minutes went; the finish fetch's alternates and already-held skip stay WO-246 step 5 (core's answer of 2026-11-03, item 2). Today's update --finish ran in 7 s.",
+          "reopenWhen": "The first target close on starter v0.115.0 records its removal step's time, a starter carries WO-246, or a finish stalls again.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.253Z"
         }
       ]
     },
@@ -5888,6 +5934,14 @@
           "reopenWhen": "Core changes the historical/current projection or a consumer treats the historical line as a current block.",
           "targets": [],
           "at": "2026-11-03T17:05:31.426Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 filed the projection in WO-257 step 8 (the index shows the executor's unmet ordinal beside the later verdict, never as the current state).",
+          "reopenWhen": "A starter carries core WO-257, or a consumer treats the historical line as a current block.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.265Z"
         }
       ]
     },
@@ -5963,6 +6017,14 @@
           "reopenWhen": "Core ships or declines the diagnostic, or the documented setup fails on a configured clone.",
           "targets": [],
           "at": "2026-11-03T17:05:31.459Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 filed the diagnostic in WO-257 step 9 (bootstrap prints the missing target-clone diagnostic with the registration command before any check fails).",
+          "reopenWhen": "A starter carries core WO-257, or the documented setup fails on a configured clone.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.277Z"
         }
       ]
     },
@@ -5987,6 +6049,14 @@
           "reopenWhen": "Core ships or answers target-aware review, or an explicitly required Codex target bridge cannot be qualified.",
           "targets": [],
           "at": "2026-11-03T17:05:31.470Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 filed the target form in WO-255 step 5 (npm run worker -- review --target <id> --order WO-NNN binds the target's base and candidate, read-only in the clone, the use counted and the report the launchpad's); the native target-worker route the profile names stands until then.",
+          "reopenWhen": "A starter carries core WO-255, or an explicitly required Codex target bridge cannot be qualified.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.289Z"
         }
       ]
     },
@@ -6059,6 +6129,14 @@
           "reopenWhen": "Core ships or answers the receipt correction, or another probe is misread as proof of confinement.",
           "targets": [],
           "at": "2026-11-03T17:05:31.504Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) D3: core's answer of 2026-11-03 filed the receipt wording in WO-257 steps 5 and 8 (the receipt names host coordination state outside its inventories as unobserved; the frozen copy renders as <tmp>/… and the summary is screened before filing).",
+          "reopenWhen": "A starter carries core WO-257, or another probe is misread as proof of confinement.",
+          "targets": [],
+          "at": "2026-11-04T17:17:28.301Z"
         }
       ]
     },

@@ -124,14 +124,22 @@ audience beyond the operator.
   elsewhere and other references), the vision the work trends toward without
   every representation in every order (2026-10-26, capture `5742f0a7…`;
   WO-019-D005; `docs/product/concept-study.md`).
-- **Depth in batches** (2026-10-30, capture
-  `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`): the
+- **Depth in batches, then a research track** (2026-10-30, capture
+  `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`;
+  2026-11-04, capture
+  `56c7d119bd8cfdf8722ff840d9138920772e1fa40f735605b7fff5664d78ff4e`): the
   catalog's concepts enter the app as batches of concept studies, about a
-  hundred concepts in five orders per planning pass, selected by planning
-  and placed at the front of the sequence as side work the operator takes
-  between road orders and while waiting on core; a drained queue is refilled
-  by the next pass; a feature a batch surfaces goes into a road order as a
-  scope expansion or a follow-up.
+  hundred concepts in five orders per planning pass, selected by planning;
+  the first five batches sit at the front of the sequence as side work the
+  operator takes between road orders and while waiting on core; the later
+  batches form the research track (`docs/workstreams/WS-002-concept-research.md`),
+  apart from the Angular road, which the operator runs when they have spare
+  Codex capacity: a research order lands no new page or family, runs no
+  paired comparison and asks the operator nothing beyond the lifecycle
+  steps, and is limited where that requires it to the kinds of research
+  already done; a drained queue or track is refilled by the next pass; a
+  feature a batch surfaces goes into a road order as a scope expansion or a
+  follow-up.
 - **Standing documents** in the shape of a profile that leads with a table of
   facts, then task-named sections (what it is for, run it, find the
   implementation, publish, close, versions and provenance, references), with
@@ -232,16 +240,24 @@ audience beyond the operator.
 
 ### Updates, the lifecycle and records
 
-- **Starter updates:** a planning pass takes the latest starter first, through an
-  update pull request it opens ready (refreshing or replacing an open one,
-  recording its choice), and orders activate only on the updated `main`; the
-  operator merges the update and the planning pull request themselves, and the
-  session finishes the merged update with `node scripts/launchpad.mjs update
-  --finish` on clean `main`; a repair a release's Read before upgrading names
-  is made on the update branch so it merges green; where the plan gate binds a
-  closed order's bytes, `amend-order --withdraw` is used with the reason
-  recorded and the original authorization left standing (2026-10-18 and
-  2026-10-21, capture
+- **Starter updates:** no planning or entropy pass takes a newer starter
+  release or merges upstream unless the operator asks for it in that session
+  (2026-11-03, given in core's session, capture there SHA-256
+  `4c7e47a6548004d909128fdfcc346663fc419280b798d00abec73d7ffb180f83`, and
+  relayed in core's block of 2026-11-03, pasted 2026-11-04, capture
+  `56c7d119bd8cfdf8722ff840d9138920772e1fa40f735605b7fff5664d78ff4e`; the
+  rule this item once carried, that a pass takes the latest starter first,
+  was a planner's inference from the asks of 2026-10-18, 2026-10-21 and
+  2026-10-24, never a direction, and is struck). When the operator asks, the
+  pass takes it first, through an update pull request it opens ready
+  (refreshing or replacing an open one, recording its choice), and orders
+  activate only on the updated `main`; the operator merges the update and the
+  planning pull request themselves, and the session finishes the merged
+  update with `node scripts/launchpad.mjs update --finish` on clean `main`; a
+  repair a release's Read before upgrading names is made on the update branch
+  so it merges green; where the plan gate binds a closed order's bytes,
+  `amend-order --withdraw` is used with the reason recorded and the original
+  authorization left standing (2026-10-21, capture
   `9b1e3fe9d122ddc83053b6a8b03ac46f2cb97f90eabd15e3404d3f6b2db913a4`;
   2026-10-24).
 - **The root README:** the launchpad's introduction belongs at the root once
@@ -343,11 +359,18 @@ audience beyond the operator.
   Playwright tooling does not widen that authority (2026-11-01;
   [WO-022's process-error record](../evidence/WO-022/verification-process-error.md)
   and WO-022-D029, bound in the target-record receipt).
-- **Models and effort:** Claude Code at the operator's chosen effort; spawned workers at the
-  kit's pinned model and effort; a `planning:` or `resume:` dispatch line that
-  names `fable` or `fable 5.1` runs the workers as `dotln-worker-fable`
-  (claude-fable-5-1, xhigh), otherwise `dotln-worker` (claude-opus-5-5,
-  xhigh), and the receipt records the type.
+- **Models and effort:** Claude Code at the operator's chosen effort; a
+  worker, reviewer, refuter, live episode or probe a session launches has
+  four options, Claude `claude-opus-5-5` at `xhigh`, Claude `claude-fable-5-1`
+  at `xhigh`, Codex `gpt-6.1-sol` at `max` and Codex `gpt-6-astra` at `max`;
+  the first and third are the defaults of their harnesses, and the Fable and
+  Astra options run only when the operator asks (2026-11-03, given in core's
+  session, capture there SHA-256
+  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f`; core's
+  WO-255 adds the kit's selector). A `planning:` or `resume:` dispatch line
+  that names `fable` or `fable 5.1` runs the Claude workers as
+  `dotln-worker-fable` (claude-fable-5-1, xhigh), otherwise `dotln-worker`
+  (claude-opus-5-5, xhigh), and the receipt records the type.
 - **Target executions** run under Claude Code as well as Codex since 2026-10-26;
   starter v0.101.0's executor-only `target-worktree` grant is what that needs.
 - **A planning pass reviews the orders before it refutes them** (2026-10-31,

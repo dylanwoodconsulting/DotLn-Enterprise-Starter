@@ -204,7 +204,11 @@ and the pinned model and effort. Retain the returned report in the order's
 review evidence with that target identity and account for its use. A Codex CLI
 bridge requested by the operator needs its actual read-only sandbox, usage and
 report retention demonstrated; an old workspace-write launcher is not that
-qualification. Core owns adding a target-aware mode to the kit helper.
+qualification. Core's WO-255 (fourth in its queue on 2026-11-03) adds the
+target-aware mode to the kit helper, `npm run worker -- review --target <id>
+--order WO-NNN`, which binds the target's base and candidate, keeps the
+reviewer read-only in the clone, counts the use and files the report as the
+launchpad's; the native route above stands until a starter carries it.
 
 ## Find the implementation
 
