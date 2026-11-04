@@ -158,6 +158,10 @@ const shell = (name, file) => ({
 // Machinery declarations select optional review checks by their own source paths.
 export const machinerySources = {
   "sync-fixtures": [
+    "scripts/features.mjs",
+    "scripts/harness.mjs",
+    "scripts/lib/harness.mjs",
+    "scripts/meta.mjs",
     "scripts/release.mjs",
     // The close's step names, blocker classes and removal children, which
     // release.mjs, worktree.mjs and plan failures import.
@@ -178,6 +182,9 @@ export const machinerySources = {
     "scripts/lib/build-freshness.mjs",
   ],
   "launchpad-planning": [
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
     // plan start applies the owned-root prune through this summary (WO-237).
     "scripts/lib/temporary-prune-summary.mjs",
     "scripts/lib/planning-document.mjs",
@@ -247,6 +254,10 @@ export const machinerySources = {
     "scripts/test-fixture-temp-root.sh",
   ],
   "harness-probe": [
+    "scripts/meta.mjs",
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
     "scripts/lib/planning-document.mjs",
     // Direct entry imports and literal first-party script inputs (WO-174).
     "packages/skeleton/src/discovery-sandbox.ts",
@@ -275,6 +286,12 @@ export const machinerySources = {
     "packages/skeleton/src/worker-transport.ts",
   ],
   "harness-fixtures": [
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
+    "scripts/outward-lint.mjs",
+    "scripts/lib/drive-worker.mjs",
+    "scripts/lib/drive-session.mjs",
     // The retained-usage readback the harness suite exercises (WO-237).
     "scripts/lib/retained-session.mjs",
     // The stopped-apply report its temporary-root cases exercise (WO-237).
@@ -436,6 +453,9 @@ export const machinerySources = {
     // Plan failures, which the refutation fixtures import, reads the close's
     // blocker classes and step names from here.
     "scripts/lib/release-steps.mjs",
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
     // plan start applies the owned-root prune through this summary (WO-237).
     "scripts/lib/temporary-prune-summary.mjs",
     // plan start and plan documents read the document kinds, the moves and
@@ -603,6 +623,9 @@ export const machinerySources = {
     "scripts/lib/target-worktree-fixture.mjs",
   ],
   "process-debt": [
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
     // plan start applies the owned-root prune through this summary (WO-237).
     "scripts/lib/temporary-prune-summary.mjs",
     "scripts/lib/plan-subject.mjs",
@@ -713,6 +736,7 @@ export const machinerySources = {
     "packages/skeleton/fixtures/wo252-repair-role-baseline.json",
     "packages/skeleton/fixtures/wo238-role-baseline.json",
     "packages/skeleton/fixtures/wo238-integration-role-baseline.json",
+    "packages/skeleton/fixtures/wo253-role-baseline.json",
     "packages/skeleton/fixtures/wo217-role-efficiency-baseline.json",
     "scripts/test-helper-reuse.mjs",
     "scripts/lib/helpers.mjs",
@@ -783,6 +807,9 @@ export const machinerySources = {
   "verification-evidence": recordedSources["verification"],
   "feedback-evidence": recordedSources["feedback"],
   meta: [
+    "scripts/features.mjs",
+    "scripts/lib/features.mjs",
+    "scripts/lib/build-overlay.mjs",
     // Direct entry imports and literal first-party script inputs (WO-174).
     "scripts/lib/executor-handoff.mjs",
     "scripts/lib/plan-subject.mjs",
@@ -1181,6 +1208,7 @@ export const suites = [
     instance: "document",
     timeoutMs: 30_000,
   },
+  // test-configuration-root imports test-features for the registry/schema cases.
   nodeTests("configuration-root", "scripts/test-configuration-root.mjs", {
     needsBuild: false,
     timeoutMs: 30_000,
@@ -3620,6 +3648,32 @@ async function runGateChecks(
     return stop.signal.aborted;
   };
   const poll = setInterval(stopping, 500);
+  // A suite's fixture roots leave as the suite ends, not when the gate does:
+  // a passed suite's are removed then, and a failed or stopped suite's keep
+  // their diagnosis window, which starts then. The gate's end judges every
+  // root of the gate again, so what a suite's end kept or could not judge is
+  // judged and recorded there, beside these removals. A suite-end cleanup
+  // that cannot run never fails the suite: it prints an advisory, and its
+  // roots wait for the gate's end.
+  const suiteRemovedRoots = [];
+  const finishSuiteRoots = (name, result, cwd) => {
+    try {
+      const finished = finishGateTemporaryRoots(
+        cwd,
+        temporaryGateId,
+        [result],
+        { suite: name, hostDirectory },
+      );
+      result.temporaryRootsRemoved = finished.removed.length;
+      suiteRemovedRoots.push(...finished.removed);
+    } catch (error) {
+      result.temporaryRootsRemoved = 0;
+      result.temporaryCleanupAdvisory = error.message;
+      console.log(
+        `ADVISORY [${name}] suite-end temporary-root cleanup unavailable (${error.message}); its roots wait for the gate's end`,
+      );
+    }
+  };
   try {
     const taskRows = await scheduleSuites(tasks, {
       repo,
@@ -3699,6 +3753,10 @@ async function runGateChecks(
                   ),
                 stop.signal,
               );
+        // The document barrier is a synthetic row that runs nothing, so it
+        // registers no root of its own.
+        if (row.name !== "document-barrier")
+          finishSuiteRoots(row.name, result, cwd);
         if (row.structural) {
           const line = result.output
             ?.split("\n")
@@ -4070,12 +4128,16 @@ async function runGateChecks(
       taskTimeline: taskRows.map(withoutOutput),
     });
     await withHostLock(hostDirectory, "lanes", () => {
-      check.temporaryCleanup = finishGateTemporaryRoots(
+      const finished = finishGateTemporaryRoots(
         repo,
         temporaryGateId,
         taskRows,
         { hostDirectory },
       );
+      check.temporaryCleanup = {
+        ...finished,
+        removed: [...suiteRemovedRoots, ...finished.removed],
+      };
       // Owned fixtures defer teardown until their suite's outcome is known.
       // Judge leftovers after that cleanup; anything still present remains
       // diagnosable and fails the gate, including an unowned fixture root.
