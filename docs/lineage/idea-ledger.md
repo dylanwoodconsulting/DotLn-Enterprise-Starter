@@ -4,6 +4,23 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-04 — planning pass: starter v0.115.0 taken on the operator's word, core's answers of 2026-11-03 read, the update rule struck, the research track filed and the document parity order cut (operator dispatch of 2026-11-04)
+
+Dispatch: a `planning:` request for a standard pass with the latest upstream,
+carrying core's answer block of 2026-11-03 to this fork's two blocks of
+2026-11-03, the operator's ask that the passes core's cleanup orders made over
+core's own documents happen here too, and their direction for a research
+track that drains the catalog's concept queue on spare Codex capacity apart
+from the Angular work, followed by one mid-turn message (review agents run
+on Codex) and the merge of update #55, captured verbatim in ignored intake
+(`docs/intake/notes/planning-2026-11-04.md`, SHA-256
+`56c7d119bd8cfdf8722ff840d9138920772e1fa40f735605b7fff5664d78ff4e`). The
+record is
+[the planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md);
+this heading registers the pass for the plan tooling. The pass filed six
+orders and one workstream; no idea enters the ledger, because the pass was
+not an ideation dispatch.
+
 ## 2026-11-03 — planning pass: Entropy Reducer over the launchpad
 
 The operator dispatched an Entropy Reducer planning pass over this instance.

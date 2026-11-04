@@ -9,6 +9,8 @@ pair run one at a time.
 - WO-023 — Concept studies IV: the enterprise application patterns
 - WO-024 — Concept studies V: levels, loops and teams
 
+- WO-033 — The launchpad's documents follow the kit's contract
+
 - WO-027 — The workspace says and checks what is so
 
 - WO-016 — The machinery view

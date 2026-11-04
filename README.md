@@ -137,15 +137,16 @@ describes them.
 `KIT-MANIFEST.json` hashes every kit file. `node scripts/launchpad.mjs verify` checks
 the kit against that manifest.
 
-A planning pass takes the latest starter first, through an update pull request the
-operator merges, and `node scripts/launchpad.mjs update --finish` completes it on
-clean `main`. Editing a kit file is choosing to fork it: every later update refuses
-that file while it differs from both its manifest hash and the incoming kit.
+A planning pass takes a newer starter only when the operator asks for it in that
+session, through an update pull request the operator merges, and
+`node scripts/launchpad.mjs update --finish` completes it on clean `main`. Editing a
+kit file is choosing to fork it: every later update refuses that file while it
+differs from both its manifest hash and the incoming kit.
 
 The root `README.md` is this instance's introduction. The manifest-listed
 [kit guide](docs/KIT.md) carries upstream's operating instructions; starter updates
 preserve this page. The release block at the top remains a checked release surface
-([WO-025-D014](docs/evidence/WO-025/decisions.md#wo-025-d014)).
+(WO-025-D014, in the order's decisions under `docs/evidence/WO-025/`).
 
 ## References
 
