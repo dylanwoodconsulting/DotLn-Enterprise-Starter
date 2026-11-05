@@ -1,0 +1,260 @@
+{
+  "authoringDate": "2026-11-04",
+  "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "sourceManifest": "brief/source-manifest.json",
+  "manifestHashesMatched": true,
+  "totalStudies": 20,
+  "totalImagesViewedWithImageTool": 40,
+  "scope": "Independent reading/content review of the integrated production renders, draft records and models; source truth is a separate critic’s responsibility.",
+  "tokenCounters": {
+    "cumulative": "unknown",
+    "source": "unknown",
+    "scope": "unknown",
+    "cutoff": "unknown",
+    "reason": "No cumulative usage counters exposed to this worker."
+  },
+  "publisherHtmlAccess": "unknown; no network or publisher access attempted in this role",
+  "sourceWrites": false,
+  "testsRun": false,
+  "browserLaunches": false,
+  "gatesRun": false,
+  "descendants": 0,
+  "bestReasons": {
+    "variable-matching": "Turns an abstract family pattern into the concrete distinction between sharing a pace and meeting at a position.",
+    "projectile-trajectory": "Connects the visual apex, one shared clock and exact contact arithmetic, with an honest unreachable-height result.",
+    "motor-control": "Makes intention versus available braking inspectable, then demonstrates the resulting stopping-distance failure with one changed input."
+  },
+  "studies": [
+    {
+      "slug": "steering-behaviors",
+      "readingImage": "readings/steering-behaviors-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/steering-behaviors-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Both requests read Mara’s same current state; the separate evolving comparison is explicitly distinguished. The braking arrows, signed chart values and worked update correspond."
+    },
+    {
+      "slug": "steering-output",
+      "readingImage": "readings/steering-output-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/steering-output-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The ended pulse preserves linear velocity and turning rate; world-coordinate thrust and independent facing remain distinct through the motion, chart and worked step."
+    },
+    {
+      "slug": "flee",
+      "readingImage": "readings/flee-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/flee-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The repository engine’s fading variant is explicit beside the constant-maximum definition. Zero output outside the radius, coasting and exact-coincidence failure are concrete."
+    },
+    {
+      "slug": "variable-matching",
+      "readingImage": "readings/variable-matching-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/variable-matching-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Velocity error is selected explicitly while the separate position gap remains visible. The reversed correction, caps and worked next update explain both success and an unfinished rendezvous."
+    },
+    {
+      "slug": "collision-avoidance",
+      "readingImage": "readings/collision-avoidance-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/collision-avoidance-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [
+        1
+      ],
+      "coverage": "Current and projected centres, 1.25 s closest approach, contact radius and away acceleration correspond. The zero-offset comparison exposes the absent head-on direction. Shared chart-key finding recorded here."
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "readingImage": "readings/obstacle-and-wall-avoidance-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/obstacle-and-wall-avoidance-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [
+        2,
+        3
+      ],
+      "coverage": "The finite ray, hit, normal-offset target, Seek request and next update use one example; the short-ray comparison exposes body overlap. The opening drawing has the two reported readability defects."
+    },
+    {
+      "slug": "corner-trap",
+      "readingImage": "readings/corner-trap-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/corner-trap-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Actual finite ray hits produce the displayed two normal requests; their sideways and backward cancellation is explicit. The winning-ray comparison claims only the beginning of a detour."
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "readingImage": "readings/blending-versus-arbitration-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/blending-versus-arbitration-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Both policies consume the same timed fading instruction in separate runs. Weight, precedence, output discontinuity and gradual velocity reversal are clearly separated."
+    },
+    {
+      "slug": "projectile-trajectory",
+      "readingImage": "readings/projectile-trajectory-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/projectile-trajectory-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "One constant-gravity clock determines position, vertical velocity and the exact selected-height event. The above-apex failure withholds a landing; the final preview sample is never substituted for contact."
+    },
+    {
+      "slug": "the-firing-solution",
+      "readingImage": "readings/the-firing-solution-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/the-firing-solution-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [
+        4
+      ],
+      "coverage": "The low/high velocities retain fixed speed and meet the same beacon at their displayed times; the unreachable comparison withholds the shot. The opening contact hides most of the target cross."
+    },
+    {
+      "slug": "iterative-targeting",
+      "readingImage": "readings/iterative-targeting-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/iterative-targeting-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Attempt 2 is the same 30-degree drag simulation, 0.72 m miss and [20,30]-degree next bracket in the drawing, prose and worked example. Search playback is distinguished from flight/computation time. Tolerance-key issue belongs to the shared chart finding."
+    },
+    {
+      "slug": "jump-points",
+      "readingImage": "readings/jump-points-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/jump-points-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [
+        5
+      ],
+      "coverage": "The position and horizontal-velocity checks precede the vertical impulse; accepted motion preserves actual horizontal speed. The late-start comparison refuses the jump. The opening take-off ring is occluded."
+    },
+    {
+      "slug": "motor-control",
+      "readingImage": "readings/motor-control-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/motor-control-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The request of -12 and motor response of -4 share one cart state and one scale. The weaker brake makes the safety-line failure observable without a wall clamp."
+    },
+    {
+      "slug": "actuator",
+      "readingImage": "readings/actuator-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/actuator-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Agreed, feasible and actual velocity remain separate from the acceleration output. The impossible belt goal makes persistent capability mismatch visible, while the position-gap limit is explained."
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "readingImage": "readings/movement-in-the-third-dimension-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/movement-in-the-third-dimension-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Height participates in both steering and true-distance success; the shadow and height connectors distinguish it from depth. Nose direction and independent roll are explained without claiming aircraft dynamics."
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "readingImage": "readings/two-and-a-half-dimensions-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/two-and-a-half-dimensions-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "Plan and profile show one courier with the same distance scale. Sampled foot height, fixed upright pose and the ledge-induced vertical-rate spike explain the representation and its limits."
+    },
+    {
+      "slug": "kinematic-arrive",
+      "readingImage": "readings/kinematic-arrive-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/kinematic-arrive-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The assigned direct velocity, next displacement, derived taper distance and accepted positional error correspond. The short response time exposes sampled oscillation. Velocity/displacement Chart-key mismatch belongs to the shared finding."
+    },
+    {
+      "slug": "satisfaction-radius",
+      "readingImage": "readings/satisfaction-radius-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/satisfaction-radius-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The runner is accepted exactly at the closed region’s boundary while preserving 0.5 units of error. The zero-radius comparison makes unreachable sampled equality and repeated crossings concrete."
+    },
+    {
+      "slug": "kinematic-wander",
+      "readingImage": "readings/kinematic-wander-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/kinematic-wander-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [],
+      "coverage": "The old facing drives this update and the seeded signed turn drives the next; equal-speed arrows and worked arithmetic agree. The large turn bound exposes abrupt changes without an acceleration controller."
+    },
+    {
+      "slug": "coordinated-movement",
+      "readingImage": "readings/coordinated-movement-1440.png",
+      "readingImageViewed": true,
+      "chartImage": "readings/coordinated-movement-chart-1440.png",
+      "chartImageViewed": true,
+      "recordRead": true,
+      "modelRead": true,
+      "findingIndexes": [
+        6
+      ],
+      "coverage": "Slots retain owners; the anchor moves first and every member reads that same moved formation. The slower Camera comparison exposes following failure despite valid assignment. The text equivalent needs the reported shortening; its hidden mean-error Chart key is covered by the shared finding."
+    }
+  ]
+}

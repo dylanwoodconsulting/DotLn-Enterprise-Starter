@@ -1,0 +1,102 @@
+{
+  "statement": "PASS: Beacon and Goal remain truthful annotations for unchanged target points; no factual findings.",
+  "candidateManifest": "brief/final-recheck-manifest.json",
+  "candidateManifestSha256": "f3433ea419e64009f3c2043251e0786eae3a94e229092c88beb96836016a58db",
+  "previousManifestSha256": "844088651144af80b8ef6413ef57a112f3a3fda094b398847183c12d8a3113ba",
+  "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "integrity": {
+    "manifestFilesChecked": 64,
+    "mismatches": [],
+    "changedFiles": [
+      "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+      "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+      "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts"
+    ],
+    "exactTextOnlyDeltaConfirmed": true,
+    "confirmationMethod": "Reversing each declared string replacement exactly reproduces that file’s prior manifest hash.",
+    "priorReportsPreserved": {
+      "result.json": "e91e8501bdc7f6b52d6fac150ae9e359e9967ef85e2e5694c43d229e6d5acdf2",
+      "initial-result.json": "e91e8501bdc7f6b52d6fac150ae9e359e9967ef85e2e5694c43d229e6d5acdf2",
+      "recheck-result.json": "c8f7e14ee8bf306432acb24916d3dbbb97da89d2a765f6ddd23fcaae5b5b2f58"
+    }
+  },
+  "dispositions": [
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+      "slug": "corner-trap",
+      "disposition": "pass",
+      "modeRetained": "mixed",
+      "confirmation": "Goal identifies the same target cross at (example.targetX,0) that engine Seek reads. The delivery scenario and Destination request legend remain unchanged.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts:152,207,331",
+      "exactReplacement": {
+        "before": "label: 'delivery'",
+        "after": "label: 'Goal'"
+      }
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+      "slug": "the-firing-solution",
+      "disposition": "pass",
+      "modeRetained": "local",
+      "confirmation": "Beacon identifies the same target cross at (example.targetX,-example.targetHeight). Its breakwater setting remains in the study and legend; target and trajectory information are unchanged.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts:258-263,478",
+      "exactReplacement": {
+        "before": "label: 'Breakwater beacon'",
+        "after": "label: 'Beacon'"
+      }
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts",
+      "slug": "the-firing-solution",
+      "disposition": "pass",
+      "modeRetained": "local",
+      "confirmation": "The existing mark assertion now expects the actual shorter Beacon label. No other assertion changed.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts:129-131",
+      "exactReplacement": {
+        "before": "label === 'Breakwater beacon'",
+        "after": "label === 'Beacon'"
+      }
+    }
+  ],
+  "findings": [],
+  "originalMechanismClassifications": {
+    "steering-behaviors": "mixed",
+    "steering-output": "local",
+    "flee": "mixed",
+    "variable-matching": "mixed",
+    "collision-avoidance": "mixed",
+    "obstacle-and-wall-avoidance": "mixed",
+    "corner-trap": "mixed",
+    "blending-versus-arbitration": "mixed",
+    "projectile-trajectory": "local",
+    "the-firing-solution": "local",
+    "iterative-targeting": "local",
+    "jump-points": "mixed",
+    "motor-control": "mixed",
+    "actuator": "mixed",
+    "movement-in-the-third-dimension": "local",
+    "two-and-a-half-dimensions": "mixed",
+    "kinematic-arrive": "local",
+    "satisfaction-radius": "local",
+    "kinematic-wander": "local",
+    "coordinated-movement": "mixed"
+  },
+  "references": "No URL, support statement, parameter, point, mechanism, prose or legend delta; the original source review and prior confirmations carry forward.",
+  "tests": {
+    "run": false,
+    "commands": [],
+    "reason": "No tests or probes authorized or needed for this verified annotation-only delta; root owns candidate validation."
+  },
+  "expectedMetadataTransition": {
+    "expected": "After both independent rechecks pass, root sets state checked and reviewers factual-critic and reading-critic.",
+    "disposition": "Expected metadata-only transition; original mechanism classifications and this factual judgment remain unchanged. This critic made no metadata or source edits."
+  },
+  "usage": {
+    "cumulativeTokens": null,
+    "status": "unknown",
+    "source": "No cumulative model token counter exposed to this worker.",
+    "scope": "Same independent factual critic across the initial review, bounded correction recheck and final annotation-only recheck; no new probes in this phase.",
+    "cutoff": "2026-11-04T19:41:27.963145+00:00"
+  },
+  "originalReportSha256": "896816dacd44cb26fb0bf3d4fd0c37dff52ea0626d567f98a406718a27e46227"
+}

@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "kind": "design-improver-recheck",
+  "round": 2,
+  "model": "gpt-6.1-sol",
+  "effort": "max",
+  "modelEffortSource": "Same native worker and launch declaration as round 1; no independent runtime introspection exposed.",
+  "recordedAt": "2026-11-04T20:13:31.193970+00:00",
+  "candidateIdentities": {
+    "target": {
+      "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+      "candidateChangedFilesSha256": "c65be004af1e4ce321aae5a9f743edb7ca9fceb25231baa7abe6c3d31e49817c",
+      "verifiedChangedFiles": 79,
+      "hashMismatches": []
+    },
+    "launchpad": {
+      "base": "a5e7076cfe1082d888966223f544e17d471324ae",
+      "candidateChangedFilesSha256": "f4426586131237804246ad5632f5a3656337804ca5f5c75d2992a14740519616",
+      "verifiedChangedFiles": 111,
+      "hashMismatches": []
+    }
+  },
+  "priorReport": {
+    "path": "review-design/report.json",
+    "sha256": "547fb6845c4562233403f6620b3be291a6d9eb216e94c4873ad54a3318818fbe",
+    "unchanged": true
+  },
+  "packetIntegrity": {
+    "candidateJsonSha256": "bd12f0193ace3aa33733c7b2eef42cd832bc506fcd22713a07e4c9b705773588",
+    "round1To2DiffSha256": "b67d1c7ea1de08a8fe5816f6117438591d1646d69fbdfb4d3780ead5c040ad6c",
+    "declaredTargetDeltaCount": 24,
+    "actualTargetDeltaCount": 24,
+    "targetDeltaMatchesDeclaredPaths": true,
+    "allCurrentChangedFileHashesMatch": true
+  },
+  "dispositions": [
+    {
+      "id": "DES-001",
+      "status": "resolved",
+      "reason": "All ten affected exports now return MotionStudyModel; adjacent spec adapters call model directly without their redundant family guards. Static comparison against round 1 confirms the ten model source changes are exclusively the return annotation/type imports, and the ten spec changes exclusively remove the reported narrowing adapters\u2019 guards.",
+      "evidence": [
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+          "line": 157,
+          "detail": "The return annotation is now MotionStudyModel."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+          "line": 18,
+          "detail": "The default-parameter adapter now returns model(values) directly."
+        },
+        {
+          "file": "round-1-to-2-target.diff",
+          "detail": "All ten model/spec pairs inspected; exact static before/after comparison admits only these declared type/adapter transformations."
+        },
+        {
+          "file": "launchpad/docs/evidence/WO-028/content-identity.json",
+          "detail": "Retains twenty model-runtime hashes and the parent\u2019s compiler-output identity check. This reviewer did not rerun transpilation."
+        }
+      ],
+      "affectedModels": [
+        "actuator",
+        "flee",
+        "kinematic-arrive",
+        "motor-control",
+        "movement-in-the-third-dimension",
+        "satisfaction-radius",
+        "steering-behaviors",
+        "steering-output",
+        "two-and-a-half-dimensions",
+        "variable-matching"
+      ],
+      "producerConsumerPairs": [
+        {
+          "producer": "The ten affected movement model exports",
+          "consumer": "Each adjacent model spec and the existing StudyModelModule registry contract"
+        }
+      ]
+    },
+    {
+      "id": "DES-002",
+      "status": "resolved",
+      "reason": "drawingOf now derives legend entries from the selected timeline series and resolves the view and legend through the same timeline availability check. The shared template has one legend loop keyed by index, so repeated tones keep separate labels. Motion/no-chart paths retain the movement legend; flow/marbles selection is unchanged. The translated chart guide remains conditional as requested.",
+      "evidence": [
+        {
+          "file": "target/libs/features/tools/src/lib/mappers/study-mapper.ts",
+          "line": 52,
+          "detail": "The motion branch selects timeline at line 53, derives its series legend at line 56 and resolves the view at line 58."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/composites/study/study.html",
+          "line": 76,
+          "detail": "One visual.legend loop, tracking $index; lines 81\u201384 retain the appropriate translated guide or movement caption."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+          "line": 172,
+          "detail": "The added regression uses two series sharing actual tone and covers chart selection, restoration to motion and no-timeline fallback."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/composites/study/study.spec.ts",
+          "line": 115,
+          "detail": "The component fixture carries the mapped chart legend and the test keeps the return-to-movement expectation."
+        }
+      ],
+      "producerConsumerPairs": [
+        {
+          "producer": "study-mapper.ts::drawingOf",
+          "consumer": "study.html::caption and study.spec.ts selected-view expectations"
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "result": "Both original design findings are resolved. No acceptance-breaking or pre-existing-behavior regression found within the allowed recheck scope. This is a design-fix disposition, not a work-order or complete-gate verdict.",
+  "retainedValidationEvidence": [
+    {
+      "command": "format 24 changed target files",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-08-47.104Z.log",
+      "logSha256": "db175eb89d45fa8f50dc04e8f8805793ad00fd1d94cb6b393538a64bebf1f0c7",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npx nx lint tools",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-08-47.968Z.log",
+      "logSha256": "5dacf73fef91509571a52f19da1419bc2cf9793ec47c582d0465928b4fd2d8d7",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npm run typecheck:foundations",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-09-22.849Z.log",
+      "logSha256": "33c4b852c19cb57a52fc856ad1efb72ee9c2938e506152b340fa5d6ed5f9ddc1",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npx nx test tools --outputStyle=static",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-09-59.976Z.log",
+      "logSha256": "ffbccc5bf854ec921cca96435375f30275111d46833bdffb996262750e524dc8",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npx playwright test --config=apps/dotln-e2e/playwright.config.mts --grep=the next movement studies",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-10-20.711Z.log",
+      "logSha256": "1a92ecd3b175a1fa50ad450c023ce71fe290145062cd15b5a07fbfa9708bcd39",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npx nx build dotln --configuration=production --stats-json --outputStyle=static",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-10-37.046Z.log",
+      "logSha256": "3bf0c0dc411f88b9f8a8c61ed0d741e4ae579b43c78b492ca070e751d7167f14",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    },
+    {
+      "command": "npm run check:bundle",
+      "recordedExitCode": 0,
+      "log": "command-logs/2026-11-04T20-10-43.724Z.log",
+      "logSha256": "54caa2525101d4a552da50b8455fd68765e4b2dc375ddc476b1a11455b324974",
+      "relationship": "Retained parent execution evidence; read and hash-verified, not rerun by this reviewer."
+    }
+  ],
+  "scope": {
+    "reviewed": "Only DES-001, DES-002 and their 24-file target delta; D017; review.md independent implementation review; relevant validation records/logs; content/capture identity metadata.",
+    "staticComparisons": "All 190 manifest-bound changed file hashes matched. Round-1/round-2 target changes equal the 24 declared paths. The 73 capture-file table entries equal round 1; screenshots were not visually inspected.",
+    "originalReportPreserved": true,
+    "restrictionsObserved": "Frozen packet reads and the assigned report write only. No real-worktree or local-secret reads, candidate edits, descendants, installs, network/browser activity, application tests or gates.",
+    "boundary": "No unrelated improvement scouting, criterion verdicts, source-link/factual adjudication or independent numerical/rendering experiments."
+  },
+  "searchedPaths": [
+    "review-design/report.json",
+    "review-candidate-r2/candidate.json",
+    "review-candidate-r2/round-1-to-2-target.diff",
+    "review-candidate-r2/round-1-to-2-paths.json",
+    "round-1 and round-2 copies of the ten affected movement models/specs",
+    "review-candidate-r2/target/libs/features/tools/src/lib/mappers/study-mapper.ts",
+    "review-candidate-r2/target/libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+    "review-candidate-r2/target/libs/features/tools/src/lib/composites/study/study.html",
+    "review-candidate-r2/target/libs/features/tools/src/lib/composites/study/study.spec.ts",
+    "review-candidate-r2/launchpad/docs/evidence/WO-028/{decisions.md D017,review.md,validation.json,content-identity.json,capture-manifest.json}",
+    "review-candidate-r1/launchpad/docs/evidence/WO-028/capture-manifest.json",
+    "review-candidate-r2/command-logs design-correction logs named above"
+  ],
+  "usage": {
+    "total": "unknown",
+    "cachedInput": "unknown",
+    "source": "No native token-usage counters exposed in either turn; no inferred counters or parent/worker aggregation.",
+    "scope": "Latest cumulative usage for this same design worker across round 1 and this round-2 recheck. Parent and sibling usage excluded.",
+    "cutoff": "2026-11-04T20:13:31.193970+00:00"
+  },
+  "retention": {
+    "sourceReportSha256": "c0b93a96880a69f751bb036152993bc21228ee2e60f2780848ff94d5f34684a8",
+    "workerType": "codex-spawn-agent",
+    "launchModel": "gpt-6.1-sol",
+    "launchEffort": "max",
+    "launchSource": "parent native spawn_agent arguments; same worker resumed for its findings"
+  }
+}

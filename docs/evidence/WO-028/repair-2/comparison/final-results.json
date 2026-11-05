@@ -1,0 +1,1751 @@
+{
+  "schemaVersion": 1,
+  "comparison": "Final formatted movement source against the unchanged round-1 capture",
+  "beforeTargetTree": "598d4b63c2d3f076a15777c103010956016b5872",
+  "models": 40,
+  "cases": 176,
+  "differences": 0,
+  "normalizedBytesPerArm": 53530746,
+  "priorEvidence": "results.json",
+  "probe": "movement-reuse-comparison.txt",
+  "probeSha256": "8a7189ed998cf076c9562e7250dfe39021a1efda0c6fd29901a0b3dc1ff1f7d5",
+  "log": "movement-reuse-after-final.log",
+  "logSha256": "9bcaab349584235763bcb9ee197c0f10b5f730bbffc1e019b4e80441481f9976",
+  "result": {
+    "name": "bounded-probe",
+    "durationMs": 6720,
+    "slowestCases": [
+      {
+        "name": "bounded-probe",
+        "durationMs": 6720,
+        "exitCode": 0,
+        "granularity": "task"
+      }
+    ],
+    "peakFootprintBytes": 1405810568,
+    "peakRssBytes": 1519304704,
+    "memoryBudgetBytes": 4294967296,
+    "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+    "droppedOutputBytes": 0,
+    "startedAt": "2026-11-05T08:45:50.760Z",
+    "finishedAt": "2026-11-05T08:45:57.480Z",
+    "exitCode": 0,
+    "executed": true
+  },
+  "casesMatched": [
+    {
+      "slug": "two-and-a-half-dimensions",
+      "scenario": 0,
+      "sha256": "1eafe08efbd3ab3e5d1afde25d5c033ffb6ffd69c033b54344400cd2022264b7",
+      "bytes": 49431
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "scenario": 1,
+      "sha256": "ae0ffc25dfdd193898f12bdd63f40a95df31466876b08c3b156ff011caee7e6c",
+      "bytes": 48882
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "scenario": 2,
+      "sha256": "ad19939c54d93cd43b64f536bf29d276f9412aba1289a9bc2eb7333e98a0145d",
+      "bytes": 49460
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "scenario": 3,
+      "sha256": "1a6d55919c0082e48cd666fc9dabc1ca3be54bd48940017b3c9191c95733c181",
+      "bytes": 49868
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "scenario": 4,
+      "sha256": "a9a203a6d9c434dfa863ac38420381ae667b690c938626bb69b5363395a6ca05",
+      "bytes": 49891
+    },
+    {
+      "slug": "steering-output",
+      "scenario": 0,
+      "sha256": "77bfbac76bcdb5fbf71b30f85286420c180af7a1a83d7cc801bf69260bc169f0",
+      "bytes": 33891
+    },
+    {
+      "slug": "steering-output",
+      "scenario": 1,
+      "sha256": "10222beae1e346351b3be39b31ea5c6665cbbf44b886f939de895a9e8647ead0",
+      "bytes": 33512
+    },
+    {
+      "slug": "steering-output",
+      "scenario": 2,
+      "sha256": "23a76c62eaaf9cf58b5244384010730c629071b9dc6c86f7af987c4c12da6ea5",
+      "bytes": 34015
+    },
+    {
+      "slug": "steering-output",
+      "scenario": 3,
+      "sha256": "68b1de883c9ebe31c1d76868b9ec128c19bc7a4bc920466438a9e4e5680c20fb",
+      "bytes": 33990
+    },
+    {
+      "slug": "steering-output",
+      "scenario": 4,
+      "sha256": "2e738a6baa8ab9d1146fb1eebb062f910cbfccbd5152dea27a318c6164b6a8bb",
+      "bytes": 33946
+    },
+    {
+      "slug": "kinematic-arrive",
+      "scenario": 0,
+      "sha256": "b85c988f9bfc5d0d0125d85bf4c41d3a8e2f5f3339bac309d307983779016857",
+      "bytes": 38238
+    },
+    {
+      "slug": "kinematic-arrive",
+      "scenario": 1,
+      "sha256": "427e4f5b2d97457f5226ac5f733295489b3124a7e72aa73130e01c8d4b3f781e",
+      "bytes": 40609
+    },
+    {
+      "slug": "kinematic-arrive",
+      "scenario": 2,
+      "sha256": "d0c4780905bf13dd8a3506792c6b6c676c577f6f1290d6fd4d95513f89909529",
+      "bytes": 40244
+    },
+    {
+      "slug": "kinematic-arrive",
+      "scenario": 3,
+      "sha256": "b4c6b1b5930ee8deaa2301d9dfd093c538afe0441c81a98a59aa5848f4f13bdb",
+      "bytes": 42541
+    },
+    {
+      "slug": "kinematic-arrive",
+      "scenario": 4,
+      "sha256": "a3943ed926097ed74250e8019f9cc534417b56e3d422750ed2beba08d7ddc911",
+      "bytes": 37727
+    },
+    {
+      "slug": "satisfaction-radius",
+      "scenario": 0,
+      "sha256": "c39a6f34bcdc4a62bd808f1baf14f1819f2cee08007926dcc1801c4924572a65",
+      "bytes": 32581
+    },
+    {
+      "slug": "satisfaction-radius",
+      "scenario": 1,
+      "sha256": "fd9dc5f3d898cb45a35d70f266f1f3ccd81ee8f21576d385eec2592162aebebb",
+      "bytes": 32323
+    },
+    {
+      "slug": "satisfaction-radius",
+      "scenario": 2,
+      "sha256": "a1c97fbcb751768f398b27b33f449d23d699a6480e03b935cf6bd5af71be53e8",
+      "bytes": 32274
+    },
+    {
+      "slug": "kinematic-wander",
+      "scenario": 0,
+      "sha256": "a7987f6b40c5284aa99a418a4a246c6835be75680df2ad6113f644bc634a56c2",
+      "bytes": 196365
+    },
+    {
+      "slug": "kinematic-wander",
+      "scenario": 1,
+      "sha256": "ce0528567a5023fc927b02f02b1adae7493e7bd827af86b562eeaf0e69c4c102",
+      "bytes": 197665
+    },
+    {
+      "slug": "kinematic-wander",
+      "scenario": 2,
+      "sha256": "88771ae568ac85b031f4df9c576530387839040ba382ca4e1f9374d3202decc8",
+      "bytes": 196040
+    },
+    {
+      "slug": "kinematic-wander",
+      "scenario": 3,
+      "sha256": "c70c762f0e5a7f083ffb57beceecae0a31b5bb031e31dd8aff6155fbbb423458",
+      "bytes": 196831
+    },
+    {
+      "slug": "kinematic-wander",
+      "scenario": 4,
+      "sha256": "a5f733b78b4bca5db1af5b1855e72112c742d64746d94dec2971b7552e63d229",
+      "bytes": 196596
+    },
+    {
+      "slug": "steering-behaviors",
+      "scenario": 0,
+      "sha256": "c3ed4d3f3f1413402c3625012193e3173e9978f9eb3688f4dc530b945b50e470",
+      "bytes": 150483
+    },
+    {
+      "slug": "steering-behaviors",
+      "scenario": 1,
+      "sha256": "34bbfabf13a5f96bcc82dcc7147f93abfa6fe69d8af9246803e83722d9b1e7b0",
+      "bytes": 143050
+    },
+    {
+      "slug": "steering-behaviors",
+      "scenario": 2,
+      "sha256": "c3ed4d3f3f1413402c3625012193e3173e9978f9eb3688f4dc530b945b50e470",
+      "bytes": 150483
+    },
+    {
+      "slug": "variable-matching",
+      "scenario": 0,
+      "sha256": "f757eda13bf6a962fe9be76563a83d922e99fec71d1fa4022cf4030a5d099444",
+      "bytes": 46293
+    },
+    {
+      "slug": "variable-matching",
+      "scenario": 1,
+      "sha256": "aacc3cfd612ef95e4396fe4c52257bce6f2fcb5ef8519057a729da2128862bb2",
+      "bytes": 44461
+    },
+    {
+      "slug": "variable-matching",
+      "scenario": 2,
+      "sha256": "251cf1367e26ce15372696b0a4a71d3c12b8389b8c3ad239889d6608432215bf",
+      "bytes": 46546
+    },
+    {
+      "slug": "variable-matching",
+      "scenario": 3,
+      "sha256": "0068e78842fe4fd6d18902088046ae13d23c47cc8a58211bd83699869f10fc31",
+      "bytes": 45416
+    },
+    {
+      "slug": "variable-matching",
+      "scenario": 4,
+      "sha256": "79de9584f136f0798d0e7a4cb3bba1b401434d0d0bbe011ba25348e3f52e9c52",
+      "bytes": 46063
+    },
+    {
+      "slug": "seek",
+      "scenario": 0,
+      "sha256": "8348825bfb4092f55181f0fcad26224bc9510a54f1cdd6f6fba2fcc11d7a3d44",
+      "bytes": 3615013
+    },
+    {
+      "slug": "seek",
+      "scenario": 1,
+      "sha256": "b746311c80711d23e2965d8b63081625d43514a9f88c9e72605d98ed5b5b1dca",
+      "bytes": 2721735
+    },
+    {
+      "slug": "seek",
+      "scenario": 2,
+      "sha256": "67c255f7ca625d0071290eb7a6bafcb36d5ec7d8924cc2e1994c2a4c3ba393b4",
+      "bytes": 3609220
+    },
+    {
+      "slug": "flee",
+      "scenario": 0,
+      "sha256": "436fafdd3f66e9d1d92fda0b98f93dc79d1c1881ae7a83d0147207df6d78e889",
+      "bytes": 66853
+    },
+    {
+      "slug": "flee",
+      "scenario": 1,
+      "sha256": "9f228aad4ba5399322b7970fda493e8ba6cc958af56d399f39c3d4dde9ca01a0",
+      "bytes": 61430
+    },
+    {
+      "slug": "flee",
+      "scenario": 2,
+      "sha256": "b07de299e5eaa155f24f368d788828f20f53f4f4df530d5b84e230b2d496e805",
+      "bytes": 67793
+    },
+    {
+      "slug": "flee",
+      "scenario": 3,
+      "sha256": "1402206eb59cc9f84f517a08501f5efbfcf521d14c0bd7b6ad4e422d0f9d3be3",
+      "bytes": 68565
+    },
+    {
+      "slug": "flee",
+      "scenario": 4,
+      "sha256": "5f3d1aeadd92b3337baa1259224dece75bb3e7f605af01f8fddae4afce172eb1",
+      "bytes": 65860
+    },
+    {
+      "slug": "arrive",
+      "scenario": 0,
+      "sha256": "b0222415e742d5d719d63d52b874162737bf5b57f217e538d3034d8dbbe79527",
+      "bytes": 303481
+    },
+    {
+      "slug": "arrive",
+      "scenario": 1,
+      "sha256": "9ac2568a6e80628619e3cdf1b584c2445e77bc629d07963fb7cc44ce3c418095",
+      "bytes": 288645
+    },
+    {
+      "slug": "arrive",
+      "scenario": 2,
+      "sha256": "891124c2b3397e6851999ae5f1f62433141dfb1b362745848e7c5dfa9e07603f",
+      "bytes": 361593
+    },
+    {
+      "slug": "arrive",
+      "scenario": 3,
+      "sha256": "4f7568f000a272713a2feb6df5fdbf213fec015a75cd4b24c77dc2febcee52ca",
+      "bytes": 300701
+    },
+    {
+      "slug": "arrive",
+      "scenario": 4,
+      "sha256": "9330d53d495ccc50d77770c9f3610f63de54ecb0e98698ff8a1aea4195d1d4ec",
+      "bytes": 301400
+    },
+    {
+      "slug": "align",
+      "scenario": 0,
+      "sha256": "07f299366b101f8a84d63e4307beb1181d6bd95fa7d8b985cc0405db30d8d3ae",
+      "bytes": 301520
+    },
+    {
+      "slug": "align",
+      "scenario": 1,
+      "sha256": "35f8a74564c13e00a85829fadee3864f2bb39ba4177d031b9369357d8a15ed62",
+      "bytes": 336051
+    },
+    {
+      "slug": "align",
+      "scenario": 2,
+      "sha256": "814d5c98448dae7269eb710de0b0ff1c44d0b2114372965ca8705ea604dd8d87",
+      "bytes": 321538
+    },
+    {
+      "slug": "align",
+      "scenario": 3,
+      "sha256": "863564367d9f713f7da84e12ba6d067eaab1fb6778aca8c3975fbdf557bfc3f5",
+      "bytes": 302352
+    },
+    {
+      "slug": "align",
+      "scenario": 4,
+      "sha256": "c411501de009708a29a578a7729ea8156153f1299a9c4925e8925e0e4df59ac3",
+      "bytes": 300320
+    },
+    {
+      "slug": "velocity-matching",
+      "scenario": 0,
+      "sha256": "0aea47603e084544183daa3f671a750eac795c9272a641999187c16e56328a83",
+      "bytes": 56007
+    },
+    {
+      "slug": "velocity-matching",
+      "scenario": 1,
+      "sha256": "c96e986a4efa2ff1d3c2c77bb175a1432b537aacc919db184d1d09a9ca77a990",
+      "bytes": 52302
+    },
+    {
+      "slug": "velocity-matching",
+      "scenario": 2,
+      "sha256": "72586fbd64d8a4381fddfffab6b1e0fa153bb9d37c8059199be6457009e62d85",
+      "bytes": 56586
+    },
+    {
+      "slug": "velocity-matching",
+      "scenario": 3,
+      "sha256": "44f76ac31b30963ee88cd068380fa9fe4e3f7361af63b22b13b5536938c6fdc3",
+      "bytes": 53757
+    },
+    {
+      "slug": "velocity-matching",
+      "scenario": 4,
+      "sha256": "7a29dc41f76b5e2f3fb66a9abc89bb04d8e032db8a7825f2d2dcf43538e77fee",
+      "bytes": 56606
+    },
+    {
+      "slug": "pursue",
+      "scenario": 0,
+      "sha256": "fcb8948c65fa4ed9d1958ec3949e5d16ddd2f40da4ce7e5e02dbed7455f0008b",
+      "bytes": 300007
+    },
+    {
+      "slug": "pursue",
+      "scenario": 1,
+      "sha256": "00c13377793cdce5cd863c6d1f3cb564b0a0820ef905531e89d99a6d583f1781",
+      "bytes": 302869
+    },
+    {
+      "slug": "pursue",
+      "scenario": 2,
+      "sha256": "ce23606473d3b539ac9285f5012209fd8b612542dbe2ddf9c583d05040f7dede",
+      "bytes": 301303
+    },
+    {
+      "slug": "face",
+      "scenario": 0,
+      "sha256": "a79767498d40bfc2503ce9e5ebd5120e3c100537243826ba1380773b397ef8aa",
+      "bytes": 378935
+    },
+    {
+      "slug": "face",
+      "scenario": 1,
+      "sha256": "f2a9209a5174590e41ac5551e1b2a688ddde271846999939788c850aeb0840a0",
+      "bytes": 393145
+    },
+    {
+      "slug": "face",
+      "scenario": 2,
+      "sha256": "c8beb5b517fc6508aacca84ba60f9da7218301548d1c781f960cdb2f2b106de8",
+      "bytes": 376610
+    },
+    {
+      "slug": "face",
+      "scenario": 3,
+      "sha256": "95485e0c63206767c2f914499eb9c311c67c6a28dbdaadbe3d107feac3c8dec2",
+      "bytes": 384461
+    },
+    {
+      "slug": "face",
+      "scenario": 4,
+      "sha256": "a9b99a52185d128d5ff1f42762e125906a72300ff28cfde916fc46f839fd2221",
+      "bytes": 375856
+    },
+    {
+      "slug": "wander",
+      "scenario": 0,
+      "sha256": "8f86d2f6183a34f8dc1f48d720849d06e77ce0a20e3016918b3918b0e9a84341",
+      "bytes": 287761
+    },
+    {
+      "slug": "wander",
+      "scenario": 1,
+      "sha256": "28424bb834119953f7427236a979deb466941cdbe33891828d276adfdc54a75c",
+      "bytes": 289477
+    },
+    {
+      "slug": "wander",
+      "scenario": 2,
+      "sha256": "ae3e833ed600e13715cd4529401fb71c996e0f84a86f07c62cc108c78357753f",
+      "bytes": 288399
+    },
+    {
+      "slug": "wander",
+      "scenario": 3,
+      "sha256": "71219c2e623f9e4fd73a452d91a8ad76115b81d292b3174bed8a815553d98aa3",
+      "bytes": 273179
+    },
+    {
+      "slug": "wander",
+      "scenario": 4,
+      "sha256": "e86dc8e5c4b7e6e8959970728d2c51a1b583c2d608ad6e2551b9566aec000ee3",
+      "bytes": 288595
+    },
+    {
+      "slug": "separation",
+      "scenario": 0,
+      "sha256": "58c52374f23545dd107b8c349037691521d1b361d21de10fd3ddc10ccd3562b0",
+      "bytes": 176258
+    },
+    {
+      "slug": "separation",
+      "scenario": 1,
+      "sha256": "58c52374f23545dd107b8c349037691521d1b361d21de10fd3ddc10ccd3562b0",
+      "bytes": 176258
+    },
+    {
+      "slug": "separation",
+      "scenario": 2,
+      "sha256": "4dc80365276ed704f068cb92ab00b683a8063275a8df24c1e33111278b111ca1",
+      "bytes": 176207
+    },
+    {
+      "slug": "separation",
+      "scenario": 3,
+      "sha256": "782a4b645f1e690015a660fcc9a289f13b69601f5eb0826573e7ca760b8b37c3",
+      "bytes": 176889
+    },
+    {
+      "slug": "separation",
+      "scenario": 4,
+      "sha256": "b7595daf7c30ac758caaa25550c281a4585395ed5fbcc9aabd73b0a1a6e5f4bf",
+      "bytes": 177491
+    },
+    {
+      "slug": "collision-avoidance",
+      "scenario": 0,
+      "sha256": "563b4c22cd9b40b50e8a65c2a1bea8354d0b649b1907f191863f2b739fd526fb",
+      "bytes": 120244
+    },
+    {
+      "slug": "collision-avoidance",
+      "scenario": 1,
+      "sha256": "653c6d666dffe8dc994529b440091eca9354254347bfe24f221affebf3c27b93",
+      "bytes": 110730
+    },
+    {
+      "slug": "collision-avoidance",
+      "scenario": 2,
+      "sha256": "dc29d11e313cfca733ad4794e99abe0b122a116e9defc5a303292decd3d6cd8f",
+      "bytes": 110646
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "scenario": 0,
+      "sha256": "5d463acfc6f13c0f0fc8193991431369bc730e65cdf6ce95286787ae67903fb1",
+      "bytes": 202087
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "scenario": 1,
+      "sha256": "6566e44e14e909d2cd11dc9627dcc6a5185c6b78b41bdfeaf909d98411e7c748",
+      "bytes": 200798
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "scenario": 2,
+      "sha256": "e4949ca80887a5bf238670767b66d9c0dfac24ec786a6c0034291cad964d7970",
+      "bytes": 201616
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "scenario": 3,
+      "sha256": "b53423f0d59ee732f00f858a644dcbc5ad1a6fbc191c3f03f490ee60b10ed99a",
+      "bytes": 201555
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "scenario": 4,
+      "sha256": "4cfc419a88036e07acf6b5372a95367dbce8ba10f7e5cf0d5db3896f0539a456",
+      "bytes": 202336
+    },
+    {
+      "slug": "corner-trap",
+      "scenario": 0,
+      "sha256": "e5fee495164d474d144586fdbd81cbfedf7eca3c62fb4dbf8e61d3f93509e982",
+      "bytes": 21684
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "scenario": 0,
+      "sha256": "b99172d96d0eebffdbf10711e7cc92d8ca914d856772c6c25e0f64003512e5d3",
+      "bytes": 50036
+    },
+    {
+      "slug": "weighted-blending",
+      "scenario": 0,
+      "sha256": "25443eeb35797009f1de5f3069204e6e4392871958df5808459099c79f7ae85d",
+      "bytes": 178826
+    },
+    {
+      "slug": "weighted-blending",
+      "scenario": 1,
+      "sha256": "9372dad0007bc97ceab31af5fc20f2ae26e0acc4945eb3bbbd912144297978d5",
+      "bytes": 159149
+    },
+    {
+      "slug": "weighted-blending",
+      "scenario": 2,
+      "sha256": "25bec9e27374d8c3dd763b451c2e533bff9c43ac4180551ed9610d34aa316cbc",
+      "bytes": 178461
+    },
+    {
+      "slug": "weighted-blending",
+      "scenario": 3,
+      "sha256": "01bd1ff39de5e39b883b4368e318e95235fdaf2b19eaaaf6084a1eb51387e2fc",
+      "bytes": 148769
+    },
+    {
+      "slug": "weighted-blending",
+      "scenario": 4,
+      "sha256": "22f543d1b863f2547126d2ffb00cc341ed964dcbccda635fd3987b9f4771b164",
+      "bytes": 176191
+    },
+    {
+      "slug": "flocking",
+      "scenario": 0,
+      "sha256": "3c3a8960a43333ed5286cf27ecaf6c34bf89245973475c6183554434b9e6bbfc",
+      "bytes": 962908
+    },
+    {
+      "slug": "flocking",
+      "scenario": 1,
+      "sha256": "3c7614ca3882ae6f563733a15733f61b53e4e1370b8722b96840ec13613565f2",
+      "bytes": 960425
+    },
+    {
+      "slug": "flocking",
+      "scenario": 2,
+      "sha256": "5eb9bdf0a8264a3db87e1286fdd6f4708c64f3b1fd5851b93b2e68680f9678d9",
+      "bytes": 990678
+    },
+    {
+      "slug": "flocking",
+      "scenario": 3,
+      "sha256": "8145caaa54d3322dbc0be121c8a60296b8f8689fc584e72dd75ad8990c68c665",
+      "bytes": 940399
+    },
+    {
+      "slug": "flocking",
+      "scenario": 4,
+      "sha256": "10b38d62d287d2301241eae8eb3ae985b8ef95c2b36a3a0654dc0dd347745656",
+      "bytes": 966650
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 0,
+      "sha256": "4b3654888264b61211ddcf38290ca5115bfbc98c8eac05bb5f864b975fca2092",
+      "bytes": 353153
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 1,
+      "sha256": "4b3654888264b61211ddcf38290ca5115bfbc98c8eac05bb5f864b975fca2092",
+      "bytes": 353153
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 2,
+      "sha256": "eaeb5536aa9f673ee24e018c463b8189fae5f0ec2230e2c8658d8cb672d69113",
+      "bytes": 351352
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 3,
+      "sha256": "616e545ee7dc5f3ee4c159bbe7418d37af63f278bdb9298aa5abeaac47c07168",
+      "bytes": 354432
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 4,
+      "sha256": "b12e2d859c2d38e5237fb9550747a0d389bf082739b9c931a9636c7527bb73c8",
+      "bytes": 353814
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 5,
+      "sha256": "8a8bb10337c4699134bf1092d8e477fe81d2f656f9666f54eb28107e19d5b173",
+      "bytes": 352968
+    },
+    {
+      "slug": "priority-steering",
+      "scenario": 6,
+      "sha256": "4f37909a13b00abc66ab330a883080d44fc761421b69db7e9b4d70f5211b6ac3",
+      "bytes": 329238
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "scenario": 0,
+      "sha256": "4fc1f1a8c4dc2be2b96142e328f6e82c4bb93786196824d8dd9d61b502270d13",
+      "bytes": 258067
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "scenario": 1,
+      "sha256": "bce0ba6660e6359089502d1d7265c22ba5e050808b0757ddacc88bf0d5ad23ca",
+      "bytes": 230411
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "scenario": 2,
+      "sha256": "4fc1f1a8c4dc2be2b96142e328f6e82c4bb93786196824d8dd9d61b502270d13",
+      "bytes": 258067
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "scenario": 3,
+      "sha256": "997625b765cc4537f4c45f5909802250a332d1783731c16587e04cbbfeb569f9",
+      "bytes": 259235
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "scenario": 4,
+      "sha256": "58017e34485b16836cf5c2efacc0e6fd95c6b758109a9b8d436506af9feebe43",
+      "bytes": 257003
+    },
+    {
+      "slug": "steering-pipeline",
+      "scenario": 0,
+      "sha256": "222834605a9725c52cf0df3e763f5bf0941eeb9b22ea9418dd89343e3453fd47",
+      "bytes": 737080
+    },
+    {
+      "slug": "steering-pipeline",
+      "scenario": 1,
+      "sha256": "2e3654481b8a85bf593c0073d58732dfce6e1d8c653a1e639218fe1f7b13e967",
+      "bytes": 641375
+    },
+    {
+      "slug": "steering-pipeline",
+      "scenario": 2,
+      "sha256": "222834605a9725c52cf0df3e763f5bf0941eeb9b22ea9418dd89343e3453fd47",
+      "bytes": 737080
+    },
+    {
+      "slug": "steering-pipeline",
+      "scenario": 3,
+      "sha256": "4b31afd8a704e09129b1e144c1ab42c574b095720a5eaa3b7ed1b1edeafb85d0",
+      "bytes": 734466
+    },
+    {
+      "slug": "steering-pipeline",
+      "scenario": 4,
+      "sha256": "aa1c65d9aac9903aa838112e6e7d4d738fdebb9a59a10fde9fdf7fd83210b225",
+      "bytes": 739864
+    },
+    {
+      "slug": "actuator",
+      "scenario": 0,
+      "sha256": "c1cddb1795135d148a0e4f5355cccde60c15d9cacbc72cbb5c29d938d2cc4f3d",
+      "bytes": 86103
+    },
+    {
+      "slug": "actuator",
+      "scenario": 1,
+      "sha256": "141bc306c537dcba9d55240eb23b9c1513c80568020a71d1f5b5ab2637ec4e10",
+      "bytes": 85514
+    },
+    {
+      "slug": "actuator",
+      "scenario": 2,
+      "sha256": "063f131abf014b26fe8caf3593ec524cc0e1d512df7fe342ba97d3fc40ca0bd8",
+      "bytes": 85085
+    },
+    {
+      "slug": "actuator",
+      "scenario": 3,
+      "sha256": "0b56f4bea89f8a91e3633b08b705e1647447b4e02cacfc402de70558b9191868",
+      "bytes": 85230
+    },
+    {
+      "slug": "actuator",
+      "scenario": 4,
+      "sha256": "9199a583de5382c3af80c8b14fa5b267ead0e1e69a4f6b37af013cdf1030ae6d",
+      "bytes": 86175
+    },
+    {
+      "slug": "projectile-trajectory",
+      "scenario": 0,
+      "sha256": "d2d6c1008b82907b43878674041761546759d670c95e66f075654a62c7c4eb91",
+      "bytes": 126653
+    },
+    {
+      "slug": "projectile-trajectory",
+      "scenario": 1,
+      "sha256": "d2d6c1008b82907b43878674041761546759d670c95e66f075654a62c7c4eb91",
+      "bytes": 126653
+    },
+    {
+      "slug": "projectile-trajectory",
+      "scenario": 2,
+      "sha256": "1b5dfedf8c0653090a1bdd2e8c9b572acd5f190abcc4b663a9f0b1f4fc835929",
+      "bytes": 187513
+    },
+    {
+      "slug": "the-firing-solution",
+      "scenario": 0,
+      "sha256": "819b4a42c4a012918bdd41631cbf5e37f23965883a9e8570fa05003b11ac51dd",
+      "bytes": 1195686
+    },
+    {
+      "slug": "iterative-targeting",
+      "scenario": 0,
+      "sha256": "30ca143523bd36e1600d67e6cb682297e4283a411362721ffc2544adbbd5e11b",
+      "bytes": 23140
+    },
+    {
+      "slug": "iterative-targeting",
+      "scenario": 1,
+      "sha256": "6231c9199d32840a532a3574fb9b33b06c98252935e2a4abe560a6ae145b60eb",
+      "bytes": 7456
+    },
+    {
+      "slug": "iterative-targeting",
+      "scenario": 2,
+      "sha256": "cbdb370dbad3f8255fad12a148ab0b9661cb2b318284b0727ae3cbcc8cf5a46c",
+      "bytes": 23140
+    },
+    {
+      "slug": "iterative-targeting",
+      "scenario": 3,
+      "sha256": "c27f7765c30c6fa8a3aedb5b5c77ad077a006cb952af44bff5b9551462458f72",
+      "bytes": 22726
+    },
+    {
+      "slug": "iterative-targeting",
+      "scenario": 4,
+      "sha256": "0d20dc35f99563d6fca9846fbcdb57aab34761739fc67ef9279204d9971f5ffa",
+      "bytes": 7823
+    },
+    {
+      "slug": "jump-points",
+      "scenario": 0,
+      "sha256": "46ac26db2d4ba5b0a8f79664e9a19b43616fca1fabb75225274d4c912a32a840",
+      "bytes": 52453
+    },
+    {
+      "slug": "jump-points",
+      "scenario": 1,
+      "sha256": "46ac26db2d4ba5b0a8f79664e9a19b43616fca1fabb75225274d4c912a32a840",
+      "bytes": 52453
+    },
+    {
+      "slug": "jump-points",
+      "scenario": 2,
+      "sha256": "990c3cc51f935be20956dc95283c953293e6ba1360315c80541b576be5d8af6e",
+      "bytes": 13394
+    },
+    {
+      "slug": "jump-points",
+      "scenario": 3,
+      "sha256": "82423ff60c5422bcdafc87dacd96c4a731369e36fba452355faa91323cf676c8",
+      "bytes": 58068
+    },
+    {
+      "slug": "jump-points",
+      "scenario": 4,
+      "sha256": "ba92eec2bd489430941ee2f99a9f8b97d63aab874a87eca110098c5d63401b9c",
+      "bytes": 49680
+    },
+    {
+      "slug": "coordinated-movement",
+      "scenario": 0,
+      "sha256": "cdb35d7eb623cfb26531bd15401b092dc90de5887cd3a1a8b1fd8b9fa2b83a0d",
+      "bytes": 457840
+    },
+    {
+      "slug": "coordinated-movement",
+      "scenario": 1,
+      "sha256": "ad00b55ff0d2300490c63b7fdce5b0973cac0d5fece98680613cb54808371d86",
+      "bytes": 456540
+    },
+    {
+      "slug": "coordinated-movement",
+      "scenario": 2,
+      "sha256": "e41011e619c688c800023b2aa602aec686cf696d045e006af3cc9e2a475143d1",
+      "bytes": 458271
+    },
+    {
+      "slug": "coordinated-movement",
+      "scenario": 3,
+      "sha256": "4828ea7a08fe4eab007f00f3eb95dc89b3b747c933c8b6b74499d40a22904f92",
+      "bytes": 456231
+    },
+    {
+      "slug": "coordinated-movement",
+      "scenario": 4,
+      "sha256": "6a0a78d75b101fabd7d195a4f1ab98b71d5d81bce3e900f30dbb43bb8f85dfff",
+      "bytes": 461617
+    },
+    {
+      "slug": "fixed-formations",
+      "scenario": 0,
+      "sha256": "878df9854b08fa74ffd9d0b05509a9d9ab872e5a526873299e46aa25050e1aa1",
+      "bytes": 117247
+    },
+    {
+      "slug": "fixed-formations",
+      "scenario": 1,
+      "sha256": "84d2dac0f6a20c7221402e51946494cdd09fa80b4db288e42e8fcda2de3148e0",
+      "bytes": 115625
+    },
+    {
+      "slug": "fixed-formations",
+      "scenario": 2,
+      "sha256": "ad919fdc1452177e35e5df8a354e9ac3ab8d6d0ea485a32a0d4c17f55c8e9e93",
+      "bytes": 118377
+    },
+    {
+      "slug": "fixed-formations",
+      "scenario": 3,
+      "sha256": "d92401adff45ef2b9f914e6bd63c76ded6c8a013b31c4c189419a5de6b4481e1",
+      "bytes": 117156
+    },
+    {
+      "slug": "fixed-formations",
+      "scenario": 4,
+      "sha256": "09ead4337e44120086b1b88c59044462252044408c0a39a5a23ddb7d670a6b31",
+      "bytes": 116613
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 0,
+      "sha256": "dc022429fb528003057ba811d36a4763f44bb6e42291e95906c4101f2ef4a39e",
+      "bytes": 159594
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 1,
+      "sha256": "367d70cb31d832810fb3ba3756b25e463a36a4c63e66d5f5a163a5fabd1ee126",
+      "bytes": 140767
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 2,
+      "sha256": "c6cc187c2e0215c650b3f967b7cbedd20c142411caacd1a87034bd716671a89d",
+      "bytes": 165281
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 3,
+      "sha256": "a3ba54cfb4149624001200aa9f6c771f18413d97ecf7a674bc298f0c9b2b7642",
+      "bytes": 154113
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 4,
+      "sha256": "e0681e1f70d5ffe0399c53c1404185a62a55abf4607750af6445af7660528708",
+      "bytes": 153089
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 5,
+      "sha256": "53e8170fde9c645bad74ddc4d52a8df54a23c41a237dfa53e16c18060eb2aeaa",
+      "bytes": 161174
+    },
+    {
+      "slug": "scalable-formations",
+      "scenario": 6,
+      "sha256": "821fa4721fcadff780d0f85c3431b4a396bcc1b97e4c777798899eccc4ee6e94",
+      "bytes": 160358
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "scenario": 0,
+      "sha256": "fc0c7f3031d7c9d5d6dc208851c6dab8c65d36eb1d16bdb6e18cb8959069ccef",
+      "bytes": 442507
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "scenario": 1,
+      "sha256": "fc0c7f3031d7c9d5d6dc208851c6dab8c65d36eb1d16bdb6e18cb8959069ccef",
+      "bytes": 442507
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "scenario": 2,
+      "sha256": "3e68e4764f10aa5c0c958889b61135aa3c1710e1c275efaa19553f5ab7a6a5f3",
+      "bytes": 440227
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "scenario": 3,
+      "sha256": "7281e710480c07043106f01483a49eb9688f670a225467533a62ffd18679b790",
+      "bytes": 438459
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "scenario": 4,
+      "sha256": "16c0d88ec69c9777bc6666ea7a830049e4c6dbe3d42eb153703c8ec9982f7658",
+      "bytes": 441381
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "scenario": 0,
+      "sha256": "cf7ce304f4de1ed3aa07e179b4918c447a7cb112988921b639030267fea90fc4",
+      "bytes": 434378
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "scenario": 1,
+      "sha256": "973fd266f3a70a9453976cff575fece261ae9556e2ed22eea50bb7cb821e9662",
+      "bytes": 440524
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "scenario": 2,
+      "sha256": "50cf333eecc75dfb570f05aa08379b84df2f6636a1491e09538dcb71fd46ee77",
+      "bytes": 442589
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "scenario": 3,
+      "sha256": "f4cbe448c315d9d7acc91a2eb05fc1dbfbcb10f83df416e1dd3f588ccdef7fbf",
+      "bytes": 440136
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "scenario": 4,
+      "sha256": "cf7ce304f4de1ed3aa07e179b4918c447a7cb112988921b639030267fea90fc4",
+      "bytes": 434378
+    },
+    {
+      "slug": "slot-assignment",
+      "scenario": 0,
+      "sha256": "49e20f158999f15adf56e6cc9dd5526c8c9ba1131215f4f1465ed89714144b50",
+      "bytes": 8697
+    },
+    {
+      "slug": "slot-assignment",
+      "scenario": 1,
+      "sha256": "3977959af554e447ddead6a77ffbb044b0fc33878ca4fd46af1584532f7d0f72",
+      "bytes": 8665
+    },
+    {
+      "slug": "slot-assignment",
+      "scenario": 2,
+      "sha256": "52581416932ef3ebb33bfc66180309f01bde8eacf30bd0355d0404e4caf40e09",
+      "bytes": 8664
+    },
+    {
+      "slug": "motor-control",
+      "scenario": 0,
+      "sha256": "0212f2a6b81e05498fbea677cd897f118f0f115d64846b50a80d49cc3e7e3085",
+      "bytes": 153539
+    },
+    {
+      "slug": "motor-control",
+      "scenario": 1,
+      "sha256": "5e07297568f750171d46c742a99d421a4c7df5a6e3e51311e1368af06a3ebb8f",
+      "bytes": 151286
+    },
+    {
+      "slug": "motor-control",
+      "scenario": 2,
+      "sha256": "1e5c75a2b30b140430c17b239abea9fac65728fe668d6ba15c1be965e9e73d52",
+      "bytes": 153588
+    },
+    {
+      "slug": "motor-control",
+      "scenario": 3,
+      "sha256": "4dcd110d60cb10a8ac65490f5a3a943a915d82d2adb940c10768b86f6b0312ed",
+      "bytes": 153778
+    },
+    {
+      "slug": "motor-control",
+      "scenario": 4,
+      "sha256": "472bf377a2bf543f8327249e259467f64bcbf18d98d2913b46151395fb797387",
+      "bytes": 153332
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "scenario": 0,
+      "sha256": "bd9ac9f4f2b9e5eb41cc3cc3efe2bfd882e4426ab51ca06562dbed8280b97ff4",
+      "bytes": 55674
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "scenario": 1,
+      "sha256": "14ac77870d248ca566ca1907ac5fa0b7222feb8f32de0e76ba6fa507b6680c52",
+      "bytes": 54051
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "scenario": 2,
+      "sha256": "34e9b850122d6f94080e20c903edb59e2cd41a121078117e736bd14defc36c2d",
+      "bytes": 56123
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "scenario": 3,
+      "sha256": "452967c91b0df15d55f3c1540f86d3da2d74a678c5fe4c564cde4310935a2937",
+      "bytes": 55724
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "scenario": 4,
+      "sha256": "ddb7c76e1fddb20ce047d0c1659add883da1ea5b05a98f8e0d279e7ee1190707",
+      "bytes": 55671
+    },
+    {
+      "slug": "group-movement",
+      "scenario": 0,
+      "sha256": "dc9aaccd06c30cb00c1be47e13e851f4ba32edc1939f0a76110d33bd6a8d144d",
+      "bytes": 817183
+    },
+    {
+      "slug": "group-movement",
+      "scenario": 1,
+      "sha256": "dc9aaccd06c30cb00c1be47e13e851f4ba32edc1939f0a76110d33bd6a8d144d",
+      "bytes": 817183
+    },
+    {
+      "slug": "group-movement",
+      "scenario": 2,
+      "sha256": "b8c19a0532fe31155d2e5a0cec8c45154df526b0bdfe35ba4cdf889910cf9825",
+      "bytes": 813814
+    },
+    {
+      "slug": "making-the-creatures",
+      "scenario": 0,
+      "sha256": "f07b8b1260212a1ca95d8e79758af9c04ebe0a65f9684bcb8154ce99bd5ba7da",
+      "bytes": 735426
+    },
+    {
+      "slug": "making-the-creatures",
+      "scenario": 1,
+      "sha256": "9a0b9ad9da8d958002ad4142bcc6a528f3072b1b8add9d66a2c6f6ff6e9897bd",
+      "bytes": 756324
+    },
+    {
+      "slug": "making-the-creatures",
+      "scenario": 2,
+      "sha256": "946322546342cbc37f1699153f4cff2f4ac048fe23740c98150dbce581d6ac75",
+      "bytes": 761822
+    },
+    {
+      "slug": "making-the-creatures",
+      "scenario": 3,
+      "sha256": "9e2fe693966579b16ed80f1734cdc710dbb32af8dd96b20545fbe03ff68768f7",
+      "bytes": 735085
+    },
+    {
+      "slug": "making-the-creatures",
+      "scenario": 4,
+      "sha256": "b0c785eabbb6815f8e77515716bb36ad5357981c5cfbeea68f4533a4ac033a05",
+      "bytes": 735504
+    }
+  ],
+  "sources": [
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+      "sha256": "84bab48914939256c91c35bd7dbbf149418d5a0abd99ec6e9a2ee02980b17b9a"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+      "sha256": "31644ae32b4d2bba078997b6d92bbf9cd980af1cda0b3df2da118ce15f906b05"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/actuator.presentation.ts",
+      "sha256": "ed92634b61d54d3e35e30e80ce2137155c80ab017e38d0bd39c4721591511464"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/actuator.simulation.ts",
+      "sha256": "6d19b24f16cdaa2b6d9ba96915df505f30c1d823abdacce4042973142dfe2e27"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/align.model.spec.ts",
+      "sha256": "0d35cbe75f69dc1a598c953bac332b4761c2a7b89b85430b40cef1da180ad307"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/align.model.ts",
+      "sha256": "dc1d1ae4992ee964987be938887cfcd5d7556a7ab241903809b90e5befd390cd"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/align.presentation.ts",
+      "sha256": "bcb4da297f2a99f1bdef3d8038aba8804961c5862421ed255f53964dcf83f272"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/align.simulation.ts",
+      "sha256": "41800c184f005c8a208c4fe47655965ef7d24c3680e5c138aaef98ba21f880b4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+      "sha256": "b6ffd73c1e40f02e5ec3954807ebfd97ef05ccd2f4f735cbd710250ce3721560"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+      "sha256": "996534cda366cfdf1fcc461ea03e2dd1348d94ff30fefdc4fad2913dbfd6490d"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/arrive.presentation.ts",
+      "sha256": "031670ab62b9f466ca472ebae5d56dc4b8ff3d05b80f8d8b51272a0ef629b58a"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/arrive.simulation.ts",
+      "sha256": "a20c907fcccf3686d71a3238066bf9a5f8bf955bc636805ef2a4cfdd72992023"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.spec.ts",
+      "sha256": "c7366190056fce4defd9e109f2794a81a7b72b7f4078a5771562066377c5bef0"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts",
+      "sha256": "03cedd0393dc0b9ab91f7564ee2b6e42bbd4d03f67e3cdae569d279c8e446d68"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.presentation.ts",
+      "sha256": "80840ff1480919331751c8f057a1b3c0a453999e5770d3040f50faebc7dcad44"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.simulation.ts",
+      "sha256": "2ca5dc6d7e088cb1d328e4da7d02b44ec4d1843853a54cdd88b8f3161f88432f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts",
+      "sha256": "08cd40a1748afae6fc807cc8264d3a2ad8dba699242780f59c0102c669d4ec8f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts",
+      "sha256": "89a1a296f5949da671a1526bc05511c472411b1447905a6b9216ee1d9a85a0db"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.presentation.ts",
+      "sha256": "b379be745ef64bdcabafba560a5566b418b36a6926b5ef70a06c08acac892f5b"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.simulation.ts",
+      "sha256": "7fa687432f1184047bc2d4e724206f2fd057d876ed7554d35a6181002a8939a1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.spec.ts",
+      "sha256": "e66874679454021e2b9f908bdd9b1c9f6f6684d251ec6555504f4a0d9c88526e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts",
+      "sha256": "909cd2a810ea0d445eb61a6ffba0eb86da90826593f79ba3a5de79162a2113f2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.presentation.ts",
+      "sha256": "ce2b4b1216d3fa496fbfdd82c1e48029af99080b7aa32f6159eda08cbf79ebc4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.simulation.ts",
+      "sha256": "302f06aa32078f6920faaa1ceb1e91e9bf728cf1ddcc2ed795405fd95a5aab2e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/corner-trap.model.spec.ts",
+      "sha256": "75d0ae9a332ce81d928ea75384b0684d6703a6e2cead466d86d53c79ea6d11af"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+      "sha256": "889712509863205a7f4442ce6c84bd3cdf8f455de47f078eadb374128c958d73"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/corner-trap.presentation.ts",
+      "sha256": "fb57cd0b4aabb2595bf8c33a0ff48292935828196b3f13659331b7aa100b1afe"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/corner-trap.simulation.ts",
+      "sha256": "c1aee0bbddadce01c1795846ec93b6ba111a2066905459676ec2eb5d8c76115c"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.model.spec.ts",
+      "sha256": "f9bfd81b2d239daaf4986ab700a3fd93ee0d63dbce9dc0d96a1785d0698049ca"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.model.ts",
+      "sha256": "105ccd712070b4ac7d009af58925d0686036290fce3b2814c6b73ddc4a011c05"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.presentation.ts",
+      "sha256": "ff5fa9c3c07773b3b91004f80c738298ef19e315932de356a25d33f248b8bbdd"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.simulation.ts",
+      "sha256": "6b1bf02c351fb2eacec7486dec9bf99dc7ea0933ef95a0e9243ec9cfd3ecb037"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/face.model.spec.ts",
+      "sha256": "3da5fcf8e5d25a68c5b780115ed49e378eea1aaab3171bf973b5ca63ce60ddc6"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/face.model.ts",
+      "sha256": "a26cc4d824579bea047982d5597177a5173e3c40c5d0af1b75a49993248319b3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/face.presentation.ts",
+      "sha256": "53e91d8fd960d42768d518db75b2ead526a0e36200f8532821a8deb521f6df00"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/face.simulation.ts",
+      "sha256": "82928f940f965cfa1fc4115fef574e5560f298f62a4cedff4510d6a950baf313"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.model.spec.ts",
+      "sha256": "5b4fb4e27342913a911ef4380159e3e1b6ae5c32032f8e4fb9a49a1d8a7f63c2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.model.ts",
+      "sha256": "6c3c6cce3c7051d77b82ced5aff5853a4c6fabf6a1b3f2b72960129acab65b8e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.presentation.ts",
+      "sha256": "9d3b79665cf6570df88f3a2833282f37c11bfb979d2da94a044de4e4675aa8e1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.simulation.ts",
+      "sha256": "c374aa0dd1e1f098886f758abe4526921b8260605f787e9379ea223acb250a6b"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flee.model.spec.ts",
+      "sha256": "c32a6c4f9b938b3a72451fac8bd463375f170f163db659caa1690dd40f62205d"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+      "sha256": "bba4e6a3cfd7984c157837797e5163541541d3e8e86019c4654b436929c3d2dc"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flee.presentation.ts",
+      "sha256": "07c0cbec646067cb0eeea7e8764e7831f9cdc1846926a186683ccc6f6ce3bdf5"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flee.simulation.ts",
+      "sha256": "975af0a0faecb32132fcb47bc5dcc4929b126a73eba8c0893b0fc3652037e7c9"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flocking.model.spec.ts",
+      "sha256": "360e63ab7d4787defd469eae473ab3342e666286bfc76363e4a9632f4f315af9"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flocking.model.ts",
+      "sha256": "918e0c475c6ef109d60eb5be78b0a5d790a4983fbb019b73f8b49b390de308ed"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flocking.presentation.ts",
+      "sha256": "e90d9ae23bb4884f3f2ba4451ce881609ca2a6a70f56a744dbf30022dd56d9e4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/flocking.simulation.ts",
+      "sha256": "8e1c82abc55b0dce0d9128868fa9e1e053982fbfbdd58f342edbd3c1571fe0bd"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.model.spec.ts",
+      "sha256": "da25e7ca008f05c4ba6674f01d6f6aaedbfba5092e0260b0536cb2724431c949"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.model.ts",
+      "sha256": "e7293c4ab932171954c36ebcc68b9443bb8e0a05363b111a1b5d72c85069eab7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.presentation.ts",
+      "sha256": "369d35c38aa18067040dbed5ceb78128204055be5d48c882f11dbe71578ac445"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.simulation.ts",
+      "sha256": "2cbaf7cc370407f683adda39845629bf0ea9a30fcc43d9dd41ac69429b7bc37a"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/group-movement.model.spec.ts",
+      "sha256": "61d3843fbca4c5a4e4306d67f66f05d698cebdf49351028de5960a3bbf6cb063"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/group-movement.model.ts",
+      "sha256": "8dcf19d82e9a5be5a0680d6e313f18edb57561e80b6849c974a03dbfc7f45d0f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/group-movement.presentation.ts",
+      "sha256": "d68734f71807e0ff6ad0407fa546eaeee18881a213b233844731009b0cbb45e4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/group-movement.simulation.ts",
+      "sha256": "a5298e837c2ceed437b75144d7f25bc9615bc54a41e4486956e0a0619bfcd8a5"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts",
+      "sha256": "c0b0b1998044481e7eabd38fdc6f6c042831dc0c2d5e63e87727ce2a2d8c7ce7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts",
+      "sha256": "7c0c3cf62b577f73473816aff41d0785148af1e7f0b312471a5727cf7f28b7bf"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.presentation.ts",
+      "sha256": "80e926d11fd25bd09570c33a9be286d068f6069c943315a2ea89f2ba45d68421"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.simulation.ts",
+      "sha256": "a1b50bb0a82edc6d5884e6b8198ac8ed58a9f66cda0b71b56ed17f0e1cf10282"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts",
+      "sha256": "cad7ab153d75ca84aee9ec9d90d273e98dd130baa5fb83a38c1a30d9c97bedc1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+      "sha256": "d5c36b18cbeffdace3bb459ea7a4bbc5e5ec2475a21bbdb19bfbe07f222ffe5c"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/jump-points.presentation.ts",
+      "sha256": "46846a26db065aec7b66ce6c75ffc650f4446aa22e1021b538371ad878da98bc"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/jump-points.simulation.ts",
+      "sha256": "ee44ac2a204b0ebc650a8af197583c31dcbdc07c7701bf20879644d69dfab5ae"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.spec.ts",
+      "sha256": "174246cf5601afe448b4632dc880b3922bf0306c1e4ed122bbfe854faa2d0937"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+      "sha256": "466194916a928188b5d683833f7419792c7f982d2e84a227fcef79e674d20ec6"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.presentation.ts",
+      "sha256": "4834242612f806b9c205fe68d999f703449f80bbe810e223166eeb12727d3803"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.simulation.ts",
+      "sha256": "b4ec3d3edfa58f5e59954c4ea259d618050d71f11f99baf5dfa2f37bec8e4a36"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.spec.ts",
+      "sha256": "1249d5972a3e67697e96146a63b16f4f9283f4fe877b035e614e77db2dbfdc68"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+      "sha256": "dcee36c11cf82bcbc8d63db9abeef06ae314e2f878e276ded93a8bdd9b57460f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.presentation.ts",
+      "sha256": "5380f2e68dfa4b91b0305c8b5128f88f69ddac2db84ea23ecbc84c40a30bbbb1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.simulation.ts",
+      "sha256": "94ed1dfb76f434f734f3cfbbc1d71fa33cf93ba4172f29bd6279fc7ea2198284"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.model.spec.ts",
+      "sha256": "653d826ce00cc701efd3b89599423f68c8804cc7778e5700f1b3e46a63e2cf79"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.model.ts",
+      "sha256": "d02e50c0a08840997db0279bb418b5767eee0d66c705f13e792da3d586dc3458"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.presentation.ts",
+      "sha256": "042f6eb7830ab57d52a94352971fc07f2016bffabcd64bd209609559a3746e8e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.simulation.ts",
+      "sha256": "0cd59dae886c715851e1e9b6d5481534aed72151f9b295973f7e833a46462855"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/motor-control.model.spec.ts",
+      "sha256": "17f9ab60db3ad678e12d2f1b44698be922af40f9656bcda4635723786eef7ca3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+      "sha256": "bf5ed64ac3e58cb7d5830a9a4a88a42e264dc67d8d5795015188b348c63d78a5"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/motor-control.presentation.ts",
+      "sha256": "6dce2fcb2556ca1fb3b535e4a437dbf318c956c16fb920df9de0b379218a1bc9"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/motor-control.simulation.ts",
+      "sha256": "b58ba0e8364b4bcb4a727496bffdac3ca2b277f2d42561cc29edc262f17b4db7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts",
+      "sha256": "c43cebd5e2461c0424d0624ffe6538134de1fb66be4540ed3e147ae265bca0c6"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+      "sha256": "b636ef616eef91d307607f931427119b3f28a69250a77d0d1af7fb0112b9c7d4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.presentation.ts",
+      "sha256": "1915bd78c1d84a20a68edecc502ef35bbc840909d6b4195834fd797232c08bae"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.simulation.ts",
+      "sha256": "309e2c419b5fc774970d51614ce2b2d1bc8f725b55c0327870ecaa159db2b086"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts",
+      "sha256": "a434c91c3289a31f056d272aedd51fa039cb0aa02fad0473fb5c9c103d333ae7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "sha256": "086c3665d140f2b685e57636afe9894d1b2149c12b782236c03c63c5a4f3c50b"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.presentation.ts",
+      "sha256": "3c388d13a4651e44a2d02bd4e90a3a5db6e87aefd686572998a59f066823efaf"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.simulation.ts",
+      "sha256": "59dc4d18b4d9fc154932f3ae9b20896a21104a6eaa1aa6b2aa707d5cfbeabbd8"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/presentation.spec.ts",
+      "sha256": "5a9c7ae603f3ba9942078c3fb8bd8bf78ce6cb1fc33705dc34d84945f7e0b714"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/presentation.ts",
+      "sha256": "a9f5e68224c13b9cf8c6741abfd92f2ef507b0aab7c02b79f702fef6f1b21e4e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/priority-steering.model.spec.ts",
+      "sha256": "20f473ed1ee3ff35e5aa2372250d02d8f693051bf0f3543c4ce6bf5c91d93a6f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/priority-steering.model.ts",
+      "sha256": "2f3198eba043597f9536f870a7f938bd958857a573b3726f36dc6506d0141f8c"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/priority-steering.presentation.ts",
+      "sha256": "d29c9d6f94f24348e2cddb4675c3dabfaf962644827974b71863dd6df3be56a7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/priority-steering.simulation.ts",
+      "sha256": "0d40f05b529e9d3615f89b8e72caeec278d3b210e96a17488ca9bebbce40022d"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.spec.ts",
+      "sha256": "6fb81193c2e07e763018c5293d3a5f43efc6741d5518c1eaea6740244baddfff"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+      "sha256": "645f2e1504c3bb9965cf9557628867ffee193e40831d2bb78c010e885fd11875"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.presentation.ts",
+      "sha256": "f6a0c7a89bbd1dbfe926beb8ab891308a4fb8056e5232ce61f120f57fd7908c5"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.simulation.ts",
+      "sha256": "2c846738bc9ee03c69b00beccb8a4f564fb24bab091b8e22823e22091c880406"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/pursue.model.spec.ts",
+      "sha256": "974b00f8d0f3202c20d3959d65ac9800e7a33178b170852da38182cc8b842131"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/pursue.model.ts",
+      "sha256": "c39c3f1c4ae58b80e9bb0fdb403c298a95c49bb08f6f80b4d0aa6d1077963e91"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/pursue.presentation.ts",
+      "sha256": "c06dcbf35eb853b84600fbdf676d8b8b8d982fdd2e3b7db43f8322c7b4ebe309"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/pursue.simulation.ts",
+      "sha256": "8bc4e19e7dcdc158d536a55647b9955354f0f2f4bc17def2659967ec48da7b0a"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/retained-samples.spec.ts",
+      "sha256": "711904fea67554f38ec8cd5fac644c89e87b844c5578656d6b4f095d79eebcc2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.spec.ts",
+      "sha256": "72c1945e10ac480fcd692de4c6c7f88f0794ecc684564ce1d4625109eaa13ac3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+      "sha256": "b488da4cd727d026722fb510227cd5ff5595b35f2c225c48a750d29c08083946"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.presentation.ts",
+      "sha256": "50fe87e59eafa9dcc6cd64dab0a50f7bb40e3ff3f9334c43ae8897a975889db6"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.simulation.ts",
+      "sha256": "544a6129707fad86b3d3a5f5489eb6a9a2257314652903f2ad7b15290894cfd3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.model.spec.ts",
+      "sha256": "9d18f99ee2ec5bbbb26bfd957937bf16155fca22086d696bfa39a89514cee4fc"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.model.ts",
+      "sha256": "9524a55e66d9b87a4c5b35c2dbadd5d08ebd966ad266a68d0b7f3b8505cb8090"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.presentation.ts",
+      "sha256": "4d034539706724c5d09ea573b3dbd78ae7f3e638d87298314dc5a640182066f3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.simulation.ts",
+      "sha256": "79b8f0a29c10ed2f1ef390073d9968bddecd7470d86b627befb4bfe9d48164fc"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/seek.model.spec.ts",
+      "sha256": "bac4d0dfc407540f68d49aa95b8169677c5dc4b3a13f2441bd8f59b1d229a058"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/seek.model.ts",
+      "sha256": "0ab4566bf0a903f07f068896efb89839f90f139520430d5c1c5a3ec853ba23f9"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+      "sha256": "2a7de759ebd953585b1f308026d3cbe22b5576ebd4a84a24f9b50535c9c98cf4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/seek.simulation.ts",
+      "sha256": "97c803db67fb577f968540dcc77de40be4948811221c2f7d6e211722238d7d83"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/separation.model.spec.ts",
+      "sha256": "9b1b5f6509cd2e71332ad200a0d8c886d29d27b14b897a1849b6017b1941d1e2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/separation.model.ts",
+      "sha256": "678305b85dd8f25e60be170a4b3771aa30426a66485a277284181bfe522fb0ff"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/separation.presentation.ts",
+      "sha256": "1b4f6ee84588955c08f765c2d5efc257bc14475527d4bd458575daad6d9fd745"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/separation.simulation.ts",
+      "sha256": "a35aed744196ff061a62a82d5efc8fd4c9ed8a26752f1c3b32b15e40a32d09a3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.model.spec.ts",
+      "sha256": "4267dcd910eb73065183f788149d1e62b09b8dc9d65bb1634c14c9003fb37de2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.model.ts",
+      "sha256": "d7a7604d7d3793e09c2cf7655fb91b3ac87634d436b01c33bb7f1b4bb6de4253"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.presentation.ts",
+      "sha256": "43b259685b29dc825f052101c00bfd633e91dd26c4b97bf128b760e4c4f33935"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.simulation.ts",
+      "sha256": "abf0956915f30e4a4aa6aff5e3bf4f18e211569d2ceb2355040c0ba4259f6f11"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+      "sha256": "e0df00b9434826024d1952b3c2b2bbb1c2be3dc64aefcb83d939736bd00a9777"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+      "sha256": "063254310794193de03a2343c3a581d52851fa35ba33012d34dd2f65b58ac05f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.presentation.ts",
+      "sha256": "8317693f9cd75e51356bf5af574049677c34a5a5050ed1c378e87dc0825e8ec7"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.simulation.ts",
+      "sha256": "8f6921f888d2be78bc53e1cd77bb8539fc5205208dc9b1956a2ffe13c632ab82"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+      "sha256": "8354d5a83894611e43d848a3988e4c43c8d338a66ff04f22a17a76264aa050b8"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+      "sha256": "f5115a7b1b44f0bd1a92014174e6f9fbe9d61d75619b531489db87618b5cfd31"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-output.presentation.ts",
+      "sha256": "5d737f32ccb49bebce360de49b61341cd079315f34ebe6d4637c18e5d8e873e3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-output.simulation.ts",
+      "sha256": "42ec3b1d76e5f8766693e29e66ec9d96dd1272debbe02f769c98269b7a6de649"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.model.spec.ts",
+      "sha256": "94f22542e32375c608cca8048225ada969027669e80e3a59221a12a9b9dc8540"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.model.ts",
+      "sha256": "85d246696fe902f1f650ff8292584600670db6189f15511bc823387c3b8d4bdd"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.presentation.ts",
+      "sha256": "e59151a215960e5f81517991ad924f7bb8fa11e3861dfc10b1ba2344bc66fcb4"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.simulation.ts",
+      "sha256": "58c517b2b66fa8fc43888082f05945114ca5b548daf1a3a28f0951c6d0a5f63a"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts",
+      "sha256": "b3e9fc3bf3bfb3526ca23e8e1be8f62a5066a46799071d0bd4d92ca7d454d6b1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+      "sha256": "2171d145535e7bf00c46e9d99565af5dfeddd5ff799f31b582ca02735b0cfbda"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.presentation.ts",
+      "sha256": "131f8714d34a79b20a0ebe0150b83b19f8f5eb9b5048182827f394e4bba55603"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.simulation.ts",
+      "sha256": "b51a2437c642cfe7f5c3a8ed7703a54bc8384e540f68633eb42f29f2d92beb2e"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts",
+      "sha256": "75b8f49f3ed627f70edbf259881580e1a8369d4b447b142529349bceefec36e9"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+      "sha256": "8526f6df535d531c173e73018f8836f14869cdbbd269426d0bb082a357b78d22"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.presentation.ts",
+      "sha256": "1689675088c2939db85059480da39f3815a0d5e7a94f6a97877379a58a0152e3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.simulation.ts",
+      "sha256": "367cb86962b613f1c29da3259a1d605ef174943b5f3267e6a2241b5c65290d90"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.model.spec.ts",
+      "sha256": "10426cc1cd96f1f3f9e900a827cec974a329e966438f5efe5810cc62f6ed4410"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.model.ts",
+      "sha256": "d758f8b77652fbe07bafc46d0db19623b2fd210a97fd964a6f253150e8386a9c"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.presentation.ts",
+      "sha256": "d689b89efd11a9482528476cd4c6b9e10db1025f9c302aee56dfae482a36fa5b"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.simulation.ts",
+      "sha256": "83c0a33a07f4cbbcdc3c8a195d95c2bae4cb04c25f6fa9a4b7118fc7cabea4a2"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/variable-matching.model.spec.ts",
+      "sha256": "ec62f674dffcdab7cb4a08162b913e0696b602f924b60ef9f3b174abe0d746ac"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+      "sha256": "42f2460223333caa1638136e0ce942fb5744c37c7316d524451f8113b54d56b1"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/variable-matching.presentation.ts",
+      "sha256": "e069b749970c7c4c54879e0d42fa29593cab3094e2d6ca5082fecf973476f283"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/variable-matching.simulation.ts",
+      "sha256": "d27281ce902579bcecae2a1127162db0b8cb9bd7097b41ede99ad0f2c99352da"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.model.spec.ts",
+      "sha256": "c0454a0e84793949546575d5810d2f941553d44a915e96d19f43661b5cfb388c"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.model.ts",
+      "sha256": "3477baab8f0296d012699adba76fb03d814714c2aa15b1dc9198283ba10ccbcd"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.presentation.ts",
+      "sha256": "f11d39753c07b8e0c0800d7c2e1ee203b705aab642748df541414c0f0375f791"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.simulation.ts",
+      "sha256": "07260a65522aebda2851467b29cc29a9315a045cd72ca0e881a58bc4a39fddcc"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/wander.model.spec.ts",
+      "sha256": "f9bdd094c9bbfd47f0f34005588c873c451e3590680f8a59e8aa48bda318115f"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/wander.model.ts",
+      "sha256": "f1b3866bad7a53fcb53a5a69eea54f4669a2b28b96b26a2f850279104863b636"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/wander.presentation.ts",
+      "sha256": "cb5c1c6a2353760f1b194fe51ff98b0bddd2ec14078157448a400efb87255dfe"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/wander.simulation.ts",
+      "sha256": "f1d292608b0bbd30e01696b4305fec2b50a0a96a4036c8739316ded0ca3fe821"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.model.spec.ts",
+      "sha256": "3f999f1d0564a5e60f629468ca0df8cca4771af5c9bc01039fe774cb29a7ac58"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.model.ts",
+      "sha256": "56c471fcb926dabd26543bb569ced886c5c983c4fdf143f994e2dfe48f26b7ad"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.presentation.ts",
+      "sha256": "5a288a4db5a93e224c1f60c2114fd089b16c07319ff95d98255a2b67532efbe3"
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.simulation.ts",
+      "sha256": "ac576ee689cff852e3d0d73f7ae38da5928fadcc47c6969785d96ccb18e3e939"
+    }
+  ],
+  "limitations": [
+    "Output preservation, not a latency benchmark.",
+    "The temporary comparison spec was removed after the successful run."
+  ]
+}

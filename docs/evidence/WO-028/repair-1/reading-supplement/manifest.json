@@ -1,0 +1,49 @@
+{
+  "capturedAt": "2026-11-04T21:27:51.523Z",
+  "target": "target",
+  "dist": "dist/apps/dotln/browser",
+  "method": "Foreground scratch script; isolated Chromium contexts; ephemeral loopback server; browser and server closed in finally.",
+  "errors": [],
+  "frames": [
+    {
+      "name": "wall-default-chart-2080.png",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "claim": "Default delivery height 15, ray length 9; clearance chart with its chart guide.",
+      "accessibility": "- figure:\n  - group \"Views of the same example\":\n    - button \"Movement\"\n    - button \"Chart\" [pressed]\n  - paragraph: Body clearance from the wall\n  - 'img \"At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\"': Distance to wall − radius (units) 0.12 4.14 8.17 12.19 0 2.67 5.33 8 Time (s)\n  - text: Time · 0.5 seconds\n  - slider \"Time · 0.5 seconds\": \"5\"\n  - button \"Step back\"\n  - button \"Step forward\"\n  - button \"Ray first hits\"\n  - button \"Turning along the wall\"\n  - button \"Smallest clearance\"\n  - button \"End of run\"\n  - paragraph: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\n  - group: Show the numbers\n  - group: Try another value\n  - group:\n    - text: How to read this drawing\n    - paragraph: Courier body clearance\n    - paragraph: Each line follows the same example over time. The vertical line marks the selected time; dots mark the series values there. Read each line against the labelled axes.",
+      "overflow": false
+    },
+    {
+      "name": "wall-default-comparison-2080.png",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "claim": "Default comparison changes only goalY from 15 to 0, with findings and note visible.",
+      "accessibility": "- heading \"Straight ahead gives no side to choose\" [level=4]\n- paragraph: Change only the delivery height goalY from 15 to 0. Keep the same initial motion, ray length, radius, normal offset, speed and acceleration.\n- paragraph: An offset destination and a straight-on destination\n- img \"Minimum body clearance is 0.12 units in the example and 3.80 units with the changed destination.\": Distance to wall − radius (units) 0.12 4.14 8.17 12.19 0 2.67 5.33 8 Time (s)\n- paragraph: Delivery height 15 Delivery height 0\n- paragraph: Minimum body clearance is 0.12 units in the example and 3.80 units with the changed destination.\n- paragraph: The changed run ends at (4.08, 0.00); its largest sideways displacement from the start is 0.00 units. Clearance alone does not show whether it finds a way round.\n- paragraph: There is no wall clamp or collision response. The straight-on approach can brake and alternate targets without choosing a side. A centre ray can also miss a wall end that the body clips; neither is route planning.",
+      "overflow": false
+    },
+    {
+      "name": "wall-head-on-end-2080.png",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "claim": "Change only delivery height to 0, retain ray length 9, and inspect end-of-run Movement with numbers and inputs.",
+      "accessibility": "- figure:\n  - group \"Views of the same example\":\n    - button \"Movement\" [pressed]\n    - button \"Chart\"\n  - 'img \"At 8.00 s the courier is at (4.08, 0.00) with radius 1, velocity (0.00, 0.00) units/s and acceleration (-8.00, 0.00) units/s²; its ray runs from (4.08, 0.00) to (13.08, 0.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 0.00), normal (-1.00, 0.00), avoidance target (4.00, 0.00) and selected target (4.00, 0.00); delivery remains at (18.00, 0.00), and body clearance from the finite wall is 4.92 units: The ray hits; the offset target pulls against the current travel.\"': Courier Delivery Hit\n  - text: Time · 8.0 seconds\n  - slider \"Time · 8.0 seconds\": \"80\"\n  - button \"Step back\"\n  - button \"Step forward\" [disabled]\n  - button \"Ray first hits\"\n  - button \"Turning along the wall\"\n  - button \"Smallest clearance\"\n  - button \"End of run\"\n  - paragraph: The ray hits; the offset target pulls against the current travel.\n  - group:\n    - text: Show the numbers\n    - paragraph: \"At 8.00 s the courier is at (4.08, 0.00) with radius 1, velocity (0.00, 0.00) units/s and acceleration (-8.00, 0.00) units/s²; its ray runs from (4.08, 0.00) to (13.08, 0.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 0.00), normal (-1.00, 0.00), avoidance target (4.00, 0.00) and selected target (4.00, 0.00); delivery remains at (18.00, 0.00), and body clearance from the finite wall is 4.92 units: The ray hits; the offset target pulls against the current travel.\"\n  - group:\n    - text: Try another value Delivery height · 0 units\n    - slider \"Delivery height · 0 units\": \"0\"\n    - text: Forward ray length · 9 units\n    - slider \"Forward ray length · 9 units\": \"9\"\n    - button \"Back to the example\"\n  - group:\n    - text: How to read this drawing\n    - paragraph: Courier and physical radius Wall segment and ray hit Ray; amber cross · avoidance target; lower lane · acceleration × 0.25 s² Upper lane · velocity × 1 s Surface normal × avoid distance Delivery point beyond the wall\n    - paragraph: \"The long line is the wall. The forward ray runs from the courier to its ray end. On a hit, the normal points back from the surface to the amber avoidance cross. The courier ring is its physical radius. Below the courier, parallel lanes separate velocity above and acceleration below at the same scale as the construction. The offset delivery gives the approach a sideways cue: watch the avoidance target turn the courier along the face and the delivery pull resume when the ray clears the end. The clearance chart includes distance round the wall’s ends; it does not treat the wall as infinite.\"",
+      "overflow": false
+    },
+    {
+      "name": "wall-default-limits-360.png",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "claim": "All default limits and the default-to-head-on comparison at 360 pixels.",
+      "accessibility": "- group:\n  - text: Where this breaks down When this fails, and what to reach for instead.\n  - list:\n    - listitem: \"A shorter ray gives the courier less time to turn. Try rayLength 1: the model keeps any overlap visible instead of clamping the body back to free space.\"\n    - listitem: With the delivery straight ahead at height 0, the comparison has no sideways cue. The courier switches between delivery and avoidance targets while staying on the same line. A ray-based local pull does not choose a route round a wall.\n    - listitem: A single centre ray does not sweep the whole disc. It can miss a wall edge that the courier’s radius clips. The local detector also deliberately returns no collision for parallel or collinear segments.\n    - listitem: Several rays can alternate between adjacent faces at a corner and keep reversing the chosen target. That is the Corner trap; this straight-wall example does not implement a remedy for it.\n  - heading \"Straight ahead gives no side to choose\" [level=4]\n  - paragraph: Change only the delivery height goalY from 15 to 0. Keep the same initial motion, ray length, radius, normal offset, speed and acceleration.\n  - paragraph: An offset destination and a straight-on destination\n  - img \"Minimum body clearance is 0.12 units in the example and 3.80 units with the changed destination.\": Distance to wall − radius (units) 0.12 4.14 8.17 12.19 0 2.67 5.33 8 Time (s)\n  - paragraph: Delivery height 15 Delivery height 0\n  - paragraph: Minimum body clearance is 0.12 units in the example and 3.80 units with the changed destination.\n  - paragraph: The changed run ends at (4.08, 0.00); its largest sideways displacement from the start is 0.00 units. Clearance alone does not show whether it finds a way round.\n  - paragraph: There is no wall clamp or collision response. The straight-on approach can brake and alternate targets without choosing a side. A centre ray can also miss a wall end that the body clips; neither is route planning.",
+      "overflow": false
+    }
+  ]
+}

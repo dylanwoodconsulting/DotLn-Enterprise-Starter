@@ -327,7 +327,7 @@ relations, hooks and verification notes, across six works.
 | Tools routes | `libs/features/tools/src/lib/tools.routes.ts` |
 | Page, facades and the addressable reading | `libs/features/tools/src/lib/containers/catalog-page/catalog-page.ts`, `libs/features/tools/src/lib/facades/tools.facade.ts`, `libs/features/tools/src/lib/facades/tools-home.facade.ts`, `ChildPaths.Reading` in `libs/shared/core/src/lib/paths/routes.ts` |
 | Reading mapper | `libs/features/tools/src/lib/mappers/reading-mapper/` |
-| The study record and its schema | `libs/shared/models/src/lib/concept-study.ts`, `libs/shared/catalog/src/schema/concept-study-v0.schema.json` |
+| The study record and its schema | `libs/shared/models/src/lib/concept-study.ts`, `libs/shared/catalog/src/schema/concept-study-v1.schema.json` |
 | The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
 | The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
@@ -348,7 +348,10 @@ readings and the chosen location persist; the search query and the back stack do
 not. Reading mappers present the full source definition and application faces as
 prose.
 
-A study is authored separately from the source data, as one checked record per concept that a
+A study’s authored text is stored in lazy message catalogs under `apps/dotln/public/i18n/study*/en.json`;
+its record holds keys. `MessageCatalog` loads the required work and shared narration,
+and models receive a translator only for presentation. Simulations and raw stream
+payloads remain independent of language. A study is authored separately from the source data, as one checked record per concept that a
 regenerated join never touches. Its drawing runs from a pure model of the record's parameters,
 calling the scene engine where the engine has the behaviour, and a reader can step it, play it on
 command and change its inputs. A stream study's drawing is a marble diagram the `marbles` family

@@ -1,0 +1,170 @@
+{
+  "author": "author-10",
+  "date": "2026-11-04",
+  "status": "authored-awaiting-parent-validation",
+  "ownership": {
+    "cwdVerified": true,
+    "gitMetadataAbsent": true,
+    "realWorktreeEdits": false,
+    "installsRun": false,
+    "testsRun": false,
+    "gatesRun": false,
+    "agentsSpawnedOrRetasked": false,
+    "readBack": true
+  },
+  "requiredReading": [
+    "brief/assignment.md",
+    "brief/rows.json",
+    "brief/chapter-index.json",
+    "brief/concept-study.md",
+    "docs/operator/README.md",
+    "docs/operator/implementation-guidance.md",
+    "libs/shared/models/src/lib/concept-study.ts",
+    "libs/shared/catalog/src/schema/concept-study-v0.schema.json",
+    "libs/shared/catalog/src/studies/aifg/arrive.json",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+    "libs/features/tools/src/lib/studies/study-model.ts",
+    "libs/features/tools/src/lib/studies/parameters.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts",
+    "docs/dev-reference/architecture/scene.md",
+    "libs/shared/scene-engine/src/public_api.ts",
+    "libs/shared/scene-engine/src/lib/formation.ts",
+    "libs/shared/scene-engine/src/lib/slot-assignment.ts",
+    "libs/shared/scene-engine/src/lib/steering.ts",
+    "libs/shared/scene-engine/src/lib/random.ts",
+    "libs/shared/scene-engine/src/lib/vectors.ts",
+    "libs/shared/scene-engine/src/lib/types.ts"
+  ],
+  "additionalReading": [
+    {
+      "path": "libs/shared/scene-engine/src/lib/simulation.ts",
+      "scope": "Imports, fixed-step constants, defaults and createSimulation, lines 1\u2013130"
+    },
+    {
+      "path": "libs/shared/scene-engine/src/lib/formation.spec.ts",
+      "scope": "Pattern, assignment and two-level formation examples, lines 1\u2013200"
+    }
+  ],
+  "studies": [
+    {
+      "id": "aifg-a:103",
+      "slug": "kinematic-wander",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/kinematic-wander.json",
+        "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+        "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.spec.ts"
+      ],
+      "mechanism": "mixed",
+      "steps": [
+        "Public cosine, sine, normalize and scale turn the remembered angle into a full-speed velocity.",
+        "A study-local mulberry32 draw function and the difference of two draws provide the signed turn sample. nextRandom and nextBinomial were read but are not public exports; no private import is used.",
+        "A study-local direct kinematic update moves with the old facing and adds sampled turn rate times the fixed time step to the heading. Public vector arithmetic supports that update. The public wander function implements a different acceleration-based mechanism and is not substituted."
+      ],
+      "executableNullRationale": null,
+      "executable": "The TypeScript model executes direct velocity movement and seeded orientation updates; executable is not null.",
+      "drawing": "One robot, 121 frames including the initial state, current and next-update velocity arrows, recent trail, and an unwrapped-heading chart. The selected moment has the largest sampled heading change.",
+      "comparison": "Changes maxRotation alone from the example's 1 to 40 radians/s, preserves the draw stream and speed, plots heading-change magnitude and counts direction changes beyond a right angle.",
+      "specificationCoverage": [
+        "Catalog parameters match the spec's example.",
+        "A hand-worked sample 0.75 minus 0.25 moves 0.6 units along the old facing and turns 0.05 radians.",
+        "Seed replay, changed-seed divergence, draw bounds, two-draw subtraction, full speed and bounded turn rates.",
+        "Abrupt-turn comparison, identical draws across arms and unchanged step distance.",
+        "Changed sample interval over the same elapsed duration changes the walk.",
+        "Frame counts, horizon explanation, worked first displacement, visible arrow bounds and equal-arm comparison wording."
+      ],
+      "openedUrls": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "accessed": "2026-11-04",
+          "method": "curl with Accept: application/vnd.citationstyles.csl+json and redirects",
+          "status": 200,
+          "observed": "Crossref metadata identifies AI for Games, Ian Millington, CRC Press, third edition and the DOI. It supplies no chapter text or section contents. The section locator comes from brief/rows.json."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicWander.cs",
+          "accessed": "2026-11-04",
+          "method": "curl",
+          "status": 200,
+          "observed": "C# Unity component subtracts two float uniform draws, assigns an absolute Euler rotation in one coroutine and translates along forward in another. Wait durations are separate and the Translate argument contains no elapsed-time factor."
+        }
+      ],
+      "limitations": [
+        "Tests are authored but were not run; the parent executes them after integration.",
+        "The deterministic random helper is study-local because the engine does not export its random helpers.",
+        "The external Unity component is described with its actual absolute-rotation and per-iteration translation choices; it is not presented as a rate-correct reference implementation.",
+        "The DOI confirms bibliographic identity only. No book text was read or reproduced."
+      ]
+    },
+    {
+      "id": "aifg-a:173",
+      "slug": "coordinated-movement",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+        "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts",
+        "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.spec.ts"
+      ],
+      "mechanism": "mixed",
+      "steps": [
+        "Public patternSlots creates the centred line and public assignSlots assigns the three named robots to left, centre and right roles using a study-local cost table.",
+        "Public advanceFormation moves and moderates the two-level anchor; public slotPosition transforms relative slots to world targets.",
+        "Public arrive calculates each robot's acceleration. A study-local velocity-first integrator applies it and uses public clipLength for each speed cap. createSimulation supplies public initial member state, but the full scene simulation, field policies, separation and collision avoidance are not run.",
+        "Study-local readouts use public distance and centroid arithmetic to measure Camera error, mean error and anchor distance to the current member mean. The worked step expands arrive's desired-speed arithmetic for explanation; actual movement calls arrive."
+      ],
+      "executableNullRationale": null,
+      "executable": "The model executes the formation, assignment, anchor, follower and measurement mechanism; executable is not null.",
+      "drawing": "Three named survey robots, 161 frames including the initial state, assigned slot rings, owner-to-slot links, anchor dot, gate cross and Camera/mean slot-error chart.",
+      "comparison": "Changes Camera's speed limit alone from the example's 6 to 1 units/s. Assignments persist while Camera's following error grows; the chart measures the individual failure rather than equating assignment with successful coordination.",
+      "specificationCoverage": [
+        "Catalog parameters match the spec's example.",
+        "Line offsets and centring, distinct role-compatible slot ownership and initial zero error.",
+        "Engine anchor first position 0.2352; Camera desired speed 0.3528, acceleration 0.7056, velocity 0.07056, position 0.007056 and residual slot error 0.228144.",
+        "Deterministic replay, equal-capability abreast geometry, per-member speed/acceleration limits and the engine's anchor bound against the previous member mean.",
+        "A slower Camera exceeds the normal peak error and the group lag limit while assignments remain unchanged; its travelled distance respects its speed cap.",
+        "Three-body drawing, slot/link counts, timeline lengths, worked readout, horizon wording, changed-input bounds and equal-arm comparison wording."
+      ],
+      "openedUrls": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "accessed": "2026-11-04",
+          "method": "curl with Accept: application/vnd.citationstyles.csl+json and redirects",
+          "status": 200,
+          "observed": "Bibliographic metadata identifies the book and edition; the Chapter 3 section 3.7 locator is supplied by brief/rows.json, not confirmed by chapter text."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/Formation.java",
+          "accessed": "2026-11-04",
+          "method": "curl",
+          "status": 200,
+          "observed": "Formation separates a pattern, assignment strategy, anchor and optional motion moderator. updateSlotAssignments updates assignments and pattern count. updateSlots transforms pattern-relative locations and writes each member's target, then optionally moderates the anchor."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/FormationMotionModerator.java",
+          "accessed": "2026-11-04",
+          "method": "curl",
+          "status": 200,
+          "observed": "An abstract per-update anchor-moderation hook accompanies a drift calculation that averages occupied pattern-slot positions and orientations."
+        }
+      ],
+      "limitations": [
+        "Tests are authored but were not run; the parent executes them after integration.",
+        "The local follower integrator is deliberately smaller than the scene simulation. Its use of public engine formation and arrive functions does not claim the full scene's collision, field or settling behaviour.",
+        "The crew, roles and shared objective remain fixed. This example does not implement tactical choice, membership changes or doorway planning.",
+        "The DOI confirms bibliographic identity only. No book text was read or reproduced."
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "The web tool could not access the DOI's HTML destination; content negotiation subsequently returned HTTP 200 metadata. No HTML status code was reported by the web tool.",
+    "Supplementary reads opened the public highnet repository page and tree, its pinned Kinematic.cs file (curl HTTP 200), the gdx-ai Formation.java GitHub page and the project's Formation Motion wiki. These supplementary URLs are not cited in the study records."
+  ],
+  "counters": {
+    "source": "No session-level token usage counters are exposed to this author task. Per-tool output lengths are not usage totals.",
+    "scope": "author-10 private-copy authoring task only",
+    "cutoff": "2026-11-04 handoff after drafting and reading back both study triples",
+    "inputTokens": "unknown",
+    "outputTokens": "unknown",
+    "totalTokens": "unknown"
+  }
+}

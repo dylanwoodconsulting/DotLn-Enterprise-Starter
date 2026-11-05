@@ -1,0 +1,452 @@
+{
+  "kind": "consistency",
+  "round": 1,
+  "workOrder": "WO-028",
+  "model": {
+    "requested": "gpt-6.1-sol",
+    "actual": "unknown",
+    "source": "The worker brief names gpt-6.1-sol; this worker has no independent runtime model readback or spawn receipt."
+  },
+  "effort": {
+    "requested": "max",
+    "actual": "unknown",
+    "source": "The worker brief names max; no independent runtime effort readback is exposed."
+  },
+  "candidateIdentities": {
+    "target": {
+      "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+      "candidateChangedFilesSha256": "55ac7d90dd7df4cf7bfe3d1e6faed9113a2322404f7edcfda429aa455ccf62c3",
+      "changedFileCount": 79
+    },
+    "launchpad": {
+      "base": "a5e7076cfe1082d888966223f544e17d471324ae",
+      "candidateChangedFilesSha256": "35f079567f7e85d7fc9d857eb74230494cf9c934bb45a7be8bf014ed8f78cdf3",
+      "changedFileCount": 107
+    }
+  },
+  "integrity": {
+    "allChangedFileHashesMatched": true,
+    "bothAggregateIdentitiesMatched": true,
+    "aggregateEncoding": "SHA-256 of the files map encoded as JSON with sorted keys and standard comma/colon spaces, without trailing newline.",
+    "diffCandidateSide": {
+      "targetTextLinesCompared": 13655,
+      "launchpadTextLinesCompared": 6627,
+      "mismatches": []
+    },
+    "completeAddedTextBodiesCompared": {
+      "target": 60,
+      "launchpad": 28,
+      "mismatches": []
+    },
+    "captureManifest": {
+      "filesCompared": 73,
+      "mismatches": []
+    },
+    "contentIdentity": {
+      "filesCompared": 60,
+      "mismatches": []
+    },
+    "validationCommandLogs": {
+      "commandsCompared": 11,
+      "hashExitAndTimeMismatches": []
+    },
+    "followupCurrentRevisionSha256": "4e55232435d714ab5a607040198a715d4aa4b41f3736d22d479c97f4910b7d54"
+  },
+  "searchedPaths": {
+    "briefs": [
+      "review-common.md",
+      "review-consistency.md"
+    ],
+    "packet": [
+      "candidate.json",
+      "target.diff",
+      "launchpad.diff",
+      "command-logs/results.jsonl",
+      "command-logs/*.log"
+    ],
+    "targetChanged": [
+      "apps/dotln-e2e/src/catalog.spec.ts",
+      "apps/dotln-e2e/src/visual-baselines/darwin/catalog-1440.png",
+      "apps/dotln-e2e/src/visual-baselines/darwin/catalog-768.png",
+      "apps/dotln/public/i18n/en.json",
+      "docs/dev-reference/architecture/catalog.md",
+      "libs/features/tools/src/lib/composites/study-explanation/study-explanation.html",
+      "libs/features/tools/src/lib/composites/study-explanation/study-explanation.scss",
+      "libs/features/tools/src/lib/composites/study-explanation/study-explanation.spec.ts",
+      "libs/features/tools/src/lib/composites/study/fixtures.ts",
+      "libs/features/tools/src/lib/composites/study/study.html",
+      "libs/features/tools/src/lib/composites/study/study.spec.ts",
+      "libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+      "libs/features/tools/src/lib/mappers/study-mapper.ts",
+      "libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+      "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts",
+      "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts",
+      "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts",
+      "libs/features/tools/src/lib/studies/movement/corner-trap.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+      "libs/features/tools/src/lib/studies/movement/flee.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+      "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts",
+      "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+      "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+      "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+      "libs/features/tools/src/lib/studies/movement/motor-control.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+      "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+      "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+      "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+      "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+      "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+      "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+      "libs/features/tools/src/lib/studies/movement/variable-matching.model.spec.ts",
+      "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+      "libs/features/tools/src/lib/studies/study-models.ts",
+      "libs/features/tools/src/lib/types.ts",
+      "libs/features/tools/testing/src/lib/tools-en.json",
+      "libs/shared/catalog/src/studies/aifg.ts",
+      "libs/shared/catalog/src/studies/aifg/actuator.json",
+      "libs/shared/catalog/src/studies/aifg/blending-versus-arbitration.json",
+      "libs/shared/catalog/src/studies/aifg/collision-avoidance.json",
+      "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+      "libs/shared/catalog/src/studies/aifg/corner-trap.json",
+      "libs/shared/catalog/src/studies/aifg/flee.json",
+      "libs/shared/catalog/src/studies/aifg/iterative-targeting.json",
+      "libs/shared/catalog/src/studies/aifg/jump-points.json",
+      "libs/shared/catalog/src/studies/aifg/kinematic-arrive.json",
+      "libs/shared/catalog/src/studies/aifg/kinematic-wander.json",
+      "libs/shared/catalog/src/studies/aifg/motor-control.json",
+      "libs/shared/catalog/src/studies/aifg/movement-in-the-third-dimension.json",
+      "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+      "libs/shared/catalog/src/studies/aifg/projectile-trajectory.json",
+      "libs/shared/catalog/src/studies/aifg/satisfaction-radius.json",
+      "libs/shared/catalog/src/studies/aifg/steering-behaviors.json",
+      "libs/shared/catalog/src/studies/aifg/steering-output.json",
+      "libs/shared/catalog/src/studies/aifg/the-firing-solution.json",
+      "libs/shared/catalog/src/studies/aifg/two-and-a-half-dimensions.json",
+      "libs/shared/catalog/src/studies/aifg/variable-matching.json",
+      "libs/shared/catalog/src/studies/studies-summary.json",
+      "tools/studies.test.mjs"
+    ],
+    "launchpadChanged": [
+      "docs/control/budgets.json",
+      "docs/control/current.md",
+      "docs/control/orders/WO-028.jsonl",
+      "docs/evidence/WO-028/README.md",
+      "docs/evidence/WO-028/authors/author-01.json",
+      "docs/evidence/WO-028/authors/author-02.json",
+      "docs/evidence/WO-028/authors/author-03.json",
+      "docs/evidence/WO-028/authors/author-04.json",
+      "docs/evidence/WO-028/authors/author-05.json",
+      "docs/evidence/WO-028/authors/author-06.json",
+      "docs/evidence/WO-028/authors/author-07.json",
+      "docs/evidence/WO-028/authors/author-08.json",
+      "docs/evidence/WO-028/authors/author-09.json",
+      "docs/evidence/WO-028/authors/author-10.json",
+      "docs/evidence/WO-028/bundle.json",
+      "docs/evidence/WO-028/capture-manifest.json",
+      "docs/evidence/WO-028/content-identity.json",
+      "docs/evidence/WO-028/critics/factual-final-recheck.json",
+      "docs/evidence/WO-028/critics/factual-initial.json",
+      "docs/evidence/WO-028/critics/factual-recheck.json",
+      "docs/evidence/WO-028/critics/reading-coverage-initial.json",
+      "docs/evidence/WO-028/critics/reading-final-recheck.json",
+      "docs/evidence/WO-028/critics/reading-initial.json",
+      "docs/evidence/WO-028/critics/reading-recheck.json",
+      "docs/evidence/WO-028/decisions.md",
+      "docs/evidence/WO-028/fan-out.md",
+      "docs/evidence/WO-028/host-qualification.md",
+      "docs/evidence/WO-028/readings/actuator-1440.png",
+      "docs/evidence/WO-028/readings/actuator-chart-1440.png",
+      "docs/evidence/WO-028/readings/blending-versus-arbitration-1440.png",
+      "docs/evidence/WO-028/readings/blending-versus-arbitration-chart-1440.png",
+      "docs/evidence/WO-028/readings/collision-avoidance-1440.png",
+      "docs/evidence/WO-028/readings/collision-avoidance-chart-1440.png",
+      "docs/evidence/WO-028/readings/coordinated-movement-1440.png",
+      "docs/evidence/WO-028/readings/coordinated-movement-chart-1440.png",
+      "docs/evidence/WO-028/readings/corner-trap-1440.png",
+      "docs/evidence/WO-028/readings/corner-trap-chart-1440.png",
+      "docs/evidence/WO-028/readings/flee-1440.png",
+      "docs/evidence/WO-028/readings/flee-chart-1440.png",
+      "docs/evidence/WO-028/readings/iterative-targeting-1440.png",
+      "docs/evidence/WO-028/readings/iterative-targeting-chart-1440.png",
+      "docs/evidence/WO-028/readings/jump-points-1440.png",
+      "docs/evidence/WO-028/readings/jump-points-chart-1440.png",
+      "docs/evidence/WO-028/readings/kinematic-arrive-1440.png",
+      "docs/evidence/WO-028/readings/kinematic-arrive-chart-1440.png",
+      "docs/evidence/WO-028/readings/kinematic-wander-1440.png",
+      "docs/evidence/WO-028/readings/kinematic-wander-chart-1440.png",
+      "docs/evidence/WO-028/readings/motor-control-1440.png",
+      "docs/evidence/WO-028/readings/motor-control-chart-1440.png",
+      "docs/evidence/WO-028/readings/movement-in-the-third-dimension-1440.png",
+      "docs/evidence/WO-028/readings/movement-in-the-third-dimension-chart-1440.png",
+      "docs/evidence/WO-028/readings/obstacle-and-wall-avoidance-1440.png",
+      "docs/evidence/WO-028/readings/obstacle-and-wall-avoidance-chart-1440.png",
+      "docs/evidence/WO-028/readings/projectile-trajectory-1440.png",
+      "docs/evidence/WO-028/readings/projectile-trajectory-chart-1440.png",
+      "docs/evidence/WO-028/readings/satisfaction-radius-1440.png",
+      "docs/evidence/WO-028/readings/satisfaction-radius-chart-1440.png",
+      "docs/evidence/WO-028/readings/steering-behaviors-1440.png",
+      "docs/evidence/WO-028/readings/steering-behaviors-chart-1440.png",
+      "docs/evidence/WO-028/readings/steering-output-1440.png",
+      "docs/evidence/WO-028/readings/steering-output-chart-1440.png",
+      "docs/evidence/WO-028/readings/the-firing-solution-1440.png",
+      "docs/evidence/WO-028/readings/the-firing-solution-chart-1440.png",
+      "docs/evidence/WO-028/readings/two-and-a-half-dimensions-1440.png",
+      "docs/evidence/WO-028/readings/two-and-a-half-dimensions-chart-1440.png",
+      "docs/evidence/WO-028/readings/variable-matching-1440.png",
+      "docs/evidence/WO-028/readings/variable-matching-chart-1440.png",
+      "docs/evidence/WO-028/review.md",
+      "docs/evidence/WO-028/validation.json",
+      "docs/evidence/WO-028/walkthrough.md",
+      "docs/evidence/WO-028/walkthrough/01-shelf-1440.png",
+      "docs/evidence/WO-028/walkthrough/01-shelf-360.png",
+      "docs/evidence/WO-028/walkthrough/01-shelf-768.png",
+      "docs/evidence/WO-028/walkthrough/02-collision-1440.png",
+      "docs/evidence/WO-028/walkthrough/02-collision-360.png",
+      "docs/evidence/WO-028/walkthrough/02-collision-768.png",
+      "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-1440.png",
+      "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-360.png",
+      "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-768.png",
+      "docs/evidence/WO-028/walkthrough/02c-executable-model-1440.png",
+      "docs/evidence/WO-028/walkthrough/02c-executable-model-360.png",
+      "docs/evidence/WO-028/walkthrough/02c-executable-model-768.png",
+      "docs/evidence/WO-028/walkthrough/02d-collision-limits-1440.png",
+      "docs/evidence/WO-028/walkthrough/02d-collision-limits-360.png",
+      "docs/evidence/WO-028/walkthrough/02d-collision-limits-768.png",
+      "docs/evidence/WO-028/walkthrough/03-separation-chart-1440.png",
+      "docs/evidence/WO-028/walkthrough/03-separation-chart-360.png",
+      "docs/evidence/WO-028/walkthrough/03-separation-chart-768.png",
+      "docs/evidence/WO-028/walkthrough/04-flee-1440.png",
+      "docs/evidence/WO-028/walkthrough/04-flee-360.png",
+      "docs/evidence/WO-028/walkthrough/04-flee-768.png",
+      "docs/evidence/WO-028/walkthrough/05-wall-rays-1440.png",
+      "docs/evidence/WO-028/walkthrough/05-wall-rays-360.png",
+      "docs/evidence/WO-028/walkthrough/05-wall-rays-768.png",
+      "docs/evidence/WO-028/walkthrough/06-corner-trap-1440.png",
+      "docs/evidence/WO-028/walkthrough/06-corner-trap-360.png",
+      "docs/evidence/WO-028/walkthrough/06-corner-trap-768.png",
+      "docs/evidence/WO-028/walkthrough/07-projectile-landing-1440.png",
+      "docs/evidence/WO-028/walkthrough/07-projectile-landing-360.png",
+      "docs/evidence/WO-028/walkthrough/07-projectile-landing-768.png",
+      "docs/evidence/WO-028/walkthrough/08-firing-solution-1440.png",
+      "docs/evidence/WO-028/walkthrough/08-firing-solution-360.png",
+      "docs/evidence/WO-028/walkthrough/08-firing-solution-768.png",
+      "docs/lineage/decisions-index.md",
+      "docs/planning/followups.json",
+      "docs/work-orders/README.md",
+      "docs/workstreams/WS-002-concept-research.md"
+    ],
+    "additionalConsumersAndAuthority": [
+      "launchpad/docs/operator/README.md",
+      "launchpad/docs/operator/implementation-guidance.md",
+      "launchpad/docs/work-orders/WO-028-concept-research-movement.md",
+      "launchpad/docs/workstreams/WS-001-dotln-angular.md (cited rules and app/sub-app sections)",
+      "launchpad/docs/repositories/dotln-angular.md (content workers, gate, catalog, versions and retention sections)",
+      "launchpad/docs/product/concept-study.md",
+      "launchpad/scripts/lib/planning-followups.mjs:collectFollowupSources,decisionSources,feedRow",
+      "launchpad/scripts/lib/meta.mjs:readDecisions",
+      "launchpad/scripts/lib/helpers.mjs:json",
+      "launchpad/scripts/lib/host-resources.mjs:memoryBudgets",
+      "launchpad/scripts/lib/target-gate.mjs",
+      "launchpad/dotln.config.json:repositories target gate commands",
+      "launchpad/KIT-MANIFEST.json",
+      "launchpad/.claude/harness-manifest.json",
+      "target/docs/ai-reference/catalog-rules.md",
+      "target/package.json",
+      "target/nx.json",
+      "target/apps/dotln-e2e/project.json",
+      "target/apps/dotln-e2e/playwright.config.mts",
+      "target/apps/dotln-e2e/playwright.visual.config.mts",
+      "target/apps/dotln-e2e/src/catalog.visual.spec.ts",
+      "target/libs/shared/catalog/src/lib/catalog-loader.ts:createCatalogLoader,studyChunks,summaryChunks",
+      "target/libs/shared/catalog/src/lib/catalog-store.ts (studied consumers)",
+      "target/libs/features/tools/src/lib/facades/tools.facade.ts:studyModels,mapStudy,studiedTools",
+      "target/libs/features/tools/src/lib/facades/tools-home.facade.ts (summary consumers)",
+      "target/libs/features/tools/src/lib/studies/study-models.spec.ts",
+      "target/libs/features/tools/src/lib/studies/parameters.ts:numberParameter",
+      "target/libs/features/tools/src/lib/composites/study/study.scss:legend",
+      "target/libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts:timelineDrawing",
+      "target/libs/features/tools/src/lib/composites/study-visuals/timeline/timeline.html",
+      "target/libs/features/tools/src/lib/composites/study-visuals/timeline/timeline.scss",
+      "target/libs/shared/scene-engine/src/index.ts",
+      "target/libs/shared/scene-engine/src/public_api.ts",
+      "target/tools/scripts/catalog/check-studies.mjs:studyProblems,chunkContents,createSummary"
+    ]
+  },
+  "producerConsumerPairs": [
+    {
+      "producer": "target/libs/shared/catalog/src/studies/aifg/*.json:id,authored.state",
+      "consumers": [
+        "target/libs/shared/catalog/src/studies/aifg.ts:default export",
+        "target/libs/shared/catalog/src/studies/studies-summary.json:works[aifg].studies",
+        "target/libs/shared/catalog/src/lib/catalog-loader.ts:studyChunks,summaryChunks",
+        "target/tools/scripts/catalog/check-studies.mjs:chunkContents,createSummary"
+      ],
+      "observed": "AIFG grows from 20 to 40. Current forty imports, forty exported symbols and forty summary entries equal the record directory; all new states are checked."
+    },
+    {
+      "producer": "target/libs/shared/catalog/src/studies/aifg/*.json:visual.model,pseudocode.executable.module,example.parameters",
+      "consumers": [
+        "target/libs/features/tools/src/lib/studies/study-models.ts:studyModels",
+        "target/libs/features/tools/src/lib/studies/movement/*.model.ts:model,numberParameter",
+        "target/libs/features/tools/src/lib/studies/movement/*.model.spec.ts",
+        "target/libs/features/tools/src/lib/studies/study-models.spec.ts",
+        "target/libs/features/tools/src/lib/facades/tools.facade.ts"
+      ],
+      "observed": "All twenty new visual/executable paths agree; matching specs import their module. All eighty registry imports resolve. The new models read exactly the named record parameter keys. Imports remain on existing models, scene-engine and local study helpers."
+    },
+    {
+      "producer": "target/libs/shared/catalog/src/studies/studies-summary.json:works",
+      "consumers": [
+        "target/apps/dotln-e2e/src/catalog.spec.ts:studiedCount,totalStudied",
+        "target/tools/studies.test.mjs:firstMovementBatch,secondMovementBatch",
+        "target/docs/dev-reference/architecture/catalog.md:Studies coverage"
+      ],
+      "observed": "Summary is AIFG 40, EIP 20, RxJS 20, total 80. E2e incidental counts derive from it; exact first-batch membership and the exact forty-id union remain pinned in tooling. Seek next-study assertion changes Arrive to Flee with matching id. E2e implicitDependencies already includes catalog and tools."
+    },
+    {
+      "producer": "target/libs/features/tools/src/lib/mappers/study-mapper.ts:mapStudy.executableModel",
+      "consumers": [
+        "target/libs/features/tools/src/lib/types.ts:StudyView.executableModel",
+        "target/libs/features/tools/src/lib/composites/study/fixtures.ts:studyViewFixture",
+        "target/libs/features/tools/src/lib/composites/study-explanation/study-explanation.html:executable-model",
+        "target/libs/features/tools/src/lib/composites/study-explanation/study-explanation.spec.ts",
+        "target/apps/dotln-e2e/src/catalog.spec.ts:model-spec"
+      ],
+      "observed": "TypeScript module/spec provenance is bounded to the existing mechanism disclosure; null executable records remain without this claim. The retained 360px capture visibly contains the correct collision model/spec and tested-model statement."
+    },
+    {
+      "producer": "target/apps/dotln/public/i18n/en.json:tools.study.model,tools.study.chartGuide",
+      "consumers": [
+        "target/libs/features/tools/testing/src/lib/tools-en.json:tools",
+        "target/libs/features/tools/src/lib/composites/study-explanation/study-explanation.html",
+        "target/libs/features/tools/src/lib/composites/study/study.html"
+      ],
+      "observed": "The complete Tools mirror exactly equals the app Tools block, including all new keys and placeholders. The earlier missing-mirror failure shape is repaired."
+    },
+    {
+      "producer": "target/libs/features/tools/src/lib/studies/movement/*.model.ts:timeline.series",
+      "consumers": [
+        "target/libs/features/tools/src/lib/composites/study/study.html:caption",
+        "target/libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts:timelineDrawing",
+        "target/libs/features/tools/src/lib/composites/study/study.spec.ts",
+        "target/docs/dev-reference/architecture/catalog.md:Studies"
+      ],
+      "observed": "Selected main Chart keys use the same series id,label,tone as the drawn series; Movement retains model.legend/model.caption. Comparison charts retain their established keys. Source declarations and new tests describe the same behavior."
+    },
+    {
+      "producer": "target/libs/shared/catalog/src/studies/aifg/*.json:references,implementations",
+      "consumers": [
+        "launchpad/docs/evidence/WO-028/README.md:link-check table",
+        "launchpad/docs/evidence/WO-028/critics/factual-initial.json:urls,coverage",
+        "launchpad/docs/evidence/WO-028/review.md:Mechanism confirmation,dispositions"
+      ],
+      "observed": "All 33 unique URLs and 78 occurrences are covered once in the README. Critic slug-to-URL mappings agree and every support flag is true. DOI metadata access and publisher HTML 403 remain distinguished; the Reynolds web-read/curl-403 distinction is retained. All six reading findings and later A1 have final dispositions."
+    },
+    {
+      "producer": "launchpad/docs/evidence/WO-028/decisions.md:WO-028-D005,D006,D009",
+      "consumers": [
+        "launchpad/scripts/lib/planning-followups.mjs:collectFollowupSources",
+        "launchpad/docs/planning/followups.json:FUP-2c1a53924446e9dd",
+        "launchpad/docs/lineage/decisions-index.md"
+      ],
+      "observed": "The current follow-up revision hash independently matches D005 plus both reopening observations. Shooting/bullets, navigation/obstacles/walls and the exact-head-on policy follow-up remain in the retained source; no scene implementation is claimed."
+    },
+    {
+      "producer": "launchpad/docs/control/budgets.json:memory.gateShare (0.5 -> 2/3)",
+      "consumers": [
+        "launchpad/scripts/lib/host-resources.mjs:memoryBudgets",
+        "launchpad/docs/evidence/WO-028/decisions.md:WO-028-D007,D013",
+        "launchpad/docs/evidence/WO-028/README.md:memory observations",
+        "launchpad/docs/lineage/decisions-index.md"
+      ],
+      "observed": "Instance-owned persistent override matches the recorded explicit direction. Dynamic physical-memory/lane formula gives 4 GiB on the stated 48 GiB/eight-lane host; hostShare, aggregate guard and runtime calculation remain unchanged. No target runtime, dependency or kit default is changed."
+    },
+    {
+      "producer": "target/libs/shared/catalog/src/studies/studies-summary.json and current source declarations",
+      "consumers": [
+        "target/apps/dotln-e2e/src/catalog.visual.spec.ts",
+        "target/apps/dotln-e2e/src/visual-baselines/darwin/catalog-768.png",
+        "target/apps/dotln-e2e/src/visual-baselines/darwin/catalog-1440.png",
+        "launchpad/docs/evidence/WO-028/README.md:WO-028-D016 baseline account",
+        "launchpad/docs/evidence/WO-028/capture-manifest.json"
+      ],
+      "observed": "Expected overview images show the new studied Coordinated movement marker and the visible 1440px forty-study shelf. The 360px baseline is reported byte-identical because its viewport excludes changed entries. Current 73 evidence-image hashes match; no unrelated baseline is in the candidate changed-file set."
+    },
+    {
+      "producer": "command-logs/results.jsonl and individual command log bytes",
+      "consumers": [
+        "launchpad/docs/evidence/WO-028/validation.json",
+        "launchpad/docs/evidence/WO-028/README.md:completed checks",
+        "launchpad/docs/evidence/WO-028/bundle.json"
+      ],
+      "observed": "All eleven selected exact preflight rows match retained command exit, times and log hashes. Failure/retry sequence remains disclosed. Preflight results are not represented as completed target gates; bundle record names forty lazy-chunk record inputs and unchanged dependency keys."
+    },
+    {
+      "producer": "launchpad/docs/evidence/WO-028/authors/*.json and critics/*.json",
+      "consumers": [
+        "launchpad/docs/evidence/WO-028/fan-out.md:Accounting",
+        "launchpad/docs/evidence/WO-028/review.md",
+        "launchpad/docs/evidence/WO-028/host-qualification.md",
+        "target/libs/shared/catalog/src/studies/aifg/*.json:authored.reviewedBy"
+      ],
+      "observed": "Manual count is sixteen uses before the three fresh review workers, nineteen planned after them; continuations are counted. Ten author and two critic cumulative usage scopes remain unknown, not zero. Historical author draft receipts remain explicitly historical. Final critic rechecks admit the metadata transition; current records name the two actual critic roles."
+    },
+    {
+      "producer": "launchpad/docs/control/orders/WO-028.jsonl:WorkOrderActivated",
+      "consumers": [
+        "launchpad/docs/control/current.md",
+        "launchpad/docs/work-orders/README.md",
+        "launchpad/docs/workstreams/WS-002-concept-research.md:Delivery states"
+      ],
+      "observed": "Activation/base/phase projections agree on active/in implementation. No verification, final-review or release pass is claimed; the executor walkthrough explicitly preserves the later verifier-owned act."
+    }
+  ],
+  "findings": [],
+  "coverageBoundaries": [
+    "Read-only static consistency review of both frozen diffs and their supplied public consumers; the manifest identifies every changed path.",
+    "Model/spec inspection was limited to dependency, declaration, parameter, metadata, provenance and chart/legend consistency. Numerical mechanism design and acceptance-criterion verdicts belong to the other reviewers.",
+    "Visually inspected the two changed overview baselines and the 360px executable-model evidence capture for source/expected-output consistency. Remaining images were hash-checked; visual-design judgment is excluded.",
+    "Retained failure shapes checked: stale summary/registry inventory, missing translation mirror, index-signature spelling repairs, ambiguous how-to-read selector, snapshot-update selection/tolerance, deferred disclosure capture visibility and disclosed memory/exit-137 observations."
+  ],
+  "unsearchedBoundaries": [
+    "Neither real Git worktree, any docs/control/local directory, private captures, private session journals or private review copies were read.",
+    "No project tests, test-runner probes, gates, installs, network requests, browser sessions, descendants, Git mutations or candidate edits were performed.",
+    "Historical critic-copy manifests and original unprojected critic receipts are not in this packet; their recorded hashes and admitted transformations were traced, while current content-identity hashes were independently checked.",
+    "Original pre-change binary baselines and full build stats are not in the packet; before/after visual comparison and rebuilding were not independently performed.",
+    "Package and lockfile changed-file membership was checked through the bound diffs/manifests; baseline Git objects were not read.",
+    "No full-gate pass or acceptance verdict is issued by this report."
+  ],
+  "usage": {
+    "total": null,
+    "cachedInput": null,
+    "source": "Unknown: no cumulative model-token counter is exposed to this worker; tool output sizes are not model usage.",
+    "scope": "This independent round-1 consistency worker only; excludes parent and siblings.",
+    "cutoff": "2026-11-04T20:07:40Z"
+  },
+  "retention": {
+    "sourceReportSha256": "a37a5d5a67e73b92d692efe8a9ecbe5f8c0e308b343419e1465027834f511053",
+    "workerType": "codex-spawn-agent",
+    "launchModel": "gpt-6.1-sol",
+    "launchEffort": "max",
+    "launchSource": "parent native spawn_agent arguments; worker effective runtime telemetry unavailable"
+  }
+}

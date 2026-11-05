@@ -1,0 +1,92 @@
+{
+  "role": "Independent factual content critic",
+  "assignment": "repair_factual",
+  "order": "WO-028",
+  "repair": "repair-1",
+  "reviewedAt": "2026-11-04T21:30:08Z",
+  "manualUse": "5 of 20",
+  "descendants": 0,
+  "verdict": "pass",
+  "scope": "Final bounded caption/formatting recheck against content-final/ and content-final.json; carry forward the FC-01 pass in factual-recheck.json and the full factual/provenance assessment in factual-critic.json.",
+  "findings": [],
+  "findingDisposition": [
+    {
+      "id": "FC-01",
+      "status": "resolved; pass retained",
+      "reason": "The corrected absent-hit label and omitted absent-turn entry are semantically unchanged. The first-hit object is only wrapped across lines."
+    }
+  ],
+  "observedDelta": {
+    "model": "Only the first-hit object formatting and the caption qualification differ from content-recheck.",
+    "captionBefore": "The offset delivery gives the approach a sideways cue:",
+    "captionAfter": "In the default example, the offset delivery gives the approach a sideways cue:",
+    "judgment": "The qualification correctly scopes the turn-and-resumed-delivery description to the demonstrated default. The independently verified default has an offset destination, hits/turns at 0.5 s and then resumes delivery steering after its ray clears the upper endpoint. The qualified sentence does not assert that selecting goalY=0 produces an offset destination or lateral turn.",
+    "record": "Byte-identical to both prior frozen candidates.",
+    "spec": "Byte-identical to content-recheck.",
+    "numericalOrPhysicsChanges": false,
+    "defaultLabelsAndBehaviorChanged": false,
+    "exactTextReplacementAccountsForEntireModelDelta": true
+  },
+  "carriedJudgments": {
+    "defaultFiniteWallClearance": "Pass; plotted minimum 0.118664833 and exact minimum between fixed updates 0.117054580 remain unchanged.",
+    "straightOnComparison": "Pass; zero sideways displacement, minimum clearance 3.8, repeated braking/target switching remain unchanged.",
+    "sourcesAndMechanism": "Unchanged mixed engine Seek/local geometry and update; all source-scope boundaries from factual-critic.json stand.",
+    "bylines": "The original factual review's approval of all twenty provenance expansions stands; no byline changed in either bounded recheck."
+  },
+  "inspectedContentHashes": {
+    "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "fda69f35108911a325263c96b4091492b172d41d51193f338a01e0802dd4f109",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "a6dc8f54b1fdb2c4b31060a8eb8c036664ccca19a0397fefd63e11937456692b"
+  },
+  "hashVerification": {
+    "allMatchContentFinalManifest": true,
+    "allMatchTargetBytes": true
+  },
+  "sourcesObserved": {
+    "local": [
+      "content-final.json",
+      "Unified model/record/spec diffs against content-recheck",
+      "Final frozen bytes and matching target hashes"
+    ],
+    "external": "No external source reopened for this two-part local delta. Prior independently observed gdx-ai tagged source and DOI metadata scopes remain unchanged."
+  },
+  "authorizedPostReviewMetadataTransforms": {
+    "path": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+    "factualReviewApproved": true,
+    "reviewerIdentity": "Codex gpt-6.1-sol, factual critic",
+    "allowed": [
+      "Append the actual passing factual and reading critic identities to authored.reviewedBy once both cover this final content.",
+      "Change authored.state from draft to checked once the required reading judgment passes this content and parent-owned executable verification succeeds.",
+      "Apply whitespace/line-wrapping formatting that preserves decoded JSON values and TypeScript semantics; record resulting hashes as metadata/formatting transforms."
+    ],
+    "preserve": [
+      "Original authored.by and authored.on",
+      "All parameters, mechanism, pseudocode, references and runtime semantics"
+    ],
+    "boundary": "Further semantic content changes need review coverage; these admitted metadata/formatting transforms do not."
+  },
+  "execution": {
+    "testsRun": false,
+    "gatesRun": false,
+    "dependenciesInstalled": false,
+    "repositoryWrites": false,
+    "backgroundTasksStarted": false,
+    "agentsStarted": 0,
+    "scratchWrites": [
+      "factual-final.json"
+    ],
+    "method": "Read complete bounded diffs, validate exact replacement and independently hash frozen/target bytes."
+  },
+  "usage": {
+    "cumulativeTokens": "unknown",
+    "source": "No cumulative token counter is exposed to this worker by available tool results.",
+    "scope": "repair_factual worker conversation, cumulative across initial review and both bounded rechecks; no parent or sibling totals inferred",
+    "cutoff": "2026-11-04T21:30:08Z",
+    "availableToolExposedCounters": [],
+    "monetaryUsage": "unknown"
+  },
+  "receiptProjection": {
+    "originalSha256": "757f55125fbaa1daceec0de726a6e2f99bfa5abf9fee5f717b2f811bf739a3a5",
+    "changes": "Absolute host paths replaced with target, launchpad or session-scratch; all findings and observations retained."
+  }
+}

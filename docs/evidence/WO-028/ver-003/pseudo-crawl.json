@@ -1,0 +1,7288 @@
+{
+ "pseudo": {
+  "frames": 7523,
+  "studies": 80,
+  "errors": [],
+  "uncovered": [
+   {
+    "count": 724,
+    "kind": "text",
+    "tag": "code",
+    "text": "nextVelocity = clipLength(body.velocity + acceleration * timeStep, maxSpeed)\n  next[body] = body with velocity = nextVelocity,\n    position ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flocking",
+    "studies": [
+     "flocking",
+     "making-the-creatures"
+    ]
+   },
+   {
+    "count": 482,
+    "kind": "text",
+    "tag": "code",
+    "text": "offset = target - position\ndesired = sign(offset) * maxSpeed\ndesired *= min(1, abs(offset) / slowRadius)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "arrive",
+    "studies": [
+     "arrive"
+    ]
+   },
+   {
+    "count": 482,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = clamp((desired - velocity) / responseTime,\n                     -maxAcceleration, maxAcceleration)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "arrive",
+    "studies": [
+     "arrive"
+    ]
+   },
+   {
+    "count": 482,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clamp(velocity + acceleration * dt,\n                 -maxSpeed, maxSpeed)\nposition = position + velocity * dt⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "arrive",
+    "studies": [
+     "arrive"
+    ]
+   },
+   {
+    "count": 462,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each member, using the old formation:\n  oldSlot = engine.slotPosition(formation, assigned slot)\n  acceleration[member] = engine.arrive(m",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "group-movement",
+    "studies": [
+     "group-movement"
+    ]
+   },
+   {
+    "count": 462,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each member, using only its old state:\n  nextVelocity = capLength(velocity + acceleration[member] * timeStep, member.maxSpeed)\n  nextPos",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "group-movement",
+    "studies": [
+     "group-movement"
+    ]
+   },
+   {
+    "count": 462,
+    "kind": "text",
+    "tag": "code",
+    "text": "nextFormation = engine.advanceFormation(formation, nextMembers, beacon, timeStep)\nstate = { members: nextMembers, formation: nextFormation }",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "group-movement",
+    "studies": [
+     "group-movement"
+    ]
+   },
+   {
+    "count": 462,
+    "kind": "text",
+    "tag": "code",
+    "text": "slotError = maximum distance(member, engine.slotPosition(formation, assigned slot))\nfor each member:\n  finalSlot = beacon + assigned offset\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "group-movement",
+    "studies": [
+     "group-movement"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = sceneEngine.seek(body, beacon)\n// seek returns normalise(offset) * body.maxAcceleration\n// normalise of a zero vector is a ze",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "seek",
+    "studies": [
+     "seek"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "trialVelocity = body.velocity + acceleration * timeStep\nvelocity = clipLength(trialVelocity, body.maxSpeed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "seek",
+    "studies": [
+     "seek"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "position = body.position + velocity * timeStep\nbody = body with { position, velocity }\n// Repeat from the new state; there is no arrival con",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "seek",
+    "studies": [
+     "seek"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "route = dropReachedCorners(state.route, targetRadius, cornerSpeed)\n// The initial route is [goal].\n// Keep each corner until both distance a",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-pipeline",
+    "studies": [
+     "steering-pipeline"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "inflatedRadius = palletRadius + courierRadius + safetyMargin\naccepted = false\nrepeat at most maxChecks:\n  waypoint = first(route)\n  accelera",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-pipeline",
+    "studies": [
+     "steering-pipeline"
+    ]
+   },
+   {
+    "count": 442,
+    "kind": "text",
+    "tag": "code",
+    "text": "if accepted:\n  return preview\nacceleration = engine.matchVelocity(body, zeroVelocity, responseTime)\nreturn integrateVelocityThenPosition(sta",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-pipeline",
+    "studies": [
+     "steering-pipeline"
+    ]
+   },
+   {
+    "count": 402,
+    "kind": "text",
+    "tag": "code",
+    "text": "separation = engine.separate(body, indexInLocal, local,\n    threshold = separationThreshold, falloff = linear)\n  cohesion = zero when neighb",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flocking",
+    "studies": [
+     "flocking"
+    ]
+   },
+   {
+    "count": 402,
+    "kind": "text",
+    "tag": "code",
+    "text": "alignment = zero when neighbours is empty, otherwise\n    engine.matchVelocity(body, meanVelocity, responseTime)\n  cruise = engine.matchVeloc",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flocking",
+    "studies": [
+     "flocking"
+    ]
+   },
+   {
+    "count": 402,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = engine.blend([\n    (separationWeight, separation), (cohesionWeight, cohesion),\n    (alignmentWeight, alignment), (cruiseWeigh",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flocking",
+    "studies": [
+     "flocking"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "if abs(error) <= angleTolerance and abs(angularVelocity) <= speedTolerance:\n  equivalentCommand = targetHeading - (rawError - error)\n  retur",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "align",
+    "studies": [
+     "align"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "desired = 0\nif abs(error) > angleTolerance:\n  desired = sign(error) * maxAngularSpeed\n  desired *= min(1, abs(error) / slowRadius)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "align",
+    "studies": [
+     "align"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "requested = (desired - angularVelocity) / responseTime\nacceleration = clamp(requested, -maxAngularAcceleration, maxAngularAcceleration)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "align",
+    "studies": [
+     "align"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "angularVelocity = clamp(angularVelocity + acceleration * timeStep,\n                        -maxAngularSpeed, maxAngularSpeed)\nheading = head",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "align",
+    "studies": [
+     "align"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "formation = advanceFormation(formation, previousMembers, surveyGate, timeStep)\ntargets = assignment.map(member => slotPosition(formation, me",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "coordinated-movement",
+    "studies": [
+     "coordinated-movement"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each robot, using the previous members:\n  acceleration = arrive(robot, itsTarget, arrivalTuning)\n  velocity = clipLength(robot.velocity ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "coordinated-movement",
+    "studies": [
+     "coordinated-movement"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "cameraError = distance(camera.position, cameraSlot)\nmeanError = mean(members.map(robot => distance(robot.position, itsSlot)))\nremember(forma",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "coordinated-movement",
+    "studies": [
+     "coordinated-movement"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "if direction.x == 0 and direction.y == 0:\n  targetHeading = heading  // no bearing: brake at current facing\nelse:\n  targetHeading = degrees(",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "face",
+    "studies": [
+     "face"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "next = alignStep({ heading, angularVelocity }, targetHeading,\n                 { slowRadius, maxAngularSpeed, maxAngularAcceleration,\n      ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "face",
+    "studies": [
+     "face"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "heading = next.heading\nangularVelocity = next.angularVelocity\nseconds = seconds + timeStep\n// cameraPosition stays fixed; sample the beacon ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "face",
+    "studies": [
+     "face"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "profile = sheepProfile when body.species is sheep, otherwise goatProfile\n  wanderWeight = profile.wanderWeight\n  fleeWeight = profile.fleeWe",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "making-the-creatures",
+    "studies": [
+     "making-the-creatures"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "separation = engine.separate(body, body.index, old,\n    threshold = separationThreshold, falloff = linear)\n  cohesion = zero when neighbours",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "making-the-creatures",
+    "studies": [
+     "making-the-creatures"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "angle = wanderAmplitude * engine.sine(wanderRate * seconds) * body.wanderSign\n  wandering = engine.wander(body with wanderAngle = angle,\n   ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "making-the-creatures",
+    "studies": [
+     "making-the-creatures"
+    ]
+   },
+   {
+    "count": 322,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = engine.blend([\n    (separationWeight, separation), (cohesionWeight, cohesion),\n    (alignmentWeight, alignment), (wanderWeigh",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "making-the-creatures",
+    "studies": [
+     "making-the-creatures"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "if step >= releaseStep: remove lookout and its assignment\noccupied = assignment.map(entry => entry.slot)\nif not pattern.supportsSlots(occupi",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "formation-pattern-interface",
+    "studies": [
+     "formation-pattern-interface"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "angle = turnDegrees * radiansPerDegree * turnProgress(step)\nheading = (engine.cosine(angle), engine.sine(angle))\nfor each stored slot:\n  cor",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "formation-pattern-interface",
+    "studies": [
+     "formation-pattern-interface"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each member:\n  a = arrive(member, target[assignedSlot(member)],\n             slowRadius, targetRadius, responseTime)\n  velocity = clipLe",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "formation-pattern-interface",
+    "studies": [
+     "formation-pattern-interface"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "[first, seed] = seededUniform(seed)\n[second, seed] = seededUniform(seed)\nsample = first - second\nturnRate = sample * maxRotation",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "kinematic-wander",
+    "studies": [
+     "kinematic-wander"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "position = position + velocity * timeStep\nheading = heading + turnRate * timeStep\nremember(position, heading, seed)⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "kinematic-wander",
+    "studies": [
+     "kinematic-wander"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "brake = engine.matchVelocity(body, zero, responseTime)\nclearance = zero if length(push) == 0 else engine.blend([\n  { acceleration: push, wei",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "priority-steering",
+    "studies": [
+     "priority-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "travel = engine.arrive(body, loadingBay,\n  { slowRadius, targetRadius, timeToTarget: responseTime })",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "priority-steering",
+    "studies": [
+     "priority-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "groups = [clearance, travel] if clearancePriority == 1\n         else [travel, clearance]\nacceleration = engine.firstActive(groups, epsilon)\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "priority-steering",
+    "studies": [
+     "priority-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clipLength(velocity + acceleration * timeStep, maxSpeed)\nposition = position + velocity * timeStep\n// Read these new values on th",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "priority-steering",
+    "studies": [
+     "priority-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each member, reading the previous formation:\n  target = slotPosition(formation, assignedSlot(member))\n  a = arrive(member, target, slowR",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-level-formation-steering",
+    "studies": [
+     "two-level-formation-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "# These planning lines run inside engine advanceFormation.\ngap = distance(objective, anchor)\nspeed = anchorSpeed / planningStepSeconds\nspeed",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-level-formation-steering",
+    "studies": [
+     "two-level-formation-steering"
+    ]
+   },
+   {
+    "count": 242,
+    "kind": "text",
+    "tag": "code",
+    "text": "# These moderation lines are in the same engine call.\nmean = centroid(nextMembers.positions)\npulled = proposed + (mean - proposed) * anchorP",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-level-formation-steering",
+    "studies": [
+     "two-level-formation-steering"
+    ]
+   },
+   {
+    "count": 202,
+    "kind": "text",
+    "tag": "code",
+    "text": "applied = max(-motorBrake, min(0, requested.x))",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "motor-control",
+    "studies": [
+     "motor-control"
+    ]
+   },
+   {
+    "count": 202,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = max(0, velocity + applied * timeStep)\nposition = position + velocity * timeStep⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "motor-control",
+    "studies": [
+     "motor-control"
+    ]
+   },
+   {
+    "count": 202,
+    "kind": "text",
+    "tag": "code",
+    "text": "centre = position + heading * wanderOffset\nspoke = rotateByHeading((cos(angle), sin(angle)), heading)\ntarget = centre + spoke * wanderRadius",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "wander",
+    "studies": [
+     "wander"
+    ]
+   },
+   {
+    "count": 202,
+    "kind": "text",
+    "tag": "code",
+    "text": "desired = normalize(target - position) * maxSpeed * walkingFraction\nrequested = (desired - velocity) / responseTime\n# engine.wander computes",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "wander",
+    "studies": [
+     "wander"
+    ]
+   },
+   {
+    "count": 202,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clampLength(velocity + acceleration * timeStep, maxSpeed)\nposition += velocity * timeStep\nif length(velocity) > 0: heading = norm",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "wander",
+    "studies": [
+     "wander"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "probe = engine.wander(body,\n  { wanderRadius, wanderOffset, timeToTarget: responseTime })\nfallback = engine.blend([\n  { acceleration: probe,",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "equilibrium-fallback",
+    "studies": [
+     "equilibrium-fallback"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = engine.firstActive([primary, fallback], epsilon)\n// Use the first vector with length > epsilon.\n// If both decline, return ze",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "equilibrium-fallback",
+    "studies": [
+     "equilibrium-fallback"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clipLength(velocity + acceleration * timeStep, maxSpeed)\nposition = position + velocity * timeStep\n// Rebuild both requests from ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "equilibrium-fallback",
+    "studies": [
+     "equilibrium-fallback"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "if hit exists: target = hit.point + hit.normal * avoidDistance\nelse: target = deliveryPoint",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "obstacle-and-wall-avoidance",
+    "studies": [
+     "obstacle-and-wall-avoidance"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = sceneEngine.seek(body, target)\n// Seek pulls towards the selected point; it does not command a stop.",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "obstacle-and-wall-avoidance",
+    "studies": [
+     "obstacle-and-wall-avoidance"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "nearestWallPoint = (wallX, clamp(position.y, wallBottom, wallTop))\nbodyClearance = distance(position, nearestWallPoint) - radius\nvelocity = ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "obstacle-and-wall-avoidance",
+    "studies": [
+     "obstacle-and-wall-avoidance"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "if speed == 0:\n  prediction = maxPrediction\nelse:\n  prediction = min(maxPrediction, distance / speed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "pursue",
+    "studies": [
+     "pursue"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "predicted = reed.position + reed.velocity * prediction\nacceleration = sceneEngine.seek(ash, predicted)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "pursue",
+    "studies": [
+     "pursue"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clipLength(ash.velocity + acceleration * timeStep,\n                      ash.maxSpeed)\nash = ash with { position: ash.position + ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "pursue",
+    "studies": [
+     "pursue"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "seekRequest = engine.seek(body, depot)\narriveRequest = engine.arrive(body, depot,\n  { slowRadius, targetRadius, timeToTarget: responseTime }",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-behaviors",
+    "studies": [
+     "steering-behaviors"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = arrivalEnabled == 1 ? arriveRequest : seekRequest\n// Inspect the unselected request, but do not add it.",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-behaviors",
+    "studies": [
+     "steering-behaviors"
+    ]
+   },
+   {
+    "count": 162,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clipLength(velocity + acceleration * timeStep, maxSpeed)\nposition = position + velocity * timeStep⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-behaviors",
+    "studies": [
+     "steering-behaviors"
+    ]
+   },
+   {
+    "count": 150,
+    "kind": "text",
+    "tag": "code",
+    "text": "D = speed⁴ - gravity * (gravity*d² + 2*h*speed²)\nif D < 0: return no launch\nroot = sqrt(D)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "the-firing-solution",
+    "studies": [
+     "the-firing-solution"
+    ]
+   },
+   {
+    "count": 150,
+    "kind": "text",
+    "tag": "code",
+    "text": "slopes = unique([(speed² - root)/(gravity*d),\n                 (speed² + root)/(gravity*d)])\nfor slope in slopes:\n  vx = speed / sqrt(1 + sl",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "the-firing-solution",
+    "studies": [
+     "the-firing-solution"
+    ]
+   },
+   {
+    "count": 150,
+    "kind": "text",
+    "tag": "code",
+    "text": "choose the candidate with the shorter targetTime\nfor each candidate and each preview time t:\n  x = startX + vx*t\n  height = launchHeight + v",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "the-firing-solution",
+    "studies": [
+     "the-firing-solution"
+    ]
+   },
+   {
+    "count": 150,
+    "kind": "text",
+    "tag": "code",
+    "text": "waterTime = (vy + sqrt(vy² + 2*gravity*launchHeight)) / gravity\ninclude the exact waterTime event between regular samples\nfor t >= waterTime",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "the-firing-solution",
+    "studies": [
+     "the-firing-solution"
+    ]
+   },
+   {
+    "count": 124,
+    "kind": "text",
+    "tag": "code",
+    "text": "if distance <= satisfactionRadius:\n  return { position: position, velocity: 0 }",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "kinematic-arrive",
+    "studies": [
+     "kinematic-arrive",
+     "satisfaction-radius"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each neighbour j:\n    d = distance(before[i], before[j])\n    if falloff is linear:\n      strength = A * (R - d) / R\n    else if d == 0:\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "separation",
+    "studies": [
+     "separation"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each (j, d, strength) in neighbourData:\n    away = normalise(before[i].position - before[j].position)\n    if d == 0: away = engineTieDir",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "separation",
+    "studies": [
+     "separation"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each courier i:\n  nextVelocity = capLength(before[i].velocity + acceleration[i] * dt, maxSpeed)\n  nextPosition = before[i].position + ne",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "separation",
+    "studies": [
+     "separation"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "weightedSeek = seekRequest * seekWeight\nweightedSeparation = separationRequest * separationWeight\nraw = weightedSeek + weightedSeparation\n//",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "weighted-blending",
+    "studies": [
+     "weighted-blending"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = blend([\n  { acceleration: seekRequest, weight: seekWeight },\n  { acceleration: separationRequest, weight: separationWeight }\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "weighted-blending",
+    "studies": [
+     "weighted-blending"
+    ]
+   },
+   {
+    "count": 122,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = capLength(before.velocity + acceleration * dt, maxSpeed)\nposition = before.position + velocity * dt\nNia = before with position an",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "weighted-blending",
+    "studies": [
+     "weighted-blending"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "progress = clamp((step - turnStart) / turnSteps, 0, 1)\nangle = turnDegrees * pi / 180 * progress\nMira.heading = (cosine(angle), sine(angle))",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "fixed-formations",
+    "studies": [
+     "fixed-formations"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "targets = offsets.map((offset, index) =>\n  slotPosition(formation, index))",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "fixed-formations",
+    "studies": [
+     "fixed-formations"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "// Exclude Mira's own slot; the first sample has no displacement.\ndisplacements = escortTargets - previousEscortTargets\nrequiredSpeed = max(",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "fixed-formations",
+    "studies": [
+     "fixed-formations"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "// The engine alternates slots along the wedge's arms,\n// then subtracts the mean of all generated offsets.\noffsets = patternSlots(\"wedge\", ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scalable-formations",
+    "studies": [
+     "scalable-formations"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "positions = offsets.map(offset => anchor + offset)\nretainedShift = max(distance(previous[i], positions[i])\n                    for each reta",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scalable-formations",
+    "studies": [
+     "scalable-formations"
+    ]
+   },
+   {
+    "count": 102,
+    "kind": "text",
+    "tag": "code",
+    "text": "centreSpan = max(positions.y) - min(positions.y)\nwidth = centreSpan + 2 * memberRadius\nupperClearance = min(positions.y) - memberRadius - up",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scalable-formations",
+    "studies": [
+     "scalable-formations"
+    ]
+   },
+   {
+    "count": 98,
+    "kind": "text",
+    "tag": "code",
+    "text": "feasibleVelocity = engine.clipLength(agreedVelocity, maxSpeed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "actuator",
+    "studies": [
+     "actuator"
+    ]
+   },
+   {
+    "count": 98,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = engine.matchVelocity(body, feasibleVelocity, responseTime)\n// body.maxAcceleration bounds this output",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "actuator",
+    "studies": [
+     "actuator"
+    ]
+   },
+   {
+    "count": 98,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = engine.clipLength(velocity + acceleration * timeStep, maxSpeed)\nposition = position + velocity * timeStep⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "actuator",
+    "studies": [
+     "actuator"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "contact = courier.radius + porter.radius\nif length(r) < contact: selectedAway = -r\nelse if t is defined and 0 < t < predictionHorizon\n      ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "collision-avoidance",
+    "studies": [
+     "collision-avoidance"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = zero if selectedAway is null\n               else normalise(selectedAway) * maxAcceleration\n// The model obtains this result b",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "collision-avoidance",
+    "studies": [
+     "collision-avoidance"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "courier.velocity = clipLength(courier.velocity + acceleration * dt, maxSpeed)\ncourier.position += courier.velocity * dt\nporter.position += p",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "collision-avoidance",
+    "studies": [
+     "collision-avoidance"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "acceleration = sceneEngine.flee(body, point(threat))\n// engine: normalise(offset) * maxAcceleration * max(0, 1 - distance / engineRadius)\n//",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flee",
+    "studies": [
+     "flee"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clamp(velocity + acceleration * timeStep,\n                 -maxSpeed, maxSpeed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flee",
+    "studies": [
+     "flee"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "code",
+    "text": "position = position + velocity * timeStep⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "flee",
+    "studies": [
+     "flee"
+    ]
+   },
+   {
+    "count": 66,
+    "kind": "text",
+    "tag": "code",
+    "text": "requestedVelocity = offset / timeToTarget\nvelocity = clamp(requestedVelocity, -maxSpeed, maxSpeed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "kinematic-arrive",
+    "studies": [
+     "kinematic-arrive"
+    ]
+   },
+   {
+    "count": 66,
+    "kind": "text",
+    "tag": "code",
+    "text": "nextPosition = position + velocity * timeStep\nreturn { position: nextPosition, velocity: velocity }⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "kinematic-arrive",
+    "studies": [
+     "kinematic-arrive"
+    ]
+   },
+   {
+    "count": 66,
+    "kind": "text",
+    "tag": "code",
+    "text": "requested = velocityGap / responseTime\n# On this axis, engine.matchVelocity performs this clamp.\nacceleration = clamp(requested, -maxAcceler",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "velocity-matching",
+    "studies": [
+     "velocity-matching"
+    ]
+   },
+   {
+    "count": 66,
+    "kind": "text",
+    "tag": "code",
+    "text": "courier.velocity = clamp(courier.velocity + acceleration * timeStep,\n                         -maxSpeed, maxSpeed)\ncourier.position += couri",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "velocity-matching",
+    "studies": [
+     "velocity-matching"
+    ]
+   },
+   {
+    "count": 66,
+    "kind": "text",
+    "tag": "code",
+    "text": "positionGap = cart.position - courier.position\ndrawLink(courier.position, cart.position)\nplot(courier.velocity, cart.velocity)  # observatio",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "velocity-matching",
+    "studies": [
+     "velocity-matching"
+    ]
+   },
+   {
+    "count": 58,
+    "kind": "text",
+    "tag": "code",
+    "text": "D = launchVerticalVelocity² + 2 * gravity * (launchHeight - selectedHeight)\nlandingTime = none\nif D >= 0:\n  laterRoot = (launchVerticalVeloc",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "projectile-trajectory",
+    "studies": [
+     "projectile-trajectory"
+    ]
+   },
+   {
+    "count": 58,
+    "kind": "text",
+    "tag": "code",
+    "text": "for previewTime = 0, dt, 2*dt, ... horizon:\n  t = min(previewTime, landingTime), when a landing exists\n  x = startX + horizontalVelocity * t",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "projectile-trajectory",
+    "studies": [
+     "projectile-trajectory"
+    ]
+   },
+   {
+    "count": 58,
+    "kind": "text",
+    "tag": "code",
+    "text": "if landingTime exists and previewTime >= landingTime:\n    set height to selectedHeight and velocity to zero after contact\n    end the previe",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "projectile-trajectory",
+    "studies": [
+     "projectile-trajectory"
+    ]
+   },
+   {
+    "count": 58,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = sign(offset) * speed\nnextPosition = position + velocity * timeStep\nreturn { position: nextPosition, velocity: velocity }⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "satisfaction-radius",
+    "studies": [
+     "satisfaction-radius"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "candidateVelocity = capLength3(velocity + acceleration * dt, maxSpeed)\nnextVelocity = candidateVelocity\ntravel = candidateVelocity * dt\nif l",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "movement-in-the-third-dimension",
+    "studies": [
+     "movement-in-the-third-dimension"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "if horizontalLength(candidateVelocity) > 0:\n  yaw = atan2(candidateVelocity.z, candidateVelocity.x)\nif length3(candidateVelocity) > 0:\n  pit",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "movement-in-the-third-dimension",
+    "studies": [
+     "movement-in-the-third-dimension"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "candidateVelocity = engine.clipLength(velocity + acceleration * dt, maxSpeed)\ntravel = candidateVelocity * dt\nif length(travel) >= distance(",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-and-a-half-dimensions",
+    "studies": [
+     "two-and-a-half-dimensions"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "nextHeight = localSurfaceHeight(plan.x, rampStart, rampRun, rise)\nverticalSpeed = (nextHeight - position.height) / dt\nposition = (plan.x, ne",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-and-a-half-dimensions",
+    "studies": [
+     "two-and-a-half-dimensions"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "if length(candidateVelocity) > 0:\n  yaw = atan2(candidateVelocity.y, candidateVelocity.x)\npitch = 0; roll = 0\ndrawPlanAndUprightProfile(posi",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "two-and-a-half-dimensions",
+    "studies": [
+     "two-and-a-half-dimensions"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "correctionTarget = skiffVelocity + correctionDirection * velocityError",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "variable-matching",
+    "studies": [
+     "variable-matching"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "body = bodyAt(skiffPosition, skiffVelocity, maxSpeed, maxAcceleration)\nacceleration = sceneEngine.matchVelocity(body, point(correctionTarget",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "variable-matching",
+    "studies": [
+     "variable-matching"
+    ]
+   },
+   {
+    "count": 50,
+    "kind": "text",
+    "tag": "code",
+    "text": "skiffVelocity = clamp(skiffVelocity + acceleration * timeStep,\n                      -maxSpeed, maxSpeed)\nskiffPosition = skiffPosition + sk",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "variable-matching",
+    "studies": [
+     "variable-matching"
+    ]
+   },
+   {
+    "count": 42,
+    "kind": "text",
+    "tag": "code",
+    "text": "marshalTerm = { acceleration: marshal, weight: marshalWeight }\ngoalTerm = { acceleration: goal, weight: goalWeight }\nblended = engine.blend(",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "blending-versus-arbitration",
+    "studies": [
+     "blending-versus-arbitration"
+    ]
+   },
+   {
+    "count": 42,
+    "kind": "text",
+    "tag": "code",
+    "text": "marshalGroup = engine.blend([marshalTerm], maxAcceleration)\ngoalGroup = engine.blend([goalTerm], maxAcceleration)\narbitrated = engine.firstA",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "blending-versus-arbitration",
+    "studies": [
+     "blending-versus-arbitration"
+    ]
+   },
+   {
+    "count": 42,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each policy's own trolley state:\n  acceleration = policy == blend ? blended : arbitrated\n  velocity = clipLength(velocity + acceleration",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "blending-versus-arbitration",
+    "studies": [
+     "blending-versus-arbitration"
+    ]
+   },
+   {
+    "count": 36,
+    "kind": "text",
+    "tag": "code",
+    "text": "while x < markerX - positionTolerance and steps remain:\n  acceleration = engine.matchVelocity(body, requiredVelocity, responseTime)\n  veloci",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "jump-points",
+    "studies": [
+     "jump-points"
+    ]
+   },
+   {
+    "count": 36,
+    "kind": "text",
+    "tag": "code",
+    "text": "positionOK = abs(x - markerX) <= positionTolerance\nvelocityOK = abs(velocity - requiredVelocity) <= velocityTolerance\nif not (positionOK and",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "jump-points",
+    "studies": [
+     "jump-points"
+    ]
+   },
+   {
+    "count": 36,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each airborne sample t through flightDuration:\n  x = takeoffX + takeoffVelocity * t\n  height = verticalVelocity * t - gravity * t * t / ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "jump-points",
+    "studies": [
+     "jump-points"
+    ]
+   },
+   {
+    "count": 36,
+    "kind": "text",
+    "tag": "text",
+    "text": "watcher⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 34,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = velocity + output.linear * timeStep",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-output",
+    "studies": [
+     "steering-output"
+    ]
+   },
+   {
+    "count": 34,
+    "kind": "text",
+    "tag": "code",
+    "text": "rotation = rotation + output.angular * timeStep",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-output",
+    "studies": [
+     "steering-output"
+    ]
+   },
+   {
+    "count": 34,
+    "kind": "text",
+    "tag": "code",
+    "text": "position = position + velocity * timeStep\nheading = heading + rotation * timeStep⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "steering-output",
+    "studies": [
+     "steering-output"
+    ]
+   },
+   {
+    "count": 29,
+    "kind": "text",
+    "tag": "text",
+    "text": "yet⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model",
+     "content-based-router",
+     "message-store",
+     "recipient-list",
+     "resequencer"
+    ]
+   },
+   {
+    "count": 28,
+    "kind": "text",
+    "tag": "text",
+    "text": "cmd_2⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier",
+     "request-reply"
+    ]
+   },
+   {
+    "count": 27,
+    "kind": "text",
+    "tag": "text",
+    "text": "store⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message",
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a session starts listening, or finishes its order:\n  put it at the back of the line of free sessions\n  hand out work",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "hand out work:\n  while an order is waiting and a session is free:\n    take the oldest order off the queue\n    give it to the session that ha",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a session is given an order:\n  work on it, telling no other session\n  when the work is done, the session has finished its order⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each report for that order:\n  update the record with the report\n  if the report is a failed verification:\n    record.failures = record.fa",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "decide the next phrase from the record:\n  implementation-ready or repair-complete: send resume: verify to the verifier\n  failed verification",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 26,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the final review passed, or failures reached the limit:\n  send the stop to the operator\n  read no more reports for this order⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 24,
+    "kind": "text",
+    "tag": "text",
+    "text": "cmd_1⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier",
+     "request-reply"
+    ]
+   },
+   {
+    "count": 24,
+    "kind": "text",
+    "tag": "text",
+    "text": "failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier",
+     "event-message",
+     "process-manager"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each quote from the poll:\n  put it in the memory, pushing the older one out\n  give it to every reader present at that moment",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share-replay",
+    "studies": [
+     "share-replay"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a later reader arrives:\n  give it the quote in the memory straight away\n  then the live quotes, as every other reader gets them",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share-replay",
+    "studies": [
+     "share-replay"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a reader leaves:\n  remove it from the readers present\n  (with no reader left the poll keeps running\n   and keeps filling the memory, fo",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share-replay",
+    "studies": [
+     "share-replay"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the poll completes:\n  keep the memory and the completion: a later reader gets the stored\n  quote and the completion at once, and nothin",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share-replay",
+    "studies": [
+     "share-replay"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each finding from the verifier:\n  route = the first rule in the list whose test the finding passes",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "if no rule passed:\n    route = follow-up",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "send the finding, unchanged, on the channel that route names",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the verifier's findings end:\n  end the blocking, operator and follow-up channels⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "replier, on each request:\n  do the work\n  send the reply with correlation id = the request's id",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each reply, in whatever order replies arrive:\n  waiter = pending[the reply's correlation id]\n  if there is a waiter:\n    give the reply t",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "once a waiter has its reply:\n  delete pending[its id]\n  a later reply with that id finds no waiter: drop it⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "whenever the verifier is free and the queue is not empty:\n  take the oldest request from the queue",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "if now > its expiry:\n    send it to the dead-letter channel\n    (the verifier is still free: take the next one)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 22,
+    "kind": "text",
+    "tag": "code",
+    "text": "otherwise:\n    hand it to the verifier on the next step\n    the verifier is busy until it has verified it⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "performer = the one for the request's kind of work:\n    implement or fix -> executor, verify -> verifier,\n    review -> reviewer",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "if performer is below its limit of requests in hand:\n    hand the request to it\n  else:\n    add the request to the end of performer's queue",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a performer finishes a request:\n  if its queue is not empty:\n    hand it the oldest request in its queue⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the event's number is not next:\n    put it in held, and wait for the next event",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "in the next step, send it down the FIFO channel\n  next = next + 1",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 20,
+    "kind": "text",
+    "tag": "code",
+    "text": "while held has the event numbered next:\n    take that event out of held and send it down the FIFO channel after the last\n    next = next + 1",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 19,
+    "kind": "text",
+    "tag": "code",
+    "text": "send value to every current listener",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "replay-subject",
+    "studies": [
+     "replay-subject"
+    ]
+   },
+   {
+    "count": 19,
+    "kind": "text",
+    "tag": "code",
+    "text": "when someone starts listening:\n  add them to the current listeners\n  send them each value in buffer, oldest first",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "replay-subject",
+    "studies": [
+     "replay-subject"
+    ]
+   },
+   {
+    "count": 19,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the source finishes or fails:\n  keep buffer, and remember how the source ended\n  tell every current listener the same way\n  (a later li",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "replay-subject",
+    "studies": [
+     "replay-subject"
+    ]
+   },
+   {
+    "count": 19,
+    "kind": "text",
+    "tag": "text",
+    "text": "log⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store",
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each hit:\n  correction[hit] = outwardUnitNormal(hit.wall) * wallAcceleration\ngoal = engine.seek(rover, delivery)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "corner-trap",
+    "studies": [
+     "corner-trap"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "admitted = all hit corrections\nif winnerRay and both rays hit: admitted = [upper correction]\nterms = [goal, ...admitted].map(a => ({ acceler",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "corner-trap",
+    "studies": [
+     "corner-trap"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "velocity = clipLength(velocity + acceleration * timeStep, maxSpeed)\nposition = position + velocity * timeStep\nnext update casts from this ne",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "corner-trap",
+    "studies": [
+     "corner-trap"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "set = sets[order], or a new empty set kept there\n  add the report to set",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "if set holds fewer than three reports (one from each reviewer, if none sends two):\n    stop here; the set waits for its next report",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "in the next step, send the Next phase one message:\n    the order, with the findings of every report in set added up\n  remove sets[order]⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "text",
+    "text": "subscriber⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the planner publishes an order:\n  for each session on the list right now:\n    put a copy of the order on that session's own line",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a session reads the copy on its line:\n  take that copy off its line\n  (no other session's copy is touched)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "after the copies are handed out:\n  forget the order\n  (a session that subscribes later never hears of it)⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "text",
+    "text": "siblings⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "text",
+    "text": "list⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each close:\n  if the close publishes a release:\n    recipients = declared, as it stands now\n  otherwise:\n    recipients = nobody",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "write (the close's order, recipients) to the close record",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each sibling in recipients:\n    send a fresh copy of the close on that sibling's main",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 18,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the closes end:\n  end every sibling's channel and the close record⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 17,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a part of the page starts listening to steps:\n  if steps has ended: pass on that ending at once, and add nothing\n  otherwise: add the l",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "subject",
+    "studies": [
+     "subject"
+    ]
+   },
+   {
+    "count": 17,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a press arrives:\n  for each listener on the list at this moment:\n    hand it the press\n  keep nothing of the press",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "subject",
+    "studies": [
+     "subject"
+    ]
+   },
+   {
+    "count": 17,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the presses end, normally or with an error:\n  pass that ending to every listener on the list\n  empty the list, and remember that steps ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "subject",
+    "studies": [
+     "subject"
+    ]
+   },
+   {
+    "count": 17,
+    "kind": "text",
+    "tag": "text",
+    "text": "only⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter",
+     "message-translator"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "angle = (lowerAngle + upperAngle) / 2\nvelocity = launchSpeed * (cos(angle), sin(angle))\nrepeat at most flightSteps times:\n  vx = vx + (-drag",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "iterative-targeting",
+    "studies": [
+     "iterative-targeting"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "if no ground crossing: fail unfinished\nerror = range - targetX\nif abs(error) <= tolerance: accept angle",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "iterative-targeting",
+    "studies": [
+     "iterative-targeting"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "if lowError * error > 0:\n  lowerAngle = angle\n  lowError = error\nelse:\n  upperAngle = angle\nrepeat midpoint prediction while guesses remain\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "iterative-targeting",
+    "studies": [
+     "iterative-targeting"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each value from an input:\n  put the value in that input's slot\n  (whatever the slot held before is forgotten)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "combine-latest",
+    "studies": [
+     "combine-latest"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "if any slot is still empty:\n    send nothing yet",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "combine-latest",
+    "studies": [
+     "combine-latest"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "otherwise:\n    send the latest of every slot together\n    (here: joined into the row)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "combine-latest",
+    "studies": [
+     "combine-latest"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "when an input finishes:\n  leave its last value in its slot\n  if every input has finished:\n    finish the row\nif an input fails:\n  fail the r",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "combine-latest",
+    "studies": [
+     "combine-latest"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each quote from the poll:\n  give it to every reader present at that moment\n  (store nothing: a reader who arrives later never sees it)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share",
+    "studies": [
+     "share"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a later reader arrives:\n  add it to the readers present\n  (it waits for the next quote; nothing is replayed)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share",
+    "studies": [
+     "share"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a reader leaves:\n  remove it from the readers present\n  if none is left:\n    stop the poll and forget it\n    (the next reader to arrive",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share",
+    "studies": [
+     "share"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the poll completes or fails:\n  pass that on to every reader present, which ends them\n  forget the poll: the next reader to arrive is a ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "share",
+    "studies": [
+     "share"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "text",
+    "text": "go⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator",
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "text",
+    "text": "table⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 16,
+    "kind": "text",
+    "tag": "text",
+    "text": "normalised form⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "request = start fetching the pages for query",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "switch-map",
+    "studies": [
+     "switch-map"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each page from the current request:\n  show page",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "switch-map",
+    "studies": [
+     "switch-map"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the box has completed and the current request has completed:\n  complete the output⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "switch-map",
+    "studies": [
+     "switch-map"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each page from the report:\n  cancel the timer\n  pass the page on\n  count it and keep it as the last page\n  start a timer for the gap wait",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "timeout",
+    "studies": [
+     "timeout"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the timer runs out:\n  stop listening to the report\n    (which forgets the last page)\n  tell the reader the report timed out\n    (with t",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "timeout",
+    "studies": [
+     "timeout"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the report completes or fails:\n  cancel the timer\n  pass the completion or failure on⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "timeout",
+    "studies": [
+     "timeout"
+    ]
+   },
+   {
+    "count": 15,
+    "kind": "text",
+    "tag": "text",
+    "text": "objective⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "otherwise:\n    turn the draft away\n    (save is never called for it, and nothing is queued)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "exhaust-map",
+    "studies": [
+     "exhaust-map"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each answer from the running save:\n  pass the answer on",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "exhaust-map",
+    "studies": [
+     "exhaust-map"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the running save completes:\n  running = none\n  (the next press starts a new save; drafts turned away stay lost)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "exhaust-map",
+    "studies": [
+     "exhaust-map"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the button has completed and no save is running:\n  complete the output⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "exhaust-map",
+    "studies": [
+     "exhaust-map"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each answer from the check:\n  pass it to the page\nif the check fails:\n  pass the failure to the page and stop there",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "repeat",
+    "studies": [
+     "repeat"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the check finishes:\n  finished = finished + 1\n  if finished = count:\n    tell the page there are no more answers",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "repeat",
+    "studies": [
+     "repeat"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "otherwise:\n    wait for the delay\n    then start the check again⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "repeat",
+    "studies": [
+     "repeat"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each value from the attempt:\n  pass it on\n  (even if this attempt fails later)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "retry",
+    "studies": [
+     "retry"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the attempt fails and retries used < count:\n  retries used = retries used + 1\n  wait delay\n  start a new attempt\n  (the error goes no f",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "retry",
+    "studies": [
+     "retry"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the attempt fails and retries used = count:\n  fail the output with this error",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "retry",
+    "studies": [
+     "retry"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the attempt completes:\n  complete the output⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "retry",
+    "studies": [
+     "retry"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "text",
+    "text": "order⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model",
+     "resequencer"
+    ]
+   },
+   {
+    "count": 14,
+    "kind": "text",
+    "tag": "text",
+    "text": "release⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "otherwise:\n    put photo at the back of the queue\n    (its upload is prepared only when its turn comes)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "concat-map",
+    "studies": [
+     "concat-map"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each answer from the running upload:\n  pass the answer on",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "concat-map",
+    "studies": [
+     "concat-map"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the running upload completes:\n  (an answer alone does not end its turn)\n  if the queue is not empty:\n    take the oldest photo off the ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "concat-map",
+    "studies": [
+     "concat-map"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the running upload fails:\n  pass the failure on\n  throw the queue away, unsent\n  stop listening for new photos",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "concat-map",
+    "studies": [
+     "concat-map"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the user is done adding, the queue is empty and no upload is running:\n  complete the output⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "concat-map",
+    "studies": [
+     "concat-map"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "text",
+    "text": "session⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "text",
+    "text": "to one session⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "text",
+    "text": "one session⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "operator sends \"status?\" on the control bus to every role\neach role answers on the control bus: what it works on, what it holds\nthe operator",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "operator sends pause to the verifier on the control bus\nthe verifier, before its next work record:\n  stops its routine and keeps the record ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "the executor, which was sent no pause, puts the next evidence on the work queue\nit waits there with the rest, untouched",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "operator sends direction to the verifier on the control bus\nthe verifier resumes its routine with the record it kept⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "requestor, to ask:\n  put the request on the request channel\n  carry on with other work; do not block",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "replier, for each request on the request channel:\n  put a receipt on the reply channel (optional)\n  do the work\n  put the reply on the reply",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "requestor, for each message on the reply channel:\n  if it is a receipt:\n    note that the request was accepted and keep waiting\n  if it is t",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 13,
+    "kind": "text",
+    "tag": "code",
+    "text": "requestor, when a deadline passes with no reply:\n  stop waiting and take the timeout path\n  a reply that arrives later is awaited by nobody:",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each amount from the feed, for each reader:\n  if the reader has no balance yet (no opening was given):\n    balance = amount\n  otherwise:\n",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scan",
+    "studies": [
+     "scan"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "send the reader's new balance",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scan",
+    "studies": [
+     "scan"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the feed finishes:\n  finish each reader's balances\n  (the last balance has already been sent)\nif the feed fails, or the addition throws",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "scan",
+    "studies": [
+     "scan"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "then start listening to the source on this listener's behalf",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "start-with",
+    "studies": [
+     "start-with"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each value from the source:\n  send value to the listener",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "start-with",
+    "studies": [
+     "start-with"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the source finishes or fails:\n  tell the listener the same way⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "start-with",
+    "studies": [
+     "start-with"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "text",
+    "text": "none yet⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "text",
+    "text": "confirmed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 12,
+    "kind": "text",
+    "tag": "text",
+    "text": "until commit⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a part of the page starts listening to status:\n  if status has ended: pass on that ending at once, and no value\n  otherwise:\n    add th",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "behavior-subject",
+    "studies": [
+     "behavior-subject"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a press pushes a value in:\n  replace the held value with it\n  hand it to every listener, even if it equals the last",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "behavior-subject",
+    "studies": [
+     "behavior-subject"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "when code reads the held value directly:\n  if status ended with an error: fail with that error\n  if status has been torn down: fail\n  otherw",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "behavior-subject",
+    "studies": [
+     "behavior-subject"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the source fails with error:\n  replacement = selector(error)\n  stop listening to the source\n  (the error itself goes no further)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "catch-error",
+    "studies": [
+     "catch-error"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "start listening to replacement\non each value from replacement:\n  pass it on",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "catch-error",
+    "studies": [
+     "catch-error"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "when replacement completes:\n  complete the output\nwhen replacement fails:\n  fail the output with its error⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "catch-error",
+    "studies": [
+     "catch-error"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "text",
+    "text": "and 32⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "text",
+    "text": "for 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message",
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "text",
+    "text": "router⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 31⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "text",
+    "text": "queue⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "text",
+    "text": "all⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "copyOf(record):\n  if record is a verification report: keep it whole\n  otherwise: keep only its envelope (which record, which channel, which ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the store receives a copy:\n  if the store is up: append the copy to its entries\n  otherwise: the copy is lost, and no one is told",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the audit asks about an order:\n  look up that order's entries in the store\n  answer from those entries alone\n  (a record whose copy was",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the shape is not tool-v0:\n    stop with an error naming the shape\n    (no row after this one is translated)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-translator",
+    "studies": [
+     "message-translator"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "new row = the same id,\n            shape tool-v1,\n            definition marked unavailable,\n            verification marked partial",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-translator",
+    "studies": [
+     "message-translator"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "send new row on the tool-v1 channel now\n  (nothing is remembered for the next row)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-translator",
+    "studies": [
+     "message-translator"
+    ]
+   },
+   {
+    "count": 10,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the chunk completes:\n  complete the tool-v1 channel⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "message-translator",
+    "studies": [
+     "message-translator"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "on each answer from any running upload:\n  pass it on at once, whichever photo was added first",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "merge-map",
+    "studies": [
+     "merge-map"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "if any upload fails:\n  pass the failure on\n  cut off every other running upload\n  stop listening for new photos",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "merge-map",
+    "studies": [
+     "merge-map"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the user is done adding and no upload is running:\n  complete the output⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "merge-map",
+    "studies": [
+     "merge-map"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "reply = call the application: GET /uifa-board-v1\n  (to the API this is an ordinary HTTP request)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the reply succeeds:\n    publish loadSuccess(reply.document) on the channel\n    forget the event being served",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the call fails:\n    error = describe it: network, timeout, HTTP or unknown\n    publish loadFailure(error) on the channel\n    forget the e",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "document⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "put command on the dispatch channel\ncarry on without waiting\n  (while every session is busy, the channel keeps the command)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a session is free and the channel holds a command:\n  take it; no other session receives this one\n  run command.procedure for command.or",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "send { answers: command.id, outcome } to the event store",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "if no answer naming command.id arrives within the wait:\n  put command on the dispatch channel again\n  (the next free session runs it again u",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "again⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message",
+     "control-bus",
+     "process-manager",
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "on 31⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each watcher of the event store:\n  on each new entry: update its own account of the order\n  (the entry carries no instruction)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "when a sweep reads the beacon:\n  age = time of the sweep - beacon.at\n  if age >= staleAfter: label it stale, keep it as history\n  otherwise:",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "when order 41 moves to final review:\n  append the new event to the event store\n  write it to the beacon\n  (if that write fails, the beacon g",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each command in the outbox:\n  copy it to the inbox\n  wait until the inbox says it is saved\n  delete the outbox's copy",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each command in the inbox:\n  hand it to the worker\n  wait for the worker's receipt\n  delete the inbox's copy",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "after any restart:\n  each store sends again what it still holds\n  the worker skips a command id it has already finished⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "entries⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "WO-031⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "order to all 3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "to all 3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "close⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "write to the outside store\n  (not part of the transaction: done now, whatever happens next)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "send receipt for command to receipts within transaction\nsend result entry for command to event log within transaction\n  (staged: neither cha",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "on a crash or an error before commit:\n  rollback(transaction)\n  (staged sends discarded; command visible in the outbox again)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "code",
+    "text": "commit(transaction)\n  (command removed, receipt and result entry visible, all at once)⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "// The engine’s ranking pass:\nacceptable[unit] = count roles with cost[unit, role] < acceptableBelow\norder = sort units by (acceptable count",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "slot-assignment",
+    "studies": [
+     "slot-assignment"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "// The engine’s reservation pass:\nassignment = empty\nfree = all slot indices in column order\nfor unit in order:\n  slot = cheapest free slot ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "slot-assignment",
+    "studies": [
+     "slot-assignment"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "// The model gets these decisions from engine.assignSlots(units, roles, cost).\nreveal assignment prefixes as links, without moving guards\nto",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "slot-assignment",
+    "studies": [
+     "slot-assignment"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the download completes or fails, or the view stops listening:\n  stop listening to the download\n  (the clean-ups are not told which of t",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "finalize",
+    "studies": [
+     "finalize"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the end was a completion or a failure:\n  pass it to the view first\notherwise:\n  tell the view nothing",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "finalize",
+    "studies": [
+     "finalize"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "then run the things to run at the end, oldest first:\n  the download's own clean-up, which cuts it off\n  each clean-up, in the order they wer",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "finalize",
+    "studies": [
+     "finalize"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the source ends:\n  if it failed with an error:\n    send the record { kind: E, error }\n  if it finished normally:\n    send the record { ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "materialize",
+    "studies": [
+     "materialize"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "if no animation frame has been requested:\n  request the next one from the browser\notherwise:\n  the task joins the queue for that frame",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "observe-on",
+    "studies": [
+     "observe-on"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "when the frame comes, just before the paint:\n  run every queued task, oldest first\n  (reports that arrived together are heard together)",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "observe-on",
+    "studies": [
+     "observe-on"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "an error is one more task in the queue:\n  the bar hears it after the reports queued before it\n  (the upload itself stopped when it failed)⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "observe-on",
+    "studies": [
+     "observe-on"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "listen to the clock\non each tick:\n  pass the tick on\nwhen the clock completes or fails:\n  do the same to the output",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "take-until",
+    "studies": [
+     "take-until"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "on the first value from closed:\n  complete the output\n  stop listening to the clock and to closed",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "take-until",
+    "studies": [
+     "take-until"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "when closed completes without a value:\n  change nothing; the ticks keep coming\nwhen closed fails:\n  fail the output with its error⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "take-until",
+    "studies": [
+     "take-until"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "graph⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "DSL⟧",
+    "covered": false,
+    "cls": "name",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "for each view in code DSL, function table, statechart JSON:\n  decode: view text -> shared form\n  encode: shared form -> view text\n  (only th",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "on an edit in one view:\n  graph = normalise(decode(edit))\n  for each other view: show encode(graph)\n  compiler builds from graph alone",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "if the edit changes only what the shared form drops,\nsuch as the order of the table's rows:\n  graph is unchanged, so the program and hash ar",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "code",
+    "text": "to add a participant:\n  write its encode, and its decode if it can round-trip\n  without a decode it can only read, and is labelled lossy⟧",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "verified⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message",
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "completed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "minutes⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "passed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "entry⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "undo⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 7,
+    "kind": "text",
+    "tag": "text",
+    "text": "the",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model",
+     "event-message",
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "graph only⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "same hash⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "send⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model",
+     "correlation-identifier",
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "waiting⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "nothing⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "slowly⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "cmd_3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "review",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "done;",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "outbox let",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "the inbox",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "let go⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "up⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 6,
+    "kind": "text",
+    "tag": "text",
+    "text": "deadline set⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "32 to go⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "31 to go⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "aggregator",
+    "studies": [
+     "aggregator"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "loadout as",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "on 32⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "began⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "command 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery",
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 32⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 5,
+    "kind": "text",
+    "tag": "text",
+    "text": "evt_3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "hash⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "reply⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "taker⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "on 33⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "go-ahead⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "blocked⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "review next⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "pass for",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "final",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "next⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "5 min old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "min old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "review⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 29⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "free⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "questions",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 33⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "still waits⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "done, no",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "load⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "refresh asked⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "asked⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "not",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "given",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 41⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "verifying,",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "on 34⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "competing-consumers",
+    "studies": [
+     "competing-consumers"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "follow-up⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "blocking⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "on disk⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 30⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "until 9⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "complete⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "1 of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "result⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "for command 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "times for",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "rows⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "typed code⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "statechart JSON⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "typed",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "code⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "statechart",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "JSON⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "operator’s order⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "operator’s",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "graph’s order⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "graph’s",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "canonical-data-model",
+    "studies": [
+     "canonical-data-model"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 39⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 40⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "for one",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "listening⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "operator, else",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "criterion, so",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "blocking first⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "as D⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "correlation-identifier",
+    "studies": [
+     "correlation-identifier"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "verifying⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "kept⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "returned⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "confirms⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "receipt⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "lost⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "still",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "holds c⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "keeps it⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "receipt",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "arrived⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "out⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "the executor⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "executor⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-dispatcher",
+    "studies": [
+     "message-dispatcher"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "step 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "drive⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "0 of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "siblings⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "nobody⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "holds evt_3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "holds evt_5⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "holds evt_5, 6⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "in transaction 1⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "transaction 1⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "commit⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "committed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "for L⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "channel-adapter",
+    "studies": [
+     "channel-adapter"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "order 41",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "7 ran out⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "copy of 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "command-message",
+    "studies": [
+     "command-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "file⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "fits, so",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "so follow-up⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "so operator⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "operator⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "regression, so",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "so blocking⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "content-based-router",
+    "studies": [
+     "content-based-router"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "answers⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "control-bus",
+    "studies": [
+     "control-bus"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "30 min old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "30 min",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "send",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "until",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "inbox",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "until the",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "on command",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "down; c",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "safe on",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "disk⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "memory",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "safe on disk⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "idle⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "again;",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "command 7",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "a second",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "time⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "second time⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "sent⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "guaranteed-delivery",
+    "studies": [
+     "guaranteed-delivery"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "step 5⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "c until 9⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "step 9⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "send 31⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "about 31⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "lost; 2",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "about 32⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "gap in 32⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "to merge⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "merge⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "no more⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "more⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "first⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "recipient-list",
+    "studies": [
+     "recipient-list"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "cmd_1's result⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "request-reply",
+    "studies": [
+     "request-reply"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "has it⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "it⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "evt_6⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "resequencer",
+    "studies": [
+     "resequencer"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "waiting, visible⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "visible⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "open, has 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "has 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "transaction 1",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "rolled back⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "transaction 1 rolled",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "back⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "open, has 7",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "has 7 again⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "in transaction 2⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "transaction 2⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "transactional-client",
+    "studies": [
+     "transactional-client"
+    ]
+   }
+  ],
+  "leaks": [],
+  "perStudy": [
+   {
+    "slug": "actuator",
+    "work": "aifg",
+    "frames": 98,
+    "views": 2
+   },
+   {
+    "slug": "align",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "arrive",
+    "work": "aifg",
+    "frames": 482,
+    "views": 2
+   },
+   {
+    "slug": "blending-versus-arbitration",
+    "work": "aifg",
+    "frames": 42,
+    "views": 2
+   },
+   {
+    "slug": "collision-avoidance",
+    "work": "aifg",
+    "frames": 82,
+    "views": 2
+   },
+   {
+    "slug": "coordinated-movement",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "corner-trap",
+    "work": "aifg",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "equilibrium-fallback",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "face",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "fixed-formations",
+    "work": "aifg",
+    "frames": 102,
+    "views": 2
+   },
+   {
+    "slug": "flee",
+    "work": "aifg",
+    "frames": 82,
+    "views": 2
+   },
+   {
+    "slug": "flocking",
+    "work": "aifg",
+    "frames": 402,
+    "views": 2
+   },
+   {
+    "slug": "formation-pattern-interface",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "group-movement",
+    "work": "aifg",
+    "frames": 462,
+    "views": 2
+   },
+   {
+    "slug": "iterative-targeting",
+    "work": "aifg",
+    "frames": 16,
+    "views": 2
+   },
+   {
+    "slug": "jump-points",
+    "work": "aifg",
+    "frames": 36,
+    "views": 2
+   },
+   {
+    "slug": "kinematic-arrive",
+    "work": "aifg",
+    "frames": 66,
+    "views": 2
+   },
+   {
+    "slug": "kinematic-wander",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "making-the-creatures",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "motor-control",
+    "work": "aifg",
+    "frames": 202,
+    "views": 2
+   },
+   {
+    "slug": "movement-in-the-third-dimension",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "obstacle-and-wall-avoidance",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "priority-steering",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "projectile-trajectory",
+    "work": "aifg",
+    "frames": 58,
+    "views": 2
+   },
+   {
+    "slug": "pursue",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "satisfaction-radius",
+    "work": "aifg",
+    "frames": 58,
+    "views": 2
+   },
+   {
+    "slug": "scalable-formations",
+    "work": "aifg",
+    "frames": 102,
+    "views": 2
+   },
+   {
+    "slug": "seek",
+    "work": "aifg",
+    "frames": 442,
+    "views": 2
+   },
+   {
+    "slug": "separation",
+    "work": "aifg",
+    "frames": 122,
+    "views": 2
+   },
+   {
+    "slug": "slot-assignment",
+    "work": "aifg",
+    "frames": 8,
+    "views": 2
+   },
+   {
+    "slug": "steering-behaviors",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "steering-output",
+    "work": "aifg",
+    "frames": 34,
+    "views": 2
+   },
+   {
+    "slug": "steering-pipeline",
+    "work": "aifg",
+    "frames": 442,
+    "views": 2
+   },
+   {
+    "slug": "the-firing-solution",
+    "work": "aifg",
+    "frames": 150,
+    "views": 2
+   },
+   {
+    "slug": "two-and-a-half-dimensions",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "two-level-formation-steering",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "variable-matching",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "velocity-matching",
+    "work": "aifg",
+    "frames": 66,
+    "views": 2
+   },
+   {
+    "slug": "wander",
+    "work": "aifg",
+    "frames": 202,
+    "views": 2
+   },
+   {
+    "slug": "weighted-blending",
+    "work": "aifg",
+    "frames": 122,
+    "views": 2
+   },
+   {
+    "slug": "behavior-subject",
+    "work": "rxjs",
+    "frames": 11,
+    "views": 1
+   },
+   {
+    "slug": "catch-error",
+    "work": "rxjs",
+    "frames": 11,
+    "views": 1
+   },
+   {
+    "slug": "combine-latest",
+    "work": "rxjs",
+    "frames": 16,
+    "views": 1
+   },
+   {
+    "slug": "concat-map",
+    "work": "rxjs",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "exhaust-map",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "finalize",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "materialize",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "merge-map",
+    "work": "rxjs",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "observe-on",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "repeat",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "replay-subject",
+    "work": "rxjs",
+    "frames": 19,
+    "views": 1
+   },
+   {
+    "slug": "retry",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "scan",
+    "work": "rxjs",
+    "frames": 12,
+    "views": 1
+   },
+   {
+    "slug": "share-replay",
+    "work": "rxjs",
+    "frames": 22,
+    "views": 1
+   },
+   {
+    "slug": "share",
+    "work": "rxjs",
+    "frames": 16,
+    "views": 1
+   },
+   {
+    "slug": "start-with",
+    "work": "rxjs",
+    "frames": 12,
+    "views": 1
+   },
+   {
+    "slug": "subject",
+    "work": "rxjs",
+    "frames": 17,
+    "views": 1
+   },
+   {
+    "slug": "switch-map",
+    "work": "rxjs",
+    "frames": 15,
+    "views": 1
+   },
+   {
+    "slug": "take-until",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "timeout",
+    "work": "rxjs",
+    "frames": 15,
+    "views": 1
+   },
+   {
+    "slug": "aggregator",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "canonical-data-model",
+    "work": "eip",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "channel-adapter",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "command-message",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "competing-consumers",
+    "work": "eip",
+    "frames": 26,
+    "views": 2
+   },
+   {
+    "slug": "content-based-router",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "control-bus",
+    "work": "eip",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "correlation-identifier",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "event-message",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "guaranteed-delivery",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "message-dispatcher",
+    "work": "eip",
+    "frames": 20,
+    "views": 2
+   },
+   {
+    "slug": "message-expiration",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "message-store",
+    "work": "eip",
+    "frames": 10,
+    "views": 1
+   },
+   {
+    "slug": "message-translator",
+    "work": "eip",
+    "frames": 10,
+    "views": 2
+   },
+   {
+    "slug": "process-manager",
+    "work": "eip",
+    "frames": 26,
+    "views": 2
+   },
+   {
+    "slug": "publish-subscribe-channel",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "recipient-list",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "request-reply",
+    "work": "eip",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "resequencer",
+    "work": "eip",
+    "frames": 20,
+    "views": 2
+   },
+   {
+    "slug": "transactional-client",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   }
+  ],
+  "outsideMessages": [
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "order to all 3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 9,
+    "kind": "text",
+    "tag": "text",
+    "text": "to all 3⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "publish-subscribe-channel",
+    "studies": [
+     "publish-subscribe-channel"
+    ]
+   },
+   {
+    "count": 8,
+    "kind": "text",
+    "tag": "text",
+    "text": "of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 4,
+    "kind": "text",
+    "tag": "text",
+    "text": "5 min old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "until 9⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 3,
+    "kind": "text",
+    "tag": "text",
+    "text": "1 of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "step 7⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 2,
+    "kind": "text",
+    "tag": "text",
+    "text": "0 of 3 failed⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "process-manager",
+    "studies": [
+     "process-manager"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "30 min old⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "30 min",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "event-message",
+    "studies": [
+     "event-message"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "step 5⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "c until 9⟧",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-expiration",
+    "studies": [
+     "message-expiration"
+    ]
+   },
+   {
+    "count": 1,
+    "kind": "text",
+    "tag": "text",
+    "text": "lost; 2",
+    "covered": false,
+    "cls": "state",
+    "testid": "",
+    "study": "message-store",
+    "studies": [
+     "message-store"
+    ]
+   }
+  ]
+ },
+ "real": {
+  "frames": 7523,
+  "studies": 80,
+  "errors": [],
+  "uncovered": [],
+  "leaks": [
+   {
+    "count": 164,
+    "kind": "text",
+    "tag": "code",
+    "text": "r = porter.position - courier.position\nv = porter.velocity - courier.velocity\nt = undefined if dot(v, v) == 0 else -dot(r, v) / dot(v, v)\npr",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "collision-avoidance",
+    "studies": [
+     "collision-avoidance"
+    ]
+   },
+   {
+    "count": 82,
+    "kind": "text",
+    "tag": "span",
+    "text": "Time of closest approach isolates the dot-product calculation when the meaning of a positive, negative or undefined prediction needs closer ",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "collision-avoidance",
+    "studies": [
+     "collision-avoidance"
+    ]
+   },
+   {
+    "count": 11,
+    "kind": "text",
+    "tag": "code",
+    "text": "board$ = departures$.pipe(\n  catchError((error: Error) =>\n    timetable$.pipe(map((entry) => `${entry}: ${error.message}`)),\n  ),\n);",
+    "covered": false,
+    "cls": "",
+    "testid": "",
+    "study": "catch-error",
+    "studies": [
+     "catch-error"
+    ]
+   }
+  ],
+  "perStudy": [
+   {
+    "slug": "actuator",
+    "work": "aifg",
+    "frames": 98,
+    "views": 2
+   },
+   {
+    "slug": "align",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "arrive",
+    "work": "aifg",
+    "frames": 482,
+    "views": 2
+   },
+   {
+    "slug": "blending-versus-arbitration",
+    "work": "aifg",
+    "frames": 42,
+    "views": 2
+   },
+   {
+    "slug": "collision-avoidance",
+    "work": "aifg",
+    "frames": 82,
+    "views": 2
+   },
+   {
+    "slug": "coordinated-movement",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "corner-trap",
+    "work": "aifg",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "equilibrium-fallback",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "face",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "fixed-formations",
+    "work": "aifg",
+    "frames": 102,
+    "views": 2
+   },
+   {
+    "slug": "flee",
+    "work": "aifg",
+    "frames": 82,
+    "views": 2
+   },
+   {
+    "slug": "flocking",
+    "work": "aifg",
+    "frames": 402,
+    "views": 2
+   },
+   {
+    "slug": "formation-pattern-interface",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "group-movement",
+    "work": "aifg",
+    "frames": 462,
+    "views": 2
+   },
+   {
+    "slug": "iterative-targeting",
+    "work": "aifg",
+    "frames": 16,
+    "views": 2
+   },
+   {
+    "slug": "jump-points",
+    "work": "aifg",
+    "frames": 36,
+    "views": 2
+   },
+   {
+    "slug": "kinematic-arrive",
+    "work": "aifg",
+    "frames": 66,
+    "views": 2
+   },
+   {
+    "slug": "kinematic-wander",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "making-the-creatures",
+    "work": "aifg",
+    "frames": 322,
+    "views": 2
+   },
+   {
+    "slug": "motor-control",
+    "work": "aifg",
+    "frames": 202,
+    "views": 2
+   },
+   {
+    "slug": "movement-in-the-third-dimension",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "obstacle-and-wall-avoidance",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "priority-steering",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "projectile-trajectory",
+    "work": "aifg",
+    "frames": 58,
+    "views": 2
+   },
+   {
+    "slug": "pursue",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "satisfaction-radius",
+    "work": "aifg",
+    "frames": 58,
+    "views": 2
+   },
+   {
+    "slug": "scalable-formations",
+    "work": "aifg",
+    "frames": 102,
+    "views": 2
+   },
+   {
+    "slug": "seek",
+    "work": "aifg",
+    "frames": 442,
+    "views": 2
+   },
+   {
+    "slug": "separation",
+    "work": "aifg",
+    "frames": 122,
+    "views": 2
+   },
+   {
+    "slug": "slot-assignment",
+    "work": "aifg",
+    "frames": 8,
+    "views": 2
+   },
+   {
+    "slug": "steering-behaviors",
+    "work": "aifg",
+    "frames": 162,
+    "views": 2
+   },
+   {
+    "slug": "steering-output",
+    "work": "aifg",
+    "frames": 34,
+    "views": 2
+   },
+   {
+    "slug": "steering-pipeline",
+    "work": "aifg",
+    "frames": 442,
+    "views": 2
+   },
+   {
+    "slug": "the-firing-solution",
+    "work": "aifg",
+    "frames": 150,
+    "views": 2
+   },
+   {
+    "slug": "two-and-a-half-dimensions",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "two-level-formation-steering",
+    "work": "aifg",
+    "frames": 242,
+    "views": 2
+   },
+   {
+    "slug": "variable-matching",
+    "work": "aifg",
+    "frames": 50,
+    "views": 2
+   },
+   {
+    "slug": "velocity-matching",
+    "work": "aifg",
+    "frames": 66,
+    "views": 2
+   },
+   {
+    "slug": "wander",
+    "work": "aifg",
+    "frames": 202,
+    "views": 2
+   },
+   {
+    "slug": "weighted-blending",
+    "work": "aifg",
+    "frames": 122,
+    "views": 2
+   },
+   {
+    "slug": "behavior-subject",
+    "work": "rxjs",
+    "frames": 11,
+    "views": 1
+   },
+   {
+    "slug": "catch-error",
+    "work": "rxjs",
+    "frames": 11,
+    "views": 1
+   },
+   {
+    "slug": "combine-latest",
+    "work": "rxjs",
+    "frames": 16,
+    "views": 1
+   },
+   {
+    "slug": "concat-map",
+    "work": "rxjs",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "exhaust-map",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "finalize",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "materialize",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "merge-map",
+    "work": "rxjs",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "observe-on",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "repeat",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "replay-subject",
+    "work": "rxjs",
+    "frames": 19,
+    "views": 1
+   },
+   {
+    "slug": "retry",
+    "work": "rxjs",
+    "frames": 14,
+    "views": 1
+   },
+   {
+    "slug": "scan",
+    "work": "rxjs",
+    "frames": 12,
+    "views": 1
+   },
+   {
+    "slug": "share-replay",
+    "work": "rxjs",
+    "frames": 22,
+    "views": 1
+   },
+   {
+    "slug": "share",
+    "work": "rxjs",
+    "frames": 16,
+    "views": 1
+   },
+   {
+    "slug": "start-with",
+    "work": "rxjs",
+    "frames": 12,
+    "views": 1
+   },
+   {
+    "slug": "subject",
+    "work": "rxjs",
+    "frames": 17,
+    "views": 1
+   },
+   {
+    "slug": "switch-map",
+    "work": "rxjs",
+    "frames": 15,
+    "views": 1
+   },
+   {
+    "slug": "take-until",
+    "work": "rxjs",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "timeout",
+    "work": "rxjs",
+    "frames": 15,
+    "views": 1
+   },
+   {
+    "slug": "aggregator",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "canonical-data-model",
+    "work": "eip",
+    "frames": 8,
+    "views": 1
+   },
+   {
+    "slug": "channel-adapter",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "command-message",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "competing-consumers",
+    "work": "eip",
+    "frames": 26,
+    "views": 2
+   },
+   {
+    "slug": "content-based-router",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "control-bus",
+    "work": "eip",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "correlation-identifier",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "event-message",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "guaranteed-delivery",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   },
+   {
+    "slug": "message-dispatcher",
+    "work": "eip",
+    "frames": 20,
+    "views": 2
+   },
+   {
+    "slug": "message-expiration",
+    "work": "eip",
+    "frames": 22,
+    "views": 2
+   },
+   {
+    "slug": "message-store",
+    "work": "eip",
+    "frames": 10,
+    "views": 1
+   },
+   {
+    "slug": "message-translator",
+    "work": "eip",
+    "frames": 10,
+    "views": 2
+   },
+   {
+    "slug": "process-manager",
+    "work": "eip",
+    "frames": 26,
+    "views": 2
+   },
+   {
+    "slug": "publish-subscribe-channel",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "recipient-list",
+    "work": "eip",
+    "frames": 18,
+    "views": 2
+   },
+   {
+    "slug": "request-reply",
+    "work": "eip",
+    "frames": 13,
+    "views": 1
+   },
+   {
+    "slug": "resequencer",
+    "work": "eip",
+    "frames": 20,
+    "views": 2
+   },
+   {
+    "slug": "transactional-client",
+    "work": "eip",
+    "frames": 9,
+    "views": 1
+   }
+  ]
+ }
+}

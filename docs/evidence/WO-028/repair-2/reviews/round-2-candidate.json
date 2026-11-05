@@ -1,0 +1,3282 @@
+{
+  "schemaVersion": 1,
+  "round": 2,
+  "capturedAt": "2026-11-05T08:51:49.253Z",
+  "target": {
+    "root": "<target-worktree>",
+    "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+    "head": "55b59c9133056c1d6471274a9676a7d5649196ac",
+    "tree": "50d5b30b4895fb3f997b793240b19e3193e5537d",
+    "files": [
+      {
+        "path": "apps/dotln-e2e/src/catalog.spec.ts",
+        "sha256": "5eb5db8c7b1d74e60055eb095bf17447ec38a89decba0ff832d2d89d85bbed13"
+      },
+      {
+        "path": "apps/dotln-e2e/src/movement-labels.spec.ts",
+        "sha256": "5e0570fca254c736066eeeff0948b1626018fcd1b53eb7a5bfcf0ee7ab461a21"
+      },
+      {
+        "path": "apps/dotln-e2e/src/study-messages.spec.ts",
+        "sha256": "179ff0052ea787d46631b1927d3d818677c6d7d959f9fdbe93d1ca1d22321873"
+      },
+      {
+        "path": "apps/dotln-e2e/src/visual-baselines/darwin/catalog-1440.png",
+        "sha256": "bff2210d8077b0b0d0832c6562d0f8d59de3999b078923105dccdf4053001420"
+      },
+      {
+        "path": "apps/dotln-e2e/src/visual-baselines/darwin/catalog-768.png",
+        "sha256": "2a4feb1a5149636117a049fc027336288117d7997ccf8da70f4c117871518dab"
+      },
+      {
+        "path": "apps/dotln/public/i18n/en.json",
+        "sha256": "921c7ca7b9c0dbac2c69c02dd9023b9c07df01dfd0c2b47e8c524df23535286d"
+      },
+      {
+        "path": "apps/dotln/public/i18n/studyAifg/en.json",
+        "sha256": "1b70f42ae5eb374d2de6ad99de215e697a2c47e6c9478dfa08418b8471f776f4"
+      },
+      {
+        "path": "apps/dotln/public/i18n/studyCommon/en.json",
+        "sha256": "bf847ef023e9bc8b86603a0c59e509724b558ebc3652fb12b733af8ad130f02c"
+      },
+      {
+        "path": "apps/dotln/public/i18n/studyEip/en.json",
+        "sha256": "c3d3c2a420a94dd31c81d736490cd01c76b97463794bb759f181320ee9dae1ef"
+      },
+      {
+        "path": "apps/dotln/public/i18n/studyRxjs/en.json",
+        "sha256": "28c048c5bd19284152b7f4dcd4af11cc8851ef9c63cb72f6f504dc20da4d583d"
+      },
+      {
+        "path": "docs/ai-reference/catalog-rules.md",
+        "sha256": "0d8a21dfcc043e33906cd87d40ccd6433ca430616c968f475046059e4d42deea"
+      },
+      {
+        "path": "docs/ai-reference/foundation-rules.md",
+        "sha256": "bf7030d1887babde775ad0a22465109036c291d22953e55c94fa2ee24bbcde39"
+      },
+      {
+        "path": "docs/dev-reference/README.md",
+        "sha256": "b299e7edef90ec25638fe1a840148e13493ad380e6646a1a8d2e67269549f570"
+      },
+      {
+        "path": "docs/dev-reference/architecture/catalog.md",
+        "sha256": "6cc49ec6e600bbfb60028cfdcf1131b4c0cb41f3c37037a3c08c1401cdb6d8ea"
+      },
+      {
+        "path": "docs/dev-reference/architecture/foundation.md",
+        "sha256": "a34c6f535f223cb52017089f60570bf13c4e57d67f0f5ad31589b473b93ecfa4"
+      },
+      {
+        "path": "docs/dev-reference/workspace/conventions.md",
+        "sha256": "a4540823b031aee94fc8fa646cc63c0daef9d952f35d9d4454840ace9f3c1762"
+      },
+      {
+        "path": "docs/dev-reference/workspace/scripts.md",
+        "sha256": "f2641f5340baba3528a2f4691d3d3e2fd91ff7bcce1ad73de85746ec6adc86dc"
+      },
+      {
+        "path": "eslint.config.mjs",
+        "sha256": "0354ad96d86e3653328f6814b58f3a60c01237d79f116d18422e94b0d606ffb7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-explanation/study-explanation.html",
+        "sha256": "19a2d966d94fbf0e9a0b703a4edf7499390e505b1458cd0fe04509fd52e26a5c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-explanation/study-explanation.scss",
+        "sha256": "32212f2f3e2db95d07564630a478eedc7210b359300d2c8349d17a0d265c8434"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-explanation/study-explanation.spec.ts",
+        "sha256": "5849f1729f2ee12c83bea2c1c684b05a8e16fe89e0640a45f1402e23973caac8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/fixtures.ts",
+        "sha256": "e296922691a45e278af3625b4b5e933d0d0df8f57daff8d60c3202c9260fe690"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/flow/flow-drawing.spec.ts",
+        "sha256": "f9edb54c9e98906ee9b1a0309d07f4243c7bbb4f0fd6726b76ab4c4b6b3c4633"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/flow/flow.html",
+        "sha256": "4c3cd084d694e1db23a295a789c08d2b62e6b5908fb34e11c61658d54ce83597"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/marbles/marbles-drawing.spec.ts",
+        "sha256": "5ad1a2128d583b2d55b9b5cd2fdd035d169d2119f21bde238c67a2f886b51754"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/marbles/marbles-drawing.ts",
+        "sha256": "674b7509fc7eb6043b811c54660fd281374dc700bf1107876fd22e59fed7f211"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/marbles/marbles.html",
+        "sha256": "8d46899cd860cc0ecde39eb8448e3af52c3972444758c746979af1fd4296732d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.spec.ts",
+        "sha256": "02a1d35caef08df6e0f8a04a22adaba929ba35a942e781894f2f0c36da0f3691"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts",
+        "sha256": "d60b545a37be94b1dfa983d1824927f57b51d0fc6a6134b8b1cfaa596711d2d2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/motion/motion-labels.ts",
+        "sha256": "b7da71f06791b781aa6d2ae60328f45328dcca8b376cdeea633dd647091bad02"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/motion/motion.html",
+        "sha256": "255b5300f8adf9c24cf2758b81b4517a4686b2bffc703791814bcaa33d989df2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/motion/motion.scss",
+        "sha256": "08f0da1dfe09b367b463d1b5bbbb65237cd7bd95e495842c33b482e22dcd29f1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/scrubber/scrubber.html",
+        "sha256": "19c9486a481dee03b216903ecaa0b779eba4ade8c0ab17a0bd963a071182d668"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline.html",
+        "sha256": "47271713d5a602b5aa7ca83d02b2dc93daffdcf16933ede689157f3491e97e10"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study/fixtures.ts",
+        "sha256": "858f58eec73a6460fd864869fb41fae66a7ab004681f9c8b2003f3c8a588a5c0"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study/study.html",
+        "sha256": "3a3c79f7f9df1c8a9eb60389ae7b3dc199364b103897c1899b025bdbb670ad68"
+      },
+      {
+        "path": "libs/features/tools/src/lib/composites/study/study.spec.ts",
+        "sha256": "790b6d4a08dc6254d43ef6e0134bf19335e246c5efb5a5c1bd041838532346e4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/facades/tools-study-loading.spec.ts",
+        "sha256": "86398033d864e33cd01f3bb5d2f70b09b3f6a552a21eb5150f19207be717f2be"
+      },
+      {
+        "path": "libs/features/tools/src/lib/facades/tools.facade.spec.ts",
+        "sha256": "e2c5f5ae01b0429cf3db0d4e61e00178f1d0d8294efc950ba716350f8f006101"
+      },
+      {
+        "path": "libs/features/tools/src/lib/facades/tools.facade.ts",
+        "sha256": "2d9c06263a0bc2424325b9a4d8a9715b0e1b48021db1b158cce0f66dff38f85c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+        "sha256": "1dd6eb18045f787d5a990ca0885a7fa15d42745aad8f954834a4a9fdf5d2468c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/mappers/study-mapper.ts",
+        "sha256": "8782ef48c4a4ac9daadf73537f10c16dca4e6f82771ece910cca5d08c8e14d95"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/aggregator.spec.ts",
+        "sha256": "8eff406a8ec723f5af8c588b6fd0c273aa190beeb56b166d279cabe9139db6cc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/aggregator.ts",
+        "sha256": "e26a8ea4c2df8b05b1a4f366ff12cb7f6869767f5a96879bfa8d0348a23ccf4c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/canonical-data-model.spec.ts",
+        "sha256": "f8fa6036f24adcae0de2abec201d26fa9733645b87fc0a5553cb6962dcd6a870"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/canonical-data-model.ts",
+        "sha256": "e5d9d886008cb7d476509aff5d4349a5c6ba1314d1a67b62e390e5b0d7a445c6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/channel-adapter.spec.ts",
+        "sha256": "4db76565629dc099f3cfff59f80508192def79194b6a8d5d1e307b12ae80ca64"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/channel-adapter.ts",
+        "sha256": "7e9d8ff30e3628ffae5ed0b86fb0ad59b62a93c007b4c8d580f5bf909d62e899"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/command-message.spec.ts",
+        "sha256": "e202ac39712dfa5b58591459815962499160b9d53c065dd35eff537c744252b1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/command-message.ts",
+        "sha256": "d46655cb1215fd775103c18610c6d5d8aa577aa1da48f128e007cbf2940da49a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/competing-consumers.spec.ts",
+        "sha256": "22aee35ce0ccec920effb41fe568035e0d5c814e272e1f166293f0c016778e66"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/competing-consumers.ts",
+        "sha256": "738e0187363b5b8d55595c5e8d7802e63f3c6e7d0b5652a97bff0c9b8147b116"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/content-based-router.spec.ts",
+        "sha256": "296c1c99c0503e99a4ea5b05fe526fd390e3ffc2c1439e5d93f279e25ff88bed"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/content-based-router.ts",
+        "sha256": "3282d849dca805e6f7573c372cc0bed5d110d27e133c4e75177812bcbe820854"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/control-bus.spec.ts",
+        "sha256": "c98db4642c4dee81fc6ca1115f1b62ea8b4399d97229bb85daf8b756d4e439d2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/control-bus.ts",
+        "sha256": "ec51bd2954ee1159ad308eb3cd9332be78adbeaf8fd899c93f6dc60ac8ed00ba"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/correlation-identifier.spec.ts",
+        "sha256": "129db3e2cc847ca4fe8792f97bc78de107f6db5a8b7f6bb7f77ffe46813f8cb8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/correlation-identifier.ts",
+        "sha256": "8d02ec01288c2f38ac9a009ca6a9ea3ad190724d8fb65c7e7158f46e382efbff"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/event-message.spec.ts",
+        "sha256": "cc2d59415ebb070af76430df5bbf7c607b882a191109b5b1ae44373e26264fd6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/event-message.ts",
+        "sha256": "0d0b94effd4d638c501ba30e6fa3f4b9990bda9641383ba6acd39af862d19de2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/guaranteed-delivery.spec.ts",
+        "sha256": "aa9192501a0057a014e267d2f10b5b74c6a641154edf3237df18a32533f41fee"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/guaranteed-delivery.ts",
+        "sha256": "f442f1d79c6a17bfacff32d57dfc82ee7d85729f53ac0d74e0a68e8388d91adc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-dispatcher.spec.ts",
+        "sha256": "da8445dad90ff221ff686933a019e38d2f4b1ad4b18e0fbb14732ee27df35e76"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-dispatcher.ts",
+        "sha256": "faa2e6dfd40c1319d0a956860f13f5171cb3709ca2891d044fec91346789d5c3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-expiration.spec.ts",
+        "sha256": "6c4bd4c5e96b28bcc4b44d58f1b6ccf48a28b0a4bec86fa57ec91faecf7b8cf8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-expiration.ts",
+        "sha256": "a4d4b2c1eb72d632cea0787afcb8909469949ac39e7a294ffd0fcabd0e592176"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-store.spec.ts",
+        "sha256": "de3537649fd9500a2ceb85e4e62cd146706f6255b916eea8d340c9f79e749d7e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-store.ts",
+        "sha256": "f611b2f382d93b8bb65ae1830f49485e06050115f205ee8556c47514e05a2c5e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-translator.spec.ts",
+        "sha256": "7542184b865e5ed6671071d8c8fa91021bc7fc11fca09272123a5a8899ddeec7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/message-translator.ts",
+        "sha256": "3a7453451bd45ab840ae4beed9dd0cf742080d2698ba5cc2e34dfdea268a0d23"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/process-manager.spec.ts",
+        "sha256": "b22a5859bc1633115ba01cd23b4e8721a118eb94762b2d06a57d98013667673e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/process-manager.ts",
+        "sha256": "199a0fb79ced30b3edc913a40fdb96c2d67c557f67f1d148c535af754a4f613d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/publish-subscribe-channel.spec.ts",
+        "sha256": "0c5e9a739b033aeec82385d51115de30a1ed271a7ce270126aab2fcc79f4dc5d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/publish-subscribe-channel.ts",
+        "sha256": "939800e781b599f3e10a69ac405354e7e79f57f10df969e416e15c1a788b9da2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/recipient-list.spec.ts",
+        "sha256": "7efc182f023497c49835413da5d2eef33f3424e2cbf692a113019050b0c576c5"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/recipient-list.ts",
+        "sha256": "ed540f7e828e785203708159e0e709baffda0173111925ef0309293fce168957"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/request-reply.spec.ts",
+        "sha256": "6fefb4e6297896c14b11c33016cd237886a7c10cffd272df73ba8eff5318d0dc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/request-reply.ts",
+        "sha256": "6ea12b3dd9ef3f7abc6a74e5377bf1c09fbe37183e060c73a0a74a9df0fb92af"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/resequencer.spec.ts",
+        "sha256": "676a1ebbaa8e98c79acd96e6c042a7787bc91840a6e50c0a81465da3a3aa1871"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/resequencer.ts",
+        "sha256": "b5af3b1cf0363c5d92fee7ab8b2ae662d178feb5089b92f3c9c9e131bbe05a32"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/transactional-client.spec.ts",
+        "sha256": "a4116ec2fc55eb4212acff0c9d360a2e02adf142dc3c207a68459e5753b5b1be"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/eip/transactional-client.ts",
+        "sha256": "67f668f04c935d6bd7d91eff6580675e58ef70be09898dc58b8d1badf54f46d6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/flow.spec.ts",
+        "sha256": "4c71efac2377632f172f3b765023b57055c167f107a61c9f0a1381396610c570"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/flow.ts",
+        "sha256": "1bb9a06881e13372d8de8626692d1523f0262d6300c7ca44c1f700680b851d3b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+        "sha256": "84bab48914939256c91c35bd7dbbf149418d5a0abd99ec6e9a2ee02980b17b9a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+        "sha256": "31644ae32b4d2bba078997b6d92bbf9cd980af1cda0b3df2da118ce15f906b05"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/actuator.presentation.ts",
+        "sha256": "ed92634b61d54d3e35e30e80ce2137155c80ab017e38d0bd39c4721591511464"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/actuator.simulation.ts",
+        "sha256": "6d19b24f16cdaa2b6d9ba96915df505f30c1d823abdacce4042973142dfe2e27"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/align.model.spec.ts",
+        "sha256": "0d35cbe75f69dc1a598c953bac332b4761c2a7b89b85430b40cef1da180ad307"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/align.model.ts",
+        "sha256": "dc1d1ae4992ee964987be938887cfcd5d7556a7ab241903809b90e5befd390cd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/align.presentation.ts",
+        "sha256": "bcb4da297f2a99f1bdef3d8038aba8804961c5862421ed255f53964dcf83f272"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/align.simulation.ts",
+        "sha256": "41800c184f005c8a208c4fe47655965ef7d24c3680e5c138aaef98ba21f880b4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+        "sha256": "b6ffd73c1e40f02e5ec3954807ebfd97ef05ccd2f4f735cbd710250ce3721560"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+        "sha256": "996534cda366cfdf1fcc461ea03e2dd1348d94ff30fefdc4fad2913dbfd6490d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/arrive.presentation.ts",
+        "sha256": "031670ab62b9f466ca472ebae5d56dc4b8ff3d05b80f8d8b51272a0ef629b58a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/arrive.simulation.ts",
+        "sha256": "a20c907fcccf3686d71a3238066bf9a5f8bf955bc636805ef2a4cfdd72992023"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.spec.ts",
+        "sha256": "c7366190056fce4defd9e109f2794a81a7b72b7f4078a5771562066377c5bef0"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts",
+        "sha256": "03cedd0393dc0b9ab91f7564ee2b6e42bbd4d03f67e3cdae569d279c8e446d68"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.presentation.ts",
+        "sha256": "80840ff1480919331751c8f057a1b3c0a453999e5770d3040f50faebc7dcad44"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.simulation.ts",
+        "sha256": "2ca5dc6d7e088cb1d328e4da7d02b44ec4d1843853a54cdd88b8f3161f88432f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts",
+        "sha256": "08cd40a1748afae6fc807cc8264d3a2ad8dba699242780f59c0102c669d4ec8f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts",
+        "sha256": "89a1a296f5949da671a1526bc05511c472411b1447905a6b9216ee1d9a85a0db"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.presentation.ts",
+        "sha256": "b379be745ef64bdcabafba560a5566b418b36a6926b5ef70a06c08acac892f5b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/collision-avoidance.simulation.ts",
+        "sha256": "7fa687432f1184047bc2d4e724206f2fd057d876ed7554d35a6181002a8939a1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.spec.ts",
+        "sha256": "e66874679454021e2b9f908bdd9b1c9f6f6684d251ec6555504f4a0d9c88526e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts",
+        "sha256": "909cd2a810ea0d445eb61a6ffba0eb86da90826593f79ba3a5de79162a2113f2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.presentation.ts",
+        "sha256": "ce2b4b1216d3fa496fbfdd82c1e48029af99080b7aa32f6159eda08cbf79ebc4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/coordinated-movement.simulation.ts",
+        "sha256": "302f06aa32078f6920faaa1ceb1e91e9bf728cf1ddcc2ed795405fd95a5aab2e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/corner-trap.model.spec.ts",
+        "sha256": "75d0ae9a332ce81d928ea75384b0684d6703a6e2cead466d86d53c79ea6d11af"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+        "sha256": "889712509863205a7f4442ce6c84bd3cdf8f455de47f078eadb374128c958d73"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/corner-trap.presentation.ts",
+        "sha256": "fb57cd0b4aabb2595bf8c33a0ff48292935828196b3f13659331b7aa100b1afe"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/corner-trap.simulation.ts",
+        "sha256": "c1aee0bbddadce01c1795846ec93b6ba111a2066905459676ec2eb5d8c76115c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.model.spec.ts",
+        "sha256": "f9bfd81b2d239daaf4986ab700a3fd93ee0d63dbce9dc0d96a1785d0698049ca"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.model.ts",
+        "sha256": "105ccd712070b4ac7d009af58925d0686036290fce3b2814c6b73ddc4a011c05"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.presentation.ts",
+        "sha256": "ff5fa9c3c07773b3b91004f80c738298ef19e315932de356a25d33f248b8bbdd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/equilibrium-fallback.simulation.ts",
+        "sha256": "6b1bf02c351fb2eacec7486dec9bf99dc7ea0933ef95a0e9243ec9cfd3ecb037"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/face.model.spec.ts",
+        "sha256": "3da5fcf8e5d25a68c5b780115ed49e378eea1aaab3171bf973b5ca63ce60ddc6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/face.model.ts",
+        "sha256": "a26cc4d824579bea047982d5597177a5173e3c40c5d0af1b75a49993248319b3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/face.presentation.ts",
+        "sha256": "53e91d8fd960d42768d518db75b2ead526a0e36200f8532821a8deb521f6df00"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/face.simulation.ts",
+        "sha256": "82928f940f965cfa1fc4115fef574e5560f298f62a4cedff4510d6a950baf313"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.model.spec.ts",
+        "sha256": "5b4fb4e27342913a911ef4380159e3e1b6ae5c32032f8e4fb9a49a1d8a7f63c2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.model.ts",
+        "sha256": "6c3c6cce3c7051d77b82ced5aff5853a4c6fabf6a1b3f2b72960129acab65b8e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.presentation.ts",
+        "sha256": "9d3b79665cf6570df88f3a2833282f37c11bfb979d2da94a044de4e4675aa8e1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/fixed-formations.simulation.ts",
+        "sha256": "c374aa0dd1e1f098886f758abe4526921b8260605f787e9379ea223acb250a6b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flee.model.spec.ts",
+        "sha256": "c32a6c4f9b938b3a72451fac8bd463375f170f163db659caa1690dd40f62205d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+        "sha256": "bba4e6a3cfd7984c157837797e5163541541d3e8e86019c4654b436929c3d2dc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flee.presentation.ts",
+        "sha256": "07c0cbec646067cb0eeea7e8764e7831f9cdc1846926a186683ccc6f6ce3bdf5"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flee.simulation.ts",
+        "sha256": "975af0a0faecb32132fcb47bc5dcc4929b126a73eba8c0893b0fc3652037e7c9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flocking.model.spec.ts",
+        "sha256": "360e63ab7d4787defd469eae473ab3342e666286bfc76363e4a9632f4f315af9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flocking.model.ts",
+        "sha256": "918e0c475c6ef109d60eb5be78b0a5d790a4983fbb019b73f8b49b390de308ed"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flocking.presentation.ts",
+        "sha256": "e90d9ae23bb4884f3f2ba4451ce881609ca2a6a70f56a744dbf30022dd56d9e4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/flocking.simulation.ts",
+        "sha256": "8e1c82abc55b0dce0d9128868fa9e1e053982fbfbdd58f342edbd3c1571fe0bd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.model.spec.ts",
+        "sha256": "da25e7ca008f05c4ba6674f01d6f6aaedbfba5092e0260b0536cb2724431c949"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.model.ts",
+        "sha256": "e7293c4ab932171954c36ebcc68b9443bb8e0a05363b111a1b5d72c85069eab7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.presentation.ts",
+        "sha256": "369d35c38aa18067040dbed5ceb78128204055be5d48c882f11dbe71578ac445"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.simulation.ts",
+        "sha256": "2cbaf7cc370407f683adda39845629bf0ea9a30fcc43d9dd41ac69429b7bc37a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/group-movement.model.spec.ts",
+        "sha256": "61d3843fbca4c5a4e4306d67f66f05d698cebdf49351028de5960a3bbf6cb063"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/group-movement.model.ts",
+        "sha256": "8dcf19d82e9a5be5a0680d6e313f18edb57561e80b6849c974a03dbfc7f45d0f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/group-movement.presentation.ts",
+        "sha256": "d68734f71807e0ff6ad0407fa546eaeee18881a213b233844731009b0cbb45e4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/group-movement.simulation.ts",
+        "sha256": "a5298e837c2ceed437b75144d7f25bc9615bc54a41e4486956e0a0619bfcd8a5"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts",
+        "sha256": "c0b0b1998044481e7eabd38fdc6f6c042831dc0c2d5e63e87727ce2a2d8c7ce7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts",
+        "sha256": "7c0c3cf62b577f73473816aff41d0785148af1e7f0b312471a5727cf7f28b7bf"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.presentation.ts",
+        "sha256": "80e926d11fd25bd09570c33a9be286d068f6069c943315a2ea89f2ba45d68421"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/iterative-targeting.simulation.ts",
+        "sha256": "a1b50bb0a82edc6d5884e6b8198ac8ed58a9f66cda0b71b56ed17f0e1cf10282"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts",
+        "sha256": "cad7ab153d75ca84aee9ec9d90d273e98dd130baa5fb83a38c1a30d9c97bedc1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+        "sha256": "d5c36b18cbeffdace3bb459ea7a4bbc5e5ec2475a21bbdb19bfbe07f222ffe5c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/jump-points.presentation.ts",
+        "sha256": "46846a26db065aec7b66ce6c75ffc650f4446aa22e1021b538371ad878da98bc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/jump-points.simulation.ts",
+        "sha256": "ee44ac2a204b0ebc650a8af197583c31dcbdc07c7701bf20879644d69dfab5ae"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.spec.ts",
+        "sha256": "174246cf5601afe448b4632dc880b3922bf0306c1e4ed122bbfe854faa2d0937"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+        "sha256": "466194916a928188b5d683833f7419792c7f982d2e84a227fcef79e674d20ec6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.presentation.ts",
+        "sha256": "4834242612f806b9c205fe68d999f703449f80bbe810e223166eeb12727d3803"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.simulation.ts",
+        "sha256": "b4ec3d3edfa58f5e59954c4ea259d618050d71f11f99baf5dfa2f37bec8e4a36"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.spec.ts",
+        "sha256": "1249d5972a3e67697e96146a63b16f4f9283f4fe877b035e614e77db2dbfdc68"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+        "sha256": "dcee36c11cf82bcbc8d63db9abeef06ae314e2f878e276ded93a8bdd9b57460f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.presentation.ts",
+        "sha256": "5380f2e68dfa4b91b0305c8b5128f88f69ddac2db84ea23ecbc84c40a30bbbb1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/kinematic-wander.simulation.ts",
+        "sha256": "94ed1dfb76f434f734f3cfbbc1d71fa33cf93ba4172f29bd6279fc7ea2198284"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.model.spec.ts",
+        "sha256": "653d826ce00cc701efd3b89599423f68c8804cc7778e5700f1b3e46a63e2cf79"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.model.ts",
+        "sha256": "d02e50c0a08840997db0279bb418b5767eee0d66c705f13e792da3d586dc3458"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.presentation.ts",
+        "sha256": "042f6eb7830ab57d52a94352971fc07f2016bffabcd64bd209609559a3746e8e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/making-the-creatures.simulation.ts",
+        "sha256": "0cd59dae886c715851e1e9b6d5481534aed72151f9b295973f7e833a46462855"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/motor-control.model.spec.ts",
+        "sha256": "17f9ab60db3ad678e12d2f1b44698be922af40f9656bcda4635723786eef7ca3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+        "sha256": "bf5ed64ac3e58cb7d5830a9a4a88a42e264dc67d8d5795015188b348c63d78a5"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/motor-control.presentation.ts",
+        "sha256": "6dce2fcb2556ca1fb3b535e4a437dbf318c956c16fb920df9de0b379218a1bc9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/motor-control.simulation.ts",
+        "sha256": "b58ba0e8364b4bcb4a727496bffdac3ca2b277f2d42561cc29edc262f17b4db7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts",
+        "sha256": "c43cebd5e2461c0424d0624ffe6538134de1fb66be4540ed3e147ae265bca0c6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+        "sha256": "b636ef616eef91d307607f931427119b3f28a69250a77d0d1af7fb0112b9c7d4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.presentation.ts",
+        "sha256": "1915bd78c1d84a20a68edecc502ef35bbc840909d6b4195834fd797232c08bae"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.simulation.ts",
+        "sha256": "309e2c419b5fc774970d51614ce2b2d1bc8f725b55c0327870ecaa159db2b086"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts",
+        "sha256": "a434c91c3289a31f056d272aedd51fa039cb0aa02fad0473fb5c9c103d333ae7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+        "sha256": "086c3665d140f2b685e57636afe9894d1b2149c12b782236c03c63c5a4f3c50b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.presentation.ts",
+        "sha256": "3c388d13a4651e44a2d02bd4e90a3a5db6e87aefd686572998a59f066823efaf"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.simulation.ts",
+        "sha256": "59dc4d18b4d9fc154932f3ae9b20896a21104a6eaa1aa6b2aa707d5cfbeabbd8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/presentation.spec.ts",
+        "sha256": "5a9c7ae603f3ba9942078c3fb8bd8bf78ce6cb1fc33705dc34d84945f7e0b714"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/presentation.ts",
+        "sha256": "a9f5e68224c13b9cf8c6741abfd92f2ef507b0aab7c02b79f702fef6f1b21e4e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/priority-steering.model.spec.ts",
+        "sha256": "20f473ed1ee3ff35e5aa2372250d02d8f693051bf0f3543c4ce6bf5c91d93a6f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/priority-steering.model.ts",
+        "sha256": "2f3198eba043597f9536f870a7f938bd958857a573b3726f36dc6506d0141f8c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/priority-steering.presentation.ts",
+        "sha256": "d29c9d6f94f24348e2cddb4675c3dabfaf962644827974b71863dd6df3be56a7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/priority-steering.simulation.ts",
+        "sha256": "0d40f05b529e9d3615f89b8e72caeec278d3b210e96a17488ca9bebbce40022d"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.spec.ts",
+        "sha256": "6fb81193c2e07e763018c5293d3a5f43efc6741d5518c1eaea6740244baddfff"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+        "sha256": "645f2e1504c3bb9965cf9557628867ffee193e40831d2bb78c010e885fd11875"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.presentation.ts",
+        "sha256": "f6a0c7a89bbd1dbfe926beb8ab891308a4fb8056e5232ce61f120f57fd7908c5"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.simulation.ts",
+        "sha256": "2c846738bc9ee03c69b00beccb8a4f564fb24bab091b8e22823e22091c880406"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/pursue.model.spec.ts",
+        "sha256": "974b00f8d0f3202c20d3959d65ac9800e7a33178b170852da38182cc8b842131"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/pursue.model.ts",
+        "sha256": "c39c3f1c4ae58b80e9bb0fdb403c298a95c49bb08f6f80b4d0aa6d1077963e91"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/pursue.presentation.ts",
+        "sha256": "c06dcbf35eb853b84600fbdf676d8b8b8d982fdd2e3b7db43f8322c7b4ebe309"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/pursue.simulation.ts",
+        "sha256": "8bc4e19e7dcdc158d536a55647b9955354f0f2f4bc17def2659967ec48da7b0a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/retained-samples.spec.ts",
+        "sha256": "711904fea67554f38ec8cd5fac644c89e87b844c5578656d6b4f095d79eebcc2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.spec.ts",
+        "sha256": "72c1945e10ac480fcd692de4c6c7f88f0794ecc684564ce1d4625109eaa13ac3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+        "sha256": "b488da4cd727d026722fb510227cd5ff5595b35f2c225c48a750d29c08083946"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.presentation.ts",
+        "sha256": "50fe87e59eafa9dcc6cd64dab0a50f7bb40e3ff3f9334c43ae8897a975889db6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.simulation.ts",
+        "sha256": "544a6129707fad86b3d3a5f5489eb6a9a2257314652903f2ad7b15290894cfd3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.model.spec.ts",
+        "sha256": "9d18f99ee2ec5bbbb26bfd957937bf16155fca22086d696bfa39a89514cee4fc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.model.ts",
+        "sha256": "9524a55e66d9b87a4c5b35c2dbadd5d08ebd966ad266a68d0b7f3b8505cb8090"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.presentation.ts",
+        "sha256": "4d034539706724c5d09ea573b3dbd78ae7f3e638d87298314dc5a640182066f3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/scalable-formations.simulation.ts",
+        "sha256": "79b8f0a29c10ed2f1ef390073d9968bddecd7470d86b627befb4bfe9d48164fc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/seek.model.spec.ts",
+        "sha256": "bac4d0dfc407540f68d49aa95b8169677c5dc4b3a13f2441bd8f59b1d229a058"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/seek.model.ts",
+        "sha256": "0ab4566bf0a903f07f068896efb89839f90f139520430d5c1c5a3ec853ba23f9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+        "sha256": "2a7de759ebd953585b1f308026d3cbe22b5576ebd4a84a24f9b50535c9c98cf4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/seek.simulation.ts",
+        "sha256": "97c803db67fb577f968540dcc77de40be4948811221c2f7d6e211722238d7d83"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/separation.model.spec.ts",
+        "sha256": "9b1b5f6509cd2e71332ad200a0d8c886d29d27b14b897a1849b6017b1941d1e2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/separation.model.ts",
+        "sha256": "678305b85dd8f25e60be170a4b3771aa30426a66485a277284181bfe522fb0ff"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/separation.presentation.ts",
+        "sha256": "1b4f6ee84588955c08f765c2d5efc257bc14475527d4bd458575daad6d9fd745"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/separation.simulation.ts",
+        "sha256": "a35aed744196ff061a62a82d5efc8fd4c9ed8a26752f1c3b32b15e40a32d09a3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.model.spec.ts",
+        "sha256": "4267dcd910eb73065183f788149d1e62b09b8dc9d65bb1634c14c9003fb37de2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.model.ts",
+        "sha256": "d7a7604d7d3793e09c2cf7655fb91b3ac87634d436b01c33bb7f1b4bb6de4253"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.presentation.ts",
+        "sha256": "43b259685b29dc825f052101c00bfd633e91dd26c4b97bf128b760e4c4f33935"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/slot-assignment.simulation.ts",
+        "sha256": "abf0956915f30e4a4aa6aff5e3bf4f18e211569d2ceb2355040c0ba4259f6f11"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+        "sha256": "e0df00b9434826024d1952b3c2b2bbb1c2be3dc64aefcb83d939736bd00a9777"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+        "sha256": "063254310794193de03a2343c3a581d52851fa35ba33012d34dd2f65b58ac05f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.presentation.ts",
+        "sha256": "8317693f9cd75e51356bf5af574049677c34a5a5050ed1c378e87dc0825e8ec7"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-behaviors.simulation.ts",
+        "sha256": "8f6921f888d2be78bc53e1cd77bb8539fc5205208dc9b1956a2ffe13c632ab82"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+        "sha256": "8354d5a83894611e43d848a3988e4c43c8d338a66ff04f22a17a76264aa050b8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+        "sha256": "f5115a7b1b44f0bd1a92014174e6f9fbe9d61d75619b531489db87618b5cfd31"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-output.presentation.ts",
+        "sha256": "5d737f32ccb49bebce360de49b61341cd079315f34ebe6d4637c18e5d8e873e3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-output.simulation.ts",
+        "sha256": "42ec3b1d76e5f8766693e29e66ec9d96dd1272debbe02f769c98269b7a6de649"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.model.spec.ts",
+        "sha256": "94f22542e32375c608cca8048225ada969027669e80e3a59221a12a9b9dc8540"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.model.ts",
+        "sha256": "85d246696fe902f1f650ff8292584600670db6189f15511bc823387c3b8d4bdd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.presentation.ts",
+        "sha256": "e59151a215960e5f81517991ad924f7bb8fa11e3861dfc10b1ba2344bc66fcb4"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/steering-pipeline.simulation.ts",
+        "sha256": "58c517b2b66fa8fc43888082f05945114ca5b548daf1a3a28f0951c6d0a5f63a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts",
+        "sha256": "b3e9fc3bf3bfb3526ca23e8e1be8f62a5066a46799071d0bd4d92ca7d454d6b1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+        "sha256": "2171d145535e7bf00c46e9d99565af5dfeddd5ff799f31b582ca02735b0cfbda"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.presentation.ts",
+        "sha256": "131f8714d34a79b20a0ebe0150b83b19f8f5eb9b5048182827f394e4bba55603"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/the-firing-solution.simulation.ts",
+        "sha256": "b51a2437c642cfe7f5c3a8ed7703a54bc8384e540f68633eb42f29f2d92beb2e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts",
+        "sha256": "75b8f49f3ed627f70edbf259881580e1a8369d4b447b142529349bceefec36e9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+        "sha256": "8526f6df535d531c173e73018f8836f14869cdbbd269426d0bb082a357b78d22"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.presentation.ts",
+        "sha256": "1689675088c2939db85059480da39f3815a0d5e7a94f6a97877379a58a0152e3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.simulation.ts",
+        "sha256": "367cb86962b613f1c29da3259a1d605ef174943b5f3267e6a2241b5c65290d90"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.model.spec.ts",
+        "sha256": "10426cc1cd96f1f3f9e900a827cec974a329e966438f5efe5810cc62f6ed4410"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.model.ts",
+        "sha256": "d758f8b77652fbe07bafc46d0db19623b2fd210a97fd964a6f253150e8386a9c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.presentation.ts",
+        "sha256": "d689b89efd11a9482528476cd4c6b9e10db1025f9c302aee56dfae482a36fa5b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/two-level-formation-steering.simulation.ts",
+        "sha256": "83c0a33a07f4cbbcdc3c8a195d95c2bae4cb04c25f6fa9a4b7118fc7cabea4a2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/variable-matching.model.spec.ts",
+        "sha256": "ec62f674dffcdab7cb4a08162b913e0696b602f924b60ef9f3b174abe0d746ac"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+        "sha256": "42f2460223333caa1638136e0ce942fb5744c37c7316d524451f8113b54d56b1"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/variable-matching.presentation.ts",
+        "sha256": "e069b749970c7c4c54879e0d42fa29593cab3094e2d6ca5082fecf973476f283"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/variable-matching.simulation.ts",
+        "sha256": "d27281ce902579bcecae2a1127162db0b8cb9bd7097b41ede99ad0f2c99352da"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.model.spec.ts",
+        "sha256": "c0454a0e84793949546575d5810d2f941553d44a915e96d19f43661b5cfb388c"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.model.ts",
+        "sha256": "3477baab8f0296d012699adba76fb03d814714c2aa15b1dc9198283ba10ccbcd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.presentation.ts",
+        "sha256": "f11d39753c07b8e0c0800d7c2e1ee203b705aab642748df541414c0f0375f791"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/velocity-matching.simulation.ts",
+        "sha256": "07260a65522aebda2851467b29cc29a9315a045cd72ca0e881a58bc4a39fddcc"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/wander.model.spec.ts",
+        "sha256": "f9bdd094c9bbfd47f0f34005588c873c451e3590680f8a59e8aa48bda318115f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/wander.model.ts",
+        "sha256": "f1b3866bad7a53fcb53a5a69eea54f4669a2b28b96b26a2f850279104863b636"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/wander.presentation.ts",
+        "sha256": "cb5c1c6a2353760f1b194fe51ff98b0bddd2ec14078157448a400efb87255dfe"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/wander.simulation.ts",
+        "sha256": "f1d292608b0bbd30e01696b4305fec2b50a0a96a4036c8739316ded0ca3fe821"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.model.spec.ts",
+        "sha256": "3f999f1d0564a5e60f629468ca0df8cca4771af5c9bc01039fe774cb29a7ac58"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.model.ts",
+        "sha256": "56c471fcb926dabd26543bb569ced886c5c983c4fdf143f994e2dfe48f26b7ad"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.presentation.ts",
+        "sha256": "5a288a4db5a93e224c1f60c2114fd089b16c07319ff95d98255a2b67532efbe3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/movement/weighted-blending.simulation.ts",
+        "sha256": "ac576ee689cff852e3d0d73f7ae38da5928fadcc47c6969785d96ccb18e3e939"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/behavior-subject.spec.ts",
+        "sha256": "e36851d3de3b38f2be6a876cd303ef3861dd200b6a80a8c0692f4463d93c5173"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/behavior-subject.ts",
+        "sha256": "f00aab91a7b54aa18fc64f542553d64977171ba0a1e55bf3bfa150995e19287e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/catch-error.spec.ts",
+        "sha256": "819c45b43fe0f4ef396065df29d3b246c802c748001e10e9d253d13161e0f6ed"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/catch-error.ts",
+        "sha256": "7f1e4ac400b9ef495a3b13cf4df3821a294c71a49fc8e7bf3ad2f2bc60163a89"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/combine-latest.spec.ts",
+        "sha256": "1838015f6f6285febfe14a4cedfd92390439ec3ff1b3994b1ad8f4cf9c1bef2f"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/combine-latest.ts",
+        "sha256": "d83a4805a2a33058aa24a7dae6e23dadde29358e87a6c6e7daa22f5187f887ae"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/concat-map.spec.ts",
+        "sha256": "c7b4e65e602b179a7eafc35204d9b84619400ddb25069f83a4fc50f68abd4538"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/concat-map.ts",
+        "sha256": "2147a191399f2697b0d776cf1ecd846a10d6f885da626daec6a2c90ceb4ad2b2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/exhaust-map.spec.ts",
+        "sha256": "d49a8f1890ad3096ad110fef17a0cbb4a589daa3412adf06ac80deaabcafb588"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/exhaust-map.ts",
+        "sha256": "6f47224253c2a177cd845bd15d3b5691e065dea61364748d96634a18c10c4d32"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/finalize.spec.ts",
+        "sha256": "06f9b1e8f28c494232d4f9e96e35ddfee12078c8a84ad0db8ff0650401803f72"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/finalize.ts",
+        "sha256": "1c3e4648a20c195a95f82c4a6b3b01d8f5789c2408e9a559c3b3e2766f06c8bd"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/localization.spec.ts",
+        "sha256": "0974c45e3fb6c7e859d10515aa6e0c4d1dc8d15392aa5041688dbc4f52bd6e10"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/marble-testing.ts",
+        "sha256": "6371f062cba29ac14f7b1ebdd675b164980be63e7c66e35b133199988b3dbd0b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/marbles.spec.ts",
+        "sha256": "45767c0ce4366e6093100d0bf32e216d0bcf98ed20c4d9d71d525ea62c733e79"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/marbles.ts",
+        "sha256": "78b526bc1d63e8dff1a5f449bac779b81c55aa8309cf164c38798e1a90b6b125"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/materialize.spec.ts",
+        "sha256": "ac3024121a0c0b331a77721f50e38e0be432d06c8541901f4c33f6ceba07aaf3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/materialize.ts",
+        "sha256": "65ee916e37c50580efeb64f0c7e212055c97f62636a297ac1dfeacdf487e1905"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/merge-map.spec.ts",
+        "sha256": "f1c7532ae812e4ceb77fe4bfea49547bb077e797c09018c07dabad8c3c186aff"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/merge-map.ts",
+        "sha256": "8e16dd230d7b13d1bbd626d075641d0db0bc5a698028b5b892e145621ceb3e2b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/observe-on.spec.ts",
+        "sha256": "6dbe25e7f46edd4e40cdca9b3445f20b7b3ac13398568e3e3d7578b35f4891ad"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/observe-on.ts",
+        "sha256": "7b7504a81b810450cd9987209b5cd83ac9bfcc82e8fe258fcfb81ec96e2e0fb9"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/repeat.spec.ts",
+        "sha256": "7cf1cdb0b5eb2b115f7111cb78903bfee4cfbc82ec6ff1112a8ea8edcc36c9ef"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/repeat.ts",
+        "sha256": "9fbf5b2717969cd7bebb22bc0cefc9e124ccffbfba1676d98bc385c2eb10d317"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/replay-subject.spec.ts",
+        "sha256": "60d2cebbb99eb2200a0e99bbdd746bcaea114ae6f57c94034a6eba692743f5f8"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/replay-subject.ts",
+        "sha256": "11ae68d635f12715ac7459dd887a959aa46ce88377bd81d4d73c8acccdf79138"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/retry.spec.ts",
+        "sha256": "e5c7c1420854b514678cbd41fe3ce090078a5fc8e3f2f10f3aaadd34c2f7f581"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/retry.ts",
+        "sha256": "32d0e034e634927b616c78377586f99666e6c4e6cbfd23e4308deaf0933e6a1e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/scan.spec.ts",
+        "sha256": "30a0b9eee65e0a1bf2dbb9c98d018a7836fee469837980d00071d8a50e3c2a93"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/scan.ts",
+        "sha256": "956dfb1c490fd8ab433bc431d7d68da07a54563b84fe2d658ff82a4dea800749"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/share-replay.spec.ts",
+        "sha256": "1f7c1b2e1a20f405f35037771c6b8afe577b44e31b56861e3df8d78c412aa5ab"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/share-replay.ts",
+        "sha256": "4b2ea796738ffcea09761eeb9efc9f01f42089633b0b7a27b24f41653cb1c27a"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/share.spec.ts",
+        "sha256": "947f0a45ac3b66dbcb9c3fe9d4cef476c0e66288037fd5676c6b5abff098f4c3"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/share.ts",
+        "sha256": "f4191061f00a963a2fa2763bb6b99720c9c9237f96a132af884f7ff289bb2358"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/start-with.spec.ts",
+        "sha256": "92cd00edf98f6fb2b4052e5fd69be1ca920cb8f6df4b5908de461bdc0a0f17b6"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/start-with.ts",
+        "sha256": "18d43a1d95ac5da0043755b2919f4a4d210d78eca23c2266e8b64a2516a31272"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/subject.spec.ts",
+        "sha256": "2a0738fc5b680eb7e8b27b643d660f348dca63560eca8f7d854a0bae57d85f98"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/subject.ts",
+        "sha256": "40148fcb0d28d3e22c7d1c6b45bea2b016ce8614d191e761204b6f038b3e7ce2"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/switch-map.spec.ts",
+        "sha256": "0c53de7de0b7ac75977a901e4ce80295b44c4f1770f8e5a959c7128880ee1a4b"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/switch-map.ts",
+        "sha256": "81d603b9c676b9218f4d5dc1d13205cff6febb02e0aa93689c354ff0ce4be680"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/take-until.spec.ts",
+        "sha256": "aa2d89720ef423c744cfca70934827f1e2d6339dba766c69c764cfb89077f346"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/take-until.ts",
+        "sha256": "d1918c3e20f966b5c747d16885ff94fa0a45aa6240f9049abd3163399f8889bf"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/timeout.spec.ts",
+        "sha256": "5d0058fdfef4492bb448708125806c2effbbaac92a99da3553389721e920df03"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/rxjs/timeout.ts",
+        "sha256": "c2c5d5f3a899783785e8a89449f4041d3ed94404d9b552e253ccc254a1495746"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-message.ts",
+        "sha256": "e202cb712a931f080d63dfdea0c632cd41d72adc6a8b9c523c4cad5b9a883060"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-model.ts",
+        "sha256": "9c97cb1f6bdbe76ae03bd098beea7b8173ee177284c1e754603281753ae8d712"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-models.spec.ts",
+        "sha256": "2d332876d3a09ba86a538bfdc3b55f413b5cdbd24788dceb97a0db7e2b1c337e"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-models.ts",
+        "sha256": "3972ea145258e74ca05c9a0e194061a9eec66470340f1c1aa119fedbcda9dc89"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-record.ts",
+        "sha256": "dd50ced12b81069043ac01ddedbeedff8f4757a2eb15a48034d148a73b29d750"
+      },
+      {
+        "path": "libs/features/tools/src/lib/studies/study-translate.ts",
+        "sha256": "a4629251051c27c8e592a4e933b37150deca7ae50a7a87ae13fad704ad161a36"
+      },
+      {
+        "path": "libs/features/tools/src/lib/tools.routes.ts",
+        "sha256": "a00ced30d89c5043139d9468e5833be93993fcc2a17b1d3e9da2c81d7635df62"
+      },
+      {
+        "path": "libs/features/tools/src/lib/types.ts",
+        "sha256": "89d363f6d09d7bd76ebdd432051af4d5ebd11f392a5e11fb39da9edd3c0de444"
+      },
+      {
+        "path": "libs/features/tools/testing/src/lib/study-en.json",
+        "sha256": "5885e0fcb1b372364e13ce28e9cf0719617d32a8aec8e99e800be0428e786ebc"
+      },
+      {
+        "path": "libs/features/tools/testing/src/lib/study-translations.ts",
+        "sha256": "2cbbb1d7adfa107e0e7fc7129b471c9383f7d299db8635e909464ba1fbf1f142"
+      },
+      {
+        "path": "libs/features/tools/testing/src/lib/tools-en.json",
+        "sha256": "46a727aa0a7a957dabc9c0858f5d96297f8615c0917a3473f4dd3f323fe47f93"
+      },
+      {
+        "path": "libs/features/tools/testing/src/lib/tools-test-kits.ts",
+        "sha256": "fc8295469dbaf73e290c2ca22d12459640b46f1a97387ef9b04f75a84f62d459"
+      },
+      {
+        "path": "libs/features/tools/testing/src/public_api.ts",
+        "sha256": "083310f24725a9b62dffd1849bd3d9d65b34e938a97f90ff384dae8413475823"
+      },
+      {
+        "path": "libs/shared/catalog/src/lib/catalog-loader.ts",
+        "sha256": "845c481e94d17a11d1e205e270dad27842a59dfcaa7d16abf52abc8aa085092f"
+      },
+      {
+        "path": "libs/shared/catalog/src/schema/concept-study-v1.schema.json",
+        "sha256": "1bad5b96ad2da477fd5da398b487ed621bbee909b1e36d6e0b1c28a8990d406e"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg.ts",
+        "sha256": "878441816b024cce205a998ef3375304cb42cca58f4c6e1b0232651c1c384391"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/actuator.json",
+        "sha256": "5f15a86d04b1fc90e942bbcd288694226a5cc1087c04c88bb4dfb325f22f5460"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/align.json",
+        "sha256": "7283e69bcf2bed68acc4405de60ff1d788cee398cfc1fdb3a7ba9b5ec84f1951"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/arrive.json",
+        "sha256": "7d950d02f94f1ee1bac461465a2d5279cf534da5c6bce9c68e81ab1bdd58e288"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/blending-versus-arbitration.json",
+        "sha256": "b963bfe5a9d25dc6151b6f38332c50ee66f7e399454823ce8e68c9f3f6fddfb6"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/collision-avoidance.json",
+        "sha256": "1c21400b8e02e41c43f5b725e9d64f3160e84888aace706e3dff82fcce5c9d7d"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+        "sha256": "60fe28d55145dc9ea2be2259932ab8e618a36a1c8034f166b97de65602531b54"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/corner-trap.json",
+        "sha256": "1cbbfcd5effb4d5742d8d6c3937d3b9a4f56ba7c294a3e9735bea49e49134592"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/equilibrium-fallback.json",
+        "sha256": "67203b2afa5c5c4a01b6d94c3e88947e8cb32d84d2d273b343b5eb5ff979bd47"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/face.json",
+        "sha256": "19c05a84f8aae552eb67470cb1619d4020b3971b0dc92fb614d33e3d06d1bb6b"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/fixed-formations.json",
+        "sha256": "3eda7eb0bcf49c4667ecedb3e9201018d11c32c4f6e5a1cf03d996a76f2159a3"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/flee.json",
+        "sha256": "8b8101b30183bbb921e4f51b2073839d2e8015f998c2982a14132787c89b686a"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/flocking.json",
+        "sha256": "61449b9b0b9bae208d7e2b8a456d80f63df6285c4a5f450833e00a32f4f680a9"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/formation-pattern-interface.json",
+        "sha256": "9807ca456bcdb71f6ba79dde7c2f276fcf446c97de27db0c3096dfb75cbe8802"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/group-movement.json",
+        "sha256": "dce4bf6438bfdafde6a3b6c764419048675a30f4eacb7d91d4cce2e95d9bdcbc"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/iterative-targeting.json",
+        "sha256": "289500a2cd2174974fde700b93f1ef96cb876cc96cc52af7096f05a8d9013d03"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/jump-points.json",
+        "sha256": "26291b02fc4a1095455863a70ffc5366c3c6e2bec735073afc8c1945d3b6356d"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/kinematic-arrive.json",
+        "sha256": "ce94a1a6c454946c4ee84ad03a1da2c849e9a0e5be79c5ea4c42db253214ef39"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/kinematic-wander.json",
+        "sha256": "e90e699ab7b935d1c104577f16fd36ac89f3024d7f8c4ac12d9cd48599dcf32d"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/making-the-creatures.json",
+        "sha256": "b125de4e1fb4e5795579d3737c34b0f3d64ce07b1fd87659a8dc70552ddcafde"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/motor-control.json",
+        "sha256": "dab0a2c16d9ac9a1a085de0580bf36edb1baaee7eb3eacfbc862df57cf33ccec"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/movement-in-the-third-dimension.json",
+        "sha256": "4f0a70750fbbc791762193752ab32af4be292883a2a62e28ece08911bd6426ad"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+        "sha256": "db1b213b9ffa9fc5f20e2a35e2578392018f53af0b9011032d9ce7309278d3a4"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/priority-steering.json",
+        "sha256": "50b461a0706aaf139848411ded76687faba1797a2b40eddb9ba65c66f7ce9681"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/projectile-trajectory.json",
+        "sha256": "8cc4598031812163d552250b1e650eb0a2c5c5159e24d553b68011800cbe0859"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/pursue.json",
+        "sha256": "9a2ad826d8b3e7366b34e7b71ab4f6103742233091aee181c4192c6d251052bf"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/satisfaction-radius.json",
+        "sha256": "e35a9db3436ff4fab0d5f46a478cc81c22aa37be276fb81d5e1015b02d63171b"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/scalable-formations.json",
+        "sha256": "4eab3d8b49f96f54bda69609e326ed12a80ef9e24daa9f193a1f91ef791684a3"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/seek.json",
+        "sha256": "056e09d555e70d43faa67a8f5fc3428afc88afe8c7af84e427ede36d82e0581d"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/separation.json",
+        "sha256": "34416c8abcf6a84f504faf59b3661c63ef0226f1c7814634a566c51438197d2f"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/slot-assignment.json",
+        "sha256": "4d8fdfaebe7d33534cf96bbae7f4a70ac615bfd7f71cf030daeecf0bf833e964"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/steering-behaviors.json",
+        "sha256": "9304a59109a0150da1f043040a0807e623ee20753be0f45acb6fad65c9f0da6b"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/steering-output.json",
+        "sha256": "c036b10dd3fbdfe0db342a595786120dc60870ec3c14ba7617f2b44de8fbeba9"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/steering-pipeline.json",
+        "sha256": "b8bc7e074f11f6aefd6e69a9aeb89e8178be788adfb97452c214a61661af6b40"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/the-firing-solution.json",
+        "sha256": "14b08e47a099b6c69a28c69247f266c64970fb4450b9047530e99f61a2835fe0"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/two-and-a-half-dimensions.json",
+        "sha256": "ca24053412f3958303d04766f7f0954fb9b9cc2deb9754c19503da9cfaeb2f61"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/two-level-formation-steering.json",
+        "sha256": "c4fc7599af2f0035607a7acbf206d52dd8c17b5aa9d2f35f520118e6837619b7"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/variable-matching.json",
+        "sha256": "3c44bd80b5fa95f431c21a4a0678c32f0e141bb98d39fe51842f955ef61df2c0"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/velocity-matching.json",
+        "sha256": "1036c3123c139e9d361a90cc0c6371e949c0cadabeb6d6b161c30377112b3489"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/wander.json",
+        "sha256": "81d6c9e9b31e222524a5e93cdd9065d831b999bc877108d4ee51b818ed9aca1a"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/aifg/weighted-blending.json",
+        "sha256": "aaee2de747f283f63279c7a524c6a6c6a6c05c3bafd48ef1531cdbe23cefdf35"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/aggregator.json",
+        "sha256": "341dcea184ec951bbddc09feae0db8feb2648d24453b4cd59806c46ee014cc02"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/canonical-data-model.json",
+        "sha256": "b7f7965ea2efecafe0d0ccb7390fbf68c5528d532e443ec65c1e421997184ca7"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/channel-adapter.json",
+        "sha256": "598448a4df760017a55b07dab0ff2c6ceec6da2fd483e4a3a55b8b366eab4a65"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/command-message.json",
+        "sha256": "64175449375c628ad772b940573d81da4ef34668406642f440cf603a4cb671d3"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/competing-consumers.json",
+        "sha256": "45b4addfa36128a710af2d05bbb50f4778cbd62a4531c39232ff01bbf8d1e544"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/content-based-router.json",
+        "sha256": "7e1e10385684ef5eedbfc17b8d93733965c978731a2a767fb57e23d56fa45170"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/control-bus.json",
+        "sha256": "28df06350b1e18f18a3138683d5094b9975565cc2ce2e4a238fdeb13caeb6629"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/correlation-identifier.json",
+        "sha256": "248404f4d66287590f28d5f79863fd8a4287c45f090023c42e1f2188bdb49e26"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/event-message.json",
+        "sha256": "c3be8e3057cdf7d0e4884e377f578dd4a8fc550a3d9e5fa764a17e87dab34053"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/guaranteed-delivery.json",
+        "sha256": "b9fe098783e0d115441b624c4f19b4efe533e8e6ef24b13fc1bbea04145540c6"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/message-dispatcher.json",
+        "sha256": "4ddff9af119e05dab517c9561f6a61533c20d1740edc74f1568eb7e738d55237"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/message-expiration.json",
+        "sha256": "2fe07c48578e2b86b252646154745e1553eadce1aeafb0791649415fb33d5a12"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/message-store.json",
+        "sha256": "2a632fc20002589a3e7bd5601c552f35851be491c2dd8014ed81cb405b138bcf"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/message-translator.json",
+        "sha256": "017b3208e58050222a510a02476c18e2e148f0c1e271dd9f12b3b0c0199ba3aa"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/process-manager.json",
+        "sha256": "db8fd9a382249ab48dea48cc9f85e2f45d91b45bf7a153e7121fc8ad62667b7a"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/publish-subscribe-channel.json",
+        "sha256": "39d3b842f0764e90a71b6428fd21e3d21b57e19dbb2799ce6f3f372a2a561ff9"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/recipient-list.json",
+        "sha256": "99c15402b4a8e7cc2ab0a1a87508cc573c67e2188c00e0ac44d0dc51f1e2c2a4"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/request-reply.json",
+        "sha256": "09b5c161ad2b03a1ec9e3aafb9828c193674e57e912c97e93ee754fb0cc0af17"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/resequencer.json",
+        "sha256": "36532edb73a9acccc25bead02585f5b66abac5202cd277fec1265ea5e374c573"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/eip/transactional-client.json",
+        "sha256": "ab9366bc19ef5ae5dec00a8911e713df91c63b2beef6c69aefaa38e3cae193c6"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/behavior-subject.json",
+        "sha256": "22d7cb45c6d32f5eab67d1b17c8ca0268ea5e87a1d673c711ea55c3acbf39514"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/catch-error.json",
+        "sha256": "b1f8721879879591195e242cde21381c877e7940fdc95ed7ebf469f4b765c221"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/combine-latest.json",
+        "sha256": "ff24c0b90b5dc4ea51f088334bef2d7efc0bbc5249a5917fd518439825c32ba5"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/concat-map.json",
+        "sha256": "8ace76c2079d6f389211118d5266f25f281818c7c6ea44a2ab694e7a6b2fa93b"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/exhaust-map.json",
+        "sha256": "dc64cc7013cd92321912adc5642fd3cbe16b2f8ca099755866c8fa11523aab56"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/finalize.json",
+        "sha256": "d5506ab9cf3ab69d9db487ec0aa407b24043005d9c11e9cecd54a25508cc5780"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/materialize.json",
+        "sha256": "3efe837cb724e9accda2b1b5ac780034d2b180605f114c790bcac0d0eef2c0a8"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/merge-map.json",
+        "sha256": "dabc1ef69da221703a522a27663bec701edf88c48ed172970e47e6daeacca8bd"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/observe-on.json",
+        "sha256": "342c6a1243aaf88e6743ff9d106c5703604422ef6a3d730ab08ef8356e61b519"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/repeat.json",
+        "sha256": "e15e4d9937ce6477a1921edd4648138be268c869ffa8e388084c4698cc8417e6"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/replay-subject.json",
+        "sha256": "e639d8e6d89718888d012dd34d9827c7aa38fc8a3f11c2486d1a47955eaa0baa"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/retry.json",
+        "sha256": "1c8a8ba044397d974499a5afca97ab050dd1d7ce3c5fe78d050143d3a912b6ad"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/scan.json",
+        "sha256": "c3da0a0f22682c2b2885d650b893f2c3489b19395b4e5a18eec67ed593091c16"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/share-replay.json",
+        "sha256": "9106eda114a4fdb38ba147cf2a9992317707fdad1be593ac74d2925350e34da5"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/share.json",
+        "sha256": "f0fb49cd9b445a140ac24b599fa06e099aee41c360f142b1799f7c6efc5c7772"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/start-with.json",
+        "sha256": "294cc14b23ccc3e9319214665680ec123169a69374279629170ee2fb8cf0bcc1"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/subject.json",
+        "sha256": "11923dea658640b6b4b2b2dd1d70785a91f106bcef442a27e95373bf7ccc3b50"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/switch-map.json",
+        "sha256": "cf62948ca901f0e70675934f1e91c4af3f43da10042a6ba1b3b20134f9699b9e"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/take-until.json",
+        "sha256": "c2a77efb0c39301c17b96bde7cb969895cdf842641c9012179ae2b8e2506e639"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/rxjs/timeout.json",
+        "sha256": "2da6e20b79c122e95e93c5751dcf0a365b227b79aee0f59c948206801e8ed443"
+      },
+      {
+        "path": "libs/shared/catalog/src/studies/studies-summary.json",
+        "sha256": "b2f47a2cd9e742aef23a3ea9ac58f958e5c1d166a783f34615e3c61dbd5d2fc1"
+      },
+      {
+        "path": "libs/shared/catalog/testing/src/lib/catalog-test-kits.ts",
+        "sha256": "0504651c6bc9be06dad61689b60c4732adfed927ce1fb9506d758ad3eff092d4"
+      },
+      {
+        "path": "libs/shared/i18n/src/lib/i18n.spec.ts",
+        "sha256": "6cef1a406aed57671de6efa60539b07228b8d52b6fe0335ce3d787ced04adc55"
+      },
+      {
+        "path": "libs/shared/i18n/src/lib/message-catalog.spec.ts",
+        "sha256": "b81b8e94be46e5013018c8f0f19d4a95392f472e8e53304341b27c944f630f1a"
+      },
+      {
+        "path": "libs/shared/i18n/src/lib/message-catalog.ts",
+        "sha256": "6c7f5e434efd9241413895d985ee13c86e352b6cfda3afa8d9821c93bd84edb0"
+      },
+      {
+        "path": "libs/shared/i18n/src/lib/transloco-http-loader.ts",
+        "sha256": "3028e5ecd3f21068cada7927dba1d17a402121e6427d1f6be0d0f47114b08ced"
+      },
+      {
+        "path": "libs/shared/i18n/src/public_api.ts",
+        "sha256": "58e425ded8779483e548e6efe87e8a461d0548e0b8c593a7b5e64d32ca9968f5"
+      },
+      {
+        "path": "libs/shared/i18n/testing/src/lib/i18n-test-kits.ts",
+        "sha256": "0784fdf3e2923a8913adda3c8b6bc2037a2933e19d39a2cac542a643d81e583d"
+      },
+      {
+        "path": "libs/shared/i18n/testing/src/public_api.ts",
+        "sha256": "d692b47b0083f346f9c655eba188b012c499e95867c4bb78fa9effe0cc946e61"
+      },
+      {
+        "path": "libs/shared/models/src/lib/concept-study.ts",
+        "sha256": "422a2610227d04461c0f594b2f3f2c1d688aadd9bb08ad0d8a682e07cdaffb01"
+      },
+      {
+        "path": "tools/check-lint-fixtures.mjs",
+        "sha256": "81dd314d1f1519ce995b9c0fffd114310f0940341a45239a8f579f14a8f36cde"
+      },
+      {
+        "path": "tools/i18n-copies.test.mjs",
+        "sha256": "5c5f58e62dab636456309a285c3b75791d33b211b3c6b4c4737adef27d2f92a1"
+      },
+      {
+        "path": "tools/scripts/catalog/check-studies.mjs",
+        "sha256": "d7e6ac928c5c8f69c6f2bdad3d17529b4bbaf9ab2c2d2c2953452cef2462e10f"
+      },
+      {
+        "path": "tools/scripts/catalog/check-study-messages.mjs",
+        "sha256": "518e2f3d28d0573483da963df8e952cd3f7218254b8fc9d5e58932a5ff64504e"
+      },
+      {
+        "path": "tools/scripts/catalog/study-messages.mjs",
+        "sha256": "5990f0d4c433546d00ed683311cf20ae85e698249b2fe95d82f8778fcf2d0ab1"
+      },
+      {
+        "path": "tools/scripts/check-i18n.mjs",
+        "sha256": "309eaa6846c0c150c152f9b0ef446999fabadb3e90cd3a06f4ba26269974d904"
+      },
+      {
+        "path": "tools/studies.test.mjs",
+        "sha256": "88660ffd70e4030b3b6e14241408c1695032e944398bd13146b55852cdb3c154"
+      },
+      {
+        "path": "tools/study-messages.test.mjs",
+        "sha256": "af68c617c1ba86e6194a52d5bf8fa1161e19167f917175c27d0adf45f3098780"
+      }
+    ]
+  },
+  "launchpad": {
+    "root": "<launchpad-worktree>",
+    "base": "a5e7076cfe1082d888966223f544e17d471324ae",
+    "head": "a5e7076cfe1082d888966223f544e17d471324ae",
+    "tree": "4cd59ba00638176731792cfed589ab819b98170f",
+    "files": [
+      {
+        "path": "docs/control/budgets.json",
+        "sha256": "782120a18cca9b111136f37ae426732562d7ba5cf7e0b6c77b597993a25d5432"
+      },
+      {
+        "path": "docs/control/current.md",
+        "sha256": "5023ba56efaed4e06d90f2a57d322aa854c3cf4579ea1424da8ab72aa4223251"
+      },
+      {
+        "path": "docs/control/orders/WO-028.jsonl",
+        "sha256": "ceeb243ef0575dd00dd786b6aab4906b297aad15962cadace871b39cdd72d9b0"
+      },
+      {
+        "path": "docs/evidence/WO-028/README.md",
+        "sha256": "4c37c14c2bee3f45298cd2e89e7eb486534039d13908656402831fa590fdfbff"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-01.json",
+        "sha256": "770eef299639deceea633bb4dec4a28baa61a2a58e768a5591756ff4bbb7ad34"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-02.json",
+        "sha256": "38a10a35d874ae840b63538c0343883d86140efb499f2321e062c1cf483ba3e9"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-03.json",
+        "sha256": "9c6bec20a7c8323bc387820b2fd7816ea39d019bee105b7231582b59592e0c37"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-04.json",
+        "sha256": "e24c4942e377d2f1d1f86f4ccfb030025a221eb0e2bebe71d2b2779180f7049c"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-05.json",
+        "sha256": "fc25546a8949dd566cbe2f58df2462d2604145e8cb039b3abea1df04c31bc35a"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-06.json",
+        "sha256": "f9199ebfebb6f9158ced38644a376dd0b48fd2bff0d3e0e645a5d3b1bd5c7018"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-07.json",
+        "sha256": "0b962cef02b47e087d28863af0d597af55508cb38a9f25c91e0bc32924998523"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-08.json",
+        "sha256": "dafffba33a4e7c0a96d7090549523ce993aaf3ba4758857ed8a6fc5cffbd5098"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-09.json",
+        "sha256": "7fe1e6455a2a0e80dca59c12d16441f44f8541ed0e7616945a61f3d2d9a3854e"
+      },
+      {
+        "path": "docs/evidence/WO-028/authors/author-10.json",
+        "sha256": "7956670cb7f496021bf1533e37777c426b73158161f1cfa3a5e0146e6d20a35e"
+      },
+      {
+        "path": "docs/evidence/WO-028/bundle.json",
+        "sha256": "62c311a805701882bacd661f1f06025a637c141dc90ebce9a70629fdac306b99"
+      },
+      {
+        "path": "docs/evidence/WO-028/capture-manifest.json",
+        "sha256": "c1575b93ee711f410f70fba3b785ead8c18af2ecc85d1baa0e6451805a356f04"
+      },
+      {
+        "path": "docs/evidence/WO-028/content-identity.json",
+        "sha256": "7b366b0cf040352a2d87e8ce5bf926d06cf646e9f648a4e42c2aabcb7303127d"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/factual-final-recheck.json",
+        "sha256": "1d6192d566c8ce8a56295c4a7d515a56b5c1b47c75232febf82359fe266bb195"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/factual-initial.json",
+        "sha256": "7ac7cdc58670bc4ccc8904e58991843c74955edf03cd8a343af62116d84d2f83"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/factual-recheck.json",
+        "sha256": "ab5effb8be4662d52f88911c16ab64b10e5cfe54a22f494ec49b4701ce0f03e2"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/reading-coverage-initial.json",
+        "sha256": "2e7004d111a140e237182a118283752c1afac5d9e2b1727b6fd7d14ee3007a91"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/reading-final-recheck.json",
+        "sha256": "e1df9c0e6538b38ee12ac93d078f4ff5e923cf59615ee4d37bebcc140b85e571"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/reading-initial.json",
+        "sha256": "ec72648ed293ebc712eb4e44959079292f5cb00a8c9b9e172a7dab887589bb35"
+      },
+      {
+        "path": "docs/evidence/WO-028/critics/reading-recheck.json",
+        "sha256": "a0179355e3d65f28397b17e89f54308516a18e82f669851721890207204a4de8"
+      },
+      {
+        "path": "docs/evidence/WO-028/decisions.md",
+        "sha256": "95f4b38de8db9f796197804f2ab66a940fec90b00ee6804b07168c21529c1a5b"
+      },
+      {
+        "path": "docs/evidence/WO-028/fan-out.md",
+        "sha256": "871db292467b3b0d1f739085404884c6c15a1e371c9ad3e52e2bf11ebbc330fa"
+      },
+      {
+        "path": "docs/evidence/WO-028/final-001/README.md",
+        "sha256": "c6fd05a813e221766b25e6d8b5e43e7afa4458e816518797ccf149c0aef4f276"
+      },
+      {
+        "path": "docs/evidence/WO-028/final-001/measure.json",
+        "sha256": "59f6af3445e8ceabd9cf89a7d1a2db2c887acb276661bd8b5bb961b82aabd942"
+      },
+      {
+        "path": "docs/evidence/WO-028/final-001/measure.mjs",
+        "sha256": "dbb97910f8cd9b05cd95a3a8f525596222759bfb5e6cd818e0f6d0ba0e2a45ae"
+      },
+      {
+        "path": "docs/evidence/WO-028/gates.json",
+        "sha256": "a8f0ca0319e87f84590cd7c4a0dec2b05d4877c11262353a24a0180ec6bc570a"
+      },
+      {
+        "path": "docs/evidence/WO-028/handoff.md",
+        "sha256": "3029b3006b4b97e73689d8e1b8b531467255116819c8a30c849c4a45d8cb8337"
+      },
+      {
+        "path": "docs/evidence/WO-028/host-qualification.md",
+        "sha256": "aa3358135d4ee6ca3831ba5fa691783ab32cf6e8da488de891a45662e08526f0"
+      },
+      {
+        "path": "docs/evidence/WO-028/implementation-handoff.md",
+        "sha256": "d5f4d5e011cfea4e78bf927d1f5c06309dfdf44dac0a58a889210f217086f6d6"
+      },
+      {
+        "path": "docs/evidence/WO-028/preview-pr-body.md",
+        "sha256": "2758e9162b6f2e9e5a0cc2b919fd1aac84988a1e584088664360d192b9015e26"
+      },
+      {
+        "path": "docs/evidence/WO-028/preview-pr.json",
+        "sha256": "4061d147be90a313841a576359db63cad6c46b8bee5a7d04fb286ce4210954a3"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/actuator-1440.png",
+        "sha256": "adc4cbc09994f848e43ded7b73d4978a939310a4a79212cca44eada95bad12d2"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/actuator-chart-1440.png",
+        "sha256": "31b19f557b6c9ac57c758d9e3556a557b23012164159f99fb7364af7a730c102"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/blending-versus-arbitration-1440.png",
+        "sha256": "be5aa6b1c935700c1bd1c68c094dd8dbadd7baebc3119de1c9a7b46c3de2b1db"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/blending-versus-arbitration-chart-1440.png",
+        "sha256": "8d74c947b6720768d583b3a3a0f67b05442e928e600297bb20ee9f56d8d64001"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/collision-avoidance-1440.png",
+        "sha256": "fb022c178bdc6333218022c00fc22a52f422ede335029718a1847ee5f072d850"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/collision-avoidance-chart-1440.png",
+        "sha256": "7c8ffaf2ec3eaf71c8f96da58c41afc37f9b9798d3d814b8505effe1b51c6678"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/coordinated-movement-1440.png",
+        "sha256": "c1ce8e3c7e8bd03d73cc733029a24c482de8c30bd936aee4c9f0519fb75aef4a"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/coordinated-movement-chart-1440.png",
+        "sha256": "73cab1a734f8b23961d7791c5b933217c83183f804ff62d6197ae58dd480e14f"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/corner-trap-1440.png",
+        "sha256": "2e8544197c9fc820c344414955d7d5d00e4d46adbceb149608d635d2887a73f3"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/corner-trap-chart-1440.png",
+        "sha256": "48e953f712ff718c84f2ed0517e17766b099f2e9fb0805883d96828f90f47933"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/flee-1440.png",
+        "sha256": "38a8d440480de9437fbf540ba83374ae967184f1c90acf1937120b480e4d6936"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/flee-chart-1440.png",
+        "sha256": "b30e10679a247bad1bd12195b07122da4a5610ac0bc393975e3d92767225b88d"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/iterative-targeting-1440.png",
+        "sha256": "34e1e06cdf01c9f487a7dafc731461cc473bb2c60626895eb7130e1bd5a14962"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/iterative-targeting-chart-1440.png",
+        "sha256": "49031e8f2fa9e2c52a1b7306fcd9c8e667ead7d44edca7123c0ee7a49cded264"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/jump-points-1440.png",
+        "sha256": "1719cfd145932838934329a39ce6a398decf52c80c6faf1fc50f176538b2d4fd"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/jump-points-chart-1440.png",
+        "sha256": "fb9a50408f42f78b0dacaf29c35a3db09622e792e97edde7d8f63540d13e22b2"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/kinematic-arrive-1440.png",
+        "sha256": "1e2b8135dd43b777098217e22ae6b477b6f877affc4a2c34ba0376cd09f8985c"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/kinematic-arrive-chart-1440.png",
+        "sha256": "3bb8be8b28683fb4fb5fb31a322ef8884d26f6508c26962c08a5ad063087849a"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/kinematic-wander-1440.png",
+        "sha256": "59c88fd4f46245b4ef0a4950b356b998dbe8db8ab9ab10ce7c7633455a7c0c16"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/kinematic-wander-chart-1440.png",
+        "sha256": "340d18fb53afceac95d8a732455521cbf0aa817559a6d4aa2cc0827a25044947"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/motor-control-1440.png",
+        "sha256": "fa15f4a00097d231e9f920fd57304345733906271bb3e0389e63427722a51d58"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/motor-control-chart-1440.png",
+        "sha256": "ee8b7ddc63bfb0380c125d8cc0ecd887d12c672bd77cb3fe1f6eef42793f1824"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/movement-in-the-third-dimension-1440.png",
+        "sha256": "f8948c42af36f357e5d3514f56e866971456ee401ef4c1608c7ec906e20822f5"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/movement-in-the-third-dimension-chart-1440.png",
+        "sha256": "d021731a33dc48084eb648bc78d2f32e48fdfc8f9191e337b0fd306f2f994022"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/obstacle-and-wall-avoidance-1440.png",
+        "sha256": "df303aebf3e9a9830c0ceb4f15de6451fb930588c8f0509770af8d1a36f178e6"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/obstacle-and-wall-avoidance-chart-1440.png",
+        "sha256": "bc2ed019ea5b3d125584f05f42748959c3a8cc2d84e69a5a8648f5994eb99376"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/projectile-trajectory-1440.png",
+        "sha256": "f50637540da67ba47ab0911fab43d891b99292bc0859c74885ce1d03a5a78939"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/projectile-trajectory-chart-1440.png",
+        "sha256": "dabd917c76c30f383ffbf2e236e73dda8207f5441487ebaa87a099bf60c22dbd"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/satisfaction-radius-1440.png",
+        "sha256": "5013ca9732ec7397df20ea08f766846f69ca2521198f8179e7f17cbf31dd3783"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/satisfaction-radius-chart-1440.png",
+        "sha256": "ba21e446e58af219d41019b71b3ec9320b2a00746d463a049bc779b698bd51ca"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/steering-behaviors-1440.png",
+        "sha256": "2418d22f827cd7a07eed70eeab80e207f476ab6d83987b5d38e71c25d7c809fc"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/steering-behaviors-chart-1440.png",
+        "sha256": "346442c773995564519053c2c4d8bf7787f091f9d7b17096130543f9bf31e488"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/steering-output-1440.png",
+        "sha256": "456ee6fd93c4001dc7e98caaba7aeaa63c5181b101719d84d88042e151937be1"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/steering-output-chart-1440.png",
+        "sha256": "41089e6a5fc77fb5c644bf88ac52687713d2acb1b94e27e20faa7b6bc850471f"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/the-firing-solution-1440.png",
+        "sha256": "a7e981eaeab4192105e6392bbd750d32419aa472f40f533af939f741edc16020"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/the-firing-solution-chart-1440.png",
+        "sha256": "81b6ea54255f08e6a507fd9e414a6fc4c9aa262b09e8e47393b12280dba299ff"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/two-and-a-half-dimensions-1440.png",
+        "sha256": "495402f1210e58142412c933cb9fd53063932141b79c5859c0703fac232e5137"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/two-and-a-half-dimensions-chart-1440.png",
+        "sha256": "cff9cc57b116b570dadf423a4eeed4c939d28ca73e5aab93a393d761e188017d"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/variable-matching-1440.png",
+        "sha256": "6dbcf68379abf7491b2fd6ac6fab942a83665967b60778566a03b1d8ed239af4"
+      },
+      {
+        "path": "docs/evidence/WO-028/readings/variable-matching-chart-1440.png",
+        "sha256": "523a29e70be746567021dd0ab556ab20d21e8d1b3119712f06a332eb1e990c94"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/README.md",
+        "sha256": "b4c86df1ed1bef737bd4b70034836bc82dd68c0112b59a495e762d0263f6fb12"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/bundle.json",
+        "sha256": "fa6c2d67ce8b018581018a11b43596619019691ed072631bf3e6662f4db7ff3f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/canonical-target-gate.json",
+        "sha256": "a887b146084807035fd49489e28dcfbfb0a93fc96c599e676ac87163eb61ce97"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/checked-format-identity.json",
+        "sha256": "6bb4c7000276437cc6602f59aa3d5d2f182c23c8356a5f361f2612ed2788b177"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/content-identity.json",
+        "sha256": "bd33e448a4f13ab0d82b9020ee87fefd60452db44111661adaf26498f5ee9c9c"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/critics/factual-critic.json",
+        "sha256": "62ff3de0f46c66fb78d381621b38979fd7a6b7bba7af23dab0d77fc268881f7a"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/critics/factual-final.json",
+        "sha256": "5fdf41e42005c8e289144f91a439109149768a4bd53cb9bd61692bfa23e23210"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/critics/factual-recheck.json",
+        "sha256": "1039075ba2fb21f3f6909b755d3e4c2aa2a31a03b2a70563641a76cb2a6ac64c"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/critics/reading-critic.json",
+        "sha256": "dd96ab7d3a7754940f0772e2b4095b5e81dd9c1e002083e5281389317856fac4"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/critics/reading-final.json",
+        "sha256": "575de6a1e0ac4754be6f313d2e7f297923d6ecf1cf7151889982937e549fbda9"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/gates.json",
+        "sha256": "34d66dab5b57a06101907db01124ae4bc7b50192a1d18b8c62418d0783f7167d"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/handoff.md",
+        "sha256": "3029b3006b4b97e73689d8e1b8b531467255116819c8a30c849c4a45d8cb8337"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/import-order-identity.json",
+        "sha256": "11547b646ce130d7adb5805d56032e8c398921eed2d19e9952728a43fc690b2f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/label-comparison.json",
+        "sha256": "463dffa47aedf97fdbb508b61226dafcae6c8e1037acea208e230a530fb6956b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/labels-final.json",
+        "sha256": "db849517bb122afccbf512d497db760897babb141b903bf7b961896181bb6967"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/labels-initial.json",
+        "sha256": "8e178c4d1117398466e03f424969ed87fbcf734019c5e97c98f0e75eb46c5f6f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/plan.md",
+        "sha256": "ba6a75efedbe8bd8669d1a3cd019de58c0e94417bc02c54067485bf99897eb7b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-final/manifest.json",
+        "sha256": "0b923c7f35227d2b2a0afa53d71c7d764a14074d9f903321bf3126acd2587fa2"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-final/wall-default-chart-2080.png",
+        "sha256": "e371af66230bdb1e7fcba32ab06af6d4596c51fb8c13448b5d0c670816437ada"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-final/wall-default-comparison-2080.png",
+        "sha256": "6d1840ac6a2336cc5f33c10b9d8879b6aa00d59370fd5e3d08fad46d2925c37d"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-final/wall-default-limits-360.png",
+        "sha256": "817de3cc7b7e5ec5f95edca35aa3d286cc3a3197c323dad6ce674e3a930977cc"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-final/wall-head-on-end-2080.png",
+        "sha256": "d12072bc2afc0264765515d51fdf852b8604576dea17fda8bf528f4911c52403"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-supplement/manifest.json",
+        "sha256": "059e0a34bb9a11e6f16fce68c5ad863a0c356c0517081e598512048984f79db0"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-supplement/wall-default-chart-2080.png",
+        "sha256": "e371af66230bdb1e7fcba32ab06af6d4596c51fb8c13448b5d0c670816437ada"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-supplement/wall-default-comparison-2080.png",
+        "sha256": "6d1840ac6a2336cc5f33c10b9d8879b6aa00d59370fd5e3d08fad46d2925c37d"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-supplement/wall-default-limits-360.png",
+        "sha256": "817de3cc7b7e5ec5f95edca35aa3d286cc3a3197c323dad6ce674e3a930977cc"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reading-supplement/wall-head-on-end-2080.png",
+        "sha256": "c20f066f1d10f6451656a75a6348bea20c4451cf6d0a5fec64bb58a46339ba0a"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/README.md",
+        "sha256": "b670190e4594cbabd5d19aaa9a21b1b7f19fa44f993b91ecd0d15d44cc12e2bf"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/canonical-binding.json",
+        "sha256": "9cdf409a3966a60c5bb699b05dde47fe15943265b6296ba97517665042969d8b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/manifest-projection.json",
+        "sha256": "8e64ef1f961c95e543f70979c4e82144a09b27cf96cfad014f625455b6a436a3"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-1-candidate.json",
+        "sha256": "f020357e2b4e8d0258d3209bbe656d088ec255c620ee847563e57c621533109e"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-1-consistency.json",
+        "sha256": "505e2794b1f87a59f6a87a1914db5bf433e0c1a5dfe71cfddae300759140f03c"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-1-criteria.json",
+        "sha256": "ec0d1cc5ebdca3f9f426bc449a0be81705b36996bff51be2ca63c76104dbb824"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-1-design.json",
+        "sha256": "cab837c754698046eacff60f671438f03d979791132dd59e45453dab0c6cebb7"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-2-candidate.json",
+        "sha256": "68df604bd5c62958809f641bd28a8130118f5d317469815b36d2d3984b1356f1"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/reviews/round-2-design.json",
+        "sha256": "0aef6808affb7288ff38171516c8a3eb3449bd84fe9ff1316af55b70137d5956"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-37-2080.png",
+        "sha256": "35a34ba93b9396f795e1a6c35d22330a1ed597f430f47893cf5df699967da14f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-37-360.png",
+        "sha256": "49b5f33ad3667fc219bc559b8807daceca5fb95c9b7896b09051b831665e6ebc"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-37-3840.png",
+        "sha256": "9cbde7ed2c30eda58c85219f0bc603f976396c772acdc7a65c2c007191c71a0f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-74-2080.png",
+        "sha256": "12ff1881821812ea5b7e712aa63c23d3419b8f0c22f9fe27259109da570907da"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-74-360.png",
+        "sha256": "67095042fa241543b1f1a81ef4b640abbd0d0df11d06bdce267b6cee9532cf6c"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/firing-solution-74-3840.png",
+        "sha256": "91d19f57f6ff3af3a286be76effa616e54464b92159dbf026500b761c51557f0"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-4-2080.png",
+        "sha256": "1e70073ee2b633ca56c61bb3d81a61f18b883bd2c9c3d818faad4048f6e00b93"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-4-360.png",
+        "sha256": "e2c057acadbdb4c3fa516500f6260293f43ea9868373732a6bb10dd8e70000ea"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-4-3840.png",
+        "sha256": "114a1599cdcfac309b8d2e1ef547a602b3431518298fbc5967d77efd32459ecc"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-7-2080.png",
+        "sha256": "5f3da6cc047937c681eaa3f5fc2b0e07d7bf47f3a86b4b2ce80ee2fa99f8d3e7"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-7-360.png",
+        "sha256": "89cc140e5abfb86f4b281d083adab1929ef963612cd0c2dc2430196a922845a7"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/iterative-targeting-7-3840.png",
+        "sha256": "9d2ce7f7617a984d763a4693b0fb4ecc927a438a10173369d3a2cd78982501d0"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/manifest.json",
+        "sha256": "9c3beeebae45ac969bceda5f819230e22febaccf9ae23ddb053bf16b84d44980"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-100-2080.png",
+        "sha256": "c202262b3d1354cccca318ad87a28a65231ee4b6366a41243cd5db843b29e87d"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-100-360.png",
+        "sha256": "5551c5449510d5a222b833d3cef60f5112060e99b4b6c386b7b9c6e11137330f"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-100-3840.png",
+        "sha256": "a2778df0fe24f1e8c1111e4bd0c3cd3898d358517812d2c07afd614fd6e7ca1b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-50-2080.png",
+        "sha256": "ca74387f7adb85dbcb5428073b5546809bf23796d5595772cdc5d0d097d7dcbb"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-50-360.png",
+        "sha256": "63085af89bdc4c301a764bcb3795a6d045bacd7760c133d73a464cc0336837a1"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/motor-control-50-3840.png",
+        "sha256": "ec0d489944c758f4de99563b0e1cabb932e8cde7d0b22be3a5c329797e41b028"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-12-2080.png",
+        "sha256": "a08089bdbaf06eaec9ac26fd1d2dd3535096a970873e7e5bc72f6f430409b491"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-12-360.png",
+        "sha256": "f4fe880913d22ee505318c5f90b0335aed9260db3dd12189a0670e346942c34a"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-12-3840.png",
+        "sha256": "3453e9943d3ce0351a21baec87532e34601a23c820f3a638d03e23c68d0d1bc9"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-24-2080.png",
+        "sha256": "8e2931fa66908032024af119c3fe807cfef9308590a25e29e3fe5ec65856c0f1"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-24-360.png",
+        "sha256": "a086f759b132924110282e79c971d24067af68030bb6bace1063d6e8dfa7653c"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/third-dimension-24-3840.png",
+        "sha256": "f91d6d87f98d9f5c12a3bf2c73ea19bc080bb074d5659f6ad23cfd98dd937ccf"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-16-2080.png",
+        "sha256": "4a17b63f172961ccbf945071ed1883d9237e5fdcb00791572945666ef98cae8b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-16-360.png",
+        "sha256": "8dfd1d35beb167e486fec079c7210d8b9aa445b83df380a602fe3d42ae647783"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-16-3840.png",
+        "sha256": "c8c3efbf731063f79c969893a37ac9ce862a4668219a9996a34838396e67b5bd"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-40-2080.png",
+        "sha256": "837da8786f74c7dfac48d949134db4f79840d6b84ea6b1e8709d20d260455c4d"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-40-360.png",
+        "sha256": "b070b80970ef4ed8a4d4640f0f3557907c1ea7024055f3e9709fd114ad4a8135"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-40-3840.png",
+        "sha256": "a4c5b0450e5c3339ec25b3060fd309982931f3d74ecffafe4cafeda7ea43a2e1"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-5-2080.png",
+        "sha256": "6b6582fa365c51a05763a9beab3d4f91042450860e9f85909237e3bb7a553a29"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-5-360.png",
+        "sha256": "43b64d486fd8ce39b7850dbebebf2d390708d75a9eea4ebaa69cbadccf2aa9fe"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-5-3840.png",
+        "sha256": "7656071f5d547b5393b20dc8ef5cf2959f0aaea9dc7eda4c946387f4558b0571"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-80-2080.png",
+        "sha256": "ac251972bfd29bf843c3dfe22ce0b0ecb7ff4f5b10086c2d0243b3f7b75a8a74"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-80-360.png",
+        "sha256": "b08cc6adfb0f9e643321d3a47cfd8e01a97dfb02e874b59732cd4dff46d93229"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-80-3840.png",
+        "sha256": "02fcc2785985c777f1371f1d0802981d3ded288b188c6ea0e11c90c9545ea457"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-reading-2080.png",
+        "sha256": "d180e35aca85c85c1e539de1a08e4ebffe667eb06da996c9116f866607843221"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-reading-360.png",
+        "sha256": "8d4d84f91d4d56f57518b4e285bda92ee5264f33d078c5560158030b9ee992a9"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-1/walkthrough/wall-reading-3840.png",
+        "sha256": "d2d967e1675c5055655c899d3f50e8eb37c066f861671c3b2806a85bc4678f33"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/README.md",
+        "sha256": "10941d44a43789b484dd0c40e6036bda3a00ad71b9d463ae96cc9738b5105bac"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/bundle.json",
+        "sha256": "d491cbeb61e43a735214c4a1146888c4f76c1ccaaeb1e6a057bbc72514ceb9e1"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/comparison/final-results.json",
+        "sha256": "ba4d92c7bc3e368a93239c3792c1fddcb77686f0da1eb07d9233c1ab68683e3a"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/comparison/movement-audit.json",
+        "sha256": "9eca48fbeefa4249fabf4cd1a3b9459102a1a5b582ea20dc2892739fc2e535d9"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/comparison/movement-reuse-comparison.txt",
+        "sha256": "8a7189ed998cf076c9562e7250dfe39021a1efda0c6fd29901a0b3dc1ff1f7d5"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/comparison/results.json",
+        "sha256": "010699edc75bb9242e55aea29cd74c0130d698c4e4acf5ee1df04f90dd81b5bb"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/comparison/stream-audit.json",
+        "sha256": "5c478536db962ffcd64b1ee5b579244ab0bf268b50c1f9a5e97c53cff79cd743"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/fan-out.md",
+        "sha256": "59b04a738d4c64da2d691ac09294d77f759be9f8acb8c102e45c686edbcefc28"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/record-roundtrip.json",
+        "sha256": "cfa1900900ce6650633e14470a4efef64b80c4a65c7acc39a484772b651982d4"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/review-fix-bundle.json",
+        "sha256": "5de33f8cf730b612ad3bfc14a80bf81f34f27f7a5e9920fb2826ac8b40513195"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/review-fix-validation.json",
+        "sha256": "6b81d25d4116de19d2f8cbe8a14d87bb63cdae71ea79bc589bc3f2423164c06b"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/reviews/README.md",
+        "sha256": "b72fdf127b866b6871fbedbc63e58936002f69cd2d5a934a6b4323dec207bde4"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/reviews/round-1-candidate.json",
+        "sha256": "60ffc6fea9e10eb0459537647846114bb0cd45c590023e4334270cfdeaf47782"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/reviews/round-1-consistency.json",
+        "sha256": "5e9c7d370cc714aaca0659c48ce3873a0eb70e652c5f5d8843791a37a39847af"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/reviews/round-1-criteria.json",
+        "sha256": "1b6193e69cf809122541caf9b6ba0d1afc4b10a93cc646f7bc13d892564eafea"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/reviews/round-1-design.json",
+        "sha256": "35c873eec79f032b4f76505c1173735d3a1cd9e61a82df877efae36c4d8a7971"
+      },
+      {
+        "path": "docs/evidence/WO-028/repair-2/validation.json",
+        "sha256": "0925560dee093da42eece8603d5cb0f10b861c365912bb0357845fb60b29051e"
+      },
+      {
+        "path": "docs/evidence/WO-028/review.md",
+        "sha256": "3388cfc3a2f022d13c1c9c79d610b148735428412c80a2c0ae7b579d8833ccc1"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/README.md",
+        "sha256": "19e0b607d61e3466ab07d1d333b055eb2777d714f476ce32bfa84e510a1789d4"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-1-candidate.json",
+        "sha256": "0c4512e293a962695cca823f3fe879734b407e35eb6484e3864c8dbc8cf03593"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-1-consistency.json",
+        "sha256": "acbd304d91bc1cff3c6e1ebee9281766314d9f8eb90316639177a13186c8a0b7"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-1-criteria.json",
+        "sha256": "2e03372bb02d97f7afc80f0a635b256bf55950749beb96788fa86607169445de"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-1-design.json",
+        "sha256": "15b41dda33eac2af285c487a5044de6c10885c50f5160333fca744edf8a190c8"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-2-candidate.json",
+        "sha256": "de208f8350077eb6484c7a1b077a7265ca92a6286f89c59ae958aa9a8085f316"
+      },
+      {
+        "path": "docs/evidence/WO-028/reviews/round-2-design.json",
+        "sha256": "7b31b801cd16c09ef67d9d8fdfff888709d7d307d0e5fa63ef3736af960bacce"
+      },
+      {
+        "path": "docs/evidence/WO-028/validation.json",
+        "sha256": "0b3b3c5140b4d22142083d872f868b1ca0df770eb337b94da929df6fe8bb51ab"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/README.md",
+        "sha256": "20caeceb804e1657732f0f7e4e6e8c8525150888d46675b9cf1fd212fa8d39c6"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/blending-versus-arbitration-360.png",
+        "sha256": "c80dfde13685c7ddca886dc08c5ea68bf0fced0b72b684b002dee16ad15ac2f7"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/coordinated-movement-1440.png",
+        "sha256": "65b4f958115229257ac8c7f149690f59892b22bac3b415028b2cd9bbd3816142"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/iterative-targeting-360.png",
+        "sha256": "6ea0c0459be575ff878b40149d7e21407fea0cef41a0d9c188e676e887072072"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/motor-control-360.png",
+        "sha256": "eefb26ee91d0273974e4cea0f19bff17d9c08e77099fa9384cdd163503365457"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/movement-in-the-third-dimension-360.png",
+        "sha256": "769413bb89db9509f76df3b22c88a71d75cb6a752c9b9a5de747dcee017a125d"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/steering-behaviors-1440.png",
+        "sha256": "5f9a587d483402493e5985ead6eb6f692121d3f94a3dbe63cf3dc575f51d67fc"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/the-firing-solution-360.png",
+        "sha256": "0a3563a9fa9575500b0b7521d2c445db97dcd8ecfa7257cb031bb176d16e750c"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/frames/two-and-a-half-dimensions-1440.png",
+        "sha256": "2d55c442a89bc626220e13cee5934e2a62a51fe1852fe9427b0598534b14f15f"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/label-sweep.json",
+        "sha256": "1ea3d891072aa48f92df6971b4fcef8630d4c7cf7e41644fa1936421a260e822"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-001/label-sweep.mjs",
+        "sha256": "41ebee42b69061b32cc529af24c980dac9b08e74258a6d310f5958770278380f"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/README.md",
+        "sha256": "b841d8360b29711bde7a27377de9a34cb32d95e611eee4f18d5ec9e468688d1c"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/blending-10.png",
+        "sha256": "96d139ca47ac34ea47fa2162f2c3ca1de14f1a90b6b74d7eaa56100f8bbbe5d4"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/corner-8.png",
+        "sha256": "3deb5c071d15c2b39bd669f9d7c177ddbf4b42a734b2d0dc0092ff17b848373f"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/firing-20.png",
+        "sha256": "031e19f7456a5455fe301470870b2e78ef4cc9736994735c1973f7b62fb93578"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/iterative-0.png",
+        "sha256": "ce1e7d6cf65ca24db3d78a24fcda2ca599576f028f068d5aa5575a197bde6751"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/motor-100.png",
+        "sha256": "c4cf2eb2c60df3b22552e948fbaad01d9df06213938ce2bfac3ea369dee938d4"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/priority-steering-60.png",
+        "sha256": "58e318d9905f91fefd2eb4b38dce59238d00d3d600b9eadbee729d6467dd58a5"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/steering-60.png",
+        "sha256": "5ce3f25c793ed943a02e05867a5cc25d736289ae561c4c137ef01a0bdd69c0dc"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/third-24.png",
+        "sha256": "b694f65176bdd5b3e5121b32ab92247364316be51c050aff66e628007f222e69"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/ver002-wall-chart-2080.png",
+        "sha256": "ce7ee6201f756382c4eba9409d5276311d38be50d34092285bae8aae7def6a29"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/ver002-wall-limits-2080.png",
+        "sha256": "ba86a2685a19486468c798cd27f62e3a4104f94b796cacc8b823b24ff20aafa2"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/wall-20.png",
+        "sha256": "0f1c1d4d9f4b2f2df6ab59c19d316669580ca7470fba69024452cbc264372654"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/frames/wall-80.png",
+        "sha256": "5d2e7ad823c0d5be4d2aed8c2e4f1cb1e55b1b31d1aaebd226751828cb8730cb"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/label-attack.json",
+        "sha256": "2317db1330c7e5cd669ea428b45efda2ec33af35f52eb873f90c42682db8756a"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/label-attack.mjs",
+        "sha256": "993d82b78fc01c62f55c20fe5b57eae524f0695a2425e9ab20e47081f35a149e"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/label-sweep.json",
+        "sha256": "db849517bb122afccbf512d497db760897babb141b903bf7b961896181bb6967"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/names-probe.ts",
+        "sha256": "d134da7e47a20491cebef2d1a5768f5cd41c8aa69facc8f4860f2d1529fb0c3d"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/session.json",
+        "sha256": "e12512a6456b7c3c02e6caaf02b2e0695a598e7f6f8df7da9734916236383ffe"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/session.mjs",
+        "sha256": "6c37628383eb143b1bfa5c45d4356d1513289221034704443d0e4b303072c6ca"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/wall-recompute.py",
+        "sha256": "774be755bbf40dc3e3faf87359182828ba186a230cf295ee7edea51519bb421b"
+      },
+      {
+        "path": "docs/evidence/WO-028/ver-002/wall-recompute.txt",
+        "sha256": "ff1234079cb6b364b5599c2a86a8c57185daace51ed3cd0b7dd65414986bc4b6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough.md",
+        "sha256": "80facd0f9b87bba8cabe870aa74dc6316f4b411bfdf8cf2be7626647adf9ddd8"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/01-shelf-1440.png",
+        "sha256": "62c28e5f4b29a2570a5d6cb5eb840c3beae99df14aff32c39b9319f8886b7312"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/01-shelf-360.png",
+        "sha256": "cbbf11fe0ed790b3312ea165fcefa913e405b232ca70ca4a35fac419c89f7fa2"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/01-shelf-768.png",
+        "sha256": "f30c767f5558cac8b006f25ae65aa13265afac5304c766fe63401b1e5d075305"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02-collision-1440.png",
+        "sha256": "9db49fc7644b46cf13ab0d1b92279ee180bc95af4704e5e61019457c3a81384c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02-collision-360.png",
+        "sha256": "31995b16dd5fc65d85121cd7c59415665fcc6e471940f42d7616357f6caba7c5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02-collision-768.png",
+        "sha256": "154561d2f4ea531a1dfa0f0ca51956132b8e03952eba4ef3fc7c1368763f1614"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-1440.png",
+        "sha256": "f9a5f0585df190cfdbe1b2d1204b997f3b600f1d5fd5d1cefdffe2189728589e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-360.png",
+        "sha256": "ae6a7c510bc8bb19656be5ad0573584540b51ea5d61f0fa99291ac8c37e39b1e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02b-collision-mechanism-768.png",
+        "sha256": "d19ed6f069822bcc069df3143ed43fbe4cbec3d1927c7b58dc9d8a4f2d0ce4db"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02c-executable-model-1440.png",
+        "sha256": "34383f863f2a56658233843ade3a6c0d87ecdd16f4ebfa41b1aed0ea50f51b16"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02c-executable-model-360.png",
+        "sha256": "ff199cf252a351428aad4adc96fced4765b669b06170501f7b47cf8d4f44048c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02c-executable-model-768.png",
+        "sha256": "e480d0765e7088112f51da5353c87b80ba037d4fb0bd0b92b33fd3b6e7267c1a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02d-collision-limits-1440.png",
+        "sha256": "b4ecc6782ff8e799889f681e14d2d658c39246124774d6e3a359951fea40ea66"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02d-collision-limits-360.png",
+        "sha256": "cd8859546774175abedb1bdaa0a9f4e0218af91c46666531346d2a70afcbe205"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/02d-collision-limits-768.png",
+        "sha256": "88916174ff91b75104424ff626fbe4e3f8dd04cf5e22ae04ad20f01382434f8a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/03-separation-chart-1440.png",
+        "sha256": "96bbd98fb7e60f7cf2c1380d06bdf79b24fb51687fa49586b67441a6a0424e8b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/03-separation-chart-360.png",
+        "sha256": "773c607bccbc73cdca6a029f2b62c9dfca24414bb2fb09e09b3e5a50c5ecec60"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/03-separation-chart-768.png",
+        "sha256": "5e84a1534cbd1fd0e8c16c6593d162e9c6d135fbd8c41c5dcc7a5e4c8d5e5f3c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/04-flee-1440.png",
+        "sha256": "8a61f1891c3d414386f57669c32d842951a17352942e08675666b50036092af2"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/04-flee-360.png",
+        "sha256": "34f1b59d1b841de485cab069e98e1bb00887c57ed7edfc4dd04893ea8a337adc"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/04-flee-768.png",
+        "sha256": "de4594ee49b8b351b721f696c855bf4ed7a8a29a11ccf19a1a7e42a95349b689"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/05-wall-rays-1440.png",
+        "sha256": "03fc41f47e03dde869e7f6063ef8b21236a5f3f90e059a55fe8f00ef843ca869"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/05-wall-rays-360.png",
+        "sha256": "0c228fc0f73c8aa1b4319fea04927834d8bdab2896401fd52cf03cd718ef4411"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/05-wall-rays-768.png",
+        "sha256": "f483eaed6cf68d9b08831dcfeb88a4bea5e024962f25568a958b1eb5a288fdf8"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/06-corner-trap-1440.png",
+        "sha256": "5dd8ebd1e5c6c6703f9615503b0534ce6d5e55faf1514be6578f96d9eb95b1df"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/06-corner-trap-360.png",
+        "sha256": "d8ad113abdf132519681d574f45cb30b371181eeea300000ee3c0c7fef59a959"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/06-corner-trap-768.png",
+        "sha256": "b7769590138cf6dbe4f68408620426dc651e867d2ba92f937392697b06a5fc3e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/07-projectile-landing-1440.png",
+        "sha256": "b922f0529692bdfee45c57d74f133b0a57bdee3a7f03145445cd31961d5d84bb"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/07-projectile-landing-360.png",
+        "sha256": "8d5de0b6ea3e8a0433970f48701475ed322c3bd97388ca0a21f30b28a143d6ed"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/07-projectile-landing-768.png",
+        "sha256": "850ebd2fa2214cc711bd570a30616c2af7771b4e9bd80873f352e1cd63d52dbb"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/08-firing-solution-1440.png",
+        "sha256": "473dddae1ab8ead6cbf7b96689d948359798948c98983e304457b4063e945efb"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/08-firing-solution-360.png",
+        "sha256": "e31b33e9a8974bec6279d42727ebc28cb4703ec503dbccea35b16bc14e3dcaa5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/08-firing-solution-768.png",
+        "sha256": "26348e5ff3f3627dcc5b6f3d411fc8df85a053a337c19b06af4caacc72306943"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-01-shelf-1440.png",
+        "sha256": "6cf1dcecfb5481309245eaefe4f626a78c975b2c7924687d77ee3fe5e65d011a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-01-shelf-2080.png",
+        "sha256": "c79aeae399a987a2307a188b51c143dc69aa993ef08f3f787579b77ebcb9dcce"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-01-shelf-360.png",
+        "sha256": "b80ff5f393416c06f04ec92bb009c6f9d3295a30bd80303d3e33394defe3a2ae"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-01-shelf-3840.png",
+        "sha256": "60e039ffb7cb6b456a8be25d951b1e960e8fb053e34d0fe4ed26259f07495221"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-01-shelf-768.png",
+        "sha256": "7963a8e1cb9de0a06711e321303ee203ba584b39dfd21625092b93b2775bc343"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-02-collision-step-1440.png",
+        "sha256": "ba377737dccf196aa37661e645448aa94243b06972bce564cb6556a70a166af1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-02-collision-step-2080.png",
+        "sha256": "84d0b296d73b20ef3f3e527ae00454b8c3b07752be3e66c6db225c6871b11d72"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-02-collision-step-360.png",
+        "sha256": "7b8d133f3bf0ca9da51bfd4aea4d9d4264448d6a2c5743d6d717b7359197f10b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-02-collision-step-3840.png",
+        "sha256": "ed4db799effc2da38e35f35376208b9652b68f6441aba318d6ad511f16ea3755"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-02-collision-step-768.png",
+        "sha256": "4bfa33803f82b81ddcedf6dd335ef7ad76c4de3fc6a4167015b06f8e6027a86e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-03-collision-chart-1440.png",
+        "sha256": "aba8f6b18b1cb3e314a301ca508a54e81e4ba1f472b36f2e35d8c761c062ac2d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-03-collision-chart-2080.png",
+        "sha256": "1249e77dd462c41cf6a720dc8f1af0b686424a6b3f3c8a8e0e6f08b204dd20d5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-03-collision-chart-360.png",
+        "sha256": "50948adab841860a449a75801a836436a6bd89532d599a27755696c805ab7a6b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-03-collision-chart-3840.png",
+        "sha256": "d07efbd6e43848fc327d17a070ce46bbf52fb25d369ba20db956a9d3d84f4c4c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-03-collision-chart-768.png",
+        "sha256": "3ec42d1f3e749c17b5f12fb9d50272d775e4380726316ffb335766e9967e7f6b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-04-collision-pseudocode-1440.png",
+        "sha256": "9fa511abe024d0959cb9e359b4ca02f4d23f1f21fbcc69b5e440e95b9db85a31"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-04-collision-pseudocode-2080.png",
+        "sha256": "cddcd243dbec67e4737a00fd02a194834b7347264ef59a276dfa9585b160923a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-04-collision-pseudocode-360.png",
+        "sha256": "a74e49dcb54e3deddddac52fae45baf2ed9f1126d08a0788a2c68f8ef653d1cc"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-04-collision-pseudocode-3840.png",
+        "sha256": "fe157f2f9c2f287e48b9263011fc6a838f4ad47aed4a126302cc210d04a0e245"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-04-collision-pseudocode-768.png",
+        "sha256": "4e74d9113028d62c494d64a11da8c3c5b83de83111b04c0719ae0c70638a6ea9"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-05-collision-executable-1440.png",
+        "sha256": "7e5bbafe303afc0e9462adee83d1769a4c9856c34431be6a265e0838ff78c143"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-05-collision-executable-2080.png",
+        "sha256": "303b6a5de150e84ad88c63fa2f3b333d830c02adafc7df57e7798c82797c342c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-05-collision-executable-360.png",
+        "sha256": "8fa5c232b9a1a6f6dbec458ef6b2d726ece39c215633d1e42485c3562f56c0df"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-05-collision-executable-3840.png",
+        "sha256": "6297ad30dd547d0c70845c1bda75e1bb2047271a471e96a94de9a2ff8a9cf10d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-05-collision-executable-768.png",
+        "sha256": "b830509eb39fb3a882d6eb43ede27afa260bb54b2cbce10be4baa8526f2e7db1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-06-collision-limits-1440.png",
+        "sha256": "dcb9d781e0e6f03db42a6386548cb201056b4dfd6d509cbe012399759b384c79"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-06-collision-limits-2080.png",
+        "sha256": "69f3d13b9fc1471560e67d0eab7d395104bd53a158fb4f5394194a22fd253a25"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-06-collision-limits-360.png",
+        "sha256": "8ba82d52e8f697ed3bb5eceb4c61c5abd2e67f0fb50de49e52425a7868a7bdc2"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-06-collision-limits-3840.png",
+        "sha256": "4536166c98ad0c503a070b684b1cafd7d99f01440b780bbcd4c45d6d0001d55c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-06-collision-limits-768.png",
+        "sha256": "7f0d1d1fe67bbf37f1648565eb95e75fdeff892e6d63a61ce4a7c0a5cb867922"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-07-collision-nearby-1440.png",
+        "sha256": "073e5b1ca154d8b97c0f0daa24f075d91ba3d4994d43f41b801211a9d565731f"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-07-collision-nearby-2080.png",
+        "sha256": "d25f46e4f07f7a6972c8519fb12fd4576b72b68656d75a2e4aae7636fb1d0ac7"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-07-collision-nearby-360.png",
+        "sha256": "96c7acc4b20c2e37b0ee5f9917473602a7327b8bbe8640bca452e75da31ebfb4"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-07-collision-nearby-3840.png",
+        "sha256": "0ddf36865ce156868c38c96c7f1dee09c30838702159d7e4c9787fe17ac0298e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-07-collision-nearby-768.png",
+        "sha256": "af2c4ecb012550bbc35dfed309b02399475ea8b7bcdf60502c0f530892ea97c5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-08-flee-1440.png",
+        "sha256": "afcd90fee65dc274af306f3895b46f8ed5ff585eacaa441d4e8788059a60c541"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-08-flee-2080.png",
+        "sha256": "82ac9827c3c6789abf713c6ab7e0b39c2dcb3dd2e8dc6a5f3d8107475470575c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-08-flee-360.png",
+        "sha256": "80aa8ea7a84620d606aad95d5fc072607558fae756ae325f04fbffba970fb860"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-08-flee-3840.png",
+        "sha256": "98cf1d1a35c7f8dc48e91db4a4e4810c97936dd757fdad687b05a7b060fed846"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-08-flee-768.png",
+        "sha256": "c006d9cbcc523b968cd94ed53d09b03f3dae43503043c34a17ceddd8bf25de44"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-09-obstacle-rays-1440.png",
+        "sha256": "b80c201a6460067b70a5262166033376cedd563acd1e97dc1fdd1f87047c0814"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-09-obstacle-rays-2080.png",
+        "sha256": "2c93c5c05f344d4b82ee697dbceebbc92596ad4a5408569e9b159e8681009466"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-09-obstacle-rays-360.png",
+        "sha256": "aefec77da0bce90e46001a36d1de3452cc28683b070e38db59d9525cc9cd8307"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-09-obstacle-rays-3840.png",
+        "sha256": "a00aa31dc72d9f63cb5df71acb42794eced5e68b3e02e6590697b7f13b631757"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-09-obstacle-rays-768.png",
+        "sha256": "e49684e3b50b123b6035e1fb7fec1f5860d8d3f122a40fc926f2e02fc8c732ba"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-10-corner-trap-1440.png",
+        "sha256": "ba6f43925b6c0a2fb60f65d4aec8055b86375ba416c71553c25ee6069a3cf74c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-10-corner-trap-2080.png",
+        "sha256": "a3c51940dee9923d2376a9c6915b077cd991ab55a282b31be886e836f51a3225"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-10-corner-trap-360.png",
+        "sha256": "67f9c212c6cb6d562fbdf0b874140aeb4457c922d8220195635f7e344f66a154"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-10-corner-trap-3840.png",
+        "sha256": "4ca4c15a2e8a2eab5b1da9b4ea32bc42dc23daaff752a84c7a8dea0465a15d08"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-10-corner-trap-768.png",
+        "sha256": "bfc4acc7030079baf2b360d7923d0bab93c09a15e7c6726459a87173f212d611"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-11-projectile-1440.png",
+        "sha256": "55f682f828fb6d8c9a045cd477a3b0abddc7ba2d01f98c484652dd6f09d013a6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-11-projectile-2080.png",
+        "sha256": "2758e057b16d884664d587e4479bf54fe8fe67a40ddb5aa6ca5d6cf59c1712b9"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-11-projectile-360.png",
+        "sha256": "c0e5b8a98d010b2da81e063ded20fadfaa4be5bdbdd0f59494e7f45720a06b5e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-11-projectile-3840.png",
+        "sha256": "b8a97b4646949382aa18e1f1fd3b03bde1ef5eae15dd6b1d09a40f5a0377da97"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-11-projectile-768.png",
+        "sha256": "4652ef0bae89ee570296819d9d224972ceaf7e6f6197fef1a435ddbb16b2c394"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-12-firing-solution-1440.png",
+        "sha256": "af87bd4681a8c176612b6123f7142643f7ef4a78a0e44949ae9a838b0fe66fce"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-12-firing-solution-2080.png",
+        "sha256": "fbf1e055bf4a0fde691efbb19daf659ae4bbb3bfc9e794a4ce33809d44e91a73"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-12-firing-solution-360.png",
+        "sha256": "0ac67493780f1064d5551824d8b7d4abe5e2769bddea1cb8e1fd3439921647c6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-12-firing-solution-3840.png",
+        "sha256": "b8245332669e99513a42c07aea69e3095c674318a47128e63ac565214141b877"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-12-firing-solution-768.png",
+        "sha256": "a7298f6bce950385bedc87add116b01df9d155ef858fb9a6aa6c15546ab43b12"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-13-firing-limits-1440.png",
+        "sha256": "56da523eecb71a9e41ef47d1e78b5a3afd1ac27a23cbc075122e2a036a484a5e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-13-firing-limits-2080.png",
+        "sha256": "6b188ad979f205c9a0f2463ec1afcaf549a824d57569a441a6ef7279ae843fb8"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-13-firing-limits-360.png",
+        "sha256": "8c7fe7c31113ff4000200fa9497a8b9b5eccc2fcb246d991b8ffe1a38be0b59c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-13-firing-limits-3840.png",
+        "sha256": "0e4aa19c51ba18108aec52ef96130d60c37843ad25cc26532a1e581f72cd2984"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-13-firing-limits-768.png",
+        "sha256": "fe3a092e479f7807e3be09490a110675c0c299bd486ac300f5f0f1c9662fba26"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-14-study-opening-2080.png",
+        "sha256": "c796c25562f45410057f694c007e794b0a5563d625ed659cf34527b216f11628"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-14-study-opening-3840.png",
+        "sha256": "d65e4870df7565ef98a20af092f6283447cb85ed7ea04af2c16e88a856547ffb"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-15-study-open-2080.png",
+        "sha256": "c11e7594923c74fe2b10d9945c5d176578815fdcf217d249b30b405efac06952"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-15-study-open-3840.png",
+        "sha256": "6783c5ea20394f527187f62a487d2dfd28139b1d048cf44146f141cfda46d96f"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-16-motor-control-figure-2080.png",
+        "sha256": "6eb3495db2b718cdedffe75a7e0f78bafc0361ace57339200608802e081b5644"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-16-motor-control-figure-3840.png",
+        "sha256": "0af2a05aba5365f2dec273eeeeff46937997a07a59e2d060bf6461b1912cba3d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-17-iterative-figure-2080.png",
+        "sha256": "48679daf8256b04183b6a6259b36200bf1325b9a3f45fae1dcf5ff4dc732b67a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-17-iterative-figure-3840.png",
+        "sha256": "0d139a39d7283c72d628c5bfc800e3c8fd7d21d540566c1f289ce38c564abff0"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-18-blending-figure-2080.png",
+        "sha256": "6c04882906346456736ba56b73fd70e13471e00e9733c44751da7dee69c841bf"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-18-blending-figure-3840.png",
+        "sha256": "da4988a2862c63817ae0c7dc21a407ebfabcd5a8b7a0185ab4e3d61c7d6f34b3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-19-catalog-2080.png",
+        "sha256": "c145b0c843a047ad874aa0e42961fdee6da9cd887f2abc922713965ba1456ab9"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver001-19-catalog-3840.png",
+        "sha256": "d3a155d6a15f64143d51be38294f0039468e35906748414598e02fae2744cc9d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-01-shelf-1440.png",
+        "sha256": "62c28e5f4b29a2570a5d6cb5eb840c3beae99df14aff32c39b9319f8886b7312"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-01-shelf-2080.png",
+        "sha256": "86074ba9343e3275384de27bdb8ff773ebd983213f67c62ca40ad28e57b3f3ee"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-01-shelf-360.png",
+        "sha256": "cbbf11fe0ed790b3312ea165fcefa913e405b232ca70ca4a35fac419c89f7fa2"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-01-shelf-3840.png",
+        "sha256": "60e039ffb7cb6b456a8be25d951b1e960e8fb053e34d0fe4ed26259f07495221"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-01-shelf-768.png",
+        "sha256": "f30c767f5558cac8b006f25ae65aa13265afac5304c766fe63401b1e5d075305"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-02-collision-step-1440.png",
+        "sha256": "94ad63d1cdeb529a137d5e874caa801cb627e026dbd53d691f5df7c8af5f545f"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-02-collision-step-2080.png",
+        "sha256": "7fda75113cae9e32e69220a02d4367c81364ce94e89fdc3b7d62c669c5a65615"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-02-collision-step-360.png",
+        "sha256": "b459a23f3024dfe524f9f92ba39b6f23c214a3c3a9bbfc0e15773be603a3ee7a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-02-collision-step-3840.png",
+        "sha256": "4afa1d69e953ea3bb02471d20ecd2ed05b5295164b87f48ce5b1fe9e0a1be3f3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-02-collision-step-768.png",
+        "sha256": "3a1918649c9ad08616c57d7e05dc1573eb6b56dae692912d26540e074270aeaa"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-03-collision-chart-1440.png",
+        "sha256": "5b2336e6418b1a781f7a533b40e30617644eaf487aea65b3664a451b8e632e89"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-03-collision-chart-2080.png",
+        "sha256": "5fbe2db11f9ed3daf01b32ee268629a4c73a2f65b305268f2e12409f5eaf6b65"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-03-collision-chart-360.png",
+        "sha256": "5d4d5306abe0cb9f8365f3a8f0e8a886c29d0968b844a49f1f89bb16978ce788"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-03-collision-chart-3840.png",
+        "sha256": "ef82cb165ac75762472dee00bceee2688ac3d9222670797eb1742f17fc881574"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-03-collision-chart-768.png",
+        "sha256": "32640ad61e30fbcae51b7d2a934fa0cd5d551072e41e74b8e99c329d5c2f45e3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-04-collision-pseudocode-1440.png",
+        "sha256": "b2db71ca29f270c538861d8973968b365d9831a03a08f32516a73bcd986943f9"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-04-collision-pseudocode-2080.png",
+        "sha256": "059b34bf60e65258ebc3f694bbc93c4efa29ec02a4fa6f4cf5d86219484214c5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-04-collision-pseudocode-360.png",
+        "sha256": "1e4f8db58ba800c4717ea8acc3a59640d79e6b1a54c16d3cbac3f309777171cd"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-04-collision-pseudocode-3840.png",
+        "sha256": "d16f73a6986d8ddc87db5c5e2fc0b61cc35ceaa4c6fc2ff9d6398748c0a20618"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-04-collision-pseudocode-768.png",
+        "sha256": "5180a6a7e4bdb79127cda934edd7af60b8c3d05fc10b8ef9a9908158305909d6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-05-collision-executable-1440.png",
+        "sha256": "518df9a542adfd740060e69bfbb5915ffc7ce29b4ce958310ffff15e66f970b1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-05-collision-executable-2080.png",
+        "sha256": "dc959586e716fe9419e55cdb5c916d2fd5c1b272dded4ec97e349bff2bb15615"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-05-collision-executable-360.png",
+        "sha256": "e322a1ce2a1675dd6b5b6a160c7e373f1d16496035edc9420189b70d455ed6d5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-05-collision-executable-3840.png",
+        "sha256": "428c87bc4dec63d80b0291fc220374b49ffc9d3378d1f7487307dad29a53908d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-05-collision-executable-768.png",
+        "sha256": "7992f439ee40588c890e8ebac36a5b432d3ce4553a1ca0607ff6da553ce403a8"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-06-collision-limits-1440.png",
+        "sha256": "1d251e691a6204bb45e988d9f4435a319f644462a1dae80404abd6d4ec3b2c75"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-06-collision-limits-2080.png",
+        "sha256": "b72df1a7eb84de2a2516cd0811d1f73c664af10f124a36001f4921a8089bfbec"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-06-collision-limits-360.png",
+        "sha256": "a6264e83eadcc296713e022f0e694b900b41e04922cb5e258f50398794b84da6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-06-collision-limits-3840.png",
+        "sha256": "3114816c575b78fc4a479e3ff9175f01f07f0e6f468be61fd3c59c270a568ce4"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-06-collision-limits-768.png",
+        "sha256": "d9bb1e450c6d6589a57052b3b9496dfd6d3e46d31cc11eebea6c24cf6c6f413a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-07-collision-elsewhere-1440.png",
+        "sha256": "f1edc3961469483a2de0d524b3f585c6b4ea840ddbfdad538afe7a11fe7cc8b1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-07-collision-elsewhere-2080.png",
+        "sha256": "7c81a77107bb68dc192417b737f09ae656cb7473f897e07b32c16cdd45ddb97c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-07-collision-elsewhere-360.png",
+        "sha256": "519854b9a49d391ba7fc5be7f10c43666743f35115968998379561f786f0c4a9"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-07-collision-elsewhere-3840.png",
+        "sha256": "30d9fbb504d01b0610d79937d442c0c7d214f9cca51c1202bc04d16be7c82c40"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-07-collision-elsewhere-768.png",
+        "sha256": "0c8ad26436fb918f5e0beca690bc673f7d1fc735fd0f5ee4329b982a08031f07"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-08-flee-1440.png",
+        "sha256": "9db723da0a1cc3f2d2938555e6065e9664e6728879aa9cb05e239334ad8da814"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-08-flee-2080.png",
+        "sha256": "b773f9b2bf973b17b9c0c0930e2e91dca3ee77b9dad4b261ecc7dad8769f9c48"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-08-flee-360.png",
+        "sha256": "2d0c2850413ee87ccbf71d1eb483a572ba1ec52fecb7ad436263301f047bf18d"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-08-flee-3840.png",
+        "sha256": "58f1c4f49cbeee3ce151fbd807b53150f27062b4158d1a1ff790fe11c585edbb"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-08-flee-768.png",
+        "sha256": "c2b44f8b7a16b1201d4f93e59a6c85f1b8e51c3a0e3856a803e5a4ccb1fcd1ad"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-end-of-run-1440.png",
+        "sha256": "d59b535a5613b53730f3b88dbd99a47393b6c271c8ede1e0cafabf387028938a"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-end-of-run-2080.png",
+        "sha256": "990d8a0c34957ffc61c1a57fffb7d5ba0ff022247d6195cbab9d00fc64a09718"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-end-of-run-360.png",
+        "sha256": "44c75cd91d1a3f83c25d3b588fd7ac185e452b8ca9cefdb349be5fb575071eea"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-end-of-run-3840.png",
+        "sha256": "78cc25c014ef2a0c182472abc257cbff9ebbf76c12a6972e3a2fe762fb0f8af1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-end-of-run-768.png",
+        "sha256": "e34330d90a7ee986bc3398cb5f0edf8540cb930854c65a1f1e80907e9ce0f5c8"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-ray-first-hits-1440.png",
+        "sha256": "f118e08be929ee9580c0b708e1053e9b49313acb6e51faa22814dbb2ca98878b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-ray-first-hits-2080.png",
+        "sha256": "56092a5973e6c9b3746441edc66e9ecc16d68b8b0436ae19b9fefd8492788c91"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-ray-first-hits-360.png",
+        "sha256": "98e61e970bcd0049347b31ca60724f700fe0988e05fc7f74c89cf77f6c8c24d3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-ray-first-hits-3840.png",
+        "sha256": "802179f79e66b783d8751e6bedde25fc6213951585bfc7b4829746ab8d3fb791"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-ray-first-hits-768.png",
+        "sha256": "c6d6bff359b7b760a4724221a13deb450e635ecd18acd495d909c7c60cabcbcc"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-smallest-clearance-1440.png",
+        "sha256": "b89ef6297740c82b8eaf4aa5158a03c0255467f4e265255970d846d5f4157800"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-smallest-clearance-2080.png",
+        "sha256": "6ee0e09fa976e15d8287a2c96f36f964b767e6382cd985eed29d168033df038e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-smallest-clearance-360.png",
+        "sha256": "016df9a364ffe756ea786838261d905af36562edc04857489c83afef0074c3e5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-smallest-clearance-3840.png",
+        "sha256": "8c892dec03b843d9c92c9c1349651dc8976f545600a66a21b6b6aed2e71e8c71"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-smallest-clearance-768.png",
+        "sha256": "c2798b17ec4a9506085205decbc76dd2a7caf6b8009039caead340030e8fed48"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-turning-along-the-wall-1440.png",
+        "sha256": "f118e08be929ee9580c0b708e1053e9b49313acb6e51faa22814dbb2ca98878b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-turning-along-the-wall-2080.png",
+        "sha256": "56092a5973e6c9b3746441edc66e9ecc16d68b8b0436ae19b9fefd8492788c91"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-turning-along-the-wall-360.png",
+        "sha256": "98e61e970bcd0049347b31ca60724f700fe0988e05fc7f74c89cf77f6c8c24d3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-turning-along-the-wall-3840.png",
+        "sha256": "b33a258eda98f091d771ac439603b28f27dfd982993f9894e474045d6fdc8a7b"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-09-wall-turning-along-the-wall-768.png",
+        "sha256": "5e3bd3847258f87fb11ac5e077d1fa66e6f374dded986b1920f307e4397f8904"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-10-corner-trap-1440.png",
+        "sha256": "a8c89fddc33106695d6c99d0b518598f3e1b726271e1ebbbabddb0ea32618785"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-10-corner-trap-2080.png",
+        "sha256": "bbca9042186311b484d73ec02d118d3739bdade4ac13cca56e558cc931d6b957"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-10-corner-trap-360.png",
+        "sha256": "0a24193bd0bb6a508f0e082432ff9be190ba9b0537534db486758d62a49eb0d6"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-10-corner-trap-3840.png",
+        "sha256": "2477e83c5c7e98fbdc698c66317a860e0dd1c8747578c5a59c30798946370615"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-10-corner-trap-768.png",
+        "sha256": "8af83ace3cf3ec0a3378f53c5d5f7d08aa8f9a60ace17509b82bc0efc2f5e2d0"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-11-projectile-landing-1440.png",
+        "sha256": "23b747053aeed858bce0a74f6a09b7f68e76390d2d85da913f347335f2f1a821"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-11-projectile-landing-2080.png",
+        "sha256": "56b8b33c34328f77722f95d07c8579036634107a28eb2d05de4297039e69821c"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-11-projectile-landing-360.png",
+        "sha256": "1c8b9eb848e5e18b6a9887c6b363b53f5f71ac4fc9a673a114a05bbd3fd0723e"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-11-projectile-landing-3840.png",
+        "sha256": "ceba1b7cd03bc5e3d83c36881e4cbdeea9d23e6b9aeedc9172c38af0fd764cb7"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-11-projectile-landing-768.png",
+        "sha256": "a1ab01ea25e14d37804fec100636ab6c6b61f3b23340d2f8f38423af5f7ef934"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-12-firing-solution-1440.png",
+        "sha256": "94fe1c87e568ce1c75f38e5a1874844b8ac053a0fd4da722ecc0eaeab2a5e3c3"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-12-firing-solution-2080.png",
+        "sha256": "c77eca097c8771631f75731717e861af4fcaad31796f24246af7c3067a423667"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-12-firing-solution-360.png",
+        "sha256": "47811ee61518f84c257e6abc8779cb5929dfd6fb9ddddc02c283010b4d4a6de5"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-12-firing-solution-3840.png",
+        "sha256": "6e4ffbd9ac787408874d687d789bd64bbbba34d92344f15f9096eaa0c588223f"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-12-firing-solution-768.png",
+        "sha256": "cf20b326f0d9fe029c99e0d53acf49f35b0f2d11de43613778ea6033bcea2053"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-13-firing-limits-1440.png",
+        "sha256": "8e0640a9dc78b51ae4776d0ae52bdf9c14948141d605afd6837fb7d822b95167"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-13-firing-limits-2080.png",
+        "sha256": "8f91ee88a7714496fdc03627a57cb60fc09332ca09f13545017a36d5e59649f1"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-13-firing-limits-360.png",
+        "sha256": "4ac27e48e5fa15c7d2a334ecad472a62e67e57a2288cb20dabfc4b1d03f789ed"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-13-firing-limits-3840.png",
+        "sha256": "7773c44b82d544a0db77b2cb5954d36c4bc0bd30e41428cec5321ead402304fa"
+      },
+      {
+        "path": "docs/evidence/WO-028/walkthrough/ver002-13-firing-limits-768.png",
+        "sha256": "ccb42bb1dc4ce9e0bc56524b9797ad304ddc612774dec3b91468164b7681d88e"
+      },
+      {
+        "path": "docs/final-reviews/WO-028/FINAL-001.md",
+        "sha256": "06870a68e66c740d3ba32e8cda7a0665f0a8710dbc57054c55956d7d2a4d2edc"
+      },
+      {
+        "path": "docs/lineage/decisions-index.md",
+        "sha256": "6ce65b5ba3e51b3cd93a3dfce45becf177c875a13edc0d0245a20d4ab86076c9"
+      },
+      {
+        "path": "docs/planning/followups.json",
+        "sha256": "0533c4ca7671282bf653fa960bb847d251ed51dd5cc1df154bf43f1c6dc44c03"
+      },
+      {
+        "path": "docs/repositories/dotln-angular.md",
+        "sha256": "931487aceced5671ac545cf2c92b92e3036145731e9a11bc7613d92faf019466"
+      },
+      {
+        "path": "docs/verifications/WO-028/VER-001.md",
+        "sha256": "50f799a5b88bb00cc529a72e499bce97777135c70dc5fa973b5adeb08c7c9ce2"
+      },
+      {
+        "path": "docs/verifications/WO-028/VER-002.md",
+        "sha256": "c40e67105ae98301ea74a36b79eadd005c6564533e9de58bfff546e39553e97f"
+      },
+      {
+        "path": "docs/work-orders/README.md",
+        "sha256": "a17c0125a4ef5c12bb228a2795c42c4a91c67b7e119681e44ee7cc7c61bbe478"
+      },
+      {
+        "path": "docs/work-orders/WO-028-concept-research-movement.md",
+        "sha256": "9b3a76696d5b8c0ef3e34328fbe941a816a8cb527c60d9d68c9272697c929814"
+      },
+      {
+        "path": "docs/workstreams/WS-001-dotln-angular.md",
+        "sha256": "e2bad8674841e5700cbdbce15bfadb7df3075c67bb2fd4d3a8b88003c9ba8539"
+      },
+      {
+        "path": "docs/workstreams/WS-002-concept-research.md",
+        "sha256": "01ebdbba80b55a4a4817a9574d4a4583b22e98d953e3fb681a352d2c439f57fd"
+      }
+    ]
+  },
+  "note": "Each tree includes tracked and untracked nonignored files through a temporary index. This new manifest is outside its own captured launchpad tree. No branch commit or index mutation was made."
+}

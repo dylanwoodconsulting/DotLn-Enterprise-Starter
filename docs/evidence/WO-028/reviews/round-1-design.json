@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "kind": "design-improver",
+  "round": 1,
+  "model": "gpt-6.1-sol",
+  "effort": "max",
+  "modelEffortSource": "Native worker launch briefing and review-common.md. No separate runtime model introspection was exposed.",
+  "recordedAt": "2026-11-04T20:07:42.452163+00:00",
+  "candidateIdentities": {
+    "target": {
+      "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+      "candidateChangedFilesSha256": "55ac7d90dd7df4cf7bfe3d1e6faed9113a2322404f7edcfda429aa455ccf62c3",
+      "verifiedChangedFiles": 79,
+      "mismatches": []
+    },
+    "launchpad": {
+      "base": "a5e7076cfe1082d888966223f544e17d471324ae",
+      "candidateChangedFilesSha256": "35f079567f7e85d7fc9d857eb74230494cf9c934bb45a7be8bf014ed8f78cdf3",
+      "verifiedChangedFiles": 107,
+      "mismatches": []
+    }
+  },
+  "packetIntegrity": {
+    "candidateJsonSha256": "85feb9fdafb2193816cc9bf29ed31fcf088784890c206e6dec84d801f0e9dd07",
+    "diffSha256": {
+      "target.diff": "52e9b6d4b572013d4171895b637425b7ad4db6f5cac998c0183548f86957825e",
+      "launchpad.diff": "6ef674f21aadd85f68e193281e6655a923c0557af3e3e0d44c3db3348b3ad13a"
+    },
+    "method": "Read-only Python hashlib SHA-256 comparison of all 186 files bound by candidate.json, repeated at report time; declared identities equal the requested identities. No candidate files changed."
+  },
+  "searchedPaths": [
+    "review-common.md",
+    "review-design.md",
+    "review-candidate-r1/candidate.json",
+    "review-candidate-r1/target.diff",
+    "review-candidate-r1/launchpad.diff",
+    "launchpad/docs/operator/README.md",
+    "launchpad/docs/operator/implementation-guidance.md",
+    "launchpad/docs/work-orders/WO-028-concept-research-movement.md",
+    "launchpad/docs/workstreams/WS-002-concept-research.md",
+    "launchpad/docs/workstreams/WS-001-dotln-angular.md (cited house-rule and app sections)",
+    "launchpad/docs/repositories/dotln-angular.md (Run content workers; Catalog and concept studies)",
+    "launchpad/docs/product/concept-study.md",
+    "target/docs/ai-reference/catalog-rules.md",
+    "target/docs/dev-reference/architecture/catalog.md (Studies)",
+    "target/libs/features/tools/src/lib/studies/movement/* (all twenty new model algorithms, model construction and spec import/helper structure; existing Arrive, Seek and Wander patterns)",
+    "target/libs/features/tools/src/lib/studies/parameters.ts",
+    "target/libs/features/tools/src/lib/studies/study-model.ts",
+    "target/libs/features/tools/src/lib/studies/study-models.ts",
+    "target/libs/shared/scene-engine/src/lib/random.ts",
+    "target/libs/shared/scene-engine/src/public_api.ts",
+    "target/libs/features/tools/src/lib/mappers/study-mapper.ts",
+    "target/libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+    "target/libs/features/tools/src/lib/types.ts",
+    "target/libs/features/tools/src/lib/composites/study/*",
+    "target/libs/features/tools/src/lib/composites/study-explanation/*",
+    "target/libs/shared/catalog/src/studies/aifg.ts",
+    "target/libs/shared/catalog/src/studies/aifg/*.json (twenty added record structures and model references)",
+    "target/libs/shared/catalog/src/studies/studies-summary.json",
+    "target/tools/studies.test.mjs",
+    "target/apps/dotln-e2e/src/catalog.spec.ts",
+    "target/apps/dotln/public/i18n/en.json",
+    "target/libs/features/tools/testing/src/lib/tools-en.json",
+    "launchpad/docs/control/budgets.json",
+    "launchpad/docs/control/current.md",
+    "launchpad/docs/control/orders/WO-028.jsonl",
+    "launchpad/docs/evidence/WO-028/README.md",
+    "launchpad/docs/evidence/WO-028/decisions.md",
+    "launchpad/docs/evidence/WO-028/walkthrough.md",
+    "launchpad/docs/evidence/WO-028/validation.json",
+    "launchpad/docs/evidence/WO-028/{authors,critics}/*.json (receipt structure only)",
+    "launchpad/docs/evidence/WO-028/{bundle,capture-manifest,content-identity}.json",
+    "launchpad/docs/{lineage/decisions-index.md,planning/followups.json,work-orders/README.md} (changed structure and scope)"
+  ],
+  "coverage": {
+    "scope": "Static design review of the entire changed surface for simpler structure, coupling, error handling and maintenance. The batch stays within the existing motion/timeline model and registry patterns; findings below concern two existing seams, with no proposed new framework, family, route or schema.",
+    "sourceReading": "All twenty new model algorithms and model construction were inspected. Long narration/worked-value presentation literals were shortened in review output where their text was outside design scope. Specs were inspected for imports, helpers and producer/consumer use, not independently judged assertion by assertion.",
+    "launchpadReading": "All changed files were hash-verified and the whole diff inventory was inspected. Launchpad evidence/receipt structure, authorization boundaries and scope retention were considered; factual and document-maintenance judgments remain with the other assigned reviews.",
+    "execution": "Hash verification and source inspection only. No application/test/gate execution, installs, browser sessions, network requests, descendants or real-worktree reads."
+  },
+  "findings": [
+    {
+      "id": "DES-001",
+      "severity": "low",
+      "file": "target/libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+      "line": 157,
+      "problem": "Ten motion-only model exports explicitly return the full StudyModel union. That erases a family the producer already knows and makes their direct spec consumers add one-off runtime narrowing helpers before they can inspect motion or timeline. The other movement models already preserve MotionStudyModel.",
+      "evidence": [
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+          "line": 157,
+          "detail": "model is annotated StudyModel, while its only return starts with family: motion at line 179."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+          "line": 18,
+          "detail": "motionModel wraps the direct model import solely to check family and recover the motion subtype (lines 18\u201322)."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/flee.model.spec.ts",
+          "line": 25,
+          "detail": "viewOf repeats the same narrowing guard; the same pattern occurs in the other eight affected specs."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+          "line": 189,
+          "detail": "The same batch already uses the narrower MotionStudyModel return contract, as the existing Arrive/Seek/Wander models do."
+        }
+      ],
+      "affectedProducerLines": {
+        "actuator.model.ts": 157,
+        "flee.model.ts": 252,
+        "kinematic-arrive.model.ts": 155,
+        "motor-control.model.ts": 155,
+        "movement-in-the-third-dimension.model.ts": 240,
+        "satisfaction-radius.model.ts": 139,
+        "steering-behaviors.model.ts": 130,
+        "steering-output.model.ts": 115,
+        "two-and-a-half-dimensions.model.ts": 233,
+        "variable-matching.model.ts": 284
+      },
+      "producerConsumerPairs": [
+        {
+          "producer": "movement/{actuator,flee,kinematic-arrive,motor-control,movement-in-the-third-dimension,satisfaction-radius,steering-behaviors,steering-output,two-and-a-half-dimensions,variable-matching}.model.ts::model",
+          "consumer": "Each adjacent .model.spec.ts narrowing helper"
+        },
+        {
+          "producer": "Each narrowed model export",
+          "consumer": "study-models.ts / StudyModelModule (MotionStudyModel remains assignable to StudyModel)"
+        }
+      ],
+      "minimalFix": "Import MotionStudyModel and use it as the return annotation in these ten modules. Their existing values already have that shape. Remove the now-redundant family-guard lines in the adjacent spec helpers where convenient; preserve useful default-parameter helpers. No registry or shared schema change is required."
+    },
+    {
+      "id": "DES-002",
+      "severity": "low",
+      "file": "target/libs/features/tools/src/lib/composites/study/study.html",
+      "line": 76,
+      "problem": "The selected chart legend is reconstructed inside the composite, while StudyDrawingView.legend still carries the movement-body legend. This gives the mapped legend two meanings by family and duplicates legend rendering. Flow/marbles already resolve the selected legend in drawingOf, so the new motion-chart repair splits that responsibility across mapper and template.",
+      "evidence": [
+        {
+          "file": "target/libs/features/tools/src/lib/composites/study/study.html",
+          "line": 76,
+          "detail": "The new branch bypasses visual.legend and iterates visual.timeline.series; the else branch repeats the same paragraph/span loop over visual.legend (lines 76\u201393)."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/mappers/study-mapper.ts",
+          "line": 39,
+          "detail": "The shared drawing view uses model.legend; the motion branch changes view without replacing that legend (lines 39\u201359)."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/mappers/study-mapper.ts",
+          "line": 60,
+          "detail": "The existing flow branch already replaces the legend and caption for its selected marble diagram (lines 60\u201369)."
+        },
+        {
+          "file": "target/libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+          "line": 147,
+          "detail": "The existing flow consumer contract explicitly expects switched.visual.legend to be the selected diagram legend."
+        }
+      ],
+      "producerConsumerPairs": [
+        {
+          "producer": "study-mapper.ts::drawingOf motion branch",
+          "consumer": "study.html::caption legend renderer"
+        },
+        {
+          "producer": "study-mapper.ts::drawingOf flow branch",
+          "consumer": "study-mapper.spec.ts selected-diagram legend expectation and the same generic caption renderer"
+        }
+      ],
+      "minimalFix": "Derive the selected motion legend from timeline.series in drawingOf when the resolved view is timeline, following the existing flow override. Render one legend loop in study.html and use an index or other key that remains unique when multiple series share a tone. The translated chart-guide paragraph can keep its small view conditional; no new schema or model abstraction is needed."
+    }
+  ],
+  "unsearchedBoundaries": [
+    "No reads from either real Git worktree, Git metadata, docs/control/local, quarantined material or ignored intake.",
+    "No independent criterion verdicts, factual/source-link judgments, adversarial test design or document-maintenance findings.",
+    "No assertion-by-assertion review of all new spec bodies, no numerical/performance experiments, and no rendering or screenshot inspection. Binary screenshot content was hash-verified only.",
+    "Public command logs and prior critics were not independently rerun or accepted as this worker\u2019s passes. The later verifier\u2019s own walkthrough remains outside this report."
+  ],
+  "usage": {
+    "total": "unknown",
+    "cachedInput": "unknown",
+    "source": "The native worker tool surface exposed no token counters. No counters inferred from source sizes, elapsed work or the parent.",
+    "scope": "This design-review worker only; excludes parent, authors, critics and sibling reviewers.",
+    "cutoff": "2026-11-04T20:07:42.452163+00:00"
+  },
+  "retention": {
+    "sourceReportSha256": "547fb6845c4562233403f6620b3be291a6d9eb216e94c4873ad54a3318818fbe",
+    "workerType": "codex-spawn-agent",
+    "launchModel": "gpt-6.1-sol",
+    "launchEffort": "max",
+    "launchSource": "parent native spawn_agent arguments; worker effective runtime telemetry unavailable"
+  }
+}

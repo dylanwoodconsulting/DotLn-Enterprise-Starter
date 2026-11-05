@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-04",
+  "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "reviewedTargetTree": "80145e06fb39d5d5264e46377b1bae5b5cc2b7ab",
+  "candidateManifest": "reviews/round-2-candidate.json",
+  "environment": {
+    "NX_NATIVE_COMMAND_RUNNER": "false",
+    "NX_TASKS_RUNNER_DYNAMIC_OUTPUT": "false"
+  },
+  "source": "Canonical target-gate stdout. Its PASS requires every command executed with zero exit, and unchanged target tree/HEAD throughout. All implementation reviews completed before these gates; no later reviewer ran.",
+  "runs": [
+    {
+      "selection": "plain",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-04 21:51:47 UTC",
+      "completionObservedAt": "2026-11-04 21:53:34 UTC",
+      "checks": [
+        {
+          "name": "install",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 11011
+        },
+        {
+          "name": "lint",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 56857
+        },
+        {
+          "name": "typecheck",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 758
+        },
+        {
+          "name": "test",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 35863
+        },
+        {
+          "name": "format",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 1546
+        }
+      ],
+      "summary": "PASS target dotln-angular plain at 55b59c9133056c1d6471274a9676a7d5649196ac (106035 ms)"
+    },
+    {
+      "selection": "review",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028",
+        "--review"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-04 21:53:39 UTC",
+      "completionObservedAt": "2026-11-04 21:55:09 UTC",
+      "checks": [
+        {
+          "name": "install",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 11988
+        },
+        {
+          "name": "lint",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 43855
+        },
+        {
+          "name": "typecheck",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 754
+        },
+        {
+          "name": "test",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 518
+        },
+        {
+          "name": "format",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 1523
+        },
+        {
+          "name": "build",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 6400
+        },
+        {
+          "name": "e2e",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 544
+        },
+        {
+          "name": "visual",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 22326
+        }
+      ],
+      "summary": "PASS target dotln-angular review at 55b59c9133056c1d6471274a9676a7d5649196ac (87908 ms)"
+    }
+  ]
+}

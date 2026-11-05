@@ -11,7 +11,7 @@ build) and by the record check (`npm run studies:check` over the work's
 directory), with the critics' dispositions and the link check in its
 evidence; the track is delivered when the operator says the catalog is
 studied enough, or when no landed family has a row left to draw.
-**Delivery state:** proposed
+**Delivery state:** in progress
 
 ## Rules
 
@@ -49,7 +49,9 @@ their decisions hold the history.
    Claude each is a `dotln-worker`. A worker writes only in its private copy
    of the target, spawns nothing and starts no gate; the executor stays the
    one writer of both worktrees, and its three independent reviews run as
-   its role root requires. (WO-020's `fan-out.md`; product 07
+   its role root requires. Authors and critics read the current house rules and
+   inspect message coverage and mechanism/presentation separation independently
+   of any earlier worked example (WO-028-D042). (WO-020's `fan-out.md`; product 07
    §Model-specific notes; the 2026-11-04 pass, D6.)
 4. **The operator's touchpoints.** `drive: WO-NNN --host codex` from the
    launchpad's main checkout (the attended lifecycle phrases on either host
@@ -84,9 +86,11 @@ their decisions hold the history.
    `catalog-rules.md` and `catalog.md` §Studies): a study is in its author's
    own words, every reference is opened before it is cited, a representation
    an idea does not need stays absent, and every record is `checked` by two
-   reviewers before it ships; the record's shape is `concept-study-v0`, and
-   a change to it is a new schema version through a road order, never an
-   edit. (WS-001 rules 23 and 26; the 2026-10-30 second pass, D5.)
+   reviewers before it ships; the current record contract is `concept-study-v1`, whose authored text fields
+   are keys in lazily loaded work catalogs. A changed shape requires a new version;
+   the shipped v0 schema remains immutable. Shared infrastructure belongs to a
+   road order unless the operator includes it in a batch (WO-028-D042). (WS-001
+   rules 23 and 26; the 2026-10-30 second pass, D5.)
 
 ## Member orders
 
@@ -118,7 +122,7 @@ run the other way.
 
 | Member | State | Evidence |
 | ------ | ----- | -------- |
-| WO-028 | filed | [the order](../work-orders/WO-028-concept-research-movement.md) |
+| WO-028 | final-reviewed, with the shared study message and model migration the operator included; the target and records pull requests await the operator's merge | [the order](../work-orders/WO-028-concept-research-movement.md), [FINAL-002](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/final-reviews/WO-028/FINAL-002.md), [WO-028-D042](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d042), [WO-028-D060](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d060) |
 | WO-029 | filed | [the order](../work-orders/WO-029-concept-research-rxjs.md) |
 | WO-030 | filed | [the order](../work-orders/WO-030-concept-research-eip.md) |
 | WO-031 | filed | [the order](../work-orders/WO-031-concept-research-poeaa.md) |

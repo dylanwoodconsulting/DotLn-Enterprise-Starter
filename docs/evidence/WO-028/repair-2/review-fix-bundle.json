@@ -1,0 +1,79 @@
+{
+  "initialBytes": 406485,
+  "initialFiles": [
+    "main-YEUMAOET.js",
+    "chunk-CNF5_8HZ.js",
+    "chunk-SUwCjcuu.js",
+    "chunk-BwCtja5l.js",
+    "chunk-RJxHZrND.js",
+    "chunk-B21jaIjC.js",
+    "styles-QSFL7DXU.css"
+  ],
+  "attributedInputBytes": {
+    "@ngrx/signals": 6419,
+    "@angular-architects/ngrx-toolkit": 8962,
+    "libs/shared/data-access": 2989,
+    "libs/shared/events": 1691,
+    "libs/shared/state": 2352,
+    "libs/dotln/shell": 6862,
+    "apps/dotln/src": 9237,
+    "rxjs": 39262,
+    "tslib": 2477,
+    "@angular/core": 187064,
+    "@jsverse/utils": 580,
+    "@jsverse/transloco": 19143,
+    "libs/shared/i18n": 2163,
+    "@angular/common": 33897,
+    "@angular/platform-browser": 16157,
+    "libs/shared/utils": 145,
+    "ramda": 19278,
+    "ramda-adjunct": 750,
+    "libs/shared/core": 1085,
+    "@angular/router": 97568,
+    "@angular/cdk": 12202,
+    "libs/shared/ui": 16981,
+    "@angular/aria": 17732,
+    "styles and generated": 0
+  },
+  "lazyCodeInInitial": [],
+  "menuAvailableWithTools": true,
+  "dependencyKeysEqualBase": true,
+  "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "source": "npm run check:bundle; production build table; dependency-key comparison against base",
+  "run": {
+    "name": "bounded-probe",
+    "durationMs": 5947,
+    "slowestCases": [
+      {
+        "name": "bounded-probe",
+        "durationMs": 5947,
+        "exitCode": 0,
+        "granularity": "task"
+      }
+    ],
+    "peakFootprintBytes": 1673411112,
+    "peakRssBytes": 1804894208,
+    "memoryBudgetBytes": 4294967296,
+    "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+    "droppedOutputBytes": 0,
+    "startedAt": "2026-11-05T08:44:49.227Z",
+    "finishedAt": "2026-11-05T08:44:55.174Z",
+    "exitCode": 0,
+    "executed": true
+  },
+  "recordChunks": {
+    "aifg": {
+      "file": "chunk-Dn80Ydwx.js",
+      "bytes": 135351
+    },
+    "eip": {
+      "file": "chunk-CnVsHIvT.js",
+      "bytes": 87341
+    },
+    "rxjs": {
+      "file": "chunk-BByo2hX_.js",
+      "bytes": 76230
+    }
+  },
+  "recordChunkSource": "Exact current bytes of the hashed chunk filenames in the passing production build table. The subsequent browser build retains those same files."
+}

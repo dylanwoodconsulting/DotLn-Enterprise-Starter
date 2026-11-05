@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "findings": [],
+  "rechecks": [
+    {
+      "id": "DI-01",
+      "outcome": "held",
+      "note": "Fix held; DI-01 is resolved in target tree 80145e06fb39d5d5264e46377b1bae5b5cc2b7ab. Every body and mark guide is emitted in the first g; every body and mark text node is emitted in the following g. Thus no guide can overpaint any label or its outline. The glyph regression explicitly reports any guide following a text.label node in document order."
+    }
+  ],
+  "filesRead": [
+    "target/libs/features/tools/src/lib/composites/study-visuals/motion/motion.html",
+    "target/apps/dotln-e2e/src/movement-labels.spec.ts",
+    "target/docs/dev-reference/architecture/catalog.md",
+    "launchpad/docs/evidence/WO-028/repair-1/reviews/round-2-candidate.json",
+    "launchpad/docs/evidence/WO-028/decisions.md",
+    "launchpad/docs/evidence/WO-028/repair-1/README.md"
+  ],
+  "report": "Round-2 bounded recheck of DI-01 only: compared frozen target tree 80145e06fb39d5d5264e46377b1bae5b5cc2b7ab with round-1 tree be84c53c033bbfcb3977e8933f87ba9531405b7d for the three named target files. All three frozen blob hashes match round-2-candidate.json. The template retains each guide predicate, endpoint, label text, coordinate and tracking expression, but separates guides and names into ordered sibling groups. All label text remains under translate=no, also inherited from the outer SVG. This makes the SVG paint ordering sufficient to close the exact crossing described in DI-01 for both bodies and marks. The added browser assertion checks the corresponding DOM ordering; the catalog paragraph and D034/repair README describe that same change. No new finding is warranted in this delta. Coverage is static inspection of the named fix and its regression/documentation; I did not rerun the whole review or make a new criterion judgment. No tests, gates, browsers, probes, background tasks or descendants were launched, and neither repository was modified. Parent browser/gate execution remains separate evidence and is not claimed complete here. Requested worker model/effort remains gpt-6.1-sol/max (parent codex-spawn-agent brief); effective readback is unavailable. Token usage is unknown: no authoritative worker counter is exposed. Scope is this worker cumulative review/recheck; cutoff 2026-11-04T21:50:02.297935+00:00."
+}

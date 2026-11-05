@@ -1,0 +1,176 @@
+{
+  "author": "author-07",
+  "date": "2026-11-04",
+  "state": "drafts authored and read back; executor validation pending",
+  "ownership": {
+    "privateNonGitCopyOnly": true,
+    "realWorktreeEdits": false,
+    "testsRun": false,
+    "gatesRun": false,
+    "installsRun": false,
+    "agentsSpawned": false,
+    "gitCommandsRun": false
+  },
+  "readSources": [
+    "brief/assignment.md",
+    "brief/rows.json",
+    "brief/chapter-index.json",
+    "brief/concept-study.md",
+    "docs/operator/README.md",
+    "docs/operator/implementation-guidance.md",
+    "libs/shared/models/src/lib/concept-study.ts",
+    "libs/shared/catalog/src/schema/concept-study-v0.schema.json",
+    "libs/shared/catalog/src/studies/aifg/arrive.json",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+    "libs/features/tools/src/lib/studies/study-model.ts",
+    "libs/features/tools/src/lib/studies/parameters.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts",
+    "docs/dev-reference/architecture/scene.md",
+    "libs/shared/scene-engine/src/public_api.ts",
+    "libs/shared/scene-engine/src/lib/steering.ts",
+    "libs/shared/scene-engine/src/lib/vectors.ts",
+    "libs/shared/scene-engine/src/lib/types.ts",
+    "libs/shared/scene-engine/src/lib/simulation.ts (integration and steering sections)"
+  ],
+  "studies": [
+    {
+      "slug": "motor-control",
+      "id": "aifg-a:192",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/motor-control.json",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.spec.ts"
+      ],
+      "execution": {
+        "classification": "mixed",
+        "engine": "The public matchVelocity function requests zero velocity using the recorded response time and steering acceleration limit. zero and SteeringBody also come from the public API.",
+        "local": "A straight-rail motor adapter caps the request between negative brake capacity and zero. A local fixed-step harness prevents brake-driven reversal and updates position using the new velocity. The public engine exposes no separate rail-cart motor adapter.",
+        "executableNullRationale": "Not applicable: the TypeScript model runs this explicit motor policy, so executable names that module.",
+        "rxjsNullRationale": "A stream interpretation adds no useful mechanism to a fixed velocity request and a motor cap."
+      },
+      "example": "The loading-bay rail cart",
+      "authoredFrameCount": 101,
+      "failureComparison": "Only motorBrake changes to weakBrake. The weaker cart crosses the unchanged safety line despite respecting its brake limit; the line has no collision response.",
+      "specCoverage": [
+        "First request of -30 clipped by the engine to -12, motor cap -4, next velocity 5.6 and position 0.56",
+        "A later request within motor capability",
+        "Monotone speed reduction, forward displacement, bounded braking, no position snap and no brake-driven reversal",
+        "Weaker motor crossing the safety line, with end position expected near 17.71 rather than the default near 4.24",
+        "Frame values, worked arithmetic, comparison reference, deterministic reruns and drawing bounds across exposed input extremes",
+        "Catalog record parameters equal the spec parameters after executor integration"
+      ],
+      "citedUrls": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.red3d.com/cwr/steer/gdc99/",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/tests/src/com/badlogic/gdx/ai/tests/steer/box2d/Box2dSteeringEntity.java"
+      ],
+      "limitations": [
+        "This is a scalar point-cart brake model, without wheel slip, load variation, turning geometry or animation.",
+        "The referenced gdx-ai entity implements the physics bridge; its suggested additional vehicle motor filter is a comment, not implemented code.",
+        "The book section location comes from the supplied catalogue row; DOI metadata confirmed book identity only.",
+        "Specs have been authored and read, not executed by this author."
+      ]
+    },
+    {
+      "slug": "actuator",
+      "id": "aifg-a:157",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/actuator.json",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts"
+      ],
+      "execution": {
+        "classification": "mixed",
+        "engine": "Public clipLength caps the incoming velocity goal by speed capability. Public matchVelocity converts the feasible goal into bounded acceleration. Public clipLength also caps the velocity produced by the integration harness.",
+        "local": "The chosen velocity-channel actuator policy retains the original agreement alongside the feasible goal. A local fixed-step harness integrates acceleration and position; the belt marker follows the agreed velocity. This does not implement target selection or pipeline constraint iteration.",
+        "executableNullRationale": "Not applicable: the TypeScript model runs this explicit velocity-channel actuator and its harness.",
+        "rxjsNullRationale": "The important boundary is agreed goal to bounded output; event-stream timing does not clarify this constant-goal example."
+      },
+      "example": "The inspection-belt courier",
+      "authoredFrameCount": 49,
+      "failureComparison": "Only the agreed belt velocity changes from beltSpeed to impossibleSpeed. maxSpeed stays fixed. The actuator chases the capped feasible velocity while the original agreement remains unmet.",
+      "specCoverage": [
+        "First agreed velocity 6, raw acceleration 12, bounded output 3, next velocity 0.75 and position 0.1875",
+        "A hand-checkable transition from acceleration saturation to velocity-gap response",
+        "Feasible speed matching while a non-zero marker position gap remains",
+        "An infeasible goal of 12 capped to 8, preserving a final original-goal gap near 4",
+        "Increasing capability so the alternate velocity becomes feasible",
+        "No acceleration when velocity already matches the goal",
+        "Frame values, worked arithmetic, comparison reference, deterministic reruns and bounds across exposed input extremes",
+        "Catalog record parameters equal the spec parameters after executor integration"
+      ],
+      "citedUrls": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java"
+      ],
+      "limitations": [
+        "One linear velocity channel is modelled; positional agreement, angular goals, constraint negotiation and a full vehicle motor are outside the example.",
+        "The gdx-ai implementation is introduced as a velocity-to-acceleration calculation an actuator can use, not as a complete steering pipeline.",
+        "The book section location comes from the supplied catalogue row; DOI metadata confirmed book identity only.",
+        "Specs have been authored and read, not executed by this author."
+      ]
+    }
+  ],
+  "openedUrls": [
+    {
+      "url": "https://www.red3d.com/cwr/steer/gdc99/",
+      "method": "web open and find",
+      "status": "HTML opened and relevant Locomotion and Simple Vehicle sections read; web tool did not expose a numerical HTTP status",
+      "claimObserved": "The paper separates steering from locomotion and discusses momentum, finite force, speed truncation and mapping steering signals to body controls.",
+      "cited": true
+    },
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "method": "web open/find, followed by curl with Accept: application/vnd.citationstyles.csl+json",
+      "status": "Web HTML inaccessible; DOI CSL content negotiation returned HTTP 200",
+      "claimObserved": "Metadata identifies AI for Games, Ian Millington, third edition, CRC Press, DOI 10.1201/9781351053303. It contains no chapter or section text.",
+      "cited": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/tests/src/com/badlogic/gdx/ai/tests/steer/box2d/Box2dSteeringEntity.java",
+      "method": "curl",
+      "status": "HTTP 200; full source read",
+      "claimObserved": "update calculates steering and invokes applySteering. The adapter applies force and torque to the physics body, optionally aligns facing, and attempts speed caps. The source flags speed-cap timing and only proposes an additional motor filter in a comment.",
+      "cited": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "method": "curl",
+      "status": "HTTP 200; full source read",
+      "claimObserved": "The behaviour scales target-minus-owner velocity by reciprocal timeToTarget, limits linear acceleration, zeroes angular output and returns steering.",
+      "cited": true
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "method": "web open",
+      "status": "GitHub HTML opened; direct raw source was subsequently used for reading and citation",
+      "claimObserved": "The pinned 1.8.2 file exists; its raw equivalent supplied the complete implementation reading.",
+      "cited": false
+    },
+    {
+      "url": "https://github.com/Mugen87/yuka/blob/v0.7.8/src/steering/Vehicle.js",
+      "method": "web open",
+      "status": "404 Not Found",
+      "claimObserved": "No implementation content obtained.",
+      "cited": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/0.7.8/src/steering/Vehicle.js",
+      "method": "curl",
+      "status": "HTTP 404",
+      "claimObserved": "No implementation content obtained.",
+      "cited": false
+    }
+  ],
+  "tokenCounters": {
+    "status": "unknown",
+    "source": "No readable per-author usage counter was exposed in this author's tools or assignment.",
+    "scope": "author-07 session only; no parent or other-worker usage inferred",
+    "cutoff": "2026-11-04 after the draft readback and result authoring",
+    "inputTokens": null,
+    "outputTokens": null,
+    "totalTokens": null
+  }
+}

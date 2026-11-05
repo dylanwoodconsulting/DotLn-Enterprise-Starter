@@ -1,0 +1,183 @@
+{
+  "author": "author-02",
+  "date": "2026-11-04",
+  "gitMetadata": "Absent in the assigned private copy; no Git commands were run.",
+  "realWorktreesWritten": false,
+  "studies": [
+    {
+      "slug": "flee",
+      "id": "aifg-a:111",
+      "paths": {
+        "record": "libs/shared/catalog/src/studies/aifg/flee.json",
+        "model": "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+        "spec": "libs/features/tools/src/lib/studies/movement/flee.model.spec.ts"
+      },
+      "classification": "mixed",
+      "steps": [
+        {
+          "step": 1,
+          "kind": "local",
+          "explanation": "Read and display scalar displacement, distance and away direction from Pip and the beacon."
+        },
+        {
+          "step": 2,
+          "kind": "engine",
+          "explanation": "Call @dotln-angular/scene-engine flee for every acceleration. The displayed fade arithmetic describes the engine implementation, including its fixed radius of 20 and zero direction at coincidence."
+        },
+        {
+          "step": 3,
+          "kind": "local",
+          "explanation": "Apply acceleration over timeStep and clip the scalar velocity to maxSpeed."
+        },
+        {
+          "step": 4,
+          "kind": "local",
+          "explanation": "Advance position with the new velocity on an open line; preserve coasting when the engine returns zero."
+        }
+      ],
+      "executableNullRationale": null,
+      "comparison": "Change only start to the beacon position. With the recorded initial rest, coincidence yields no escape direction and every state remains still.",
+      "specCoverage": "Hand calculation at distance 5; mirrored displacement; fade at distances 10, 15, 20 and 25; inward momentum; monotone departure from rest; radius exit and coasting; exact coincidence with and without initial velocity; input bounds; frame prose and deterministic reruns.",
+      "sourcesUsed": [
+        "doi-book",
+        "gdx-flee"
+      ],
+      "limitations": [
+        "The motor is a study-local one-dimensional open-line integration, not the full scene simulation.",
+        "The fixed engine flee radius is exposed for explanation and guarded against changing to a different value.",
+        "No book text was read; chapter and section come from the assigned catalog row."
+      ]
+    },
+    {
+      "slug": "variable-matching",
+      "id": "aifg-a:108",
+      "paths": {
+        "record": "libs/shared/catalog/src/studies/aifg/variable-matching.json",
+        "model": "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+        "spec": "libs/features/tools/src/lib/studies/movement/variable-matching.model.spec.ts"
+      },
+      "classification": "mixed",
+      "steps": [
+        {
+          "step": 1,
+          "kind": "local",
+          "explanation": "Select velocity and calculate pilot-minus-skiff error; show but do not use position error."
+        },
+        {
+          "step": 2,
+          "kind": "local",
+          "explanation": "Construct the matching target or its diagnostic inverse by changing correctionDirection."
+        },
+        {
+          "step": 3,
+          "kind": "engine",
+          "explanation": "Call @dotln-angular/scene-engine matchVelocity for every acceleration, including the reversed target."
+        },
+        {
+          "step": 4,
+          "kind": "local",
+          "explanation": "Apply the speed-capped scalar motor, advance both boats, and inspect velocity error separately from position error."
+        }
+      ],
+      "executableNullRationale": null,
+      "comparison": "Change only correctionDirection from 1 to -1. Velocity mismatch grows until the motor reaches its speed cap; the position gap continues to grow.",
+      "specCoverage": "Hand calculations of initial capped and next unclipped updates; error recurrence; persistent position gap; independence from target position; reversed correction and saturation; unattainable target speed; shared arrow/chart/worked values; input bounds and deterministic reruns.",
+      "sourcesUsed": [
+        "doi-book",
+        "gdx-match-velocity"
+      ],
+      "limitations": [
+        "This is one concrete velocity instance of the matching pattern; it does not claim to execute position, orientation or rotation matching.",
+        "The reversed correction is an executable diagnostic of the inverse, not a rendezvous recommendation.",
+        "No book text was read; chapter and section come from the assigned catalog row."
+      ]
+    }
+  ],
+  "openedSources": [
+    {
+      "key": "doi-book",
+      "url": "https://doi.org/10.1201/9781351053303",
+      "accessed": "2026-11-04",
+      "observations": [
+        {
+          "method": "web open",
+          "status": "tool reported inaccessible"
+        },
+        {
+          "method": "curl following HTML redirects",
+          "httpStatus": 403,
+          "observation": "Publisher HTML presented an access challenge; no book prose was used."
+        },
+        {
+          "method": "curl with Accept: application/vnd.citationstyles.csl+json",
+          "httpStatus": 200,
+          "observation": "Readable bibliographic metadata identifies title AI for Games, publisher CRC Press, type book and DOI 10.1201/9781351053303."
+        }
+      ],
+      "claimUsed": "Bibliographic pointer to the book; supports names only the assigned row\u2019s chapter and section. No claim is drawn from unread book text."
+    },
+    {
+      "key": "gdx-flee",
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Flee.java",
+      "accessed": "2026-11-04",
+      "observations": [
+        {
+          "method": "web open",
+          "status": "source text returned, lines 0\u201382"
+        },
+        {
+          "method": "curl source status recheck",
+          "httpStatus": 200
+        }
+      ],
+      "claimUsed": "Flee extends Seek, reverses the position subtraction, normalises and scales to maximum linear acceleration, returns zero angular acceleration, and contains no distance fade or stopping rule in calculateRealSteering."
+    },
+    {
+      "key": "gdx-match-velocity",
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "accessed": "2026-11-04",
+      "observations": [
+        {
+          "method": "web open",
+          "status": "source text returned, lines 0\u2013116"
+        },
+        {
+          "method": "curl source status recheck",
+          "httpStatus": 200
+        }
+      ],
+      "claimUsed": "MatchVelocity subtracts owner velocity from target velocity, divides by timeToTarget, caps linear acceleration and sets angular acceleration to zero; target position is not used by the calculation."
+    },
+    {
+      "key": "reynolds-uncited",
+      "url": "https://www.red3d.com/cwr/steer/gdc99/",
+      "accessed": "2026-11-04",
+      "observations": [
+        {
+          "method": "web open",
+          "status": "HTML article returned; no claim used in either record"
+        },
+        {
+          "method": "curl status recheck",
+          "httpStatus": 403
+        }
+      ],
+      "cited": false
+    }
+  ],
+  "checks": {
+    "performed": "Read back both records, models and specs; manually reviewed step/block alignment, placeholder coverage and the hand arithmetic.",
+    "testsRun": false,
+    "gatesRun": false,
+    "dependenciesInstalled": false,
+    "subagentsSpawned": false,
+    "validationOwner": "Parent executor, after integrating the records into catalog and model registries."
+  },
+  "cumulativeTokens": {
+    "value": null,
+    "status": "unknown",
+    "scope": "This author-02 agent turn, including source research and six authored deliverables.",
+    "cutoff": "2026-11-04T18:37:47Z, source status rechecks and authored-output review; final report writing follows this cutoff.",
+    "reason": "The active tool interface exposes no cumulative input/output token counter. No estimate is substituted."
+  }
+}

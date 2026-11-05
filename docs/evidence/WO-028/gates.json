@@ -1,0 +1,107 @@
+{
+  "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "reviewedTargetIdentity": "c65be004af1e4ce321aae5a9f743edb7ca9fceb25231baa7abe6c3d31e49817c",
+  "environment": {
+    "NX_NATIVE_COMMAND_RUNNER": "false",
+    "NX_TASKS_RUNNER_DYNAMIC_OUTPUT": "false"
+  },
+  "source": "Canonical target-gate commands; their PASS result requires executed zero-exit rows and unchanged candidate bytes/HEAD. The full stdout contains no tracked-byte-change diagnostic.",
+  "runs": [
+    {
+      "selection": "plain",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-04T20:13:53.583Z",
+      "finishedAt": "2026-11-04T20:15:01.919Z",
+      "checks": [
+        {
+          "name": "install",
+          "exitCode": 0,
+          "durationMs": 11455
+        },
+        {
+          "name": "lint",
+          "exitCode": 0,
+          "durationMs": 47280
+        },
+        {
+          "name": "typecheck",
+          "exitCode": 0,
+          "durationMs": 737
+        },
+        {
+          "name": "test",
+          "exitCode": 0,
+          "durationMs": 6021
+        },
+        {
+          "name": "format",
+          "exitCode": 0,
+          "durationMs": 1265
+        }
+      ],
+      "trackedBytesUnchanged": true,
+      "logSha256": "3d4df4bfffd69f23e982b82f7636c36f5e8af8b534086079853e9cbdca1c7d4a"
+    },
+    {
+      "selection": "review",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028",
+        "--review"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-04T20:15:06.687Z",
+      "finishedAt": "2026-11-04T20:18:30.647Z",
+      "checks": [
+        {
+          "name": "install",
+          "exitCode": 0,
+          "durationMs": 8384
+        },
+        {
+          "name": "lint",
+          "exitCode": 0,
+          "durationMs": 43693
+        },
+        {
+          "name": "typecheck",
+          "exitCode": 0,
+          "durationMs": 766
+        },
+        {
+          "name": "test",
+          "exitCode": 0,
+          "durationMs": 546
+        },
+        {
+          "name": "format",
+          "exitCode": 0,
+          "durationMs": 1269
+        },
+        {
+          "name": "build",
+          "exitCode": 0,
+          "durationMs": 6469
+        },
+        {
+          "name": "e2e",
+          "exitCode": 0,
+          "durationMs": 117486
+        },
+        {
+          "name": "visual",
+          "exitCode": 0,
+          "durationMs": 22935
+        }
+      ],
+      "trackedBytesUnchanged": true,
+      "logSha256": "52ca34626f8734659b513ea4166475c33f1577489f09af6bc13d4c0a40697bbe"
+    }
+  ]
+}

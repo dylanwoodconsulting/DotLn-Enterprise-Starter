@@ -1,0 +1,619 @@
+{
+  "schema": "dotln-independent-reading-critic-v1",
+  "workOrder": "WO-028",
+  "role": "Independent native Codex reading critic",
+  "verdict": "changes_requested",
+  "summary": "The revised default teaches a real turn round the finite wall, and the comparison preserves the dead-on failure. All 39 supplied images and four supplemental captures have readable labels with understandable correspondence to their physical points. One minor caption correction remains after changing the delivery height to zero.",
+  "judgments": {
+    "representativeLabelReadability": "pass",
+    "representativeLabelToAnchorCorrespondence": "pass",
+    "defaultWallExampleCoherence": "pass",
+    "deadOnComparisonCoherence": "pass",
+    "captionTruthAfterFollowingDeadOnInput": "minor correction required"
+  },
+  "findings": [
+    {
+      "id": "RC-01",
+      "severity": "minor",
+      "status": "open",
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "line": 356,
+      "surface": "model.caption / How to read this drawing",
+      "screenshot": "reading-supplement/wall-head-on-end-2080.png",
+      "claim": "The offset delivery gives the approach a sideways cue: watch the avoidance target turn the courier along the face and the delivery pull resume when the ray clears the end.",
+      "observed": "After changing only Delivery height to 0 and selecting End of run, the current drawing has delivery (18.00, 0.00), courier (4.08, 0.00) and no sideways displacement. Its expanded caption still gives the quoted unqualified default-run instruction. The comparison and limits correctly say this case has no sideways cue.",
+      "readerConsequence": "An engineer following the page instruction to put the delivery straight ahead receives conflicting directions in the current drawing caption.",
+      "requestedCorrection": "Qualify the sideways-cue passage as describing the default example, or derive the passage from the current input. A short default-example qualifier is sufficient; no physics change is needed.",
+      "recheck": "Read the changed caption and inspect the head-on end capture after the production artifact includes the wording correction."
+    }
+  ],
+  "positiveObservations": [
+    {
+      "paths": [
+        "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json#/intuition",
+        "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json#/mechanism",
+        "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json#/pseudocode",
+        "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json#/limits"
+      ],
+      "claim": "The prose, algorithm and limits describe one coherent mechanism: a finite ray supplies an opposing surface normal; hit plus normal offset supplies a temporary centre target; engine Seek changes acceleration over time; no hit restores the delivery target; this local rule has no route choice or collision clamp."
+    },
+    {
+      "screenshots": [
+        "wall-5-360.png",
+        "wall-16-2080.png",
+        "wall-40-3840.png",
+        "wall-80-2080.png"
+      ],
+      "claim": "The default sequence shows the ray hit and normal target, the courier turning, the ray missing beyond the finite end, and the courier beyond the wall near delivery. Courier, Hit and Delivery remain readable. At the final near-coincidence, the Delivery leader returns to its cross while Courier remains next to the body; separating their names does not suggest that the destination moved."
+    },
+    {
+      "screenshots": [
+        "reading-supplement/wall-default-chart-2080.png",
+        "reading-supplement/wall-default-comparison-2080.png",
+        "reading-supplement/wall-head-on-end-2080.png",
+        "reading-supplement/wall-default-limits-360.png"
+      ],
+      "claim": "The chart labels body clearance against a finite wall, with zero as contact. The comparison explicitly changes only delivery height 15 to 0, reports minima 0.12 and 3.80 units, and explains that clearance alone does not prove a route round. The dead-on end is visibly still on the same line at (4.08, 0.00), matching the comparison finding. Narrow limits and comparison remain readable."
+    },
+    {
+      "screenshots": [
+        "motor-control-50-360.png",
+        "motor-control-100-2080.png",
+        "motor-control-100-3840.png"
+      ],
+      "claim": "Cart and Safety line are separate readable names. The Safety line leader ends at the safety cross, while Cart stays with the cart marker on the rail; the preserved gap remains visible."
+    },
+    {
+      "screenshots": [
+        "iterative-targeting-4-360.png",
+        "iterative-targeting-4-2080.png",
+        "iterative-targeting-7-3840.png"
+      ],
+      "claim": "Harbour launcher and Impact remain readable at middle and accepted guesses. The long launcher label has a leader to the launch point, and Impact remains associated with the predicted impact point as it converges on the drum cross."
+    },
+    {
+      "screenshots": [
+        "firing-solution-37-360.png",
+        "firing-solution-37-2080.png",
+        "firing-solution-74-3840.png"
+      ],
+      "claim": "Launcher, Beacon and the airborne Alternative high arc are readable and attached to their expected positions. At final water contact, the model supplies landing marks rather than airborne body labels; the visible Beacon name, arcs and landing note explain the common end location. This is not a claim that every name is present at every time."
+    },
+    {
+      "screenshots": [
+        "third-dimension-12-360.png",
+        "third-dimension-24-360.png",
+        "third-dimension-24-2080.png",
+        "third-dimension-24-3840.png"
+      ],
+      "claim": "Drone, Beacon and Ground projection remain readable. At the final shared drone/beacon point, the two names bracket the same physical anchor rather than shifting either object. The displaced Ground projection label has a leader back to its lower point, preserving the height relationship."
+    },
+    {
+      "screenshots": [
+        "wall-reading-360.png",
+        "wall-reading-2080.png",
+        "wall-reading-3840.png"
+      ],
+      "claim": "The rendered byline includes Codex and gpt-6.1-sol rather than a bare worker number. The prose and pseudocode are readable in the narrow treatment. Provenance authenticity for all twenty bylines is outside this reading task."
+    }
+  ],
+  "coverage": {
+    "readRecords": [
+      "docs/operator/README.md",
+      "docs/operator/implementation-guidance.md",
+      "docs/product/concept-study.md",
+      "docs/verifications/WO-028/VER-001.md (F1/F4/F5 and surrounding rationale)",
+      "docs/evidence/WO-028/repair-1/plan.md"
+    ],
+    "readFrozenCandidates": [
+      "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts"
+    ],
+    "readImplementationOnlyForCaptureOrLabelMeaning": [
+      "libs/features/tools/src/lib/composites/study/study.html",
+      "libs/features/tools/src/lib/composites/study-explanation/study-explanation.html",
+      "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts (landing-label semantics)"
+    ],
+    "suppliedImagesViewed": 39,
+    "supplementalImagesViewed": 4,
+    "viewMethod": "Every listed PNG was inspected using view_image with original detail.",
+    "viewports": [
+      {
+        "width": 360,
+        "height": 900
+      },
+      {
+        "width": 2080,
+        "height": 1460
+      },
+      {
+        "width": 3840,
+        "height": 1620
+      }
+    ],
+    "suppliedFrames": [
+      {
+        "name": "wall-5-360.png",
+        "id": "aifg-a:137",
+        "step": 5,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "wall-16-360.png",
+        "id": "aifg-a:137",
+        "step": 16,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "wall-40-360.png",
+        "id": "aifg-a:137",
+        "step": 40,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "wall-80-360.png",
+        "id": "aifg-a:137",
+        "step": 80,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "wall-reading-360.png",
+        "id": "aifg-a:137",
+        "step": null,
+        "viewport": null
+      },
+      {
+        "name": "motor-control-50-360.png",
+        "id": "aifg-a:192",
+        "step": 50,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "motor-control-100-360.png",
+        "id": "aifg-a:192",
+        "step": 100,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "iterative-targeting-4-360.png",
+        "id": "aifg-a:166",
+        "step": 4,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "iterative-targeting-7-360.png",
+        "id": "aifg-a:166",
+        "step": 7,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "firing-solution-37-360.png",
+        "id": "aifg-a:163",
+        "step": 37,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "firing-solution-74-360.png",
+        "id": "aifg-a:163",
+        "step": 74,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "third-dimension-12-360.png",
+        "id": "aifg-a:196",
+        "step": 12,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "third-dimension-24-360.png",
+        "id": "aifg-a:196",
+        "step": 24,
+        "viewport": {
+          "width": 360,
+          "height": 900
+        }
+      },
+      {
+        "name": "wall-5-2080.png",
+        "id": "aifg-a:137",
+        "step": 5,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "wall-16-2080.png",
+        "id": "aifg-a:137",
+        "step": 16,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "wall-40-2080.png",
+        "id": "aifg-a:137",
+        "step": 40,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "wall-80-2080.png",
+        "id": "aifg-a:137",
+        "step": 80,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "wall-reading-2080.png",
+        "id": "aifg-a:137",
+        "step": null,
+        "viewport": null
+      },
+      {
+        "name": "motor-control-50-2080.png",
+        "id": "aifg-a:192",
+        "step": 50,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "motor-control-100-2080.png",
+        "id": "aifg-a:192",
+        "step": 100,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "iterative-targeting-4-2080.png",
+        "id": "aifg-a:166",
+        "step": 4,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "iterative-targeting-7-2080.png",
+        "id": "aifg-a:166",
+        "step": 7,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "firing-solution-37-2080.png",
+        "id": "aifg-a:163",
+        "step": 37,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "firing-solution-74-2080.png",
+        "id": "aifg-a:163",
+        "step": 74,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "third-dimension-12-2080.png",
+        "id": "aifg-a:196",
+        "step": 12,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "third-dimension-24-2080.png",
+        "id": "aifg-a:196",
+        "step": 24,
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        }
+      },
+      {
+        "name": "wall-5-3840.png",
+        "id": "aifg-a:137",
+        "step": 5,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "wall-16-3840.png",
+        "id": "aifg-a:137",
+        "step": 16,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "wall-40-3840.png",
+        "id": "aifg-a:137",
+        "step": 40,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "wall-80-3840.png",
+        "id": "aifg-a:137",
+        "step": 80,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "wall-reading-3840.png",
+        "id": "aifg-a:137",
+        "step": null,
+        "viewport": null
+      },
+      {
+        "name": "motor-control-50-3840.png",
+        "id": "aifg-a:192",
+        "step": 50,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "motor-control-100-3840.png",
+        "id": "aifg-a:192",
+        "step": 100,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "iterative-targeting-4-3840.png",
+        "id": "aifg-a:166",
+        "step": 4,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "iterative-targeting-7-3840.png",
+        "id": "aifg-a:166",
+        "step": 7,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "firing-solution-37-3840.png",
+        "id": "aifg-a:163",
+        "step": 37,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "firing-solution-74-3840.png",
+        "id": "aifg-a:163",
+        "step": 74,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "third-dimension-12-3840.png",
+        "id": "aifg-a:196",
+        "step": 12,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      },
+      {
+        "name": "third-dimension-24-3840.png",
+        "id": "aifg-a:196",
+        "step": 24,
+        "viewport": {
+          "width": 3840,
+          "height": 1620
+        }
+      }
+    ],
+    "supplementalFrames": [
+      {
+        "name": "wall-default-chart-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Default delivery height 15, ray length 9; clearance chart with its chart guide."
+      },
+      {
+        "name": "wall-default-comparison-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Default comparison changes only goalY from 15 to 0, with findings and note visible."
+      },
+      {
+        "name": "wall-head-on-end-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Change only delivery height to 0, retain ray length 9, and inspect end-of-run Movement with numbers and inputs."
+      },
+      {
+        "name": "wall-default-limits-360.png",
+        "viewport": {
+          "width": 360,
+          "height": 900
+        },
+        "claim": "All default limits and the default-to-head-on comparison at 360 pixels."
+      }
+    ],
+    "newBrowserEvidence": {
+      "method": "Foreground scratch script; isolated Chromium contexts; ephemeral loopback server; browser and server closed in finally.",
+      "errors": [],
+      "overflowFrames": [],
+      "productionArtifact": "Parent declared target dist/apps/dotln/browser frozen for both content critics. I served that directory directly and observed values matching the frozen candidate. I did not rebuild it."
+    },
+    "independence": "No tests, test-runner gate, full-corpus sweep, package installation, repository mutation, operator browser or desktop control, descendant worker, or persistent background task. Supplemental browser and loopback server were closed in finally. The capture script initially selected an ambiguous slider after opening inputs; it exited through cleanup, then the same foreground script was corrected to select Time explicitly and completed with four images.",
+    "limits": [
+      "Representative reading judgment across the five requested studies and 43 images; not an all-frame or all-study proof.",
+      "No independent third-party source or numerical recomputation audit; the separate factual critic owns that duty.",
+      "No full implementation design, criteria or consistency review.",
+      "Visible label-to-shape correspondence was judged; unchanged geometry across revisions was not proved by a source-byte comparison.",
+      "Tokens and cached-token usage are unavailable to this worker."
+    ]
+  },
+  "contentHashes": {
+    "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "369fc65bdb04bceb46c86df52d448657bf77bd51d4f59a5e21e99045af210e2d",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "4bbda3f5f67b60e97e09a0f188184580fdae98f3122f8017908f1f0df59877d5"
+  },
+  "contentHashExpectedFile": "content-candidate.json",
+  "contentHashExpectedMatch": true,
+  "evidenceHashes": {
+    "walkthroughManifest": "9c3beeebae45ac969bceda5f819230e22febaccf9ae23ddb053bf16b84d44980",
+    "walkthroughImages": {
+      "wall-5-360.png": "43b64d486fd8ce39b7850dbebebf2d390708d75a9eea4ebaa69cbadccf2aa9fe",
+      "wall-16-360.png": "8dfd1d35beb167e486fec079c7210d8b9aa445b83df380a602fe3d42ae647783",
+      "wall-40-360.png": "b070b80970ef4ed8a4d4640f0f3557907c1ea7024055f3e9709fd114ad4a8135",
+      "wall-80-360.png": "b08cc6adfb0f9e643321d3a47cfd8e01a97dfb02e874b59732cd4dff46d93229",
+      "wall-reading-360.png": "8d4d84f91d4d56f57518b4e285bda92ee5264f33d078c5560158030b9ee992a9",
+      "motor-control-50-360.png": "63085af89bdc4c301a764bcb3795a6d045bacd7760c133d73a464cc0336837a1",
+      "motor-control-100-360.png": "5551c5449510d5a222b833d3cef60f5112060e99b4b6c386b7b9c6e11137330f",
+      "iterative-targeting-4-360.png": "e2c057acadbdb4c3fa516500f6260293f43ea9868373732a6bb10dd8e70000ea",
+      "iterative-targeting-7-360.png": "89cc140e5abfb86f4b281d083adab1929ef963612cd0c2dc2430196a922845a7",
+      "firing-solution-37-360.png": "49b5f33ad3667fc219bc559b8807daceca5fb95c9b7896b09051b831665e6ebc",
+      "firing-solution-74-360.png": "67095042fa241543b1f1a81ef4b640abbd0d0df11d06bdce267b6cee9532cf6c",
+      "third-dimension-12-360.png": "f4fe880913d22ee505318c5f90b0335aed9260db3dd12189a0670e346942c34a",
+      "third-dimension-24-360.png": "a086f759b132924110282e79c971d24067af68030bb6bace1063d6e8dfa7653c",
+      "wall-5-2080.png": "6b6582fa365c51a05763a9beab3d4f91042450860e9f85909237e3bb7a553a29",
+      "wall-16-2080.png": "4a17b63f172961ccbf945071ed1883d9237e5fdcb00791572945666ef98cae8b",
+      "wall-40-2080.png": "837da8786f74c7dfac48d949134db4f79840d6b84ea6b1e8709d20d260455c4d",
+      "wall-80-2080.png": "ac251972bfd29bf843c3dfe22ce0b0ecb7ff4f5b10086c2d0243b3f7b75a8a74",
+      "wall-reading-2080.png": "d180e35aca85c85c1e539de1a08e4ebffe667eb06da996c9116f866607843221",
+      "motor-control-50-2080.png": "ca74387f7adb85dbcb5428073b5546809bf23796d5595772cdc5d0d097d7dcbb",
+      "motor-control-100-2080.png": "c202262b3d1354cccca318ad87a28a65231ee4b6366a41243cd5db843b29e87d",
+      "iterative-targeting-4-2080.png": "1e70073ee2b633ca56c61bb3d81a61f18b883bd2c9c3d818faad4048f6e00b93",
+      "iterative-targeting-7-2080.png": "5f3da6cc047937c681eaa3f5fc2b0e07d7bf47f3a86b4b2ce80ee2fa99f8d3e7",
+      "firing-solution-37-2080.png": "35a34ba93b9396f795e1a6c35d22330a1ed597f430f47893cf5df699967da14f",
+      "firing-solution-74-2080.png": "12ff1881821812ea5b7e712aa63c23d3419b8f0c22f9fe27259109da570907da",
+      "third-dimension-12-2080.png": "a08089bdbaf06eaec9ac26fd1d2dd3535096a970873e7e5bc72f6f430409b491",
+      "third-dimension-24-2080.png": "8e2931fa66908032024af119c3fe807cfef9308590a25e29e3fe5ec65856c0f1",
+      "wall-5-3840.png": "7656071f5d547b5393b20dc8ef5cf2959f0aaea9dc7eda4c946387f4558b0571",
+      "wall-16-3840.png": "c8c3efbf731063f79c969893a37ac9ce862a4668219a9996a34838396e67b5bd",
+      "wall-40-3840.png": "a4c5b0450e5c3339ec25b3060fd309982931f3d74ecffafe4cafeda7ea43a2e1",
+      "wall-80-3840.png": "02fcc2785985c777f1371f1d0802981d3ded288b188c6ea0e11c90c9545ea457",
+      "wall-reading-3840.png": "d2d967e1675c5055655c899d3f50e8eb37c066f861671c3b2806a85bc4678f33",
+      "motor-control-50-3840.png": "ec0d489944c758f4de99563b0e1cabb932e8cde7d0b22be3a5c329797e41b028",
+      "motor-control-100-3840.png": "a2778df0fe24f1e8c1111e4bd0c3cd3898d358517812d2c07afd614fd6e7ca1b",
+      "iterative-targeting-4-3840.png": "114a1599cdcfac309b8d2e1ef547a602b3431518298fbc5967d77efd32459ecc",
+      "iterative-targeting-7-3840.png": "9d2ce7f7617a984d763a4693b0fb4ecc927a438a10173369d3a2cd78982501d0",
+      "firing-solution-37-3840.png": "9cbde7ed2c30eda58c85219f0bc603f976396c772acdc7a65c2c007191c71a0f",
+      "firing-solution-74-3840.png": "91d19f57f6ff3af3a286be76effa616e54464b92159dbf026500b761c51557f0",
+      "third-dimension-12-3840.png": "3453e9943d3ce0351a21baec87532e34601a23c820f3a638d03e23c68d0d1bc9",
+      "third-dimension-24-3840.png": "f91d6d87f98d9f5c12a3bf2c73ea19bc080bb074d5659f6ad23cfd98dd937ccf"
+    },
+    "supplement": {
+      "capture-reading.mjs": "f401f6f99394ac4790eebb2c9b3ced9b797077a0483e32ee62a32b4c0abba80b",
+      "manifest.json": "238a115b6288c45b0fc3075755ba6edab3f372683d15aebe2acf352cb9114733",
+      "wall-default-chart-2080.aria.txt": "30161a19538ba634d86a8020642542e5b3cbd40d89be6ad38ce00fb32accc75a",
+      "wall-default-chart-2080.html": "1334c75d7d83590495e065da1fce76b9d1357d5291aadad70af6cbd038adc49f",
+      "wall-default-chart-2080.png": "e371af66230bdb1e7fcba32ab06af6d4596c51fb8c13448b5d0c670816437ada",
+      "wall-default-comparison-2080.aria.txt": "af00c5e05cc3cdb9d79c29613a1e1869384cae33da2bc07d7601db80fd5f3ef9",
+      "wall-default-comparison-2080.html": "1180d382aba666dff96904e53382bc4f6c475065c99216a7fac3ae9f83898dad",
+      "wall-default-comparison-2080.png": "6d1840ac6a2336cc5f33c10b9d8879b6aa00d59370fd5e3d08fad46d2925c37d",
+      "wall-default-limits-360.aria.txt": "051643de26571690ef6bb4110eb1bdf76852b9e75a4e063a3a28586044ec42c0",
+      "wall-default-limits-360.html": "3c353e6384c67153890cafcfdfbb06ee6ecdad9d3064aa4b91a16569d364dfc4",
+      "wall-default-limits-360.png": "817de3cc7b7e5ec5f95edca35aa3d286cc3a3197c323dad6ce674e3a930977cc",
+      "wall-head-on-end-2080.aria.txt": "81b053981d758a784df126a00e1fba4327325b6772388573fb5375b8af0af05e",
+      "wall-head-on-end-2080.html": "4e3d95e83dd41cc01b2cb8bc098fcbdc6379d91b02aa7ab228729aef3e5c8a1d",
+      "wall-head-on-end-2080.png": "c20f066f1d10f6451656a75a6348bea20c4451cf6d0a5fec64bb58a46339ba0a"
+    }
+  },
+  "admittedLaterMetadataOnlyTransforms": [
+    "Populate authored.reviewedBy from actual completed review receipts and update authored.state to the state justified by those reviews; the present open RC-01 is not admitted as a pass.",
+    "Formatting-only JSON/TypeScript changes that preserve parsed JSON values and TypeScript semantics.",
+    "Relocate supplemental evidence into the parent-owned evidence directory and adjust report evidence paths without changing captured bytes."
+  ],
+  "nonAdmittedTransforms": "Any learning prose, caption, moment label, parameters, physical geometry, model behavior, pseudocode or test changes need an explicit disposition and appropriately bounded recheck. RC-01 is not waived as metadata.",
+  "usage": {
+    "totalTokens": null,
+    "cachedTokens": null,
+    "otherTokens": null,
+    "source": "unknown; no worker token receipt exposed",
+    "scope": "This independent native Codex worker, including its foreground supplemental capture",
+    "cutoff": "2026-11-04T21:30:14.321901+00:00",
+    "manualUsesReportedByParent": [
+      2,
+      3
+    ],
+    "descendants": 0
+  },
+  "reviewedAt": "2026-11-04T21:30:14.322120+00:00",
+  "receiptProjection": {
+    "originalSha256": "605455377f5f5a2b24e9ea9ea1ac77b946bddf3befe422735914bc43f54fa413",
+    "changes": "Absolute host paths replaced with target, launchpad or session-scratch; all findings and observations retained."
+  }
+}

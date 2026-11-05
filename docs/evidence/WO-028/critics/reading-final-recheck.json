@@ -1,0 +1,131 @@
+{
+  "statement": "Final narrow reading recheck passed. A1 is resolved, the related Corner trap label fits, and the refreshed deferred-content and guide captures show the requested content.",
+  "status": "passed",
+  "authoringDate": "2026-11-04",
+  "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "manifest": {
+    "path": "brief/final-recheck-manifest.json",
+    "sha256": "f3433ea419e64009f3c2043251e0786eae3a94e229092c88beb96836016a58db",
+    "previousManifestSha256": "844088651144af80b8ef6413ef57a112f3a3fda094b398847183c12d8a3113ba",
+    "filesBound": 64,
+    "changedFiles": 3,
+    "allHashesMatched": true
+  },
+  "scope": "Only A1, the related shortened Corner trap annotation, executable-model deferred capture content, and refreshed collision Movement/Chart guides plus viewport mechanism/limit captures. The prior all-twenty chart review and R1–R6 dispositions are retained; no broad content review was repeated.",
+  "dispositions": [
+    {
+      "id": "A1",
+      "slug": "the-firing-solution",
+      "disposition": "resolved",
+      "evidence": [
+        "walkthrough/08-firing-solution-360.png",
+        "walkthrough/08-firing-solution-768.png",
+        "walkthrough/08-firing-solution-1440.png"
+      ],
+      "assessment": "Beacon is fully visible above the contact cross at 360, 768 and 1440 px; the shortened inline label no longer extends beyond the drawing."
+    },
+    {
+      "id": "related-corner-label",
+      "slug": "corner-trap",
+      "disposition": "passed",
+      "evidence": [
+        "walkthrough/06-corner-trap-360.png",
+        "walkthrough/06-corner-trap-768.png",
+        "walkthrough/06-corner-trap-1440.png"
+      ],
+      "assessment": "Goal is fully visible above its target cross at 360, 768 and 1440 px."
+    },
+    {
+      "id": "deferred-executable-content",
+      "slug": "collision-avoidance",
+      "disposition": "passed",
+      "evidence": [
+        "walkthrough/02c-executable-model-360.png",
+        "walkthrough/02c-executable-model-768.png",
+        "walkthrough/02c-executable-model-1440.png"
+      ],
+      "assessment": "All three captures show the open Executable model, its model.ts path, its model.spec.ts path and the populated closest-approach worked calculation. They are no longer header-only captures."
+    },
+    {
+      "id": "view-guides",
+      "slug": "collision-avoidance",
+      "disposition": "passed",
+      "evidence": [
+        "walkthrough/02-collision-360.png",
+        "walkthrough/02-collision-768.png",
+        "walkthrough/02-collision-1440.png",
+        "walkthrough/03-separation-chart-360.png",
+        "walkthrough/03-separation-chart-768.png",
+        "walkthrough/03-separation-chart-1440.png"
+      ],
+      "assessment": "Movement shows the physical legend; Chart shows Current gap and Closest-approach gap with the chart-specific guide. Both view controls remain visible at all three widths."
+    },
+    {
+      "id": "viewport-detail-captures",
+      "slug": "collision-avoidance",
+      "disposition": "passed",
+      "evidence": [
+        "walkthrough/02b-collision-mechanism-360.png",
+        "walkthrough/02b-collision-mechanism-768.png",
+        "walkthrough/02b-collision-mechanism-1440.png",
+        "walkthrough/02d-collision-limits-360.png",
+        "walkthrough/02d-collision-limits-768.png",
+        "walkthrough/02d-collision-limits-1440.png"
+      ],
+      "assessment": "The mechanism and limit captures contain populated, readable viewport content at each width, without the former tall-element capture overlay/artifact."
+    }
+  ],
+  "remainingFindings": [],
+  "priorFindingDisposition": "R1–R6 remain resolved as recorded in brief/recheck-result.json. This report resolves that report's sole remaining adjacent finding A1.",
+  "imagesActuallyViewed": {
+    "count": 21,
+    "uniqueCount": 21,
+    "paths": [
+      "walkthrough/08-firing-solution-360.png",
+      "walkthrough/08-firing-solution-768.png",
+      "walkthrough/08-firing-solution-1440.png",
+      "walkthrough/06-corner-trap-360.png",
+      "walkthrough/06-corner-trap-768.png",
+      "walkthrough/06-corner-trap-1440.png",
+      "walkthrough/02c-executable-model-360.png",
+      "walkthrough/02c-executable-model-768.png",
+      "walkthrough/02c-executable-model-1440.png",
+      "walkthrough/02-collision-360.png",
+      "walkthrough/02-collision-768.png",
+      "walkthrough/02-collision-1440.png",
+      "walkthrough/03-separation-chart-360.png",
+      "walkthrough/03-separation-chart-768.png",
+      "walkthrough/03-separation-chart-1440.png",
+      "walkthrough/02b-collision-mechanism-360.png",
+      "walkthrough/02b-collision-mechanism-768.png",
+      "walkthrough/02b-collision-mechanism-1440.png",
+      "walkthrough/02d-collision-limits-360.png",
+      "walkthrough/02d-collision-limits-768.png",
+      "walkthrough/02d-collision-limits-1440.png"
+    ]
+  },
+  "usage": {
+    "cumulativeTokens": "unknown",
+    "source": "unknown",
+    "scope": "unknown",
+    "cutoff": "unknown",
+    "reason": "No cumulative token counters exposed to this worker."
+  },
+  "restrictions": {
+    "sourceWrites": false,
+    "testsRun": false,
+    "browserLaunches": false,
+    "gatesRun": false,
+    "descendants": 0,
+    "realWorktreesReadOrWritten": false
+  },
+  "metadataTransition": "This pass clears the reading recheck. Root owns the expected metadata-only checked/reviewer transition after both independent critics pass.",
+  "preservedReports": {
+    "brief/result.json": "ec72648ed293ebc712eb4e44959079292f5cb00a8c9b9e172a7dab887589bb35",
+    "brief/initial-result.json": "ec72648ed293ebc712eb4e44959079292f5cb00a8c9b9e172a7dab887589bb35",
+    "brief/coverage.json": "2e7004d111a140e237182a118283752c1afac5d9e2b1727b6fd7d14ee3007a91",
+    "brief/initial-coverage.json": "2e7004d111a140e237182a118283752c1afac5d9e2b1727b6fd7d14ee3007a91",
+    "brief/recheck-result.json": "6238fe473c03a4f89e22d98f825cc53ba64ad4d63e29a50126ef0b68afd10438"
+  },
+  "originalReportSha256": "811392bf7334106d5af8f5ebe448d1971c4d928b18d83cce42e5c0b63e9289f5"
+}

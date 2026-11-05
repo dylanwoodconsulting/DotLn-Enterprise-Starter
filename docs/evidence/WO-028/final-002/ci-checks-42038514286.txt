@@ -1,0 +1,20 @@
+GitHub Actions run 42038514286, job checks, head 5a6348005c2dbca5c2625b398f5453628a7a7a25 (tree 15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0), step npx nx affected -t lint test build e2e --exclude=workspace-tools.
+Selected lines of gh run view --log-failed, colour codes removed.
+
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 2375ms
+ ✓  tools  src/lib/studies/movement/flocking.model.spec.ts (12 tests) 4648ms
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 3858ms
+ ✓  tools  src/lib/studies/movement/priority-steering.model.spec.ts (9 tests) 4561ms
+   ✓ keeps every slider setting and corner finite, labelled, in bounds and true to its prose 4355ms
+ ✓  tools  src/lib/studies/movement/seek.model.spec.ts (10 tests) 5092ms
+   ✓ keeps every offered sideways start readable, labelled and inside the drawing 3687ms
+ ❯  tools  src/lib/studies/movement/equilibrium-fallback.model.spec.ts (9 tests | 1 failed) 5252ms
+   × keeps every slider setting and corner finite, labelled, in bounds and true to its prose 5143ms
+ ✓  tools  src/lib/studies/study-models.spec.ts (7 tests) 5621ms
+ FAIL   tools  src/lib/studies/movement/equilibrium-fallback.model.spec.ts > keeps every slider setting and corner finite, labelled, in bounds and true to its prose
+Error: Test timed out in 5000ms.
+ ❯ src/lib/studies/movement/equilibrium-fallback.model.spec.ts:216:1
+    216| it('keeps every slider setting and corner finite, labelled, in bounds …
+ Test Files  1 failed | 104 passed (105)
+      Tests  1 failed | 961 passed (962)
+   Duration  47.23s (tests 61%, import 17%, setup 14%, worker 3%, environment 3%, transform 1%)

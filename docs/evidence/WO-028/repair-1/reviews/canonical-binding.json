@@ -1,0 +1,7 @@
+{
+  "original": "round-2-design.json",
+  "originalSha256": "0aef6808affb7288ff38171516c8a3eb3449bd84fe9ff1316af55b70137d5956",
+  "recordedSha256": "74fde61b02f4c0a022ffd878bdbf7f6257b45c5a79b4d749a70b72986a38645d",
+  "transform": "rechecks[0].id DI-01 to design.1.DI-01",
+  "cause": "scripts/lib/review-worker.mjs readPrior namespaces prior finding identifiers by review kind and round. The worker-returned judgment is unchanged; original report remains byte-preserved."
+}

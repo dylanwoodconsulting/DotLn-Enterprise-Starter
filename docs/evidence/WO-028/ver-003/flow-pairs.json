@@ -1,0 +1,262 @@
+[
+ {
+  "slug": "command-message",
+  "width": 2080,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 448"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "content-based-router",
+  "width": 2080,
+  "build": "before",
+  "frames": 11,
+  "viewBoxes": [
+   "0 0 600 528"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "publish-subscribe-channel",
+  "width": 2080,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 456"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "recipient-list",
+  "width": 2080,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 432"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "transactional-client",
+  "width": 2080,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 504"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "command-message",
+  "width": 2080,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 448"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "content-based-router",
+  "width": 2080,
+  "build": "after",
+  "frames": 11,
+  "viewBoxes": [
+   "0 0 600 528"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "publish-subscribe-channel",
+  "width": 2080,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 456"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "recipient-list",
+  "width": 2080,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 432"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "transactional-client",
+  "width": 2080,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 504"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "command-message",
+  "width": 360,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 448"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "content-based-router",
+  "width": 360,
+  "build": "before",
+  "frames": 11,
+  "viewBoxes": [
+   "0 0 600 528"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "publish-subscribe-channel",
+  "width": 360,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 456"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "recipient-list",
+  "width": 360,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 432"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "transactional-client",
+  "width": 360,
+  "build": "before",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 504"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "command-message",
+  "width": 360,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 448"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "content-based-router",
+  "width": 360,
+  "build": "after",
+  "frames": 11,
+  "viewBoxes": [
+   "0 0 600 528"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "publish-subscribe-channel",
+  "width": 360,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 456"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "recipient-list",
+  "width": 360,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 432"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ },
+ {
+  "slug": "transactional-client",
+  "width": 360,
+  "build": "after",
+  "frames": 9,
+  "viewBoxes": [
+   "0 0 600 504"
+  ],
+  "clippedFrames": 0,
+  "overlapFrames": 0,
+  "clipped": [],
+  "overlaps": []
+ }
+]

@@ -1,0 +1,200 @@
+{
+  "stage": "Target preflight before first complete gate",
+  "observedAt": "2026-11-04T19:59:15.751Z",
+  "commands": [
+    {
+      "command": "npx nx format:check",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:59:13.173Z",
+      "finishedAt": "2026-11-04T19:59:14.383Z",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npx nx run-many -t lint test build",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:48:38.501Z",
+      "finishedAt": "2026-11-04T19:49:48.193Z",
+      "logSha256": "5b86b297defbf6ffb70d674d22512236c4d532cc9705a9397deac3eb09e716d8"
+    },
+    {
+      "command": "npm run lint:fixtures",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:48.357Z",
+      "finishedAt": "2026-11-04T19:49:52.133Z",
+      "logSha256": "3f0eecf300465b63de956ea3409f0f5a908b679a00067763e7793482a8767e72"
+    },
+    {
+      "command": "npm run lint:components",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:52.294Z",
+      "finishedAt": "2026-11-04T19:49:52.768Z",
+      "logSha256": "88dd603027ec806d756eb6200b89a1607ed7111714dee9a514cf3eee040a1452"
+    },
+    {
+      "command": "npm run lint:hygiene",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:52.932Z",
+      "finishedAt": "2026-11-04T19:49:53.305Z",
+      "logSha256": "dcfb73648d47e0e78ff691f392f73a1c1876bd668baa9176da9361f39184a835"
+    },
+    {
+      "command": "npm run check:fixtures",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:53.466Z",
+      "finishedAt": "2026-11-04T19:49:54.630Z",
+      "logSha256": "693af87d6010b3b09e1fece1406da05df6425b5b3cfc902f7dcde163fff2a392"
+    },
+    {
+      "command": "npm run studies:check",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:54.792Z",
+      "finishedAt": "2026-11-04T19:49:55.134Z",
+      "logSha256": "036423716b2da5bfa0dcaf6aabe9f5a58d860c559b9c58754292a9ef24dfcc84"
+    },
+    {
+      "command": "npm run test:tooling",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:55.299Z",
+      "finishedAt": "2026-11-04T19:49:57.172Z",
+      "logSha256": "c055e057844e73fef65a3b09fd5e0d3660a8072ed16cd3e6a6643ad6b3fc94fd"
+    },
+    {
+      "command": "npm run i18n:check",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:49:57.334Z",
+      "finishedAt": "2026-11-04T19:49:58.348Z",
+      "logSha256": "903571a6af7d641db494574fc7853e579df374f3bfb0af9d593a2294100222da"
+    },
+    {
+      "command": "npm run check:bundle",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:59:15.153Z",
+      "finishedAt": "2026-11-04T19:59:15.751Z",
+      "logSha256": "210e828617e98a0a61e0ccb350ab51ffc9dfd8021d704fa620b4f5d2ed806f95"
+    },
+    {
+      "command": "npx nx e2e dotln-e2e",
+      "exitCode": 0,
+      "startedAt": "2026-11-04T19:53:22.878Z",
+      "finishedAt": "2026-11-04T19:55:13.254Z",
+      "logSha256": "ea20423bd16a0883ed5445ebb2d141980c0f985a2c907cb50bcb8882fa73eca5"
+    }
+  ],
+  "notes": [
+    "The original failed run-many and browser attempts remain in README; this table selects each exact command\u2019s latest passing preflight run.",
+    "The launchpad document preflight and complete gates are recorded separately when they finish.",
+    "Nx uses its content-addressed local cache where reported; the 147-case browser rerun executed."
+  ],
+  "designCorrectionChecks": [
+    {
+      "command": "npx",
+      "args": [
+        "prettier",
+        "--write",
+        "libs/features/tools/src/lib/mappers/study-mapper.ts",
+        "libs/features/tools/src/lib/mappers/study-mapper.spec.ts",
+        "libs/features/tools/src/lib/composites/study/study.html",
+        "libs/features/tools/src/lib/composites/study/study.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+        "libs/features/tools/src/lib/studies/movement/flee.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+        "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+        "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+        "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+        "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts",
+        "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+        "libs/features/tools/src/lib/studies/movement/variable-matching.model.spec.ts"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:08:47.104Z",
+      "endedAt": "2026-11-04T20:08:47.785Z",
+      "logSha256": "db175eb89d45fa8f50dc04e8f8805793ad00fd1d94cb6b393538a64bebf1f0c7"
+    },
+    {
+      "command": "npx",
+      "args": [
+        "nx",
+        "lint",
+        "tools"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:08:47.968Z",
+      "endedAt": "2026-11-04T20:08:53.598Z",
+      "logSha256": "5dacf73fef91509571a52f19da1419bc2cf9793ec47c582d0465928b4fd2d8d7"
+    },
+    {
+      "command": "npm",
+      "args": [
+        "run",
+        "typecheck:foundations"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:09:22.849Z",
+      "endedAt": "2026-11-04T20:09:59.797Z",
+      "logSha256": "33c4b852c19cb57a52fc856ad1efb72ee9c2938e506152b340fa5d6ed5f9ddc1"
+    },
+    {
+      "command": "npx",
+      "args": [
+        "nx",
+        "test",
+        "tools",
+        "--outputStyle=static"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:09:59.976Z",
+      "endedAt": "2026-11-04T20:10:20.505Z",
+      "logSha256": "ffbccc5bf854ec921cca96435375f30275111d46833bdffb996262750e524dc8"
+    },
+    {
+      "command": "npx",
+      "args": [
+        "playwright",
+        "test",
+        "--config=apps/dotln-e2e/playwright.config.mts",
+        "--grep=the next movement studies"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:10:20.711Z",
+      "endedAt": "2026-11-04T20:10:36.872Z",
+      "logSha256": "1a92ecd3b175a1fa50ad450c023ce71fe290145062cd15b5a07fbfa9708bcd39"
+    },
+    {
+      "command": "npx",
+      "args": [
+        "nx",
+        "build",
+        "dotln",
+        "--configuration=production",
+        "--stats-json",
+        "--outputStyle=static"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:10:37.046Z",
+      "endedAt": "2026-11-04T20:10:43.533Z",
+      "logSha256": "3bf0c0dc411f88b9f8a8c61ed0d741e4ae579b43c78b492ca070e751d7167f14"
+    },
+    {
+      "command": "npm",
+      "args": [
+        "run",
+        "check:bundle"
+      ],
+      "code": 0,
+      "startedAt": "2026-11-04T20:10:43.724Z",
+      "endedAt": "2026-11-04T20:10:44.407Z",
+      "logSha256": "54caa2525101d4a552da50b8455fd68765e4b2dc375ddc476b1a11455b324974"
+    }
+  ]
+}

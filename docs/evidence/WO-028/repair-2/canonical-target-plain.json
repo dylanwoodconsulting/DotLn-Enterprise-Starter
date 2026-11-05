@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "source": "Canonical targetGateEvidence readback at the current target identity",
+  "reviewedTargetTree": "15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0",
+  "candidateManifest": "reviews/round-3-candidate.json",
+  "repositoryId": "dotln-angular",
+  "commit": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "treeHash": "15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0",
+  "selection": "plain",
+  "names": [
+    "install",
+    "lint",
+    "typecheck",
+    "test",
+    "format"
+  ],
+  "durationMs": 80228,
+  "evidenceRef": "target-gate:aacde558-650d-4196-8322-814f0ae3eba9",
+  "recordedAt": "2026-11-05T09:12:33.690Z"
+}

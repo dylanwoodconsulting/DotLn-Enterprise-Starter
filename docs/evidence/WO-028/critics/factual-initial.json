@@ -1,0 +1,2564 @@
+{
+  "statement": "All twenty candidate studies reviewed; no concrete factual findings. The exact prescribed twenty serial bounded model probes passed, covering 154 Vitest tests; publisher HTML denial is disclosed separately from successful DOI metadata retrieval.",
+  "authoredOn": "2026-11-04",
+  "scope": {
+    "gitMetadataAtRoot": false,
+    "gitMetadataInAncestors": false,
+    "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+    "baselineVerification": "Supplied manifest baseline; this non-Git copy has no independently inspectable Git history.",
+    "manifestSha256": "46719e86a01046ab249def5035029e27214bb79819796106b74cf7d6b10c3393",
+    "sourceFilesChecked": 60,
+    "sourceMismatches": [],
+    "candidateSlugs": [
+      "steering-behaviors",
+      "steering-output",
+      "flee",
+      "variable-matching",
+      "collision-avoidance",
+      "obstacle-and-wall-avoidance",
+      "corner-trap",
+      "blending-versus-arbitration",
+      "projectile-trajectory",
+      "the-firing-solution",
+      "iterative-targeting",
+      "jump-points",
+      "motor-control",
+      "actuator",
+      "movement-in-the-third-dimension",
+      "two-and-a-half-dimensions",
+      "kinematic-arrive",
+      "satisfaction-radius",
+      "kinematic-wander",
+      "coordinated-movement"
+    ],
+    "studiesReviewed": 20,
+    "uniqueCitedUrlsOpened": 33,
+    "referenceOccurrences": 56,
+    "implementationOccurrences": 22,
+    "engineSourcesRead": [
+      "libs/shared/scene-engine/src/lib/steering.ts",
+      "libs/shared/scene-engine/src/lib/blending.ts",
+      "libs/shared/scene-engine/src/lib/vectors.ts",
+      "libs/shared/scene-engine/src/lib/types.ts",
+      "libs/shared/scene-engine/src/lib/formation.ts",
+      "libs/shared/scene-engine/src/lib/slot-assignment.ts",
+      "libs/shared/scene-engine/src/lib/simulation.ts",
+      "libs/shared/scene-engine/src/public_api.ts",
+      "docs/dev-reference/architecture/scene.md"
+    ],
+    "forbiddenActivities": "No descendants, installs, gates, npm test, target-gate, test:docs, source edits or real-worktree reads beyond the expressly permitted canonical bounded test invocation.",
+    "styleAndDrawingJudgment": "Outside this factual review; owned by the separate reading critic.",
+    "reviewedUrlOccurrences": 78
+  },
+  "modeDefinitions": {
+    "engine": "Domain behavior and time stepping both run through the full public scene-engine simulation. None of these twenty claims that mode.",
+    "mixed": "A public engine steering/combination/formation mechanism is combined with study-local policy or integration.",
+    "local": "The teaching mechanism is local; vector/trigonometry helpers alone do not make it engine behavior."
+  },
+  "urls": [
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "status": "Publisher HTML HTTP 403 after DOI redirect; DOI content-negotiation metadata HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Book identity, Ian Millington authorship and edition 3 confirmed by DOI content-negotiation metadata. Chapter/section locations are checked against the supplied catalog rows only; metadata does not expose chapter text. Publisher HTML is unavailable.",
+      "evidence": "brief/doi-metadata.json; brief/doi-metadata-outcome.json; brief/rows.json",
+      "slugs": [
+        "steering-behaviors",
+        "steering-output",
+        "flee",
+        "variable-matching",
+        "collision-avoidance",
+        "obstacle-and-wall-avoidance",
+        "corner-trap",
+        "blending-versus-arbitration",
+        "projectile-trajectory",
+        "the-firing-solution",
+        "iterative-targeting",
+        "jump-points",
+        "motor-control",
+        "actuator",
+        "movement-in-the-third-dimension",
+        "two-and-a-half-dimensions",
+        "kinematic-arrive",
+        "satisfaction-radius",
+        "kinematic-wander",
+        "coordinated-movement"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://www.taylorfrancis.com/books/9781351053297",
+      "responseBody": "brief/url-01.body",
+      "responseHeaders": "brief/url-01.headers"
+    },
+    {
+      "url": "https://www.red3d.com/cwr/steer/gdc99/",
+      "status": "curl HTTP 403; web opened readable article content",
+      "how": "web",
+      "supportsClaim": true,
+      "reviewedSupport": "The readable paper separates steering and locomotion, describes limited force and momentum, and explains why velocity-aligned forward direction leaves roll undecided.",
+      "evidence": "web open of the exact URL, lines 10-11, 54-58, 79-102; brief/reynolds-web-check.json",
+      "slugs": [
+        "steering-behaviors",
+        "motor-control",
+        "movement-in-the-third-dimension"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://www.red3d.com/cwr/steer/gdc99/",
+      "responseBody": "brief/url-02.body",
+      "responseHeaders": "brief/url-02.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringBehavior.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Owner and optional limiter are stored; calculateSteering delegates when enabled and clears the supplied output when disabled.",
+      "evidence": "brief/url-03.text:69-79",
+      "slugs": [
+        "steering-behaviors"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringBehavior.java",
+      "responseBody": "brief/url-03.body",
+      "responseHeaders": "brief/url-03.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Seek.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Seek uses target-minus-owner position, normalises and scales to maximum linear acceleration, and clears angular acceleration.",
+      "evidence": "brief/url-04.text:52-61",
+      "slugs": [
+        "steering-behaviors"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Seek.java",
+      "responseBody": "brief/url-04.body",
+      "responseHeaders": "brief/url-04.headers"
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringAcceleration.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Linear and angular fields and setZero/add/scl/mulAdd affect both channels; the class contains no body integration.",
+      "evidence": "brief/url-05.text:27-97",
+      "slugs": [
+        "steering-output"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringAcceleration.java",
+      "responseBody": "brief/url-05.body",
+      "responseHeaders": "brief/url-05.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Flee.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Flee extends Seek, reverses the position subtraction, scales the normalised direction to the allowed acceleration and clears angular output; this method has no fade.",
+      "evidence": "brief/url-06.text:31-56",
+      "slugs": [
+        "flee"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Flee.java",
+      "responseBody": "brief/url-06.body",
+      "responseHeaders": "brief/url-06.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "MatchVelocity uses target-minus-owner linear velocity divided by timeToTarget, limits linear acceleration and clears angular output without reading position.",
+      "evidence": "brief/url-07.text:64-73",
+      "slugs": [
+        "variable-matching",
+        "actuator"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "responseBody": "brief/url-07.body",
+      "responseHeaders": "brief/url-07.headers"
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Relative-velocity time, scalar distance-minus-relative-speed filtering, earliest candidate retention, current-offset fallback and normalised maximum-acceleration output match the explanation.",
+      "evidence": "brief/url-08.text:66-134",
+      "slugs": [
+        "collision-avoidance"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+      "responseBody": "brief/url-08.body",
+      "responseHeaders": "brief/url-08.headers"
+    },
+    {
+      "url": "https://github.com/meshula/OpenSteer/blob/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Immediate close neighbours precede nearest-approach prediction. Future threats are filtered by twice owner radius; heading cases select a lateral sign, with the stated crossing-speed condition.",
+      "evidence": "brief/url-09.text:551-743",
+      "slugs": [
+        "collision-avoidance"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://github.com/meshula/OpenSteer/blob/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h",
+      "responseBody": "brief/url-09.body",
+      "responseHeaders": "brief/url-09.headers"
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Configured rays are refreshed, nearest hit is selected, hit normal offsets the target by body radius plus margin, and no hit clears output. The class comments discuss corner traps.",
+      "evidence": "brief/url-10.text:32-68,125-162",
+      "slugs": [
+        "obstacle-and-wall-avoidance"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "responseBody": "brief/url-10.body",
+      "responseHeaders": "brief/url-10.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The raw file matches the raycast implementation and documents adaptive fan angles and temporary winner rays as recovery proposals rather than code implemented in the class.",
+      "evidence": "brief/url-11.text:48-68,125-162",
+      "slugs": [
+        "corner-trap"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "responseBody": "brief/url-11.body",
+      "responseHeaders": "brief/url-11.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/BlendedSteering.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Weighted child output accumulation and linear limiting are present; documentation explicitly says weights need not total one.",
+      "evidence": "brief/url-12.text:27-29,105-129",
+      "slugs": [
+        "blending-versus-arbitration"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/BlendedSteering.java",
+      "responseBody": "brief/url-12.body",
+      "responseHeaders": "brief/url-12.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/PrioritySteering.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Priority uses a squared-magnitude epsilon test, supports blended groups, and returns the last small output if no child clears the threshold.",
+      "evidence": "brief/url-13.text:33-39,98-120",
+      "slugs": [
+        "blending-versus-arbitration"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/PrioritySteering.java",
+      "responseBody": "brief/url-13.body",
+      "responseHeaders": "brief/url-13.headers"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The no-air-resistance treatment gives constant horizontal velocity and the constant-gravity height quadratic; time is shared between the axes.",
+      "evidence": "brief/url-14.text:31-80,234-245",
+      "slugs": [
+        "projectile-trajectory",
+        "jump-points"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+      "responseBody": "brief/url-14.body",
+      "responseHeaders": "brief/url-14.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/forrestthewoods/lib_fts/350529579db315c3d0c579f70d871ef13400d418/projects/unity/ballistic_trajectory/Assets/Scripts/BallisticMotion.cs",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "FixedUpdate applies the current/previous-position Verlet-style update, impulse times dt and gravity times dt squared, points along movement, clears impulse and destroys below a height cutoff.",
+      "evidence": "brief/url-15.text:30-45",
+      "slugs": [
+        "projectile-trajectory"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/forrestthewoods/lib_fts/350529579db315c3d0c579f70d871ef13400d418/projects/unity/ballistic_trajectory/Assets/Scripts/BallisticMotion.cs",
+      "responseBody": "brief/url-15.body",
+      "responseHeaders": "brief/url-15.headers"
+    },
+    {
+      "url": "https://www.forrestthewoods.com/blog/solving_ballistic_trajectories/",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The stationary-target fixed-speed derivation solves horizontal time, substitutes it into height and obtains low and high firing angles.",
+      "evidence": "brief/url-16.text:87-116",
+      "slugs": [
+        "the-firing-solution"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://www.forrestthewoods.com/blog/solving_ballistic_trajectories/",
+      "responseBody": "brief/url-16.body",
+      "responseHeaders": "brief/url-16.headers"
+    },
+    {
+      "url": "https://github.com/forrestthewoods/lib_fts/blob/350529579db315c3d0c579f70d871ef13400d418/code/fts_ballistic_trajectory.cs",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The stationary solver checks the discriminant, forms two angles, deduplicates equal angles and constructs fixed-speed velocity vectors; a moving-target overload follows.",
+      "evidence": "brief/url-17.text:285-350",
+      "slugs": [
+        "the-firing-solution"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://github.com/forrestthewoods/lib_fts/blob/350529579db315c3d0c579f70d871ef13400d418/code/fts_ballistic_trajectory.cs",
+      "responseBody": "brief/url-17.body",
+      "responseHeaders": "brief/url-17.headers"
+    },
+    {
+      "url": "https://www.gnu.org/software/gsl/doc/html/roots.html",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Bisection uses midpoint evaluation and sign-based interval retention; the manual requires a zero crossing for bracketing and separates accuracy, iteration-budget and error stops.",
+      "evidence": "brief/url-18.text:209-218,475-487,543-557",
+      "slugs": [
+        "iterative-targeting"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://www.gnu.org/software/gsl/doc/html/roots.html",
+      "responseBody": "brief/url-18.body",
+      "responseHeaders": "brief/url-18.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Jump.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Jump derives flight time and planar velocity, checks speed feasibility, requires both takeoff position and velocity tolerances, invokes a takeoff callback and otherwise delegates to MatchVelocity.",
+      "evidence": "brief/url-19.text:84-174",
+      "slugs": [
+        "jump-points"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Jump.java",
+      "responseBody": "brief/url-19.body",
+      "responseHeaders": "brief/url-19.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/tests/src/com/badlogic/gdx/ai/tests/steer/box2d/Box2dSteeringEntity.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The entity computes steering, leaves a documented motor-filter insertion point, applies force and torque or velocity-facing, and records the timing limitation of speed caps.",
+      "evidence": "brief/url-20.text:148-215",
+      "slugs": [
+        "motor-control"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/tests/src/com/badlogic/gdx/ai/tests/steer/box2d/Box2dSteeringEntity.java",
+      "responseBody": "brief/url-20.body",
+      "responseHeaders": "brief/url-20.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/Vehicle.js",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Vehicle obtains steering force, divides by mass, integrates and caps velocity, moves position, and optionally updates orientation from raw or smoothed velocity without smoothing position.",
+      "evidence": "brief/url-21.text:66-123",
+      "slugs": [
+        "movement-in-the-third-dimension"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/Vehicle.js",
+      "responseBody": "brief/url-21.body",
+      "responseHeaders": "brief/url-21.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/behaviors/SeekBehavior.js",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "SeekBehavior computes a maximum-speed Vector3 desired velocity and returns its difference from current velocity.",
+      "evidence": "brief/url-22.text:39-55",
+      "slugs": [
+        "movement-in-the-third-dimension"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/behaviors/SeekBehavior.js",
+      "responseBody": "brief/url-22.body",
+      "responseHeaders": "brief/url-22.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/52e30044658448149b04e8f69b475eebbfbd8f6e/3d/platformer/player/player.gd",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The controller separates horizontal and vertical velocity, processes gravity and jumping, recombines before move_and_slide, and fixes Vector3.UP in the grounded mesh basis.",
+      "evidence": "brief/url-23.text:52-57,97-118,142-147",
+      "slugs": [
+        "two-and-a-half-dimensions"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/52e30044658448149b04e8f69b475eebbfbd8f6e/3d/platformer/player/player.gd",
+      "responseBody": "brief/url-23.body",
+      "responseHeaders": "brief/url-23.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourCrowd.cpp",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Both smoothed and straight path-steering calculations clear the vertical direction component.",
+      "evidence": "brief/url-24.text:104-144",
+      "slugs": [
+        "two-and-a-half-dimensions"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourCrowd.cpp",
+      "responseBody": "brief/url-24.body",
+      "responseHeaders": "brief/url-24.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourPathCorridor.cpp",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "movePosition moves along the navigation surface, merges the corridor and retrieves polygon height for the resulting position; rendered yaw is not prescribed here.",
+      "evidence": "brief/url-25.text:439-460",
+      "slugs": [
+        "two-and-a-half-dimensions"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourPathCorridor.cpp",
+      "responseBody": "brief/url-25.body",
+      "responseHeaders": "brief/url-25.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/src/kinematic.cpp",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "KinematicArrive uses a strict squared-radius test, otherwise divides offset by timeToTarget and clips speed; it returns output without advancing position.",
+      "evidence": "brief/url-26.text:45-68",
+      "slugs": [
+        "kinematic-arrive"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/src/kinematic.cpp",
+      "responseBody": "brief/url-26.body",
+      "responseHeaders": "brief/url-26.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/include/aicore/kinematic.h",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The header explicitly distinguishes immediately adopted kinematic velocity from acceleration-based dynamic motion and declares arrival time and radius.",
+      "evidence": "brief/url-27.text:16-23,101-120",
+      "slugs": [
+        "kinematic-arrive"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/include/aicore/kinematic.h",
+      "responseBody": "brief/url-27.body",
+      "responseHeaders": "brief/url-27.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/README.md",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The maintainer labels the repository historical and states that it did not keep up with algorithm corrections or the third edition.",
+      "evidence": "brief/url-28.text:1-7",
+      "slugs": [
+        "kinematic-arrive"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/README.md",
+      "responseBody": "brief/url-28.body",
+      "responseHeaders": "brief/url-28.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicArrive.cs",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Translation runs at equality or beyond targetRadius, normalises direction and uses maxSpeed as per-iteration displacement without elapsed-time scaling or taper.",
+      "evidence": "brief/url-29.text:32-45",
+      "slugs": [
+        "satisfaction-radius"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicArrive.cs",
+      "responseBody": "brief/url-29.body",
+      "responseHeaders": "brief/url-29.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Arrive.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Arrive returns zero output at or below arrivalTolerance; outside it, desired velocity is tapered and acceleration is bounded, without setting owner velocity.",
+      "evidence": "brief/url-30.text:78-104",
+      "slugs": [
+        "satisfaction-radius"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Arrive.java",
+      "responseBody": "brief/url-30.body",
+      "responseHeaders": "brief/url-30.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicWander.cs",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Two uniform draws are subtracted; separate coroutines assign absolute Euler rotation and translate along forward with no elapsed-time multiplier.",
+      "evidence": "brief/url-31.text:21-41",
+      "slugs": [
+        "kinematic-wander"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicWander.cs",
+      "responseBody": "brief/url-31.body",
+      "responseHeaders": "brief/url-31.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/Formation.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "Formation delegates assignment, updates slot count, obtains relative slots, transforms them by anchor, applies drift, writes member target locations and calls an optional moderator.",
+      "evidence": "brief/url-32.text:147-155,235-285",
+      "slugs": [
+        "coordinated-movement"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/Formation.java",
+      "responseBody": "brief/url-32.body",
+      "responseHeaders": "brief/url-32.headers"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/FormationMotionModerator.java",
+      "status": "HTTP 200",
+      "how": "curl",
+      "supportsClaim": true,
+      "reviewedSupport": "The moderator exposes a per-frame anchor update hook and computes drift from averaged occupied slot positions and orientations.",
+      "evidence": "brief/url-33.text:34-67",
+      "slugs": [
+        "coordinated-movement"
+      ],
+      "curlExit": 0,
+      "effectiveUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/FormationMotionModerator.java",
+      "responseBody": "brief/url-33.body",
+      "responseHeaders": "brief/url-33.headers"
+    }
+  ],
+  "findings": [],
+  "coverage": [
+    {
+      "slug": "steering-behaviors",
+      "id": "aifg-a:105",
+      "record": "libs/shared/catalog/src/studies/aifg/steering-behaviors.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Seek and Arrive read the same body snapshot; the chosen request alone is applied. The local velocity-first update clips speed and preserves momentum. The independent comparison exposes Seek overshoot and Arrive braking.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts:60-125",
+        "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts:138-145",
+        "libs/shared/scene-engine/src/lib/steering.ts:36-62",
+        "libs/shared/scene-engine/src/lib/vectors.ts:18-20"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.red3d.com/cwr/steer/gdc99/",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringBehavior.java",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Seek.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "steering-behaviors",
+        "exit": 0,
+        "durationSeconds": 5.489,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 41,
+            "name": "binds its draft record, mechanism blocks and nearby ids to the catalog"
+          },
+          {
+            "line": 56,
+            "name": "starts with the same acceleration contract and works the first update by hand"
+          },
+          {
+            "line": 65,
+            "name": "gives opposite requests at the same braking state without adding them"
+          },
+          {
+            "line": 78,
+            "name": "preserves momentum at zero output and brakes a moving courier near the depot"
+          },
+          {
+            "line": 87,
+            "name": "keeps the straight approach bounded and shows why Seek is the wrong delivery goal"
+          },
+          {
+            "line": 116,
+            "name": "opens on the verified disagreement and carries every prose placeholder on every frame"
+          },
+          {
+            "line": 147,
+            "name": "keeps bodies, requests and slowing zones in view for either selectable member"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5397,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5397,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1071958680,
+          "peakRssBytes": 1165967360,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:25:34.047Z",
+          "finishedAt": "2026-11-04T19:25:39.444Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "steering-output",
+      "id": "aifg-a:94",
+      "record": "libs/shared/catalog/src/studies/aifg/steering-output.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.1 The Basics of Movement Algorithms",
+        "subsection": "3.1.3 Kinematics"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local record carries separate linear and angular acceleration, clears both after the pulse, changes both rates before position/heading, and keeps their motion after zero output. Engine use is vector arithmetic only; angular integration is local.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/steering-output.model.ts:59-109",
+        "libs/features/tools/src/lib/studies/movement/steering-output.model.ts:128-176",
+        "libs/shared/scene-engine/src/lib/types.ts:1-21",
+        "libs/shared/scene-engine/src/public_api.ts:32-82"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringAcceleration.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "steering-output",
+        "exit": 0,
+        "durationSeconds": 5.408,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 45,
+            "name": "binds the draft, example, executable and mechanism blocks to its catalog row"
+          },
+          {
+            "line": 60,
+            "name": "applies one linear and angular output with arithmetic a reader can check"
+          },
+          {
+            "line": 77,
+            "name": "clears both output channels at the pulse boundary and keeps existing motion"
+          },
+          {
+            "line": 108,
+            "name": "shows that angular output alone cannot redirect a world-coordinate velocity"
+          },
+          {
+            "line": 129,
+            "name": "makes the integration and pulse-sampling limits explicit"
+          },
+          {
+            "line": 144,
+            "name": "opens after the pulse and connects every prose placeholder to every frame"
+          },
+          {
+            "line": 179,
+            "name": "keeps both tugs and the velocity arrows inside the drawing for the offered inputs"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5313,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5313,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1079004400,
+          "peakRssBytes": 1172602880,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:25:39.539Z",
+          "finishedAt": "2026-11-04T19:25:44.853Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "flee",
+      "id": "aifg-a:111",
+      "record": "libs/shared/catalog/src/studies/aifg/flee.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors",
+        "subsection": "3.3.3 Seek and Flee"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "The model calls engine flee: radius 20, distance fade, zero at coincidence and outside the radius. The local motor clips speed and coasts after zero push; outward acceleration can brake inward motion. The comparison changes only the start to coincidence.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/flee.model.ts:77-107",
+        "libs/features/tools/src/lib/studies/movement/flee.model.ts:211-248",
+        "libs/shared/scene-engine/src/lib/steering.ts:34,65-71"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Flee.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "flee",
+        "exit": 0,
+        "durationSeconds": 5.398,
+        "vitestTestsPassed": 9,
+        "cases": [
+          {
+            "line": 31,
+            "name": "uses the Flee row and exactly the parameters used by the worked example"
+          },
+          {
+            "line": 39,
+            "name": "works the first outward push and motor update by hand"
+          },
+          {
+            "line": 58,
+            "name": "uses the engine fade rather than requesting maximum acceleration at every distance"
+          },
+          {
+            "line": 65,
+            "name": "can still move inward while an outward acceleration brakes an existing approach"
+          },
+          {
+            "line": 72,
+            "name": "increases separation from a resting start and coasts after the push fades out"
+          },
+          {
+            "line": 100,
+            "name": "shows the exact-coincidence failure without inventing an escape direction"
+          },
+          {
+            "line": 115,
+            "name": "opens where zero push and continued motion can be inspected together"
+          },
+          {
+            "line": 134,
+            "name": "contains the radius, all positions and both vector endpoints when the inputs change"
+          },
+          {
+            "line": 155,
+            "name": "keeps changed values in the prose and identifies coincident comparison runs"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5304,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5304,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1096913672,
+          "peakRssBytes": 1189412864,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:25:44.947Z",
+          "finishedAt": "2026-11-04T19:25:50.251Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "variable-matching",
+      "id": "aifg-a:108",
+      "record": "libs/shared/catalog/src/studies/aifg/variable-matching.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors",
+        "subsection": "3.3.2 Variable Matching"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Velocity error creates a matching or inverse correction target; public matchVelocity limits acceleration. Local integration clips speed and advances both boats. Equal velocities leave position error; inverse correction grows mismatch; the error multiplier is qualified when clipping occurs.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts:82-151",
+        "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts:234-280",
+        "libs/shared/scene-engine/src/lib/steering.ts:40-46"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "variable-matching",
+        "exit": 0,
+        "durationSeconds": 5.347,
+        "vitestTestsPassed": 8,
+        "cases": [
+          {
+            "line": 37,
+            "name": "uses the Variable matching row and the same parameters as its record"
+          },
+          {
+            "line": 45,
+            "name": "works through a capped correction followed by an unclipped correction"
+          },
+          {
+            "line": 69,
+            "name": "reduces velocity error while retaining the distance lost before the pace agrees"
+          },
+          {
+            "line": 96,
+            "name": "does not correct position when velocity is already matched"
+          },
+          {
+            "line": 112,
+            "name": "makes the inverse grow velocity error until the speed cap prevents further growth"
+          },
+          {
+            "line": 145,
+            "name": "cannot match a target pace beyond the motor speed limit"
+          },
+          {
+            "line": 154,
+            "name": "shows the same selected variable in its arrows, chart, text and worked step"
+          },
+          {
+            "line": 175,
+            "name": "keeps both boats and arrow endpoints in bounds at the input extremes"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5252,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5252,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1086181192,
+          "peakRssBytes": 1179369472,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:25:50.346Z",
+          "finishedAt": "2026-11-04T19:25:55.598Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "collision-avoidance",
+      "id": "aifg-a:134",
+      "record": "libs/shared/catalog/src/studies/aifg/collision-avoidance.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors",
+        "subsection": "3.3.14 Collision Avoidance"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Local dot-product diagnostics project closest approach. Public avoid supplies acceleration using current overlap or earliest accepted future threat strictly inside 1.5 s; a zero predicted offset has no fallback. The courier integrates locally while the porter coasts; between-sample minimum separation is measured.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts:102-188",
+        "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts:194-235",
+        "libs/shared/scene-engine/src/lib/steering.ts:32,110-134"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+        "https://github.com/meshula/OpenSteer/blob/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "collision-avoidance",
+        "exit": 0,
+        "durationSeconds": 5.371,
+        "vitestTestsPassed": 8,
+        "cases": [
+          {
+            "line": 38,
+            "name": "attaches the study to Collision avoidance with these exact teaching parameters"
+          },
+          {
+            "line": 48,
+            "name": "works the initial relative-motion prediction and actual engine acceleration by hand"
+          },
+          {
+            "line": 69,
+            "name": "rejects past approaches, equal velocities, safe gaps and the exact engine horizon"
+          },
+          {
+            "line": 92,
+            "name": "uses the current offset for existing overlap even when the velocities match"
+          },
+          {
+            "line": 103,
+            "name": "passes clear of the porter, including travel between samples, then coasts"
+          },
+          {
+            "line": 125,
+            "name": "exposes the zero-direction head-on failure by changing only the porter offset"
+          },
+          {
+            "line": 145,
+            "name": "supplies every text-equivalent value and keeps its projections inside the drawing"
+          },
+          {
+            "line": 178,
+            "name": "is deterministic and describes the equal-offset comparison honestly"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5276,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5276,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1077972832,
+          "peakRssBytes": 1171128320,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:25:55.693Z",
+          "finishedAt": "2026-11-04T19:26:00.969Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "id": "aifg-a:137",
+      "record": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors",
+        "subsection": "3.3.15 Obstacle and Wall Avoidance"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Local finite-segment cross products return a hit and opposing unit normal, rejecting parallel/collinear and out-of-segment hits. A normal-offset target feeds public Seek. The local velocity-first motor clips speed without wall response; clearance and the short-ray comparison expose overlap.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts:96-185",
+        "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts:344-375",
+        "libs/shared/scene-engine/src/lib/steering.ts:36-38"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "obstacle-and-wall-avoidance",
+        "exit": 0,
+        "durationSeconds": 5.382,
+        "vitestTestsPassed": 9,
+        "cases": [
+          {
+            "line": 40,
+            "name": "attaches this executable study and its parameters to Obstacle and wall avoidance"
+          },
+          {
+            "line": 48,
+            "name": "casts a genuine finite ray and derives a unit surface normal from the segment"
+          },
+          {
+            "line": 66,
+            "name": "rejects hits beyond either segment, behind the ray, and parallel or collinear travel"
+          },
+          {
+            "line": 77,
+            "name": "constructs the normal-offset target and actually uses it to reverse the engine pull"
+          },
+          {
+            "line": 97,
+            "name": "retains the last travel direction for its ray while momentarily stopped"
+          },
+          {
+            "line": 107,
+            "name": "keeps the normal run clear but does not invent a route round the wall"
+          },
+          {
+            "line": 129,
+            "name": "changes only ray length to expose body overlap, without a hidden wall clamp"
+          },
+          {
+            "line": 144,
+            "name": "draws its ray as a link and supplies every selected-frame text-equivalent value"
+          },
+          {
+            "line": 179,
+            "name": "is deterministic and calls out equal ray lengths in its comparison"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5291,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5291,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1089032272,
+          "peakRssBytes": 1182023680,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:01.061Z",
+          "finishedAt": "2026-11-04T19:26:06.352Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "corner-trap",
+      "id": "aifg-a:139",
+      "record": "libs/shared/catalog/src/studies/aifg/corner-trap.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.3 Steering Behaviors",
+        "subsection": "3.3.15 Obstacle and Wall Avoidance"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Local finite rays hit the wedge and produce outward-normal requests. Public Seek and blend yield exact default cancellation. The stall test also requires low speed. Selecting only the upper simultaneous hit breaks symmetry; the short comparison claims only a detour start.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts:85-186",
+        "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts:338-365",
+        "libs/shared/scene-engine/src/lib/steering.ts:36-38",
+        "libs/shared/scene-engine/src/lib/blending.ts:9-16"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "corner-trap",
+        "exit": 0,
+        "durationSeconds": 5.406,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 32,
+            "name": "attaches these parameters to the Corner trap catalog row"
+          },
+          {
+            "line": 38,
+            "name": "calculates two real ray hits and the hand-checkable cancelling requests"
+          },
+          {
+            "line": 59,
+            "name": "uses finite rays and finite walls rather than hits on their infinite extensions"
+          },
+          {
+            "line": 71,
+            "name": "repeats the sensed conflict without progress and distinguishes it from coasting"
+          },
+          {
+            "line": 85,
+            "name": "breaks the cancellation by keeping the upper ray without inventing a recovery force"
+          },
+          {
+            "line": 111,
+            "name": "draws the positive-y upper hit and recovery above the lower hit"
+          },
+          {
+            "line": 122,
+            "name": "keeps the drawing, worked arithmetic and failure comparison on the same run"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5313,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5313,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1066223392,
+          "peakRssBytes": 1160822784,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:06.445Z",
+          "finishedAt": "2026-11-04T19:26:11.758Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "id": "aifg-a:143",
+      "record": "libs/shared/catalog/src/studies/aifg/blending-versus-arbitration.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.4 Combining Steering Behaviors",
+        "subsection": "3.4.1 Blending and Arbitration"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "A local held/fading signal scales engine Seek requests. Engine blend sums weighted requests and caps each priority group. firstActive uses strict epsilon and returns zero if none qualifies. Both lanes integrate acceleration locally, preserving velocity through the handover; changing weight does not establish precedence.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts:75-155",
+        "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts:218-227",
+        "libs/shared/scene-engine/src/lib/blending.ts:9-21"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/BlendedSteering.java",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/PrioritySteering.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "blending-versus-arbitration",
+        "exit": 0,
+        "durationSeconds": 5.337,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 31,
+            "name": "attaches these parameters to the Blending versus arbitration row"
+          },
+          {
+            "line": 37,
+            "name": "runs the same opposing engine seek requests through both public combiners"
+          },
+          {
+            "line": 49,
+            "name": "shows a continuous sampled fade and an abrupt acceleration handover at its end"
+          },
+          {
+            "line": 68,
+            "name": "uses a strict epsilon test and silence when neither capped group qualifies"
+          },
+          {
+            "line": 78,
+            "name": "demonstrates that a larger weight changes balance without granting precedence"
+          },
+          {
+            "line": 93,
+            "name": "keeps velocity continuous through a winner change and respects both motion caps"
+          },
+          {
+            "line": 117,
+            "name": "makes the drawing, chart, worked calculation and weight comparison inspectable together"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5240,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5240,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1078775288,
+          "peakRssBytes": 1172176896,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:11.855Z",
+          "finishedAt": "2026-11-04T19:26:17.095Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "projectile-trajectory",
+      "id": "aifg-a:162",
+      "record": "libs/shared/catalog/src/studies/aifg/projectile-trajectory.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.5 Predicting Physics",
+        "subsection": "3.5.2 Projectile Trajectory"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local solver checks the height discriminant, selects the later nonnegative root, uses one time for both axes and inserts exact contact before a preview sample would pass it. No future encounter produces no cross; finite previews are distinguished from contact and the raised-plane comparison has no invented landing.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts:49-137",
+        "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts:140-220",
+        "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts:223-278",
+        "libs/shared/scene-engine/src/public_api.ts:1-82"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+        "https://raw.githubusercontent.com/forrestthewoods/lib_fts/350529579db315c3d0c579f70d871ef13400d418/projects/unity/ballistic_trajectory/Assets/Scripts/BallisticMotion.cs"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "projectile-trajectory",
+        "exit": 0,
+        "durationSeconds": 5.359,
+        "vitestTestsPassed": 9,
+        "cases": [
+          {
+            "line": 25,
+            "name": "uses the dock-flare record parameters and links forward to choosing a launch"
+          },
+          {
+            "line": 32,
+            "name": "uses the same time for the two independent axes"
+          },
+          {
+            "line": 57,
+            "name": "solves the actual landing and inserts it between the fixed preview samples"
+          },
+          {
+            "line": 75,
+            "name": "rejects unreachable heights and past roots instead of inventing a landing"
+          },
+          {
+            "line": 90,
+            "name": "distinguishes an apex touch, an upward launch on a surface, and immediate downward contact"
+          },
+          {
+            "line": 100,
+            "name": "does not relabel a time-limited preview as contact"
+          },
+          {
+            "line": 107,
+            "name": "explains the apex, exact contact and the raised-plane failure from its computed states"
+          },
+          {
+            "line": 128,
+            "name": "keeps changed-height drawings bounded and removes the cross when no encounter exists"
+          },
+          {
+            "line": 161,
+            "name": "supplies every prose placeholder at every selectable frame"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5267,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5267,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1079774472,
+          "peakRssBytes": 1173340160,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:17.188Z",
+          "finishedAt": "2026-11-04T19:26:22.455Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "the-firing-solution",
+      "id": "aifg-a:163",
+      "record": "libs/shared/catalog/src/studies/aifg/the-firing-solution.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.5 Predicting Physics",
+        "subsection": "3.5.3 The Firing Solution"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local fixed-speed discriminant returns zero/two arcs or one repeated root, reconstructs fixed-speed velocities and selects the shorter target time. Exact apex, target and water-contact events are included. Water contact holds positions; a raised target does not stop flight. Out-of-range requests have no projectile.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts:57-146",
+        "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts:149-189",
+        "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts:293-343",
+        "libs/shared/scene-engine/src/public_api.ts:1-82"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.forrestthewoods.com/blog/solving_ballistic_trajectories/",
+        "https://github.com/forrestthewoods/lib_fts/blob/350529579db315c3d0c579f70d871ef13400d418/code/fts_ballistic_trajectory.cs"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "the-firing-solution",
+        "exit": 0,
+        "durationSeconds": 5.52,
+        "vitestTestsPassed": 10,
+        "cases": [
+          {
+            "line": 25,
+            "name": "uses the harbour-launcher record parameters and links back to forward prediction"
+          },
+          {
+            "line": 32,
+            "name": "finds two fixed-speed launches from hand-checkable slopes"
+          },
+          {
+            "line": 53,
+            "name": "shows the high candidate still aloft when the selected shot lands"
+          },
+          {
+            "line": 71,
+            "name": "returns no shot beyond range and one shot where the two roots meet"
+          },
+          {
+            "line": 90,
+            "name": "includes a height offset without stopping a projectile at a raised target"
+          },
+          {
+            "line": 104,
+            "name": "inserts exact events into the preview without nearly duplicate playback moments"
+          },
+          {
+            "line": 117,
+            "name": "makes the selected moment, height chart and no-shot comparison agree"
+          },
+          {
+            "line": 144,
+            "name": "draws no fictitious flight when the main request itself is unreachable"
+          },
+          {
+            "line": 161,
+            "name": "keeps candidate positions, velocity arrows and predicted paths inside the view"
+          },
+          {
+            "line": 182,
+            "name": "supplies every prose placeholder at every selectable frame"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5423,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5423,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1080478936,
+          "peakRssBytes": 1174093824,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:22.552Z",
+          "finishedAt": "2026-11-04T19:26:27.975Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "iterative-targeting",
+      "id": "aifg-a:166",
+      "record": "libs/shared/catalog/src/studies/aifg/iterative-targeting.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.5 Predicting Physics",
+        "subsection": "3.5.5 Iterative Targeting"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local linear-drag simulator updates velocity before position and interpolates first ground contact. Two completed endpoint probes precede midpoint bisection; unbracketed, unfinished and exhausted outcomes remain failures. Only a measured miss within tolerance is accepted. Engine use is deterministic trig only.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts:100-196",
+        "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts:202-216",
+        "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts:358-443",
+        "libs/shared/scene-engine/src/lib/vectors.ts:44-56"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.gnu.org/software/gsl/doc/html/roots.html"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "iterative-targeting",
+        "exit": 0,
+        "durationSeconds": 5.364,
+        "vitestTestsPassed": 9,
+        "cases": [
+          {
+            "line": 32,
+            "name": "uses the assigned draft, exact example parameters and one pseudocode block per step"
+          },
+          {
+            "line": 47,
+            "name": "works through launch components and velocity-before-position integration by hand"
+          },
+          {
+            "line": 60,
+            "name": "measures the first ground crossing rather than the last airborne point"
+          },
+          {
+            "line": 77,
+            "name": "bisects the launch-angle bracket and accepts only a completed miss inside tolerance"
+          },
+          {
+            "line": 104,
+            "name": "accepts an endpoint already in tolerance without spending a midpoint guess"
+          },
+          {
+            "line": 116,
+            "name": "reports the genuine remaining miss when only the midpoint budget is reduced"
+          },
+          {
+            "line": 131,
+            "name": "rejects an unusable bracket without claiming the target is unreachable everywhere"
+          },
+          {
+            "line": 144,
+            "name": "refuses a flight without a measured impact and exposes model mismatch as a real miss"
+          },
+          {
+            "line": 159,
+            "name": "keeps the diagram, arithmetic, live inputs, chart and accessible prose on the same run"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5270,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5270,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1076415872,
+          "peakRssBytes": 1169899520,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:28.069Z",
+          "finishedAt": "2026-11-04T19:26:33.339Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "jump-points",
+      "id": "aifg-a:169",
+      "record": "libs/shared/catalog/src/studies/aifg/jump-points.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.6 Jumping",
+        "subsection": "3.6.1 Jump Points"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Public matchVelocity prepares the straight run-up. The local marker gate requires sampled position and velocity together and preserves actual horizontal speed. Late/skipped encounters reject launch. Local equal-height ballistic flight ends at contact before collision response and checks the receiving-pad error.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/jump-points.model.ts:94-207",
+        "libs/features/tools/src/lib/studies/movement/jump-points.model.ts:212-258",
+        "libs/shared/scene-engine/src/lib/steering.ts:40-46"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Jump.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "jump-points",
+        "exit": 0,
+        "durationSeconds": 5.438,
+        "vitestTestsPassed": 8,
+        "cases": [
+          {
+            "line": 41,
+            "name": "uses the assigned draft, exact example parameters and matching mechanism blocks"
+          },
+          {
+            "line": 56,
+            "name": "uses the engine’s acceleration and works through the initial run-up by hand"
+          },
+          {
+            "line": 93,
+            "name": "requires both marker position and velocity, preserving the actual accepted horizontal speed"
+          },
+          {
+            "line": 109,
+            "name": "follows the exact equal-height trajectory and reaches the receiving pad"
+          },
+          {
+            "line": 144,
+            "name": "rejects the late start at the correct position because its velocity is still wrong"
+          },
+          {
+            "line": 164,
+            "name": "exposes sampled marker skips, unreachable speed and a tolerance-accepted pad miss"
+          },
+          {
+            "line": 188,
+            "name": "keeps a bounded unfinished run honest instead of inventing a take-off or landing"
+          },
+          {
+            "line": 197,
+            "name": "keeps arithmetic, charts, labels, moments and accessible prose consistent across live inputs"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5341,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5341,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1077841136,
+          "peakRssBytes": 1171423232,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:33.436Z",
+          "finishedAt": "2026-11-04T19:26:38.777Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "motor-control",
+      "id": "aifg-a:192",
+      "record": "libs/shared/catalog/src/studies/aifg/motor-control.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.8 Motor Control"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Public matchVelocity requests zero velocity within the steering limit. The local brake clips to its stricter one-way capacity, updates speed before position and clamps speed at zero without snapping to the safety line. Reducing brake capacity exposes a real line crossing.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.ts:44-77",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.ts:130-152",
+        "libs/features/tools/src/lib/studies/movement/motor-control.model.ts:245-253",
+        "libs/shared/scene-engine/src/lib/steering.ts:40-46"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.red3d.com/cwr/steer/gdc99/",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/tests/src/com/badlogic/gdx/ai/tests/steer/box2d/Box2dSteeringEntity.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "motor-control",
+        "exit": 0,
+        "durationSeconds": 5.489,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 29,
+            "name": "uses the draft record parameters for the Motor control row"
+          },
+          {
+            "line": 35,
+            "name": "works through an engine braking request and a stricter motor cap by hand"
+          },
+          {
+            "line": 47,
+            "name": "keeps motor acceleration bounded while velocity falls and distance still increases"
+          },
+          {
+            "line": 72,
+            "name": "cannot reverse the cart with its brake, including a step large enough to reach zero"
+          },
+          {
+            "line": 82,
+            "name": "shows a weaker motor crossing the safety line despite obeying every braking limit"
+          },
+          {
+            "line": 103,
+            "name": "supplies every narrated value and works through the same first step as the motion"
+          },
+          {
+            "line": 131,
+            "name": "reruns its inputs deterministically and keeps positions, arrows and charts within bounds"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5395,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5395,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1079348320,
+          "peakRssBytes": 1173028864,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:38.871Z",
+          "finishedAt": "2026-11-04T19:26:44.266Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "actuator",
+      "id": "aifg-a:157",
+      "record": "libs/shared/catalog/src/studies/aifg/actuator.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.4 Combining Steering Behaviors",
+        "subsection": "3.4.5 Steering Pipeline"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Public clipLength bounds an agreed velocity, and public matchVelocity turns its feasible velocity gap into acceleration. Local integration applies output. The original agreement and belt marker remain visible, so infeasible speed and residual position gap are not relabelled success.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/actuator.model.ts:45-81",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.ts:84-153",
+        "libs/features/tools/src/lib/studies/movement/actuator.model.ts:272-282",
+        "libs/shared/scene-engine/src/lib/steering.ts:40-46",
+        "libs/shared/scene-engine/src/lib/vectors.ts:18-20"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "actuator",
+        "exit": 0,
+        "durationSeconds": 5.514,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 24,
+            "name": "uses the draft record parameters for the Actuator row"
+          },
+          {
+            "line": 30,
+            "name": "turns the agreed velocity into an engine acceleration output and applies a hand-checkable step"
+          },
+          {
+            "line": 48,
+            "name": "matches a feasible velocity gradually without closing the marker position gap"
+          },
+          {
+            "line": 69,
+            "name": "caps an infeasible velocity channel while preserving the unmet original agreement"
+          },
+          {
+            "line": 95,
+            "name": "does not accelerate a courier already matching the agreed velocity"
+          },
+          {
+            "line": 101,
+            "name": "provides the same values, output and arithmetic to the drawing and the reading"
+          },
+          {
+            "line": 133,
+            "name": "reruns its inputs deterministically and keeps bodies, arrows and chart series visible"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5416,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5416,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1061881584,
+          "peakRssBytes": 1156530176,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:44.364Z",
+          "finishedAt": "2026-11-04T19:26:49.780Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "id": "aifg-a:196",
+      "record": "libs/shared/catalog/src/studies/aifg/movement-in-the-third-dimension.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.9 Movement in the Third Dimension"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local Vec3 mechanism shares total acceleration/speed budgets across axes, uses an explicit final-step clamp, derives yaw/pitch from candidate velocity and retains yaw for vertical motion. Roll changes pose independently; engine trig constructs axes. Removing the height offset leaves a full spatial distance gap.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts:55-149",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts:224-235",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts:304-335",
+        "libs/shared/scene-engine/src/lib/types.ts:1-21",
+        "libs/shared/scene-engine/src/lib/vectors.ts:44-56"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://www.red3d.com/cwr/steer/gdc99/",
+        "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/Vehicle.js",
+        "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/behaviors/SeekBehavior.js"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "movement-in-the-third-dimension",
+        "exit": 0,
+        "durationSeconds": 5.488,
+        "vitestTestsPassed": 8,
+        "cases": [
+          {
+            "line": 38,
+            "name": "uses the assigned catalog record and the exact parameters worked here"
+          },
+          {
+            "line": 47,
+            "name": "normalises all three offset components and integrates one hand-checkable step"
+          },
+          {
+            "line": 67,
+            "name": "caps total speed and reaches the elevated beacon with a retained pose at rest"
+          },
+          {
+            "line": 86,
+            "name": "leaves the height gap when a planar steering adapter discards the vertical component"
+          },
+          {
+            "line": 100,
+            "name": "keeps roll independent from the nose and from translational motion"
+          },
+          {
+            "line": 119,
+            "name": "provides the coordinates, pose, worked arithmetic and aligned chart at every frame"
+          },
+          {
+            "line": 139,
+            "name": "holds all visible positions and wing endpoints within the drawing after input changes"
+          },
+          {
+            "line": 163,
+            "name": "retains the previous yaw for a purely vertical direction"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5384,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5384,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1066059792,
+          "peakRssBytes": 1160478720,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:49.883Z",
+          "finishedAt": "2026-11-04T19:26:55.267Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "id": "aifg-a:90",
+      "record": "libs/shared/catalog/src/studies/aifg/two-and-a-half-dimensions.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.1 The Basics of Movement Algorithms",
+        "subsection": "3.1.1 Two-Dimensional Movement"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "World x/z map into public Vec2 Seek and vector integration. A local final-step clamp stops the route; a separate surface sampler assigns height. Facing stays yaw-only. Setting ramp run to zero changes height rate without changing planar steering and does not establish traversability.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts:69-143",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts:217-228",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts:291-321",
+        "libs/shared/scene-engine/src/lib/steering.ts:36-38"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/godotengine/godot-demo-projects/52e30044658448149b04e8f69b475eebbfbd8f6e/3d/platformer/player/player.gd",
+        "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourCrowd.cpp",
+        "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourPathCorridor.cpp"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "two-and-a-half-dimensions",
+        "exit": 0,
+        "durationSeconds": 5.429,
+        "vitestTestsPassed": 6,
+        "cases": [
+          {
+            "line": 37,
+            "name": "uses the assigned catalog row and the exact parameters worked here"
+          },
+          {
+            "line": 44,
+            "name": "calls planar Seek on a 12/9/15 triangle and integrates the first quarter-second"
+          },
+          {
+            "line": 57,
+            "name": "stores changing height while every moving frame has the same yaw and an upright pose"
+          },
+          {
+            "line": 83,
+            "name": "exposes the ledge snap without changing any plan motion or yaw"
+          },
+          {
+            "line": 98,
+            "name": "connects plan, profile, chart and worked surface calculation at the same selected moment"
+          },
+          {
+            "line": 125,
+            "name": "draws a vertical ledge and keeps both views, arrows and surface links in bounds"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5334,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5334,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1079692312,
+          "peakRssBytes": 1173422080,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:26:55.363Z",
+          "finishedAt": "2026-11-04T19:27:00.697Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "kinematic-arrive",
+      "id": "aifg-a:101",
+      "record": "libs/shared/catalog/src/studies/aifg/kinematic-arrive.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.2 Kinematic Movement Algorithms",
+        "subsection": "3.2.1 Seek"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local direct-velocity rule accepts distance at or below the radius, otherwise divides signed offset by response time and caps speed. The derived taper boundary is maxSpeed times response time. Acceptance retains residual error; a shorter response time can yield repeated sampled crossings.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts:42-77",
+        "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts:124-152",
+        "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts:215-245",
+        "libs/shared/scene-engine/src/lib/steering.ts:53-63"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/src/kinematic.cpp",
+        "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/include/aicore/kinematic.h",
+        "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/README.md"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "kinematic-arrive",
+        "exit": 0,
+        "durationSeconds": 5.495,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 30,
+            "name": "uses the catalogue example parameters"
+          },
+          {
+            "line": 36,
+            "name": "caps the far request and assigns a smaller velocity directly near the marker"
+          },
+          {
+            "line": 56,
+            "name": "accepts a residual error without snapping and handles the target and its far side"
+          },
+          {
+            "line": 78,
+            "name": "approaches monotonically, tapers velocity, then stays inside the accepted region"
+          },
+          {
+            "line": 93,
+            "name": "exposes the oscillation caused by changing only time to target"
+          },
+          {
+            "line": 110,
+            "name": "keeps the selected drawing, text, arithmetic and chart on the same update"
+          },
+          {
+            "line": 132,
+            "name": "recomputes changed inputs and keeps every drawing element in bounds"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5400,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5400,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1064191872,
+          "peakRssBytes": 1158709248,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:27:00.792Z",
+          "finishedAt": "2026-11-04T19:27:06.192Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "satisfaction-radius",
+      "id": "aifg-a:102",
+      "record": "libs/shared/catalog/src/studies/aifg/satisfaction-radius.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.2 Kinematic Movement Algorithms",
+        "subsection": "3.2.1 Seek"
+      },
+      "catalogVerification": {
+        "kind": "model-knowledge",
+        "note": "model-knowledge"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "A local inclusive positional threshold sets velocity to zero without snapping. Outside it the constant-stride controller moves toward the target with no taper. The zero-radius comparison alternates around the unreachable sampled target; crossing between updates is not acceptance.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts:39-71",
+        "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts:112-136",
+        "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts:203-233",
+        "libs/shared/scene-engine/src/public_api.ts:1-82"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicArrive.cs",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Arrive.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "satisfaction-radius",
+        "exit": 0,
+        "durationSeconds": 5.436,
+        "vitestTestsPassed": 8,
+        "cases": [
+          {
+            "line": 29,
+            "name": "uses the catalogue example parameters"
+          },
+          {
+            "line": 35,
+            "name": "accepts equality at either edge and preserves the error instead of snapping"
+          },
+          {
+            "line": 56,
+            "name": "takes full strides outside and stops at the first accepted sample"
+          },
+          {
+            "line": 80,
+            "name": "exposes jitter when zero radius demands a sample the fixed stride cannot reach"
+          },
+          {
+            "line": 92,
+            "name": "does not count crossing the region between samples as acceptance"
+          },
+          {
+            "line": 101,
+            "name": "shows how an oversized region can accept the starting place"
+          },
+          {
+            "line": 110,
+            "name": "connects the selected moment to its arithmetic, text and both charts"
+          },
+          {
+            "line": 134,
+            "name": "updates the region when its input changes and keeps the drawing in bounds"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5344,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5344,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1068402968,
+          "peakRssBytes": 1162641408,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:27:06.285Z",
+          "finishedAt": "2026-11-04T19:27:11.629Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "kinematic-wander",
+      "id": "aifg-a:103",
+      "record": "libs/shared/catalog/src/studies/aifg/kinematic-wander.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.2 Kinematic Movement Algorithms",
+        "subsection": "3.2.2 Wandering"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "local",
+      "confirmed": "The local seeded generator subtracts two draws. Direction uses public deterministic trig and normalisation; direct full-speed motion uses the old facing before accumulating the sampled turn. The larger-bound comparison preserves draws and speed while exposing abrupt reversals. Engine acceleration-based wander and unexported random helpers are distinguished.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts:55-118",
+        "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts:159-187",
+        "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts:242-272",
+        "libs/shared/scene-engine/src/lib/steering.ts:136-149",
+        "libs/shared/scene-engine/src/public_api.ts:1-82"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicWander.cs"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "kinematic-wander",
+        "exit": 0,
+        "durationSeconds": 5.45,
+        "vitestTestsPassed": 6,
+        "cases": [
+          {
+            "line": 27,
+            "name": "uses the catalog example parameters for kinematic wander"
+          },
+          {
+            "line": 33,
+            "name": "moves with the old facing before adding a hand-worked signed turn"
+          },
+          {
+            "line": 50,
+            "name": "replays the seeded draws, keeps full speed and bounds every sampled turn"
+          },
+          {
+            "line": 71,
+            "name": "shows abrupt direction changes from the larger bound without changing samples or speed"
+          },
+          {
+            "line": 89,
+            "name": "makes the sampling interval part of the walk rather than claiming frame-rate invariance"
+          },
+          {
+            "line": 101,
+            "name": "keeps both velocity arrows in the drawing and supplies the selected-frame explanation"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5353,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5353,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1071581440,
+          "peakRssBytes": 1165869056,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:27:11.727Z",
+          "finishedAt": "2026-11-04T19:27:17.080Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    },
+    {
+      "slug": "coordinated-movement",
+      "id": "aifg-a:173",
+      "record": "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+      "catalogLocation": {
+        "part": "Part II Techniques",
+        "chapter": "Chapter 3 Movement",
+        "section": "3.7 Coordinated Movement"
+      },
+      "catalogVerification": {
+        "kind": "sourced",
+        "note": "Taylor & Francis preview PDF front matter, Contents pp. vii-xiii (DOI 10.1201/9781351053303)"
+      },
+      "catalogCheck": "No contradiction identified. Teaching rules and narrower local examples are explicitly identified.",
+      "mode": "mixed",
+      "confirmed": "Public patternSlots and assignSlots establish the fixed crew. advanceFormation moves/moderates the anchor using previous member positions; slotPosition supplies distinct targets and public arrive supplies bounded acceleration. Local integration respects each speed cap. Reducing Camera speed preserves assignment but exposes individual slot lag.",
+      "codeEvidence": [
+        "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts:102-211",
+        "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts:286-302",
+        "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts:368-398",
+        "libs/shared/scene-engine/src/lib/formation.ts:41-62,113-151",
+        "libs/shared/scene-engine/src/lib/slot-assignment.ts:26-58"
+      ],
+      "sources": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/Formation.java",
+        "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/fma/FormationMotionModerator.java"
+      ],
+      "doiScope": "Bibliography/edition from negotiated metadata; chapter/section location from supplied catalog row; no chapter text read.",
+      "quotationCheck": "No quoted passage from a copyrighted work identified in the record.",
+      "test": {
+        "slug": "coordinated-movement",
+        "exit": 0,
+        "durationSeconds": 5.417,
+        "vitestTestsPassed": 7,
+        "cases": [
+          {
+            "line": 45,
+            "name": "uses the catalog example parameters for coordinated movement"
+          },
+          {
+            "line": 51,
+            "name": "centres the line and assigns Scanner, Camera and Radio distinct role-compatible places"
+          },
+          {
+            "line": 67,
+            "name": "moves the reference first and works Camera through the first bounded acceleration"
+          },
+          {
+            "line": 81,
+            "name": "preserves the abreast relationship at equal capability and respects each movement limit"
+          },
+          {
+            "line": 113,
+            "name": "exposes an individual falling behind although every assignment remains valid"
+          },
+          {
+            "line": 137,
+            "name": "ties the slot drawing, numerical readout and comparison to the same frames"
+          },
+          {
+            "line": 154,
+            "name": "keeps every visible position inside the drawing when following ability changes"
+          }
+        ],
+        "canonicalLiteralPath": true,
+        "boundedResult": {
+          "name": "bounded-probe",
+          "durationMs": 5323,
+          "slowestCases": [
+            {
+              "name": "bounded-probe",
+              "durationMs": 5323,
+              "exitCode": 0,
+              "granularity": "task"
+            }
+          ],
+          "peakFootprintBytes": 1076874024,
+          "peakRssBytes": 1170767872,
+          "memoryBudgetBytes": 4294967296,
+          "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+          "droppedOutputBytes": 0,
+          "startedAt": "2026-11-04T19:27:17.174Z",
+          "finishedAt": "2026-11-04T19:27:22.497Z",
+          "exitCode": 0,
+          "executed": true
+        }
+      }
+    }
+  ],
+  "testSummary": {
+    "serial": true,
+    "commands": 20,
+    "passedCommands": 20,
+    "vitestTestsPassed": 154,
+    "allWrapperExitsZero": true,
+    "outcomesFile": "brief/test-outcomes.json",
+    "diagnostics": "Every coverage test object retains the exact command, cwd, exit, wrapper output, Vitest output and both standalone log paths. Only the prescribed single-spec wrapper was executed.",
+    "canonicalLiteralPath": true,
+    "serialConfirmedFromBoundedTimestamps": true,
+    "canonicalCommandTemplate": "node scripts/harness.mjs bounded -- node --test --test-name-pattern='^{slug}$' <session-scratch>/critic-factual/brief/model-probes.mjs",
+    "actualCommandsIncludingCorrectedAliasRuns": 40,
+    "actualVitestTestsIncludingAliasRuns": 308
+  },
+  "limitations": {
+    "doiPublisherHtml": "HTTP 403 after DOI redirect. No publisher/chapter HTML was read. HTTP 200 content negotiation supplied only bibliographic metadata. The supplied catalog rows provide the limited chapter/section pointers.",
+    "reynoldsCurl": "HTTP 403 via curl; the exact cited page was personally opened successfully with the web tool and its cited passages read.",
+    "externalSources": "Reachability is this review observation, not a promise of future availability."
+  },
+  "usage": {
+    "cumulativeTokens": null,
+    "status": "unknown",
+    "source": "No cumulative model token counter is exposed to this worker; command-output token estimates are not model token usage.",
+    "scope": "This independent factual critic, including source checks, cited-source inspection, twenty initial path-alias probes and twenty corrected canonical serial probes.",
+    "cutoff": "2026-11-04T19:27:53.679865+00:00"
+  },
+  "additionalProbes": {
+    "reason": "The first serial driver resolved the supplied /var probe path to the equivalent /private/var spelling. During report validation this literal-path deviation was noticed, disclosed and corrected by rerunning all twenty with exactly the supplied /var command spelling. These earlier successful probes are preserved as audit history and are not substituted for the canonical results.",
+    "outcomesFile": "brief/resolved-path-test-outcomes.json",
+    "commands": 20,
+    "vitestTestsPassed": 154,
+    "allExitsZero": true,
+    "results": [
+      {
+        "slug": "steering-behaviors",
+        "exit": 0,
+        "durationSeconds": 6.415,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "steering-output",
+        "exit": 0,
+        "durationSeconds": 4.961,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "flee",
+        "exit": 0,
+        "durationSeconds": 4.928,
+        "vitestTestsPassed": 9
+      },
+      {
+        "slug": "variable-matching",
+        "exit": 0,
+        "durationSeconds": 4.977,
+        "vitestTestsPassed": 8
+      },
+      {
+        "slug": "collision-avoidance",
+        "exit": 0,
+        "durationSeconds": 5.065,
+        "vitestTestsPassed": 8
+      },
+      {
+        "slug": "obstacle-and-wall-avoidance",
+        "exit": 0,
+        "durationSeconds": 5.033,
+        "vitestTestsPassed": 9
+      },
+      {
+        "slug": "corner-trap",
+        "exit": 0,
+        "durationSeconds": 4.966,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "blending-versus-arbitration",
+        "exit": 0,
+        "durationSeconds": 4.9,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "projectile-trajectory",
+        "exit": 0,
+        "durationSeconds": 5.073,
+        "vitestTestsPassed": 9
+      },
+      {
+        "slug": "the-firing-solution",
+        "exit": 0,
+        "durationSeconds": 5.034,
+        "vitestTestsPassed": 10
+      },
+      {
+        "slug": "iterative-targeting",
+        "exit": 0,
+        "durationSeconds": 4.864,
+        "vitestTestsPassed": 9
+      },
+      {
+        "slug": "jump-points",
+        "exit": 0,
+        "durationSeconds": 4.906,
+        "vitestTestsPassed": 8
+      },
+      {
+        "slug": "motor-control",
+        "exit": 0,
+        "durationSeconds": 4.906,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "actuator",
+        "exit": 0,
+        "durationSeconds": 4.918,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "movement-in-the-third-dimension",
+        "exit": 0,
+        "durationSeconds": 4.889,
+        "vitestTestsPassed": 8
+      },
+      {
+        "slug": "two-and-a-half-dimensions",
+        "exit": 0,
+        "durationSeconds": 4.868,
+        "vitestTestsPassed": 6
+      },
+      {
+        "slug": "kinematic-arrive",
+        "exit": 0,
+        "durationSeconds": 4.886,
+        "vitestTestsPassed": 7
+      },
+      {
+        "slug": "satisfaction-radius",
+        "exit": 0,
+        "durationSeconds": 4.934,
+        "vitestTestsPassed": 8
+      },
+      {
+        "slug": "kinematic-wander",
+        "exit": 0,
+        "durationSeconds": 4.933,
+        "vitestTestsPassed": 6
+      },
+      {
+        "slug": "coordinated-movement",
+        "exit": 0,
+        "durationSeconds": 5.01,
+        "vitestTestsPassed": 7
+      }
+    ]
+  },
+  "originalReportSha256": "e91e8501bdc7f6b52d6fac150ae9e359e9967ef85e2e5694c43d229e6d5acdf2",
+  "projection": "Public projection omits repeated console logs, copied catalog definitions and absolute private workspace paths. The original receipt hash binds the retained private report."
+}

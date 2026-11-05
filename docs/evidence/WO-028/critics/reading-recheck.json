@@ -1,0 +1,353 @@
+{
+  "statement": "Rechecked the six initial findings and requested adjacent rendering corrections in the private non-Git copy. All six initial findings resolve. One adjacent firing-solution label clips at 360 px and needs the small correction below.",
+  "status": "needs-correction",
+  "authoringDate": "2026-11-04",
+  "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "manifest": {
+    "path": "brief/recheck-manifest.json",
+    "sha256": "844088651144af80b8ef6413ef57a112f3a3fda094b398847183c12d8a3113ba",
+    "originalManifestSha256": "46719e86a01046ab249def5035029e27214bb79819796106b74cf7d6b10c3393",
+    "filesBound": 64,
+    "changedFiles": 14,
+    "allHashesMatched": true
+  },
+  "scope": "Six initial reading findings, all 20 refreshed chart keys/guides, corrected wall labels/lanes and contact markers, shortened coordinated text, projectile Landing label and supplied view-toggle captures at 360/768/1440. No new broad content or factual-source review.",
+  "initialFindingDispositions": [
+    {
+      "id": "R1",
+      "slug": "collision-avoidance",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/steering-behaviors-chart-1440.png",
+        "readings/steering-output-chart-1440.png",
+        "readings/flee-chart-1440.png",
+        "readings/variable-matching-chart-1440.png",
+        "readings/collision-avoidance-chart-1440.png",
+        "readings/obstacle-and-wall-avoidance-chart-1440.png",
+        "readings/corner-trap-chart-1440.png",
+        "readings/blending-versus-arbitration-chart-1440.png",
+        "readings/projectile-trajectory-chart-1440.png",
+        "readings/the-firing-solution-chart-1440.png",
+        "readings/iterative-targeting-chart-1440.png",
+        "readings/jump-points-chart-1440.png",
+        "readings/motor-control-chart-1440.png",
+        "readings/actuator-chart-1440.png",
+        "readings/movement-in-the-third-dimension-chart-1440.png",
+        "readings/two-and-a-half-dimensions-chart-1440.png",
+        "readings/kinematic-arrive-chart-1440.png",
+        "readings/satisfaction-radius-chart-1440.png",
+        "readings/kinematic-wander-chart-1440.png",
+        "readings/coordinated-movement-chart-1440.png"
+      ],
+      "assessment": "All twenty chart images name their active timeline series and show the chart-specific guide. The tolerance, velocity, separation and mean-error traces are now correctly identified. Affected Movement pages retain their physical legend and caption; the shared template selects the legend by view."
+    },
+    {
+      "id": "R2",
+      "slug": "obstacle-and-wall-avoidance",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/obstacle-and-wall-avoidance-1440.png",
+        "walkthrough/05-wall-rays-360.png",
+        "walkthrough/05-wall-rays-768.png",
+        "walkthrough/05-wall-rays-1440.png"
+      ],
+      "assessment": "The colliding Avoid label is removed. Courier and Hit remain readable, and the legend explicitly identifies the amber cross as the avoidance target."
+    },
+    {
+      "id": "R3",
+      "slug": "obstacle-and-wall-avoidance",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/obstacle-and-wall-avoidance-1440.png",
+        "walkthrough/05-wall-rays-360.png",
+        "walkthrough/05-wall-rays-768.png",
+        "walkthrough/05-wall-rays-1440.png"
+      ],
+      "assessment": "Velocity is in the upper of two lanes below the courier; acceleration is lower. Their shafts no longer overprint the physical ray/normal construction, and the legend/caption describe the lanes correctly."
+    },
+    {
+      "id": "R4",
+      "slug": "the-firing-solution",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/the-firing-solution-1440.png",
+        "walkthrough/08-firing-solution-360.png",
+        "walkthrough/08-firing-solution-768.png",
+        "walkthrough/08-firing-solution-1440.png"
+      ],
+      "assessment": "Landed candidates use a small dot beneath the target cross. The beacon cross remains visible at the opening contact moment. Adjacent label clipping at 360 px is tracked separately as A1."
+    },
+    {
+      "id": "R5",
+      "slug": "jump-points",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/jump-points-1440.png"
+      ],
+      "assessment": "Finch is a heading arrow at takeoff, leaving the takeoff ring visible around it. The physical legend and caption match the changed mark."
+    },
+    {
+      "id": "R6",
+      "slug": "coordinated-movement",
+      "disposition": "resolved",
+      "evidence": [
+        "readings/coordinated-movement-1440.png",
+        "readings/coordinated-movement-chart-1440.png"
+      ],
+      "assessment": "The text equivalent now explains the named crew, Camera position/error, mean error and shared anchor/gate without repeating every member vector and slot coordinate."
+    }
+  ],
+  "adjacentChecks": [
+    {
+      "name": "Projectile Landing label",
+      "disposition": "passed",
+      "evidence": [
+        "walkthrough/07-projectile-landing-360.png",
+        "walkthrough/07-projectile-landing-768.png",
+        "walkthrough/07-projectile-landing-1440.png"
+      ],
+      "assessment": "Landing is fully visible within the drawing at all three widths, including 360 px."
+    },
+    {
+      "name": "Movement/Chart toggle layout",
+      "disposition": "passed",
+      "widths": [
+        360,
+        768,
+        1440
+      ],
+      "evidence": [
+        "walkthrough/02-collision-360.png",
+        "walkthrough/02-collision-768.png",
+        "walkthrough/02-collision-1440.png",
+        "walkthrough/03-separation-chart-360.png",
+        "walkthrough/03-separation-chart-768.png",
+        "walkthrough/03-separation-chart-1440.png"
+      ],
+      "assessment": "Both controls remain visible, labelled and unclipped in the supplied Movement and Chart states. Other supplied movement walkthroughs retain the same visible toggle pair. This is static-render evidence, not a claim of live interaction testing."
+    }
+  ],
+  "findings": [
+    {
+      "id": "A1",
+      "slug": "the-firing-solution",
+      "where": "walkthrough/08-firing-solution-360.png: contact beacon label",
+      "kind": "drawing",
+      "finding": "The beacon cross is visible, but the centered Breakwater beacon label extends past the right edge of the SVG and is clipped to Breakwater beac… at 360 px.",
+      "fix": "Shorten only the inline target mark label to Beacon; retain the fuller name in prose and the legend."
+    }
+  ],
+  "imagesActuallyViewed": {
+    "count": 57,
+    "chartCount": 20,
+    "affectedReadingPageCount": 4,
+    "walkthroughCount": 33,
+    "paths": [
+      "readings/steering-behaviors-chart-1440.png",
+      "readings/steering-output-chart-1440.png",
+      "readings/flee-chart-1440.png",
+      "readings/variable-matching-chart-1440.png",
+      "readings/collision-avoidance-chart-1440.png",
+      "readings/obstacle-and-wall-avoidance-chart-1440.png",
+      "readings/corner-trap-chart-1440.png",
+      "readings/blending-versus-arbitration-chart-1440.png",
+      "readings/projectile-trajectory-chart-1440.png",
+      "readings/the-firing-solution-chart-1440.png",
+      "readings/iterative-targeting-chart-1440.png",
+      "readings/jump-points-chart-1440.png",
+      "readings/motor-control-chart-1440.png",
+      "readings/actuator-chart-1440.png",
+      "readings/movement-in-the-third-dimension-chart-1440.png",
+      "readings/two-and-a-half-dimensions-chart-1440.png",
+      "readings/kinematic-arrive-chart-1440.png",
+      "readings/satisfaction-radius-chart-1440.png",
+      "readings/kinematic-wander-chart-1440.png",
+      "readings/coordinated-movement-chart-1440.png",
+      "readings/obstacle-and-wall-avoidance-1440.png",
+      "readings/the-firing-solution-1440.png",
+      "readings/jump-points-1440.png",
+      "readings/coordinated-movement-1440.png",
+      "walkthrough/01-shelf-360.png",
+      "walkthrough/01-shelf-768.png",
+      "walkthrough/01-shelf-1440.png",
+      "walkthrough/02-collision-360.png",
+      "walkthrough/02-collision-768.png",
+      "walkthrough/02-collision-1440.png",
+      "walkthrough/02b-collision-mechanism-360.png",
+      "walkthrough/02b-collision-mechanism-768.png",
+      "walkthrough/02b-collision-mechanism-1440.png",
+      "walkthrough/02c-executable-model-360.png",
+      "walkthrough/02c-executable-model-768.png",
+      "walkthrough/02c-executable-model-1440.png",
+      "walkthrough/02d-collision-limits-360.png",
+      "walkthrough/02d-collision-limits-768.png",
+      "walkthrough/02d-collision-limits-1440.png",
+      "walkthrough/03-separation-chart-360.png",
+      "walkthrough/03-separation-chart-768.png",
+      "walkthrough/03-separation-chart-1440.png",
+      "walkthrough/04-flee-360.png",
+      "walkthrough/04-flee-768.png",
+      "walkthrough/04-flee-1440.png",
+      "walkthrough/05-wall-rays-360.png",
+      "walkthrough/05-wall-rays-768.png",
+      "walkthrough/05-wall-rays-1440.png",
+      "walkthrough/06-corner-trap-360.png",
+      "walkthrough/06-corner-trap-768.png",
+      "walkthrough/06-corner-trap-1440.png",
+      "walkthrough/07-projectile-landing-360.png",
+      "walkthrough/07-projectile-landing-768.png",
+      "walkthrough/07-projectile-landing-1440.png",
+      "walkthrough/08-firing-solution-360.png",
+      "walkthrough/08-firing-solution-768.png",
+      "walkthrough/08-firing-solution-1440.png"
+    ]
+  },
+  "chartCoverage": [
+    {
+      "slug": "steering-behaviors",
+      "image": "readings/steering-behaviors-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "steering-output",
+      "image": "readings/steering-output-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "flee",
+      "image": "readings/flee-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "variable-matching",
+      "image": "readings/variable-matching-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "collision-avoidance",
+      "image": "readings/collision-avoidance-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "image": "readings/obstacle-and-wall-avoidance-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "corner-trap",
+      "image": "readings/corner-trap-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "image": "readings/blending-versus-arbitration-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "projectile-trajectory",
+      "image": "readings/projectile-trajectory-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "the-firing-solution",
+      "image": "readings/the-firing-solution-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "iterative-targeting",
+      "image": "readings/iterative-targeting-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "jump-points",
+      "image": "readings/jump-points-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "motor-control",
+      "image": "readings/motor-control-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "actuator",
+      "image": "readings/actuator-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "image": "readings/movement-in-the-third-dimension-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "image": "readings/two-and-a-half-dimensions-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "kinematic-arrive",
+      "image": "readings/kinematic-arrive-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "satisfaction-radius",
+      "image": "readings/satisfaction-radius-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "kinematic-wander",
+      "image": "readings/kinematic-wander-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    },
+    {
+      "slug": "coordinated-movement",
+      "image": "readings/coordinated-movement-chart-1440.png",
+      "disposition": "passed",
+      "assessment": "Active timeline series names and chart-specific guide are visible."
+    }
+  ],
+  "sourceFilesRead": [
+    "libs/features/tools/src/lib/composites/study/study.html",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+    "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+    "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+    "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+    "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+    "apps/dotln/public/i18n/en.json"
+  ],
+  "usage": {
+    "cumulativeTokens": "unknown",
+    "source": "unknown",
+    "scope": "unknown",
+    "cutoff": "unknown",
+    "reason": "No cumulative token counters exposed to this worker."
+  },
+  "restrictions": {
+    "sourceWrites": false,
+    "testsRun": false,
+    "browserLaunches": false,
+    "gatesRun": false,
+    "descendants": 0,
+    "realWorktreesReadOrWritten": false
+  },
+  "metadataTransition": "Not performed by this worker. Root owns the metadata-only checked/reviewer transition after the scoped rechecks pass.",
+  "originalReportSha256": "6238fe473c03a4f89e22d98f825cc53ba64ad4d63e29a50126ef0b68afd10438"
+}

@@ -1,0 +1,142 @@
+{
+  "author": "author-06",
+  "date": "2026-11-04",
+  "status": "authored-for-parent-integration",
+  "workspace": {
+    "isPrivateNonGitCopy": true,
+    "rootCheck": "Working directory checked; git rev-parse reported that the copy is not a Git repository.",
+    "realWorktreeWrites": false,
+    "agentsSpawned": false,
+    "testsRun": false,
+    "gatesRun": false,
+    "dependenciesInstalled": false,
+    "privateControlOrCredentialReads": false
+  },
+  "studies": [
+    {
+      "id": "aifg-a:166",
+      "slug": "iterative-targeting",
+      "deliverables": [
+        "libs/shared/catalog/src/studies/aifg/iterative-targeting.json",
+        "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts",
+        "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts"
+      ],
+      "classification": "study-local",
+      "engineAndLocalSteps": "The public engine has no iterative targeting or projectile simulator. The local model launches a fixed-speed candidate at a guessed angle, integrates gravity and linear drag with velocity before position, interpolates ground contact, measures signed range error, and refines a sign-changing angle bracket by bisection. Exported engine sine and cosine provide deterministic launch components; no engine behaviour is claimed.",
+      "executable": "typescript",
+      "executableNullRationale": null,
+      "example": "A harbour launcher searches for an angle that lands at a stationary drum on level ground.",
+      "specClaims": [
+        "A 30-degree launch resolves into horizontal speed 5 times square root of 3 and vertical speed 5; its first drag/gravity step has vertical speed 3.9 and height 0.39.",
+        "Ground contact is interpolated between the last positive-height point and the first non-positive point.",
+        "The default midpoint guesses begin at 20 and 30 degrees, halve their angle bracket and accept only a completed impact within tolerance.",
+        "Reducing only the midpoint budget to 2 retains the same initial candidates and fails outside tolerance.",
+        "An already acceptable endpoint uses no midpoint guesses; a same-side bracket is rejected without claiming every intermediate angle is impossible.",
+        "An unfinished flight supplies no invented impact, and changed drag can make an accepted prediction miss under different physics.",
+        "Drawing bounds, chart samples, moments, live input endpoints and prose placeholders remain consistent."
+      ],
+      "limitations": [
+        "The search targets the local discrete simulator, not continuous physical truth or the scene engine.",
+        "Only a stationary, equal-height ground target and one angle bracket are handled; no obstacle or moving-target search is supplied.",
+        "Bracketing assumes a continuous error function and does not select among multiple arcs.",
+        "Unfinished-flight runs omit the error chart and comparison because their impact error is unknown.",
+        "The opening frame is an endpoint diagnostic, with midpoint guesses on later frames; terminal endpoint decisions are held for one playback interval.",
+        "No verified targeting-specific public implementation was added; the GSL manual is cited only for the numerical method."
+      ],
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "status": "Web open unavailable; curl with Accept application/vnd.citationstyles.csl+json returned HTTP 200.",
+          "observed": "Crossref metadata identifies AI for Games, Ian Millington, edition 3, CRC Press and the requested DOI.",
+          "claimUsed": "Book identity and the catalog-provided placement at Chapter 3, section 3.5.5 only; no chapter text was read."
+        },
+        {
+          "url": "https://www.gnu.org/software/gsl/doc/html/roots.html",
+          "status": "Web fetch timed out; curl and a subsequent textual read both returned HTTP 200.",
+          "observed": "The official GSL 2.8 manual describes midpoint bisection, retaining the half selected by sign, zero-crossing requirements, convergence tests and iteration ceilings.",
+          "claimUsed": "Numerical bracketing and stopping conditions, not projectile-specific code."
+        }
+      ]
+    },
+    {
+      "id": "aifg-a:169",
+      "slug": "jump-points",
+      "deliverables": [
+        "libs/shared/catalog/src/studies/aifg/jump-points.json",
+        "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+        "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts"
+      ],
+      "classification": "mixed",
+      "engineAndLocalSteps": "The straight run-up calls the exported engine matchVelocity for acceleration. Local code advances horizontal motion, recognises the first sampled marker encounter, checks both position and velocity tolerances, applies a vertical launch impulse only on acceptance, and evaluates a constant-gravity equal-height flight from the actual accepted horizontal state. No engine jump or private helper is imported.",
+      "executable": "typescript",
+      "executableNullRationale": null,
+      "example": "Courier Finch runs to a take-off ring to cross a canal onto a receiving pad.",
+      "specClaims": [
+        "The first run-up requests acceleration 16, caps it at 4, and advances to speed 1 and position 0.25.",
+        "The default run reaches the marker at time 2.25, position 7.5 and horizontal speed 4, then applies vertical speed 5.",
+        "The exact equal-height flight lasts 2 seconds, reaches apex height 2.5 at x 11.5 and contacts the pad at x 15.5.",
+        "Changing only the initial position to 6 reaches the correct marker at time 0.75 with speed 3, so launch is rejected with velocity error 1.",
+        "Position alone and velocity alone cannot pass; actual tolerance-accepted horizontal speed is preserved.",
+        "A skipped position window, an unreachable speed and an accepted state that misses a narrow receiving pad are genuine failure cases.",
+        "An unfinished bounded run reports its remaining phase; drawing bounds, charts, moments, inputs and placeholders remain consistent."
+      ],
+      "limitations": [
+        "The local marker policy is a one-pass decision on a straight, aligned runway; it is not a general spatial arrival controller.",
+        "Sampled encounters can skip the launch window. Rejected runs end at the decision, retaining the incoming velocity without simulating emergency braking.",
+        "Flight assumes equal heights, constant gravity, no drag and no mid-air steering.",
+        "Tolerance-accepted launch errors can still miss a narrow receiving pad.",
+        "The final landing sample retains incoming velocity and ends before collision response.",
+        "The scene engine supplies run-up acceleration only; it has no jump-marker transition."
+      ],
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "status": "Web open unavailable; curl with Accept application/vnd.citationstyles.csl+json returned HTTP 200.",
+          "observed": "Crossref metadata identifies AI for Games, Ian Millington, edition 3, CRC Press and the requested DOI.",
+          "claimUsed": "Book identity and the catalog-provided placement at Chapter 3, section 3.6.1 only; no chapter text was read."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Jump.java",
+          "status": "Opened successfully with web; full 379-line plain-text source returned. Numeric HTTP status was not exposed.",
+          "observed": "Jump extends MatchVelocity; calculateRealSteering checks position and velocity tolerances before invoking callback.takeoff; a descriptor holds take-off and landing positions; trajectory calculation derives planar launch velocity and airborne time.",
+          "claimUsed": "A public game-AI implementation coordinates an authored jump descriptor, velocity-matching run-up and an explicit take-off callback."
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "status": "Opened successfully with web; article text and equations returned. Numeric HTTP status was not exposed.",
+          "observed": "Equations 4.19, 4.21, 4.22 and 4.24 cover constant horizontal velocity, vertical velocity and height under gravity, and equal-height flight duration with air resistance neglected.",
+          "claimUsed": "The stated assumptions and equations of the study-local airborne arc."
+        }
+      ]
+    }
+  ],
+  "additionalOpenedUrls": [
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/MatchVelocity.java",
+      "status": "Opened successfully with web; full 117-line plain-text source returned.",
+      "observed": "The implementation divides the target-current velocity difference by timeToTarget and limits linear acceleration. Used as corroboration while reading Jump; not separately cited in the records."
+    },
+    {
+      "url": "https://www.gnu.org/software/gsl/doc/html/roots.html#root-bracketing-algorithms",
+      "status": "Web fetch timed out; the same section was later read from the successfully opened parent manual page.",
+      "observed": "No separate fragment citation is used."
+    },
+    {
+      "url": "https://git.savannah.gnu.org/cgit/gsl.git/tree/roots/bisection.c?h=release-2-8",
+      "status": "Web open unavailable; curl observed a 301 redirect and then timed out with no source body.",
+      "observed": "No implementation source obtained; excluded from the records."
+    }
+  ],
+  "validation": {
+    "authorReadBack": "All six deliverables were read back and amended for endpoint acceptance, terminal-state honesty, TypeScript ES2022 compatibility, tolerance-accepted initial marker positions and overlapping moving/static labels.",
+    "execution": "No tests, gates, installs or model execution were run, as required by the assignment. Parent owns integration and executable validation."
+  },
+  "tokenCounters": {
+    "cumulativeInputTokens": "unknown",
+    "cumulativeOutputTokens": "unknown",
+    "cumulativeTotalTokens": "unknown",
+    "scope": "author-06 worker session only",
+    "cutoff": "Receipt authoring on 2026-11-04, before the worker final handoff",
+    "reason": "No cumulative token-usage counter was exposed to this worker; no value was inferred from context size or tool-output token estimates."
+  }
+}

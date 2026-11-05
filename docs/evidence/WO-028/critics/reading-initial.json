@@ -1,0 +1,52 @@
+{
+  "statement": "Reviewed every supplied reading and chart image (40/40) and the records/models for all twenty slugs: steering-behaviors, steering-output, flee, variable-matching, collision-avoidance, obstacle-and-wall-avoidance, corner-trap, blending-versus-arbitration, projectile-trajectory, the-firing-solution, iterative-targeting, jump-points, motor-control, actuator, movement-in-the-third-dimension, two-and-a-half-dimensions, kinematic-arrive, satisfaction-radius, kinematic-wander, coordinated-movement. Candidate source hashes match brief/source-manifest.json at baseline 55b59c9133056c1d6471274a9676a7d5649196ac. No tests, browser launches, gates, descendants or source changes; only private brief output. Factual source support and publisher access were outside this reading review. Cumulative token counters are unknown; source, scope and cutoff are not exposed. Individual coverage is recorded in brief/coverage.json.",
+  "best": [
+    "variable-matching",
+    "projectile-trajectory",
+    "motor-control"
+  ],
+  "findings": [
+    {
+      "slug": "collision-avoidance",
+      "where": "Chart view: shared chart legend in composites/study/study.html and study-visuals/timeline/timeline.html",
+      "kind": "drawing",
+      "finding": "The Chart view omits timeline.series labels and keeps the Movement legend. Here green is current centre separation but its key says Courier velocity × 1 s; amber is closest-approach separation but the key says Closest projections; acceleration × 0.5 s². The same shared omission leaves iterative-targeting’s positive/negative tolerance lines unnamed, calls kinematic-arrive’s velocity line next displacement, and never identifies coordinated-movement’s amber mean-error trace. The chart axes and worked numbers are consistent; the key describes a different representation.",
+      "fix": "In Chart view, render the active timeline.series labels as its key, as the comparison charts already do. Keep the motion legend and motion-only caption for Movement view."
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "where": "Initial Movement drawing at 1.10 s: Courier and Avoid labels in obstacle-and-wall-avoidance.model.ts frameOf",
+      "kind": "drawing",
+      "finding": "The courier at x 4.40 and avoidance target at x 4.00 put Courier and Avoid on the same label baseline less than one character apart. The words overprint one another, so the target the normal constructed cannot be identified by its label.",
+      "fix": "Put Avoid below the horizontal construction, or omit its inline label and identify the amber cross explicitly as the avoidance target in the legend."
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "where": "Initial Movement drawing at 1.10 s: frameOf vectors and links",
+      "kind": "drawing",
+      "finding": "The forward ray, velocity and surface-normal arrow all lie on the same horizontal line. The gray normal is drawn over most of the green velocity shaft, while the amber sensor segment follows the same line. A reader cannot independently inspect the velocity, ray length and normal offset that the prose asks them to compare.",
+      "fix": "Keep the ray and hit-normal construction at their physical coordinates; move the velocity and acceleration arrows into clearly named parallel lanes, using the same scale."
+    },
+    {
+      "slug": "the-firing-solution",
+      "where": "Initial Movement drawing: Chosen shot arrives / shared motion marker rendering",
+      "kind": "drawing",
+      "finding": "At the opening low-shot contact moment the green projectile dot covers nearly all of the breakwater beacon cross. The legend promises a cross the reader can point to, but the most relevant contact frame makes it almost disappear.",
+      "fix": "Keep the beacon distinguishable at contact, for example with an outline extending beyond the projectile or by drawing the target cross above the projectile dot."
+    },
+    {
+      "slug": "jump-points",
+      "where": "Initial Movement drawing: Marker accepted / shared motion marker rendering",
+      "kind": "drawing",
+      "finding": "Finch sits exactly on the take-off marker in the opening accepted frame. The take-off ring is rendered with radius 7 before Finch’s radius-10 body, so it disappears entirely. This hides the marker whose position-and-velocity contract is the subject of the study.",
+      "fix": "Use a take-off outline larger than Finch, or render a visible ring above/around the body at coincidence; preserve the true marker position."
+    },
+    {
+      "slug": "coordinated-movement",
+      "where": "Show the numbers / visual.textEquivalent",
+      "kind": "hard-prose",
+      "finding": "The text equivalent lists all three robots’ coordinates, all three identical velocities, all three slot coordinates, the anchor, gate, Camera error and mean error in one long four-decimal paragraph. The repeated state dump buries what the drawing teaches: distinct moving slots and measurable following error. The worked example already supplies the detailed calculation.",
+      "fix": "Shorten this to the named crew following their own slots, Camera’s current position and slot error, the mean error, and the shared anchor/gate. Leave the repeated per-member vectors and detailed arithmetic in the worked example/model."
+    }
+  ]
+}

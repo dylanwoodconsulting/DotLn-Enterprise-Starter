@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "kind": "native-preflight",
+  "date": "2026-11-05",
+  "scope": "WO-028 shared-study repair; intermediate native checks, not target gate rows",
+  "checks": [
+    {
+      "command": "npm run format:check",
+      "log": "preflight-final-format-check.log",
+      "logSha256": "d90cc17c11a21414318c0ecd1722b424e3c1dba6db305eab535a35254b169111",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 2814,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 2814,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 473696800,
+        "peakRssBytes": 607420416,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:28:49.349Z",
+        "finishedAt": "2026-11-05T07:28:52.163Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run lint",
+      "log": "preflight-final-lint.log",
+      "logSha256": "e7a25d1af077a10416b0c6e95df350b9eb7b02f0d75dde6a29eaaaed9f257a60",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 48938,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 48938,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1734321872,
+        "peakRssBytes": 1813708800,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:28:52.293Z",
+        "finishedAt": "2026-11-05T07:29:41.232Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run test",
+      "log": "preflight-final-unit.log",
+      "logSha256": "38484697f73fe1563086ea4aa856d7ea25a0890bd0d841ef5544fdf0259fd8fe",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 38390,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 38390,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 3249961160,
+        "peakRssBytes": 3306225664,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:29:41.364Z",
+        "finishedAt": "2026-11-05T07:30:19.754Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run build",
+      "log": "preflight-final-build.log",
+      "logSha256": "200c461fa3d43ef3c25291cf8bc9cdeada24aa7c01b5c2f5844b5a49fbd5c398",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 5820,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5820,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1735506688,
+        "peakRssBytes": 1864138752,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:30:19.889Z",
+        "finishedAt": "2026-11-05T07:30:25.709Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run lint:fixtures",
+      "log": "preflight-final-lint-fixtures-fixed.log",
+      "logSha256": "889cc4bce9b4c500050375ff4cc4968f50fdc3fe7e52ff7bb3d5b118cae3d2b7",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 4014,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 4014,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 401706144,
+        "peakRssBytes": 545701888,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:45:20.552Z",
+        "finishedAt": "2026-11-05T07:45:24.566Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run check:bundle",
+      "log": "preflight-final-bundle.log",
+      "logSha256": "b6b68ef24f045e68ab1a4d66f2419e84e7f8c0c6d196447be6329084dd526ff3",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 5904,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5904,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1750794376,
+        "peakRssBytes": 1881948160,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:31:38.145Z",
+        "finishedAt": "2026-11-05T07:31:44.049Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run e2e",
+      "log": "preflight-final-e2e-fixed.log",
+      "logSha256": "1e17d09487568297e29b16dfeec7bb8f15fcca09522d29aa37a1418fe7bf23b6",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 120395,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 120395,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 2058305192,
+        "peakRssBytes": 3133587456,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:42:33.385Z",
+        "finishedAt": "2026-11-05T07:44:33.781Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run typecheck:e2e",
+      "log": "preflight-final-e2e-types.log",
+      "logSha256": "d25a3d4b167373655e594df80dec3f00379cd4896f9b14f479d4f2517d742da1",
+      "runner": "launchpad canonical bounded runner; npm --prefix target",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 670,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 670,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 37622752,
+        "peakRssBytes": 123404288,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T07:45:58.886Z",
+        "finishedAt": "2026-11-05T07:45:59.556Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    }
+  ],
+  "observedCounts": {
+    "toolsFiles": 104,
+    "toolsTests": 954,
+    "toolingTests": 77,
+    "browserTests": 161
+  },
+  "lintIncludes": [
+    "check:templates",
+    "check:tokens",
+    "check:kits",
+    "i18n:check",
+    "typecheck:foundations",
+    "test:tooling",
+    "lint:components",
+    "check:shared-types",
+    "check:fixtures",
+    "catalog:check",
+    "studies:check",
+    "lint:hygiene",
+    "check:scripts"
+  ],
+  "notes": [
+    "The lint, unit and build selections ran separately through the same target package scripts after the earlier combined preflight identified integration failures.",
+    "Full e2e rerun includes the two corrected service-worker interception cases.",
+    "The final target format ran after the browser-test edit; the complete target gates recheck formatting at the reviewed candidate.",
+    "Launchpad document preflight and complete target gates are separate canonical rows.",
+    "Full command logs are retained in ignored session scratch; hashes bind these compact public results."
+  ]
+}
