@@ -29,7 +29,7 @@ ignored intake) and `harness usage` could measure nothing. Recorded for
 core (§Requests to core, item 5).
 
 This is document-only planning. It takes starter v0.117.0 on the operator's
-word, files five orders, amends four, records one standing rule from this
+word, files five orders, amends eight, records one standing rule from this
 session's message and five from WO-028's sessions, disposes twenty-one
 register rows, activates nothing and leaves its pull request for the
 operator's merge. The aim read from the operator's message, stated before
@@ -165,22 +165,28 @@ Amended, each change bounded to what the records changed since its filing:
   form, the message scope per work, `i18n:check` and the corpus test in
   criterion 2, the known issues (D3, D4).
 
-Not amended, and why: the pass drafted amendments to WO-029 to WO-032 (the
-base to WO-028's merge and the `concept-study-v1` sentence in place of the
-closed-v0 one in their known issues) and to WO-018 (one sentence naming
-WO-035's catalogs), then withdrew them before review, because the kit's
-change-review helper inlines every planning document the branch changed
-since its merge base, whatever `--since` names, under a 400,000-character
-ceiling, and the branch's documents then measured 426 KB; the five files
-carried 129 KB of text for a few sentences of change. The four research
-orders are bound by WS-002 rule 7, which the final review of WO-028 already
-rewrote to the current contract and this pass extended with the model
-shape, and their step 1 fast-forwards to the target's `main`, which holds
-WO-028's merge; their closed-v0 sentence is superseded by that rule, and the
-next pass amends the four as a change of its own size. WO-035's known issues
-carry the sentence WO-018 would have. D056's rewording went to WO-034
-instead of WO-029 and WO-030. The ceiling is reported to core
-(§Requests to core, item 8).
+- WO-029 to WO-032: the base to WO-028's merge (WO-031 and WO-032 keep
+  their provisional base, set after the pair), the `concept-study-v1`
+  sentence and the migrated model shape in place of the closed-v0 sentence
+  in their known issues, and the live-run surfaces at eighty studies.
+  Amended after the three reviews and the refutation, one combined Codex
+  review per order afterwards (§Validation), because the kit's
+  change-review helper inlines every planning document the branch changed
+  since its merge base, whatever `--since` names, under a 400,000-character
+  ceiling: with these four and WO-018 amended, the branch's documents
+  measured 426 KB and the three reviewers refused the brief, so the pass
+  withdrew the five small amendments, ran the reviews and the refutation
+  over the rest, and then restored the four. The research orders sit
+  outside the refutation's subject (a separate track), so the receipt binds
+  nothing in them. The ceiling is reported to core (§Requests to core,
+  item 8).
+
+Not amended: WO-018's one sentence naming WO-035's catalogs, which it
+regenerates for the rows it adds. WO-018 is a sequenced order whose text
+the receipt binds by hash, so a change after the receipt fails the plan
+check; the sentence waits for the next pass, and WO-035's known issues
+carry it meanwhile. D056's rewording is WO-034's, which edits both stream
+catalogs already.
 
 No existing order's criteria weaken. Each new order carries `Model:`,
 three-role `Effort:`, `Cost:` with additions and removals, a dated observed
@@ -586,16 +592,16 @@ chapter joins AI for Games' drawable rows.
   edges to WO-027 reference-only).
 - WS-002: rule 6 (a work's next batch waits for the standards pass boarded
   against it; the pathfinding chapter after WO-036); rule 7 (the model
-  shape); the member table's note that the target's `main` holds WO-028's
-  merge; WO-028's delivery row closed and released.
+  shape); the member table's bases for WO-029 and WO-030; WO-028's delivery
+  row closed and released.
 - `docs/repositories/dotln-angular.md`: the facts table (last reviewed
   source `48c7f8e`, #14, 2026-11-05; `DotLn Angular v0.10.0`), eighty
   studied concepts, the release table's v0.10.0 row.
 - `docs/planning/sequence.md` (D8); the idea ledger's registration heading;
   the generated work-order index and history page; the follow-up register
   (the batch above).
-- WO-034 to WO-038 filed; WO-027, WO-033, WO-023 and WO-024 amended
-  (§Orders filed and amended).
+- WO-034 to WO-038 filed; WO-027, WO-033, WO-023, WO-024 and WO-029 to
+  WO-032 amended (§Orders filed and amended).
 - No budget, ceiling or baseline is raised; `docs/control/budgets.json` is
   unchanged (its gate share of two thirds arrived with #57).
 
@@ -679,7 +685,7 @@ From DotLn-Enterprise-Starter's 2026-11-05 planning pass, docs/planning/passes/s
 
 7. For your information: the operator directed that coding standards are a dedicated pass that occurs often; the fork files one per planning pass (WS-001 rule 31) and the first, WO-034, reshapes what WO-028's final review boarded. No kit change asked.
 
-8. Ask on the change-review helper (scripts/lib/review-worker.mjs, runChangeReview): with --subject planning the brief inlines every planning document and order the branch changed since its merge base with main, whatever --since names, under the 400,000-character ceiling of change-review-protocol (profile-refused: change review brief). A pass that files five orders and amends nine measured 426 KB of such documents and could not be reviewed until it withdrew small amendments to five orders (129 KB of inlined text for a few sentences). Ask: inline only the documents --since bounds, or the diff of a modified document rather than its whole text, or raise the ceiling; and let the refusal print the measured size.
+8. Ask on the change-review helper (scripts/lib/review-worker.mjs, runChangeReview): with --subject planning the brief inlines every planning document and order the branch changed since its merge base with main, whatever --since names, under the 400,000-character ceiling of change-review-protocol (profile-refused: change review brief). A pass that files five orders and amends nine measured 426 KB of such documents and could not be reviewed until it withdrew small amendments to five orders (129 KB of inlined text for a few sentences), which it restored after the refutation and reviewed one by one with --order --kind combined. Ask: inline only the documents --since bounds, or the diff of a modified document rather than its whole text, or raise the ceiling; and let the refusal print the measured size.
 ```
 
 ## Process cost
@@ -702,12 +708,15 @@ nothing; the last three completed: the criteria adversary 0 h 10 min and
 consistency reviewer 0 h 15 min and 3,959,158 tokens, by the
 codex-result-envelope), one refuter launch (a Claude `dotln-worker` in the
 background: 0 h 11 min to its hand-back, 190,021 tokens and 3 tool uses by
-the host's usage line, 0 h 13 min dispatch to file), and no supplementary
-review, because
-the research orders were not amended in the end and the refuter's subject
-holds every order this pass filed or changed: ten uses against the cap of
-twenty counted at their most conservative, four with a worker, no re-task,
-no descendant observed.
+the host's usage line, 0 h 13 min dispatch to file), and four combined
+Codex reviews, one per research order restored after the refutation
+(WO-029 0 h 9 min and 1,766,518 tokens, WO-030 0 h 7 min and 1,831,118,
+WO-031 0 h 7 min and 1,707,807, WO-032 0 h 10 min and 2,450,586, by the
+codex-result-envelope), in place of a supplementary goal review, because
+the refuter's subject holds every sequenced order this pass filed or
+changed and the research orders are a separate track: fourteen uses
+against the cap of twenty counted at their most conservative, eight with a
+worker, no re-task, no descendant observed.
 Wall-clock of the pass's commands: the preview 268 ms; the update's four
 gates 0 h 1 min; `update --finish` seconds; `plan start` under 0 h 1 min;
 the index and the register sync seconds; the document gate 0 h 1 min a
@@ -750,6 +759,23 @@ checkout was detached at an intermediate commit; both are counted as uses.
 | Consistency F1 (blocking, the generated index) | Fixed: `npm run work-orders -- index` regenerated after the research-order amendments were withdrawn; `index --check` passes with the two standing advisories. |
 | Consistency F4 (WO-036 criterion 6) | Fixed: the `grid` family is a shape change to the closed v1 family enum, so WO-036 lands `concept-study-v2` (the enum extended and nothing else), the loader, `VisualFamily` and `check-studies.mjs` accepting v1 and v2, the negative control refusing a v1 record that names `grid`, and the eighty v1 records unchanged; named in the Cost, the Design, step 10, criterion 6 and the known issues. |
 | Consistency F6 (WO-038 criterion 3) | Fixed: the sweep is a new inventory-driven evidence helper that drives each family's controls and asserts coverage, because VER-001's script enumerates `studies/aifg/` only; the historical script stays. |
+
+**The research orders' reviews.** After the refutation, the four research
+orders' amendments were restored (§Orders filed and amended) and each was
+reviewed by one combined Codex worker carrying all three briefs
+(`npm run worker -- review --kind combined --host codex --order WO-0NN
+--since ea210bf`, the kit's last-round form, `gpt-6.1-sol` at `max`, no
+readback), launched together and retained in each order's reviews lane:
+WO-029 0 h 9 min, 1,766,518 tokens, 0 findings; WO-030 0 h 7 min,
+1,831,118 tokens, 0 findings; WO-031 0 h 7 min, 1,707,807 tokens, 0
+findings; WO-032 0 h 10 min, 2,450,586 tokens, 2 notes. Each report notes
+that the checkout changed during its episode: the parent edited this pass
+document and the idea ledger while the workers read, never an order. The
+two notes: WO-029's and WO-030's Depends-on sentence still called the base
+WO-022's merge, fixed to WO-028's merge and v0.10.0; and this document's
+process cost and outcome still said the research orders were not amended,
+fixed here. The research orders sit outside the refutation's subject, so
+no receipt binds them and no disposition is owed.
 
 **Independent refutation.** [Receipt 021](../refutations/2026-11-05-planning-3dd3576d8d86212a-021.md)
 is the fresh judgment through the direct route: one background Claude
@@ -805,9 +831,10 @@ sessions boarded is an order (WO-034 to WO-038), a rule (WS-001 rules 27 to
 untriaged; the operator's direction of this session on coding standards is
 the rule it is, with the first standards pass filed where the next batches
 will copy it; and the three independent reviews and the refutation judged
-the result. What the pass could not do as asked of itself: amend the four
-research orders and WO-018 in this pass (the kit's review brief ceiling;
-their standing rules bind them meanwhile) and name the five 2026-11-04 rules
-in the kit's block (their rows are in a retained lane the check does not
-read); both are recorded with their reasons and asked of core. This record
+the result. What the pass could not do as asked of itself: amend WO-018's
+one sentence after the receipt bound its text (the next pass does it) and
+name the five 2026-11-04 rules in the kit's block (their rows are in a
+retained lane the check does not read); both are recorded with their
+reasons and the second is asked of core, with the review brief's ceiling
+that cost the research orders' amendments a second round. This record
 creates no target implementation or activation.

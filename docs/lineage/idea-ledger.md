@@ -16,7 +16,7 @@ verbatim in ignored intake (`docs/intake/notes/planning-2026-11-05.md`). The
 record is
 [the planning document](../planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md);
 this heading registers the pass for the plan tooling. The pass filed five
-orders and amended four; no idea enters the ledger, because the pass was
+orders and amended eight; no idea enters the ledger, because the pass was
 not an ideation dispatch and the operator's directions are recorded in the
 operator record, WS-001 and the orders.
 

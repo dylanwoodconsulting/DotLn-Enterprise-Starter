@@ -47,8 +47,8 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-021 merged (hard: the `marbles` family, the marble
 contract and spec helper, the executable rule and the RxJS study directory
 this batch reuses; WO-020's record, check, composite, route and fan-out
-procedure come with it). The base above is WO-022's merge, released as
-`DotLn Angular v0.9.0`; step 1 integrates the target's current `main`.
+procedure come with it). The base above is WO-028's merge (#14), released
+as `DotLn Angular v0.10.0`; step 1 integrates the target's current `main`.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->

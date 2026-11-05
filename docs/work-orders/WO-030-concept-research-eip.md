@@ -49,8 +49,8 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-022 merged (hard: the `flow` family and its two builders,
 the analogy rule and the messaging study directory this batch reuses; the
 `marbles` family and WO-020's record, check, composite, route and fan-out
-procedure come with it). The base above is WO-022's merge, released as
-`DotLn Angular v0.9.0`; step 1 integrates the target's current `main`.
+procedure come with it). The base above is WO-028's merge (#14), released
+as `DotLn Angular v0.10.0`; step 1 integrates the target's current `main`.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
