@@ -334,10 +334,7 @@ for the patch release.
 7. `node --test tools/` passes with the title workflow's three cases: a
    title that opens with a supported gitmoji and carries no conventional
    type is returned as written, a typed title is decorated with its type's
-   gitmoji, and a bare subject is refused; and this order's draft pull
-   request, titled with a gitmoji and a subject alone, keeps its title
-   through the workflow's run, recorded in the evidence README from the
-   pull request's checks.
+   gitmoji, and a bare subject is refused.
 8. `node scripts/target-gate.mjs WO-027 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
@@ -357,7 +354,10 @@ ER-F10 (the duplicated budget blocks and `test-setup.ts` files) is deferred
 by the filing pass with its reopening on the register. This order activates
 only on a launchpad whose starter carries core WO-221's `--draft` form; the
 draft pull request and its workflow runs are a final-review obligation read
-from `docs/evidence/WO-027/preview-pr.json`, never a criterion.
+from `docs/evidence/WO-027/preview-pr.json`, never a criterion; the final
+reviewer reads there that the title workflow left this order's
+gitmoji-and-subject title as written, which no verification criterion can
+reach because the draft opens after verification passes.
 `Target release classification: patch` and `Target release notes: reviewed`
 are set under WO-012's declared policy.
 

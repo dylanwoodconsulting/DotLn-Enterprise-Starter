@@ -109,8 +109,8 @@ family exists.
   moved and why; reduced motion steps without transition. First rendered
   pair (rule 25): A, a register table whose rows move between state columns;
   B, a state-machine diagram with the current state raised; one variable, the
-  representation; both at 1440 and 360; the rounds continue until the
-  operator says done.
+  representation; both at about 2080 by 1460 and 360 (rules 25 and 29);
+  the rounds continue until the operator says done.
 - **Executable models**: each record's `pseudocode.executable` is
   `{ kind: 'typescript', module: 'libs/features/tools/src/lib/studies/poeaa/<slug>.model.ts' }`,
   the entry of a few lines composing `<slug>.simulation.ts` (language-free)
@@ -199,8 +199,8 @@ the design record.
 2. The `states` family with stories `StudyStates` and a spec that renders a
    four-state register to its text equivalent. Check: `npx nx test tools`
    exits 0; `npm run lint:components` exits 0.
-3. The first rendered pair (A register table, B state machine) at 1440 and
-   360; the rounds; the rejected implementation removed with its record.
+3. The first rendered pair (A register table, B state machine) at about
+   2080 by 1460 and 360; the rounds; the rejected implementation removed with its record.
    Check: `grep -c "Round" docs/evidence/WO-023/design/comparisons.md` is at
    least 1.
 4. Record the stop figure and the launch/re-task budget in `fan-out.md` as the
@@ -260,7 +260,8 @@ each.
    and the limits; open Identity Map and step a hit and a miss; open the two
    offline locks; open Data Transfer Object and Remote Facade. The VER report
    carries a `## Walkthrough` section with the dated steps and the
-   screenshots at 360, 768 and 1440 under `docs/evidence/WO-023/walkthrough/`
+   screenshots at 360, 768, 1440 and the operator's sizes (rule 29) under
+   `docs/evidence/WO-023/walkthrough/`
    (`ls docs/evidence/WO-023/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what a unit of work tracks, what an
    identity map prevents, and when an optimistic lock is the wrong choice, as
@@ -307,7 +308,8 @@ each.
    (`grep -c "Unit of Work" docs/dev-reference/architecture/events-and-state.md`
    is at least 1).
 8. `docs/evidence/WO-023/design/comparisons.md` records the first pair (A
-   register table, B state machine) and every later round with its pick, and
+   register table, B state machine), each rendered at about 2080 by 1460 and
+   360, and every later round with its pick, and
    the decisions file records the operator's word that ended the rounds; the
    decisions file names the removed candidate's files and `ls` on each prints
    nothing.

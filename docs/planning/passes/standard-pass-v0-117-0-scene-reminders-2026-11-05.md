@@ -705,4 +705,41 @@ will copy it.
 
 ## Validation
 
-VALIDATION_PLACEHOLDER
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning --since 926270bb` under the lane `planning-2026-11-05`,
+round 1, over the change since `926270bb` at tree `1c7f6cdc`, launched
+together and retained in the ignored reviews lane: the criteria adversary
+0 h 10 min, 2,630,250 tokens, 6 findings (2 blocking); the design improver
+0 h 7 min, 1,615,692 tokens, 4 (0 blocking); the consistency reviewer
+0 h 15 min, 3,959,158 tokens, 6 (1 blocking); all by the
+codex-result-envelope, with the effective effort unknown. Self-review:
+found 16 (10 distinct); fixed 10; recorded 0. No recheck round ran: every
+repair is order text, the precedent of the 2026-11-03 and 2026-11-04 passes
+for documentation-only repairs under product 07's ladder, and the refuter
+judged the repaired text. Two launch rounds before these returned no
+worker: the first because the planning brief, which inlines every planning
+document the branch changed since its merge base, measured over the kit's
+400,000-character ceiling (§Orders filed and amended; §Requests to core,
+item 8), and the second because the helper reads a planning branch and the
+checkout was detached at an intermediate commit; both are counted as uses.
+
+| Finding | Disposition |
+| --- | --- |
+| Criteria F1 (blocking, WO-027 criterion 7) | Fixed: the criterion keeps the title workflow's three local test cases; the live workflow run over the order's gitmoji-and-subject title is the final reviewer's obligation read from `preview-pr.json`, because the draft opens after verification passes. |
+| Criteria F2 and design F3 (blocking, WO-036 criterion 3) | Fixed: the head-on policy takes one normal in world coordinates (the perpendicular of the lower-to-higher id offset, or the world x-axis when the bodies coincide at rest) and the two corrections are opposite in world space; the regressions assert that the pair's separation grows and that no later frame overlaps. |
+| Criteria F3 and design F4 (WO-036 criteria 1 and 2) | Fixed: one clearance contract for the graph, the smoothing and the physics (a swept-unit test on every edge and shortcut, no corner cutting, the same test for the stop and the rays), a replan when the geometry stops a unit on its path, and thin-wall and diagonal-corner regressions in step 3 and criterion 2. |
+| Criteria F4, design F1 and consistency F2 (WO-037 criteria 4 and 9) | Fixed: both aims are new mechanisms of the engine's `aiming.ts`, which imports nothing outside the engine (rule 15, the module-boundary lint); criterion 4 greps for no feature import and names the lint and the spec. |
+| Consistency F3 (WO-037 criterion 2) | Fixed with the same change: the three WO-028 studies' mechanisms (gravity arcs to a fixed point, an angle search under gravity, no target velocity) are named as what they are and left unchanged; the order no longer claims they implement the scene's intercept or lead. |
+| Criteria F5 and design F2 (WO-034 criterion 2) | Fixed: the 70-line count is a diagnostic; functions at 70 lines or more carry the executor's recorded cohesion judgment, the positional-parameter and `valueN` counts go to zero, and the 80-line ceiling holds through the lint. |
+| Criteria F6 and consistency F5 (WS-001 rule 25; WO-023 and WO-024) | Fixed: both orders' Design, step 3 and criterion 8 render the pair at about 2080 by 1460 and 360, and criterion 1's screenshots add the operator's sizes (rule 29). WO-016, WO-008, WO-017 and WO-018 keep their 1440 wording until the pass before each activates; rules 25 and 29 bind them meanwhile. |
+| Consistency F1 (blocking, the generated index) | Fixed: `npm run work-orders -- index` regenerated after the research-order amendments were withdrawn; `index --check` passes with the two standing advisories. |
+| Consistency F4 (WO-036 criterion 6) | Fixed: the `grid` family is a shape change to the closed v1 family enum, so WO-036 lands `concept-study-v2` (the enum extended and nothing else), the loader, `VisualFamily` and `check-studies.mjs` accepting v1 and v2, the negative control refusing a v1 record that names `grid`, and the eighty v1 records unchanged; named in the Cost, the Design, step 10, criterion 6 and the known issues. |
+| Consistency F6 (WO-038 criterion 3) | Fixed: the sweep is a new inventory-driven evidence helper that drives each family's controls and asserts coverage, because VER-001's script enumerates `studies/aifg/` only; the historical script stays. |
+
+**Independent refutation.** REFUTATION_PLACEHOLDER
+
+**Document gate.** GATE_PLACEHOLDER
+
+Outcome against the dispatch: OUTCOME_PLACEHOLDER

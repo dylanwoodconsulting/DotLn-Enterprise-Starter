@@ -138,8 +138,11 @@ nothing and a title catalog of which records and nearby links name 89 of
   rule is added (D060's reason stands: a count invites the next mechanical
   split; the standards pass reads). The measure is the shape audit, run
   before and after over the first batch: functions with more than four
-  positional parameters, functions at 70 lines or more, `valueN`
-  placeholders.
+  positional parameters and `valueN` placeholders go to zero; functions at
+  70 counted lines or more are a diagnostic, each one left carrying the
+  executor's one-line judgment in the evidence that it does one job and
+  reads whole, never a split made for the count; the 80-line ceiling holds
+  through the gate's lint.
 - **Every output unchanged.** The reshape changes no frame value, no
   rendered word and no number: the simulations are untouched; each model
   spec keeps its physical-position and value assertions; a crawl of the
@@ -240,8 +243,9 @@ the verifier's reading; the two documents.
    `npm run i18n:check` exit 0; the crawl over those ten studies equals
    `dom-before.json` for their frames.
 5. Modules eleven to twenty likewise. Check: as step 4; the audit after
-   over the twenty prints 0 functions over four positional parameters, 0 at
-   70 lines or more, 0 `valueN` placeholders.
+   over the twenty prints 0 functions over four positional parameters and
+   0 `valueN` placeholders, and lists each function at 70 lines or more
+   beside its cohesion judgment.
 6. The corpus test's brackets and parameter rule; the two injections on a
    scratch copy as negative controls, recorded in the evidence README;
    `eslint --print-config` on a study source listing
@@ -294,9 +298,12 @@ the verifier's reading; the two documents.
    directory's `shape-audit.mjs` over `libs/features/tools/src/lib/studies/movement/`
    at the candidate, lists zero functions of the first batch's twenty
    presentation modules with more than four positional parameters (a single
-   description object counts as one), zero at 70 counted lines or more and
-   zero `valueN` placeholders in their messages, and `shape-audit-before.json`
-   from the integrated base records the D060 counts the candidate removed.
+   description object counts as one) and zero `valueN` placeholders in
+   their messages, lists each function at 70 counted lines or more beside
+   the executor's recorded judgment that it does one job and reads whole
+   (the evidence README carries the judgments), and
+   `shape-audit-before.json` from the
+   integrated base records the D060 counts the candidate removed.
 3. Every output is unchanged: `docs/evidence/WO-034/dom-diff.json`, the
    production crawl over every frame of the forty movement studies at the
    integrated base and at the candidate, records zero differing text nodes

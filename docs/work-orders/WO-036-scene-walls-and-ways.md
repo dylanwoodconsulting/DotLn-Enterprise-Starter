@@ -32,8 +32,10 @@ the text layer, the rail group `ways`, the inspector's route views and the
 no-route notice, the canvas painter's geometry, path and frontier layers,
 the `scene-v1` fixture contract with `stored-scene.ts` reading v0 and v1,
 a geometry fixture and the known outcome regenerated; adds the `grid` study
-family under `libs/features/tools/src/lib/composites/study-visuals/grid/`
-and one authored study, A* (`aifg-a:222`), under
+family under `libs/features/tools/src/lib/composites/study-visuals/grid/`,
+the `concept-study-v2` schema (`grid` added to the family enum and nothing
+else changed) with `VisualFamily`, the loader and `check-studies.mjs`
+accepting v1 and v2, and one authored study, A* (`aifg-a:222`), under
 `libs/shared/catalog/src/studies/aifg/` with its simulation, presentation
 and entry under `libs/features/tools/src/lib/studies/pathfinding/`, its
 messages in `studyAifg/en.json` and its row in `studies-summary.json`; e2e
@@ -153,11 +155,21 @@ geometry (`scene-v0`).
   stored composition; `stored-scene.ts` reads v0 as v1 with empty geometry
   and writes v1; a stored value that fails validation is ignored and
   reported as today.
-- **The graph.** A tile graph over the field at `cell-size` (default so the
-  field is about 48 by 27 cells), a cell blocked when a wall or obstacle
-  inflated by the unit radius covers its centre, 8-connected with octile
-  edge costs multiplied by the cost function; rebuilt when geometry changes
-  (the field is small; a rebuild per edit is cheap and deterministic).
+- **The graph, under one clearance contract.** A tile graph over the
+  field at `cell-size` (default so the field is about 48 by 27 cells),
+  8-connected with octile edge costs multiplied by the cost function;
+  rebuilt when geometry changes (the field is small; a rebuild per edit is
+  cheap and deterministic). One clearance test serves the graph, the
+  smoothing and the physics: a cell is blocked when the unit's disc at its
+  centre meets a wall or obstacle; an edge between two cells is traversable
+  only when the swept unit, the disc moved along the segment between the
+  two centres, clears every wall and obstacle, so a thin wall between two
+  centres blocks the edge and not only the cells it covers; a diagonal move
+  needs both of its orthogonal neighbours' edges traversable, so no route
+  cuts a corner; smoothing keeps a shortcut only when its swept segment
+  passes the same test; and the simulation's stop at geometry and the
+  avoidance rays use that test too, so a route the search returns is one
+  the body can walk.
   `path.cost` (`aifg-a:253`, travel, danger and visibility costs) multiplies
   the travel cost; the danger and visibility layers are uniform zero until
   an influence-map order lands one, and the inspector's preview row says so
@@ -172,7 +184,8 @@ geometry (`scene-v0`).
 - **Following and replanning.** `path.follow` seeks the next waypoint
   within `waypoint-radius` and arrives at the last; the predictive variant
   looks `predict-time` ahead along the velocity; a unit replans when a
-  geometry step lands or the objective moves, counted in `replans`; no
+  geometry step lands, when the objective moves or when the geometry stops
+  it on its path (its swept step blocked), counted in `replans`; no
   route sets the unit's activity to `blocked`, with a text equivalent in
   its row, a notice in the inspector naming the unit and the reason, and a
   count in the instruments (`blockedUnits`); walls and obstacles stop a unit
@@ -183,11 +196,17 @@ geometry (`scene-v0`).
   steers from the nearest hit by `avoid-distance`, in the avoidance group;
   Collision avoidance (`aifg-a:134`) names the existing `avoid` as a rail
   tool of its own; the head-on policy (D009): when two bodies' projected
-  centres coincide, each steers to its own side, the lower unit id to its
-  left and the higher to its right, anti-symmetric so both part, covering
-  exact head-on, initial overlap, ordinary offset crossings and replay, with
-  the Collision avoidance study's comparison retained as the honest
-  regression of the chosen policy.
+  centres coincide, the pair takes one normal in world coordinates, the
+  perpendicular of the offset from the lower unit id to the higher, or the
+  world x-axis when that offset is zero (coincident, stationary bodies),
+  and the lower id steers along it while the higher steers against it, so
+  the two corrections are opposite in world space whatever the headings and
+  the bodies separate; the regressions cover exact head-on with opposite
+  headings, initial overlap, ordinary offset crossings and a replay of
+  each, every one asserting that the pair's separation grows from the first
+  frame after the policy fires and that no later frame overlaps, with the
+  Collision avoidance study's comparison retained as the honest regression
+  of the chosen policy.
 - **The rail and the inspector.** The nine rows typed with the kinds above
   (`graph.tile` for Tile graph with `cell-size` and `connectivity`;
   `path.find` for A* with `heuristic` and for Dijkstra with the heuristic
@@ -216,11 +235,18 @@ geometry (`scene-v0`).
   size; reduced motion steps without transition. Its first use is one
   authored study, A* (`aifg-a:222`), whose simulation calls the engine's
   `pathfinding.ts` (the rule: call the engine's function where it has the
-  behaviour), authored by the executor under the record contract
-  (`concept-study-v1`, message keys in `studyAifg/`, the model split into
-  simulation, presentation and entry under WO-034's shape rule) and
-  criticized by the factual and reading critics under the profile (two
-  launches). The family lets the research track draw the pathfinding
+  behaviour), authored by the executor under the record contract, which
+  this order moves to `concept-study-v2`: the v1 schema's `visual.family`
+  enum and `VisualFamily` in `models` name six families and are closed, so
+  `grid` is a shape change and a new version (WS-002 rule 7; the catalog
+  rules). `concept-study-v2.schema.json` adds `grid` to the enum and changes
+  nothing else; the loader, `VisualFamily` and `check-studies.mjs` accept v1
+  and v2, a v1 record reading as v2 unchanged; new writes use v2; the v0 and
+  v1 schemas stay immutable; and the record check's negative control refuses
+  a v1 record that names `grid` and admits the v2 one. The A* record is v2,
+  with message keys in `studyAifg/` and the model split into simulation,
+  presentation and entry under WO-034's shape rule, and is criticized by the
+  factual and reading critics under the profile (two launches). The family lets the research track draw the pathfinding
   chapter's 76 rows (WS-002 rule 6).
 - **Design brief and the first pair** (WS-001 rule 25, at the operator's
   sizes, rule 29): the field stays the page. A: the field tools sit in the
@@ -279,15 +305,18 @@ check, `walkthrough.md` and its screenshots; the documents.
    exit 0; a v0 fixture loads with empty geometry.
 3. `graph.ts` and `pathfinding.ts` with the heuristics, Dijkstra, retrieval
    and smoothing; a spec on a fixed field with a wall asserting the path,
-   the expansions and the no-route case. Check: `npx nx test scene-engine`
-   exits 0.
+   the expansions, the no-route case, a thin wall between two cell centres
+   (no edge across it) and a diagonal past a blocked corner (refused).
+   Check: `npx nx test scene-engine` exits 0.
 4. `path-following.ts`, replanning, the `blocked` activity, the stop at
    geometry, the metrics. Check: a spec drives a unit around a wall to the
-   objective and a sealed unit to `blocked`.
+   objective, a sealed unit to `blocked`, and a unit the geometry stops on
+   its path to a replan.
 5. Obstacle and wall avoidance and the head-on policy in `steering.ts`;
    the Collision avoidance study's comparison as the regression. Check:
-   `steering.spec.ts` covers exact head-on, initial overlap, an ordinary
-   offset and replay; `npx nx test tools` exits 0 for the study.
+   `steering.spec.ts` covers exact head-on with opposite headings, initial
+   overlap, an ordinary offset and a replay of each, asserting physical
+   separation; `npx nx test tools` exits 0 for the study.
 6. The nine rows typed, `TransformKind` grown (a decision records it),
    `sceneTransformKinds` and `interpretedKinds` equal, `readsParam`
    extended; the rail group `ways`. Check: the spec that runs every rail
@@ -304,10 +333,13 @@ check, `walkthrough.md` and its screenshots; the documents.
 9. The `grid` family with stories `StudyGrid` and a spec rendering a
    search's steps to its text equivalent. Check: `npx nx test tools` exits
    0; `npm run lint:components` exits 0.
-10. The A* study: the record, the three modules and the spec, the messages;
-    the two critics dispatched under the profile and their findings
-    disposed; `checked`. Check: `npm run studies:check` exits 0 over the
-    record; `npm run i18n:check` exits 0.
+10. The `concept-study-v2` schema, `VisualFamily`, the loader and
+    `check-studies.mjs` accepting v1 and v2 with the negative control; the
+    A* study: the record (v2), the three modules and the spec, the
+    messages; the two critics dispatched under the profile and their
+    findings disposed; `checked`. Check: `npm run studies:check` exits 0
+    over every record, the eighty v1 ones unchanged; `npm run i18n:check`
+    exits 0.
 11. Fixtures: `scene-walls.json`, the known outcome regenerated and read
     before commit; `check:fixtures` over `scene-v1`. Check: `npm run
     check:fixtures` exits 0; the simulation's frame hashes reproduce across
@@ -366,11 +398,16 @@ and review once each.
    that the recorded path length and expansions match the fixture, and
    that the frame hashes reproduce across two runs; with the gap sealed,
    every unit of the squad reads `blocked` within the fixture's tick and
-   `blockedUnits` counts them.
+   `blockedUnits` counts them; the thin-wall regression yields no edge
+   across a wall between two cell centres, the diagonal-corner regression
+   refuses a diagonal past a blocked corner, and a unit the geometry stops
+   on its path replans within the fixture's tick.
 3. `steering.spec.ts` covers exact head-on, initial overlap, an ordinary
-   offset crossing and a replay of each, asserting that both bodies part on
-   deterministic sides, and the Collision avoidance study's comparison
-   passes as the regression of the policy.
+   offset crossing and a replay of each, asserting that the pair's
+   separation grows from the first frame after the policy fires, that no
+   later frame overlaps and that the sides are the same across runs, and
+   the Collision avoidance study's comparison passes as the regression of
+   the policy.
 4. A composition exported after drawing geometry imports with its walls and
    obstacles, a `scene-v0` stored value loads with empty geometry, and
    `npm run check:fixtures` passes over the v1 schema.
@@ -378,9 +415,11 @@ and review once each.
    spec that runs every rail tool at its defaults passes, `interpretedKinds`
    equals `sceneTransformKinds`, and the nine typed rows pass
    `npm run catalog:check`.
-6. `npm run studies:check` exits 0 over the A* record, `checked` with two
-   reviewers and `docs/evidence/WO-036/review.md` recording both critics'
-   dispositions; the `grid` family's spec renders a search's steps to a
+6. `npm run studies:check` exits 0 over every record, the A* record as
+   `concept-study-v2` and the eighty v1 records unchanged, and on a scratch
+   copy refuses a v1 record that names `grid`; the A* record is `checked`
+   with two reviewers and `docs/evidence/WO-036/review.md` records both
+   critics' dispositions; the `grid` family's spec renders a search's steps to a
    text equivalent; and the inspector's "read the study" line opens the A*
    reading.
 7. `npx nx e2e dotln-e2e` exits 0 with the step 12 cases, axe at the board
@@ -405,7 +444,10 @@ and review once each.
 
 **Known issues and carry-ins:** The danger and visibility layers of
 `path.cost` are uniform until an influence-map order lands one (a candidate
-in the filing pass's NoOps); the inspector says so. The `grid` family makes
+in the filing pass's NoOps); the inspector says so. The `concept-study-v2`
+schema is this order's shared-infrastructure change (WS-002 rule 7),
+bounded to the family enum; a research batch that lands after it writes v2
+records with no other change. The `grid` family makes
 the pathfinding chapter's 76 rows drawable for the research track (WS-002
 rule 6), which cuts a batch after this order merges. WO-037 (shooting and
 bullets) depends on this order's geometry. The scene's known outcome is

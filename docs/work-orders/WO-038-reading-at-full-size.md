@@ -123,8 +123,14 @@ bounded by the column's.
 - **The families.** Each family's drawing takes its width from its
   container and keeps its aspect and its label placement rules (WO-028's
   shared label placement and WO-034's marks), so a wider drawing is the same
-  drawing larger; VER-001's label sweep at the operator's sizes is the
-  check that nothing clips or overprints.
+  drawing larger; a label sweep at the operator's sizes is the check that
+  nothing clips or overprints: a new evidence helper under
+  `docs/evidence/WO-038/` that enumerates the current study inventory from
+  `studies-summary.json`, drives each family's own controls (the motion and
+  timeline slider, the marbles and flow steps, the states and relations
+  steps) and asserts that it visited every study, because VER-001's
+  `label-sweep.mjs` enumerates `studies/aifg/` only and drives one slider;
+  the historical script stays as it is.
 - **Tokens.** The widths are tokens in `libs/shared/ui/src/styles/`
   (`--dotln-reading-measure`, `--dotln-reading-max`), read by the page and
   the composites, never a magic number in a template (G4).
@@ -166,9 +172,9 @@ the design record, `walkthrough.md` and its screenshots; the documents.
    text) at about 2080 by 1460 and 3840 by 1620, with 360 rendered; the
    rounds; the rejected implementation removed with its record. Check:
    `grep -c "Round" docs/evidence/WO-038/design/comparisons.md` is at least 1.
-4. The label sweep at the operator's sizes over every study (VER-001's
-   script from `docs/evidence/WO-028/ver-001/`). Check: zero cut and zero
-   overprinted frames.
+4. The label sweep helper of the Design, inventory-driven, at the
+   operator's sizes over every study. Check: it reports every study of
+   `studies-summary.json` visited, zero cut and zero overprinted frames.
 5. The visual baselines at the operator's sizes; the existing ones
    unchanged or regenerated with the decision named. Check:
    `npx nx e2e dotln-e2e` exits 0 over `catalog.visual.spec.ts`.
@@ -213,9 +219,11 @@ each.
    narrower than the reading's text measure, and the drawing is at least as
    wide as the text measure; the measurements are recorded in the evidence
    README with the decided layout's name.
-3. VER-001's label sweep over every study reads zero cut and zero
-   overprinted frames at 360, 768, 1440, about 2080 by 1460 and 3840 by
-   1620.
+3. The order's label sweep helper, enumerating every study of
+   `studies-summary.json` and driving each family's controls, reports every
+   study visited and reads zero cut and zero overprinted frames at 360, 768,
+   1440, about 2080 by 1460 and 3840 by 1620; the helper and its run are in
+   `docs/evidence/WO-038/`.
 4. `catalog.visual.spec.ts` passes with baselines at the operator's sizes,
    and the 360, 768 and 1440 baselines are unchanged from the integrated
    base, or changed with the round that decided it named in the decisions

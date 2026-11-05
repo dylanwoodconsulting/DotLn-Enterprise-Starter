@@ -113,7 +113,8 @@ them to the books' vocabulary; no `relations` family exists.
   (rule 25): A, a stack of levels with the loop drawn as an arrow returning
   to the bottom; B, a ring with the levels as stations and the loop as the
   ring itself; one variable, the geometry of a loop through levels; both at
-  1440 and 360; the rounds continue until the operator says done.
+  about 2080 by 1460 and 360 (rules 25 and 29); the rounds continue until
+  the operator says done.
 - **Executable arm where it exists**: a study with a mechanism to run carries
   `executable: { kind: 'typescript', module }` naming its model entry
   (`<slug>.model.ts` composing `<slug>.simulation.ts` and
@@ -212,8 +213,8 @@ screenshots, and the design record.
 2. The `relations` family with stories `StudyRelations` and a spec that
    renders a three-level stack with a loop to its text equivalent. Check:
    `npx nx test tools` exits 0; `npm run lint:components` exits 0.
-3. The first rendered pair (A stack with a returning arrow, B ring) at 1440
-   and 360; the rounds; the rejected implementation removed with its record.
+3. The first rendered pair (A stack with a returning arrow, B ring) at
+   about 2080 by 1460 and 360; the rounds; the rejected implementation removed with its record.
    Check: `grep -c "Round" docs/evidence/WO-024/design/comparisons.md` is at
    least 1.
 4. Record the stop figure and the launch/re-task budget in `fan-out.md` as the
@@ -263,7 +264,8 @@ each.
    note; choose Team Topologies; open the three interaction modes; open
    Conway's law and follow the Reverse Conway link. The VER report carries a
    `## Walkthrough` section with the dated steps and the screenshots at 360,
-   768 and 1440 under `docs/evidence/WO-024/walkthrough/`
+   768, 1440 and the operator's sizes (rule 29) under
+   `docs/evidence/WO-024/walkthrough/`
    (`ls docs/evidence/WO-024/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what a level of description is, what
    makes a loop strange, and when collaboration mode should end, as read from
@@ -309,7 +311,8 @@ each.
    `docs/ai-reference/catalog-rules.md` states the absent-material rule
    (`grep -c "absent" docs/ai-reference/catalog-rules.md` is at least 1).
 8. `docs/evidence/WO-024/design/comparisons.md` records the first pair (A
-   stack, B ring) and every later round with its pick, and the decisions file
+   stack, B ring), each rendered at about 2080 by 1460 and 360, and every
+   later round with its pick, and the decisions file
    records the operator's word that ended the rounds; the decisions file
    names the removed candidate's files and `ls` on each prints nothing.
 9. `node scripts/target-gate.mjs WO-024 --review` records a passing row for

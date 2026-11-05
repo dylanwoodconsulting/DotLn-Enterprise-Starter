@@ -130,10 +130,17 @@ marked by anything else moving.
   through; Iterative targeting (`aifg-a:166`) refines the aim by simulating
   the bullet under drag for `iterations`; with no aim tool a unit fires at
   the target's current position. Projectile trajectory (`aifg-a:162`,
-  `combat.projectile`) sets `bullet-speed` and `drag`. The three WO-028
-  studies' models are the mechanisms, called from the engine's `aiming.ts`
-  where they have the behaviour, never reimplemented (catalog rules), so
-  the study and the scene cannot disagree.
+  `combat.projectile`) sets `bullet-speed` and `drag`. Both aims are new
+  mechanisms of the engine's `aiming.ts`, written there because the scene
+  engine is `type:util` and imports nothing from a feature (WS-001 rule 15,
+  the module-boundary lint) and because the three WO-028 studies hold
+  different mechanisms: `solveFiringSolution` gives the low and high gravity
+  arcs to a fixed point, `searchTarget` bisects a launch angle under
+  gravity, and neither takes a target velocity, so they are not the
+  straight-bullet intercept or the drag-aware lead the scene needs. The
+  studies keep their mechanisms and records unchanged; the fight tools'
+  definitions link to them as the catalog's readings of the same ideas, and
+  nothing is claimed to be shared that is not.
 - **Hits and knockout.** A hit increments the unit's `hits`; at
   `knockout-hits` the unit's activity becomes `down`: it stops, is not
   steered, is drawn dim, leaves its formation under WO-015's lost-member
@@ -192,8 +199,9 @@ the design record, `walkthrough.md` and its screenshots; the documents.
 2. `projectiles.ts` and the types: advance, drag, range, the hit tests
    against units and geometry. Check: `npx nx test scene-engine` exits 0
    with a spec that ends a bullet on a wall, in an obstacle and on a unit.
-3. `aiming.ts`: the closed-form intercept and the iterative solution,
-   calling the three studies' mechanisms. Check: a spec hits a crossing
+3. `aiming.ts`: the closed-form intercept of a target at constant velocity
+   for a straight bullet and the iterative lead under drag, as engine
+   functions with no import outside the engine. Check: a spec hits a crossing
    target with the closed form at drag 0 and misses it at drag 0.3, where
    the iterative solution hits.
 4. The interpreter's three kinds, the fire step's target, the knockout and
@@ -272,8 +280,12 @@ each.
 4. The rail lists 30 tools with the `fight` group, the spec that runs every
    rail tool at its defaults passes, `interpretedKinds` equals
    `sceneTransformKinds`, and the five typed rows pass `npm run catalog:check`;
-   `aiming.ts` imports the three studies' mechanisms and `grep -c` of their
-   module paths in it prints at least 1 each.
+   `libs/shared/scene-engine/src/lib/aiming.ts` imports nothing outside
+   the engine (`grep -cE "@dotln-angular/|libs/features"
+   libs/shared/scene-engine/src/lib/aiming.ts` prints 0), `npx nx lint
+   scene-engine` passes the module-boundary rule, and `aiming.spec.ts`
+   asserts the intercept and the drag-aware lead on the fixture's crossing
+   target.
 5. A composition exported with a fire step imports and replays it at its
    tick, and `npm run check:fixtures` passes.
 6. `npx nx e2e dotln-e2e` exits 0 with the step 9 cases, axe at the board
