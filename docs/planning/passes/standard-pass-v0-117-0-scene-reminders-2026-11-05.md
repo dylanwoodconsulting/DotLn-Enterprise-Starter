@@ -692,13 +692,24 @@ prompt hook's facts list every counter unavailable). Subagents: budget 20
 workers through `npm run worker -- review --host codex` (one per brief,
 under the planning subject), one recheck round if a blocking finding is
 repaired, one background `dotln-worker` refuter through the direct route,
-and one supplementary Codex goal review over the research orders this pass
-amended and the sequence's new orders' assumptions, each launched once:
-five to six uses, no re-task, no descendant. Spent: PROCESS_COST_PLACEHOLDER
+and one supplementary Codex goal review if any research order were
+amended, each launched once: five to six uses, no re-task, no descendant.
+Spent: nine review launches of which three ran (the first three refused at
+the brief ceiling with no worker, journaled `no-report`; the next three
+refused before a launch because the checkout was detached, journaled
+nothing; the last three completed: the criteria adversary 0 h 10 min and
+2,630,250 tokens, the design improver 0 h 7 min and 1,615,692 tokens, the
+consistency reviewer 0 h 15 min and 3,959,158 tokens, by the
+codex-result-envelope), one refuter launch (a Claude `dotln-worker` in the
+background, REFUTER_COST_PLACEHOLDER), and no supplementary review, because
+the research orders were not amended in the end and the refuter's subject
+holds every order this pass filed or changed: ten uses against the cap of
+twenty counted at their most conservative, four with a worker, no re-task,
+no descendant observed.
 Wall-clock of the pass's commands: the preview 268 ms; the update's four
 gates 0 h 1 min; `update --finish` seconds; `plan start` under 0 h 1 min;
-the index and the register sync seconds; the reviews and the refuter in
-§Validation. Against the NoOp of doing nothing: the operator's two asks and
+the index and the register sync seconds; the document gate 0 h 1 min a
+run; the reviews and the refuter in §Validation. Against the NoOp of doing nothing: the operator's two asks and
 their reminders are orders and rules the next session can run, the update
 is on `main`, and the first standards pass stands where the next batches
 will copy it.
@@ -742,4 +753,17 @@ checkout was detached at an intermediate commit; both are counted as uses.
 
 **Document gate.** GATE_PLACEHOLDER
 
-Outcome against the dispatch: OUTCOME_PLACEHOLDER
+Outcome against the dispatch: starter v0.117.0 is taken on the operator's
+word and finished on `main`; WO-033 and WO-027 stand first, as the operator
+asked, with WO-027 freed from the pair it waited on; every reminder WO-028's
+sessions boarded is an order (WO-034 to WO-038), a rule (WS-001 rules 27 to
+31 and the operator record's items) or a disposed row, with none left
+untriaged; the operator's direction of this session on coding standards is
+the rule it is, with the first standards pass filed where the next batches
+will copy it; and the three independent reviews and the refutation judged
+the result. What the pass could not do as asked of itself: amend the four
+research orders and WO-018 in this pass (the kit's review brief ceiling;
+their standing rules bind them meanwhile) and name the five 2026-11-04 rules
+in the kit's block (their rows are in a retained lane the check does not
+read); both are recorded with their reasons and asked of core. This record
+creates no target implementation or activation.
