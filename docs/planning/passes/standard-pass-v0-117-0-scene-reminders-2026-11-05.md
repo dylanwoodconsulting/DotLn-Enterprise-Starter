@@ -701,7 +701,9 @@ nothing; the last three completed: the criteria adversary 0 h 10 min and
 2,630,250 tokens, the design improver 0 h 7 min and 1,615,692 tokens, the
 consistency reviewer 0 h 15 min and 3,959,158 tokens, by the
 codex-result-envelope), one refuter launch (a Claude `dotln-worker` in the
-background, REFUTER_COST_PLACEHOLDER), and no supplementary review, because
+background: 0 h 11 min to its hand-back, 190,021 tokens and 3 tool uses by
+the host's usage line, 0 h 13 min dispatch to file), and no supplementary
+review, because
 the research orders were not amended in the end and the refuter's subject
 holds every order this pass filed or changed: ten uses against the cap of
 twenty counted at their most conservative, four with a worker, no re-task,
@@ -749,9 +751,51 @@ checkout was detached at an intermediate commit; both are counted as uses.
 | Consistency F4 (WO-036 criterion 6) | Fixed: the `grid` family is a shape change to the closed v1 family enum, so WO-036 lands `concept-study-v2` (the enum extended and nothing else), the loader, `VisualFamily` and `check-studies.mjs` accepting v1 and v2, the negative control refusing a v1 record that names `grid`, and the eighty v1 records unchanged; named in the Cost, the Design, step 10, criterion 6 and the known issues. |
 | Consistency F6 (WO-038 criterion 3) | Fixed: the sweep is a new inventory-driven evidence helper that drives each family's controls and asserts coverage, because VER-001's script enumerates `studies/aifg/` only; the historical script stays. |
 
-**Independent refutation.** REFUTATION_PLACEHOLDER
+**Independent refutation.** [Receipt 021](../refutations/2026-11-05-planning-3dd3576d8d86212a-021.md)
+is the fresh judgment through the direct route: one background Claude
+`dotln-worker` (claude-opus-5-5 at xhigh by its generated definition, no
+model override, effective readback unknown) with no inherited conversation,
+reading the canonical prompt of `npm run plan -- refute --direct` and
+nothing else (its statement names the one file and the two reads it took):
+aligned-with-findings for the plan and every judged order (WO-033,
+WO-027, WO-034, WO-023, WO-024, WO-035, WO-036, WO-037 and WO-038, with
+WO-016, WO-008, WO-017 and WO-018 carried unchanged by hash), zero holds,
+37 known issues with reopening observations, 0 h 13 min dispatch to file,
+the subject `sha256:649d1c2b…` at `a080d48`, with no carried disposition.
+One formatting repair before the receipt helper admitted the pair: the
+worker's statement named the prompt file by its absolute path, which the
+screen refuses, and the parent replaced the checkout's prefix with the
+`<worktree>/` placeholder the screen names, changing no word of the
+judgment. The 37 known issues are NoOps for this pass (kind NoOp; reason:
+none is an observed failure and each names its reopening observation;
+evidence: the receipt's per-order findings; reevaluation: each finding's
+`reopenWhen`; usefulWhen: that observation showing a repair would improve
+the stated outcome); the ones an executor resolves under its own authority
+are named here so the orders' roles read them: WO-037 says nothing about
+shooters firing at a unit that is down or a fire step naming a unit an
+import lacks; WO-036 leaves a malformed `scene-v1` value's load behaviour
+unspecified beyond the v0 case and gives Obstacle and wall avoidance an
+engine implementation beside the study's own simulation; WO-035 may fetch
+a row's English twice while the data files still ship; WO-034's shape
+audit runs over the movement directory only, and the gate's lint alone
+holds the new batches to the ceiling; WO-038's grep for fixed widths also
+matches media-query breakpoints; five orders carry rounds that end only on
+the operator's word. The receipt's plan check printed one new advisory:
+WO-034's step 2 names `docs/evidence/WO-028/final-002/shape-audit.mjs`, a
+launchpad record path a target order's draft publish body must not name;
+the step copies the script into the order's own evidence directory, and
+the executor's body file names only that copy.
 
-**Document gate.** GATE_PLACEHOLDER
+**Document gate.** `npm run test:docs` at the tree with the receipt
+(`10fb8ed`) passed all fourteen tasks (format, configuration-root,
+registrations, declarations, generated, host, kit-verify, harness-context,
+license-surfaces, docs-check, reader-profiles, entropy, plan,
+plan-refutation-current) in 0 h 1 min with zero failures; the unchanged kit
+verifies 1,103 files at `ccfba0df`, and the advisories are the two standing
+criteria advisories (WO-008 criterion 1, WO-016 criterion 5), the WO-034
+path advisory above and the four historical operator-word lines. The gate
+runs once more after this closing edit, before the push, and the handoff
+names that result.
 
 Outcome against the dispatch: starter v0.117.0 is taken on the operator's
 word and finished on `main`; WO-033 and WO-027 stand first, as the operator
