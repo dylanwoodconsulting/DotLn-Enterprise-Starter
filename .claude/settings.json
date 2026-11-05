@@ -7,6 +7,10 @@
     "sessionUrl": false
   },
   "permissions": {
+    "allow": [
+      "Bash(node scripts/launchpad.mjs update --publish *)",
+      "Bash(node scripts/refute-plan.mjs publish *)"
+    ],
     "deny": [
       "Bash(npm publish *)",
       "Bash(scp *)",
@@ -20,6 +24,10 @@
       "Skill(anthropic-skills:computer-use)",
       "Skill(claude-in-chrome *)",
       "Skill(claude-in-chrome)",
+      "Skill(skill:anthropic-skills:built-in-browser)",
+      "Skill(skill:anthropic-skills:chrome-browser)",
+      "Skill(skill:anthropic-skills:computer-use)",
+      "Skill(skill:claude-in-chrome)",
       "enable__mcp__claude-in-chrome*",
       "enable__mcp__remote-devices__Claude_Browser*",
       "enable__mcp__remote-devices__computer*",

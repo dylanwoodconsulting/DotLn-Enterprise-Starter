@@ -3,7 +3,7 @@ import { DispatchJournalError, dispatchJournalDirectory, readDispatchJournals, }
 import { boundedCommand, completeTestSelection, diagnosticTestSelection, gateInvocation, nodeScriptArgs, npmScriptArgs, } from "./test-selection.mjs";
 import { formatDuration } from "./duration.mjs";
 import { observedSpawnSync as spawnSync } from "./gate-deadlines.mjs";
-import { withWriterRegistration } from "./writer-teardown.mjs";
+import { withWriterRegistration, zombieProcessState, } from "./writer-teardown.mjs";
 import { ensureTemporaryRoot, pruneSessionTemporaryRoots, temporaryProcessIdentity, temporaryRepository, } from "./temporary-roots.js";
 import { sourceChangeCommandEffect, sourceChangeWriterBranch, } from "./source-change-command.js";
 import { createHash, randomBytes } from "node:crypto";
@@ -14,11 +14,11 @@ import { basename, dirname, isAbsolute, join, relative, resolve, sep, } from "no
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { text as streamText } from "node:stream/consumers";
 import { TARGET_PUBLICATION_EFFECTS, targetPublicationRefusal, } from "./target-publication-policy.js";
-import { applyFeedbackCorrection, compileFeedbackUnits, COMPILER_PACKAGE_VERSION, fnv1a64, canonicalStringify, showHarnessAdvisory, harnessPromptIntent, harnessPromptLine, assertOutsideWriteGrants, outsideWriteEffect, } from "@dotln/compiler";
+import { applyFeedbackCorrection, compileFeedbackUnits, COMPILER_PACKAGE_VERSION, fnv1a64, canonicalStringify, showHarnessAdvisory, harnessPromptIntent, harnessPromptLine, operatorMessageClass, harnessSessionPhase, OPERATOR_QUESTION_CONTEXT, assertOutsideWriteGrants, outsideWriteEffect, } from "@dotln/compiler";
 import { harnessAuthorization } from "./reactor.js";
 import { personalFeedback } from "./loadouts/feedback.js";
 import { qualityPassGuidance } from "./document-quality.js";
-import { HarnessCommandRefused, drivenCommandEffect, drivenResearchCommandKind, LIVE_GATE_READ_LIST, harnessToolEffects, isDesktopControlTool, invocationEffects, liveGateReads, patchWriteTargets, shellRedirectTargets, shellWritePaths, shellWriteTargets, commitMessageInputs, shellDiagnostics, shellInvocations, executableShellInvocations, shellGuidance, } from "./harness-command.js";
+import { HarnessCommandRefused, HOST_DECIDED_CLASSIFICATIONS, drivenCommandEffect, drivenResearchCommandKind, LIVE_GATE_READ_LIST, harnessToolEffects, isDesktopControlTool, invocationEffects, liveGateReads, patchWriteTargets, shellRedirectTargets, shellWritePaths, shellWriteTargets, commitMessageInputs, shellDiagnostics, shellInvocations, executableShellInvocations, shellGuidance, writtenCommands, } from "./harness-command.js";
 import { activeGateRuns, beginGateRun, gateInputPath, gateRecordPath, prospectiveRealpath, gateTreeHash, findGateCheck, readGateChecks, recordGateChecks, gateCodeIdentity, } from "./gate-evidence.mjs";
 import { collectSessionUsage, currentCopilotSession, usageObservation, recordUsageObservation, usageReadbackLine, usageSessionKey, } from "./usage-observation.mjs";
 import { FeedbackRefused, feedbackContentHash, feedbackWriterFacts, } from "./feedback-boundary.js";
@@ -872,27 +872,12 @@ const record = (root, input, value) => {
         ...value,
     }) + "\n", { mode: 0o600 });
 };
-// WO-178: constrained metadata, never prompt, input or reason prose. The
-// prefix is a control-language classification, not a semantic classifier.
-const operatorPrefixes = {
-    "resume:": "direction",
-    "planning:": "direction",
-    "ideation:": "ideation",
-    "analysis:": "question",
-    "operator override:": "override",
-    "scope expand:": "scope expansion",
-    "conversation only:": "other step",
-    "quality pass:": "direction",
+/** An operator message with no control prefix that ends in a question mark. */
+const unprefixedQuestion = (prompt) => {
+    const message = operatorMessageClass(prompt);
+    return message.prefix === null && message.class === "question";
 };
-const observationPhase = (session) => session.intent === "resume: fix"
-    ? "repair"
-    : ({
-        executor: "implementation",
-        verifier: "verification",
-        reviewer: "finalReview",
-    }[session.role ?? ""] ??
-        session.role ??
-        "unknown");
+const observationPhase = (session) => harnessSessionPhase(session);
 const observationContext = (session) => ({
     workOrder: session.workOrder ?? null,
     role: session.role ?? "unknown",
@@ -1002,8 +987,10 @@ export function recordOperatorMessage(root, input, source = harnessInputHarness(
         !input.session_id)
         return;
     const session = readJson(statePath(root, input), initialSession(), true);
-    const firstLine = harnessPromptLine(input.prompt);
-    const prefix = Object.keys(operatorPrefixes).find((prefix) => firstLine.text.startsWith(prefix)) ?? null;
+    // Constrained metadata, never prompt, input or reason prose: the class is
+    // read from the message's form (its prefix or closing question mark), not
+    // from what it means.
+    const classified = operatorMessageClass(input.prompt);
     const route = source === "codex-dispatch-phrase"
         ? {
             route: "unknown",
@@ -1020,9 +1007,7 @@ export function recordOperatorMessage(root, input, source = harnessInputHarness(
             ? "host-task-notification"
             : source,
         ...route,
-        prefix,
-        prefixLine: prefix ? firstLine.index : null,
-        class: prefix ? operatorPrefixes[prefix] : "unclassified",
+        ...classified,
         digest: textDigest(input.prompt),
         bytes: Buffer.byteLength(input.prompt),
     });
@@ -1058,6 +1043,26 @@ export function recordCodexDispatch(root, sessionId, action, workOrder) {
     session.role = role;
     if (selected.workOrder)
         session.workOrder = selected.workOrder;
+    // Each dispatch starts its own phase, as the Claude prompt path records it:
+    // a session that verified and then repairs awaits the repair's completion,
+    // counted from the repair's dispatch, not the verification's.
+    const expected = {
+        next: "ImplementationReady",
+        fix: "RepairCompleted",
+        verify: "VerificationCompleted",
+        "final-review": "FinalReviewCompleted",
+    }[action];
+    if (expected && !["closed", "withdrawn"].includes(selected.phase))
+        session.expectedEvent = expected;
+    else
+        delete session.expectedEvent;
+    session.startingEventCount = localEvents(root, selected.workOrder).length;
+    // A checkout with no commit yet has no revision to start from.
+    const head = git(root, ["rev-parse", "--verify", "--quiet", "HEAD"], true).trim();
+    if (head)
+        session.startingRevision = head;
+    else
+        delete session.startingRevision;
     writeJson(statePath(root, input), session);
     const advisory = dispatchBindingAdvisory(session);
     if (advisory)
@@ -1235,6 +1240,13 @@ function registeredTargetNearMiss(root, input) {
 }
 const BRANCH_NAME = /^[A-Za-z0-9][A-Za-z0-9._/-]*$/;
 const COMMIT_SHA = /^[0-9a-f]{40}$/;
+/** A literal gh command's parts. The registered target's admission and the
+ * repository judgment both read gh's words through this. */
+function ghCommand(words) {
+    return words[0] === "gh"
+        ? { group: words[1], verb: words[2], rest: words.slice(3) }
+        : null;
+}
 function registeredTargetCommand(words, root) {
     const [first] = words;
     if (first === "git") {
@@ -1274,10 +1286,11 @@ function registeredTargetCommand(words, root) {
             ...(lease ? { lease } : {}),
         };
     }
-    if (first === "gh") {
-        if (words[1] !== "pr")
+    const gh = ghCommand(words);
+    if (gh) {
+        if (gh.group !== "pr")
             return null;
-        const verb = words[2];
+        const { verb, rest } = gh;
         if (!["create", "ready", "edit", "view"].includes(verb ?? ""))
             return null;
         const valued = new Set([
@@ -1296,14 +1309,14 @@ function registeredTargetCommand(words, root) {
         let bodyFile;
         let selector;
         let draft = false;
-        for (let at = 3; at < words.length; at += 1) {
-            const word = words[at];
+        for (let at = 0; at < rest.length; at += 1) {
+            const word = rest[at];
             if (word === "--draft" && verb === "create") {
                 draft = true;
                 continue;
             }
             if (valued.has(word)) {
-                const value = words[at + 1];
+                const value = rest[at + 1];
                 if (value === undefined)
                     return null;
                 if (word === "--repo" || word === "-R")
@@ -1419,6 +1432,213 @@ function gitHubIdentity(remote) {
         parts.some((part) => !/^[A-Za-z0-9_.-]+$/.test(part)))
         return null;
     return `${host}/${parts[0]}/${parts[1]}`.toLowerCase();
+}
+/** A remote's host under the one name its spelling establishes. Case, a trailing
+ * dot and a leading www. aside, a name under github.com is github.com and a name
+ * under a ghe.com tenant is that tenant, as gh reads them. An alias exists only
+ * over SSH, where one spelled from github.com with a hyphen or underscore and no
+ * further dot, such as github.com-work, which public DNS cannot serve, is
+ * github.com; an HTTPS host is a server. Every other name is its own server, even
+ * when it merely looks like one of these: a hook cannot read an SSH configuration
+ * or which servers gh is signed in to, and a false refusal has a working remedy
+ * where a silent reach of the parent has none. */
+function remoteHost(host, overSsh) {
+    const name = host
+        .toLowerCase()
+        .replace(/\.$/u, "")
+        .replace(/^www\./u, "");
+    return /(?:^|\.)github\.com$/u.test(name) ||
+        (overSsh && /^github\.com[-_][^.]*$/u.test(name))
+        ? "github.com"
+        : name.replace(/^.+\.([^.]+\.ghe\.com)$/u, "$1");
+}
+/** The repository a remote names as gh reads it, which is wider than the
+ * publish helpers' binding: a trailing slash, a user or token, a port and the
+ * git and http schemes all still reach it. gh reads a host without its port. */
+function remoteRepository(remote) {
+    let host;
+    let pathname;
+    let overSsh = true;
+    const scp = /^(?:[^@/:]+@)?([^/:]+):(.+)$/.exec(remote);
+    if (scp && !remote.includes("://")) {
+        host = scp[1];
+        pathname = scp[2];
+    }
+    else {
+        try {
+            const parsed = new URL(remote);
+            if (!["https:", "http:", "ssh:", "git:", "git+ssh:", "git+https:"].includes(parsed.protocol))
+                return null;
+            host = parsed.hostname;
+            pathname = parsed.pathname;
+            overSsh = parsed.protocol === "ssh:" || parsed.protocol === "git+ssh:";
+        }
+        catch {
+            return null;
+        }
+    }
+    const parts = pathname
+        .replace(/^\/+|\/+$/g, "")
+        .replace(/\.git$/, "")
+        .split("/");
+    if (parts.length !== 2 || parts.some((part) => !part))
+        return null;
+    const name = remoteHost(host, overSsh);
+    const repository = `${parts[0]}/${parts[1]}`;
+    const qualified = `${name}/${repository}`;
+    return {
+        host: name,
+        qualified,
+        selector: overSsh && !name.includes(".") ? repository : qualified,
+    };
+}
+/** Whether gh can act on a repository: the public forges here it cannot address. */
+const ghCanAddress = ({ host }) => !["gitlab.com", "bitbucket.org", "codeberg.org"].includes(host);
+/** Whether gh, offered both remotes, may choose an upstream that is not origin.
+ * gh ranks upstream first among the remotes on hosts it knows and drops a remote
+ * it cannot read as a repository, so it does whenever upstream is another
+ * repository it can address, wherever origin is and whatever origin names. */
+const ghChoosesUpstream = (origin, upstream) => origin?.qualified.toLowerCase() !== upstream.qualified.toLowerCase() &&
+    ghCanAddress(upstream);
+/** A pull request or issue URL, which names its repository to gh by itself. */
+const GH_ITEM_URL = /^https?:\/\/[^/\s]+\/[^/\s]+\/[^/\s]+\/(?:pull|issues)\/[1-9][0-9]*(?:[/?#]\S*)?$/u;
+/** gh ignores an empty GH_REPO, so only a value names a repository. */
+const GH_REPO_ASSIGNED = /^GH_REPO=./u;
+/** Whether gh would choose the repository of this pull-request or issue
+ * command by itself. Each repository spelling gh reads names one; help and a
+ * bare group reach none. An empty value names nothing, and gh then chooses as if
+ * the flag were absent. A URL counts as the selector it is, not as the value of
+ * a flag such as --body. */
+function ghChoosesRepository(gh) {
+    if ((gh.group !== "pr" && gh.group !== "issue") || !gh.verb)
+        return false;
+    const words = [gh.verb, ...gh.rest];
+    return !words.some((word, at) => word === "--help" ||
+        word === "-h" ||
+        ((word === "-R" || word === "--repo") && words[at + 1] !== "") ||
+        /^--repo=./u.test(word) ||
+        /^-R./u.test(word) ||
+        (at > 0 && !words[at - 1].startsWith("-") && GH_ITEM_URL.test(word)));
+}
+/** The two repositories of a fork's clone with no gh default set, from the
+ * clone's Git configuration alone, or null when gh has only one to choose or
+ * was told which. With both remotes and no default, gh chooses upstream and
+ * says nothing. `gh repo set-default` stores its answer on the remote it names,
+ * under remote.<name>.gh-resolved, which `--view` reports. */
+function ghUnsetFork(directory) {
+    const read = spawnSync("git", [
+        "config",
+        "-z",
+        "--get-regexp",
+        String.raw `^remote\.(origin\.url|upstream\.url|.+\.gh-resolved)$`,
+    ], { cwd: directory, encoding: "utf8", timeout: 10_000 });
+    // Exit 1 is a configuration with no such key.
+    if (read.status !== 0 && read.status !== 1)
+        throw new Error(read.error?.message ?? `git exited ${read.status}`);
+    const values = new Map();
+    for (const record of read.stdout.split("\0").filter(Boolean)) {
+        const end = record.indexOf("\n");
+        const key = end < 0 ? record : record.slice(0, end);
+        const value = end < 0 ? "" : record.slice(end + 1);
+        if (key.endsWith(".gh-resolved")) {
+            if (value)
+                return null;
+        }
+        else if (!values.has(key))
+            values.set(key, value);
+    }
+    const originUrl = values.get("remote.origin.url");
+    const upstream = remoteRepository(values.get("remote.upstream.url") ?? "");
+    if (originUrl === undefined || !upstream)
+        return null;
+    const origin = remoteRepository(originUrl);
+    return ghChoosesUpstream(origin, upstream) ? { origin, upstream } : null;
+}
+/** What a session reads when gh would reach upstream by itself. It offers only
+ * what works: gh cannot act on an origin it cannot address, takes an owner and
+ * name alone to its default host whatever server an alias is, and refuses
+ * gh repo set-default origin when the remotes are on two servers. Two aliases can
+ * share one such selector, which then names neither apart. */
+function ghForkRefusal(command, { origin, upstream }) {
+    const named = ({ qualified, selector }) => `-R ${selector}${selector === qualified ? "" : " (on gh's default host; if this alias is another server, name that server instead)"}`;
+    const opening = `DOTLN_HARNESS_REFUSED: ${command} names no repository in a clone`;
+    const closing = "Use operator override: for authorized recovery.";
+    if (!origin || !ghCanAddress(origin))
+        return `${opening} whose origin${origin ? ` (${origin.qualified})` : ""} is no repository gh can address and whose gh default is unset, so gh would reach upstream (${upstream.qualified}) without saying so (WO-246). If upstream is what you mean, name it with ${named(upstream)}. ${closing}`;
+    const parent = upstream.selector.toLowerCase() === origin.selector.toLowerCase()
+        ? ""
+        : `, or ${named(upstream)} to mean the parent`;
+    const setDefault = upstream.host === origin.host
+        ? ", or set this clone's default once with gh repo set-default origin"
+        : "";
+    return `${opening} whose origin (${origin.qualified}) and upstream (${upstream.qualified}) differ and whose gh default is unset, so gh would reach upstream without saying so (WO-246). Name the repository with ${named(origin)}${parent}${setDefault}. ${closing}`;
+}
+/** A pull-request or issue command a fork's clone would send to its parent
+ * without saying so. A session's other gh forms and a program that calls gh
+ * from inside a script stay unobserved. A clone that cannot be read is admitted
+ * with an advisory, because the judgment cannot tell. */
+function ghRepositoryJudgment(input, tools) {
+    if (tools?.[input.tool_name ?? ""] !== "shell")
+        return null;
+    const args = input.tool_input ?? {};
+    const source = args.command ?? args.cmd;
+    if (typeof source !== "string" || !/\bgh\b/u.test(source))
+        return null;
+    const requested = args.workdir ?? args.cwd;
+    // A literal `cd` moves the clone that is judged; any other leaves it unknown.
+    let directory = resolve(input.cwd, typeof requested === "string" ? requested : ".");
+    let commands;
+    try {
+        commands = writtenCommands(source);
+    }
+    catch {
+        // An unreadable line is left to the other guards, as a worker's gate is.
+        return null;
+    }
+    const clones = new Map();
+    for (const [at, command] of commands.entries()) {
+        const [program, ...operands] = command.program;
+        if (program === "cd" || program === "pushd") {
+            const [target, extra] = operands;
+            directory =
+                directory !== null &&
+                    target &&
+                    extra === undefined &&
+                    !/^[-~]|[$\u0000]/u.test(target)
+                    ? resolve(directory, target)
+                    : null;
+            continue;
+        }
+        const gh = ghCommand(command.program);
+        if (!gh || !ghChoosesRepository(gh) || directory === null)
+            continue;
+        const environment = [
+            ...command.assignments,
+            ...command.words.slice(0, Math.max(0, command.words.length - command.program.length)),
+            ...commands
+                .slice(0, at)
+                .filter((earlier) => earlier.program[0] === "export")
+                .flatMap((earlier) => earlier.program),
+        ];
+        if (environment.some((word) => GH_REPO_ASSIGNED.test(word)))
+            continue;
+        let fork;
+        try {
+            if (!clones.has(directory))
+                clones.set(directory, ghUnsetFork(directory));
+            fork = clones.get(directory);
+        }
+        catch (error) {
+            return {
+                advisory: `the gh repository judgment could not read the clone's remotes (${error instanceof Error ? error.message : "unknown failure"}), so a gh command that names no repository is admitted`,
+            };
+        }
+        if (fork) {
+            const written = `gh ${gh.group} ${gh.verb}`;
+            return { command: written, refusal: ghForkRefusal(written, fork) };
+        }
+    }
+    return null;
 }
 /** A host deny rule the emitted settings carry wins over any admission. */
 function emittedDenyMatches(root, command, words) {
@@ -1703,7 +1923,8 @@ const shells = new Set([
 const validPid = (value) => Number.isSafeInteger(value) && value > 1;
 /** Best effort: some sandboxes refuse `ps`. An empty table means unknown, never dead. */
 function processTable() {
-    const result = spawnSync("ps", ["-axo", "pid=,ppid=,lstart=,comm="], {
+    // The command column stays last: macOS ps truncates it when another follows.
+    const result = spawnSync("ps", ["-axo", "pid=,ppid=,stat=,lstart=,comm="], {
         encoding: "utf8",
         timeout: 5000,
         maxBuffer: 32 * 1024 * 1024,
@@ -1711,14 +1932,15 @@ function processTable() {
     if (result.error || result.status !== 0)
         return [];
     return result.stdout.split("\n").flatMap((line) => {
-        const match = /^\s*(\d+)\s+(\d+)\s+(\S{3}\s+\S{3}\s+\d+\s+\d\d:\d\d:\d\d\s+\d{4})\s+(.*)$/.exec(line);
+        const match = /^\s*(\d+)\s+(\d+)\s+(\S+)\s+(\S{3}\s+\S{3}\s+\d+\s+\d\d:\d\d:\d\d\s+\d{4})\s+(.*)$/.exec(line);
         return match
             ? [
                 {
                     pid: Number(match[1]),
                     ppid: Number(match[2]),
-                    startedAt: match[3],
-                    command: match[4].trim(),
+                    state: match[3],
+                    startedAt: match[4],
+                    command: match[5].trim(),
                 },
             ]
             : [];
@@ -1842,7 +2064,9 @@ export function codexHostProcess(parent = process.ppid, table = processTable()) 
     }
     return { source: "thread" };
 }
-/** Signal-zero existence, then a start-time comparison when the process table is readable. */
+/** Signal-zero existence, then, when the process table is readable, its state
+ * and start time: a zombie row is a process that has exited, and a different
+ * start time is another process that reused the pid. */
 export function harnessProcessAlive(owner) {
     if (!validPid(owner.pid))
         return false;
@@ -1854,6 +2078,8 @@ export function harnessProcessAlive(owner) {
             return false;
     }
     const row = processTable().find((entry) => entry.pid === owner.pid);
+    if (row && zombieProcessState(row.state))
+        return false;
     return !(owner.startedAt !== undefined &&
         row !== undefined &&
         row.startedAt !== owner.startedAt);
@@ -2490,7 +2716,15 @@ const ownerDead = (writer) => writer.owner !== undefined &&
     validPid(writer.owner.pid) &&
     writer.liveness !== "unavailable" &&
     !harnessProcessAlive(writer.owner);
-const writerRefusal = (writer) => {
+const writerShowCommand = "node scripts/harness.mjs writer --show";
+const writerReleaseCommand = "node scripts/harness.mjs writer --release";
+/**
+ * Who holds the worktree and what clears it. The session form names the
+ * commands the writer guard admits from the refused session itself, each as
+ * that exact command with nothing beside it; the operator form is printed by
+ * the release command an operator runs.
+ */
+const writerRefusal = (writer, reader = "session") => {
     const age = writer.reservedAt ? Date.parse(writer.reservedAt) : Number.NaN;
     const ageText = Number.isFinite(age)
         ? formatDuration(Math.max(0, Date.now() - age))
@@ -2506,8 +2740,39 @@ const writerRefusal = (writer) => {
         : writer.owner?.source === "thread"
             ? "thread owner is of unknown liveness"
             : "host process is not recorded";
-    return `the worktree is reserved by another session (actor ${writer.actorId.slice(0, 12)}; ${owner}). Owner ${JSON.stringify(writer.owner ?? { source: "unknown" })}; reservedAt ${writer.reservedAt ?? "unknown"}; age ${ageText}. Inspect with node scripts/harness.mjs writer --show or release from an operator terminal with node scripts/harness.mjs writer --release${alive === true ? " --force" : ""}`;
+    const remedy = reader === "operator"
+        ? `Inspect with ${writerShowCommand} or release from an operator terminal with ${writerReleaseCommand}${alive === true ? " --force" : ""}`
+        : alive === false
+            ? `This session may run ${writerShowCommand} and ${writerReleaseCommand}, each as that exact command with no pipe, redirect or other command beside it; the release retires the stale reservation and logs it`
+            : `This session may run ${writerShowCommand}, as that exact command with no pipe, redirect or other command beside it; ${alive === true ? `a live holder is released only by the operator, from an operator terminal: ${writerReleaseCommand} --force` : `the operator releases a holder of unknown liveness from an operator terminal: ${writerReleaseCommand}`}`;
+    return `the worktree is reserved by another session (actor ${writer.actorId.slice(0, 12)}; ${owner}). Owner ${JSON.stringify(writer.owner ?? { source: "unknown" })}; reservedAt ${writer.reservedAt ?? "unknown"}; age ${ageText}. ${remedy}`;
 };
+/**
+ * The two writer commands a refusal names, judged by their exact argv through
+ * the shell-word classifier: node, this checkout's scripts/harness.mjs, and
+ * `writer --show` or `writer --release` with nothing else. A pipe, redirect,
+ * second command or `--force` is a different command and is judged as one.
+ */
+function writerRecoveryCommand(root, command) {
+    const words = plainShellWords(command);
+    if (!words ||
+        words.length !== 4 ||
+        words[0] !== "node" ||
+        resolve(root, words[1]) !== join(root, "scripts/harness.mjs") ||
+        words[2] !== "writer")
+        return null;
+    return words[3] === "--show"
+        ? "show"
+        : words[3] === "--release"
+            ? "release"
+            : null;
+}
+/** Another session's reservation whose owner the process table proves
+ * exited, dead or a zombie: its release needs no force and no reclaim. */
+function staleForeignWriter(root, actorId) {
+    const { writer } = observeWriterHolder(root);
+    return Boolean(writer && writer.actorId !== actorId && ownerDead(writer));
+}
 function acquireHarnessWriter(root, input, actorId, options = {}) {
     const at = new Date().toISOString();
     const owner = options.owner ?? harnessHostProcess();
@@ -2725,6 +2990,31 @@ export function reserveCodexDispatchWriter(root, sessionId) {
     if (foreign)
         throw new Error(writerRefusal(foreign));
     return harnessWriterView(root);
+}
+/**
+ * A dispatch that stopped lets its writer go. When a Codex session's role
+ * command ends without its completion event, or its turn ends with that event
+ * still outstanding, the host process that stays open must not keep every
+ * other session out: this session's own reservation is released and the stop
+ * is journaled. Another session's reservation is never touched.
+ */
+export function releaseStoppedDispatch(root, sessionId, stop) {
+    if (!sessionId)
+        throw new Error("A session id is required to release a stopped dispatch");
+    const input = {
+        cwd: root,
+        session_id: sessionId,
+        hook_event_name: "Stop",
+    };
+    const actorId = sessionKey(input);
+    const held = observeWriterHolder(root).writer?.actorId === actorId;
+    if (held)
+        releaseHarnessWriter(root, input);
+    const released = held && observeWriterHolder(root).writer?.actorId !== actorId;
+    record(root, input, {
+        dispatchStopped: { ...stop, writerHeld: held, writerReleased: released },
+    });
+    return { held, released };
 }
 /** A command aimed at a sibling worktree uses that worktree's writer lock.
  * An existing reservation of this session survives the command; a temporary
@@ -3386,8 +3676,17 @@ function routerDriverCommand(root, command, launchOnly = false) {
 function writerIsolationFacts(root, invocation, session, observed = invocation) {
     const actorId = sessionKey(observed);
     const command = String(invocation.tool_input?.command ?? "");
+    // The refusal's own remedy runs where the refusal is read: the view from
+    // any session, and the release of a holder the process table proves
+    // exited, which it retires and logs instead of this session reclaiming it
+    // first. A live or unknown holder's release stays the operator's.
+    const recovery = invocation.tool_name === "Bash"
+        ? writerRecoveryCommand(root, command)
+        : null;
     if (invocation.tool_name === "Bash" &&
         (metadataCommand(command) ||
+            recovery === "show" ||
+            (recovery === "release" && staleForeignWriter(root, actorId)) ||
             (session.role === "router" &&
                 (routerDriverCommand(root, command) || listedRead(root, command))) ||
             managedUsageCommand(invocation, session) ||
@@ -4502,6 +4801,20 @@ moved) {
     if (desktop?.hookSpecificOutput
         ?.permissionDecision === "deny")
         return desktop;
+    // What a fork's gh would reach depends on the clone the command runs in, so
+    // this judgment needs no worktree root and survives a moved session directory.
+    const ghRepository = config.kind === "permission"
+        ? ghRepositoryJudgment(input, config.tools)
+        : null;
+    if (ghRepository?.refusal) {
+        try {
+            record(root, input, { ghRepositoryRefused: ghRepository.command });
+        }
+        catch {
+            /* Observation cannot change the refusal. */
+        }
+        return protocolRefusal(config.event, ghRepository.refusal);
+    }
     let outside = null;
     let outsideEffect;
     try {
@@ -4542,7 +4855,7 @@ moved) {
     // or opaque permission classifier cannot erase a known destination refusal.
     let result;
     try {
-        result = await evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop);
+        result = await evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop, ghRepository?.advisory);
     }
     catch (error) {
         if (outsideDenied)
@@ -4555,7 +4868,7 @@ moved) {
         ? result
         : (outside ?? result);
 }
-async function evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop = null) {
+async function evaluateExistingHarnessHook(config, input, root, boundary, outsideEffect, desktop = null, ghAdvisory) {
     if (config.event === "SessionStart" &&
         input.hook_event_name === "SessionStart") {
         const warning = input.agent_id
@@ -4788,6 +5101,12 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                 harnessPromptLine(input.prompt).text.startsWith("quality pass:")
                 ? qualityPassGuidance
                 : undefined,
+            // An unprefixed message that ends in a question mark is answered and
+            // changes nothing by itself; a request inside it is still a request.
+            input.hook_event_name === "UserPromptSubmit" &&
+                unprefixedQuestion(input.prompt)
+                ? OPERATOR_QUESTION_CONTEXT
+                : undefined,
             observationBoundary(root, observationScope(), {
                 ...(input.prompt ? { prompt: input.prompt } : {}),
                 ...(input.transcript_path
@@ -4966,7 +5285,7 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
         }
         return {
             systemMessage: [
-                subagentSummary(subagentUsage(root, harnessStateDirectory(root), input.session_id)),
+                subagentSummary(subagentUsage(root, harnessStateDirectory(root), input.session_id), root),
                 observation,
                 ...(unmet.length
                     ? [
@@ -5010,6 +5329,8 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
             record(root, input, { workerGateRefused: workerGate });
             return protocolRefusal(config.event, workerGateRefusal(workerGate));
         }
+        if (ghAdvisory)
+            record(root, input, { advisory: ghAdvisory });
         // A driven worker's helper reviews beside it; only the worker changes the
         // order's worktrees. Its one write is its own session scratch.
         const drivenLane = drivenHelper(input) ? drivenWorkerContext() : null;
@@ -5119,9 +5440,11 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
             : config.envelope, effect, Date.now());
         record(root, input, { effect, allowed: decision.authorized });
         return decision.authorized
-            ? spawnAdvisory
-                ? subagentAdvisory({ systemMessage: spawnAdvisory })
-                : {}
+            ? ghAdvisory
+                ? protocolAdvisory(ghAdvisory)
+                : spawnAdvisory
+                    ? subagentAdvisory({ systemMessage: spawnAdvisory })
+                    : {}
             : protocolAdvisory(`compiled authority does not permit ${effect}`);
     }
     if (!config.policy)
@@ -5404,6 +5727,8 @@ export async function runHarnessHook(config, boundary, decodedInput, inputText, 
     const overrideExit = operatorOverrideExit(operatorControl);
     let observed;
     let response = {};
+    // An advisory that is journaled but not shown: host permissions decide it.
+    let quietAdvisory;
     let reasonClass = config.kind === "permission" ? "authority" : config.kind;
     // WO-168 (WO-158-D028 c): the mode is already normal when an override
     // exits, so its exit message and record command print ahead of the refusal.
@@ -5487,9 +5812,18 @@ export async function runHarnessHook(config, boundary, decodedInput, inputText, 
                     ? error.message
                     : `${reasonClass}: host facts or pinned runtime unavailable (${failure}); run node scripts/bootstrap.mjs to prepare this worktree`;
         // An override's exit is never withheld; its record degrades to the command.
+        // The three shell forms the classifier leaves to host permissions on
+        // nearly every compound call are journaled and not shown; an advisory
+        // that names a refusal is shown as before.
+        const hostDecided = error instanceof HarnessCommandRefused &&
+            HOST_DECIDED_CLASSIFICATIONS.has(error.message);
+        if (hostDecided && !overrideExit)
+            quietAdvisory = protocolAdvisory(reason).systemMessage;
         response = overrideExit
             ? overrideAdvisory(overrideExit, reason)
-            : protocolAdvisory(reason);
+            : hostDecided
+                ? {}
+                : protocolAdvisory(reason);
     }
     finally {
         if (observed) {
@@ -5509,10 +5843,12 @@ export async function runHarnessHook(config, boundary, decodedInput, inputText, 
                 const refused = response.decision === "block" ||
                     permission?.permissionDecision === "deny";
                 record(root, input, {
-                    ...(typeof response.systemMessage === "string" &&
-                        response.systemMessage.includes("DotLn advisory:")
-                        ? { advisory: response.systemMessage, delegated: true }
-                        : {}),
+                    ...(quietAdvisory
+                        ? { advisory: quietAdvisory, delegated: true, shown: false }
+                        : typeof response.systemMessage === "string" &&
+                            response.systemMessage.includes("DotLn advisory:")
+                            ? { advisory: response.systemMessage, delegated: true }
+                            : {}),
                     // Retain each hook outcome but correlate denials of the same tool use.
                     // Raw tool/session identities and command bytes stay out of the row.
                     ...(refused
@@ -5759,7 +6095,7 @@ export function releaseHarnessWriterByOperator(root, force = false) {
             };
         const view = writerView(writer);
         if (view.alive === true && !force)
-            throw new Error(`Writer reservation owner is alive; end that session or use the forced operator release: ${writerRefusal(writer)}`);
+            throw new Error(`Writer reservation owner is alive; end that session or use the forced operator release: ${writerRefusal(writer, "operator")}`);
         const retired = observation.state === "held"
             ? retireWriterInstance(root, observation.instance)
             : unlinkIfPresent(legacyWriterLock(root));
