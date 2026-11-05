@@ -716,6 +716,14 @@
           "reopenWhen": "A starter carries core WO-246, or a hook-admitted launchpad publish is refused by the host classifier.",
           "targets": [],
           "at": "2026-11-04T17:17:28.229Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D1 and D9: v0.117.0 carries WO-246's allow rules for the two launchpad helpers; in the session that took the update the helper was denied by the host's classifier because the rule was not yet loaded, and the by-hand route was admitted; the target publish has no rule and was denied in WO-028's verification (D057), run by the operator (D058); a request to core, item 2.",
+          "reopenWhen": "A fresh session's helper publish is admitted or refused, or a starter carries an allow rule for the target publish.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.868Z"
         }
       ]
     },
@@ -4702,6 +4710,16 @@
           "reopenWhen": "An order touches the scene inspector, WO-018 activates, or the operator requests the reverse link.",
           "targets": [],
           "at": "2026-11-03T16:55:14.437Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D5: WO-036 touches the inspector and adds the \"read the study\" line for a tool with a study.",
+          "reopenWhen": "WO-036 is withdrawn, or an earlier order touches the inspector.",
+          "targets": [
+            "WO-036"
+          ],
+          "at": "2026-11-05T16:10:30.841Z"
         }
       ]
     },
@@ -4774,6 +4792,14 @@
           "reopenWhen": "The operator sets the gh default for this checkout, or a kit helper passes the repository explicitly for every gh call.",
           "targets": [],
           "at": "2026-11-03T18:57:56.528Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) §Register: starter v0.117.0's hook refuses a gh pr or gh issue command naming no repository in this clone, whose origin and upstream differ, and the publish helpers name origin; the gap the row guarded is closed without the operator's tool setting; every call today named -R.",
+          "reopenWhen": "A gh call reaches the parent repository.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.881Z"
         }
       ]
     },
@@ -4806,6 +4832,16 @@
           "reopenWhen": "A starter release carries core's WO-246; the first target order after it drops the DotLn-Angular title workflow's type.",
           "targets": [],
           "at": "2026-11-01T01:57:26.297Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D2: starter v0.117.0's publish lint admits a gitmoji and a subject with no conventional type; WO-027 changes tools/pr-title.mjs to leave such a title as written, with the three cases in its test, and titles its own pull request that way; WS-001 rule 20 says so.",
+          "reopenWhen": "The workflow is changed by another order first.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-05T16:10:30.854Z"
         }
       ]
     },
@@ -5542,6 +5578,14 @@
           "reopenWhen": "The first target close on starter v0.115.0 records its removal step's time, a starter carries WO-246, or a finish stalls again.",
           "targets": [],
           "at": "2026-11-04T17:17:28.253Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) §Register: WO-028's release close ran on v0.115.0 on 2026-11-05 in the operator's own session; its removal step's time is recorded nowhere this pass can read (the control segment ends at TargetRecordsCommitted and the close session's journal holds no duration row).",
+          "reopenWhen": "A close prints its removal step's time where a pass can read it, or a finish stalls.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.894Z"
         }
       ]
     },
@@ -6408,7 +6452,19 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 4,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D5: WO-036 (walls, obstacles, the tile graph, A*, path following with replanning and a no-route state, obstacle and wall avoidance with the deterministic head-on policy of D009, geometry replayed, the grid family) and WO-037 (shooting and bullets over that geometry, the firing solution and iterative targeting as aims, hits and a knockout option).",
+          "reopenWhen": "The operator reorders the two or asks for a navigation mesh.",
+          "targets": [
+            "WO-036",
+            "WO-037"
+          ],
+          "at": "2026-11-05T16:10:30.672Z"
+        }
+      ]
     },
     {
       "id": "FUP-4074e73fddc1a963",
@@ -6423,7 +6479,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D7: WS-001 rule 27 (research is read for quality) and the operator record's item, written from the capture 01ddf878… and WO-028-D018.",
+          "reopenWhen": "The operator changes the rule.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.625Z"
+        }
+      ]
     },
     {
       "id": "FUP-0878f70cba928b9c",
@@ -6438,7 +6503,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D7: WS-001 rule 28 (the rule of cool, scene-type orders only, both directions) and the operator record's item, written from the capture 01ddf878… and WO-028-D019.",
+          "reopenWhen": "The operator widens or changes the rule, or names an order type beyond scene-type.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.608Z"
+        }
+      ]
     },
     {
       "id": "FUP-38a529604503d7df",
@@ -6453,7 +6527,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D7: WS-001 rule 29 (the operator's full size: 3840 by 1620 or the centre window of about 2080 by 1460; issues there can fail, other sizes are boarded) and the operator record's item, from the capture 01ddf878… and WO-028-D020.",
+          "reopenWhen": "The operator reports another window size.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.638Z"
+        }
+      ]
     },
     {
       "id": "FUP-dd62a5660d894ef0",
@@ -6468,7 +6551,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D7: WS-001 rule 25 renders the pair at about 2080 by 1460 and the operator record's design-comparisons item says so, from the capture cc1746dc… and WO-028-D021.",
+          "reopenWhen": "The operator gives another size.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.653Z"
+        }
+      ]
     },
     {
       "id": "FUP-60963b928b85daa5",
@@ -6514,7 +6606,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D6: WO-038 chooses the reading's layout at 3840 by 1620 and 2080 by 1460 through the operator's rounds.",
+          "reopenWhen": "The operator says the current layout is fine at their size.",
+          "targets": [
+            "WO-038"
+          ],
+          "at": "2026-11-05T16:10:30.686Z"
+        }
+      ]
     },
     {
       "id": "FUP-a86466d345ee6410",
@@ -6567,7 +6670,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-034 makes the wall study's default run show the avoidance doing the turning under D036's rule, returned to the two critics.",
+          "reopenWhen": "A batch changes the default run or the caption first.",
+          "targets": [
+            "WO-034"
+          ],
+          "at": "2026-11-05T16:10:30.742Z"
+        }
+      ]
     },
     {
       "id": "FUP-ead16d35dae7cde7",
@@ -6589,7 +6703,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-034 tidies the shared motion drawing's marks under D037's three rules with a glyph regression each.",
+          "reopenWhen": "A batch changes motion.html or motion-labels.ts first.",
+          "targets": [
+            "WO-034"
+          ],
+          "at": "2026-11-05T16:10:30.727Z"
+        }
+      ]
     },
     {
       "id": "FUP-9c3d801c73d041b9",
@@ -6604,7 +6729,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D9: a request to core (item 3 of the pass's block), because scripts/lib/review-worker.mjs is the kit's.",
+          "reopenWhen": "A starter carries a record form that names the worker's actual host, model and effort and the target tree, or core declines with a route.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.798Z"
+        }
+      ]
     },
     {
       "id": "FUP-c184dca02ed41cf9",
@@ -6679,6 +6813,14 @@
           "reopenWhen": "The next planning pass routes the research-order amendment limitation to core, or a starter supplies the supported binding.",
           "targets": [],
           "at": "2026-11-05T07:21:56.615Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D9: a request to core (item 4 of the pass's block), repeating the 2026-11-04 block's item 6 with D043's evidence.",
+          "reopenWhen": "A starter admits an execution amendment for a separate-track member, or a pass's judged horizon includes them.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.826Z"
         }
       ]
     },
@@ -6703,6 +6845,16 @@
           "reopenWhen": "The next planning pass incorporates the operator's translation direction and judges the mined catalog's treatment.",
           "targets": [],
           "at": "2026-11-05T07:21:56.628Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D4: the hard rule reaches the mined text; WO-035 serves it as generated per-work message catalogs; WS-001 rule 9 and the operator record carry the direction (capture f4f42e5c…).",
+          "reopenWhen": "The operator narrows the rule to authored text.",
+          "targets": [
+            "WO-035"
+          ],
+          "at": "2026-11-05T16:10:30.812Z"
         }
       ]
     },
@@ -6726,7 +6878,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-034 tightens the corpus test (brackets, the string-parameter rule) with VER-003's injections as negative controls and proves the lint glob with eslint --print-config.",
+          "reopenWhen": "A batch lands before WO-034 and its corpus test is rerun at integration.",
+          "targets": [
+            "WO-034"
+          ],
+          "at": "2026-11-05T16:10:30.714Z"
+        }
+      ]
     },
     {
       "id": "FUP-86db793258214c51",
@@ -6741,7 +6904,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D4: WO-035 makes a missing study or catalog message fail closed, with message-attack.mjs as the regression.",
+          "reopenWhen": "The message loader changes before WO-035.",
+          "targets": [
+            "WO-035"
+          ],
+          "at": "2026-11-05T16:10:30.771Z"
+        }
+      ]
     },
     {
       "id": "FUP-b2ca88c7d6462f27",
@@ -6763,7 +6937,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) NoOps: the work stays the unit of loading (D042); the measured cost is 84 kB gzipped more on a work's first reading, about 0.4 s on the constrained surrogate, nothing observed slow; D055's three cleanups (title rows, the twelve spec-only keys, drawPairs) are WO-034's.",
+          "reopenWhen": "A measurement on the performance guide's constrained surrogate shows a first reading slow enough to matter, or a batch grows a catalog materially.",
+          "targets": [],
+          "at": "2026-11-05T16:10:30.785Z"
+        }
+      ]
     },
     {
       "id": "FUP-84dd7018fe2c47a7",
@@ -6778,7 +6961,29 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-029 (studyRxjs) and WO-030 (studyEip) reword the stream messages where a computed count opens a sentence or a label, as a step and in criterion 7, the English only.",
+          "reopenWhen": "The operator prefers the digits, or asks for the rewording sooner.",
+          "targets": [
+            "WO-029",
+            "WO-030"
+          ],
+          "at": "2026-11-05T16:10:30.757Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-034, the first standards pass, rewords the stream messages where a computed count opens a sentence or a label (48 messages across 15 stream studies), the English only in studyRxjs/en.json and studyEip/en.json, parameters and mechanisms unchanged; it edits both catalogs already for D055's cleanups. The pass's first disposition named WO-029 and WO-030 and was withdrawn when their amendments were, to keep the planning brief under the kit's ceiling.",
+          "reopenWhen": "The operator prefers the digits, or asks for the rewording sooner than WO-034.",
+          "targets": [
+            "WO-034"
+          ],
+          "at": "2026-11-05T16:22:43.941Z"
+        }
+      ]
     },
     {
       "id": "FUP-f2fe0f5b3ede6609",
@@ -6793,7 +6998,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-05 planning pass (docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md) D3: WO-034, the first standards pass under WS-001 rule 31, reshapes the first movement batch's twenty presentation modules with every output unchanged.",
+          "reopenWhen": "The operator sets a different bar for presentation code.",
+          "targets": [
+            "WO-034"
+          ],
+          "at": "2026-11-05T16:10:30.700Z"
+        }
+      ]
     }
   ]
 }

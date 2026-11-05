@@ -79,15 +79,24 @@ their decisions hold the history.
    than twenty drawable rows left (ten in a paired order) gets a smaller
    final batch, its author count scaled to pairs of rows and recorded in the
    order; a work whose drawable rows are exhausted leaves the track until a
-   road order lands the family its remaining rows need. (The operator record §What the operator
-   wants, Depth in batches; the 2026-11-04 pass, D6.)
+   road order lands the family its remaining rows need; a work's next batch
+   is cut only after a standards pass boarded against that work's code has
+   merged (WS-001 rule 31; WO-034 gates the next Movement batch); and the
+   pathfinding chapter's 76 rows join AI for Games' drawable rows once
+   WO-036 lands the `grid` family. (The operator record §What the operator
+   wants, Depth in batches; the 2026-11-04 pass, D6; the 2026-11-05 pass,
+   D3 and D5.)
 7. **The records.** WS-001's house rules bind a research order's records as
    they bind a batch's (rules 7, 8, 15, 17, 23, 24 and 26; the target's
    `catalog-rules.md` and `catalog.md` §Studies): a study is in its author's
    own words, every reference is opened before it is cited, a representation
    an idea does not need stays absent, and every record is `checked` by two
    reviewers before it ships; the current record contract is `concept-study-v1`, whose authored text fields
-   are keys in lazily loaded work catalogs. A changed shape requires a new version;
+   are keys in lazily loaded work catalogs, and the model shape is the one
+   WS-001 rules 30 and 31 and WO-034 set (a language-free simulation, a
+   presentation taking the translator, an entry of a few lines, nested keys,
+   named placeholders, a description object in place of loose parameters, no
+   split made to fit the size ceiling). A changed shape requires a new version;
    the shipped v0 schema remains immutable. Shared infrastructure belongs to a
    road order unless the operator includes it in a batch (WO-028-D042). (WS-001
    rules 23 and 26; the 2026-10-30 second pass, D5.)
@@ -97,8 +106,8 @@ their decisions hold the history.
 | Order  | Repository    | Base                                       | Role in the outcome |
 | ------ | ------------- | ------------------------------------------ | ------------------- |
 | WO-028 | dotln-angular | `55b59c9133056c1d6471274a9676a7d5649196ac` (WO-022's merge; step 1 integrates the target's `main`) | twenty more Movement-chapter studies from AI for Games, drawn by `motion` and `timeline` |
-| WO-029 | dotln-angular | `55b59c9133056c1d6471274a9676a7d5649196ac` (step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
-| WO-030 | dotln-angular | `55b59c9133056c1d6471274a9676a7d5649196ac` (step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
+| WO-029 | dotln-angular | `48c7f8e6916692bca833c4985e2cf95978ab2c06` (WO-028's merge, set by the 2026-11-05 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
+| WO-030 | dotln-angular | `48c7f8e6916692bca833c4985e2cf95978ab2c06` (WO-028's merge, set by the 2026-11-05 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
 | WO-031 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-023 merges may set it | twenty more enterprise application patterns, drawn by `states` with executable models |
 | WO-032 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-024 merges may set it | ten more Gödel, Escher, Bach and ten more Team Topologies concepts, drawn by `relations` |
 
@@ -122,7 +131,7 @@ run the other way.
 
 | Member | State | Evidence |
 | ------ | ----- | -------- |
-| WO-028 | final-reviewed, with the shared study message and model migration the operator included; the target and records pull requests await the operator's merge | [the order](../work-orders/WO-028-concept-research-movement.md), [FINAL-002](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/final-reviews/WO-028/FINAL-002.md), [WO-028-D042](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d042), [WO-028-D060](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d060) |
+| WO-028 | closed: merged as DotLn-Angular #14 (`48c7f8e`) with the shared study message and model migration the operator included, its records #57, released as `DotLn Angular v0.10.0` on 2026-11-05 | [the order](../work-orders/WO-028-concept-research-movement.md), [FINAL-002](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/final-reviews/WO-028/FINAL-002.md), [WO-028-D042](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d042), [WO-028-D060](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d060) |
 | WO-029 | filed | [the order](../work-orders/WO-029-concept-research-rxjs.md) |
 | WO-030 | filed | [the order](../work-orders/WO-030-concept-research-eip.md) |
 | WO-031 | filed | [the order](../work-orders/WO-031-concept-research-poeaa.md) |

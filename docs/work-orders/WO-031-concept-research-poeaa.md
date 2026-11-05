@@ -349,9 +349,17 @@ each.
   final-review obligation read from `docs/evidence/WO-031/preview-pr.json`,
   never a criterion); whether the operator reads twenty records before the
   final review is their choice (the assumption below).
-- The record's shape is closed (`concept-study-v0`); a change is a new
-  schema version, never an edit. `Target release classification: minor` and
-  `Target release notes: reviewed` are set under WO-012's declared policy.
+- The record's shape is `concept-study-v1` (WS-002 rule 7): every authored
+  on-screen field is a message key in the work's catalog
+  `apps/dotln/public/i18n/studyPoeaa/en.json`, which WO-023 creates, each
+  model is a language-free simulation, a presentation taking a
+  `StudyTranslate` and an entry of a few lines, with nested keys, named
+  placeholders and no function split to fit the 80-line ceiling (WS-001
+  rules 9, 30 and 31; the shape WO-034's reshaped batch and WO-028's own
+  twenty set), and the authors' and critics' briefs name those rules; a
+  changed record shape is a new schema version, never an edit. `Target
+  release classification: minor` and `Target release notes: reviewed` are
+  set under WO-012's declared policy.
 - WO-008 (authentication and permissions) may read the session-state and
   lock studies as context and owes them nothing. The remaining forty-odd
   PoEAA patterns are the next cuts (WS-002 rule 6).
