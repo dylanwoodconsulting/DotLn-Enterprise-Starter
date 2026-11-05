@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "authorization": "WO-033-D007",
+  "appends": [
+    {
+      "path": "docs/evidence/WO-008/decisions.md",
+      "decision": "WO-008-D002",
+      "originalBytes": 2500,
+      "appendedBytes": 1243,
+      "appendedSha256": "3b48235f38f2178cc48d81a84c67d43e9583c9470655437a6545e649dbaf8911"
+    },
+    {
+      "path": "docs/evidence/WO-016/decisions.md",
+      "decision": "WO-016-D002",
+      "originalBytes": 2538,
+      "appendedBytes": 1243,
+      "appendedSha256": "f2bb448f713ed70513780e48bc8a4225c3066fae5b77a798953b9cea688d7d18"
+    },
+    {
+      "path": "docs/evidence/WO-017/decisions.md",
+      "decision": "WO-017-D002",
+      "originalBytes": 2515,
+      "appendedBytes": 1243,
+      "appendedSha256": "65ee512dbb87e416ac38fbd2731e375404fb675ef291cff1152553bce89182a4"
+    },
+    {
+      "path": "docs/evidence/WO-018/decisions.md",
+      "decision": "WO-018-D003",
+      "originalBytes": 3778,
+      "appendedBytes": 1243,
+      "appendedSha256": "7f41753a57c65d50a45de021a9c9878c97cfd40813f7e7623d0073342cc12331"
+    },
+    {
+      "path": "docs/evidence/WO-023/decisions.md",
+      "decision": "WO-023-D005",
+      "originalBytes": 8187,
+      "appendedBytes": 1243,
+      "appendedSha256": "04c344c4e49cc88d03ab97e9180f1221db3fd754fbada2dbcf7093330e6681fc"
+    },
+    {
+      "path": "docs/evidence/WO-024/decisions.md",
+      "decision": "WO-024-D005",
+      "originalBytes": 6691,
+      "appendedBytes": 1243,
+      "appendedSha256": "ac21c49ad07d12a3020310e604bcb4905099b62a045f0e66bf60ad119e1c7904"
+    }
+  ]
+}

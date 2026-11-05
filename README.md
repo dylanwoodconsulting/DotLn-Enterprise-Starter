@@ -1,7 +1,7 @@
 # DotLn launchpad
 
 <!-- DOTLN-RELEASE-BEGIN -->
-This source prepares Launchpad `v0.3.4`.
+This source prepares Launchpad `v0.3.5`.
 <!-- DOTLN-RELEASE-END -->
 
 | Fact | Value |
