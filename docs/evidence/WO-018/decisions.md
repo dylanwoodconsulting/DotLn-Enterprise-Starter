@@ -50,3 +50,25 @@
   "reopenWhen": "The current critic coverage cannot be preserved within the available uses, or core changes the shared launch/accounting route."
 }
 ```
+
+## WO-018-D003
+
+```json
+{
+  "id": "WO-018-D003",
+  "date": "2026-11-05",
+  "dispatch": "resume: next — WO-033 planning-reference relocation",
+  "decision": "Relocate this open order’s references to the nineteen planning documents moved by WO-033; bind the resulting order bytes through plan amend-order. This changes reference destinations only and preserves this order’s scope and criteria.",
+  "evidence": [
+    "WO-033 execution step 3 authorizes rewriting open-order references; its operator dispatch was resume: next.",
+    "The operator approved six append-only decisions on 2026-11-05; WO-033-D007 records the bounded authorization and capture SHA-256 720d6409a051825368575f38350fec3ee8292c7980340ebd811daf499421e066.",
+    "docs/control/document-moves.json and docs/evidence/WO-033/links.md identify the relocations.",
+    "WO-033-D003 records why the installed planner requires an amendment for these path-only changes."
+  ],
+  "rejected": [
+    "Changing kit continuation logic would exceed WO-033.",
+    "Keeping the old standing references does not deliver the specified link rewrite."
+  ],
+  "reopenWhen": "The order differs beyond the authorized reference destinations, or a cited record’s original bytes change."
+}
+```

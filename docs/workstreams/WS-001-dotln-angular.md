@@ -594,7 +594,7 @@ decided on 2026-10-24 (ignored intake capture
 `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9;
 core's record of the same decisions is
-`docs/planning/intake-mining-run-routing-2026-10-24.md` §10), paraphrased:
+`docs/planning/passes/intake-mining-run-routing-2026-10-24.md` §10), paraphrased:
 
 - One app with sub-apps behind a menu: a scene for authoring game AI, a view
   of DotLn's machinery, side utilities. One workstream for now; the logic in

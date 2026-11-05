@@ -60,10 +60,10 @@ guide preserves representative examples and the limited coverage already run.
 
 Instance-owned text carries these directions, so they survive core updates
 without editing generated kit code: the orders, WS-001 and the operator record
-(the [2026-10-26 pass](../planning/acceptance-by-use-2026-10-26.md), D4 and D12).
+(the [2026-10-26 pass](../planning/passes/acceptance-by-use-2026-10-26.md), D4 and D12).
 No supported route adds duty text to a generated role today. An instance owns its
 support switches, its grants file and its `hostRules`, and the extension contract
-is core's deferred candidate 8; the [v0.101.0 pass](../planning/standard-pass-v0-101-0-2026-10-28.md)
+is core's deferred candidate 8; the [v0.101.0 pass](../planning/passes/standard-pass-v0-101-0-2026-10-28.md)
 records that answer and `FUP-6855f3bdf797428a` holds this fork's row. Product 08's
 implementation overlay describes publication composition, a different concern; its
 local-policy promise is not evidence that this runtime behavior is implemented.

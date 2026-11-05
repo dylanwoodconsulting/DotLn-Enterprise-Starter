@@ -43,7 +43,7 @@ The operator dispatched an Entropy Reducer planning pass over this instance.
 The dispatch and update-merge confirmation are captured in ignored intake at
 `docs/intake/notes/planning-entropy-reducer-2026-11-03.txt`, SHA-256
 `be5fa3d8bb164921d882265220527e67931d23ab8b3b5a28052d2dc2a9969c6e`.
-The [pass document](../planning/entropy-reducer-2026-11-03.md) records the frozen
+The [pass document](../planning/passes/entropy-reducer-2026-11-03.md) records the frozen
 review, blinded refutation, dispositions and resulting plan. This heading
 registers the planning pass; it adds no ideation entry.
 
@@ -54,7 +54,7 @@ failure on criterion 9, which the day's first pass had written, followed by
 five messages correcting the session's reading of it, captured verbatim in
 ignored intake (`docs/intake/notes/planning-2026-11-01-second.md`, SHA-256
 `121e2f1dbf2e7e5d76362114eca493c4d07a9899ee039a6a786a281c3917cb30`). The
-record is [the planning document](../planning/criterion-9-phase-2026-11-01.md);
+record is [the planning document](../planning/passes/criterion-9-phase-2026-11-01.md);
 this heading registers the pass for the plan tooling. The pass filed no order
 and amended one; no idea enters the ledger, because the pass was not an
 ideation dispatch.
@@ -76,7 +76,7 @@ captured verbatim in ignored intake
 `docs/intake/notes/planning-2026-10-31-messages.md`, SHA-256
 `78a4e370f49ff4d8b035873a0eb189c37517f41900d80f1356c3e0e548d221ab` as of
 its fourteenth message). The
-record is [the planning document](../planning/standard-pass-v0-105-0-2026-11-01.md);
+record is [the planning document](../planning/passes/standard-pass-v0-105-0-2026-11-01.md);
 this heading registers the pass for the plan tooling. The pass filed no order
 and amended two; no idea enters the ledger, because the pass was not an
 ideation dispatch.
@@ -95,7 +95,7 @@ captured verbatim in ignored intake
 `8e8cdbeb9b227932d9119b5a012a72086a1ebe349f368b42b0ff788d9060382e`, and
 `docs/intake/notes/planning-2026-10-30-second-messages.md`, SHA-256
 `39b30d94667c52a26d7d6efba61bb6e2f1b55d602831f3f778525953b0765468`). The
-record is [the planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md);
+record is [the planning document](../planning/passes/concept-batches-and-quality-passes-2026-10-30.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch; the operator's direction on batches
 and the profile shape are recorded in the operator record and WS-001.
@@ -110,7 +110,7 @@ of that day, followed by the operator's one message that update pull request
 `e3ffcaeca2670fed74edad6813c4347057544afbcc7b1571cdbc926be2bd9626`, and
 `docs/intake/notes/planning-2026-10-30-messages.md`, SHA-256
 `72d3339645a477b575b0e5e273e72c5b0562998aa1a518595fdf870626707f33`). The
-record is [the planning document](../planning/standard-pass-v0-103-0-2026-10-30.md);
+record is [the planning document](../planning/passes/standard-pass-v0-103-0-2026-10-30.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -123,7 +123,7 @@ v0.101.0) opened first and still pending when the planning branch opened,
 captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-28-second.md`, SHA-256
 `59a86fe9ccbfbe1eb74ae47096323e7f8bab97e10a1c8e5e9e6052d872e2cdd0`). The
-record is [the planning document](../planning/standard-pass-v0-101-0-2026-10-28.md);
+record is [the planning document](../planning/passes/standard-pass-v0-101-0-2026-10-28.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch, and the operator's direction of the
 day on a closed order's journals was given in core's session and is
@@ -137,7 +137,7 @@ with update #33 (starter v0.100.0) opened first and still pending when the
 planning branch opened, captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-28.md`, SHA-256
 `1ea98adaa85b099e0f5f6c6f844e14856d739225540cc42c5bbac4b964f93cc9`). The
-record is [the planning document](../planning/standard-pass-v0-100-0-2026-10-28.md);
+record is [the planning document](../planning/passes/standard-pass-v0-100-0-2026-10-28.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch; the operator's ideas of 2026-10-26
 (the concept study and the comparison method) are ledgered by WO-019's own
@@ -178,7 +178,7 @@ ideas they reference lie outside the clean room; acceptance by use is
 permanent for the workstream) and their go-ahead, captured verbatim in
 ignored intake (`docs/intake/notes/planning-2026-10-26.md`, SHA-256
 `9ec78ddbc267936d59fc7fe88b4a8b9c8d42d4692979db31be5129c817fd72a6`). The
-record is [the planning document](../planning/acceptance-by-use-2026-10-26.md);
+record is [the planning document](../planning/passes/acceptance-by-use-2026-10-26.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch, and the directions it received are
 recorded in WS-001 rules 23 to 25 and the operator record.
@@ -191,7 +191,7 @@ WO-013's second refusal, followed in the same session by the operator's merge
 of update #28 (starter v0.99.0), captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-25.md`, SHA-256
 `9506b972e4a6947ad2d0b3085300467d3aa46114b047b5356249e0180c82cd48`). The
-record is [the planning document](../planning/standard-pass-v0-99-0-2026-10-25.md);
+record is [the planning document](../planning/passes/standard-pass-v0-99-0-2026-10-25.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -203,7 +203,7 @@ session by the operator's merge of update #26 (starter v0.96.1), captured
 verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-24-second.md`, SHA-256
 `32a697b7c11563c62ceb8fefa10d796204364aec53ad1984e7409cf031eb6e11`). The
-record is [the planning document](../planning/standard-pass-v0-96-1-2026-10-24.md);
+record is [the planning document](../planning/passes/standard-pass-v0-96-1-2026-10-24.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch, and the operator's ideas live in their
 orders and, when they play, in the app's idea sink.
@@ -218,7 +218,7 @@ operator's own statement of their decisions on the DotLn-Angular work with
 the six orders to cut, captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`). The
-record is [the planning document](../planning/mining-run-orders-2026-10-24.md);
+record is [the planning document](../planning/passes/mining-run-orders-2026-10-24.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch; the operator's ideas live in their
 research run (core's ignored intake) and in the orders cut from it, and the
@@ -235,7 +235,7 @@ question on where a target order's records live, and the merge of #21,
 captured verbatim in ignored intake
 (`docs/intake/notes/planning-2026-10-23.md`, SHA-256
 `701262d85556f1445fc09c579379c0fc6a3133b08c41537d34b9474d1dca9d23`). The
-record is [the planning document](../planning/standard-pass-v0-93-0-2026-10-23.md);
+record is [the planning document](../planning/passes/standard-pass-v0-93-0-2026-10-23.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch, and the operator's research run
 stays the platform pass's to route first.
@@ -251,7 +251,7 @@ loadout, inspection, preview, counterfactuals and QA over `uifa-board-v1`;
 the vision and the genesis of the UI), captured verbatim in ignored intake
 (`docs/intake/notes/planning-ui-2026-10-21.md`, SHA-256
 `58478e8d07e3a40ac562f408e513e575d99702d9d3545dab5e940144c77d0b56`). The
-record is [the planning document](../planning/ui-planning-2026-10-21.md);
+record is [the planning document](../planning/passes/ui-planning-2026-10-21.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -263,7 +263,7 @@ replacing it to the pass, and asking for the fork to be updated, captured
 verbatim in ignored intake
 (`docs/intake/notes/planning-latest-upstream-fixes-2026-10-21.md`, SHA-256
 `9b1e3fe9d122ddc83053b6a8b03ac46f2cb97f90eabd15e3404d3f6b2db913a4`). The
-record is [the planning document](../planning/latest-upstream-fixes-2026-10-21.md);
+record is [the planning document](../planning/passes/latest-upstream-fixes-2026-10-21.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -276,7 +276,7 @@ and may be out of date; the pass ends with a prompt for the next DotLn
 platform planning pass), captured verbatim in ignored intake
 (`docs/intake/notes/planning-latest-upstream-and-core-answers-2026-10-20.md`,
 SHA-256 `08208fab730f8c1311ff8fc53c635d0e7092499f6fc61b647e72c1a1d00d09c3`).
-The record is [the planning document](../planning/latest-upstream-and-core-answers-2026-10-20.md);
+The record is [the planning document](../planning/passes/latest-upstream-and-core-answers-2026-10-20.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -289,7 +289,7 @@ the kit cannot name them yet, and a prompt for the primary DotLn planning
 session), captured verbatim in ignored intake
 (`docs/intake/notes/planning-latest-upstream-2026-10-19.md`, SHA-256
 `01b3d03564fe733b600083183008b4fb46ee3350ae33469cd379121cc262a177`). The
-record is [the planning document](../planning/latest-upstream-2026-10-19.md);
+record is [the planning document](../planning/passes/latest-upstream-2026-10-19.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch.
 
@@ -301,7 +301,7 @@ with the operator's note, the operator's eight questions to that pass and the
 product purpose of DotLn-Angular, captured verbatim in ignored intake
 (`docs/intake/notes/planning-main-rules-2026-10-18.md`, SHA-256
 `222fbf09d6f57d518b931dd54c59a5bc5d83d55a7552e2ee194b1774a2ee184d`). The
-record is [the planning document](../planning/main-rules-and-platform-items-2026-10-18.md);
+record is [the planning document](../planning/passes/main-rules-and-platform-items-2026-10-18.md);
 this heading registers the pass for the plan tooling. No idea is ledgered:
 the pass was not an ideation dispatch, and the product purpose it received
 is recorded in `docs/product/purpose.md` and WS-001.
@@ -314,7 +314,7 @@ the operator's dictated directions, captured verbatim in ignored intake
 `4f14c6c09512576abfd701335f4dd8a347694ff23785724422cb8d943b5d67aa`; the Film
 Study notes beside it, SHA-256
 `43adc54da4ed1735e1fb2309f887b9ed04801992c2af7a19c6e7f6a758ef1d08`). The record
-is [the planning document](../planning/angular-workstream-2026-10-18.md); this
+is [the planning document](../planning/passes/angular-workstream-2026-10-18.md); this
 heading registers the pass for the plan tooling. The operator's ideas the pass
 synthesized (the Tipping Point taxonomy, the WoW tooling app inside the
 monorepo) are recorded in that document and in WS-001, not as ledger entries,

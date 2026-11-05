@@ -38,7 +38,7 @@ depth direction of 2026-10-26 (capture SHA-256
 levels and roles (the catalog rule on traps and levels; `concept-mapping.md`);
 register row `FUP-5f1cdfde5e860902` allocated to WO-020 to WO-024.
 Planner-synthesized by the 2026-10-30 second planning pass
-([planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md)
+([planning document](../planning/passes/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
