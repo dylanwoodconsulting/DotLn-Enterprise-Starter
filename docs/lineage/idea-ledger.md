@@ -4,6 +4,22 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-05 — planning pass: starter v0.117.0 taken on the operator's word, WO-033 and WO-027 moved to the front, the WO-028 reminders turned into the scene's walls, ways and shooting, the mined text's migration and the reading at full size, and the first standards pass filed on the operator's direction (operator dispatch of 2026-11-05)
+
+Dispatch: a `planning:` request for a standard pass with the latest
+upstream, asking that WO-033 and WO-027 move up the queue and that the
+operator's reminder follow-ups for the scene and other items be addressed,
+followed by one mid-turn message (coding standards are never an afterthought
+but a dedicated pass that occurs often; the app is the pie-in-the-sky
+example for other Angular developers) and the merge of update #58, captured
+verbatim in ignored intake (`docs/intake/notes/planning-2026-11-05.md`). The
+record is
+[the planning document](../planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md);
+this heading registers the pass for the plan tooling. The pass filed five
+orders and amended four; no idea enters the ledger, because the pass was
+not an ideation dispatch and the operator's directions are recorded in the
+operator record, WS-001 and the orders.
+
 ## 2026-11-04 — planning pass: starter v0.115.0 taken on the operator's word, core's answers of 2026-11-03 read, the update rule struck, the research track filed and the document parity order cut (operator dispatch of 2026-11-04)
 
 Dispatch: a `planning:` request for a standard pass with the latest upstream,

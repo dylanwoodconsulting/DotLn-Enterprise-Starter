@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `55b59c9133056c1d6471274a9676a7d5649196ac`, WO-022's merge (#13), 2026-11-01 |
-| Latest target release | `DotLn Angular v0.9.0`, published 2026-11-01 from that merge |
+| Last reviewed target source | `48c7f8e6916692bca833c4985e2cf95978ab2c06`, WO-028's merge (#14), 2026-11-05 |
+| Latest target release | `DotLn Angular v0.10.0`, published 2026-11-05 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -34,7 +34,7 @@ platform's repository.
 The menu has three groups today. **Scene** is the soldier scene at the root
 route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
-shelf, contents and a reading at `/tools/catalog/<tool id>`, sixty of its concepts with an authored
+shelf, contents and a reading at `/tools/catalog/<tool id>`, eighty of its concepts with an authored
 study; `/tools` is a home page above it.
 
 The app owns its data and its API. The board keeps the `uifa-board-v1` response
@@ -607,6 +607,7 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.7.0` | WO-020 | #11 | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` | 2026-11-01T00:54:57Z |
 | `DotLn Angular v0.8.0` | WO-021 | #12 | `c0e5a36008828ec5b742d6e740efff619f3cedbe` | 2026-11-01T09:35:01Z |
 | `DotLn Angular v0.9.0` | WO-022 | #13 | `55b59c9133056c1d6471274a9676a7d5649196ac` | 2026-11-01T19:43:12Z |
+| `DotLn Angular v0.10.0` | WO-028 | #14 | `48c7f8e6916692bca833c4985e2cf95978ab2c06` | 2026-11-05T15:09:43Z |
 
 | Area | Order |
 | --- | --- |

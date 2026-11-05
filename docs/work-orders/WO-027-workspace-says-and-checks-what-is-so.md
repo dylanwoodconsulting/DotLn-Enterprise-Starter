@@ -5,12 +5,12 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
+**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
 **Target release classification:** patch
 **Target release notes:** reviewed
-**Cost:** edits two tool scripts (`tools/board-count.mjs`,
-`tools/scripts/check-script-reference.mjs`) and adds their negative-control
-cases under `tools/*.test.mjs`; edits eight standing documents
+**Cost:** edits three tool scripts (`tools/board-count.mjs`,
+`tools/scripts/check-script-reference.mjs`, `tools/pr-title.mjs`) and adds
+their negative-control cases under `tools/*.test.mjs`; edits eight standing documents
 (`README.md`, `docs/dev-reference/README.md`, `docs/ai-reference/README.md`,
 `docs/ai-reference/sub-app-rules.md`, `docs/ai-reference/foundation-rules.md`,
 `docs/dev-reference/workspace/conventions.md`,
@@ -22,45 +22,61 @@ tracked. Wall-clock: about 2 h 0 min to 4 h 0 min of executor work plus the
 fixed cycle; unknown until run. Context bytes: the two scripts and their
 tests, the ten documents (about 150 KB), REVIEW-002's eight accepted
 findings, WS-001 rules 2, 4, 19, 21 and 26, this order, about 220 KB for the
-executor. Commands added: none. Tokens: unknown until run. Steps: 13.
+executor. Commands added: none. Tokens: unknown until run. Steps: 14.
 Re-mints: none. Refutations paid: the 2026-11-03 Entropy Reducer pass over
-dotln-angular (its receipt).
+dotln-angular (its receipt), the 2026-11-04 pass's receipt 020 and this
+pass's receipt.
 **Nomination provenance:** REVIEW-002, the Entropy Reducer review of
 `dotln-angular@55b59c9` (`docs/instance/entropy-reducer/runs/REVIEW-002.md`),
 findings ER-F1, ER-F2, ER-F3, ER-F4, ER-F6, ER-F7, ER-F8 and ER-F9, each
 reproduced by the blinded refutation and accepted by the
 [2026-11-03 entropy-reducer-dotln-angular pass](../planning/passes/entropy-reducer-dotln-angular-2026-11-03.md)
-(D5). Planner-synthesized. Opaque identifier, not a priority.
-**Depends on:** WO-023 and WO-024 merged (hard: both batches write into
-`catalog.md`, `scripts.md` and the study rules this order passes; it reads
-their write-backs as part of the set). The base is provisional: the target's
-`main` at filing, WO-022's merge; the pass after WO-024 merges may set it.
+(D5); the operator's dispatch of 2026-11-05 (ignored capture
+`docs/intake/notes/planning-2026-11-05.md`), which moved this order and
+WO-033 to the front of the sequence; register row `FUP-f85ede7a356345c5`
+(the title workflow once the kit's lint admits a gitmoji title without a
+type), fired by starter v0.117.0 and allocated here by the
+[2026-11-05 pass](../planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md)
+(D2). Planner-synthesized. Opaque identifier, not a priority.
+**Depends on:** WO-028 merged (hard: the shared study migration rewrote
+`catalog.md`, the catalog and foundation rules, the conventions and the
+script reference, which this order corrects as they now stand; merged as
+DotLn-Angular #14, released as `DotLn Angular v0.10.0`). WO-023 and WO-024
+(reference-only: the pair writes into `catalog.md`, `scripts.md` and the study rules
+this order passes; whichever of the three lands later integrates the
+target's `main`). The base is WO-028's merge.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
 [
   {
-    "workOrderId": "WO-023",
+    "workOrderId": "WO-028",
     "relation": "hard",
-    "reason": "the batch writes into catalog.md, scripts.md and the catalog rules this order corrects; its write-backs are part of the set"
+    "reason": "the shared study migration rewrote catalog.md, the catalog and foundation rules, the conventions and the script reference that this order corrects as they now stand"
+  },
+  {
+    "workOrderId": "WO-023",
+    "relation": "reference-only",
+    "reason": "the batch writes into catalog.md, scripts.md and the catalog rules this order corrects; whichever lands later integrates the target's main"
   },
   {
     "workOrderId": "WO-024",
-    "relation": "hard",
-    "reason": "the second batch of the pair writes into the same standing documents; this order integrates both before it passes them"
+    "relation": "reference-only",
+    "reason": "the second batch of the pair writes into the same standing documents; whichever lands later integrates the target's main"
   }
 ]
 <!-- dotln-dependencies:end -->
 
 **Cites (read these sections):** `docs/workstreams/WS-001-dotln-angular.md`
-(house rules 2, 4, 19, 21, 23, 26); `docs/repositories/dotln-angular.md`
+(house rules 2, 4, 19, 20, 21, 23, 26); `docs/repositories/dotln-angular.md`
 (§Run the app and its checks, §Why Angular's additional disk cache is
 disabled); `docs/instance/entropy-reducer/runs/REVIEW-002.md` (the eight
 findings' observed, expected and reproduction fields); the target's
 `docs/dev-reference/workspace/conventions.md`, `scripts.md`,
 `docs/dev-reference/architecture/catalog.md`, `sub-apps.md`,
 `performance.md`, `docs/ai-reference/sub-app-rules.md`,
-`tools/board-count.mjs` and `tools/scripts/check-script-reference.mjs`.
+`tools/board-count.mjs`, `tools/scripts/check-script-reference.mjs` and
+`tools/pr-title.mjs`.
 
 **Objective:** (the operator's session, WS-001 rule 24, with the documents
 and CI's output as the surface) a coding session opens
@@ -72,12 +88,17 @@ they open `conventions.md` and read why the Angular CLI cache is off before
 touching `nx.json`; they open `catalog.md` and every pointer resolves, with
 no account of which day a design round ended; they open `performance.md` and
 read what the policy does about the scene the root opens; they remove a row
-from `scripts.md` and `npm run check:scripts` fails. What the operator
-learns is that the workspace's documents and its gate tools say and check
-what is so, which is what a colleague reading the workspace is shown.
+from `scripts.md` and `npm run check:scripts` fails; they open a pull
+request titled with a gitmoji and a subject and no conventional type, and
+the title workflow leaves it as written. What the operator learns is that
+the workspace's documents and its gate tools say and check what is so, which
+is what a colleague reading the workspace is shown.
 
-**Observed gap (dated 2026-11-03):** at `55b59c9`, reproduced by REVIEW-002
-and its refutation and read again by the filing pass:
+**Observed gap (dated 2026-11-03 at `55b59c9`; re-read 2026-11-05 at
+`48c7f8e`, where every count below holds although WO-028 rewrote
+`catalog.md`, `conventions.md`, `scripts.md`, `foundation-rules.md` and
+`docs/dev-reference/README.md`):** reproduced by REVIEW-002 and its
+refutation and read again by the filing pass and by the 2026-11-05 pass:
 `tools/board-count.mjs` visits only `apps/` and `libs/`, so a `// BOARDED:`
 marker in `tools/pr-title.mjs` counts 0 while one in `libs/` counts 1, and
 `npm run boards` prints 0 with WO-004-D010's title-workflow defect still
@@ -104,7 +125,10 @@ in the launchpad at the recorded commit (322 such links resolve to nothing
 in the target); the reason `nx.json` disables the Angular CLI cache, and
 its cost, is stated only in the dated generator log; `performance.md` and
 `tools/scripts/sample-performance.mjs` mention the scene nowhere although
-the root has redirected to `/scene` since #9.
+the root has redirected to `/scene` since #9; `tools/pr-title.mjs` refuses
+a title that carries no conventional type after its gitmoji (`decorateTitle`
+throws "Use a conventional title"), although the kit's publish lint admits
+a gitmoji and a subject alone since starter v0.117.0 (WS-001 rule 20).
 
 **Design:**
 
@@ -151,6 +175,14 @@ the root has redirected to `/scene` since #9.
   journeys, the scene's steady state is bounded structurally (one signal
   write per frame, `scene-rules.md`), and scene sampling is added when a
   scene performance concern is observed.
+- **The title workflow** (`tools/pr-title.mjs`): `decorateTitle` leaves as
+  written a title that opens with a supported gitmoji, in shortcode or emoji
+  form, followed by a subject with no conventional type; a typed title is
+  still decorated with its type's gitmoji; a bare subject with neither is
+  still refused; its test under `tools/*.test.mjs` covers the three forms.
+  WS-001 rule 20's sentence that a member's title carries both until an
+  order changes the workflow ends with this order, whose own pull request
+  carries the gitmoji and the subject alone.
 - **Checks**: `npm run check:scripts`, `node --test tools/`,
   `npx nx format:check`, `npm run i18n:check`, the declared target gate plain
   and review.
@@ -181,9 +213,9 @@ for the patch release.
 **Execution plan:**
 
 1. Base guard and activation as WO-005 step 1, for WO-027; integrate the
-   target's `main` (WO-023 and WO-024 merged) and record the commit used for
-   comparisons in the decisions file. Check: `git merge-base --is-ancestor
-   55b59c9133056c1d6471274a9676a7d5649196ac HEAD` exits 0 in the target
+   target's `main` and record the commit used for comparisons in the
+   decisions file. Check: `git merge-base --is-ancestor
+   48c7f8e6916692bca833c4985e2cf95978ab2c06 HEAD` exits 0 in the target
    worktree.
 2. `tools/board-count.mjs`: the walk over every tracked text file outside
    `docs/` with the comment syntaxes and the marker definition the Design
@@ -226,14 +258,21 @@ for the patch release.
 11. `scripts.md`: the rows for the two changed tools say what they do now.
     Check: `npm run check:scripts` exits 0; `npx nx format:check` and
     `npm run i18n:check` exit 0.
-12. Dependency check as WO-015 step 15; gate plain and review. Check:
+12. `tools/pr-title.mjs`: the gitmoji-only title admitted as written, the
+    typed title decorated, the bare subject refused, with the three cases in
+    its test. Check: `node --test tools/` passes and its output names the
+    three cases.
+13. Dependency check as WO-015 step 15; gate plain and review. Check:
     passing rows, no tracked-byte mutation.
-13. Launchpad write-back (the profile's two rows), then the publish, review
-    and records steps as WO-007 steps 15 to 17, with the branch
-    `docs/workspace-says-and-checks-what-is-so`, the title `docs: make the
-    gate tools and reference documents say and check what is so`,
-    `docs/evidence/WO-027/` and `docs/final-reviews/WO-027/`. Check:
-    `npm run test:docs` in the launchpad order worktree.
+14. Launchpad write-back (the profile's two rows; WS-001 rule 20's
+    sentence), then the publish, review and records steps as WO-007 steps
+    15 to 17, with the branch `docs/workspace-says-and-checks-what-is-so`,
+    the title `:memo: Make the gate tools and reference documents say and
+    check what is so` (a gitmoji and a subject with no conventional type,
+    which the kit's lint admits since v0.117.0 and this order's workflow
+    leaves as written), `docs/evidence/WO-027/` and
+    `docs/final-reviews/WO-027/`. Check: `npm run test:docs` in the
+    launchpad order worktree.
 
 **Preflight:** in the target worktree `npx nx format:check`,
 `npm run check:scripts`, `node --test tools/`, `npm run i18n:check`,
@@ -292,7 +331,14 @@ for the patch release.
    `dependencies` keys equal that base's. The records-only commit the
    final-review route adds under `docs/dotln/` afterwards is outside this
    comparison.
-7. `node scripts/target-gate.mjs WO-027 --review` records a passing row for
+7. `node --test tools/` passes with the title workflow's three cases: a
+   title that opens with a supported gitmoji and carries no conventional
+   type is returned as written, a typed title is decorated with its type's
+   gitmoji, and a bare subject is refused; and this order's draft pull
+   request, titled with a gitmoji and a subject alone, keeps its title
+   through the workflow's run, recorded in the evidence README from the
+   pull request's checks.
+8. `node scripts/target-gate.mjs WO-027 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
    line ran before the first full gate.
@@ -300,11 +346,12 @@ for the patch release.
 **Evidence gate:** the gate rows, `docs/evidence/WO-027/README.md` and
 `docs/evidence/WO-027/host-qualification.md`.
 
-**Known issues and carry-ins:** This order runs after the WO-023/WO-024 pair
-and before WO-016, as a side member the operator takes between road orders;
-it integrates the target's `main` at activation and reads the batches'
-write-backs as part of the set. The base is provisional, WO-022's merge; the
-pass after WO-024 merges may set it. REVIEW-002's ER-F5 (the `tool-v0`
+**Known issues and carry-ins:** This order runs beside WO-033 at the front
+of the sequence, moved up on the operator's direction of 2026-11-05, ahead
+of WO-034 and the WO-023/WO-024 pair; it integrates the target's `main` at
+activation, and a batch that lands after it integrates this order's
+document corrections. The base is WO-028's merge, set by the 2026-11-05
+pass; the observed gap was re-read there and every count held. REVIEW-002's ER-F5 (the `tool-v0`
 reader kept past its one release) is WO-023's carry-in, not this order's;
 ER-F10 (the duplicated budget blocks and `test-setup.ts` files) is deferred
 by the filing pass with its reopening on the register. This order activates

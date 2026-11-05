@@ -27,8 +27,10 @@ registers. They have built Angular workspaces for years and have used
 functional and reactive patterns in them for about eight. Their Angular
 conventions are their own and travel with them to any team; a session never
 questions their right to use them here. DotLn-Angular is also meant to show
-colleagues what the operator's ideal workspace looks like, so the work has an
-audience beyond the operator.
+colleagues what the operator's ideal workspace looks like, and to be the
+pie-in-the-sky perfect example for other Angular developers, so the work has
+an audience beyond the operator (2026-11-05, journal row
+2026-11-05T15:26:03Z, digest `4d21fba1…`).
 
 ## How the operator directs a session
 
@@ -79,7 +81,11 @@ audience beyond the operator.
   stop; one independent variable per pair; A before B, with the round named
   in the question and both captions; content, usability and usefulness before
   cosmetic polish; a rejected implementation leaves the code when its round is
-  decided, and decided choices are not relitigated.
+  decided, and decided choices are not relitigated. The pair's screenshots
+  are about 2080 by 1460, the centre browser window where the operator
+  mostly opens the UI (2026-11-04, capture
+  `cc1746dc2f88f599e55de07d589955a63aeff8cf31f409babf87492a14e53898`;
+  WO-028-D021).
 - **No separation:** the session is an extension of the operator and they of
   it; acting as if there were a separation is acting in discord (2026-10-17,
   capture `4f14c6c0…`).
@@ -112,6 +118,36 @@ audience beyond the operator.
   and fails whatever its checks say; the look of a page is briefed and judged
   by the operator from screenshots, never defaulted (2026-10-26; WS-001 rules
   24 and 25).
+- **Every string on screen in the message system** (2026-11-04, capture
+  `f4f42e5c934cb06ed012351256de90a78b6f8f04ca5b5fff0de93955774f18c6`;
+  WO-028-D039): there is a hard rule that all of the text is in
+  translations; a string the operator can see on screen is user-facing,
+  record fields and generated narration included (WS-001 rule 9, G3; the
+  catalog's mined text is WO-035's).
+- **Coding standards as a dedicated pass that occurs often** (2026-11-05,
+  journal row 2026-11-05T15:26:03Z, digest `4d21fba1…`): the operator agrees
+  with WO-028's final review that a refactoring pass needs to occur; getting
+  the functionality in first is understood, but coding standards are never
+  an afterthought: a dedicated standards pass recurs often (WS-001 rule 31;
+  WO-034 is the first).
+- **Research read for quality** (2026-11-04, capture
+  `01ddf8780c481f59f1758d8814ad1fd617ba5fa81f85dd81173ac1769cc0c7a1`;
+  WO-028-D018): a verifier of a research-heavy DotLn-Angular order, whether
+  research is all it does or part of it, judges a random sample of the new
+  research for quality and content, and a pattern of low quality fails the
+  order on those grounds (WS-001 rule 27).
+- **The rule of cool for scene-type orders, both directions** (2026-11-04,
+  capture `01ddf878…`; WO-028-D019): a scene-type DotLn-Angular order's
+  screen may fail verification for being sloppy, poor UX or not cool, in
+  the nebulous sense of an antagonistic visitor who expects slop and after
+  five minutes finds it pretty cool; and the flip side, that something which
+  misses some acceptance criteria may be kept because it is too cool not to
+  (WS-001 rule 28).
+- **The operator's full size** (2026-11-04, capture `01ddf878…`;
+  WO-028-D020): the operator uses an ultrawide 4K display at 3840 by 1620
+  and mostly opens the UI in a centre window of about 2080 by 1460; a UI
+  issue at either size can fail an order, and issues at other resolutions
+  are boarded follow-ups (WS-001 rule 29).
 - **Above the records, with the data in reach:** the UI exists for the operator's
   flow and knowledge; a page works at a higher level than its raw records, with any
   or all of the data available when wanted (2026-10-21, capture `7149ef88…`).
@@ -316,6 +352,13 @@ audience beyond the operator.
 - **Code for people to read:** DotLn-Angular's code is written for a human reader,
   with about a fifth more newlines where that makes sense, never overdone
   (2026-10-21, capture `7149ef88…`).
+- **Beautiful, efficient code** (2026-11-04 and 2026-11-05, captures
+  `f4f42e5c…` and
+  `180dfe1299ad9e796db9c0801065d16355ed05f413caaa255c9b1de1cdb0b607`;
+  WO-028-D042): beautiful, efficient code is the goal; a model file does
+  not carry presentation logic, and no function runs to hundreds of lines;
+  a shape a first batch set is no precedent for the next (WS-001 rules 30
+  and 31).
 - **Lego blocks:** components are atomic pieces that compose like lego blocks, with
   Sass reused where that makes sense and is a best practice (2026-10-21, capture
   `7149ef88…`).

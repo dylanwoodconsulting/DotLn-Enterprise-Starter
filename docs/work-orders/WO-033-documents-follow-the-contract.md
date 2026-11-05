@@ -20,8 +20,9 @@ declaration
 `standard-pass-v0-101-0-2026-10-28.md`, `standard-pass-v0-103-0-2026-10-30.md`,
 `standard-pass-v0-105-0-2026-11-01.md`, `standard-pass-v0-93-0-2026-10-23.md`,
 `standard-pass-v0-96-1-2026-10-24.md`, `standard-pass-v0-99-0-2026-10-25.md`,
-`ui-planning-2026-10-21.md`) into `docs/planning/passes/`, where the two
-passes of 2026-11-03 and this pass's filing pass already live; adds
+`ui-planning-2026-10-21.md`) into `docs/planning/passes/`, where the
+passes since 2026-11-03 already live (the two of that day, the 2026-11-04
+pass and the 2026-11-05 pass); adds
 `docs/control/document-moves.json` (schema 1, one entry per move naming this
 order, the shape core's WO-238 wrote), which the document check reads so a
 record's link to an old path still resolves; rewrites every link to a moved

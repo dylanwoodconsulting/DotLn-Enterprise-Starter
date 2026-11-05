@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
+**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -18,7 +18,10 @@ runtime dependency. Removes nothing. Wall-clock: about 6 h 0 min to 10 h 0 min o
 executor work, of which the fan-out runs in parallel, plus the fixed cycle;
 unknown until run. Context bytes: the study record, check, families and
 rules as the target's `main` leaves them at activation (WO-020's, with
-WO-021's and WO-022's changes), `catalog.md` §Studies, the twenty catalog rows with their
+WO-021's, WO-022's and WO-028's changes: the `concept-study-v1` record whose
+authored text fields are message keys in the work's lazy catalog, the model
+split into simulation, presentation and entry, and the study text and size
+guards), `catalog.md` §Studies, the twenty catalog rows with their
 hooks, this order, about 180 KB for the executor; each author reads two rows,
 the contract and the public references it cites. Commands added: none.
 Tokens: unknown until run. Worker totals, the session total, stop
@@ -38,8 +41,11 @@ Planner-synthesized by the 2026-10-30 second planning pass
 ([planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
-composite, the addressable route and the fan-out procedure). The base above is
-WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
+composite, the addressable route and the fan-out procedure); WO-028 merged
+(hard: the `concept-study-v1` record, the work catalogs, the model split and
+the study guards every batch now writes to). The base above is WO-028's
+merge (#14), released as `DotLn Angular v0.10.0`, with the four study
+batches and the shared migration integrated.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -48,6 +54,11 @@ WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
     "workOrderId": "WO-020",
     "relation": "hard",
     "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses"
+  },
+  {
+    "workOrderId": "WO-028",
+    "relation": "hard",
+    "reason": "the concept-study-v1 record, the work message catalogs, the simulation, presentation and entry split and the study guards every batch now writes to"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -57,8 +68,8 @@ WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
 and its sub-apps, §Design direction); `docs/repositories/dotln-angular.md`;
 `docs/product/concept-study.md`; `docs/control/budgets.json` (`subagentCap`);
 the target's `catalog.md` §Studies and `catalog-rules.md` as the target's
-`main` leaves them at activation (WO-020's, with WO-021's and WO-022's
-changes), and `docs/dev-reference/architecture/concept-mapping.md` (traps,
+`main` leaves them at activation (WO-020's, with WO-021's, WO-022's and
+WO-028's changes), and `docs/dev-reference/architecture/concept-mapping.md` (traps,
 levels and the five UIFA roles); WO-020's `fan-out.md`.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens
@@ -104,7 +115,9 @@ them to the books' vocabulary; no `relations` family exists.
   ring itself; one variable, the geometry of a loop through levels; both at
   1440 and 360; the rounds continue until the operator says done.
 - **Executable arm where it exists**: a study with a mechanism to run carries
-  `executable: { kind: 'typescript', module }` with a spec: a Gödel
+  `executable: { kind: 'typescript', module }` naming its model entry
+  (`<slug>.model.ts` composing `<slug>.simulation.ts` and
+  `<slug>.presentation.ts`) with a spec: a Gödel
   numbering of a toy alphabet (encode and decode), a decision procedure over
   a toy rule system authored for the study (not the book's puzzle, in the
   author's words), a chunking of an event list into levels, a Conway mapping
@@ -150,6 +163,19 @@ them to the books' vocabulary; no `relations` family exists.
   with two concepts each, one factual critic who also checks the analogy rule
   and that no study characterizes the operator or quotes the books, one
   reading critic).
+- **The record and the code's shape** (WO-028's migration; WS-001 rules 9,
+  30 and 31): each record is `concept-study-v1`, every authored on-screen
+  field a message key in the new scopes
+  `apps/dotln/public/i18n/studyGeb/en.json` and `studyTt/en.json` with
+  shared narration in `studyCommon/`; each model's labels, notes, worked
+  arithmetic and comparisons are parameterized messages with nested keys and
+  named placeholders; a presentation function takes a frame, a description
+  object or a translator and at most four parameters, and no function is
+  split to fit the 80-line ceiling: the shape is WO-034's reshaped batch and
+  WO-028's own twenty, never the first batch's as it stood before WO-034.
+  The authors' and critics' briefs name rules 9, 23 and 30 and G3, and the
+  critics inspect message coverage and the mechanism/presentation split
+  independently of any earlier worked example (WO-028-D042; rule 30).
 - **Documents:** `catalog.md` §Studies gains the two coverage rows and the
   `relations` family; `catalog-rules.md` gains the rule that a study of an
   idea without a mechanism keeps its executable and visual fields absent with
@@ -246,12 +272,16 @@ each.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/geb/`
    and `studies/tt/` with exactly the twenty ids this order names (or one
    recorded substitution per work), every record `checked` with at least two
-   reviewers, every reference complete, and `studies-summary.json` current.
+   reviewers, every reference complete, and `studies-summary.json` current;
+   every record is `concept-study-v1` with its text in `studyGeb/en.json` or
+   `studyTt/en.json`, `npm run i18n:check` exits 0 and the corpus test passes
+   over the models.
 3. The four records whose mechanism the Design names (Gödel numbering,
    Decision procedure, Chunking and Conway's law (1968)) carry `executable`
-   naming a module under `libs/features/tools/src/lib/studies/geb/` or
-   `studies/tt/` with a spec beside it that imports that module and runs the
-   study's example, asserting its expected result; a recorded substitution
+   naming a model entry under `libs/features/tools/src/lib/studies/geb/` or
+   `studies/tt/` that composes its simulation and presentation modules, with
+   a spec beside it that imports that module and runs the study's example,
+   asserting its expected result; a recorded substitution
    that replaces one of the four brings in a record with a mechanism to run,
    which carries its module and spec the same way, and the decisions file
    names it; every other record with `executable` does the same; every
@@ -292,16 +322,18 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The 2026-11-03 pass sets the base to WO-022's
-merge, released as v0.9.0. Step 1 still integrates the target's current main
-and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The 2026-11-05 pass sets the base to WO-028's
+merge (#14), released as v0.10.0, and carries the migrated record and code
+shape into the Design; this order runs after WO-034, the first standards
+pass, so its authors copy a reshaped batch. Step 1 still integrates the
+target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021 and WO-022 change. This order and WO-023 are a lane pair: disjoint
+WO-021, WO-022 and WO-028 change. This order and WO-023 are a lane pair: disjoint
 surfaces, no edge, the second to publish integrates the target's `main` and
 rewrites `studies-summary.json` before its publish; the operator may run them
 one at a time. The remaining GEB and Team Topologies rows, the AI for Games

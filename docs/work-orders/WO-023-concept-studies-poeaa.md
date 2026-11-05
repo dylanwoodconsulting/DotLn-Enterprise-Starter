@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
+**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/poeaa/` (twenty records), the
@@ -18,9 +18,11 @@ the released `**/node_modules` declaration and updates the profile; it deletes
 no output during execution. Wall-clock: about 6 h 0 min to 10 h 0 min of executor work, of which
 the fan-out runs in parallel, plus the fixed cycle; unknown until run.
 Context bytes: the study record, check, families and rules as the
-target's `main` leaves them at activation (WO-020's, with WO-021's and
-WO-022's changes),
-`catalog.md` §Studies, the twenty catalog rows, this order,
+target's `main` leaves them at activation (WO-020's, with WO-021's,
+WO-022's and WO-028's changes: the `concept-study-v1` record whose authored
+text fields are message keys in the work's lazy catalog, the model split
+into simulation, presentation and entry, and the study text and size
+guards), `catalog.md` §Studies, the twenty catalog rows, this order,
 `docs/dev-reference/architecture/events-and-state.md` and `foundation.md`
 (the app's own stores, data access and persistence), about 190 KB for the
 executor; each author reads two rows, the contract and the public catalog
@@ -41,8 +43,11 @@ WO-020 to WO-024. Planner-synthesized by the 2026-10-30 second planning pass
 ([planning document](../planning/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
-composite, the addressable route and the fan-out procedure). The base above is
-WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
+composite, the addressable route and the fan-out procedure); WO-028 merged
+(hard: the `concept-study-v1` record, the work catalogs, the model split and
+the study guards every batch now writes to). The base above is WO-028's
+merge (#14), released as `DotLn Angular v0.10.0`, with the four study
+batches and the shared migration integrated.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -51,6 +56,11 @@ WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
     "workOrderId": "WO-020",
     "relation": "hard",
     "reason": "the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses"
+  },
+  {
+    "workOrderId": "WO-028",
+    "relation": "hard",
+    "reason": "the concept-study-v1 record, the work message catalogs, the simulation, presentation and entry split and the study guards every batch now writes to"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -60,8 +70,8 @@ WO-022's merge, released as v0.9.0, with the earlier study batches integrated.
 §Design direction); `docs/repositories/dotln-angular.md`;
 `docs/product/concept-study.md`; `docs/control/budgets.json` (`subagentCap`);
 the target's `catalog.md` §Studies and `catalog-rules.md` as the target's
-`main` leaves them at activation (WO-020's, with WO-021's and WO-022's
-changes), `docs/dev-reference/architecture/events-and-state.md` and
+`main` leaves them at activation (WO-020's, with WO-021's, WO-022's and
+WO-028's changes), `docs/dev-reference/architecture/events-and-state.md` and
 `foundation.md`; WO-020's `fan-out.md`.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens
@@ -102,7 +112,9 @@ family exists.
   representation; both at 1440 and 360; the rounds continue until the
   operator says done.
 - **Executable models**: each record's `pseudocode.executable` is
-  `{ kind: 'typescript', module: 'libs/features/tools/src/lib/studies/poeaa/<slug>.ts' }`,
+  `{ kind: 'typescript', module: 'libs/features/tools/src/lib/studies/poeaa/<slug>.model.ts' }`,
+  the entry of a few lines composing `<slug>.simulation.ts` (language-free)
+  and `<slug>.presentation.ts` (taking a `StudyTranslate`), together
   a small pure or in-memory model of the pattern (a unit of work over an
   in-memory store; an identity map; a lazy-loaded ghost; a lock table) with a
   spec beside it that drives the model through the study's example, whose
@@ -139,6 +151,19 @@ family exists.
   factual critic also running each model's spec and checking that every
   "where the app embodies it" sentence names a file that exists at the base
   and reads as the author's reading.
+- **The record and the code's shape** (WO-028's migration; WS-001 rules 9,
+  30 and 31): each record is `concept-study-v1`, every authored on-screen
+  field a message key in the new scope
+  `apps/dotln/public/i18n/studyPoeaa/en.json` with shared narration in
+  `studyCommon/`; each model's labels, notes, worked arithmetic and
+  comparisons are parameterized messages with nested keys and named
+  placeholders; a presentation function takes a frame, a description object
+  or a translator and at most four parameters, and no function is split to
+  fit the 80-line ceiling: the shape is WO-034's reshaped batch and
+  WO-028's own twenty, never the first batch's as it stood before WO-034.
+  The authors' and critics' briefs name rules 9, 23 and 30 and G3, and the
+  critics inspect message coverage and the mechanism/presentation split
+  independently of any earlier worked example (WO-028-D042; rule 30).
 - **Documents:** `catalog.md` §Studies gains the PoEAA coverage row and the
   `states` family; `catalog-rules.md` gains the rule that a study naming
   where the app embodies a pattern names the file and marks the reading as
@@ -183,8 +208,8 @@ the design record.
    the ten authors; merge the twenty drafts. Check: `npx nx test tools` exits
    0 over the models' specs.
 5. Dispatch the two critics; dispose the findings; rewrite through the same
-   authors or apply the bounded corrections in the parent under the profile; set `checked`. Check: `npm run studies:check` exits 0 over
-   `studies/poeaa/`.
+   authors or apply the bounded corrections in the parent under the profile; set `checked`. Check: `npm run studies:check` and
+   `npm run i18n:check` exit 0 over `studies/poeaa/` and `studyPoeaa/en.json`.
 6. The link check into `docs/evidence/WO-023/README.md`. Check: every URL has
    a status.
 7. e2e `apps/dotln-e2e/src/catalog.spec.ts`: PoEAA shows twenty studied; Unit
@@ -244,12 +269,16 @@ each.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/poeaa/`
    with exactly the twenty ids this order names (or one recorded
    substitution), every record `checked` with at least two reviewers, every
-   reference complete, and `studies-summary.json` current.
+   reference complete, and `studies-summary.json` current; every record is
+   `concept-study-v1` with its text in `studyPoeaa/en.json`,
+   `npm run i18n:check` exits 0 and the corpus test passes over the twenty
+   models.
 3. Every record except the four the Design names as structural choices
    without a mechanism to run (Domain Model, Transaction Script, Template
-   View and Page Controller) carries `executable` naming a module under
-   `libs/features/tools/src/lib/studies/poeaa/` with a spec beside it that
-   imports that module and drives its model through the study's example; a
+   View and Page Controller) carries `executable` naming a model entry under
+   `libs/features/tools/src/lib/studies/poeaa/` that composes its simulation
+   and presentation modules, with a spec beside it that imports that module
+   and drives its model through the study's example; a
    recorded substitution brings in a record held to the same rule, by the
    Design's test of whether it has a mechanism to run, and the decisions
    file names which; every record with `executable: null` carries its
@@ -319,15 +348,17 @@ each.
 `docs/evidence/WO-023/host-qualification.md`; the launchpad's
 `docs/evidence/WO-023/cleanup-declaration.md`.
 
-**Known issues and carry-ins:** The 2026-11-03 pass sets the base to WO-022's
-merge, released as v0.9.0. Step 1 still integrates the target's current main
-and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The 2026-11-05 pass sets the base to WO-028's
+merge (#14), released as v0.10.0, and carries the migrated record and code
+shape into the Design; this order runs after WO-034, the first standards
+pass, so its authors copy a reshaped batch. Step 1 still integrates the
+target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that may mark `executable: null`, because a conditional
 criterion let any mechanism the Design assigns a model take that escape;
 the executor reads the study record, check, families and rules as the
-target's `main` leaves them, which WO-021 and WO-022 change. This order and WO-024 are a lane pair: disjoint
+target's `main` leaves them, which WO-021, WO-022 and WO-028 change. This order and WO-024 are a lane pair: disjoint
 surfaces, no edge, the second to publish integrates the target's `main` and
 rewrites `studies-summary.json` before its publish; the operator may run them
 one at a time. WO-008 (authentication and permissions) will read the
