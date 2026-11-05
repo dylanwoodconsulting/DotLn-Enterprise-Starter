@@ -1,0 +1,9 @@
+AI for Games gains twenty more checked concept studies, bringing it to forty and the catalog to eighty. They cover the next Movement concepts, among them Flee, Collision avoidance, Obstacle and wall avoidance, Projectile trajectory and The firing solution.
+
+This draft now also carries the shared migration the operator included in this order. All eighty studies move their prose to lazily loaded message catalogs through a new `concept-study-v1` record, and the shipped v0 schema is unchanged. Each of the forty movement models splits into a language-free simulation, a presentation that receives a translator, and a small model entry. Two gate checks guard the result: one for study text outside the message system and an 80-line function ceiling on study code. Marble lanes now resolve by stable id, and the `motion` drawing places names apart from the physical points.
+
+Verification walked the operator's session in the served production build at 360, 768, 1440, 2080 and 3840 pixels. It compared every frame of all eighty studies with the tree before the migration: the forty movement studies are identical in text and geometry. Across the stream studies no number changed, and 48 narration messages now write a computed count as a digit.
+
+Some small defects are boarded rather than fixed, none of them breaking an acceptance criterion. The most visible are that an empty or stale message catalog shows raw keys instead of the failure state, and that a first AI for Games reading now transfers about 186 kB gzipped where it transferred about 102 kB. The earlier boarded items stand, including the short action of the ray in Obstacle and wall avoidance.
+
+This draft is for the operator's code review before final review. The final-review phase adds the reviewed release and migrated work-order records.

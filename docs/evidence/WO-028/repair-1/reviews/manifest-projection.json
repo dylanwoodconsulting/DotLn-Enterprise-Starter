@@ -1,0 +1,25 @@
+{
+  "cause": "The final document gate refused absolute home paths in the two parent-authored candidate manifests. Keep the original private snapshots in session scratch and use logical worktree placeholders on the public evidence surface. Reviewed Git trees, relative file names and all file hashes are unchanged.",
+  "projections": [
+    {
+      "file": "round-1-candidate.json",
+      "inspectedManifestSha256": "3baf24acb1b71318f35f2ee3e07f735687ce8cc3cc5466aa61351b16f2ea44dc",
+      "publishedManifestSha256": "f020357e2b4e8d0258d3209bbe656d088ec255c620ee847563e57c621533109e",
+      "transforms": [
+        "repositories.launchpad.root replaced with <launchpad-worktree>",
+        "repositories.target.root replaced with <target-worktree>"
+      ],
+      "allTreesPathsAndFileHashesUnchanged": true
+    },
+    {
+      "file": "round-2-candidate.json",
+      "inspectedManifestSha256": "bcaa67df88b04deedc21fa26b70cf727f0139db6f47ca648c2211abf8e34e23e",
+      "publishedManifestSha256": "68df604bd5c62958809f641bd28a8130118f5d317469815b36d2d3984b1356f1",
+      "transforms": [
+        "repositories.launchpad.root replaced with <launchpad-worktree>",
+        "repositories.target.root replaced with <target-worktree>"
+      ],
+      "allTreesPathsAndFileHashesUnchanged": true
+    }
+  ]
+}

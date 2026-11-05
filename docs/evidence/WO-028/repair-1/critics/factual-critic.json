@@ -1,0 +1,285 @@
+{
+  "role": "Independent factual content critic",
+  "order": "WO-028",
+  "repair": "repair-1",
+  "reviewedAt": "2026-11-04T21:26:08Z",
+  "identity": {
+    "host": "native Codex worker",
+    "assignment": "repair_factual",
+    "manualUse": "1 of 20",
+    "descendants": 0,
+    "independentOfAuthorAndExecutor": true
+  },
+  "scope": {
+    "target": "target",
+    "frozenCandidate": "content-candidate/",
+    "manifest": "content-candidate.json",
+    "content": "Revised Obstacle and wall avoidance record/model/spec and the provenance expansion in the twenty WO-028 study bylines.",
+    "exclusions": "No broader implementation review, browser or drawing-readability judgment, tests, gates, dependency installation, repository mutation or background work."
+  },
+  "verdict": "changes-required",
+  "summary": "F4's default now demonstrates a successful glancing avoidance manoeuvre, and F5's twenty expanded bylines agree with the retained author assignments. One medium content finding remains: named moments claim a hit or turn that some offered inputs never produce.",
+  "findings": [
+    {
+      "id": "FC-01",
+      "severity": "medium",
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "lines": [
+        307,
+        308,
+        339,
+        340
+      ],
+      "claim": "The named moments Ray first hits and Turning along the wall identify events in the currently selected run.",
+      "reproduction": [
+        "Keep every record parameter at its default except set the offered rayLength input to 0.5 (1 also reproduces). The independent scalar simulation finds no ray/wall intersection in all 81 frames. firstHit and turning therefore both equal -1.",
+        "The model nevertheless maps both event labels to step 0. At that step the ray is (0,0) to (0.5,0), the wall is at x=10, the frame truthfully says no hit, and acceleration seeks delivery (18,15).",
+        "A second reproduction is offered goalY=0 with rayLength=9. Every position and acceleration has y=0; the turning predicate is never true. Turning along the wall nevertheless points to the first-hit step 3 (0.3 s), whose acceleration is (8,0)."
+      ],
+      "impact": "The event controls contradict the selected frame and teach an event that did not occur when the reader explores explicitly offered inputs.",
+      "boundedCorrection": "Omit unavailable event moments or give their fallback a truthful label such as Start of run / No ray hit in this run. Do not call a fallback frame a turn. Recheck the no-hit case and the straight-on case as well as the default."
+    }
+  ],
+  "judgments": {
+    "defaultAndTurning": {
+      "result": "pass for the intended default",
+      "independentMethod": "A fresh Python scalar implementation read only record parameters, implemented the finite-segment equations, engine Seek formula and speed-capped semi-implicit update; it imported no model or engine code. Exact point/segment and segment/segment distances checked the continuous straight travel between fixed-step positions.",
+      "firstHit": {
+        "index": 5,
+        "seconds": 0.5,
+        "position": [
+          1.912284842159487,
+          0.543510185225659
+        ],
+        "velocity": [
+          3.652842184662994,
+          1.6299521385447138
+        ],
+        "hit": [
+          10,
+          4.152368151444873
+        ],
+        "normal": [
+          -1,
+          0
+        ],
+        "target": [
+          4,
+          4.152368151444873
+        ],
+        "acceleration": [
+          4.005956524279642,
+          6.924760813600812
+        ]
+      },
+      "explanation": "The normal-offset target supplies a stronger sideways acceleration than the delivery pull at the hit. Hits occur at frames 5 and 6; from frame 7 the forward ray clears the upper endpoint and delivery steering resumes. This is a local turn, not a planned route.",
+      "minimumPlottedClearance": {
+        "index": 29,
+        "seconds": 2.9,
+        "value": 0.11866483316878629,
+        "displayed": "0.12"
+      },
+      "exactMinimumBetweenUpdates": {
+        "segmentStartIndex": 29,
+        "segmentFraction": 0.15000156509593238,
+        "centre": [
+          9.239907272458781,
+          6.818578022782496
+        ],
+        "nearestWallPoint": [
+          10,
+          6
+        ],
+        "clearance": 0.1170545796171063,
+        "displayed": "0.12"
+      },
+      "firstSampleBeyondWallWithDiscAboveEnd": {
+        "index": 32,
+        "seconds": 3.2,
+        "position": [
+          10.074913260626925,
+          7.594698757001562
+        ]
+      },
+      "endPosition": [
+        18.257651145167326,
+        15.242089581711749
+      ],
+      "caution": "The displayed minimum is computed over plotted samples. The independent swept minimum has the same rounded default value and remains positive."
+    },
+    "straightOnComparison": {
+      "result": "pass",
+      "changedInputOnly": "goalY: 15 -> comparisonGoalY: 0",
+      "unchanged": "Initial position/velocity, radius, ray length 9, offset 6, speed, acceleration and integration.",
+      "firstHitSeconds": 0.3,
+      "minimumBodyClearance": 3.8,
+      "endPosition": [
+        4.079999999999999,
+        0
+      ],
+      "maximumSidewaysDisplacement": 0,
+      "targetSwitches": 47,
+      "explanation": "The run brakes, reverses and repeatedly switches between the avoidance and delivery target on the same line. It remains on the approach side and supplies no side-selection or route policy. Floating-point near-zero velocity is retained rather than treated as an invented exact stop."
+    },
+    "geometryAndPseudocode": {
+      "result": "pass",
+      "checks": [
+        "The cross-product fractions intersect two finite segments; both fractions must be in [0,1]. The selected normal is unit length and opposes the incoming ray. A zero denominator deliberately rejects both parallel and collinear cases.",
+        "The clearance formula uses nearest=(wallX, clamp(y, wallBottom, wallTop)); its Euclidean distance minus radius is valid on either side and around both endpoints for this vertical wall.",
+        "Endpoint checks independently give clearance 1 at (12,0), 1 at (10,8), sqrt(0.5)-1 at (9.5,6.5), and -1 at (10,0). A horizontal centre ray from (9.5,6.5) misses despite the disc overlapping the upper endpoint.",
+        "The four ordinary pseudocode blocks agree with the four mechanism steps and the code: detect, select target, call engine Seek, measure then advance using the newly capped velocity. Last travel heading is retained only at exactly zero speed.",
+        "The hand-worked head-on state at x=4.4, vx=4, target=(4,0) gives acceleration=(-8,0), next vx=3.2, next x=4.72 and current clearance=4.6.",
+        "The model's chart, text-equivalent keys and worked arithmetic describe the same state and target. No hidden wall clamp or collision response appears in the update."
+      ]
+    },
+    "offeredInputsAndLimits": {
+      "result": "limits are genuine; FC-01 concerns their event controls",
+      "parameterGrid": "All 456 combinations offered by goalY=0..18 by 1 and rayLength=0.5..12 by 0.5, over 81 positions each.",
+      "allTrajectoriesFinite": true,
+      "noHitRuns": 91,
+      "runsWithHitButNoDominantSidewaysAcceleration": 151,
+      "overlappingRunsByExactBetweenUpdateDistance": 375,
+      "sampledNonOverlapButContinuousOverlapCases": 0,
+      "observations": [
+        "Changing only default rayLength to 1 produces no hit and actual upper-end disc overlap: plotted minimum -0.082825280 and between-update minimum -0.086086834. The short-ray limitation is visible in the offered default situation.",
+        "At the rayLength endpoints with goalY=15, 0.5 gives no hit and between-update clearance -0.086086834; 12 gives hits but clearance -0.739523397. Longer detection is not a universal clearance guarantee.",
+        "At the goalY endpoints with rayLength=9, goalY=0 stays on the centre line with minimum clearance 3.8, while goalY=18 clears with between-update minimum 0.870216037.",
+        "At combined extremes (goalY, rayLength)=(0,0.5), the centre crosses the wall and clearance reaches -1 between updates; (0,12) remains straight with minimum 3.8; (18,0.5) has no hit and minimum 0.767963517; (18,12) clips the upper endpoint with minimum -0.005407915.",
+        "These overlaps are legitimate exposed limitations of a centre ray plus local target steering, not findings that every slider setting must avoid collision. The source and record make no such guarantee.",
+        "The corner-trap claim is scoped to multiple rays and adjacent faces, not presented as executed by this one-wall model. Seek is not Arrive; the model also does not promise to settle at the destination."
+      ]
+    },
+    "provenance": {
+      "result": "pass",
+      "evidence": "docs/evidence/WO-028/fan-out.md pins ten native Codex gpt-6.1-sol author assignments. Each retained authors/author-NN.json identifies its two delivered slugs; author-03.json identifies this wall study and collision avoidance.",
+      "observed": "All twenty current authored.by values equal Codex gpt-6.1-sol, study author N for the matching retained assignment. In particular this wall study correctly names study author 3.",
+      "boundary": "The byline preserves original study authorship. The repair parent is a separate contributor; this review does not relabel the original author as the repair parent."
+    }
+  },
+  "mechanisms": {
+    "classification": "mixed",
+    "engine": [
+      "seek computes normalise(target-position) times maxAcceleration, including zero acceleration at zero offset.",
+      "The public vector operations provide arithmetic, unit vectors, distance, dot product and updated-velocity speed clipping."
+    ],
+    "local": [
+      "Finite ray/wall intersection and selection of a normal opposite travel.",
+      "Normal-offset avoidance target and delivery fallback.",
+      "Finite-wall body-clearance calculation, fixed-step integration, heading retention, frames, chart and comparison."
+    ],
+    "scopeBoundary": "gdx-ai is an independently inspected implementation, not an imported runtime in this study. Its no-hit output and radius-inclusive offset differ explicitly from this local delivery fallback and centre-target avoidDistance."
+  },
+  "sourcesObserved": [
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "observedUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "accessed": "2026-11-04",
+      "status": "Web open succeeded, tagged source fully observed.",
+      "supports": "Lines 121-144 update configured rays, query detectors, retain the collision nearest the owner, return zero without a hit, and accelerate toward hit + normal*(boundingRadius+distanceFromBoundary). Commentary at lines 35-64 discusses ray configurations, corner trapping and possible remedies.",
+      "boundary": "Does not provide this study's finite-wall detector or its delivery fallback; no claim that the source implements the local parameterisation."
+    },
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "accessed": "2026-11-04",
+      "status": "Web opening of DOI HTML failed. A direct request with Accept application/vnd.citationstyles.csl+json succeeded HTTP 200 at Crossref transform.",
+      "effectiveUrl": "https://api.crossref.org/v1/works/10.1201%2F9781351053303/transform",
+      "supports": {
+        "title": "AI for Games",
+        "author": "Ian Millington",
+        "editionNumber": "3",
+        "publisher": "CRC Press",
+        "DOI": "10.1201/9781351053303"
+      },
+      "boundary": "Metadata verifies bibliographic identity only. No book body text or contents was read in this review. Chapter 3 / section 3.3.15 is the retained catalog row's location, whose own provenance says publisher preview front matter; metadata is not substituted for independently reading that section."
+    },
+    {
+      "path": "libs/shared/catalog/src/data/tools-aifg-a.json",
+      "observedAt": "aifg-a:137, lines 2023-2070",
+      "supports": "Retained row location Chapter 3 Movement / 3.3 Steering Behaviors / 3.3.15 Obstacle and Wall Avoidance, and its existing preview-front-matter provenance.",
+      "boundary": "Existing catalog provenance, not a new reading of the book."
+    },
+    {
+      "path": "libs/shared/scene-engine/src/lib/steering.ts",
+      "observedAt": "seek, lines 36-38",
+      "supports": "Actual engine Seek formula."
+    },
+    {
+      "path": "libs/shared/scene-engine/src/lib/vectors.ts",
+      "observedAt": "lines 3-22",
+      "supports": "Actual vector arithmetic, zero-vector normalisation and clipLength."
+    },
+    {
+      "path": "docs/evidence/WO-028/authors/author-03.json",
+      "supports": "Original wall-study author and original mixed engine/local scope; historical receipt, not evidence of the revised glancing numbers."
+    },
+    {
+      "path": "docs/evidence/WO-028/fan-out.md",
+      "supports": "Host/model/author assignments for the twenty byline expansions."
+    }
+  ],
+  "inspectedContentHashes": {
+    "frozen": {
+      "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "369fc65bdb04bceb46c86df52d448657bf77bd51d4f59a5e21e99045af210e2d",
+      "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "4bbda3f5f67b60e97e09a0f188184580fdae98f3122f8017908f1f0df59877d5"
+    },
+    "allFrozenHashesMatchContentCandidateManifest": true,
+    "engine": {
+      "libs/shared/scene-engine/src/lib/steering.ts": "fca79ba48fd2e31b186ffa6b69544639a690149a2fc74d48616dedd39f8a1c0e",
+      "libs/shared/scene-engine/src/lib/vectors.ts": "a0f23414fe9d460efbf96808720e8def059f0ace9e370d542b0274adee6bd228"
+    },
+    "bylineOnlyRecords": {
+      "steering-behaviors": "40d7b6d51661279a5a0bcd9c0642b29358e29eeb74145079c822ccb74439b89c",
+      "steering-output": "98936cac91ea270478e01f1fce6055a909e8cab58ff63db73162ae72cbea91a5",
+      "flee": "01180988d9389fe9c5c74646b1845bdc55de353c1a6e61726d04c364839bae2b",
+      "variable-matching": "96e026191f3036e0e8f985a29a9cef289321199cea864fd78ad01c3d997e1c4a",
+      "collision-avoidance": "c4fdb502623440103f4206f76d9155ab2ae78fc902ac2d35eb27c72a940f8a3a",
+      "obstacle-and-wall-avoidance": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+      "corner-trap": "ce3a9c05f9a28f0e5daef012ab8423574c765f718c3a7549ea14365cd759719d",
+      "blending-versus-arbitration": "388eca21336b9887395fe696ee97559dab1cc800a408c3bab152354d18de946a",
+      "projectile-trajectory": "e86850166e38b9188fedbf260cd92def2da15adf904e01403d78c8589d6a1d6d",
+      "the-firing-solution": "1b0e99aec8c5e24e6a7a65443f4e372d7e028c4d59352dacc7d9dec2abee7882",
+      "iterative-targeting": "3feaa6399b5842ca0b1bb84d100869a9e47c268e7b3a529020d72ea22f40c19f",
+      "jump-points": "153585a8f4efcc5af4541ed3721e1e6d84d8f4476ab46cc592f40ef42154649c",
+      "motor-control": "3579a2cbb0771fa7a3bfa19444ec76774647d6eab4513f07affd190961a647b7",
+      "actuator": "60a4711561e954759f2f2d3636098877b3bfc26aa4c99d42971c157a28975978",
+      "movement-in-the-third-dimension": "4b15edd41ab82cbe3b36773c7102cea88462060ef4d53b71b1ea8e1c260b8602",
+      "two-and-a-half-dimensions": "e77516704b1e4334ca1b3661f52ebf60ecf77ad46d82d9c5d3ebd62e90298848",
+      "kinematic-arrive": "2fb8879b46bcd298b1cdecfe73445e5f610fcff646ee42444a19876964f703c1",
+      "satisfaction-radius": "1297e03aed30a33ee948578892014520ef057695c69f79016fdd2b486a6d3e32",
+      "kinematic-wander": "5d7ef3ec209bd7ebdd1bccb1ecba52c7a4f61861b6575536dc9500173bf995c8",
+      "coordinated-movement": "b7c8fcd8c5513f736759cf6079bb989de4acba6f2daba7012fb4b84297c06293"
+    },
+    "bylineHashPathConvention": "libs/shared/catalog/src/studies/aifg/<slug>.json in the target; only byline/provenance was judged for the other nineteen studies."
+  },
+  "authorizedPostReviewMetadataTransforms": {
+    "bylineExpansion": "Approved as observed: retained worker assignment -> Codex gpt-6.1-sol, study author N, without changing original authorship.",
+    "wallStudyCheckedTransitionAuthorized": false,
+    "reason": "Resolve FC-01 and obtain the required bounded content recheck before marking this revised wall record checked or adding this critic as a passing reviewer.",
+    "afterPassingRecheck": "A subsequent pass may explicitly authorize authored.state draft -> checked and authored.reviewedBy updates naming the actual critics. This failed candidate report itself supplies no such authorization.",
+    "neutralTransforms": "Whitespace/line-wrapping only, if decoded JSON values and executable TypeScript semantics do not change, may be recorded as formatting; semantic changes require new candidate hashes and review coverage."
+  },
+  "execution": {
+    "testsRun": false,
+    "gatesRun": false,
+    "dependenciesInstalled": false,
+    "backgroundTasksStarted": false,
+    "repositoryWrites": false,
+    "scratchWrites": [
+      "factual-critic.json"
+    ],
+    "evidence": "Read source and specs; two foreground pure arithmetic diagnostic scripts independently reproduced the mechanism and input grid. Parent-reported 101-file / 866-test pass was not used as a substitute for content judgment."
+  },
+  "usage": {
+    "cumulativeTokens": "unknown",
+    "source": "No cumulative input/output token counter is exposed to this worker by the available tool results.",
+    "scope": "repair_factual worker conversation only; no parent or sibling counters inferred",
+    "cutoff": "2026-11-04T21:26:08Z",
+    "availableToolExposedCounters": [],
+    "monetaryUsage": "unknown"
+  },
+  "receiptProjection": {
+    "originalSha256": "55c90a0375560f6a606daca275ac66d06e8e68c2fef985d79a0c34faeab80021",
+    "changes": "Absolute host paths replaced with target, launchpad or session-scratch; all findings and observations retained."
+  }
+}

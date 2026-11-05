@@ -1,0 +1,154 @@
+{
+  "author": "author-03",
+  "date": "2026-11-04",
+  "status": "draft deliverables authored; parent integration and execution pending",
+  "studies": [
+    {
+      "slug": "collision-avoidance",
+      "id": "aifg-a:134",
+      "deliverables": [
+        "libs/shared/catalog/src/studies/aifg/collision-avoidance.json",
+        "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts",
+        "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts"
+      ],
+      "classification": "mixed: engine collision behaviour; local explanatory prediction and open-plane update",
+      "engineSteps": [
+        "scene-engine avoid returns the actual acceleration, including its fixed 1.5 s window, existing-overlap branch and zero-vector normalisation behaviour.",
+        "Engine vector operations perform relative arithmetic, speed clipping and vector normalisation."
+      ],
+      "localSteps": [
+        "closestApproach exposes signed dot-product time and both projected centres on every frame.",
+        "Fixed-step integration advances the courier with updated capped velocity and advances the porter at unchanged velocity.",
+        "minimumCollisionSeparation checks linear relative travel between fixed samples for the comparison finding."
+      ],
+      "executableNullRationale": null,
+      "claimsCoveredByAuthoredSpecs": [
+        "Initial time 1.25 s, predicted gap 1 unit, contact distance 2 units and downward acceleration 6 units/s\u00b2.",
+        "Past approach, equal-velocity, safe-gap and exact-horizon rejection; existing-overlap response.",
+        "Default pass retains positive physical clearance, including travel between samples.",
+        "Changing only porterStartY to zero exposes initial zero steering and subsequent body overlap.",
+        "Every selected frame supplies the closest-approach text and projected-centre coordinates; chart series and projection links cover the same run.",
+        "Determinism and comparison equality when the editable offset equals the comparison offset."
+      ],
+      "references": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+        "https://github.com/meshula/OpenSteer/blob/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h"
+      ],
+      "limitations": [
+        "Only the courier steers, against one coasting neighbour; no reciprocal crowd policy or destination is supplied.",
+        "The 1.5 s horizon is fixed in the engine and a differing parameter is refused rather than presented as tunable.",
+        "The exact-head-on comparison intentionally preserves the engine zero-direction failure; there is no new tie-break or collision response.",
+        "gdx-ai 1.8.2 uses a scalar minimum-separation estimate in its acceptance filter; the record states this explicitly and does not claim it uses the local vector-distance test."
+      ]
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "id": "aifg-a:137",
+      "deliverables": [
+        "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+        "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+        "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts"
+      ],
+      "classification": "mixed: local finite-ray detector and avoidance-target construction; engine Seek motor",
+      "engineSteps": [
+        "Engine seek computes the actual acceleration towards either the avoidance target or the delivery point.",
+        "Engine vector operations normalise direction and clip updated speed."
+      ],
+      "localSteps": [
+        "castWallRay intersects finite ray and wall segments with cross products and derives a surface normal opposed to the incoming ray.",
+        "A hit target is hit point plus unit normal times avoidDistance; a miss selects the original delivery point.",
+        "The fixed-step open-plane update retains last travel heading at rest and applies no wall clamp.",
+        "For the central vertical-wall approach, the timeline measures wallX minus centreX minus radius. Rays are drawn as MotionLink records."
+      ],
+      "executableNullRationale": null,
+      "claimsCoveredByAuthoredSpecs": [
+        "Oblique ray intersection fractions and hit coordinates, unit normal orientation, reverse-side normals and endpoint hits.",
+        "Finite-range, behind-ray, off-end, parallel and collinear misses; the centre-ray edge-grazing limitation.",
+        "The normal-offset target actually changes engine Seek from forward pull to backward pull; hand-worked braking step gives velocity 3.2 and next x 4.72.",
+        "The default run remains on the courtyard side but does not find a route around the wall.",
+        "Changing only rayLength to 1 makes the disc overlap the wall before its centre crosses; no physics clamp hides this.",
+        "All per-frame text placeholders, ray links, bounds, chart lengths and deterministic comparison behaviour."
+      ],
+      "references": [
+        "https://doi.org/10.1201/9781351053303",
+        "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java"
+      ],
+      "limitations": [
+        "One centre ray is not a swept-disc collision test and can miss an endpoint the physical radius clips.",
+        "The detector returns no hit for parallel or collinear segments; this boundary is stated and specified.",
+        "The symmetric local target pull supplies no route around a wall end and may keep switching targets.",
+        "Corner trap is linked as a nearby concept and sourced through gdx-ai commentary, but no multi-ray corner remedy is claimed or executed.",
+        "Signed clearance is specifically the courtyard-side measure for this central approach to a vertical segment."
+      ]
+    }
+  ],
+  "openedSources": [
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "accessed": "2026-11-04",
+      "statuses": [
+        "web open returned an internal accessibility error",
+        "ordinary curl redirect to the publisher returned HTTP 403",
+        "curl with Accept: application/vnd.citationstyles.csl+json returned HTTP 200 through Crossref transform"
+      ],
+      "effectiveMetadataUrl": "https://api.crossref.org/v1/works/10.1201%2F9781351053303/transform",
+      "observedClaims": [
+        "Metadata identifies AI for Games, Ian Millington, edition 3, DOI 10.1201/9781351053303."
+      ],
+      "citationScope": "Only the topic locations supplied by the catalog rows are cited. No book body text was read or quoted."
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+      "rawUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/CollisionAvoidance.java",
+      "accessed": "2026-11-04",
+      "status": "web page opened; matching raw tagged file HTTP 200",
+      "observedClaims": [
+        "Relative position/velocity produce a time; equal relative speed is rejected.",
+        "The earliest accepted neighbour is retained using a distance-minus-relative-speed-times-time scalar separation filter.",
+        "An estimated direct hit or existing overlap uses current position offset; otherwise it projects relative position.",
+        "The selected away offset is normalised to maximum linear acceleration."
+      ]
+    },
+    {
+      "url": "https://github.com/meshula/OpenSteer/blob/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h",
+      "rawUrl": "https://raw.githubusercontent.com/meshula/OpenSteer/710432341807f5597b62fa168f194f9ef2640c8e/include/OpenSteer/SteerLibrary.h",
+      "accessed": "2026-11-04",
+      "status": "pinned web page opened; pinned raw file HTTP 200",
+      "observedClaims": [
+        "steerToAvoidNeighbors first attempts immediate close-neighbour separation.",
+        "Relative-velocity prediction and projected positions select an earliest threat inside the caller horizon, with danger threshold twice the owner radius.",
+        "Opposing, parallel and crossing headings choose lateral steering; crossing steering applies when threat speed is no greater than owner speed."
+      ],
+      "discovery": [
+        "The unpinned master web file was opened first; GitHub commits/master API supplied the public commit used for the pinned read."
+      ]
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "rawUrl": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "accessed": "2026-11-04",
+      "status": "web page opened; matching raw tagged file HTTP 200",
+      "observedClaims": [
+        "Configured rays are updated and passed to a collision detector; the hit nearest the owner is retained.",
+        "The target is hit point plus normal times the sum of owner radius and distanceFromBoundary.",
+        "The target offset is normalised to maximum acceleration; no hit returns zero steering.",
+        "Source commentary discusses corner trapping, fan angles and winner-ray approaches."
+      ]
+    }
+  ],
+  "verification": {
+    "testsRun": false,
+    "gatesRun": false,
+    "installsRun": false,
+    "reason": "Assignment reserves execution for the parent after integration. The authored specs and handwritten arithmetic have been reviewed, but no passing execution is claimed.",
+    "parentWorkRemaining": "Integrate the six deliverables, register them using the parent-owned shared surfaces, format and run relevant specs/type/lint/catalog checks under the work order."
+  },
+  "tokenAccounting": {
+    "cumulativeTokens": "unknown",
+    "scope": "author-03 worker conversation only",
+    "cutoff": "2026-11-04, result.json authoring before final handoff",
+    "availableToolExposedCounters": [],
+    "explanation": "No cumulative input/output token counter is exposed to this worker; no parent or team token total is inferred."
+  }
+}

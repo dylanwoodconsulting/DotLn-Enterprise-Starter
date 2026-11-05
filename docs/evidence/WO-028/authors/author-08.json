@@ -1,0 +1,174 @@
+{
+  "author": "author-08",
+  "date": "2026-11-04",
+  "state": "drafts-authored-and-read-back",
+  "gitMetadataPresent": false,
+  "readFirst": [
+    "brief/assignment.md",
+    "brief/rows.json",
+    "brief/chapter-index.json",
+    "brief/concept-study.md",
+    "docs/operator/README.md",
+    "docs/operator/implementation-guidance.md",
+    "libs/shared/models/src/lib/concept-study.ts",
+    "libs/shared/catalog/src/schema/concept-study-v0.schema.json",
+    "libs/shared/catalog/src/studies/aifg/arrive.json",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+    "libs/features/tools/src/lib/studies/study-model.ts",
+    "libs/features/tools/src/lib/studies/parameters.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts",
+    "docs/dev-reference/architecture/scene.md",
+    "libs/shared/scene-engine/src/public_api.ts",
+    "libs/shared/scene-engine/src/lib/types.ts",
+    "libs/shared/scene-engine/src/lib/vectors.ts",
+    "libs/shared/scene-engine/src/lib/steering.ts (relevant public steering and complete Seek implementation)"
+  ],
+  "studies": [
+    {
+      "id": "aifg-a:196",
+      "slug": "movement-in-the-third-dimension",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/movement-in-the-third-dimension.json",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+        "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts"
+      ],
+      "stepOwnership": "Mixed: volume subtraction, normalisation, acceleration, capped integration, final-step clamp and yaw/pitch/roll pose are study-local because the public engine exports only Vec2 steering. Public engine sine and cosine construct the displayed body axes. No private engine imports.",
+      "executable": "TypeScript model executes the stated mechanism; executable is not null. RxJS is null because a stream adds no explanatory value here.",
+      "failure": "Only verticalWeight changes from 1 to 0. Plan coordinates reach the beacon but true remaining distance is its height gap.",
+      "limitations": [
+        "The final-step clamp is a teaching stop, not physical braking.",
+        "Pose changes immediately and commanded roll does not drive aerodynamic motion.",
+        "No obstacle volumes, gravity, lift or angular dynamics.",
+        "Book topic location is the assigned catalog location; only DOI metadata was obtained."
+      ],
+      "readBack": true
+    },
+    {
+      "id": "aifg-a:90",
+      "slug": "two-and-a-half-dimensions",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/two-and-a-half-dimensions.json",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+        "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts"
+      ],
+      "stepOwnership": "Mixed: public engine Seek and add/subtract/scale/clipLength/length operate on world x/z mapped into Vec2; public deterministic sine/cosine supply the planar body heading. Height sampling, final-step clamp and fixed-up yaw-only pose are local.",
+      "executable": "TypeScript model executes the stated mechanism; executable is not null. RxJS remains null.",
+      "failure": "Only rampRun changes from 4 to ledgeRun 0. Plan states and yaw remain identical, while assigning the concourse height in one step raises the sampled vertical rate from a 2.4 peak to 12 units/s.",
+      "limitations": [
+        "A single-valued x-height function cannot distinguish stacked surfaces.",
+        "The sampler provides no contact or traversability query, gravity or jump arc.",
+        "The final-step stop is explicit and not Arrive.",
+        "Detour is cited only for surface-position handling; its files do not prescribe rendered facing."
+      ],
+      "readBack": true
+    }
+  ],
+  "openedSources": [
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "status": "CSL content negotiation HTTP 200; web HTML open unavailable",
+      "openedWith": "curl with Accept: application/vnd.citationstyles.csl+json",
+      "claim": "Confirms AI for Games, Ian Millington, third edition, CRC Press and the DOI. Section locations come from the assigned catalog rows; chapter text was not read."
+    },
+    {
+      "url": "https://www.red3d.com/cwr/steer/gdc99/",
+      "status": "Web open returned readable HTML text and line references; later curl returned HTTP 403",
+      "openedWith": "web open, then curl status check",
+      "claim": "The simple vehicle discussion has spatial vectors, full orientation, velocity-aligned facing and separately chosen roll. The readable web response, not the denied curl body, supports the reference."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/Vehicle.js",
+      "status": "HTTP 200",
+      "openedWith": "curl",
+      "claim": "Vehicle integrates Vector3 force/mass acceleration and velocity, caps total speed, updates position and optionally turns using raw or smoothed velocity."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/steering/behaviors/SeekBehavior.js",
+      "status": "HTTP 200",
+      "openedWith": "curl",
+      "claim": "The target is Vector3; desired velocity points towards it at maximum speed and steering subtracts current velocity."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.6/src/core/MovingEntity.js",
+      "status": "HTTP 200; read but not cited",
+      "openedWith": "curl",
+      "claim": "MovingEntity keeps Vector3 velocity, limits speed and can update facing before position."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/52e30044658448149b04e8f69b475eebbfbd8f6e/3d/platformer/player/player.gd",
+      "status": "HTTP 200",
+      "openedWith": "curl",
+      "claim": "Separates horizontal and vertical velocity; the grounded mesh basis fixes Vector3.UP while facing turns in the horizontal plane."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourCrowd.cpp",
+      "status": "HTTP 200; also readable through web",
+      "openedWith": "web and curl",
+      "claim": "Path steering explicitly clears height components before producing a ground-plane direction."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/v1.6.0/DetourCrowd/Source/DetourPathCorridor.cpp",
+      "status": "HTTP 200",
+      "openedWith": "curl",
+      "claim": "movePosition uses moveAlongSurface and getPolyHeight while updating its polygon corridor."
+    },
+    {
+      "url": "https://api.github.com/repos/Mugen87/yuka/tags?per_page=5",
+      "status": "HTTP 200 after quoting the URL; first unquoted shell request did not run",
+      "openedWith": "curl",
+      "claim": "Resolved v0.7.6 to published tag commit 8440c4fe3282088ecdace32701e196d4b12a715c; not cited as an implementation."
+    },
+    {
+      "url": "https://api.github.com/repos/godotengine/godot-demo-projects/commits/4.3",
+      "status": "HTTP success; curl exit 0, parsed commit SHA",
+      "openedWith": "curl",
+      "claim": "Resolved branch 4.3 to 52e30044658448149b04e8f69b475eebbfbd8f6e before opening the pinned controller URL."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/4.3/3d/platformer/player/player.gd",
+      "status": "HTTP 200; replaced by pinned URL for citation",
+      "openedWith": "curl",
+      "claim": "Read before resolving the exact branch commit."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/4.3/3d/squash_the_creeps/Player.gd",
+      "status": "HTTP 200; not cited",
+      "openedWith": "curl",
+      "claim": "Includes explicit pitch during a jump; rejected as evidence for an exclusively yaw-only pose."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.8/src/steering/Vehicle.js",
+      "status": "Web fetch HTTP 404; not cited",
+      "openedWith": "web",
+      "claim": "No content read; corrected the guessed tag through the public tag listing."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.8/src/steering/behaviors/SeekBehavior.js",
+      "status": "Web fetch HTTP 404; not cited",
+      "openedWith": "web",
+      "claim": "No content read; corrected the guessed tag through the public tag listing."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mugen87/yuka/v0.7.8/src/core/MovingEntity.js",
+      "status": "Web fetch HTTP 404; not cited",
+      "openedWith": "web",
+      "claim": "No content read; corrected the guessed tag through the public tag listing."
+    }
+  ],
+  "validation": {
+    "tests": "Not run, as assigned; executor owns integration and executable checks.",
+    "gates": "Not run.",
+    "installs": "None.",
+    "realWorktreeEdits": "None.",
+    "agentsSpawnedOrRetasked": "None.",
+    "registryOrSharedFilesEdited": "None."
+  },
+  "tokenCounters": {
+    "value": "unknown",
+    "source": "This worker session exposes no readable model token-usage counter. Tool output token counts are not model usage and were not substituted.",
+    "scope": "author-08 only; no parent or sibling usage inferred",
+    "cutoff": "After six draft files were authored and read back, before writing this result and before parent integration."
+  }
+}

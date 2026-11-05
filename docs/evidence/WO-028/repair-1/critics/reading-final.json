@@ -1,0 +1,144 @@
+{
+  "schema": "dotln-independent-reading-critic-recheck-v1",
+  "workOrder": "WO-028",
+  "role": "Independent native Codex reading critic",
+  "verdict": "pass",
+  "summary": "RC-01 is resolved in final source, rendered pixels and accessibility text. The straight-on input no longer offers a turning bookmark; the default still does. The unchanged default chart, comparison and narrow limits remain coherent. The earlier representative label and anchor-correspondence judgment stands.",
+  "findings": [],
+  "resolvedFindings": [
+    {
+      "id": "RC-01",
+      "status": "resolved",
+      "path": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "surface": "model.caption / How to read this drawing",
+      "change": "The sideways-cue passage now begins In the default example, so it clearly describes the default run when current delivery height is zero.",
+      "evidence": [
+        "reading-final/wall-head-on-end-2080.png",
+        "reading-final/wall-head-on-end-2080.aria.txt",
+        "reading-final/wall-head-on-end-2080.html"
+      ],
+      "observed": "With delivery height 0, ray length 9 and time 8.0 seconds, the drawing and numbers still show courier (4.08, 0.00) and delivery (18.00, 0.00), while the guide explicitly attributes the sideways cue and turn to the default example. This removes the conflicting instruction."
+    }
+  ],
+  "eventLabelRecheck": {
+    "source": "The final model labels a no-hit run Start · ray misses and omits the turning bookmark when no qualifying turn exists.",
+    "selectedHeadOnView": "The current production head-on view has Ray first hits, Smallest clearance and End of run, with no Turning along the wall button. Courier, Hit and Delivery remain legible at their same physical anchors.",
+    "defaultView": "The current production default Chart view retains Ray first hits and Turning along the wall, matching the default glancing approach.",
+    "noHitViewBoundary": "I read the no-hit source branch and its added regression. I did not capture a no-hit input in this targeted recheck; the separate factual critic owns that input audit.",
+    "evidence": [
+      "reading-final/wall-head-on-end-2080.png",
+      "reading-final/wall-default-chart-2080.png"
+    ]
+  },
+  "scopeAndEvidence": {
+    "priorReport": "reading-critic.json",
+    "priorReportHash": "605455377f5f5a2b24e9ea9ea1ac77b946bddf3befe422735914bc43f54fa413",
+    "priorCoverage": "39 supplied screenshots plus four supplemental screenshots, all inspected at original detail, covering wall, Motor control, Iterative targeting, Firing solution and Third dimension at 360, 2080 and 3840 widths.",
+    "currentCoverage": "Four fresh production screenshots were inspected at original detail, plus the head-on accessibility text and final source/spec diff. The earlier evidence was preserved.",
+    "currentFrames": [
+      {
+        "name": "wall-default-chart-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Default delivery height 15, ray length 9; clearance chart with its chart guide."
+      },
+      {
+        "name": "wall-default-comparison-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Default comparison changes only goalY from 15 to 0, with findings and note visible."
+      },
+      {
+        "name": "wall-head-on-end-2080.png",
+        "viewport": {
+          "width": 2080,
+          "height": 1460
+        },
+        "claim": "Change only delivery height to 0, retain ray length 9, and inspect end-of-run Movement with numbers and inputs."
+      },
+      {
+        "name": "wall-default-limits-360.png",
+        "viewport": {
+          "width": 360,
+          "height": 900
+        },
+        "claim": "All default limits and the default-to-head-on comparison at 360 pixels."
+      }
+    ],
+    "unchangedDefaultPngBytes": {
+      "wall-default-chart-2080.png": true,
+      "wall-default-comparison-2080.png": true,
+      "wall-default-limits-360.png": true
+    },
+    "sourceDiff": "Against the original frozen candidate, JSON is unchanged. The model changes only caption qualification and conditional bookmark labels/presence. The spec adds one corresponding event-label regression. Physics, geometry, parameter values and label placement are unchanged in this diff.",
+    "browserCapture": {
+      "method": "Foreground scratch script; isolated Chromium contexts; ephemeral loopback server; browser and server closed in finally.",
+      "errors": [],
+      "overflowFrames": [],
+      "capturedAt": "2026-11-04T21:31:30.758Z",
+      "script": "capture-reading-final.mjs",
+      "scriptHash": "cfa58f9875b7f2ed23dadcf5e631fede9b37ca33b0681126839c95271f8fde28",
+      "completion": "Foreground capture exited 0 with four images. Its isolated Chromium contexts, browser and ephemeral loopback server closed in finally."
+    },
+    "independence": "No tests or gates run by this critic. No repository writes, packages installed, descendants, persistent background task, operator browser or desktop control. Parent-reported Tools and production rebuild passes were not rerun or treated as this critic's independent evidence.",
+    "limits": [
+      "The label judgment remains representative rather than an all-frame proof.",
+      "No full implementation, criteria or consistency review.",
+      "No separate numerical/source audit; this is a reading and rendered-correspondence recheck."
+    ]
+  },
+  "contentHashes": {
+    "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "fda69f35108911a325263c96b4091492b172d41d51193f338a01e0802dd4f109",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "a6dc8f54b1fdb2c4b31060a8eb8c036664ccca19a0397fefd63e11937456692b"
+  },
+  "contentHashExpectedFile": "content-final.json",
+  "contentHashExpectedMatch": true,
+  "targetHashes": {
+    "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "fda69f35108911a325263c96b4091492b172d41d51193f338a01e0802dd4f109",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "a6dc8f54b1fdb2c4b31060a8eb8c036664ccca19a0397fefd63e11937456692b"
+  },
+  "targetSnapshotMatch": true,
+  "evidenceHashes": {
+    "manifest.json": "6db088c35ba14f1a90f147966ebea2a7b2cbf2d377966335528cec9fab43065e",
+    "wall-default-chart-2080.aria.txt": "30161a19538ba634d86a8020642542e5b3cbd40d89be6ad38ce00fb32accc75a",
+    "wall-default-chart-2080.html": "1334c75d7d83590495e065da1fce76b9d1357d5291aadad70af6cbd038adc49f",
+    "wall-default-chart-2080.png": "e371af66230bdb1e7fcba32ab06af6d4596c51fb8c13448b5d0c670816437ada",
+    "wall-default-comparison-2080.aria.txt": "af00c5e05cc3cdb9d79c29613a1e1869384cae33da2bc07d7601db80fd5f3ef9",
+    "wall-default-comparison-2080.html": "1180d382aba666dff96904e53382bc4f6c475065c99216a7fac3ae9f83898dad",
+    "wall-default-comparison-2080.png": "6d1840ac6a2336cc5f33c10b9d8879b6aa00d59370fd5e3d08fad46d2925c37d",
+    "wall-default-limits-360.aria.txt": "051643de26571690ef6bb4110eb1bdf76852b9e75a4e063a3a28586044ec42c0",
+    "wall-default-limits-360.html": "3c353e6384c67153890cafcfdfbb06ee6ecdad9d3064aa4b91a16569d364dfc4",
+    "wall-default-limits-360.png": "817de3cc7b7e5ec5f95edca35aa3d286cc3a3197c323dad6ce674e3a930977cc",
+    "wall-head-on-end-2080.aria.txt": "40177b2e3e575f165fb67540dd1b2be0575357913469a1dbe21c7e980f9937ea",
+    "wall-head-on-end-2080.html": "cd9af0bdfc4c104e92174258d269b785235a57141f2d50600f241d72104a5259",
+    "wall-head-on-end-2080.png": "d12072bc2afc0264765515d51fdf852b8604576dea17fda8bf528f4911c52403"
+  },
+  "admittedLaterMetadataOnlyTransforms": [
+    "For the wall study, add actual completed reviewer identities to authored.reviewedBy, including Codex gpt-6.1-sol, repair reading critic, and transition authored.state from draft to checked once the parent has both content passes and the required verification evidence.",
+    "Leave authored.by and the learning/model content unchanged. A provenance correction requires its own recorded source; this recheck does not independently authenticate every author byline.",
+    "Apply formatting-only changes that preserve parsed JSON values and TypeScript semantics.",
+    "Copy the scratch images/DOM and reports into the parent-owned evidence directory and update their paths while preserving the captured bytes and hash bindings."
+  ],
+  "nonAdmittedTransforms": "Any subsequent semantic learning-content, physical-model, parameter, label-placement or bookmark-behavior change requires a bounded review appropriate to that change.",
+  "usage": {
+    "totalTokens": null,
+    "cachedTokens": null,
+    "otherTokens": null,
+    "source": "unknown; no worker token receipt exposed",
+    "scope": "Cumulative native Codex reading critic and its two bounded foreground capture turns",
+    "cutoff": "2026-11-04T21:32:29.985307+00:00",
+    "manualUseReportedByParent": 6,
+    "descendants": 0
+  },
+  "reviewedAt": "2026-11-04T21:32:29.985307+00:00",
+  "receiptProjection": {
+    "originalSha256": "7d136156f098fbae6f5380f811a7208d5dc8592b1761c084cc222b6440d1d79f",
+    "changes": "Absolute host paths replaced with target, launchpad or session-scratch; all findings and observations retained."
+  }
+}

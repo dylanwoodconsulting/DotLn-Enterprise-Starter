@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "reviewedTargetTree": "15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0",
+  "candidateManifest": "reviews/round-3-candidate.json",
+  "source": "Canonical target-gate stdout and targetGateEvidence metadata; PASS requires every declared command executed successfully and unchanged candidate bytes/HEAD. All implementation review rounds completed before these runs.",
+  "runs": [
+    {
+      "selection": "plain",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-05 09:11:12 UTC",
+      "completionObservedAt": "2026-11-05 09:12:46 UTC",
+      "checks": [
+        {
+          "name": "install",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 8027
+        },
+        {
+          "name": "lint",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 41013
+        },
+        {
+          "name": "typecheck",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 742
+        },
+        {
+          "name": "test",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 27542
+        },
+        {
+          "name": "format",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 2904
+        }
+      ],
+      "log": "repair-2-target-plain.log",
+      "logSha256": "a253a0caf5835f23f462008651ca4604be28687e44bdaed20899f955e9ca0d78",
+      "summary": "PASS target dotln-angular plain at 55b59c9133056c1d6471274a9676a7d5649196ac (80228 ms)",
+      "canonicalEvidence": "canonical-target-plain.json",
+      "evidenceRef": "target-gate:aacde558-650d-4196-8322-814f0ae3eba9"
+    },
+    {
+      "selection": "review",
+      "command": [
+        "node",
+        "scripts/target-gate.mjs",
+        "WO-028",
+        "--review"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-05 09:13:25 UTC",
+      "completionObservedAt": "2026-11-05 09:17:58 UTC",
+      "checks": [
+        {
+          "name": "install",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 7963
+        },
+        {
+          "name": "lint",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 41078
+        },
+        {
+          "name": "typecheck",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 726
+        },
+        {
+          "name": "test",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 428
+        },
+        {
+          "name": "format",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 2866
+        },
+        {
+          "name": "build",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 5964
+        },
+        {
+          "name": "e2e",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 132113
+        },
+        {
+          "name": "visual",
+          "executed": true,
+          "exitCode": 0,
+          "durationMs": 23354
+        }
+      ],
+      "log": "repair-2-target-review.log",
+      "logSha256": "f7508400a589255b177e4b98c64b303540b2c505ca569a3fbb065a83e4c8a70b",
+      "summary": "PASS target dotln-angular review at 55b59c9133056c1d6471274a9676a7d5649196ac (214492 ms)",
+      "canonicalEvidence": "canonical-target-review.json",
+      "evidenceRef": "target-gate:cbb12b42-6624-4082-b751-a114d309e2bc"
+    }
+  ],
+  "completeTargetRuns": 2,
+  "notes": [
+    "The launchpad complete-run counter does not enumerate target-gate runs; these two canonical target receipts are the actual repair run count.",
+    "No reviewer or code change follows the final passing review gate."
+  ]
+}

@@ -1,0 +1,2482 @@
+[
+ {
+  "slug": "actuator",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 49,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {
+    "Courier": 5
+   },
+   "framesWithGuide": 49,
+   "jumps": {},
+   "biggestJump": 11
+  },
+  "inputs": [
+   {
+    "input": "Agreed belt velocity · 6 units/s",
+    "value": "2",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Agreed belt velocity · 6 units/s",
+    "value": "12",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Courier speed capability · 8 units/s",
+    "value": "4",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Courier speed capability · 8 units/s",
+    "value": "14",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "align",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "arrive",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 241,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "blending-versus-arbitration",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 21,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "blend": 21
+   },
+   "guideThrough": {},
+   "framesWithGuide": 21,
+   "jumps": {
+    "marshal": 20,
+    "delivery": 20
+   },
+   "biggestJump": 65
+  },
+  "inputs": []
+ },
+ {
+  "slug": "collision-avoidance",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 41,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Porter": 2
+   },
+   "guideThrough": {},
+   "framesWithGuide": 4,
+   "jumps": {
+    "Porter": 1
+   },
+   "biggestJump": 51
+  },
+  "inputs": [
+   {
+    "input": "Porter lateral offset · 1 units",
+    "value": "0",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Porter lateral offset · 1 units",
+    "value": "4",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "coordinated-movement",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 55,
+   "jumps": {
+    "Gate": 1
+   },
+   "biggestJump": 174
+  },
+  "inputs": [
+   {
+    "input": "Camera speed limit · 6 units/s",
+    "value": "0.5",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Camera speed limit · 6 units/s",
+    "value": "8",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Anchor planning speed · 1 units/planning step",
+    "value": "0.25",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Anchor planning speed · 1 units/planning step",
+    "value": "2",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "corner-trap",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 9,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": []
+ },
+ {
+  "slug": "equilibrium-fallback",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 4
+  }
+ },
+ {
+  "slug": "face",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 6
+  }
+ },
+ {
+  "slug": "fixed-formations",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 51,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 11
+  }
+ },
+ {
+  "slug": "flee",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 41,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Starting position · 5 units",
+    "value": "0",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Starting position · 5 units",
+    "value": "12",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 8 units/s²",
+    "value": "2",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 8 units/s²",
+    "value": "12",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "flocking",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 201,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 1
+  }
+ },
+ {
+  "slug": "formation-pattern-interface",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Starboard": 2,
+    "Slot 2": 6
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Slot 1": 1,
+    "Slot 2": 1
+   },
+   "biggestJump": 74
+  }
+ },
+ {
+  "slug": "group-movement",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 231,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 5
+  }
+ },
+ {
+  "slug": "iterative-targeting",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 8,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 8,
+   "jumps": {
+    "Impact": 3,
+    "Drum": 1
+   },
+   "biggestJump": 175
+  },
+  "inputs": [
+   {
+    "input": "Midpoint guesses · 10 guesses",
+    "value": "1",
+    "frames": 2,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Midpoint guesses · 10 guesses",
+    "value": "12",
+    "frames": 8,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Drum distance · 6 m",
+    "value": "4",
+    "frames": 9,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Drum distance · 6 m",
+    "value": "10",
+    "frames": 2,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "jump-points",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 18,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Take-off": 1
+   },
+   "guideThrough": {},
+   "framesWithGuide": 17,
+   "jumps": {
+    "Take-off": 1,
+    "Finch": 4
+   },
+   "biggestJump": 50
+  },
+  "inputs": [
+   {
+    "input": "Run-up start · 0 m",
+    "value": "0",
+    "frames": 18,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up start · 0 m",
+    "value": "6",
+    "frames": 4,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up acceleration limit · 4 m/s²",
+    "value": "2",
+    "frames": 20,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up acceleration limit · 4 m/s²",
+    "value": "8",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "kinematic-arrive",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 33,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Time to target · 1 s",
+    "value": "0.2",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Time to target · 1 s",
+    "value": "2",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.2 units",
+    "value": "0",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.2 units",
+    "value": "1",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "kinematic-wander",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 4
+  },
+  "inputs": [
+   {
+    "input": "Turn-rate bound · 1 radians/s",
+    "value": "0.1",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Turn-rate bound · 1 radians/s",
+    "value": "4",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Walking speed · 6 units/s",
+    "value": "2",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Walking speed · 6 units/s",
+    "value": "10",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "making-the-creatures",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Kit": 2,
+    "Fern": 2,
+    "Flint": 2
+   },
+   "biggestJump": 41
+  }
+ },
+ {
+  "slug": "motor-control",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 101,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 101,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": [
+   {
+    "input": "Motor brake capacity · 4 units/s²",
+    "value": "1",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Motor brake capacity · 4 units/s²",
+    "value": "6",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Initial speed · 6 units/s",
+    "value": "2",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Initial speed · 6 units/s",
+    "value": "10",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "movement-in-the-third-dimension",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Ground projection": 3
+   },
+   "guideThrough": {},
+   "framesWithGuide": 14,
+   "jumps": {
+    "Ground projection": 1,
+    "Beacon": 1
+   },
+   "biggestJump": 80
+  },
+  "inputs": [
+   {
+    "input": "Beacon height · 8 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Beacon height · 8 units",
+    "value": "12",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Independent roll · 30 degrees",
+    "value": "-60",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Independent roll · 30 degrees",
+    "value": "60",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "obstacle-and-wall-avoidance",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Courier": 6
+   },
+   "guideThrough": {
+    "Courier": 14
+   },
+   "framesWithGuide": 28,
+   "jumps": {
+    "Delivery": 3
+   },
+   "biggestJump": 78
+  },
+  "inputs": [
+   {
+    "input": "Delivery height · 15 units",
+    "value": "0",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Delivery height · 15 units",
+    "value": "18",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Forward ray length · 9 units",
+    "value": "0.5",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Forward ray length · 9 units",
+    "value": "12",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "priority-steering",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 121,
+   "jumps": {},
+   "biggestJump": 13
+  }
+ },
+ {
+  "slug": "projectile-trajectory",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 29,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 4,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": [
+   {
+    "input": "Selected height · 0 m",
+    "value": "0",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Selected height · 0 m",
+    "value": "18",
+    "frames": 37,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "pursue",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Ash": 1,
+    "Reed": 1,
+    "Aim": 1
+   },
+   "biggestJump": 324
+  }
+ },
+ {
+  "slug": "satisfaction-radius",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 29,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Satisfaction radius · 0.5 units",
+    "value": "0",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.5 units",
+    "value": "2",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "scalable-formations",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 51,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 10,
+   "jumps": {
+    "Tip": 2,
+    "Upper arm": 2,
+    "Lower arm": 2
+   },
+   "biggestJump": 92
+  }
+ },
+ {
+  "slug": "seek",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 221,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Mica": 1,
+    "Beacon": 1
+   },
+   "biggestJump": 233
+  }
+ },
+ {
+  "slug": "separation",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 61,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Mira": 60,
+    "Rowan": 60
+   },
+   "biggestJump": 255
+  }
+ },
+ {
+  "slug": "slot-assignment",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 4,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "steering-behaviors",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {
+    "Mara": 54
+   },
+   "framesWithGuide": 65,
+   "jumps": {
+    "Depot": 1
+   },
+   "biggestJump": 52
+  },
+  "inputs": [
+   {
+    "input": "Use Arrive (1) or Seek (0) · 1 choice",
+    "value": "0",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Use Arrive (1) or Seek (0) · 1 choice",
+    "value": "1",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "steering-output",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 17,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "World-y acceleration during pulse · 2 units/s²",
+    "value": "0",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "World-y acceleration during pulse · 2 units/s²",
+    "value": "3",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Pulse duration · 1 seconds",
+    "value": "0.5",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Pulse duration · 1 seconds",
+    "value": "2",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "steering-pipeline",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 221,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Courier": 6,
+    "Delivery": 1
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 8
+  }
+ },
+ {
+  "slug": "the-firing-solution",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 75,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Chosen low arc": 4
+   },
+   "guideThrough": {
+    "Chosen low arc": 4
+   },
+   "framesWithGuide": 27,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": []
+ },
+ {
+  "slug": "two-and-a-half-dimensions",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {
+    "Plan · x/z": 8
+   },
+   "framesWithGuide": 14,
+   "jumps": {
+    "Concourse target": 1
+   },
+   "biggestJump": 78
+  },
+  "inputs": [
+   {
+    "input": "Concourse rise · 3 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Concourse rise · 3 units",
+    "value": "6",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Ramp run · 4 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Ramp run · 4 units",
+    "value": "8",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "two-level-formation-steering",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Anchor": 5
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 9
+  }
+ },
+ {
+  "slug": "variable-matching",
+  "batch": "WO-028",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 21
+  },
+  "inputs": [
+   {
+    "input": "Response time · 1 s",
+    "value": "0.5",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Response time · 1 s",
+    "value": "2",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 3 units/s²",
+    "value": "1",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 3 units/s²",
+    "value": "6",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "velocity-matching",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 33,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 15
+  }
+ },
+ {
+  "slug": "wander",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 101,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Target": 67
+   },
+   "biggestJump": 50
+  }
+ },
+ {
+  "slug": "weighted-blending",
+  "batch": "first",
+  "viewport": "2080x1460",
+  "defaults": {
+   "frames": 61,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 8
+  }
+ },
+ {
+  "slug": "actuator",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 49,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {
+    "Courier": 49
+   },
+   "framesWithGuide": 49,
+   "jumps": {},
+   "biggestJump": 11
+  },
+  "inputs": [
+   {
+    "input": "Agreed belt velocity · 6 units/s",
+    "value": "2",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Agreed belt velocity · 6 units/s",
+    "value": "12",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Courier speed capability · 8 units/s",
+    "value": "4",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Courier speed capability · 8 units/s",
+    "value": "14",
+    "frames": 49,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "align",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "arrive",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 241,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "blending-versus-arbitration",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 21,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "blend": 21,
+    "marshal": 21,
+    "delivery": 21
+   },
+   "guideThrough": {},
+   "framesWithGuide": 21,
+   "jumps": {
+    "marshal": 20,
+    "delivery": 20
+   },
+   "biggestJump": 65
+  },
+  "inputs": []
+ },
+ {
+  "slug": "collision-avoidance",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 41,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Porter": 4
+   },
+   "guideThrough": {},
+   "framesWithGuide": 4,
+   "jumps": {
+    "Porter": 1
+   },
+   "biggestJump": 51
+  },
+  "inputs": [
+   {
+    "input": "Porter lateral offset · 1 units",
+    "value": "0",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Porter lateral offset · 1 units",
+    "value": "4",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "coordinated-movement",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Gate": 4
+   },
+   "guideThrough": {
+    "Radio": 37
+   },
+   "framesWithGuide": 55,
+   "jumps": {
+    "Gate": 1
+   },
+   "biggestJump": 174
+  },
+  "inputs": [
+   {
+    "input": "Camera speed limit · 6 units/s",
+    "value": "0.5",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Camera speed limit · 6 units/s",
+    "value": "8",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Anchor planning speed · 1 units/planning step",
+    "value": "0.25",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Anchor planning speed · 1 units/planning step",
+    "value": "2",
+    "frames": 161,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "corner-trap",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 9,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": []
+ },
+ {
+  "slug": "equilibrium-fallback",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 4
+  }
+ },
+ {
+  "slug": "face",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 6
+  }
+ },
+ {
+  "slug": "fixed-formations",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 51,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 11
+  }
+ },
+ {
+  "slug": "flee",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 41,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Starting position · 5 units",
+    "value": "0",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Starting position · 5 units",
+    "value": "12",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 8 units/s²",
+    "value": "2",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 8 units/s²",
+    "value": "12",
+    "frames": 41,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "flocking",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 201,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Centre": 201
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 1
+  }
+ },
+ {
+  "slug": "formation-pattern-interface",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Starboard": 3,
+    "Port": 1,
+    "Slot 2": 5
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Slot 1": 1,
+    "Slot 2": 1
+   },
+   "biggestJump": 74
+  }
+ },
+ {
+  "slug": "group-movement",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 231,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 5
+  }
+ },
+ {
+  "slug": "iterative-targeting",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 8,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 8,
+   "jumps": {
+    "Impact": 3,
+    "Drum": 1
+   },
+   "biggestJump": 175
+  },
+  "inputs": [
+   {
+    "input": "Midpoint guesses · 10 guesses",
+    "value": "1",
+    "frames": 2,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Midpoint guesses · 10 guesses",
+    "value": "12",
+    "frames": 8,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Drum distance · 6 m",
+    "value": "4",
+    "frames": 9,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Drum distance · 6 m",
+    "value": "10",
+    "frames": 2,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "jump-points",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 18,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Take-off": 1,
+    "Receiving pad": 1
+   },
+   "guideThrough": {},
+   "framesWithGuide": 17,
+   "jumps": {
+    "Take-off": 1,
+    "Finch": 4
+   },
+   "biggestJump": 50
+  },
+  "inputs": [
+   {
+    "input": "Run-up start · 0 m",
+    "value": "0",
+    "frames": 18,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up start · 0 m",
+    "value": "6",
+    "frames": 4,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up acceleration limit · 4 m/s²",
+    "value": "2",
+    "frames": 20,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Run-up acceleration limit · 4 m/s²",
+    "value": "8",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "kinematic-arrive",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 33,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Time to target · 1 s",
+    "value": "0.2",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Time to target · 1 s",
+    "value": "2",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.2 units",
+    "value": "0",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.2 units",
+    "value": "1",
+    "frames": 33,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "kinematic-wander",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 4
+  },
+  "inputs": [
+   {
+    "input": "Turn-rate bound · 1 radians/s",
+    "value": "0.1",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Turn-rate bound · 1 radians/s",
+    "value": "4",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Walking speed · 6 units/s",
+    "value": "2",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Walking speed · 6 units/s",
+    "value": "10",
+    "frames": 121,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "making-the-creatures",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 161,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Kit": 2,
+    "Fern": 2,
+    "Flint": 2
+   },
+   "biggestJump": 41
+  }
+ },
+ {
+  "slug": "motor-control",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 101,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 101,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": [
+   {
+    "input": "Motor brake capacity · 4 units/s²",
+    "value": "1",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Motor brake capacity · 4 units/s²",
+    "value": "6",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Initial speed · 6 units/s",
+    "value": "2",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Initial speed · 6 units/s",
+    "value": "10",
+    "frames": 101,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "movement-in-the-third-dimension",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Ground projection": 4,
+    "Beacon": 6
+   },
+   "guideThrough": {
+    "Drone": 1
+   },
+   "framesWithGuide": 14,
+   "jumps": {
+    "Ground projection": 1,
+    "Beacon": 1
+   },
+   "biggestJump": 80
+  },
+  "inputs": [
+   {
+    "input": "Beacon height · 8 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Beacon height · 8 units",
+    "value": "12",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Independent roll · 30 degrees",
+    "value": "-60",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Independent roll · 30 degrees",
+    "value": "60",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "obstacle-and-wall-avoidance",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Delivery": 15,
+    "Courier": 4
+   },
+   "guideThrough": {
+    "Courier": 6
+   },
+   "framesWithGuide": 28,
+   "jumps": {
+    "Delivery": 3
+   },
+   "biggestJump": 78
+  },
+  "inputs": [
+   {
+    "input": "Delivery height · 15 units",
+    "value": "0",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Delivery height · 15 units",
+    "value": "18",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Forward ray length · 9 units",
+    "value": "0.5",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Forward ray length · 9 units",
+    "value": "12",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "priority-steering",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 121,
+   "jumps": {},
+   "biggestJump": 13
+  }
+ },
+ {
+  "slug": "projectile-trajectory",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 29,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Landing": 2
+   },
+   "guideThrough": {},
+   "framesWithGuide": 4,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": [
+   {
+    "input": "Selected height · 0 m",
+    "value": "0",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Selected height · 0 m",
+    "value": "18",
+    "frames": 37,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "pursue",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Ash": 1,
+    "Reed": 1,
+    "Aim": 1
+   },
+   "biggestJump": 324
+  }
+ },
+ {
+  "slug": "satisfaction-radius",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 29,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "Satisfaction radius · 0.5 units",
+    "value": "0",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Satisfaction radius · 0.5 units",
+    "value": "2",
+    "frames": 29,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "scalable-formations",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 51,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 10,
+   "jumps": {
+    "Tip": 2,
+    "Upper arm": 2,
+    "Lower arm": 2
+   },
+   "biggestJump": 92
+  }
+ },
+ {
+  "slug": "seek",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 221,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Mica": 1,
+    "Beacon": 1
+   },
+   "biggestJump": 233
+  }
+ },
+ {
+  "slug": "separation",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 61,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Mira": 60,
+    "Rowan": 60
+   },
+   "biggestJump": 255
+  }
+ },
+ {
+  "slug": "slot-assignment",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 4,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  }
+ },
+ {
+  "slug": "steering-behaviors",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 81,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 65,
+   "jumps": {
+    "Depot": 1
+   },
+   "biggestJump": 52
+  },
+  "inputs": [
+   {
+    "input": "Use Arrive (1) or Seek (0) · 1 choice",
+    "value": "0",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Use Arrive (1) or Seek (0) · 1 choice",
+    "value": "1",
+    "frames": 81,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "steering-output",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 17,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 0
+  },
+  "inputs": [
+   {
+    "input": "World-y acceleration during pulse · 2 units/s²",
+    "value": "0",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "World-y acceleration during pulse · 2 units/s²",
+    "value": "3",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Pulse duration · 1 seconds",
+    "value": "0.5",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Pulse duration · 1 seconds",
+    "value": "2",
+    "frames": 17,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "steering-pipeline",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 221,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Courier": 6,
+    "Delivery": 2
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 8
+  }
+ },
+ {
+  "slug": "the-firing-solution",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 75,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Chosen low arc": 5,
+    "Beacon": 9
+   },
+   "guideThrough": {
+    "Chosen low arc": 4
+   },
+   "framesWithGuide": 27,
+   "jumps": {},
+   "biggestJump": 39
+  },
+  "inputs": []
+ },
+ {
+  "slug": "two-and-a-half-dimensions",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Concourse target": 2
+   },
+   "guideThrough": {},
+   "framesWithGuide": 14,
+   "jumps": {
+    "Concourse target": 1
+   },
+   "biggestJump": 78
+  },
+  "inputs": [
+   {
+    "input": "Concourse rise · 3 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Concourse rise · 3 units",
+    "value": "6",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Ramp run · 4 units",
+    "value": "0",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Ramp run · 4 units",
+    "value": "8",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "two-level-formation-steering",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 121,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {
+    "Port": 121,
+    "Anchor": 121
+   },
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 9
+  }
+ },
+ {
+  "slug": "variable-matching",
+  "batch": "WO-028",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 25,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 21
+  },
+  "inputs": [
+   {
+    "input": "Response time · 1 s",
+    "value": "0.5",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Response time · 1 s",
+    "value": "2",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 3 units/s²",
+    "value": "1",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   },
+   {
+    "input": "Acceleration limit · 3 units/s²",
+    "value": "6",
+    "frames": 25,
+    "sideClip": {},
+    "verticalClip": {},
+    "overprint": {}
+   }
+  ]
+ },
+ {
+  "slug": "velocity-matching",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 33,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 15
+  }
+ },
+ {
+  "slug": "wander",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 101,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {
+    "Target": 67
+   },
+   "biggestJump": 50
+  }
+ },
+ {
+  "slug": "weighted-blending",
+  "batch": "first",
+  "viewport": "360x900",
+  "defaults": {
+   "frames": 61,
+   "verticalClip": {},
+   "sideClip": {},
+   "overprint": {},
+   "overShape": {},
+   "guideThrough": {},
+   "framesWithGuide": 0,
+   "jumps": {},
+   "biggestJump": 8
+  }
+ }
+]

@@ -1,0 +1,1875 @@
+{
+ "subject": "target working tree against git f0e7087 (tree 80145e0)",
+ "studies": 80,
+ "runs": 1002,
+ "frames": 90201,
+ "sameRuns": 983,
+ "leafDifferences": 133,
+ "totals": {
+  "numeric": 0,
+  "text": 133,
+  "other": 0
+ },
+ "lostParameters": [],
+ "missingKeys": [],
+ "usedKeys": 3691,
+ "rows": [
+  {
+   "slug": "actuator",
+   "work": "aifg",
+   "runs": 21,
+   "frames": 1029,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "align",
+   "work": "aifg",
+   "runs": 54,
+   "frames": 8694,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "arrive",
+   "work": "aifg",
+   "runs": 49,
+   "frames": 11809,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "blending-versus-arbitration",
+   "work": "aifg",
+   "runs": 1,
+   "frames": 21,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "collision-avoidance",
+   "work": "aifg",
+   "runs": 17,
+   "frames": 697,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "coordinated-movement",
+   "work": "aifg",
+   "runs": 23,
+   "frames": 3703,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "corner-trap",
+   "work": "aifg",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "equilibrium-fallback",
+   "work": "aifg",
+   "runs": 120,
+   "frames": 9720,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "face",
+   "work": "aifg",
+   "runs": 38,
+   "frames": 6118,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "fixed-formations",
+   "work": "aifg",
+   "runs": 35,
+   "frames": 1785,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "flee",
+   "work": "aifg",
+   "runs": 23,
+   "frames": 943,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "flocking",
+   "work": "aifg",
+   "runs": 17,
+   "frames": 3417,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "formation-pattern-interface",
+   "work": "aifg",
+   "runs": 6,
+   "frames": 726,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "group-movement",
+   "work": "aifg",
+   "runs": 12,
+   "frames": 2772,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "iterative-targeting",
+   "work": "aifg",
+   "runs": 24,
+   "frames": 141,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "jump-points",
+   "work": "aifg",
+   "runs": 19,
+   "frames": 220,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "kinematic-arrive",
+   "work": "aifg",
+   "runs": 39,
+   "frames": 1287,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "kinematic-wander",
+   "work": "aifg",
+   "runs": 48,
+   "frames": 5808,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "making-the-creatures",
+   "work": "aifg",
+   "runs": 19,
+   "frames": 3059,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "motor-control",
+   "work": "aifg",
+   "runs": 19,
+   "frames": 1919,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "movement-in-the-third-dimension",
+   "work": "aifg",
+   "runs": 25,
+   "frames": 625,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "obstacle-and-wall-avoidance",
+   "work": "aifg",
+   "runs": 42,
+   "frames": 3402,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "priority-steering",
+   "work": "aifg",
+   "runs": 57,
+   "frames": 6897,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "projectile-trajectory",
+   "work": "aifg",
+   "runs": 19,
+   "frames": 474,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "pursue",
+   "work": "aifg",
+   "runs": 12,
+   "frames": 972,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "satisfaction-radius",
+   "work": "aifg",
+   "runs": 21,
+   "frames": 609,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "scalable-formations",
+   "work": "aifg",
+   "runs": 26,
+   "frames": 1326,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "seek",
+   "work": "aifg",
+   "runs": 9,
+   "frames": 1989,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "separation",
+   "work": "aifg",
+   "runs": 16,
+   "frames": 976,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "slot-assignment",
+   "work": "aifg",
+   "runs": 12,
+   "frames": 48,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "steering-behaviors",
+   "work": "aifg",
+   "runs": 2,
+   "frames": 162,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "steering-output",
+   "work": "aifg",
+   "runs": 13,
+   "frames": 221,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "steering-pipeline",
+   "work": "aifg",
+   "runs": 7,
+   "frames": 1547,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "the-firing-solution",
+   "work": "aifg",
+   "runs": 1,
+   "frames": 75,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "two-and-a-half-dimensions",
+   "work": "aifg",
+   "runs": 15,
+   "frames": 375,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "two-level-formation-steering",
+   "work": "aifg",
+   "runs": 12,
+   "frames": 1452,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "variable-matching",
+   "work": "aifg",
+   "runs": 17,
+   "frames": 425,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "velocity-matching",
+   "work": "aifg",
+   "runs": 33,
+   "frames": 1089,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "wander",
+   "work": "aifg",
+   "runs": 22,
+   "frames": 2222,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "weighted-blending",
+   "work": "aifg",
+   "runs": 16,
+   "frames": 976,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "behavior-subject",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 11,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "catch-error",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 11,
+   "differingRuns": 1,
+   "differences": 1,
+   "numeric": 0,
+   "text": 1,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[2].events[2].from",
+     "before": "timetable$",
+     "after": "timetable"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "combine-latest",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 16,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "concat-map",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 13,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[0].from",
+     "before": "upload(cat)",
+     "after": "cat"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[1].from",
+     "before": "upload(dog)",
+     "after": "dog"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[2].from",
+     "before": "upload(owl)",
+     "after": "owl"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[5].note",
+     "before": "owl arrives and queues behind dog. Two photos now wait, in the order they were added.",
+     "after": "owl arrives and queues behind dog. 2 photos now wait, in the order they were added."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "exhaust-map",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 14,
+   "differingRuns": 1,
+   "differences": 2,
+   "numeric": 0,
+   "text": 2,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[0].from",
+     "before": "save(draft 1)",
+     "after": "draft 1"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[1].from",
+     "before": "save(draft 3)",
+     "after": "draft 3"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "finalize",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 8,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "materialize",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 8,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "merge-map",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 1,
+   "differences": 5,
+   "numeric": 0,
+   "text": 5,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[0].from",
+     "before": "upload(dog)",
+     "after": "dog"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[1].from",
+     "before": "upload(cat)",
+     "after": "cat"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[2].from",
+     "before": "upload(owl)",
+     "after": "owl"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[6].note",
+     "before": "The server answers cat's upload, the second of the three to be answered.",
+     "after": "The server answers cat's upload, the second of the 3 to be answered."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[8].note",
+     "before": "owl's upload completes and the user has finished adding photos, so the output completes: all three are stored, in the order their uploads finished.",
+     "after": "owl's upload completes and the user has finished adding photos, so the output completes: all 3 are stored, in the order their uploads finished."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "observe-on",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 8,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "repeat",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 14,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[1].from",
+     "before": "check$, run 2",
+     "after": "second"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[2].from",
+     "before": "check$, run 3",
+     "after": "third"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[3].note",
+     "before": "check$ completes, but status$ does not. repeat counts one finished run, sees that the count is not reached and starts the timer for its delay.",
+     "after": "check$ completes, but status$ does not. repeat counts 1 finished run, sees that the count is not reached and starts the timer for its delay."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[8].note",
+     "before": "The second run completes. Two runs are finished, so repeat waits once more.",
+     "after": "The second run completes. 2 runs are finished, so repeat waits once more."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "replay-subject",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 19,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[3].note",
+     "before": "types ok is posted. The log now holds two reports, as many as it keeps.",
+     "after": "types ok is posted. The log now holds 2 reports, as many as it keeps."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[5].note",
+     "before": "tests ok is posted. To keep only the newest two, the log lets go of lint ok; the dashboard heard it at the time.",
+     "after": "tests ok is posted. To keep only the newest 2, the log lets go of lint ok; the dashboard heard it at the time."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[6].note",
+     "before": "The verifier subscribes. The log hands it the two reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it.",
+     "after": "The verifier subscribes. The log hands it the 2 reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[15].note",
+     "before": "The run completes, and so do the dashboard and the verifier. The log keeps its last two reports.",
+     "after": "The run completes, and so do the dashboard and the verifier. The log keeps its last 2 reports."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "retry",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 14,
+   "differingRuns": 1,
+   "differences": 5,
+   "numeric": 0,
+   "text": 5,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[0].from",
+     "before": "attempt 2",
+     "after": "second"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[1].from",
+     "before": "attempt 3",
+     "after": "third"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[3].events[2].from",
+     "before": "attempt 3",
+     "after": "third"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[2].note",
+     "before": "The first attempt fails before sending anything. retry keeps the error from the board, counts one retry used and starts to wait.",
+     "after": "The first attempt fails before sending anything. retry keeps the error from the board, counts 1 retry used and starts to wait."
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.frames[13].note",
+     "before": "The third attempt completes, so the board completes. Both errors were absorbed, and the 10:02 arrived twice.",
+     "after": "The third attempt completes, so the board completes. The 2 errors were absorbed, and the 10:02 arrived 2 times."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "scan",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 12,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "share-replay",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 22,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "share",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 16,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "start-with",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 12,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "subject",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 17,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "switch-map",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 15,
+   "differingRuns": 1,
+   "differences": 3,
+   "numeric": 0,
+   "text": 3,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[0].from",
+     "before": "results(ant)",
+     "after": "ant"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[1].from",
+     "before": "results(cat)",
+     "after": "cat"
+    },
+    {
+     "isDefault": true,
+     "path": ".marbles.lines[4].events[2].from",
+     "before": "results(cat)",
+     "after": "cat"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "take-until",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 8,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "timeout",
+   "work": "rxjs",
+   "runs": 1,
+   "frames": 15,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "aggregator",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "canonical-data-model",
+   "work": "eip",
+   "runs": 1,
+   "frames": 8,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "channel-adapter",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "command-message",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 1,
+   "differences": 5,
+   "numeric": 0,
+   "text": 5,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].states.store",
+     "before": "one result for 7",
+     "after": "1 result for 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].values.states",
+     "before": "Kernel: sent 7 again; Dispatch: empty; Session A: verifying order 41; Session B: done with 7; Event store: one result for 7",
+     "after": "Kernel: sent 7 again; Dispatch: empty; Session A: verifying order 41; Session B: done with 7; Event store: 1 result for 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.store",
+     "before": "two results for 7",
+     "after": "2 results for 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].values.states",
+     "before": "Kernel: sent 7 again; Dispatch: empty; Session A: done with 7; Session B: done with 7; Event store: two results for 7",
+     "after": "Kernel: sent 7 again; Dispatch: empty; Session A: done with 7; Session B: done with 7; Event store: 2 results for 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".moments[4].label",
+     "before": "Two results",
+     "after": "2 results"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "competing-consumers",
+   "work": "eip",
+   "runs": 1,
+   "frames": 13,
+   "differingRuns": 1,
+   "differences": 8,
+   "numeric": 0,
+   "text": 8,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].note",
+     "before": "The Order queue gives order 33 to Session 3, the last free session. All three are now working.",
+     "after": "The Order queue gives order 33 to Session 3, the last free session. All 3 are now working."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].note",
+     "before": "Order 34 still waits in the Order queue, because all three sessions are still working.",
+     "after": "Order 34 still waits in the Order queue, because all 3 sessions are still working."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[12].note",
+     "before": "Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+     "after": "Session 2 finishes order 34. Each of the 4 orders went to exactly one session: 4 orders, 4 deliveries."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.lines[6].events[1].from",
+     "before": "work(order 32)",
+     "after": "order 32"
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[6].note",
+     "before": "The Order queue gives order 33 to Session 3, the last free session. All three are now working.",
+     "after": "The Order queue gives order 33 to Session 3, the last free session. All 3 are now working."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[8].note",
+     "before": "Order 34 still waits in the Order queue, because all three sessions are still working.",
+     "after": "Order 34 still waits in the Order queue, because all 3 sessions are still working."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[12].note",
+     "before": "Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+     "after": "Session 2 finishes order 34. Each of the 4 orders went to exactly one session: 4 orders, 4 deliveries."
+    },
+    {
+     "isDefault": true,
+     "path": ".caption",
+     "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only.",
+     "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "content-based-router",
+   "work": "eip",
+   "runs": 1,
+   "frames": 11,
+   "differingRuns": 1,
+   "differences": 27,
+   "numeric": 0,
+   "text": 27,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].states.verifier",
+     "before": "five findings to file",
+     "after": "5 findings to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].values.states",
+     "before": "Verifier: five findings to file; Finding router: blocking, then operator, else follow-up; Executor: blocking: none yet; Operator: operator: none yet; Board: follow-up: none yet",
+     "after": "Verifier: 5 findings to file; Finding router: blocking, then operator, else follow-up; Executor: blocking: none yet; Operator: operator: none yet; Board: follow-up: none yet"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].note",
+     "before": "The Verifier has five findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent.",
+     "after": "The Verifier has 5 findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[1].states.verifier",
+     "before": "four to file",
+     "after": "4 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[1].values.states",
+     "before": "Verifier: four to file; Finding router: F1: unmet criterion, so blocking; Executor: blocking: none yet; Operator: operator: none yet; Board: follow-up: none yet",
+     "after": "Verifier: 4 to file; Finding router: F1: unmet criterion, so blocking; Executor: blocking: none yet; Operator: operator: none yet; Board: follow-up: none yet"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[2].states.verifier",
+     "before": "four to file",
+     "after": "4 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[2].values.states",
+     "before": "Verifier: four to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: none yet",
+     "after": "Verifier: 4 to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: none yet"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].states.verifier",
+     "before": "three to file",
+     "after": "3 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].values.states",
+     "before": "Verifier: three to file; Finding router: F2: no rule fits, so follow-up; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: none yet",
+     "after": "Verifier: 3 to file; Finding router: F2: no rule fits, so follow-up; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: none yet"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].states.verifier",
+     "before": "three to file",
+     "after": "3 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].values.states",
+     "before": "Verifier: three to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: F2",
+     "after": "Verifier: 3 to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].states.verifier",
+     "before": "two to file",
+     "after": "2 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].values.states",
+     "before": "Verifier: two to file; Finding router: F3: a decision, so operator; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: F2",
+     "after": "Verifier: 2 to file; Finding router: F3: a decision, so operator; Executor: blocking: F1; Operator: operator: none yet; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].states.verifier",
+     "before": "two to file",
+     "after": "2 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].values.states",
+     "before": "Verifier: two to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: F3; Board: follow-up: F2",
+     "after": "Verifier: 2 to file; Finding router: waiting; Executor: blocking: F1; Operator: operator: F3; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].states.verifier",
+     "before": "one to file",
+     "after": "1 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].values.states",
+     "before": "Verifier: one to file; Finding router: F4: a regression, so blocking; Executor: blocking: F1; Operator: operator: F3; Board: follow-up: F2",
+     "after": "Verifier: 1 to file; Finding router: F4: a regression, so blocking; Executor: blocking: F1; Operator: operator: F3; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.verifier",
+     "before": "one to file",
+     "after": "1 to file"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].values.states",
+     "before": "Verifier: one to file; Finding router: waiting; Executor: blocking: F1, F4; Operator: operator: F3; Board: follow-up: F2",
+     "after": "Verifier: 1 to file; Finding router: waiting; Executor: blocking: F1, F4; Operator: operator: F3; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[9].states.verifier",
+     "before": "all five filed",
+     "after": "all 5 filed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[9].values.states",
+     "before": "Verifier: all five filed; Finding router: F5 fits both, blocking first; Executor: blocking: F1, F4; Operator: operator: F3; Board: follow-up: F2",
+     "after": "Verifier: all 5 filed; Finding router: F5 fits both, blocking first; Executor: blocking: F1, F4; Operator: operator: F3; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[10].states.verifier",
+     "before": "all five filed",
+     "after": "all 5 filed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[10].states.router",
+     "before": "all five routed",
+     "after": "all 5 routed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[10].values.states",
+     "before": "Verifier: all five filed; Finding router: all five routed; Executor: blocking: F1, F4, F5; Operator: operator: F3; Board: follow-up: F2",
+     "after": "Verifier: all 5 filed; Finding router: all 5 routed; Executor: blocking: F1, F4, F5; Operator: operator: F3; Board: follow-up: F2"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[10].note",
+     "before": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with three blocking findings this verification fails and the change goes back for repair.",
+     "after": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with 3 blocking findings this verification fails and the change goes back for repair."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[0].note",
+     "before": "The Verifier has five findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent.",
+     "after": "The Verifier has 5 findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[10].note",
+     "before": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with three blocking findings this verification fails and the change goes back for repair.",
+     "after": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with 3 blocking findings this verification fails and the change goes back for repair."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "control-bus",
+   "work": "eip",
+   "runs": 1,
+   "frames": 13,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "correlation-identifier",
+   "work": "eip",
+   "runs": 1,
+   "frames": 11,
+   "differingRuns": 1,
+   "differences": 2,
+   "numeric": 0,
+   "text": 2,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].note",
+     "before": "The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet.",
+     "after": "The Kernel has 3 commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[0].note",
+     "before": "The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet.",
+     "after": "The Kernel has 3 commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "event-message",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "guaranteed-delivery",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "message-dispatcher",
+   "work": "eip",
+   "runs": 1,
+   "frames": 10,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.lines[5].events[0].from",
+     "before": "executor on 31",
+     "after": "implement order 31"
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.lines[5].events[1].from",
+     "before": "reviewer on 29",
+     "after": "review order 29"
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.lines[5].events[2].from",
+     "before": "executor on 30",
+     "after": "fix order 30"
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.lines[5].events[3].from",
+     "before": "verifier on 31",
+     "after": "verify order 31"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "message-expiration",
+   "work": "eip",
+   "runs": 1,
+   "frames": 11,
+   "differingRuns": 1,
+   "differences": 3,
+   "numeric": 0,
+   "text": 3,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].note",
+     "before": "The operator has three orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free.",
+     "after": "The operator has 3 orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[0].note",
+     "before": "The operator has three orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free.",
+     "after": "The operator has 3 orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free."
+    },
+    {
+     "isDefault": true,
+     "path": ".moments[1].label",
+     "before": "Two waiting",
+     "after": "2 waiting"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "message-store",
+   "work": "eip",
+   "runs": 1,
+   "frames": 10,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "message-translator",
+   "work": "eip",
+   "runs": 1,
+   "frames": 5,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].note",
+     "before": "Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c.",
+     "after": "Nothing has moved yet. 3 rows wait in the legacy chunk: t, n and c."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].note",
+     "before": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent.",
+     "after": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: 3 rows out for 3 in, in the order they were sent."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[0].note",
+     "before": "Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c.",
+     "after": "Nothing has moved yet. 3 rows wait in the legacy chunk: t, n and c."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[3].note",
+     "before": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent.",
+     "after": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: 3 rows out for 3 in, in the order they were sent."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "process-manager",
+   "work": "eip",
+   "runs": 1,
+   "frames": 13,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "publish-subscribe-channel",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 1,
+   "differences": 25,
+   "numeric": 0,
+   "text": 25,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[0].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[1].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[1].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[2].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[2].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].note",
+     "before": "The Order topic gives a copy of order 32 to each of the three sessions. Each session now has its own copies of orders 31 and 32.",
+     "after": "The Order topic gives a copy of order 32 to each of the 3 sessions. Each session now has its own copies of orders 31 and 32."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].note",
+     "before": "The Order topic gives a copy of order 33 to each of the three sessions.",
+     "after": "The Order topic gives a copy of order 33 to each of the 3 sessions."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.topic",
+     "before": "copies each order to all three",
+     "after": "copies each order to all 3"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].values.states",
+     "before": "Planner: knows no subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed",
+     "after": "Planner: knows no subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].note",
+     "before": "The Order topic gives a copy of order 34 to each of the three sessions. Every session has received every order: four orders, twelve copies.",
+     "after": "The Order topic gives a copy of order 34 to each of the 3 sessions. Every session has received every order: 4 orders, 12 copies."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[4].note",
+     "before": "The Order topic gives a copy of order 32 to each of the three sessions. Each session now has its own copies of orders 31 and 32.",
+     "after": "The Order topic gives a copy of order 32 to each of the 3 sessions. Each session now has its own copies of orders 31 and 32."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[6].note",
+     "before": "The Order topic gives a copy of order 33 to each of the three sessions.",
+     "after": "The Order topic gives a copy of order 33 to each of the 3 sessions."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[8].note",
+     "before": "The Order topic gives a copy of order 34 to each of the three sessions. Every session has received every order: four orders, twelve copies.",
+     "after": "The Order topic gives a copy of order 34 to each of the 3 sessions. Every session has received every order: 4 orders, 12 copies."
+    },
+    {
+     "isDefault": true,
+     "path": ".caption",
+     "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are three agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session.",
+     "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are 3 agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "recipient-list",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 1,
+   "differences": 15,
+   "numeric": 0,
+   "text": 15,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].states.record",
+     "before": "one entry",
+     "after": "1 entry"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[3].values.states",
+     "before": "Release close: WO-240: v0.95.0; Declared siblings: A and B; Recipient list: siblings: A, B; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up",
+     "after": "Release close: WO-240: v0.95.0; Declared siblings: A and B; Recipient list: siblings: A, B; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].states.record",
+     "before": "one entry",
+     "after": "1 entry"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[4].values.states",
+     "before": "Release close: WO-241: no release; Declared siblings: A and B; Recipient list: WO-241 to nobody; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up",
+     "after": "Release close: WO-241: no release; Declared siblings: A and B; Recipient list: WO-241 to nobody; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].states.record",
+     "before": "two entries",
+     "after": "2 entries"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[5].values.states",
+     "before": "Release close: WO-241: no release; Declared siblings: A and B; Recipient list: siblings: A, B; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up",
+     "after": "Release close: WO-241: no release; Declared siblings: A and B; Recipient list: siblings: A, B; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].states.record",
+     "before": "two entries",
+     "after": "2 entries"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].values.states",
+     "before": "Release close: WO-241: no release; Declared siblings: A, B and C; Recipient list: siblings: A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no release",
+     "after": "Release close: WO-241: no release; Declared siblings: A, B and C; Recipient list: siblings: A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no release"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].states.record",
+     "before": "two entries",
+     "after": "2 entries"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].values.states",
+     "before": "Release close: WO-242: v0.96.0; Declared siblings: A, B and C; Recipient list: WO-242 to A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no release",
+     "after": "Release close: WO-242: v0.96.0; Declared siblings: A, B and C; Recipient list: WO-242 to A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no release"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.close",
+     "before": "all three closed",
+     "after": "all 3 closed"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.record",
+     "before": "three entries",
+     "after": "3 entries"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].values.states",
+     "before": "Release close: all three closed; Declared siblings: A, B and C; Recipient list: siblings: A, B, C; Close record: three entries; Sibling A: v0.96.0; Sibling B: v0.96.0; Sibling C: v0.96.0, first",
+     "after": "Release close: all 3 closed; Declared siblings: A, B and C; Recipient list: siblings: A, B, C; Close record: 3 entries; Sibling A: v0.96.0; Sibling B: v0.96.0; Sibling C: v0.96.0, first"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].note",
+     "before": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. Three closes made five copies, and v0.96.0 is C's first release.",
+     "after": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. 3 closes made 5 copies, and v0.96.0 is C's first release."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[8].note",
+     "before": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. Three closes made five copies, and v0.96.0 is C's first release.",
+     "after": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. 3 closes made 5 copies, and v0.96.0 is C's first release."
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "request-reply",
+   "work": "eip",
+   "runs": 1,
+   "frames": 13,
+   "differingRuns": 0,
+   "differences": 0,
+   "numeric": 0,
+   "text": 0,
+   "other": 0,
+   "samples": [],
+   "parametersEqual": true
+  },
+  {
+   "slug": "resequencer",
+   "work": "eip",
+   "runs": 1,
+   "frames": 10,
+   "differingRuns": 1,
+   "differences": 4,
+   "numeric": 0,
+   "text": 4,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].note",
+     "before": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back both that follow it.",
+     "after": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back 2 events that follow it."
+    },
+    {
+     "isDefault": true,
+     "path": ".diagram.marbles.frames[7].note",
+     "before": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back both that follow it.",
+     "after": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back 2 events that follow it."
+    },
+    {
+     "isDefault": true,
+     "path": ".moments[2].label",
+     "before": "Two held",
+     "after": "2 held"
+    },
+    {
+     "isDefault": true,
+     "path": ".moments[4].label",
+     "before": "Run of three",
+     "after": "Run of 3"
+    }
+   ],
+   "parametersEqual": true
+  },
+  {
+   "slug": "transactional-client",
+   "work": "eip",
+   "runs": 1,
+   "frames": 9,
+   "differingRuns": 1,
+   "differences": 8,
+   "numeric": 0,
+   "text": 8,
+   "other": 0,
+   "samples": [
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].states.outside",
+     "before": "written twice for command 7",
+     "after": "written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].values.states",
+     "before": "Outbox: 7 hidden, kept until commit; Worker: wrote outside again; Receipts: empty; Event log: empty; Outside store: written twice for command 7",
+     "after": "Outbox: 7 hidden, kept until commit; Worker: wrote outside again; Receipts: empty; Event log: empty; Outside store: written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[6].note",
+     "before": "The Worker sends write 2 to the Outside store: the same command has now been written there twice, a duplicate that no rollback could prevent.",
+     "after": "The Worker sends write 2 to the Outside store: the same command has now been written there 2 times, a duplicate that no rollback could prevent."
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].states.outside",
+     "before": "written twice for command 7",
+     "after": "written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[7].values.states",
+     "before": "Outbox: 7 hidden, kept until commit; Worker: r and e staged in transaction 2; Receipts: empty; Event log: empty; Outside store: written twice for command 7",
+     "after": "Outbox: 7 hidden, kept until commit; Worker: r and e staged in transaction 2; Receipts: empty; Event log: empty; Outside store: written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].states.outside",
+     "before": "written twice for command 7",
+     "after": "written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".flow.frames[8].values.states",
+     "before": "Outbox: 7 removed at commit; Worker: transaction 2 committed; Receipts: receipt for 7; Event log: result for 7; Outside store: written twice for command 7",
+     "after": "Outbox: 7 removed at commit; Worker: transaction 2 committed; Receipts: receipt for 7; Event log: result for 7; Outside store: written 2 times for command 7"
+    },
+    {
+     "isDefault": true,
+     "path": ".moments[3].label",
+     "before": "Written twice",
+     "after": "Written 2 times"
+    }
+   ],
+   "parametersEqual": true
+  }
+ ]
+}

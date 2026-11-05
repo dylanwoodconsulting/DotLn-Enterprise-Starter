@@ -1,0 +1,289 @@
+{
+  "frames": 3475,
+  "names": 11544,
+  "suppressed": 650,
+  "placedOmissions": 0,
+  "moved": 679,
+  "studies": [
+    {
+      "slug": "actuator",
+      "names": 98,
+      "suppression": 49,
+      "omissions": 0,
+      "moved": 49
+    },
+    {
+      "slug": "align",
+      "names": 322,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "arrive",
+      "names": 0,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "names": 126,
+      "suppression": 105,
+      "omissions": 0,
+      "moved": 105
+    },
+    {
+      "slug": "collision-avoidance",
+      "names": 82,
+      "suppression": 3,
+      "omissions": 0,
+      "moved": 4
+    },
+    {
+      "slug": "coordinated-movement",
+      "names": 644,
+      "suppression": 64,
+      "omissions": 0,
+      "moved": 83
+    },
+    {
+      "slug": "corner-trap",
+      "names": 36,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "equilibrium-fallback",
+      "names": 243,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "face",
+      "names": 322,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "fixed-formations",
+      "names": 153,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "flee",
+      "names": 0,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "flocking",
+      "names": 2010,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "formation-pattern-interface",
+      "names": 432,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "group-movement",
+      "names": 1155,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "iterative-targeting",
+      "names": 18,
+      "suppression": 9,
+      "omissions": 0,
+      "moved": 10
+    },
+    {
+      "slug": "jump-points",
+      "names": 52,
+      "suppression": 20,
+      "omissions": 0,
+      "moved": 20
+    },
+    {
+      "slug": "kinematic-arrive",
+      "names": 0,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "kinematic-wander",
+      "names": 121,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "making-the-creatures",
+      "names": 1449,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "motor-control",
+      "names": 202,
+      "suppression": 101,
+      "omissions": 0,
+      "moved": 101
+    },
+    {
+      "slug": "movement-in-the-third-dimension",
+      "names": 75,
+      "suppression": 21,
+      "omissions": 0,
+      "moved": 22
+    },
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "names": 164,
+      "suppression": 27,
+      "omissions": 0,
+      "moved": 28
+    },
+    {
+      "slug": "priority-steering",
+      "names": 363,
+      "suppression": 121,
+      "omissions": 0,
+      "moved": 121
+    },
+    {
+      "slug": "projectile-trajectory",
+      "names": 85,
+      "suppression": 3,
+      "omissions": 0,
+      "moved": 5
+    },
+    {
+      "slug": "pursue",
+      "names": 243,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "satisfaction-radius",
+      "names": 0,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "scalable-formations",
+      "names": 306,
+      "suppression": 10,
+      "omissions": 0,
+      "moved": 10
+    },
+    {
+      "slug": "seek",
+      "names": 442,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "separation",
+      "names": 244,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "slot-assignment",
+      "names": 24,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "steering-behaviors",
+      "names": 162,
+      "suppression": 64,
+      "omissions": 0,
+      "moved": 65
+    },
+    {
+      "slug": "steering-output",
+      "names": 0,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "steering-pipeline",
+      "names": 652,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "the-firing-solution",
+      "names": 259,
+      "suppression": 34,
+      "omissions": 0,
+      "moved": 41
+    },
+    {
+      "slug": "two-and-a-half-dimensions",
+      "names": 75,
+      "suppression": 17,
+      "omissions": 0,
+      "moved": 15
+    },
+    {
+      "slug": "two-level-formation-steering",
+      "names": 484,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "variable-matching",
+      "names": 50,
+      "suppression": 2,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "velocity-matching",
+      "names": 66,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "wander",
+      "names": 202,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    },
+    {
+      "slug": "weighted-blending",
+      "names": 183,
+      "suppression": 0,
+      "omissions": 0,
+      "moved": 0
+    }
+  ]
+}

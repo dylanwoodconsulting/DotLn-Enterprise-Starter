@@ -1,0 +1,19 @@
+{
+  "repositoryId": "dotln-angular",
+  "commit": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "treeHash": "80145e06fb39d5d5264e46377b1bae5b5cc2b7ab",
+  "selection": "review",
+  "names": [
+    "install",
+    "lint",
+    "typecheck",
+    "test",
+    "format",
+    "build",
+    "e2e",
+    "visual"
+  ],
+  "durationMs": 87908,
+  "evidenceRef": "target-gate:70a23338-aedf-4501-ad03-b2aa44da263e",
+  "recordedAt": "2026-11-04T21:55:09.230Z"
+}

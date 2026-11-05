@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-028",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 14,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/14",
+  "title": ":sparkles: feat: add the second batch of movement concept studies",
+  "baseBranch": "main",
+  "headBranch": "feat/movement-concept-studies-2",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "the repository profile's --draft form: node scripts/worktree.mjs publish WO-028 --target-worktree --draft --branch feat/movement-concept-studies-2 --title 'feat: add the second batch of movement concept studies' --body-file docs/evidence/WO-028/preview-pr-body.md",
+      "session": "the verifying Claude Code session, after verification-result pass (VerificationCompleted for VER-002 at 2026-11-04T22:35:59.780Z)",
+      "source": "read back by the final review from the forge (gh pr view, gh pr checks, gh run view and the pull, review and issue comment counts) and the target worktree's object store (git cat-file of the draft commit); the publishing session's own output was not read"
+    },
+    "headSha": "f0e70879efc6c7b757e0e378efbb97d88f03d7fc",
+    "parent": "55b59c9133056c1d6471274a9676a7d5649196ac",
+    "tree": "80145e06fb39d5d5264e46377b1bae5b5cc2b7ab",
+    "committedAt": "2026-11-04T22:36:14Z",
+    "openedAt": "2026-11-04T22:36:19Z",
+    "body": "the bytes of docs/evidence/WO-028/preview-pr-body.md above the helper's Change table",
+    "verification": {
+      "id": "VER-002",
+      "path": "docs/verifications/WO-028/VER-002.md",
+      "verdict": "pass",
+      "treeHash": "80145e06fb39d5d5264e46377b1bae5b5cc2b7ab"
+    },
+    "targetGate": "target-gate:ca88624e-36a7-44c7-ae4f-09256fb78b1a at the same tree, recorded 2026-11-04T22:27:35.125Z by the verifier, after target-gate:70a23338-aedf-4501-ad03-b2aa44da263e at the same tree, recorded 2026-11-04T21:55:09.230Z by the repair",
+    "notes": [
+      "The draft's tree is the verified tree and the working tree the final review judged; the title workflow added the configured gitmoji to the plain conventional title."
+    ]
+  },
+  "finalReview": {
+    "observedAt": "2026-11-04T22:55:00Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "f0e70879efc6c7b757e0e378efbb97d88f03d7fc",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 41926735865,
+        "workflow": "CI",
+        "createdAt": "2026-11-04T22:36:22Z",
+        "conclusion": "success"
+      },
+      {
+        "id": 41926735896,
+        "workflow": "Pull request title",
+        "createdAt": "2026-11-04T22:36:22Z",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-04T22:36:26Z",
+        "completedAt": "2026-11-04T22:48:10Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-04T22:36:26Z",
+        "completedAt": "2026-11-04T22:39:37Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "verdict": "fail",
+    "routed": "nothing to route from the forge: no thread, review or comment. The final review fails the order on the operator's direction (WO-028-D039), so the draft stays a draft at this head; the fix phase republishes over it once the road order WO-028-D040 boards has landed and been integrated."
+  },
+  "refreshedDraft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "the repository profile's --draft form, with --body-file docs/evidence/WO-028/ver-003/preview-pr-body.md",
+      "session": "run by the operator after VER-003 passed, the verifying session having been denied it by the host (WO-028-D057, WO-028-D058)",
+      "source": "read back by the final review from the forge (gh pr view, gh pr checks, gh run view, gh run list and the pull, review and issue comment counts) and the target worktree (git log and rev-parse of the fetched branch)"
+    },
+    "headSha": "5a6348005c2dbca5c2625b398f5453628a7a7a25",
+    "parent": "55b59c9133056c1d6471274a9676a7d5649196ac",
+    "tree": "15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0",
+    "committedAt": "2026-11-05T13:44:49Z",
+    "verification": {
+      "id": "VER-003",
+      "path": "docs/verifications/WO-028/VER-003.md",
+      "verdict": "pass",
+      "treeHash": "15d0e4efcfd20c9d8159cc3cd06d8e0ba5de41a0"
+    },
+    "targetGate": "target-gate:7448c5f8-dd6a-4771-8f70-44923527c10c at the same tree, recorded 2026-11-05T11:15:05.650Z by the verifier, after target-gate:cbb12b42-6624-4082-b751-a114d309e2bc at the same tree, recorded 2026-11-05T09:17:02.194Z by the repair"
+  },
+  "finalReview002": {
+    "observedAt": "2026-11-05T14:20:00Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "5a6348005c2dbca5c2625b398f5453628a7a7a25",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "BLOCKED",
+    "workflowRuns": [
+      {
+        "id": 42038514286,
+        "workflow": "CI",
+        "createdAt": "2026-11-05T13:44:58Z",
+        "conclusion": "failure"
+      },
+      {
+        "id": 42038513776,
+        "workflow": "Pull request title",
+        "createdAt": "2026-11-05T13:44:58Z",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "FAILURE",
+        "startedAt": "2026-11-05T13:45:01Z",
+        "completedAt": "2026-11-05T13:58:38Z",
+        "failedStep": "npx nx affected -t lint test build e2e --exclude=workspace-tools",
+        "cause": "one Tools test of 962 stopped at the five-second default timeout; every earlier step passed (WO-028-D062)"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-05T13:45:01Z",
+        "completedAt": "2026-11-05T13:48:21Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "verdict": "pass",
+    "reviewedCommit": "edb8e02dd150cec693459bf1508f275a4d6a164d",
+    "reviewedTree": "45888224fe4f1b0e7c7fca4da935325e4b0df865",
+    "routed": "nothing to route from the forge: no thread, review or comment. The failed checks run is routed to WO-028-D062 and repaired in the reviewed commit by an explicit test timeout; the final publish replaces the draft's head, and the workflow runs on that head start after this review's result is recorded, so their outcome is not read here."
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "statement": "PASS: all fourteen changed files remain factually consistent; no new factual findings. Four permitted model probes passed serially, covering 36 tests.",
+  "candidateManifest": "brief/recheck-manifest.json",
+  "candidateManifestSha256": "844088651144af80b8ef6413ef57a112f3a3fda094b398847183c12d8a3113ba",
+  "baseline": "55b59c9133056c1d6471274a9676a7d5649196ac",
+  "integrity": {
+    "manifestFilesChecked": 64,
+    "declaredChangedFiles": 14,
+    "mismatches": [],
+    "otherOriginalSourceHashesRetained": true,
+    "originalResultPreserved": true,
+    "originalResultSha256": "e91e8501bdc7f6b52d6fac150ae9e359e9967ef85e2e5694c43d229e6d5acdf2",
+    "initialResultPreserved": true,
+    "initialResultSha256": "e91e8501bdc7f6b52d6fac150ae9e359e9967ef85e2e5694c43d229e6d5acdf2"
+  },
+  "scope": "Bounded recheck of parent corrections only; no broad re-review, external source re-fetch, full suite, gate, descendant, install, real source write or path-alias repeat.",
+  "changedScopeDispositions": [
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+      "slug": "steering-behaviors",
+      "mechanismModeRetained": "mixed",
+      "disposition": "pass",
+      "confirmation": "Record binding retains slug, exact example, executable, mechanism-block and nearby-ID checks without requiring draft metadata. The unchanged model retains the original mechanism confirmation.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts:41"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+      "slug": "steering-output",
+      "mechanismModeRetained": "local",
+      "disposition": "pass",
+      "confirmation": "Record binding retains exact parameters, module, pseudocode blocks and nearby IDs without requiring draft metadata. The model is unchanged.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts:45"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+      "slug": "obstacle-and-wall-avoidance",
+      "mechanismModeRetained": "mixed",
+      "disposition": "pass",
+      "confirmation": "Velocity at y+2 and acceleration at y+4 retain their original components and scaling. The corrected caption/legend truthfully describe upper/lower lanes below the courier. Ray, hit, normal and avoidance-target geometry remain the construction itself.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts:244"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+      "slug": "projectile-trajectory",
+      "mechanismModeRetained": "local",
+      "disposition": "pass",
+      "confirmation": "Landing still labels the exact predicted height encounter; no future encounter produces no cross. The readout and note retain the distinction between future landing and current position. No flight or event calculation changed.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts:175"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+      "slug": "the-firing-solution",
+      "mechanismModeRetained": "local",
+      "disposition": "pass",
+      "confirmation": "Landed candidates retain their actual contact positions as small coloured dot marks, while airborne candidates remain bodies. Contact has no velocity arrow. The beacon cross is retained after contact marks in the mark list.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts:198"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts",
+      "slug": "the-firing-solution",
+      "mechanismModeRetained": "local",
+      "disposition": "pass",
+      "confirmation": "The selected frame now correctly expects one high airborne body, a low contact dot at (32,0), and the Breakwater beacon cross. All ten probe tests pass.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts:117"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts",
+      "slug": "iterative-targeting",
+      "mechanismModeRetained": "local",
+      "disposition": "pass",
+      "confirmation": "The record test retains identity, exact parameters, module, null RxJS and mechanism-block checks without draft-metadata pins. The flight/search model is unchanged.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.spec.ts:32"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+      "slug": "jump-points",
+      "mechanismModeRetained": "mixed",
+      "disposition": "pass",
+      "confirmation": "Finch heading atan2(-verticalVelocity, horizontalVelocity) agrees with its displayed screen-space velocity. The take-off ring remains at the marker; suppressing a nearby label does not delete or move it. The original run-up, gate and flight mechanism remains.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/jump-points.model.ts:290"
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts",
+      "slug": "jump-points",
+      "mechanismModeRetained": "mixed",
+      "disposition": "pass",
+      "confirmation": "Record binding retains identity, parameters, module and mechanism checks without draft-metadata pins. The drawing assertion checks Finch by label; the passing eight-test probe still covers take-off, flight, rejection and sampled failures.",
+      "evidence": "libs/features/tools/src/lib/studies/movement/jump-points.model.spec.ts:41"
+    },
+    {
+      "file": "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+      "slug": "coordinated-movement",
+      "mechanismModeRetained": "mixed",
+      "disposition": "pass",
+      "confirmation": "The concise readout retains Camera position/error, mean slot error, anchor and gate. The unchanged model supplies cameraX/cameraY dynamically from member IDs and the other values directly. Reference and implementation claims exactly match the initial captured claims.",
+      "evidence": "libs/shared/catalog/src/studies/aifg/coordinated-movement.json:73"
+    },
+    {
+      "file": "libs/features/tools/src/lib/composites/study/study.html",
+      "slug": null,
+      "mechanismModeRetained": null,
+      "disposition": "pass",
+      "confirmation": "Chart captions use actual timeline.series labels and tones from the same timeline supplied to the renderer. Movement view restores its own legend/caption. The guide describes the implemented cursor, dots and axes.",
+      "evidence": "libs/features/tools/src/lib/composites/study/study.html:75"
+    },
+    {
+      "file": "libs/features/tools/src/lib/composites/study/study.spec.ts",
+      "slug": null,
+      "mechanismModeRetained": null,
+      "disposition": "pass",
+      "confirmation": "New assertions verify actual chart series labels/tones, absence of the movement caption in chart view and its restoration on returning to movement. This agrees with the inspected template.",
+      "evidence": "libs/features/tools/src/lib/composites/study/study.spec.ts:115"
+    },
+    {
+      "file": "apps/dotln/public/i18n/en.json",
+      "slug": null,
+      "mechanismModeRetained": null,
+      "disposition": "pass",
+      "confirmation": "The guide accurately describes model.seconds[step] as the selected time, per-series values as its dots, and the labelled chart axes.",
+      "evidence": "apps/dotln/public/i18n/en.json:394"
+    },
+    {
+      "file": "libs/features/tools/testing/src/lib/tools-en.json",
+      "slug": null,
+      "mechanismModeRetained": null,
+      "disposition": "pass",
+      "confirmation": "The fixture guide exactly matches the production guide and the inspected chart renderer.",
+      "evidence": "libs/features/tools/testing/src/lib/tools-en.json:183"
+    }
+  ],
+  "findings": [],
+  "originalMechanismClassifications": {
+    "steering-behaviors": "mixed",
+    "steering-output": "local",
+    "flee": "mixed",
+    "variable-matching": "mixed",
+    "collision-avoidance": "mixed",
+    "obstacle-and-wall-avoidance": "mixed",
+    "corner-trap": "mixed",
+    "blending-versus-arbitration": "mixed",
+    "projectile-trajectory": "local",
+    "the-firing-solution": "local",
+    "iterative-targeting": "local",
+    "jump-points": "mixed",
+    "motor-control": "mixed",
+    "actuator": "mixed",
+    "movement-in-the-third-dimension": "local",
+    "two-and-a-half-dimensions": "mixed",
+    "kinematic-arrive": "local",
+    "satisfaction-radius": "local",
+    "kinematic-wander": "local",
+    "coordinated-movement": "mixed"
+  },
+  "references": {
+    "newOrChangedCitedUrls": [],
+    "carryForward": "Original checks of 33 unique cited URLs remain in initial-result.json and preserved result.json. The corrected coordinated-movement record has identical reference and implementation claims. DOI metadata remains bibliography only, with publisher HTML denial disclosed."
+  },
+  "supportingRendererEvidence": [
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion.html:25",
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts:100",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts:44",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline.html:9",
+    "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts:258"
+  ],
+  "tests": [
+    {
+      "slug": "obstacle-and-wall-avoidance",
+      "cwd": "<launchpad>",
+      "command": "node scripts/harness.mjs bounded -- node --test --test-name-pattern='^obstacle-and-wall-avoidance$' <session-scratch>/critic-factual/brief/model-probes.mjs",
+      "exit": 0,
+      "durationSeconds": 5.566,
+      "wrapperLog": "brief/obstacle-and-wall-avoidance.recheck.wrapper.log",
+      "vitestLog": "brief/obstacle-and-wall-avoidance.recheck.test.log",
+      "testsPassed": 9,
+      "boundedResult": {
+        "name": "bounded-probe",
+        "durationMs": 5463,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5463,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1063110504,
+        "peakRssBytes": 1157660672,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-04T19:36:18.443Z",
+        "finishedAt": "2026-11-04T19:36:23.906Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "slug": "projectile-trajectory",
+      "cwd": "<launchpad>",
+      "command": "node scripts/harness.mjs bounded -- node --test --test-name-pattern='^projectile-trajectory$' <session-scratch>/critic-factual/brief/model-probes.mjs",
+      "exit": 0,
+      "durationSeconds": 5.588,
+      "wrapperLog": "brief/projectile-trajectory.recheck.wrapper.log",
+      "vitestLog": "brief/projectile-trajectory.recheck.test.log",
+      "testsPassed": 9,
+      "boundedResult": {
+        "name": "bounded-probe",
+        "durationMs": 5481,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5481,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1061324312,
+        "peakRssBytes": 1156104192,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-04T19:36:24.014Z",
+        "finishedAt": "2026-11-04T19:36:29.495Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "slug": "the-firing-solution",
+      "cwd": "<launchpad>",
+      "command": "node scripts/harness.mjs bounded -- node --test --test-name-pattern='^the-firing-solution$' <session-scratch>/critic-factual/brief/model-probes.mjs",
+      "exit": 0,
+      "durationSeconds": 5.735,
+      "wrapperLog": "brief/the-firing-solution.recheck.wrapper.log",
+      "vitestLog": "brief/the-firing-solution.recheck.test.log",
+      "testsPassed": 10,
+      "boundedResult": {
+        "name": "bounded-probe",
+        "durationMs": 5631,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5631,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1054688360,
+        "peakRssBytes": 1149763584,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-04T19:36:29.599Z",
+        "finishedAt": "2026-11-04T19:36:35.230Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "slug": "jump-points",
+      "cwd": "<launchpad>",
+      "command": "node scripts/harness.mjs bounded -- node --test --test-name-pattern='^jump-points$' <session-scratch>/critic-factual/brief/model-probes.mjs",
+      "exit": 0,
+      "durationSeconds": 5.647,
+      "wrapperLog": "brief/jump-points.recheck.wrapper.log",
+      "vitestLog": "brief/jump-points.recheck.test.log",
+      "testsPassed": 8,
+      "boundedResult": {
+        "name": "bounded-probe",
+        "durationMs": 5542,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5542,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1068009848,
+        "peakRssBytes": 1162199040,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-04T19:36:35.336Z",
+        "finishedAt": "2026-11-04T19:36:40.878Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    }
+  ],
+  "testSummary": {
+    "commands": 4,
+    "serial": true,
+    "exactCanonicalVarPath": true,
+    "allExitsZero": true,
+    "testsPassed": 36,
+    "broadRerunPerformed": false,
+    "originalVitestLogsRestored": true
+  },
+  "parentReportedValidation": {
+    "source": "Parent assignment, not independently rerun by this critic",
+    "suite": "complete Tools suite",
+    "files": 101,
+    "tests": 860,
+    "finishedAt": "2026-11-04T19:33:56Z"
+  },
+  "expectedMetadataTransition": {
+    "current": "Candidate records still carry draft state and empty reviewer lists.",
+    "expected": "After both independent rechecks pass, root sets state checked and reviewers factual-critic and reading-critic.",
+    "disposition": "Expected metadata-only transition; it changes neither this factual judgment nor original mechanism classifications. This critic performed no metadata edits."
+  },
+  "usage": {
+    "cumulativeTokens": null,
+    "status": "unknown",
+    "source": "No cumulative model token counter exposed; command-output token estimates do not measure model usage.",
+    "scope": "This same factual critic, including the initial review and forty initial probes, plus the bounded recheck and four canonical probes.",
+    "cutoff": "2026-11-04T19:39:26.807930+00:00"
+  },
+  "originalReportSha256": "c8f7e14ee8bf306432acb24916d3dbbb97da89d2a765f6ddd23fcaae5b5b2f58"
+}

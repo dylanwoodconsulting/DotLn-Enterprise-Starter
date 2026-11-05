@@ -1,0 +1,2189 @@
+{
+ "frames": 7523,
+ "same": 7378,
+ "differing": 145,
+ "errors": {
+  "before": [],
+  "after": []
+ },
+ "byStudy": {
+  "concat-map": {
+   "frames": 1,
+   "text": 1,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "merge-map": {
+   "frames": 2,
+   "text": 2,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "repeat": {
+   "frames": 2,
+   "text": 2,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "replay-subject": {
+   "frames": 4,
+   "text": 4,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "retry": {
+   "frames": 2,
+   "text": 2,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "command-message": {
+   "frames": 9,
+   "text": 9,
+   "label": 2,
+   "geometry": 9,
+   "missing": 0
+  },
+  "competing-consumers": {
+   "frames": 16,
+   "text": 16,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "content-based-router": {
+   "frames": 22,
+   "text": 22,
+   "label": 22,
+   "geometry": 11,
+   "missing": 0
+  },
+  "correlation-identifier": {
+   "frames": 2,
+   "text": 2,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "message-expiration": {
+   "frames": 22,
+   "text": 22,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "message-translator": {
+   "frames": 4,
+   "text": 4,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "publish-subscribe-channel": {
+   "frames": 18,
+   "text": 18,
+   "label": 18,
+   "geometry": 9,
+   "missing": 0
+  },
+  "recipient-list": {
+   "frames": 12,
+   "text": 12,
+   "label": 12,
+   "geometry": 6,
+   "missing": 0
+  },
+  "resequencer": {
+   "frames": 20,
+   "text": 20,
+   "label": 0,
+   "geometry": 0,
+   "missing": 0
+  },
+  "transactional-client": {
+   "frames": 9,
+   "text": 9,
+   "label": 3,
+   "geometry": 3,
+   "missing": 0
+  }
+ },
+ "reading": [
+  {
+   "before": {
+    "id": "aifg-a:111",
+    "files": [
+     {
+      "path": "/chunk-NJtDivOO.js",
+      "raw": 314637,
+      "gzip": 91321
+     },
+     {
+      "path": "/chunk-nUFa9ywx.js",
+      "raw": 7985,
+      "gzip": 3067
+     },
+     {
+      "path": "/chunk-r7sxd2DZ.js",
+      "raw": 233,
+      "gzip": 147
+     },
+     {
+      "path": "/chunk-ChU_IOvJ.js",
+      "raw": 19126,
+      "gzip": 7199
+     }
+    ],
+    "raw": 341981,
+    "gzip": 101734,
+    "medianMs": 79,
+    "fastestMs": 45,
+    "slowestMs": 80
+   },
+   "after": {
+    "id": "aifg-a:111",
+    "files": [
+     {
+      "path": "/chunk-Dn80Ydwx.js",
+      "raw": 135351,
+      "gzip": 12792
+     },
+     {
+      "path": "/i18n/studyCommon/en.json",
+      "raw": 3216,
+      "gzip": 1173
+     },
+     {
+      "path": "/chunk-5mizEzWL.js",
+      "raw": 9509,
+      "gzip": 2708
+     },
+     {
+      "path": "/i18n/studyAifg/en.json",
+      "raw": 590447,
+      "gzip": 161466
+     },
+     {
+      "path": "/chunk-BbBQ8Ris.js",
+      "raw": 843,
+      "gzip": 450
+     },
+     {
+      "path": "/chunk-ChU_IOvJ.js",
+      "raw": 19126,
+      "gzip": 7199
+     }
+    ],
+    "raw": 758492,
+    "gzip": 185788,
+    "medianMs": 79,
+    "fastestMs": 78,
+    "slowestMs": 80
+   }
+  },
+  {
+   "before": {
+    "id": "aifg-a:134",
+    "files": [
+     {
+      "path": "/chunk-NJtDivOO.js",
+      "raw": 314637,
+      "gzip": 91321
+     },
+     {
+      "path": "/chunk-BhSAXkmd.js",
+      "raw": 9405,
+      "gzip": 3352
+     },
+     {
+      "path": "/chunk-r7sxd2DZ.js",
+      "raw": 233,
+      "gzip": 147
+     },
+     {
+      "path": "/chunk-ChU_IOvJ.js",
+      "raw": 19126,
+      "gzip": 7199
+     }
+    ],
+    "raw": 343401,
+    "gzip": 102019,
+    "medianMs": 79,
+    "fastestMs": 78,
+    "slowestMs": 80
+   },
+   "after": {
+    "id": "aifg-a:134",
+    "files": [
+     {
+      "path": "/chunk-Dn80Ydwx.js",
+      "raw": 135351,
+      "gzip": 12792
+     },
+     {
+      "path": "/chunk-DX8afK77.js",
+      "raw": 11867,
+      "gzip": 3090
+     },
+     {
+      "path": "/i18n/studyCommon/en.json",
+      "raw": 3216,
+      "gzip": 1173
+     },
+     {
+      "path": "/i18n/studyAifg/en.json",
+      "raw": 590447,
+      "gzip": 161466
+     },
+     {
+      "path": "/chunk-BbBQ8Ris.js",
+      "raw": 843,
+      "gzip": 450
+     },
+     {
+      "path": "/chunk-ChU_IOvJ.js",
+      "raw": 19126,
+      "gzip": 7199
+     }
+    ],
+    "raw": 760850,
+    "gzip": 186170,
+    "medianMs": 79,
+    "fastestMs": 77,
+    "slowestMs": 80
+   }
+  }
+ ],
+ "rows": [
+  {
+   "key": "concat-map|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "re photos Done owl arrives and queues behind dog. Two photos now wait, in the order they were added. Show the emissions ",
+    "after": "re photos Done owl arrives and queues behind dog. 2 photos now wait, in the order they were added. Show the emissions Fr"
+   }
+  },
+  {
+   "key": "merge-map|0|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "he server answers cat's upload, the second of the three to be answered. Show the emissions Frame 6: upload(cat) emits 1 ",
+    "after": "he server answers cat's upload, the second of the 3 to be answered. Show the emissions Frame 6: upload(cat) emits 1 (cat"
+   }
+  },
+  {
+   "key": "merge-map|0|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "ished adding photos, so the output completes: all three are stored, in the order their uploads finished. Show the emissi",
+    "after": "ished adding photos, so the output completes: all 3 are stored, in the order their uploads finished. Show the emissions "
+   }
+  },
+  {
+   "key": "repeat|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "k$ completes, but status$ does not. repeat counts one finished run, sees that the count is not reached and starts the ti",
+    "after": "k$ completes, but status$ does not. repeat counts 1 finished run, sees that the count is not reached and starts the time"
+   }
+  },
+  {
+   "key": "repeat|0|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "tarts Run 3 starts Done The second run completes. Two runs are finished, so repeat waits once more. Show the emissions F",
+    "after": "tarts Run 3 starts Done The second run completes. 2 runs are finished, so repeat waits once more. Show the emissions Fra"
+   }
+  },
+  {
+   "key": "replay-subject|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "ditor joins types ok is posted. The log now holds two reports, as many as it keeps. Show the emissions The log keeps the",
+    "after": "ditor joins types ok is posted. The log now holds 2 reports, as many as it keeps. Show the emissions The log keeps the n"
+   }
+  },
+  {
+   "key": "replay-subject|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "joins tests ok is posted. To keep only the newest two, the log lets go of lint ok; the dashboard heard it at the time. S",
+    "after": "joins tests ok is posted. To keep only the newest 2, the log lets go of lint ok; the dashboard heard it at the time. Sho"
+   }
+  },
+  {
+   "key": "replay-subject|0|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "ins The verifier subscribes. The log hands it the two reports it holds, types ok and then tests ok, at once and before a",
+    "after": "ins The verifier subscribes. The log hands it the 2 reports it holds, types ok and then tests ok, at once and before any"
+   }
+  },
+  {
+   "key": "replay-subject|0|15",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "ashboard and the verifier. The log keeps its last two reports. Show the emissions The log keeps the newest 2 reports. Fr",
+    "after": "ashboard and the verifier. The log keeps its last 2 reports. Show the emissions The log keeps the newest 2 reports. Fram"
+   }
+  },
+  {
+   "key": "retry|0|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "ing. retry keeps the error from the board, counts one retry used and starts to wait. Show the emissions Frame 2: attempt",
+    "after": "ing. retry keeps the error from the board, counts 1 retry used and starts to wait. Show the emissions Frame 2: attempt 1"
+   }
+  },
+  {
+   "key": "retry|0|13",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " third attempt completes, so the board completes. Both errors were absorbed, and the 10:02 arrived twice. Show the emiss",
+    "after": " third attempt completes, so the board completes. The 2 errors were absorbed, and the 10:02 arrived 2 times. Show the em"
+   }
+  },
+  {
+   "key": "command-message|0|0",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results Nothing has moved yet, and neither session is free to take",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results Nothing has moved yet, and neither session is free to take n"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|1",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results The kernel sends command 7, verify order 41, to the dispat",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results The kernel sends command 7, verify order 41, to the dispatch"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|2",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results Both sessions finish their earlier orders and start listen",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results Both sessions finish their earlier orders and start listenin"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|3",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results The dispatch channel gives command 7 to Session B and to n",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results The dispatch channel gives command 7 to Session B and to nob"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|4",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results Session B is slow. The kernel’s wait for an answer to 7 ru",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results Session B is slow. The kernel’s wait for an answer to 7 runs"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|5",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results So the kernel sends command 7 to the dispatch channel agai",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results So the kernel sends command 7 to the dispatch channel again."
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|6",
+   "kinds": [
+    "text",
+    "geometry"
+   ],
+   "text": {
+    "before": " Step forward Sent One taker Sent again Run twice Two results The dispatch channel gives the copy to Session A. Order 41",
+    "after": " Step forward Sent One taker Sent again Run twice 2 results The dispatch channel gives the copy to Session A. Order 41 i"
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|7",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "sent 7 again empty verifying order 41 done with 7 one result for 7 b 7 Step 7 of 8 Step back Step forward Sent One taker",
+    "after": "sent 7 again empty verifying order 41 done with 7 1 result for 7 b 7 Step 7 of 8 Step back Step forward Sent One taker S"
+   },
+   "label": {
+    "before": "ng order 41; Session B: done with 7; Event store: one result for 7. Held: Session A holds 7; Event store holds b.",
+    "after": "ng order 41; Session B: done with 7; Event store: 1 result for 7. Held: Session A holds 7; Event store holds b."
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "command-message|0|8",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": " store sent 7 again empty done with 7 done with 7 two results for 7 a b Step 8 of 8 Step back Step forward Sent One take",
+    "after": " store sent 7 again empty done with 7 done with 7 2 results for 7 a b Step 8 of 8 Step back Step forward Sent One taker "
+   },
+   "label": {
+    "before": "done with 7; Session B: done with 7; Event store: two results for 7. Held: Event store holds b, a.",
+    "after": "done with 7; Session B: done with 7; Event store: 2 results for 7. Held: Event store holds b, a."
+   },
+   "geometry": {
+    "before": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=104|\npolygon|points=476,104 467.9,100.09 467.9,107.91|\ng||\nline|x1=424",
+    "after": "2 320.37,308.98|\ng||\nline|x1=424 x2=476 y1=104 y2=92|\npolygon|points=476,92 467.22,90.01 468.98,97.64|\ng||\nline|x1=424 x"
+   }
+  },
+  {
+   "key": "competing-consumers|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "order 33 to Session 3, the last free session. All three are now working. Show the messages Step 6 on the Order queue: c ",
+    "after": "order 33 to Session 3, the last free session. All 3 are now working. Show the messages Step 6 on the Order queue: c (ord"
+   }
+  },
+  {
+   "key": "competing-consumers|0|7",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "er 34 still waits in the Order queue, because all three sessions are still working. Show the messages Step 8 on the Orde",
+    "after": "er 34 still waits in the Order queue, because all 3 sessions are still working. Show the messages Step 8 on the Order qu"
+   }
+  },
+  {
+   "key": "competing-consumers|0|9",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|10",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|11",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "e point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token",
+    "after": "e point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token ins"
+   }
+  },
+  {
+   "key": "competing-consumers|0|12",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "All done Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+    "after": "All done Session 2 finishes order 34. Each of the 4 orders went to exactly one session: 4 orders, 4 deliveries. Show the"
+   }
+  },
+  {
+   "key": "competing-consumers|1|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "order 33 to Session 3, the last free session. All three are now working. Show the emissions Step 6 on the Order queue: c",
+    "after": "order 33 to Session 3, the last free session. All 3 are now working. Show the emissions Step 6 on the Order queue: c (or"
+   }
+  },
+  {
+   "key": "competing-consumers|1|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "er 34 still waits in the Order queue, because all three sessions are still working. Show the emissions Step 8 on the Ord",
+    "after": "er 34 still waits in the Order queue, because all 3 sessions are still working. Show the emissions Step 8 on the Order q"
+   }
+  },
+  {
+   "key": "competing-consumers|1|12",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "All done Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+    "after": "All done Session 2 finishes order 34. Each of the 4 orders went to exactly one session: 4 orders, 4 deliveries. Show the"
+   }
+  },
+  {
+   "key": "content-based-router|0|0",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings five findings to file blocking, then operator, else follow-up blocking",
+    "after": "r Finding router Executor Operator Board findings 5 findings to file blocking, then operator, else follow-up blocking: n"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: five findings to file; Finding router: blocking, then operator, else f",
+    "after": "he operator and follow-up to the board. Verifier: 5 findings to file; Finding router: blocking, then operator, else foll"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|five findings to\ntext|text-anchor=middle x=100 y=94|file\ntext|text-anc",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|5 findings to\ntext|text-anchor=middle x=100 y=94|file\ntext|text-anchor"
+   }
+  },
+  {
+   "key": "content-based-router|0|1",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings four to file F1: unmet criterion, so blocking blocking: none yet opera",
+    "after": "r Finding router Executor Operator Board findings 4 to file F1: unmet criterion, so blocking blocking: none yet operator"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: F1: unmet criterion, so blocking; Execut",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: F1: unmet criterion, so blocking; Executor:"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|four to file\ntext|text-anchor=middle x=300 y=70|F1: unmet\ntext|text-an",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|4 to file\ntext|text-anchor=middle x=300 y=70|F1: unmet\ntext|text-ancho"
+   }
+  },
+  {
+   "key": "content-based-router|0|2",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings four to file waiting blocking: F1 operator: none yet follow-up: none y",
+    "after": "r Finding router Executor Operator Board findings 4 to file waiting blocking: F1 operator: none yet follow-up: none yet "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: waiting; Executor: blocking: F1; Operato",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|four to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anch",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|4 to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "content-based-router|0|3",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings three to file F2: no rule fits, so follow-up blocking: F1 operator: no",
+    "after": "r Finding router Executor Operator Board findings 3 to file F2: no rule fits, so follow-up blocking: F1 operator: none y"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: F2: no rule fits, so follow-up; Executo",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: F2: no rule fits, so follow-up; Executor: b"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|three to file\ntext|text-anchor=middle x=300 y=70|F2: no rule fits,\ntex",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|3 to file\ntext|text-anchor=middle x=300 y=70|F2: no rule fits,\ntext|te"
+   }
+  },
+  {
+   "key": "content-based-router|0|4",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings three to file waiting blocking: F1 operator: none yet follow-up: F2 2 ",
+    "after": "r Finding router Executor Operator Board findings 3 to file waiting blocking: F1 operator: none yet follow-up: F2 2 1 St"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: waiting; Executor: blocking: F1; Operat",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|three to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anc",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|3 to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "content-based-router|0|5",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings two to file F3: a decision, so operator blocking: F1 operator: none ye",
+    "after": "r Finding router Executor Operator Board findings 2 to file F3: a decision, so operator blocking: F1 operator: none yet "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: F3: a decision, so operator; Executor: bl",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: F3: a decision, so operator; Executor: bloc"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|two to file\ntext|text-anchor=middle x=300 y=70|F3: a decision,\ntext|te",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|2 to file\ntext|text-anchor=middle x=300 y=70|F3: a decision,\ntext|text"
+   }
+  },
+  {
+   "key": "content-based-router|0|6",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings two to file waiting blocking: F1 operator: F3 follow-up: F2 3 1 2 Step",
+    "after": "r Finding router Executor Operator Board findings 2 to file waiting blocking: F1 operator: F3 follow-up: F2 3 1 2 Step 6"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: waiting; Executor: blocking: F1; Operator",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|two to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-ancho",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|2 to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "content-based-router|0|7",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings one to file F4: a regression, so blocking blocking: F1 operator: F3 fo",
+    "after": "r Finding router Executor Operator Board findings 1 to file F4: a regression, so blocking blocking: F1 operator: F3 foll"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: F4: a regression, so blocking; Executor: ",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: F4: a regression, so blocking; Executor: bl"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|one to file\ntext|text-anchor=middle x=300 y=70|F4: a regression,\ntext|",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|1 to file\ntext|text-anchor=middle x=300 y=70|F4: a regression,\ntext|te"
+   }
+  },
+  {
+   "key": "content-based-router|0|8",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "r Finding router Executor Operator Board findings one to file waiting blocking: F1, F4 operator: F3 follow-up: F2 4 1 3 ",
+    "after": "r Finding router Executor Operator Board findings 1 to file waiting blocking: F1, F4 operator: F3 follow-up: F2 4 1 3 2 "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: waiting; Executor: blocking: F1, F4; Oper",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: waiting; Executor: blocking: F1, F4; Operat"
+   },
+   "geometry": {
+    "before": " y=60|findings\ntext|text-anchor=middle x=100 y=70|one to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-ancho",
+    "after": " y=60|findings\ntext|text-anchor=middle x=100 y=70|1 to file\ntext|text-anchor=middle x=300 y=70|waiting\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "content-based-router|0|9",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "nding router Executor Operator Board findings all five filed F5 fits both, blocking first blocking: F1, F4 operator: F3 ",
+    "after": "nding router Executor Operator Board findings all 5 filed F5 fits both, blocking first blocking: F1, F4 operator: F3 fol"
+   },
+   "label": {
+    "before": "perator and follow-up to the board. Verifier: all five filed; Finding router: F5 fits both, blocking first; Executor: bl",
+    "after": "perator and follow-up to the board. Verifier: all 5 filed; Finding router: F5 fits both, blocking first; Executor: block"
+   },
+   "geometry": {
+    "before": "0|findings\ntext|text-anchor=middle x=100 y=70|all five filed\ntext|text-anchor=middle x=300 y=70|F5 fits both,\ntext|text-",
+    "after": "0|findings\ntext|text-anchor=middle x=100 y=70|all 5 filed\ntext|text-anchor=middle x=300 y=70|F5 fits both,\ntext|text-anc"
+   }
+  },
+  {
+   "key": "content-based-router|0|10",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "nding router Executor Operator Board findings all five filed all five routed blocking: F1, F4, F5 operator: F3 follow-up",
+    "after": "nding router Executor Operator Board findings all 5 filed all 5 routed blocking: F1, F4, F5 operator: F3 follow-up: F2 5"
+   },
+   "label": {
+    "before": "perator and follow-up to the board. Verifier: all five filed; Finding router: all five routed; Executor: blocking: F1, F",
+    "after": "perator and follow-up to the board. Verifier: all 5 filed; Finding router: all 5 routed; Executor: blocking: F1, F4, F5;"
+   },
+   "geometry": {
+    "before": "0|findings\ntext|text-anchor=middle x=100 y=70|all five filed\ntext|text-anchor=middle x=300 y=70|all five routed\ntext|tex",
+    "after": "0|findings\ntext|text-anchor=middle x=100 y=70|all 5 filed\ntext|text-anchor=middle x=300 y=70|all 5 routed\ntext|text-anch"
+   }
+  },
+  {
+   "key": "content-based-router|1|0",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "ator First match wins All routed The Verifier has five findings to file. The Finding router holds its rules: blocking fi",
+    "after": "ator First match wins All routed The Verifier has 5 findings to file. The Finding router holds its rules: blocking first"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: five findings to file; Finding router: blocking, then operator, else f",
+    "after": "he operator and follow-up to the board. Verifier: 5 findings to file; Finding router: blocking, then operator, else foll"
+   }
+  },
+  {
+   "key": "content-based-router|1|1",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: F1: unmet criterion, so blocking; Execut",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: F1: unmet criterion, so blocking; Executor:"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: F1: unmet criterion, so blocking; Execut",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: F1: unmet criterion, so blocking; Executor:"
+   }
+  },
+  {
+   "key": "content-based-router|1|2",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: waiting; Executor: blocking: F1; Operato",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: four to file; Finding router: waiting; Executor: blocking: F1; Operato",
+    "after": "he operator and follow-up to the board. Verifier: 4 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   }
+  },
+  {
+   "key": "content-based-router|1|3",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: F2: no rule fits, so follow-up; Executo",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: F2: no rule fits, so follow-up; Executor: b"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: F2: no rule fits, so follow-up; Executo",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: F2: no rule fits, so follow-up; Executor: b"
+   }
+  },
+  {
+   "key": "content-based-router|1|4",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: waiting; Executor: blocking: F1; Operat",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: three to file; Finding router: waiting; Executor: blocking: F1; Operat",
+    "after": "he operator and follow-up to the board. Verifier: 3 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   }
+  },
+  {
+   "key": "content-based-router|1|5",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: F3: a decision, so operator; Executor: bl",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: F3: a decision, so operator; Executor: bloc"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: F3: a decision, so operator; Executor: bl",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: F3: a decision, so operator; Executor: bloc"
+   }
+  },
+  {
+   "key": "content-based-router|1|6",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: waiting; Executor: blocking: F1; Operator",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: two to file; Finding router: waiting; Executor: blocking: F1; Operator",
+    "after": "he operator and follow-up to the board. Verifier: 2 to file; Finding router: waiting; Executor: blocking: F1; Operator: "
+   }
+  },
+  {
+   "key": "content-based-router|1|7",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: F4: a regression, so blocking; Executor: ",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: F4: a regression, so blocking; Executor: bl"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: F4: a regression, so blocking; Executor: ",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: F4: a regression, so blocking; Executor: bl"
+   }
+  },
+  {
+   "key": "content-based-router|1|8",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: waiting; Executor: blocking: F1, F4; Oper",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: waiting; Executor: blocking: F1, F4; Operat"
+   },
+   "label": {
+    "before": "he operator and follow-up to the board. Verifier: one to file; Finding router: waiting; Executor: blocking: F1, F4; Oper",
+    "after": "he operator and follow-up to the board. Verifier: 1 to file; Finding router: waiting; Executor: blocking: F1, F4; Operat"
+   }
+  },
+  {
+   "key": "content-based-router|1|9",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "perator and follow-up to the board. Verifier: all five filed; Finding router: F5 fits both, blocking first; Executor: bl",
+    "after": "perator and follow-up to the board. Verifier: all 5 filed; Finding router: F5 fits both, blocking first; Executor: block"
+   },
+   "label": {
+    "before": "perator and follow-up to the board. Verifier: all five filed; Finding router: F5 fits both, blocking first; Executor: bl",
+    "after": "perator and follow-up to the board. Verifier: all 5 filed; Finding router: F5 fits both, blocking first; Executor: block"
+   }
+  },
+  {
+   "key": "content-based-router|1|10",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "nd. Each went to exactly one box, unchanged; with three blocking findings this verification fails and the change goes ba",
+    "after": "nd. Each went to exactly one box, unchanged; with 3 blocking findings this verification fails and the change goes back f"
+   },
+   "label": {
+    "before": "perator and follow-up to the board. Verifier: all five filed; Finding router: all five routed; Executor: blocking: F1, F",
+    "after": "perator and follow-up to the board. Verifier: all 5 filed; Finding router: all 5 routed; Executor: blocking: F1, F4, F5;"
+   }
+  },
+  {
+   "key": "correlation-identifier|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " Taken by id All matched Duplicate The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own ",
+    "after": " Taken by id All matched Duplicate The Kernel has 3 commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. "
+   }
+  },
+  {
+   "key": "correlation-identifier|1|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " Taken by id All matched Duplicate The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own ",
+    "after": " Taken by id All matched Duplicate The Kernel has 3 commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. "
+   }
+  },
+  {
+   "key": "message-expiration|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "0 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator has t",
+    "after": "0 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator has 3 o"
+   }
+  },
+  {
+   "key": "message-expiration|0|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "1 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "1 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends a"
+   }
+  },
+  {
+   "key": "message-expiration|0|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "2 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier is fr",
+    "after": "2 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier is free"
+   }
+  },
+  {
+   "key": "message-expiration|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "3 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "3 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends b"
+   }
+  },
+  {
+   "key": "message-expiration|0|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "4 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b w",
+    "after": "4 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b wai"
+   }
+  },
+  {
+   "key": "message-expiration|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "5 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "5 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends c"
+   }
+  },
+  {
+   "key": "message-expiration|0|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "6 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b a",
+    "after": "6 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b and"
+   }
+  },
+  {
+   "key": "message-expiration|0|7",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "7 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b h",
+    "after": "7 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b has"
+   }
+  },
+  {
+   "key": "message-expiration|0|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "8 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier finis",
+    "after": "8 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier finishe"
+   }
+  },
+  {
+   "key": "message-expiration|0|9",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "9 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Request queue ",
+    "after": "9 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Request queue ha"
+   }
+  },
+  {
+   "key": "message-expiration|0|10",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "0 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier finis",
+    "after": "0 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier finishe"
+   }
+  },
+  {
+   "key": "message-expiration|1|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "0 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator has t",
+    "after": "0 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator has 3 o"
+   }
+  },
+  {
+   "key": "message-expiration|1|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "1 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "1 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends a"
+   }
+  },
+  {
+   "key": "message-expiration|1|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "2 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier is fr",
+    "after": "2 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier is free"
+   }
+  },
+  {
+   "key": "message-expiration|1|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "3 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "3 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends b"
+   }
+  },
+  {
+   "key": "message-expiration|1|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "4 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b w",
+    "after": "4 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b wai"
+   }
+  },
+  {
+   "key": "message-expiration|1|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "5 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The operator sends",
+    "after": "5 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The operator sends c"
+   }
+  },
+  {
+   "key": "message-expiration|1|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "6 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b a",
+    "after": "6 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b and"
+   }
+  },
+  {
+   "key": "message-expiration|1|7",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "7 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified Nothing moves. b h",
+    "after": "7 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified Nothing moves. b has"
+   }
+  },
+  {
+   "key": "message-expiration|1|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "8 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier finis",
+    "after": "8 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier finishe"
+   }
+  },
+  {
+   "key": "message-expiration|1|9",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "9 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Request queue ",
+    "after": "9 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Request queue ha"
+   }
+  },
+  {
+   "key": "message-expiration|1|10",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "0 of 10 Step back Step forward First one verified Two waiting b's last good step b expires c verified The Verifier finis",
+    "after": "0 of 10 Step back Step forward First one verified 2 waiting b's last good step b expires c verified The Verifier finishe"
+   }
+  },
+  {
+   "key": "message-translator|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "rd First row Last row Done Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c. Show the messages Fra",
+    "after": "rd First row Last row Done Nothing has moved yet. 3 rows wait in the legacy chunk: t, n and c. Show the messages Frame 0"
+   }
+  },
+  {
+   "key": "message-translator|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent. Show the mes",
+    "after": " the translator, which hands C to the Tools home: 3 rows out for 3 in, in the order they were sent. Show the messages Fr"
+   }
+  },
+  {
+   "key": "message-translator|1|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "rd First row Last row Done Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c. Show the emissions Fr",
+    "after": "rd First row Last row Done Nothing has moved yet. 3 rows wait in the legacy chunk: t, n and c. Show the emissions Frame "
+   }
+  },
+  {
+   "key": "message-translator|1|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent. Show the emi",
+    "after": " the translator, which hands C to the Tools home: 3 rows out for 3 in, in the order they were sent. Show the emissions F"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|0",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed Step 0 of 8 Step back Step forw",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed Step 0 of 8 Step back Step forward "
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|1",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed a Step 1 of 8 Step back Step fo",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed a Step 1 of 8 Step back Step forwar"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|2",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed a a a Step 2 of 8 Step back Ste",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed a a a Step 2 of 8 Step back Step fo"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|3",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed b a a a Step 3 of 8 Step back S",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed b a a a Step 3 of 8 Step back Step "
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|4",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed b b b a a a Step 4 of 8 Step ba",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed b b b a a a Step 4 of 8 Step back S"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|5",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed c a b a b a b Step 5 of 8 Step ",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed c a b a b a b Step 5 of 8 Step back"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|6",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed c c c a b a b a b Step 6 of 8 S",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed c c c a b a b a b Step 6 of 8 Step "
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|7",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed d a b c a b c a b c Step 7 of 8",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed d a b c a b c a b c Step 7 of 8 Ste"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|0|8",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 3 knows no subscriber copies each order to all three subscribed subscribed subscribed d d d a b c a b c a b c Step 8 ",
+    "after": "on 3 knows no subscriber copies each order to all 3 subscribed subscribed subscribed d d d a b c a b c a b c Step 8 of 8"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "geometry": {
+    "before": " order\ntext|text-anchor=middle x=300 y=230|to all three\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=m",
+    "after": " order\ntext|text-anchor=middle x=300 y=230|to all 3\ntext|text-anchor=middle x=500 y=70|subscribed\ntext|text-anchor=middl"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|0",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|1",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|2",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|3",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|4",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "der topic gives a copy of order 32 to each of the three sessions. Each session now has its own copies of orders 31 and 3",
+    "after": "der topic gives a copy of order 32 to each of the 3 sessions. Each session now has its own copies of orders 31 and 32. S"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|5",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|6",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "der topic gives a copy of order 33 to each of the three sessions. Show the emissions Step 6 on the Order topic: c (order",
+    "after": "der topic gives a copy of order 33 to each of the 3 sessions. Show the emissions Step 6 on the Order topic: c (order 33)"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|7",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "publish-subscribe-channel|1|8",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "der topic gives a copy of order 34 to each of the three sessions. Every session has received every order: four orders, t",
+    "after": "der topic gives a copy of order 34 to each of the 3 sessions. Every session has received every order: 4 orders, 12 copie"
+   },
+   "label": {
+    "before": "subscriber; Order topic: copies each order to all three; Session 1: subscribed; Session 2: subscribed; Session 3: subscr",
+    "after": "subscriber; Order topic: copies each order to all 3; Session 1: subscribed; Session 2: subscribed; Session 3: subscribed"
+   }
+  },
+  {
+   "key": "recipient-list|0|3",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": " Sibling C WO-240: v0.95.0 A and B siblings: A, B one entry v0.95.0 v0.95.0 not set up p 0 0 Step 3 of 8 Step back Step ",
+    "after": " Sibling C WO-240: v0.95.0 A and B siblings: A, B 1 entry v0.95.0 v0.95.0 not set up p 0 0 Step 3 of 8 Step back Step fo"
+   },
+   "label": {
+    "before": " B; Recipient list: siblings: A, B; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": " B; Recipient list: siblings: A, B; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   },
+   "geometry": {
+    "before": "iblings: A, B\ntext|text-anchor=middle x=300 y=206|one entry\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor=",
+    "after": "iblings: A, B\ntext|text-anchor=middle x=300 y=206|1 entry\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor=mi"
+   }
+  },
+  {
+   "key": "recipient-list|0|4",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "ing C WO-241: no release A and B WO-241 to nobody one entry v0.95.0 v0.95.0 not set up 1 p 0 0 Step 4 of 8 Step back Ste",
+    "after": "ing C WO-241: no release A and B WO-241 to nobody 1 entry v0.95.0 v0.95.0 not set up 1 p 0 0 Step 4 of 8 Step back Step "
+   },
+   "label": {
+    "before": "; Recipient list: WO-241 to nobody; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": "; Recipient list: WO-241 to nobody; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   },
+   "geometry": {
+    "before": "241 to nobody\ntext|text-anchor=middle x=300 y=206|one entry\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor=",
+    "after": "241 to nobody\ntext|text-anchor=middle x=300 y=206|1 entry\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor=mi"
+   }
+  },
+  {
+   "key": "recipient-list|0|5",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "bling C WO-241: no release A and B siblings: A, B two entries v0.95.0 v0.95.0 not set up q p 0 0 Step 5 of 8 Step back S",
+    "after": "bling C WO-241: no release A and B siblings: A, B 2 entries v0.95.0 v0.95.0 not set up q p 0 0 Step 5 of 8 Step back Ste"
+   },
+   "label": {
+    "before": " B; Recipient list: siblings: A, B; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not se",
+    "after": " B; Recipient list: siblings: A, B; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set "
+   },
+   "geometry": {
+    "before": "iblings: A, B\ntext|text-anchor=middle x=300 y=206|two entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-ancho",
+    "after": "iblings: A, B\ntext|text-anchor=middle x=300 y=206|2 entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "recipient-list|0|6",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "C WO-241: no release A, B and C siblings: A, B, C two entries v0.95.0 v0.95.0 no release y p q 0 0 Step 6 of 8 Step back",
+    "after": "C WO-241: no release A, B and C siblings: A, B, C 2 entries v0.95.0 v0.95.0 no release y p q 0 0 Step 6 of 8 Step back S"
+   },
+   "label": {
+    "before": " Recipient list: siblings: A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: siblings: A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   },
+   "geometry": {
+    "before": "ings: A, B, C\ntext|text-anchor=middle x=300 y=206|two entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-ancho",
+    "after": "ings: A, B, C\ntext|text-anchor=middle x=300 y=206|2 entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "recipient-list|0|7",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "ng C WO-242: v0.96.0 A, B and C WO-242 to A, B, C two entries v0.95.0 v0.95.0 no release 2 p q 0 0 Step 7 of 8 Step back",
+    "after": "ng C WO-242: v0.96.0 A, B and C WO-242 to A, B, C 2 entries v0.95.0 v0.95.0 no release 2 p q 0 0 Step 7 of 8 Step back S"
+   },
+   "label": {
+    "before": " Recipient list: WO-242 to A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: WO-242 to A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   },
+   "geometry": {
+    "before": "42 to A, B, C\ntext|text-anchor=middle x=300 y=206|two entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-ancho",
+    "after": "42 to A, B, C\ntext|text-anchor=middle x=300 y=206|2 entries\ntext|text-anchor=middle x=500 y=70|v0.95.0\ntext|text-anchor="
+   }
+  },
+  {
+   "key": "recipient-list|0|8",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "st Close record Sibling A Sibling B Sibling C all three closed A, B and C siblings: A, B, C three entries v0.96.0 v0.96.",
+    "after": "st Close record Sibling A Sibling B Sibling C all 3 closed A, B and C siblings: A, B, C 3 entries v0.96.0 v0.96.0 v0.96."
+   },
+   "label": {
+    "before": " goes to the close record. Now Release close: all three closed; Declared siblings: A, B and C; Recipient list: siblings:",
+    "after": " goes to the close record. Now Release close: all 3 closed; Declared siblings: A, B and C; Recipient list: siblings: A, "
+   },
+   "geometry": {
+    "before": "|Sibling C\ntext|text-anchor=middle x=100 y=70|all three closed\ntext|text-anchor=middle x=100 y=234|A, B and C\ntext|text-",
+    "after": "|Sibling C\ntext|text-anchor=middle x=100 y=70|all 3 closed\ntext|text-anchor=middle x=100 y=234|A, B and C\ntext|text-anch"
+   }
+  },
+  {
+   "key": "recipient-list|1|3",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": " B; Recipient list: siblings: A, B; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": " B; Recipient list: siblings: A, B; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   },
+   "label": {
+    "before": " B; Recipient list: siblings: A, B; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": " B; Recipient list: siblings: A, B; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   }
+  },
+  {
+   "key": "recipient-list|1|4",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": "; Recipient list: WO-241 to nobody; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": "; Recipient list: WO-241 to nobody; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   },
+   "label": {
+    "before": "; Recipient list: WO-241 to nobody; Close record: one entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set ",
+    "after": "; Recipient list: WO-241 to nobody; Close record: 1 entry; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set up"
+   }
+  },
+  {
+   "key": "recipient-list|1|5",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": " B; Recipient list: siblings: A, B; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not se",
+    "after": " B; Recipient list: siblings: A, B; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set "
+   },
+   "label": {
+    "before": " B; Recipient list: siblings: A, B; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not se",
+    "after": " B; Recipient list: siblings: A, B; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: not set "
+   }
+  },
+  {
+   "key": "recipient-list|1|6",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": " Recipient list: siblings: A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: siblings: A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   },
+   "label": {
+    "before": " Recipient list: siblings: A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: siblings: A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   }
+  },
+  {
+   "key": "recipient-list|1|7",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": " Recipient list: WO-242 to A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: WO-242 to A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   },
+   "label": {
+    "before": " Recipient list: WO-242 to A, B, C; Close record: two entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no rel",
+    "after": " Recipient list: WO-242 to A, B, C; Close record: 2 entries; Sibling A: v0.95.0; Sibling B: v0.95.0; Sibling C: no relea"
+   }
+  },
+  {
+   "key": "recipient-list|1|8",
+   "kinds": [
+    "text",
+    "label"
+   ],
+   "text": {
+    "before": " entry r to the Close record, and the closes end. Three closes made five copies, and v0.96.0 is C's first release. Show ",
+    "after": " entry r to the Close record, and the closes end. 3 closes made 5 copies, and v0.96.0 is C's first release. Show the emi"
+   },
+   "label": {
+    "before": " goes to the close record. Now Release close: all three closed; Declared siblings: A, B and C; Recipient list: siblings:",
+    "after": " goes to the close record. Now Release close: all 3 closed; Declared siblings: A, B and C; Recipient list: siblings: A, "
+   }
+  },
+  {
+   "key": "resequencer|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Projection needs evt_1 first. ",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Projection needs evt_1 first. No eve"
+   }
+  },
+  {
+   "key": "resequencer|0|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_1, a CommandP",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_1, a CommandPersist"
+   }
+  },
+  {
+   "key": "resequencer|0|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_1 on to ",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_1 on to the Pr"
+   }
+  },
+  {
+   "key": "resequencer|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_3, a CommandR",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_3, a CommandResult,"
+   }
+  },
+  {
+   "key": "resequencer|0|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_2, the Comman",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_2, the CommandRecei"
+   }
+  },
+  {
+   "key": "resequencer|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_2 and th",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_2 and then evt"
+   }
+  },
+  {
+   "key": "resequencer|0|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_5 while evt_4",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_5 while evt_4 is st"
+   }
+  },
+  {
+   "key": "resequencer|0|7",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_6, and the Re",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_6, and the Resequen"
+   }
+  },
+  {
+   "key": "resequencer|0|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_4, the second",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_4, the second Comma"
+   }
+  },
+  {
+   "key": "resequencer|0|9",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_4, evt_5",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_4, evt_5 and e"
+   }
+  },
+  {
+   "key": "resequencer|1|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Projection needs evt_1 first. ",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Projection needs evt_1 first. No eve"
+   }
+  },
+  {
+   "key": "resequencer|1|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_1, a CommandP",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_1, a CommandPersist"
+   }
+  },
+  {
+   "key": "resequencer|1|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_1 on to ",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_1 on to the Pr"
+   }
+  },
+  {
+   "key": "resequencer|1|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_3, a CommandR",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_3, a CommandResult,"
+   }
+  },
+  {
+   "key": "resequencer|1|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_2, the Comman",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_2, the CommandRecei"
+   }
+  },
+  {
+   "key": "resequencer|1|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_2 and th",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_2 and then evt"
+   }
+  },
+  {
+   "key": "resequencer|1|6",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_5 while evt_4",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_5 while evt_4 is st"
+   }
+  },
+  {
+   "key": "resequencer|1|7",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_6, and the Re",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_6, and the Resequen"
+   }
+  },
+  {
+   "key": "resequencer|1|8",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Bus delivers evt_4, the second",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Bus delivers evt_4, the second Comma"
+   }
+  },
+  {
+   "key": "resequencer|1|9",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": " of 9 Step back Step forward evt_3 held Gap fills Two held evt_4 arrives Run of three The Resequencer sends evt_4, evt_5",
+    "after": " of 9 Step back Step forward evt_3 held Gap fills 2 held evt_4 arrives Run of 3 The Resequencer sends evt_4, evt_5 and e"
+   }
+  },
+  {
+   "key": "transactional-client|0|0",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit Command 7 waits in the Outbox, where any worker could tak",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit Command 7 waits in the Outbox, where any worker could t"
+   }
+  },
+  {
+   "key": "transactional-client|0|1",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit The Worker opens transaction 1 and takes c, command 7, fr",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit The Worker opens transaction 1 and takes c, command 7, "
+   }
+  },
+  {
+   "key": "transactional-client|0|2",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit The Worker sends write 1 to the Outside store. No transac",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit The Worker sends write 1 to the Outside store. No trans"
+   }
+  },
+  {
+   "key": "transactional-client|0|3",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit The Worker sends r, its receipt, and e, its result entry,",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit The Worker sends r, its receipt, and e, its result entr"
+   }
+  },
+  {
+   "key": "transactional-client|0|4",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit The Worker crashes before committing, so transaction 1 ro",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit The Worker crashes before committing, so transaction 1 "
+   }
+  },
+  {
+   "key": "transactional-client|0|5",
+   "kinds": [
+    "text"
+   ],
+   "text": {
+    "before": "n, not removed Staged, unseen Rolled back Written twice Commit A fresh attempt opens transaction 2 and takes c from the ",
+    "after": "n, not removed Staged, unseen Rolled back Written 2 times Commit A fresh attempt opens transaction 2 and takes c from th"
+   }
+  },
+  {
+   "key": "transactional-client|0|6",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "il commit wrote outside again empty empty written twice for command 7 2 c c 1 Step 6 of 8 Step back Step forward Taken, ",
+    "after": "il commit wrote outside again empty empty written 2 times for command 7 2 c c 1 Step 6 of 8 Step back Step forward Taken"
+   },
+   "label": {
+    "before": ": empty; Event log: empty; Outside store: written twice for command 7. Outbox holds c; Worker holds c; Outside store hol",
+    "after": ": empty; Event log: empty; Outside store: written 2 times for command 7. Outbox holds c; Worker holds c; Outside store h"
+   },
+   "geometry": {
+    "before": "empty\ntext|text-anchor=middle x=500 y=390|written twice for\ntext|text-anchor=middle x=500 y=414|command 7\ng|data-state=m",
+    "after": "empty\ntext|text-anchor=middle x=500 y=390|written 2 times\ntext|text-anchor=middle x=500 y=414|for command 7\ng|data-state"
+   }
+  },
+  {
+   "key": "transactional-client|0|7",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "and e staged in transaction 2 empty empty written twice for command 7 c c r e 1 2 Step 7 of 8 Step back Step forward Tak",
+    "after": "and e staged in transaction 2 empty empty written 2 times for command 7 c c r e 1 2 Step 7 of 8 Step back Step forward T"
+   },
+   "label": {
+    "before": ": empty; Event log: empty; Outside store: written twice for command 7. Outbox holds c; Worker holds c, r, e; Outside sto",
+    "after": ": empty; Event log: empty; Outside store: written 2 times for command 7. Outbox holds c; Worker holds c, r, e; Outside s"
+   },
+   "geometry": {
+    "before": "empty\ntext|text-anchor=middle x=500 y=390|written twice for\ntext|text-anchor=middle x=500 y=414|command 7\ng|data-state=h",
+    "after": "empty\ntext|text-anchor=middle x=500 y=390|written 2 times\ntext|text-anchor=middle x=500 y=414|for command 7\ng|data-state"
+   }
+  },
+  {
+   "key": "transactional-client|0|8",
+   "kinds": [
+    "text",
+    "label",
+    "geometry"
+   ],
+   "text": {
+    "before": "on 2 committed receipt for 7 result for 7 written twice for command 7 r e 1 2 Step 8 of 8 Step back Step forward Taken, ",
+    "after": "on 2 committed receipt for 7 result for 7 written 2 times for command 7 r e 1 2 Step 8 of 8 Step back Step forward Taken"
+   },
+   "label": {
+    "before": "; Event log: result for 7; Outside store: written twice for command 7. Receipts holds r; Event log holds e; Outside stor",
+    "after": "; Event log: result for 7; Outside store: written 2 times for command 7. Receipts holds r; Event log holds e; Outside st"
+   },
+   "geometry": {
+    "before": "for 7\ntext|text-anchor=middle x=500 y=390|written twice for\ntext|text-anchor=middle x=500 y=414|command 7\ng|data-state=m",
+    "after": "for 7\ntext|text-anchor=middle x=500 y=390|written 2 times\ntext|text-anchor=middle x=500 y=414|for command 7\ng|data-state"
+   }
+  }
+ ]
+}

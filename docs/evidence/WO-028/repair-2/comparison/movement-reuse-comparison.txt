@@ -1,0 +1,53 @@
+import { createHash } from 'node:crypto';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { gzipSync, gunzipSync } from 'node:zlib';
+
+import { createCatalogLoader } from '@dotln-angular/catalog';
+
+import { studyTranslate } from '../../../testing/src';
+import { studyModels } from './study-models';
+
+const normalize = (value: unknown): unknown => {
+  if (Array.isArray(value)) return value.map(normalize);
+  if (value && typeof value === 'object')
+    return Object.fromEntries(
+      Object.entries(value).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => [k, normalize(v)]),
+    );
+  return value;
+};
+
+it('preserves every movement output at defaults and each offered input boundary', async () => {
+  const directory = process.env['WO028_REUSE_DIR'];
+  if (!directory) throw new Error('The comparison capture directory is required.');
+  mkdirSync(directory, { recursive: true });
+  const mode = process.env['WO028_REUSE_MODE'];
+  const loader = createCatalogLoader();
+  const { studies } = await loader.summary();
+  const cases: { slug: string; scenario: number; sha256: string; bytes: number }[] = [];
+  for (const { id } of studies.works.find(({ work }) => work === 'aifg')?.studies ?? []) {
+    const record = await loader.study(id);
+    if (!record?.visual?.model) throw new Error(`No model for ${id}`);
+    const { model } = await studyModels[record.visual.model]();
+    const defaults = record.example.parameters;
+    const initial = model(defaults, studyTranslate);
+    const parameters = [defaults, ...(initial.inputs ?? []).flatMap((input) =>
+      [input.min, input.max].map((value) => ({ ...defaults, [input.name]: value })))];
+    for (const [scenario, values] of parameters.entries()) {
+      const text = JSON.stringify(normalize(model(values, studyTranslate)));
+      const path = join(directory, `${record.slug}-${scenario}.json.gz`);
+      const sha256 = createHash('sha256').update(text).digest('hex');
+      if (mode === 'capture') writeFileSync(path, gzipSync(text));
+      else {
+        const expected = gunzipSync(readFileSync(path)).toString('utf8');
+        if (expected !== text) {
+          writeFileSync(join(directory, `${record.slug}-${scenario}-actual.json.gz`), gzipSync(text));
+          throw new Error(`Output differs for ${record.slug} scenario ${scenario}`);
+        }
+      }
+      cases.push({ slug: record.slug, scenario, sha256, bytes: Buffer.byteLength(text) });
+    }
+  }
+  expect(new Set(cases.map(({ slug }) => slug)).size).toBe(40);
+  writeFileSync(join(directory, `${mode === 'capture' ? 'before' : 'after'}.json`), JSON.stringify({ cases }, null, 2));
+}, 120000);

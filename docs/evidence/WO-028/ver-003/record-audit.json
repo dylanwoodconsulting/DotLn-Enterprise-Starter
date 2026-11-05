@@ -1,0 +1,259 @@
+{
+ "records": 80,
+ "differences": [],
+ "schemas": {
+  "concept-study-v1": 80
+ },
+ "literalProse": [
+  "catch-error.json:.example.parameters.updates: the 10:02 and the 10:15",
+  "catch-error.json:.example.parameters.failure: feed lost",
+  "combine-latest.json:.example.parameters.workerStates: queued, reading, writing and done",
+  "combine-latest.json:.example.parameters.budgets: 90% left and 40% left",
+  "concat-map.json:.example.parameters.photos: cat, dog and owl",
+  "exhaust-map.json:.example.parameters.drafts: draft 1, draft 2, draft 3 and draft 4",
+  "materialize.json:.example.parameters.rows: row 1 and row 2",
+  "materialize.json:.example.parameters.reason: row 3 is unreadable",
+  "merge-map.json:.example.parameters.photos: cat, dog and owl",
+  "observe-on.json:.example.parameters.reports: 10%, 30% and 60%",
+  "observe-on.json:.example.parameters.failure: connection lost",
+  "repeat.json:.example.parameters.answers: queued, running and passed",
+  "replay-subject.json:.example.parameters.reports: lint ok, types ok, tests ok, build ok and docs ok",
+  "retry.json:.example.parameters.departures: the 10:02 and the 10:15",
+  "scan.json:.example.parameters.amounts: 5, -3 and 4",
+  "start-with.json:.example.parameters.reports: running and then passed",
+  "subject.json:.example.parameters.presses: press 1, press 2 and press 3",
+  "switch-map.json:.example.parameters.queries: ant, bee and cat",
+  "aggregator.json:.example.parameters.first: order 31",
+  "aggregator.json:.example.parameters.second: order 32",
+  "canonical-data-model.json:.example.parameters.views: the code view, the function table and the statechart view",
+  "channel-adapter.json:.example.parameters.failure: HTTP 500",
+  "competing-consumers.json:.example.parameters.orders: 31 to 34",
+  "competing-consumers.json:.example.parameters.work: 9, 5, 4 and 3",
+  "content-based-router.json:.example.parameters.findings: F1 to F5",
+  "content-based-router.json:.example.parameters.rules: blocking, then operator, then follow-up",
+  "control-bus.json:.example.parameters.direction: go ahead",
+  "correlation-identifier.json:.example.parameters.commands: cmd_1, cmd_2 and cmd_3",
+  "correlation-identifier.json:.example.parameters.replyOrder: cmd_3, cmd_1 and cmd_2",
+  "message-dispatcher.json:.example.parameters.orders: orders 29, 30 and 31",
+  "message-store.json:.example.parameters.keptInFull: verification reports",
+  "message-translator.json:.example.parameters.rows: eip:60 Message Translator, eip:145 Normalizer and eip:146 Ca",
+  "publish-subscribe-channel.json:.example.parameters.orders: 31 to 34",
+  "recipient-list.json:.example.parameters.closes: WO-240, WO-241 and WO-242",
+  "recipient-list.json:.example.parameters.declaredFirst: A and B",
+  "recipient-list.json:.example.parameters.declaredLater: A, B and C"
+ ],
+ "doubleBraceInRecordText": [],
+ "aifg": {
+  "oldDirectoryEntries": 40,
+  "records": 40,
+  "orderTwentyPresent": 20,
+  "firstBatchIds": 20,
+  "allChecked": true,
+  "minReviewers": 2,
+  "referenceIncomplete": [],
+  "summaryIds": 40,
+  "summaryMatches": true
+ },
+ "twenty": [
+  {
+   "slug": "steering-behaviors",
+   "module": "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "projectile-trajectory",
+   "module": "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "variable-matching",
+   "module": "libs/features/tools/src/lib/studies/movement/variable-matching.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "jump-points",
+   "module": "libs/features/tools/src/lib/studies/movement/jump-points.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "motor-control",
+   "module": "libs/features/tools/src/lib/studies/movement/motor-control.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "movement-in-the-third-dimension",
+   "module": "libs/features/tools/src/lib/studies/movement/movement-in-the-third-dimension.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "flee",
+   "module": "libs/features/tools/src/lib/studies/movement/flee.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "collision-avoidance",
+   "module": "libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "obstacle-and-wall-avoidance",
+   "module": "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "corner-trap",
+   "module": "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "blending-versus-arbitration",
+   "module": "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "actuator",
+   "module": "libs/features/tools/src/lib/studies/movement/actuator.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "the-firing-solution",
+   "module": "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "iterative-targeting",
+   "module": "libs/features/tools/src/lib/studies/movement/iterative-targeting.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "coordinated-movement",
+   "module": "libs/features/tools/src/lib/studies/movement/coordinated-movement.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "two-and-a-half-dimensions",
+   "module": "libs/features/tools/src/lib/studies/movement/two-and-a-half-dimensions.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "steering-output",
+   "module": "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "kinematic-arrive",
+   "module": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "satisfaction-radius",
+   "module": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  },
+  {
+   "slug": "kinematic-wander",
+   "module": "libs/features/tools/src/lib/studies/movement/kinematic-wander.model.ts",
+   "executableKind": "typescript",
+   "moduleExists": true,
+   "specExists": true,
+   "importsModule": true,
+   "callsModel": true,
+   "usesExampleParameters": true
+  }
+ ]
+}

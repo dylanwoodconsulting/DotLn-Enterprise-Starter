@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "subject": "libs/features/tools/src/lib/studies and apps/dotln/public/i18n/studyAifg/en.json",
+  "groups": [
+    {
+      "group": "eip",
+      "files": 20,
+      "functions": 96,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 3,
+      "lines70to80": 0,
+      "longest": 39
+    },
+    {
+      "group": "movement shared helpers",
+      "files": 1,
+      "functions": 10,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 3,
+      "lines70to80": 0,
+      "longest": 18
+    },
+    {
+      "group": "movement, first batch (WO-020)",
+      "files": 60,
+      "functions": 917,
+      "parameters6": 46,
+      "parameters8": 17,
+      "mostParameters": 12,
+      "lines70to80": 38,
+      "longest": 80
+    },
+    {
+      "group": "movement, second batch (WO-028)",
+      "files": 60,
+      "functions": 728,
+      "parameters6": 40,
+      "parameters8": 1,
+      "mostParameters": 8,
+      "lines70to80": 11,
+      "longest": 77
+    },
+    {
+      "group": "rxjs",
+      "files": 21,
+      "functions": 123,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 5,
+      "lines70to80": 0,
+      "longest": 53
+    },
+    {
+      "group": "shared",
+      "files": 8,
+      "functions": 183,
+      "parameters6": 1,
+      "parameters8": 1,
+      "mostParameters": 9,
+      "lines70to80": 0,
+      "longest": 64
+    }
+  ],
+  "eightOrMoreParameters": [
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortWorkedLines",
+      "line": 50,
+      "parameters": 12,
+      "lines": 80
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 246,
+      "parameters": 11,
+      "lines": 76
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 32,
+      "parameters": 10,
+      "lines": 61
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 35,
+      "parameters": 10,
+      "lines": 75
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 244,
+      "parameters": 10,
+      "lines": 74
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 474,
+      "parameters": 10,
+      "lines": 63
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 131,
+      "parameters": 10,
+      "lines": 48
+    },
+    {
+      "file": "flow.ts",
+      "group": "shared",
+      "name": "frameOf",
+      "line": 185,
+      "parameters": 9,
+      "lines": 31
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBrakingTimeline",
+      "line": 209,
+      "parameters": 9,
+      "lines": 53
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 69,
+      "parameters": 9,
+      "lines": 50
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 56,
+      "parameters": 9,
+      "lines": 79
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparisonTimeline",
+      "line": 264,
+      "parameters": 9,
+      "lines": 50
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 75,
+      "parameters": 9,
+      "lines": 65
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 204,
+      "parameters": 9,
+      "lines": 22
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 181,
+      "parameters": 8,
+      "lines": 45
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 373,
+      "parameters": 8,
+      "lines": 58
+    },
+    {
+      "file": "movement/projectile-trajectory.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "motionOf",
+      "line": 340,
+      "parameters": 8,
+      "lines": 21
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 128,
+      "parameters": 8,
+      "lines": 75
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 378,
+      "parameters": 8,
+      "lines": 64
+    }
+  ],
+  "seventyOrMoreLines": [
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 198,
+      "parameters": 4,
+      "lines": 80
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 341,
+      "parameters": 6,
+      "lines": 80
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 352,
+      "parameters": 3,
+      "lines": 80
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortWorkedLines",
+      "line": 50,
+      "parameters": 12,
+      "lines": 80
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBraking",
+      "line": 246,
+      "parameters": 3,
+      "lines": 79
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 56,
+      "parameters": 9,
+      "lines": 79
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 355,
+      "parameters": 3,
+      "lines": 79
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 298,
+      "parameters": 6,
+      "lines": 79
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 294,
+      "parameters": 4,
+      "lines": 78
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 262,
+      "parameters": 6,
+      "lines": 78
+    },
+    {
+      "file": "movement/corner-trap.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 105,
+      "parameters": 6,
+      "lines": 77
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "readingOf",
+      "line": 172,
+      "parameters": 5,
+      "lines": 77
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "workedStep",
+      "line": 15,
+      "parameters": 4,
+      "lines": 77
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 140,
+      "parameters": 6,
+      "lines": 76
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 415,
+      "parameters": 4,
+      "lines": 76
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 394,
+      "parameters": 3,
+      "lines": 76
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 246,
+      "parameters": 11,
+      "lines": 76
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 487,
+      "parameters": 3,
+      "lines": 76
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "slowMotor",
+      "line": 288,
+      "parameters": 3,
+      "lines": 75
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 35,
+      "parameters": 10,
+      "lines": 75
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 128,
+      "parameters": 8,
+      "lines": 75
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 97,
+      "parameters": 6,
+      "lines": 74
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "worked",
+      "line": 34,
+      "parameters": 4,
+      "lines": 74
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 407,
+      "parameters": 3,
+      "lines": 74
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 244,
+      "parameters": 10,
+      "lines": 74
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBraking",
+      "line": 263,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionFrames",
+      "line": 297,
+      "parameters": 4,
+      "lines": 73
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 508,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 419,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 107,
+      "parameters": 4,
+      "lines": 73
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 247,
+      "parameters": 2,
+      "lines": 73
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "outOfRange",
+      "line": 257,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 336,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/iterative-targeting.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 73,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/kinematic-wander.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 16,
+      "parameters": 7,
+      "lines": 72
+    },
+    {
+      "file": "movement/steering-behaviors.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 16,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 155,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 409,
+      "parameters": 7,
+      "lines": 71
+    },
+    {
+      "file": "movement/jump-points.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 202,
+      "parameters": 5,
+      "lines": 71
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 98,
+      "parameters": 5,
+      "lines": 71
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 357,
+      "parameters": 3,
+      "lines": 71
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 293,
+      "parameters": 5,
+      "lines": 71
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 94,
+      "parameters": 5,
+      "lines": 71
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 408,
+      "parameters": 4,
+      "lines": 70
+    },
+    {
+      "file": "movement/coordinated-movement.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 30,
+      "parameters": 4,
+      "lines": 70
+    },
+    {
+      "file": "movement/obstacle-and-wall-avoidance.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 39,
+      "parameters": 5,
+      "lines": 70
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 349,
+      "parameters": 5,
+      "lines": 70
+    },
+    {
+      "file": "movement/variable-matching.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "reversedComparison",
+      "line": 191,
+      "parameters": 3,
+      "lines": 70
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 165,
+      "parameters": 5,
+      "lines": 70
+    }
+  ],
+  "batchPlaceholders": [
+    {
+      "batch": "first",
+      "studies": 20,
+      "studiesWithNumberedPlaceholders": 20,
+      "numberedPlaceholders": 94,
+      "flatModelKeys": 1251,
+      "nestedModelKeys": 0
+    },
+    {
+      "batch": "second",
+      "studies": 20,
+      "studiesWithNumberedPlaceholders": 1,
+      "numberedPlaceholders": 2,
+      "flatModelKeys": 21,
+      "nestedModelKeys": 957
+    }
+  ],
+  "placeholders": [
+    {
+      "study": "align",
+      "batch": "first",
+      "messages": 97,
+      "numbered": 5,
+      "flatModelKeys": 65,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "arrive",
+      "batch": "first",
+      "messages": 82,
+      "numbered": 6,
+      "flatModelKeys": 49,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "equilibrium-fallback",
+      "batch": "first",
+      "messages": 102,
+      "numbered": 4,
+      "flatModelKeys": 67,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "face",
+      "batch": "first",
+      "messages": 98,
+      "numbered": 2,
+      "flatModelKeys": 68,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "fixed-formations",
+      "batch": "first",
+      "messages": 78,
+      "numbered": 2,
+      "flatModelKeys": 52,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "flocking",
+      "batch": "first",
+      "messages": 114,
+      "numbered": 5,
+      "flatModelKeys": 70,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "formation-pattern-interface",
+      "batch": "first",
+      "messages": 113,
+      "numbered": 11,
+      "flatModelKeys": 74,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "group-movement",
+      "batch": "first",
+      "messages": 102,
+      "numbered": 5,
+      "flatModelKeys": 69,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "making-the-creatures",
+      "batch": "first",
+      "messages": 108,
+      "numbered": 12,
+      "flatModelKeys": 66,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "movement-in-the-third-dimension",
+      "batch": "second",
+      "messages": 77,
+      "numbered": 2,
+      "flatModelKeys": 1,
+      "nestedModelKeys": 42
+    },
+    {
+      "study": "priority-steering",
+      "batch": "first",
+      "messages": 102,
+      "numbered": 1,
+      "flatModelKeys": 66,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "pursue",
+      "batch": "first",
+      "messages": 86,
+      "numbered": 1,
+      "flatModelKeys": 52,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "scalable-formations",
+      "batch": "first",
+      "messages": 88,
+      "numbered": 5,
+      "flatModelKeys": 56,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "seek",
+      "batch": "first",
+      "messages": 84,
+      "numbered": 1,
+      "flatModelKeys": 51,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "separation",
+      "batch": "first",
+      "messages": 92,
+      "numbered": 3,
+      "flatModelKeys": 58,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "slot-assignment",
+      "batch": "first",
+      "messages": 84,
+      "numbered": 15,
+      "flatModelKeys": 53,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "steering-pipeline",
+      "batch": "first",
+      "messages": 127,
+      "numbered": 6,
+      "flatModelKeys": 89,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "two-level-formation-steering",
+      "batch": "first",
+      "messages": 94,
+      "numbered": 4,
+      "flatModelKeys": 59,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "velocity-matching",
+      "batch": "first",
+      "messages": 79,
+      "numbered": 2,
+      "flatModelKeys": 48,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "wander",
+      "batch": "first",
+      "messages": 92,
+      "numbered": 2,
+      "flatModelKeys": 54,
+      "nestedModelKeys": 0
+    },
+    {
+      "study": "weighted-blending",
+      "batch": "first",
+      "messages": 121,
+      "numbered": 2,
+      "flatModelKeys": 85,
+      "nestedModelKeys": 0
+    }
+  ]
+}

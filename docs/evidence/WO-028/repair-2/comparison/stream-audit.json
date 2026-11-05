@@ -1,0 +1,1261 @@
+{
+  "schemaVersion": 1,
+  "finding": "F1",
+  "files": [
+    "apps/dotln/public/i18n/studyEip/en.json",
+    "apps/dotln/public/i18n/studyRxjs/en.json",
+    "libs/features/tools/src/lib/studies/eip/aggregator.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/aggregator.ts",
+    "libs/features/tools/src/lib/studies/eip/command-message.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/command-message.ts",
+    "libs/features/tools/src/lib/studies/eip/competing-consumers.ts",
+    "libs/features/tools/src/lib/studies/eip/content-based-router.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/content-based-router.ts",
+    "libs/features/tools/src/lib/studies/eip/control-bus.ts",
+    "libs/features/tools/src/lib/studies/eip/correlation-identifier.ts",
+    "libs/features/tools/src/lib/studies/eip/event-message.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/event-message.ts",
+    "libs/features/tools/src/lib/studies/eip/message-expiration.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/message-expiration.ts",
+    "libs/features/tools/src/lib/studies/eip/message-store.ts",
+    "libs/features/tools/src/lib/studies/eip/message-translator.ts",
+    "libs/features/tools/src/lib/studies/eip/process-manager.ts",
+    "libs/features/tools/src/lib/studies/eip/publish-subscribe-channel.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/publish-subscribe-channel.ts",
+    "libs/features/tools/src/lib/studies/eip/recipient-list.ts",
+    "libs/features/tools/src/lib/studies/eip/resequencer.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/resequencer.ts",
+    "libs/features/tools/src/lib/studies/eip/transactional-client.spec.ts",
+    "libs/features/tools/src/lib/studies/eip/transactional-client.ts",
+    "libs/features/tools/src/lib/studies/rxjs/combine-latest.spec.ts",
+    "libs/features/tools/src/lib/studies/rxjs/combine-latest.ts",
+    "libs/features/tools/src/lib/studies/rxjs/concat-map.ts",
+    "libs/features/tools/src/lib/studies/rxjs/merge-map.ts",
+    "libs/features/tools/src/lib/studies/rxjs/repeat.ts",
+    "libs/features/tools/src/lib/studies/rxjs/replay-subject.ts",
+    "libs/features/tools/src/lib/studies/rxjs/retry.ts",
+    "libs/features/tools/src/lib/studies/rxjs/scan.spec.ts",
+    "libs/features/tools/src/lib/studies/rxjs/scan.ts"
+  ],
+  "catalogChanges": {
+    "studyEip": {
+      "path": "apps/dotln/public/i18n/studyEip/en.json",
+      "added": [
+        {
+          "key": "studyEip.event-message.model.fresh",
+          "english": "fresh"
+        },
+        {
+          "key": "studyEip.event-message.model.stale",
+          "english": "stale"
+        },
+        {
+          "key": "studyEip.event-message.model.sweepState",
+          "english": "{{time}}: {{status}}, {{age}} min old"
+        }
+      ],
+      "removed": [
+        {
+          "key": "studyEip.aggregator.model.example.inputs.consistency.values.C",
+          "english": "order 32, from Consistency, findings 1"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.inputs.consistency.values.c",
+          "english": "order 31, from Consistency, findings 0"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.inputs.criteria.values.A",
+          "english": "order 32, from Criteria, findings 0"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.inputs.criteria.values.a",
+          "english": "order 31, from Criteria, findings 2"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.inputs.design.values.B",
+          "english": "order 32, from Design, findings 1"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.inputs.design.values.b",
+          "english": "order 31, from Design, findings 1"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.outputs.ready.values.1",
+          "english": "order 31: 3 findings from 3 reviewers"
+        },
+        {
+          "key": "studyEip.aggregator.model.example.outputs.ready.values.2",
+          "english": "order 32: 2 findings from 3 reviewers"
+        },
+        {
+          "key": "studyEip.event-message.model.example.steps.3.states.sweep",
+          "english": "10:05: fresh, 5 min old"
+        },
+        {
+          "key": "studyEip.event-message.model.example.steps.7.states.sweep",
+          "english": "10:30: stale, 30 min old"
+        }
+      ],
+      "changed": [
+        {
+          "key": "studyEip.command-message.model.example.moments.4.label",
+          "before": "Two results",
+          "after": "{{results}} results"
+        },
+        {
+          "key": "studyEip.command-message.model.example.steps.6.states.store",
+          "before": "one result for 7",
+          "after": "{{results}} result for 7"
+        },
+        {
+          "key": "studyEip.command-message.model.example.steps.7.states.store",
+          "before": "two results for 7",
+          "after": "{{results}} results for 7"
+        },
+        {
+          "key": "studyEip.competing-consumers.model.example.notes.12",
+          "before": "Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+          "after": "Session 2 finishes order 34. Each of the {{orders}} orders went to exactly one session: {{orders}} orders, {{deliveries}} deliveries."
+        },
+        {
+          "key": "studyEip.competing-consumers.model.example.notes.6",
+          "before": "The Order queue gives order 33 to Session 3, the last free session. All three are now working.",
+          "after": "The Order queue gives order 33 to Session 3, the last free session. All {{consumers}} are now working."
+        },
+        {
+          "key": "studyEip.competing-consumers.model.example.notes.8",
+          "before": "Order 34 still waits in the Order queue, because all three sessions are still working.",
+          "after": "Order 34 still waits in the Order queue, because all {{consumers}} sessions are still working."
+        },
+        {
+          "key": "studyEip.competing-consumers.model.flow.caption",
+          "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only.",
+          "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are {{consumers}} agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only."
+        },
+        {
+          "key": "studyEip.content-based-router.model.example.notes.0",
+          "before": "The Verifier has five findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent.",
+          "after": "The Verifier has {{findings}} findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent."
+        },
+        {
+          "key": "studyEip.content-based-router.model.example.notes.10",
+          "before": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with three blocking findings this verification fails and the change goes back for repair.",
+          "after": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with {{blocking}} blocking findings this verification fails and the change goes back for repair."
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.0.verifier",
+          "before": "five findings to file",
+          "after": "{{remaining}} findings to file"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.1.verifier",
+          "before": "four to file",
+          "after": "{{remaining}} to file"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.10.router",
+          "before": "all five routed",
+          "after": "all {{count}} routed"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.3.verifier",
+          "before": "three to file",
+          "after": "{{remaining}} to file"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.5.verifier",
+          "before": "two to file",
+          "after": "{{remaining}} to file"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.7.verifier",
+          "before": "one to file",
+          "after": "{{remaining}} to file"
+        },
+        {
+          "key": "studyEip.content-based-router.model.flow.states.9.verifier",
+          "before": "all five filed",
+          "after": "all {{count}} filed"
+        },
+        {
+          "key": "studyEip.control-bus.model.example.steps.0.states.queue",
+          "before": "1 record",
+          "after": "{{count}} record"
+        },
+        {
+          "key": "studyEip.control-bus.model.example.steps.2.states.queue",
+          "before": "1 record",
+          "after": "{{count}} record"
+        },
+        {
+          "key": "studyEip.control-bus.model.example.steps.9.states.queue",
+          "before": "2 records",
+          "after": "{{count}} records"
+        },
+        {
+          "key": "studyEip.correlation-identifier.model.example.notes.0",
+          "before": "The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet.",
+          "after": "The Kernel has {{commands}} commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet."
+        },
+        {
+          "key": "studyEip.correlation-identifier.model.flow.states.0.kernel",
+          "before": "3 to send",
+          "after": "{{pending}} to send"
+        },
+        {
+          "key": "studyEip.correlation-identifier.model.flow.states.1.kernel",
+          "before": "2 to send",
+          "after": "{{pending}} to send"
+        },
+        {
+          "key": "studyEip.correlation-identifier.model.flow.states.2.kernel",
+          "before": "1 to send",
+          "after": "{{pending}} to send"
+        },
+        {
+          "key": "studyEip.event-message.model.example.messages.r.content",
+          "before": "final review, at 10:12",
+          "after": "final review, at {{time}}"
+        },
+        {
+          "key": "studyEip.event-message.model.example.messages.v.content",
+          "before": "verified, pass, at 10:00",
+          "after": "verified, pass, at {{time}}"
+        },
+        {
+          "key": "studyEip.event-message.model.example.start.states.sweep",
+          "before": "threshold: 20 minutes",
+          "after": "threshold: {{threshold}} minutes"
+        },
+        {
+          "key": "studyEip.event-message.model.example.steps.7.note",
+          "before": "At 10:30 the sweep reads the beacon again and gets v. It still says verified, but it is past the 20-minute threshold, so the sweep labels it stale instead of reporting a phase the order has left.",
+          "after": "At 10:30 the sweep reads the beacon again and gets v. It still says verified, but it is past the {{threshold}}-minute threshold, so the sweep labels it stale instead of reporting a phase the order has left."
+        },
+        {
+          "key": "studyEip.message-expiration.model.example.moments.1.label",
+          "before": "Two waiting",
+          "after": "{{waiting}} waiting"
+        },
+        {
+          "key": "studyEip.message-expiration.model.example.notes.0",
+          "before": "The operator has three orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free.",
+          "after": "The operator has {{orders}} orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free."
+        },
+        {
+          "key": "studyEip.message-expiration.model.flow.states.0.operator",
+          "before": "3 requests to send",
+          "after": "{{requests}} requests to send"
+        },
+        {
+          "key": "studyEip.message-store.model.example.steps.0.states.log",
+          "before": "1 entry",
+          "after": "{{count}} entry"
+        },
+        {
+          "key": "studyEip.message-store.model.example.steps.1.states.log",
+          "before": "2 entries",
+          "after": "{{count}} entries"
+        },
+        {
+          "key": "studyEip.message-store.model.example.steps.5.states.log",
+          "before": "down: 3 lost; 2 entries",
+          "after": "down: 3 lost; {{count}} entries"
+        },
+        {
+          "key": "studyEip.message-store.model.example.steps.6.states.log",
+          "before": "up; 3 entries",
+          "after": "up; {{count}} entries"
+        },
+        {
+          "key": "studyEip.message-translator.model.example.notes.0",
+          "before": "Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c.",
+          "after": "Nothing has moved yet. {{inputCount}} rows wait in the legacy chunk: t, n and c."
+        },
+        {
+          "key": "studyEip.message-translator.model.example.notes.3",
+          "before": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent.",
+          "after": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: {{outputCount}} rows out for {{inputCount}} in, in the order they were sent."
+        },
+        {
+          "key": "studyEip.process-manager.model.example.notes.5",
+          "before": "The verifier sends x, a failed verification, to the router. The router counts 1 failure of {{failureLimit}}; with fewer than {{failureLimit}}, a failure means repair.",
+          "after": "The verifier sends x, a failed verification, to the router. The router counts {{failures}} failure of {{failureLimit}}; with fewer than {{failureLimit}}, a failure means repair."
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.1.router",
+          "before": "build next, 0 of {{failureLimit}} failed",
+          "after": "build next, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.10.router",
+          "before": "awaits reviewer, 1 of {{failureLimit}} failed",
+          "after": "awaits reviewer, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.2.router",
+          "before": "awaits executor, 0 of {{failureLimit}} failed",
+          "after": "awaits executor, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.3.router",
+          "before": "verify next, 0 of {{failureLimit}} failed",
+          "after": "verify next, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.4.router",
+          "before": "awaits verifier, 0 of {{failureLimit}} failed",
+          "after": "awaits verifier, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.5.router",
+          "before": "fix next, 1 of {{failureLimit}} failed",
+          "after": "fix next, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.6.router",
+          "before": "awaits executor, 1 of {{failureLimit}} failed",
+          "after": "awaits executor, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.7.router",
+          "before": "verify next, 1 of {{failureLimit}} failed",
+          "after": "verify next, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.8.router",
+          "before": "awaits verifier, 1 of {{failureLimit}} failed",
+          "after": "awaits verifier, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.process-manager.model.flow.states.9.router",
+          "before": "review next, 1 of {{failureLimit}} failed",
+          "after": "review next, {{failures}} of {{failureLimit}} failed"
+        },
+        {
+          "key": "studyEip.publish-subscribe-channel.model.example.notes.4",
+          "before": "The Order topic gives a copy of order 32 to each of the three sessions. Each session now has its own copies of orders 31 and 32.",
+          "after": "The Order topic gives a copy of order 32 to each of the {{subscribers}} sessions. Each session now has its own copies of orders 31 and 32."
+        },
+        {
+          "key": "studyEip.publish-subscribe-channel.model.example.notes.6",
+          "before": "The Order topic gives a copy of order 33 to each of the three sessions.",
+          "after": "The Order topic gives a copy of order 33 to each of the {{subscribers}} sessions."
+        },
+        {
+          "key": "studyEip.publish-subscribe-channel.model.example.notes.8",
+          "before": "The Order topic gives a copy of order 34 to each of the three sessions. Every session has received every order: four orders, twelve copies.",
+          "after": "The Order topic gives a copy of order 34 to each of the {{subscribers}} sessions. Every session has received every order: {{orders}} orders, {{copies}} copies."
+        },
+        {
+          "key": "studyEip.publish-subscribe-channel.model.flow.caption",
+          "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are three agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session.",
+          "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are {{subscribers}} agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session."
+        },
+        {
+          "key": "studyEip.publish-subscribe-channel.model.flow.states.0.topic",
+          "before": "copies each order to all three",
+          "after": "copies each order to all {{subscribers}}"
+        },
+        {
+          "key": "studyEip.recipient-list.model.example.notes.8",
+          "before": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. Three closes made five copies, and v0.96.0 is C's first release.",
+          "after": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. {{closes}} closes made {{copies}} copies, and v0.96.0 is C's first release."
+        },
+        {
+          "key": "studyEip.recipient-list.model.flow.states.3.record",
+          "before": "one entry",
+          "after": "{{entries}} entry"
+        },
+        {
+          "key": "studyEip.recipient-list.model.flow.states.5.record",
+          "before": "two entries",
+          "after": "{{entries}} entries"
+        },
+        {
+          "key": "studyEip.recipient-list.model.flow.states.8.close",
+          "before": "all three closed",
+          "after": "all {{closes}} closed"
+        },
+        {
+          "key": "studyEip.recipient-list.model.flow.states.8.record",
+          "before": "three entries",
+          "after": "{{entries}} entries"
+        },
+        {
+          "key": "studyEip.resequencer.model.example.moments.2.label",
+          "before": "Two held",
+          "after": "{{held}} held"
+        },
+        {
+          "key": "studyEip.resequencer.model.example.moments.4.label",
+          "before": "Run of three",
+          "after": "Run of {{released}}"
+        },
+        {
+          "key": "studyEip.resequencer.model.example.notes.7",
+          "before": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back both that follow it.",
+          "after": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back {{held}} events that follow it."
+        },
+        {
+          "key": "studyEip.transactional-client.model.example.moments.3.label",
+          "before": "Written twice",
+          "after": "Written {{writes}} times"
+        },
+        {
+          "key": "studyEip.transactional-client.model.example.steps.5.note",
+          "before": "The Worker sends write 2 to the Outside store: the same command has now been written there twice, a duplicate that no rollback could prevent.",
+          "after": "The Worker sends write 2 to the Outside store: the same command has now been written there {{writes}} times, a duplicate that no rollback could prevent."
+        },
+        {
+          "key": "studyEip.transactional-client.model.example.steps.5.states.outside",
+          "before": "written twice for command 7",
+          "after": "written {{writes}} times for command 7"
+        }
+      ],
+      "recordChanges": []
+    },
+    "studyRxjs": {
+      "path": "apps/dotln/public/i18n/studyRxjs/en.json",
+      "added": [
+        {
+          "key": "studyRxjs.combine-latest.model.budget",
+          "english": "{{budget}}% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.row",
+          "english": "{{state}}, {{budget}}% left"
+        }
+      ],
+      "removed": [
+        {
+          "key": "studyRxjs.combine-latest.model.example.inputs.budget.values.a",
+          "english": "90% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.inputs.budget.values.b",
+          "english": "40% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.outputs.row.values.1",
+          "english": "reading, 90% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.outputs.row.values.2",
+          "english": "writing, 90% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.outputs.row.values.3",
+          "english": "writing, 40% left"
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.outputs.row.values.4",
+          "english": "done, 40% left"
+        }
+      ],
+      "changed": [
+        {
+          "key": "studyRxjs.combine-latest.model.example.notes.10",
+          "before": "The budget completes. combineLatest keeps its last value, 40% left, and the row stays open: the worker is still running.",
+          "after": "The budget completes. combineLatest keeps its last value, {{budget}}% left, and the row stays open: the worker is still running."
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.notes.12",
+          "before": "The worker is done. The row pairs done with the 40% left that the completed budget left in its slot.",
+          "after": "The worker is done. The row pairs done with the {{budget}}% left that the completed budget left in its slot."
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.notes.4",
+          "before": "The budget reports 90% left. Every slot is now filled, so the first row appears. It pairs the budget with reading; queued never reaches a row.",
+          "after": "The budget reports {{budget}}% left. Every slot is now filled, so the first row appears. It pairs the budget with reading; queued never reaches a row."
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.notes.6",
+          "before": "The worker moves on to writing. The row pairs it with the budget's latest value, still 90% left.",
+          "after": "The worker moves on to writing. The row pairs it with the budget's latest value, still {{budget}}% left."
+        },
+        {
+          "key": "studyRxjs.combine-latest.model.example.notes.8",
+          "before": "The budget falls to 40% left, and the row is rebuilt with the worker's unchanged state, writing.",
+          "after": "The budget falls to {{budget}}% left, and the row is rebuilt with the worker's unchanged state, writing."
+        },
+        {
+          "key": "studyRxjs.concat-map.model.example.notes.5",
+          "before": "owl arrives and queues behind dog. Two photos now wait, in the order they were added.",
+          "after": "owl arrives and queues behind dog. {{waiting}} photos now wait, in the order they were added."
+        },
+        {
+          "key": "studyRxjs.merge-map.model.example.notes.6",
+          "before": "The server answers cat's upload, the second of the three to be answered.",
+          "after": "The server answers cat's upload, the second of the {{uploads}} to be answered."
+        },
+        {
+          "key": "studyRxjs.merge-map.model.example.notes.8",
+          "before": "owl's upload completes and the user has finished adding photos, so the output completes: all three are stored, in the order their uploads finished.",
+          "after": "owl's upload completes and the user has finished adding photos, so the output completes: all {{stored}} are stored, in the order their uploads finished."
+        },
+        {
+          "key": "studyRxjs.repeat.model.example.notes.3",
+          "before": "check$ completes, but status$ does not. repeat counts one finished run, sees that the count is not reached and starts the timer for its delay.",
+          "after": "check$ completes, but status$ does not. repeat counts {{completed}} finished run, sees that the count is not reached and starts the timer for its delay."
+        },
+        {
+          "key": "studyRxjs.repeat.model.example.notes.8",
+          "before": "The second run completes. Two runs are finished, so repeat waits once more.",
+          "after": "The second run completes. {{completed}} runs are finished, so repeat waits once more."
+        },
+        {
+          "key": "studyRxjs.replay-subject.model.example.notes.15",
+          "before": "The run completes, and so do the dashboard and the verifier. The log keeps its last two reports.",
+          "after": "The run completes, and so do the dashboard and the verifier. The log keeps its last {{kept}} reports."
+        },
+        {
+          "key": "studyRxjs.replay-subject.model.example.notes.3",
+          "before": "types ok is posted. The log now holds two reports, as many as it keeps.",
+          "after": "types ok is posted. The log now holds {{held}} reports, as many as it keeps."
+        },
+        {
+          "key": "studyRxjs.replay-subject.model.example.notes.5",
+          "before": "tests ok is posted. To keep only the newest two, the log lets go of lint ok; the dashboard heard it at the time.",
+          "after": "tests ok is posted. To keep only the newest {{kept}}, the log lets go of lint ok; the dashboard heard it at the time."
+        },
+        {
+          "key": "studyRxjs.replay-subject.model.example.notes.6",
+          "before": "The verifier subscribes. The log hands it the two reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it.",
+          "after": "The verifier subscribes. The log hands it the {{replayed}} reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it."
+        },
+        {
+          "key": "studyRxjs.retry.model.example.notes.13",
+          "before": "The third attempt completes, so the board completes. Both errors were absorbed, and the 10:02 arrived twice.",
+          "after": "The third attempt completes, so the board completes. The {{failures}} errors were absorbed, and the 10:02 arrived {{repeated}} times."
+        },
+        {
+          "key": "studyRxjs.retry.model.example.notes.2",
+          "before": "The first attempt fails before sending anything. retry keeps the error from the board, counts one retry used and starts to wait.",
+          "after": "The first attempt fails before sending anything. retry keeps the error from the board, counts {{used}} retry used and starts to wait."
+        },
+        {
+          "key": "studyRxjs.scan.model.example.notes.0",
+          "before": "The statement subscribes. scan holds the opening, 10, as its state and sends nothing: no amount has arrived yet.",
+          "after": "The statement subscribes. scan holds the opening, {{opening}}, as its state and sends nothing: no amount has arrived yet."
+        },
+        {
+          "key": "studyRxjs.scan.model.example.notes.1",
+          "before": "A deposit of 5 arrives. scan adds it to the 10 it holds, keeps the result and sends it: the statement shows 15.",
+          "after": "A deposit of {{deposit}} arrives. scan adds it to the {{opening}} it holds, keeps the result and sends it: the statement shows {{balance}}."
+        },
+        {
+          "key": "studyRxjs.scan.model.example.notes.4",
+          "before": "A withdrawal of 3 arrives. The state is now 15, not the opening, so the statement shows 12.",
+          "after": "A withdrawal of {{withdrawal}} arrives. The state is now {{before}}, not the opening, so the statement shows {{balance}}."
+        },
+        {
+          "key": "studyRxjs.scan.model.example.notes.5",
+          "before": "The phone subscribes to the same balance stream. scan starts a separate fold for it from the opening, 10; the deposit and the withdrawal before this frame are not replayed to it.",
+          "after": "The phone subscribes to the same balance stream. scan starts a separate fold for it from the opening, {{opening}}; the deposit and the withdrawal before this frame are not replayed to it."
+        },
+        {
+          "key": "studyRxjs.scan.model.example.notes.8",
+          "before": "A deposit of 4 reaches both folds. The statement adds it to 12 and shows 16; the phone adds it to 10 and shows 14, a balance the account never had.",
+          "after": "A deposit of {{deposit}} reaches both folds. The statement adds it to {{before}} and shows {{balance}}; the phone adds it to {{opening}} and shows {{phone}}, a balance the account never had."
+        }
+      ],
+      "recordChanges": []
+    }
+  },
+  "defaultNarrationChanges": [
+    {
+      "key": "studyEip.command-message.model.example.steps.6.states.store",
+      "before": "one result for 7",
+      "after": "1 result for 7",
+      "parameters": {
+        "results": 1
+      }
+    },
+    {
+      "key": "studyEip.command-message.model.example.steps.7.states.store",
+      "before": "two results for 7",
+      "after": "2 results for 7",
+      "parameters": {
+        "results": 2
+      }
+    },
+    {
+      "key": "studyEip.command-message.model.example.moments.4.label",
+      "before": "Two results",
+      "after": "2 results",
+      "parameters": {
+        "results": 2
+      }
+    },
+    {
+      "key": "studyEip.transactional-client.model.example.steps.5.states.outside",
+      "before": "written twice for command 7",
+      "after": "written 2 times for command 7",
+      "parameters": {
+        "writes": 2
+      }
+    },
+    {
+      "key": "studyEip.transactional-client.model.example.steps.5.note",
+      "before": "The Worker sends write 2 to the Outside store: the same command has now been written there twice, a duplicate that no rollback could prevent.",
+      "after": "The Worker sends write 2 to the Outside store: the same command has now been written there 2 times, a duplicate that no rollback could prevent.",
+      "parameters": {
+        "writes": 2
+      }
+    },
+    {
+      "key": "studyEip.transactional-client.model.example.moments.3.label",
+      "before": "Written twice",
+      "after": "Written 2 times",
+      "parameters": {
+        "writes": 2
+      }
+    },
+    {
+      "key": "studyEip.correlation-identifier.model.example.notes.0",
+      "before": "The Kernel has three commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet.",
+      "after": "The Kernel has 3 commands to send, cmd_1, cmd_2 and cmd_3, each carrying its own id. No wait is open yet.",
+      "parameters": {
+        "commands": 3
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.example.notes.0",
+      "before": "The Verifier has five findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent.",
+      "after": "The Verifier has 5 findings to file. The Finding router holds its rules: blocking first, then operator, and follow-up for anything else. Nothing has been sent.",
+      "parameters": {
+        "findings": 5
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.example.notes.10",
+      "before": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with three blocking findings this verification fails and the change goes back for repair.",
+      "after": "The Finding router sends F5 to the Executor, and the findings end. Each went to exactly one box, unchanged; with 3 blocking findings this verification fails and the change goes back for repair.",
+      "parameters": {
+        "blocking": 3
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.0.verifier",
+      "before": "five findings to file",
+      "after": "5 findings to file",
+      "parameters": {
+        "remaining": 5
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.1.verifier",
+      "before": "four to file",
+      "after": "4 to file",
+      "parameters": {
+        "remaining": 4
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.3.verifier",
+      "before": "three to file",
+      "after": "3 to file",
+      "parameters": {
+        "remaining": 3
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.5.verifier",
+      "before": "two to file",
+      "after": "2 to file",
+      "parameters": {
+        "remaining": 2
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.7.verifier",
+      "before": "one to file",
+      "after": "1 to file",
+      "parameters": {
+        "remaining": 1
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.9.verifier",
+      "before": "all five filed",
+      "after": "all 5 filed",
+      "parameters": {
+        "count": 5
+      }
+    },
+    {
+      "key": "studyEip.content-based-router.model.flow.states.10.router",
+      "before": "all five routed",
+      "after": "all 5 routed",
+      "parameters": {
+        "count": 5
+      }
+    },
+    {
+      "key": "studyEip.publish-subscribe-channel.model.example.notes.4",
+      "before": "The Order topic gives a copy of order 32 to each of the three sessions. Each session now has its own copies of orders 31 and 32.",
+      "after": "The Order topic gives a copy of order 32 to each of the 3 sessions. Each session now has its own copies of orders 31 and 32.",
+      "parameters": {
+        "subscribers": 3
+      }
+    },
+    {
+      "key": "studyEip.publish-subscribe-channel.model.example.notes.6",
+      "before": "The Order topic gives a copy of order 33 to each of the three sessions.",
+      "after": "The Order topic gives a copy of order 33 to each of the 3 sessions.",
+      "parameters": {
+        "subscribers": 3
+      }
+    },
+    {
+      "key": "studyEip.publish-subscribe-channel.model.example.notes.8",
+      "before": "The Order topic gives a copy of order 34 to each of the three sessions. Every session has received every order: four orders, twelve copies.",
+      "after": "The Order topic gives a copy of order 34 to each of the 3 sessions. Every session has received every order: 4 orders, 12 copies.",
+      "parameters": {
+        "subscribers": 3,
+        "orders": 4,
+        "copies": 12
+      }
+    },
+    {
+      "key": "studyEip.publish-subscribe-channel.model.flow.states.0.topic",
+      "before": "copies each order to all three",
+      "after": "copies each order to all 3",
+      "parameters": {
+        "subscribers": 3
+      }
+    },
+    {
+      "key": "studyEip.publish-subscribe-channel.model.flow.caption",
+      "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are three agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session.",
+      "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order topic, drawn as a pipe, is the publish-subscribe channel; Sessions 1, 2 and 3 are 3 agent sessions subscribed to it. A token inside the topic is an order it is about to copy, and the tokens inside a session are the copies that session has received. The words in a box say what that box does. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner publishes an order on one step, and on the next the topic hands out its copies, one to every session.",
+      "parameters": {
+        "subscribers": 3
+      }
+    },
+    {
+      "key": "studyEip.competing-consumers.model.example.notes.6",
+      "before": "The Order queue gives order 33 to Session 3, the last free session. All three are now working.",
+      "after": "The Order queue gives order 33 to Session 3, the last free session. All 3 are now working.",
+      "parameters": {
+        "consumers": 3
+      }
+    },
+    {
+      "key": "studyEip.competing-consumers.model.example.notes.8",
+      "before": "Order 34 still waits in the Order queue, because all three sessions are still working.",
+      "after": "Order 34 still waits in the Order queue, because all 3 sessions are still working.",
+      "parameters": {
+        "consumers": 3
+      }
+    },
+    {
+      "key": "studyEip.competing-consumers.model.example.notes.12",
+      "before": "Session 2 finishes order 34. Each of the four orders went to exactly one session: four orders, four deliveries.",
+      "after": "Session 2 finishes order 34. Each of the 4 orders went to exactly one session: 4 orders, 4 deliveries.",
+      "parameters": {
+        "orders": 4,
+        "deliveries": 4
+      }
+    },
+    {
+      "key": "studyEip.competing-consumers.model.flow.caption",
+      "before": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are three agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only.",
+      "after": "Each token is one order: a is order 31, b 32, c 33 and d 34. The Planner is the role that files orders; the Order queue, drawn as a pipe, is the point-to-point channel; Sessions 1, 2 and 3 are 3 agent sessions reading from it, the competing consumers. A token inside the queue is an order waiting for a free session, and the tokens inside a session are the orders that session has been given. The words in a box say what that box does or is doing. A token is green while it moves, and a box a token leaves or reaches is outlined in green. The Planner sends an order on one step, and from the next the queue gives it to one free session only.",
+      "parameters": {
+        "consumers": 3
+      }
+    },
+    {
+      "key": "studyEip.recipient-list.model.example.notes.8",
+      "before": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. Three closes made five copies, and v0.96.0 is C's first release.",
+      "after": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. 3 closes made 5 copies, and v0.96.0 is C's first release.",
+      "parameters": {
+        "closes": 3,
+        "copies": 5
+      }
+    },
+    {
+      "key": "studyEip.recipient-list.model.flow.states.3.record",
+      "before": "one entry",
+      "after": "1 entry",
+      "parameters": {
+        "entries": 1
+      }
+    },
+    {
+      "key": "studyEip.recipient-list.model.flow.states.5.record",
+      "before": "two entries",
+      "after": "2 entries",
+      "parameters": {
+        "entries": 2
+      }
+    },
+    {
+      "key": "studyEip.recipient-list.model.flow.states.8.record",
+      "before": "three entries",
+      "after": "3 entries",
+      "parameters": {
+        "entries": 3
+      }
+    },
+    {
+      "key": "studyEip.recipient-list.model.flow.states.8.close",
+      "before": "all three closed",
+      "after": "all 3 closed",
+      "parameters": {
+        "closes": 3
+      }
+    },
+    {
+      "key": "studyEip.message-expiration.model.example.notes.0",
+      "before": "The operator has three orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free.",
+      "after": "The operator has 3 orders to be verified and has sent nothing yet. The Request queue is empty and the Verifier is free.",
+      "parameters": {
+        "orders": 3
+      }
+    },
+    {
+      "key": "studyEip.message-expiration.model.example.moments.1.label",
+      "before": "Two waiting",
+      "after": "2 waiting",
+      "parameters": {
+        "waiting": 2
+      }
+    },
+    {
+      "key": "studyEip.resequencer.model.example.moments.2.label",
+      "before": "Two held",
+      "after": "2 held",
+      "parameters": {
+        "held": 2
+      }
+    },
+    {
+      "key": "studyEip.resequencer.model.example.moments.4.label",
+      "before": "Run of three",
+      "after": "Run of 3",
+      "parameters": {
+        "released": 3
+      }
+    },
+    {
+      "key": "studyEip.resequencer.model.example.notes.7",
+      "before": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back both that follow it.",
+      "after": "The Bus delivers evt_6, and the Resequencer holds it too: one missing event holds back 2 events that follow it.",
+      "parameters": {
+        "held": 2
+      }
+    },
+    {
+      "key": "studyEip.message-translator.model.example.notes.0",
+      "before": "Nothing has moved yet. Three rows wait in the legacy chunk: t, n and c.",
+      "after": "Nothing has moved yet. 3 rows wait in the legacy chunk: t, n and c.",
+      "parameters": {
+        "inputCount": 3
+      }
+    },
+    {
+      "key": "studyEip.message-translator.model.example.notes.3",
+      "before": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: three rows out for three in, in the order they were sent.",
+      "after": "The chunk sends c, the Canonical Data Model row, to the translator, which hands C to the Tools home: 3 rows out for 3 in, in the order they were sent.",
+      "parameters": {
+        "inputCount": 3,
+        "outputCount": 3
+      }
+    },
+    {
+      "key": "studyRxjs.concat-map.model.example.notes.5",
+      "before": "owl arrives and queues behind dog. Two photos now wait, in the order they were added.",
+      "after": "owl arrives and queues behind dog. 2 photos now wait, in the order they were added.",
+      "parameters": {
+        "waiting": 2
+      }
+    },
+    {
+      "key": "studyRxjs.merge-map.model.example.notes.6",
+      "before": "The server answers cat's upload, the second of the three to be answered.",
+      "after": "The server answers cat's upload, the second of the 3 to be answered.",
+      "parameters": {
+        "uploads": 3
+      }
+    },
+    {
+      "key": "studyRxjs.merge-map.model.example.notes.8",
+      "before": "owl's upload completes and the user has finished adding photos, so the output completes: all three are stored, in the order their uploads finished.",
+      "after": "owl's upload completes and the user has finished adding photos, so the output completes: all 3 are stored, in the order their uploads finished.",
+      "parameters": {
+        "stored": 3
+      }
+    },
+    {
+      "key": "studyRxjs.repeat.model.example.notes.3",
+      "before": "check$ completes, but status$ does not. repeat counts one finished run, sees that the count is not reached and starts the timer for its delay.",
+      "after": "check$ completes, but status$ does not. repeat counts 1 finished run, sees that the count is not reached and starts the timer for its delay.",
+      "parameters": {
+        "completed": 1
+      }
+    },
+    {
+      "key": "studyRxjs.repeat.model.example.notes.8",
+      "before": "The second run completes. Two runs are finished, so repeat waits once more.",
+      "after": "The second run completes. 2 runs are finished, so repeat waits once more.",
+      "parameters": {
+        "completed": 2
+      }
+    },
+    {
+      "key": "studyRxjs.retry.model.example.notes.2",
+      "before": "The first attempt fails before sending anything. retry keeps the error from the board, counts one retry used and starts to wait.",
+      "after": "The first attempt fails before sending anything. retry keeps the error from the board, counts 1 retry used and starts to wait.",
+      "parameters": {
+        "used": 1
+      }
+    },
+    {
+      "key": "studyRxjs.retry.model.example.notes.13",
+      "before": "The third attempt completes, so the board completes. Both errors were absorbed, and the 10:02 arrived twice.",
+      "after": "The third attempt completes, so the board completes. The 2 errors were absorbed, and the 10:02 arrived 2 times.",
+      "parameters": {
+        "failures": 2,
+        "repeated": 2
+      }
+    },
+    {
+      "key": "studyRxjs.replay-subject.model.example.notes.3",
+      "before": "types ok is posted. The log now holds two reports, as many as it keeps.",
+      "after": "types ok is posted. The log now holds 2 reports, as many as it keeps.",
+      "parameters": {
+        "held": 2
+      }
+    },
+    {
+      "key": "studyRxjs.replay-subject.model.example.notes.5",
+      "before": "tests ok is posted. To keep only the newest two, the log lets go of lint ok; the dashboard heard it at the time.",
+      "after": "tests ok is posted. To keep only the newest 2, the log lets go of lint ok; the dashboard heard it at the time.",
+      "parameters": {
+        "kept": 2
+      }
+    },
+    {
+      "key": "studyRxjs.replay-subject.model.example.notes.6",
+      "before": "The verifier subscribes. The log hands it the two reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it.",
+      "after": "The verifier subscribes. The log hands it the 2 reports it holds, types ok and then tests ok, at once and before anything new is posted. lint ok is not among them: the log no longer holds it.",
+      "parameters": {
+        "replayed": 2
+      }
+    },
+    {
+      "key": "studyRxjs.replay-subject.model.example.notes.15",
+      "before": "The run completes, and so do the dashboard and the verifier. The log keeps its last two reports.",
+      "after": "The run completes, and so do the dashboard and the verifier. The log keeps its last 2 reports.",
+      "parameters": {
+        "kept": 2
+      }
+    }
+  ],
+  "audit": {
+    "studies": 40,
+    "changedStudyModules": 22,
+    "method": "Read fresh private source/data and round-1 F1, inventoried numeric/cardinal catalog leaves and their producer sources, inspected the direct arithmetic/composed-value/count class, then reviewed authored patches. This is an authoring/static audit, not executed validation.",
+    "boundary": "Computed arithmetic, composed numeric payload descriptions, ages and observed/held/delivered counters are parameters. IDs, schema/version/status codes, input measurements/configuration, fixed frame schedules, mathematical coefficients and fixed ordinal cues remain literal where they are not computed result facts. No runtime model result is obtained by parsing English prose.",
+    "rows": [
+      {
+        "work": "eip",
+        "slug": "aggregator",
+        "changed": true,
+        "disposition": "Repaired. report fields and summed findings/reviewer counts share typed numeric summaries with raw gather payloads; changed findings preserve timing and template keys."
+      },
+      {
+        "work": "eip",
+        "slug": "canonical-data-model",
+        "changed": false,
+        "disposition": "Already parameterized: direct/shared translator arithmetic, added participant and differences use computed params. Literal coefficients and the fixed three-view scenario are inputs."
+      },
+      {
+        "work": "eip",
+        "slug": "channel-adapter",
+        "changed": false,
+        "disposition": "No derived numeric result in model prose: HTTP status codes, route version and event identities are protocol/input labels; first/refresh ordinals are authored schedule cues."
+      },
+      {
+        "work": "eip",
+        "slug": "command-message",
+        "changed": true,
+        "disposition": "Repaired. result counts and the moment label read the same held result arrays as the hand-written flow."
+      },
+      {
+        "work": "eip",
+        "slug": "competing-consumers",
+        "changed": true,
+        "disposition": "Repaired. receiver/order/delivery summaries derive from declared raw output values and order records; machine order/session IDs stay literal."
+      },
+      {
+        "work": "eip",
+        "slug": "content-based-router",
+        "changed": true,
+        "disposition": "Repaired. pending/filed/routed counts derive from the raw finding set; blocking count uses routeOf. Renamed-field variant states its explicit 2-blocker outcome."
+      },
+      {
+        "work": "eip",
+        "slug": "control-bus",
+        "changed": true,
+        "disposition": "Repaired. queue record counts read the holding arrays used by the flow."
+      },
+      {
+        "work": "eip",
+        "slug": "correlation-identifier",
+        "changed": true,
+        "disposition": "Repaired. pending command counts derive from the command record set; cmd_ identities remain protocol data."
+      },
+      {
+        "work": "eip",
+        "slug": "event-message",
+        "changed": true,
+        "disposition": "Repaired. message timestamps and sweep ages use one numeric clock source, threshold/age parameters, and translated fresh/stale state words."
+      },
+      {
+        "work": "eip",
+        "slug": "guaranteed-delivery",
+        "changed": false,
+        "disposition": "No computed numeric result copied into a catalog: command/receipt 7 identities and crash/retry schedule are authored inputs; second delivery is an ordinal cue."
+      },
+      {
+        "work": "eip",
+        "slug": "message-dispatcher",
+        "changed": false,
+        "disposition": "No computed numeric figure in model prose: order IDs and performer/inflight settings describe protocol inputs and declared topology."
+      },
+      {
+        "work": "eip",
+        "slug": "message-expiration",
+        "changed": true,
+        "disposition": "Repaired source/pending counts. Deadline arithmetic was already parameterized from timeToLive; order identities and fixed send-frame offsets are inputs."
+      },
+      {
+        "work": "eip",
+        "slug": "message-store",
+        "changed": true,
+        "disposition": "Repaired. control-log entry counts derive from the exact held copy arrays; lost-copy token 3 remains a machine identity."
+      },
+      {
+        "work": "eip",
+        "slug": "message-translator",
+        "changed": true,
+        "disposition": "Repaired. input/output row counts derive from independent raw declared maps. Schema/version/row IDs remain protocol labels, and raw expected transformed rows remain independent literals."
+      },
+      {
+        "work": "eip",
+        "slug": "process-manager",
+        "changed": true,
+        "disposition": "Repaired. failure-count narration and router states receive counts from fold results; the configured failure limit remains a parameter."
+      },
+      {
+        "work": "eip",
+        "slug": "publish-subscribe-channel",
+        "changed": true,
+        "disposition": "Repaired. copyTotals reads raw declared values; default 4/3/12 and late-subscriber 4/3/9 use the same note template."
+      },
+      {
+        "work": "eip",
+        "slug": "recipient-list",
+        "changed": true,
+        "disposition": "Repaired. close/copy totals derive from raw declared protocol records; record counts reuse the held entry arrays. Release/order IDs remain inputs."
+      },
+      {
+        "work": "eip",
+        "slug": "request-reply",
+        "changed": false,
+        "disposition": "No computed numeric result in model prose: command IDs and fixed deadline schedule are inputs; receipt vs result and late-reply states carry no copied arithmetic."
+      },
+      {
+        "work": "eip",
+        "slug": "resequencer",
+        "changed": true,
+        "disposition": "Repaired. held/released cardinalities use the exact declared holding arrays; computed next sequence is an evt_ machine identity and was kept as such."
+      },
+      {
+        "work": "eip",
+        "slug": "transactional-client",
+        "changed": true,
+        "disposition": "Repaired. outside-write counts use the held write arrays. Command/attempt/write IDs and transaction identities remain protocol data."
+      },
+      {
+        "work": "rxjs",
+        "slug": "behavior-subject",
+        "changed": false,
+        "disposition": "No derived numerical result: status payloads, fixed subscription frames and declared listener topology are inputs; emissions are rendered by the shared builder."
+      },
+      {
+        "work": "rxjs",
+        "slug": "catch-error",
+        "changed": false,
+        "disposition": "No derived numerical figure: departure clock strings are reported inputs, not age/arithmetic results; replacement values append the error description."
+      },
+      {
+        "work": "rxjs",
+        "slug": "combine-latest",
+        "changed": true,
+        "disposition": "Conservatively repaired numeric composition as well as arithmetic: raw budget percentages, composed rows and notes share numeric reports and translated state words."
+      },
+      {
+        "work": "rxjs",
+        "slug": "concat-map",
+        "changed": true,
+        "disposition": "Repaired the queued-photo cardinality from the declared raw photo set; photo names and upload ordering/timing remain inputs."
+      },
+      {
+        "work": "rxjs",
+        "slug": "exhaust-map",
+        "changed": false,
+        "disposition": "Draft numbers are machine identities and save timing is authored input; there is no reduced/computed numeric result in reader prose."
+      },
+      {
+        "work": "rxjs",
+        "slug": "finalize",
+        "changed": false,
+        "disposition": "Part numbers are payload identities and the two callbacks are declared inputs/topology; no computed numeric result is copied into model prose."
+      },
+      {
+        "work": "rxjs",
+        "slug": "materialize",
+        "changed": false,
+        "disposition": "Row numbers identify source payloads. N/E record kinds and hasValue flags are protocol values, with no numeric calculation duplicated in prose."
+      },
+      {
+        "work": "rxjs",
+        "slug": "merge-map",
+        "changed": true,
+        "disposition": "Repaired declared upload/result counts. Photo identities and fixed completion ordinals remain authored inputs."
+      },
+      {
+        "work": "rxjs",
+        "slug": "observe-on",
+        "changed": false,
+        "disposition": "Progress percentages are reported measurements passed through unchanged. Paint frames and scheduling offsets are authored inputs, not arithmetic results."
+      },
+      {
+        "work": "rxjs",
+        "slug": "repeat",
+        "changed": true,
+        "disposition": "Repaired completion counters using declared completed-run milestones; configured count/delay and run/frame ordinals remain inputs."
+      },
+      {
+        "work": "rxjs",
+        "slug": "replay-subject",
+        "changed": true,
+        "disposition": "Repaired held/replayed cardinalities from the raw replay letter groups, which now also construct their marble strings. Buffer capacity is a fixed configuration input."
+      },
+      {
+        "work": "rxjs",
+        "slug": "retry",
+        "changed": true,
+        "disposition": "Repaired used/absorbed failure counts and repeated-value count from error declarations and the raw output marble schedule; clock payloads are unchanged inputs."
+      },
+      {
+        "work": "rxjs",
+        "slug": "scan",
+        "changed": true,
+        "disposition": "Repaired. all expected balances and their narration share one numeric fact set; explicit changed amounts yield 18/13/22 and late 19 through the unchanged scan pipeline."
+      },
+      {
+        "work": "rxjs",
+        "slug": "share-replay",
+        "changed": false,
+        "disposition": "Raw numeric quotes already flow through marbleValue using actual numeric payloads. Memory capacity/refCount and subscription frames are inputs; no derived figure is copied in prose."
+      },
+      {
+        "work": "rxjs",
+        "slug": "share",
+        "changed": false,
+        "disposition": "Raw numeric quotes are rendered from payloads; subscriber frames and shared-execution topology are inputs. No copied numerical reduction."
+      },
+      {
+        "work": "rxjs",
+        "slug": "start-with",
+        "changed": false,
+        "disposition": "Status words and seed are protocol data. Fixed first/second subscriber ordinals are schedule cues, with no calculated numeric result in narration."
+      },
+      {
+        "work": "rxjs",
+        "slug": "subject",
+        "changed": false,
+        "disposition": "Press numbers identify input events; declared listener topology/subscription frames are inputs. There is no numeric reduction duplicated in prose."
+      },
+      {
+        "work": "rxjs",
+        "slug": "switch-map",
+        "changed": false,
+        "disposition": "Query/page numbers identify payloads and requests. Cancellation and frame schedule are declared inputs; there is no arithmetic result copied into locale text."
+      },
+      {
+        "work": "rxjs",
+        "slug": "take-until",
+        "changed": false,
+        "disposition": "Ticks are raw machine symbols; close/subscription frames are declared inputs. Shared frame narration already parameterizes its numeric frame."
+      },
+      {
+        "work": "rxjs",
+        "slug": "timeout",
+        "changed": false,
+        "disposition": "The startup/gap waits are already supplied from waits to operator presentation. TimeoutError seen count is asserted as data and is not hardcoded as a displayed numeric result."
+      }
+    ]
+  },
+  "regressionsAdded": [
+    {
+      "file": "libs/features/tools/src/lib/studies/eip/aggregator.spec.ts",
+      "expected": "Changed findings a=8/B=10 yield raw/displayed summaries 9 and 11 at unchanged steps 8 and 6, using the same setSummary/report keys and original run function."
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/rxjs/scan.spec.ts",
+      "expected": "Changed amounts 8/-5/9 yield explicit balances 18/13/22 and late 19, same note keys, original scan function and subscription schedule."
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/rxjs/combine-latest.spec.ts",
+      "expected": "Changed budget reports 75/20 yield explicit raw rows and displayed note percentages while preserving the original run and marble schedule."
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/eip/event-message.spec.ts",
+      "expected": "The same sweepState template displays explicit 10:07 / 7-minute fresh or stale outcomes under thresholds 20 and 5."
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/eip/publish-subscribe-channel.spec.ts",
+      "expected": "The retained late subscriber has explicit 4 orders / 3 subscribers / 9 copies and displays 4 orders, 9 copies through the same note template."
+    },
+    {
+      "file": "libs/features/tools/src/lib/studies/eip/content-based-router.spec.ts",
+      "expected": "The retained renamed-field case displays explicit 2 blocking findings, counted from its declared blocking output values."
+    }
+  ],
+  "actions": {
+    "activeRepositoryWrites": false,
+    "sharedBuilderEdits": false,
+    "gitWrites": false,
+    "descendants": 0,
+    "testsRun": false,
+    "typeChecksRun": false,
+    "gatesRun": false,
+    "probesRun": false,
+    "formatting": "Prettier write only, restricted to the private edited files with the read-only target house config."
+  },
+  "integration": [
+    "Copy only the relative files in this manifest from privateRoot; do not copy whole study directories because shared marbles/flow files are parent-owned.",
+    "Refresh the parent-owned testing study-en catalog from the two changed work catalogs before running the integrated checks.",
+    "Run the existing integrated study/message/lint/type/tool tests serially, including the new focused cases; none were run here.",
+    "Record the listed exact default narration changes: the parent explicitly authorized numeric parameters replacing cardinal words; raw payload meaning/identities and timing are intended to remain the same."
+  ],
+  "untestedLimits": [
+    "No execution, TypeScript, lint or runtime payload/timing verification was performed, per the parent serialization instruction. The new specs and retained mechanism assertions are pending parent execution.",
+    "The added variant helpers vary findings, amounts or budget percentages within the authored schedule and roles used by the regressions; they do not claim arbitrary sign/role, schedule/topology or pluralization support.",
+    "The static audit distinguishes fixed ordinal/configuration/input/identity text from calculated result facts; it is not a general authoring-language rewrite."
+  ],
+  "parentIntegration": {
+    "files": 34,
+    "sourceHashesVerified": true,
+    "fixtureRegenerated": true,
+    "recordProseObjectsUnchanged": 80,
+    "authority": "WO-028-D047"
+  }
+}

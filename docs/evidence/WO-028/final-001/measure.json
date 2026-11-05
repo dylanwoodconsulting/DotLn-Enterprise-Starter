@@ -1,0 +1,676 @@
+{
+  "measuredAt": "2026-11-04T22:54:45.494Z",
+  "movementModules": {
+    "count": 40,
+    "redefineFixed": 38,
+    "recomputeBounds": 12,
+    "WO-028": {
+      "count": 20,
+      "literalLines": 381,
+      "modelFunctionLines": [
+        65,
+        73,
+        73,
+        92,
+        97,
+        99,
+        102,
+        106,
+        109,
+        110,
+        114,
+        114,
+        121,
+        124,
+        127,
+        148,
+        177,
+        190,
+        199,
+        208
+      ]
+    },
+    "main": {
+      "count": 20,
+      "literalLines": 415,
+      "modelFunctionLines": [
+        61,
+        64,
+        81,
+        89,
+        94,
+        94,
+        94,
+        103,
+        104,
+        113,
+        118,
+        119,
+        119,
+        124,
+        125,
+        127,
+        130,
+        140,
+        260,
+        267
+      ]
+    },
+    "rows": [
+      {
+        "module": "actuator.model.ts",
+        "batch": "WO-028",
+        "lines": 304,
+        "modelFunctionLines": 148,
+        "literalLines": 24,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "align.model.ts",
+        "batch": "main",
+        "lines": 436,
+        "modelFunctionLines": 94,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "arrive.model.ts",
+        "batch": "main",
+        "lines": 344,
+        "modelFunctionLines": 81,
+        "literalLines": 24,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "blending-versus-arbitration.model.ts",
+        "batch": "WO-028",
+        "lines": 352,
+        "modelFunctionLines": 121,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "collision-avoidance.model.ts",
+        "batch": "WO-028",
+        "lines": 427,
+        "modelFunctionLines": 190,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "coordinated-movement.model.ts",
+        "batch": "WO-028",
+        "lines": 420,
+        "modelFunctionLines": 114,
+        "literalLines": 23,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "corner-trap.model.ts",
+        "batch": "WO-028",
+        "lines": 369,
+        "modelFunctionLines": 92,
+        "literalLines": 16,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "equilibrium-fallback.model.ts",
+        "batch": "main",
+        "lines": 435,
+        "modelFunctionLines": 260,
+        "literalLines": 24,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "face.model.ts",
+        "batch": "main",
+        "lines": 410,
+        "modelFunctionLines": 103,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "fixed-formations.model.ts",
+        "batch": "main",
+        "lines": 366,
+        "modelFunctionLines": 64,
+        "literalLines": 20,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "flee.model.ts",
+        "batch": "WO-028",
+        "lines": 316,
+        "modelFunctionLines": 65,
+        "literalLines": 14,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "flocking.model.ts",
+        "batch": "main",
+        "lines": 560,
+        "modelFunctionLines": 118,
+        "literalLines": 20,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "formation-pattern-interface.model.ts",
+        "batch": "main",
+        "lines": 520,
+        "modelFunctionLines": 125,
+        "literalLines": 23,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "group-movement.model.ts",
+        "batch": "main",
+        "lines": 525,
+        "modelFunctionLines": 130,
+        "literalLines": 19,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "iterative-targeting.model.ts",
+        "batch": "WO-028",
+        "lines": 459,
+        "modelFunctionLines": 102,
+        "literalLines": 20,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "jump-points.model.ts",
+        "batch": "WO-028",
+        "lines": 495,
+        "modelFunctionLines": 127,
+        "literalLines": 29,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "kinematic-arrive.model.ts",
+        "batch": "WO-028",
+        "lines": 260,
+        "modelFunctionLines": 106,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "kinematic-wander.model.ts",
+        "batch": "WO-028",
+        "lines": 287,
+        "modelFunctionLines": 99,
+        "literalLines": 20,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "making-the-creatures.model.ts",
+        "batch": "main",
+        "lines": 632,
+        "modelFunctionLines": 119,
+        "literalLines": 21,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "motor-control.model.ts",
+        "batch": "WO-028",
+        "lines": 268,
+        "modelFunctionLines": 114,
+        "literalLines": 17,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "movement-in-the-third-dimension.model.ts",
+        "batch": "WO-028",
+        "lines": 349,
+        "modelFunctionLines": 110,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "obstacle-and-wall-avoidance.model.ts",
+        "batch": "WO-028",
+        "lines": 406,
+        "modelFunctionLines": 208,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "priority-steering.model.ts",
+        "batch": "main",
+        "lines": 450,
+        "modelFunctionLines": 267,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "projectile-trajectory.model.ts",
+        "batch": "WO-028",
+        "lines": 353,
+        "modelFunctionLines": 73,
+        "literalLines": 12,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "pursue.model.ts",
+        "batch": "main",
+        "lines": 483,
+        "modelFunctionLines": 94,
+        "literalLines": 14,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "satisfaction-radius.model.ts",
+        "batch": "WO-028",
+        "lines": 247,
+        "modelFunctionLines": 109,
+        "literalLines": 17,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "scalable-formations.model.ts",
+        "batch": "main",
+        "lines": 412,
+        "modelFunctionLines": 61,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "seek.model.ts",
+        "batch": "main",
+        "lines": 433,
+        "modelFunctionLines": 89,
+        "literalLines": 13,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "separation.model.ts",
+        "batch": "main",
+        "lines": 391,
+        "modelFunctionLines": 119,
+        "literalLines": 13,
+        "redefinesFixed": false,
+        "recomputesBounds": false
+      },
+      {
+        "module": "slot-assignment.model.ts",
+        "batch": "main",
+        "lines": 369,
+        "modelFunctionLines": 124,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "steering-behaviors.model.ts",
+        "batch": "WO-028",
+        "lines": 328,
+        "modelFunctionLines": 199,
+        "literalLines": 21,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "steering-output.model.ts",
+        "batch": "WO-028",
+        "lines": 291,
+        "modelFunctionLines": 177,
+        "literalLines": 21,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "steering-pipeline.model.ts",
+        "batch": "main",
+        "lines": 645,
+        "modelFunctionLines": 127,
+        "literalLines": 37,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "the-firing-solution.model.ts",
+        "batch": "WO-028",
+        "lines": 485,
+        "modelFunctionLines": 124,
+        "literalLines": 18,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "two-and-a-half-dimensions.model.ts",
+        "batch": "WO-028",
+        "lines": 329,
+        "modelFunctionLines": 97,
+        "literalLines": 16,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "two-level-formation-steering.model.ts",
+        "batch": "main",
+        "lines": 456,
+        "modelFunctionLines": 113,
+        "literalLines": 24,
+        "redefinesFixed": true,
+        "recomputesBounds": true
+      },
+      {
+        "module": "variable-matching.model.ts",
+        "batch": "WO-028",
+        "lines": 356,
+        "modelFunctionLines": 73,
+        "literalLines": 19,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "velocity-matching.model.ts",
+        "batch": "main",
+        "lines": 371,
+        "modelFunctionLines": 104,
+        "literalLines": 17,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "wander.model.ts",
+        "batch": "main",
+        "lines": 503,
+        "modelFunctionLines": 94,
+        "literalLines": 22,
+        "redefinesFixed": true,
+        "recomputesBounds": false
+      },
+      {
+        "module": "weighted-blending.model.ts",
+        "batch": "main",
+        "lines": 471,
+        "modelFunctionLines": 140,
+        "literalLines": 18,
+        "redefinesFixed": false,
+        "recomputesBounds": false
+      }
+    ]
+  },
+  "aifgRecords": {
+    "WO-028": {
+      "count": 20,
+      "strings": 597,
+      "characters": 118274
+    },
+    "main": {
+      "count": 20,
+      "strings": 621,
+      "characters": 130885
+    },
+    "rows": [
+      {
+        "record": "actuator.json",
+        "batch": "WO-028",
+        "strings": 28,
+        "characters": 5361
+      },
+      {
+        "record": "align.json",
+        "batch": "main",
+        "strings": 29,
+        "characters": 6097
+      },
+      {
+        "record": "arrive.json",
+        "batch": "main",
+        "strings": 29,
+        "characters": 4455
+      },
+      {
+        "record": "blending-versus-arbitration.json",
+        "batch": "WO-028",
+        "strings": 31,
+        "characters": 7057
+      },
+      {
+        "record": "collision-avoidance.json",
+        "batch": "WO-028",
+        "strings": 35,
+        "characters": 7097
+      },
+      {
+        "record": "coordinated-movement.json",
+        "batch": "WO-028",
+        "strings": 30,
+        "characters": 5999
+      },
+      {
+        "record": "corner-trap.json",
+        "batch": "WO-028",
+        "strings": 28,
+        "characters": 6698
+      },
+      {
+        "record": "equilibrium-fallback.json",
+        "batch": "main",
+        "strings": 32,
+        "characters": 6143
+      },
+      {
+        "record": "face.json",
+        "batch": "main",
+        "strings": 26,
+        "characters": 5644
+      },
+      {
+        "record": "fixed-formations.json",
+        "batch": "main",
+        "strings": 23,
+        "characters": 4516
+      },
+      {
+        "record": "flee.json",
+        "batch": "WO-028",
+        "strings": 28,
+        "characters": 4653
+      },
+      {
+        "record": "flocking.json",
+        "batch": "main",
+        "strings": 41,
+        "characters": 9177
+      },
+      {
+        "record": "formation-pattern-interface.json",
+        "batch": "main",
+        "strings": 35,
+        "characters": 7673
+      },
+      {
+        "record": "group-movement.json",
+        "batch": "main",
+        "strings": 29,
+        "characters": 5939
+      },
+      {
+        "record": "iterative-targeting.json",
+        "batch": "WO-028",
+        "strings": 27,
+        "characters": 6031
+      },
+      {
+        "record": "jump-points.json",
+        "batch": "WO-028",
+        "strings": 31,
+        "characters": 7118
+      },
+      {
+        "record": "kinematic-arrive.json",
+        "batch": "WO-028",
+        "strings": 31,
+        "characters": 5479
+      },
+      {
+        "record": "kinematic-wander.json",
+        "batch": "WO-028",
+        "strings": 25,
+        "characters": 4609
+      },
+      {
+        "record": "making-the-creatures.json",
+        "batch": "main",
+        "strings": 39,
+        "characters": 9002
+      },
+      {
+        "record": "motor-control.json",
+        "batch": "WO-028",
+        "strings": 27,
+        "characters": 4799
+      },
+      {
+        "record": "movement-in-the-third-dimension.json",
+        "batch": "WO-028",
+        "strings": 31,
+        "characters": 6101
+      },
+      {
+        "record": "obstacle-and-wall-avoidance.json",
+        "batch": "WO-028",
+        "strings": 30,
+        "characters": 6371
+      },
+      {
+        "record": "priority-steering.json",
+        "batch": "main",
+        "strings": 33,
+        "characters": 7595
+      },
+      {
+        "record": "projectile-trajectory.json",
+        "batch": "WO-028",
+        "strings": 30,
+        "characters": 5917
+      },
+      {
+        "record": "pursue.json",
+        "batch": "main",
+        "strings": 30,
+        "characters": 5561
+      },
+      {
+        "record": "satisfaction-radius.json",
+        "batch": "WO-028",
+        "strings": 30,
+        "characters": 5344
+      },
+      {
+        "record": "scalable-formations.json",
+        "batch": "main",
+        "strings": 29,
+        "characters": 5743
+      },
+      {
+        "record": "seek.json",
+        "batch": "main",
+        "strings": 29,
+        "characters": 4883
+      },
+      {
+        "record": "separation.json",
+        "batch": "main",
+        "strings": 30,
+        "characters": 6226
+      },
+      {
+        "record": "slot-assignment.json",
+        "batch": "main",
+        "strings": 28,
+        "characters": 4903
+      },
+      {
+        "record": "steering-behaviors.json",
+        "batch": "WO-028",
+        "strings": 32,
+        "characters": 6047
+      },
+      {
+        "record": "steering-output.json",
+        "batch": "WO-028",
+        "strings": 28,
+        "characters": 5524
+      },
+      {
+        "record": "steering-pipeline.json",
+        "batch": "main",
+        "strings": 35,
+        "characters": 10000
+      },
+      {
+        "record": "the-firing-solution.json",
+        "batch": "WO-028",
+        "strings": 32,
+        "characters": 6534
+      },
+      {
+        "record": "two-and-a-half-dimensions.json",
+        "batch": "WO-028",
+        "strings": 34,
+        "characters": 6180
+      },
+      {
+        "record": "two-level-formation-steering.json",
+        "batch": "main",
+        "strings": 31,
+        "characters": 7116
+      },
+      {
+        "record": "variable-matching.json",
+        "batch": "WO-028",
+        "strings": 29,
+        "characters": 5355
+      },
+      {
+        "record": "velocity-matching.json",
+        "batch": "main",
+        "strings": 27,
+        "characters": 5356
+      },
+      {
+        "record": "wander.json",
+        "batch": "main",
+        "strings": 33,
+        "characters": 7651
+      },
+      {
+        "record": "weighted-blending.json",
+        "batch": "main",
+        "strings": 33,
+        "characters": 7205
+      }
+    ]
+  }
+}

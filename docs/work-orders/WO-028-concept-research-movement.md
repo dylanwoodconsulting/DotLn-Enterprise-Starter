@@ -335,6 +335,20 @@ each.
   chapters once a road order lands a family that draws them, are the next
   cuts (WS-002 rule 6).
 
+**Authorized repair expansion (2026-11-05, WO-028-D042):** the operator
+includes the shared translation and model migration in this order, across the
+existing study corpus and these twenty records. Move study prose and model
+narration through the message system, preserve work-level lazy loading, and
+separate mechanisms from presentation with shared helpers where they improve
+clarity and efficiency. Keep the shipped v0 schema immutable; introduce a new
+version for a changed record contract. Add regression checks for untranslated
+study text and oversized procedural functions, migrate the existing consumers,
+and update the relevant standing documentation and author/reviewer guidance.
+The goal is beautiful, efficient code; size thresholds are guardrails, not the
+design. This supersedes FINAL-001's separate-road-order prerequisite without
+changing the eight acceptance criteria, adding a page or family, or authorizing
+publication. Source: [WO-028-D042](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d042).
+
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 the pathfinding, decision-making and later chapters; typing rows for the
 scene; the catalog's search controls (WO-018); the remaining Movement rows.

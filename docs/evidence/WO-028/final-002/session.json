@@ -1,0 +1,877 @@
+[
+ {
+  "width": 360,
+  "steps": [
+   {
+    "name": "01-shelf",
+    "url": "/tools/catalog",
+    "fits": true,
+    "shelf": "AI for Games768 concepts40 studiedunits on terrain",
+    "listHeading": " 40 studied concepts ",
+    "listLinks": 40
+   },
+   {
+    "name": "02-collision-step",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "title": "Collision avoidance",
+    "play": 0,
+    "steps": [
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "1",
+      "text": "At 0.10 s the courier is at (0.40, -0.06), moving at (4.00, -0.60) units/s, and the porter is at (9.60, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 9.26 units, time to closest approach is 1.13 s (ahead), projected centres are (4.93, -0.74) and (5.07, 1.00) with gap 1.75 against contact distance 2.00, and courier acceleration is (-0.45, -5.98) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "2",
+      "text": "At 0.20 s the courier is at (0.80, -0.18), moving at (3.96, -1.20) units/s, and the porter is at (9.20, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 8.49 units, time to closest approach is 1.01 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     },
+     {
+      "value": "40",
+      "text": "At 0.30 s the courier is at (1.19, -0.30), moving at (3.96, -1.20) units/s, and the porter is at (8.80, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 7.72 units, time to closest approach is 0.91 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     }
+    ]
+   },
+   {
+    "name": "03-collision-chart",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true
+   },
+   {
+    "name": "04-collision-pseudocode",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "pseudocode": true
+   },
+   {
+    "name": "05-collision-executable",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "module": " libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts ",
+    "spec": " The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps. "
+   },
+   {
+    "name": "06-collision-limits",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "limits": true
+   },
+   {
+    "name": "07-collision-elsewhere",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "implementations": 2
+   },
+   {
+    "name": "08-flee",
+    "url": "/tools/catalog/aifg-a:111",
+    "fits": true,
+    "title": "Flee",
+    "nearbyFromCollision": [
+     "Separation",
+     "Obstacle and wall avoidance",
+     "Flee",
+     "Time of closest approach",
+     "Cone check"
+    ]
+   },
+   {
+    "name": "09-wall-ray-first-hits",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-turning-along-the-wall",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-smallest-clearance",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-end-of-run",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "10-corner-trap",
+    "url": "/tools/catalog/aifg-a:139",
+    "fits": true,
+    "title": "Corner trap"
+   },
+   {
+    "name": "11-projectile-landing",
+    "url": "/tools/catalog/aifg-a:162",
+    "fits": true,
+    "title": "Projectile trajectory",
+    "landing": "At 2.73 s the dock flare is resting at the selected plane, at horizontal position 32.78 m and height 0.00 m, with vertical velocity 0.00 m/s; the line marks height 0.00 m and its predicted encounter is at x 32.78 m after 2.73 s."
+   },
+   {
+    "name": "12-firing-solution",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "title": "The firing solution"
+   },
+   {
+    "name": "13-firing-limits",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "limits": "The moved beacon has a negative discriminant at the configured speed. The comparison leaves its request unserved and draws no invented projectile flight. More aiming precision cannot make this request reachable.\nA valid ballistic solution need not be a safe route. The chosen low arc can hit a wall, while the high arc can meet an overhead obstacle. Both need collision checks in a game world.\nThe beacon is stationary. Motion during the longer flight can invalidate a high arc that was correct at launch; a moving-target solver must predict the encounter rather than aim at an old position.\nThe calculation assumes constant gravity, no drag and an instantaneous choice of muzzle direction. It does not include turret turn limits, wind, projectile size or an intervening collision. This example accepts only targets ahead of the launcher and at or above the water."
+   },
+   {
+    "name": "14-formation-pattern",
+    "url": "/tools/catalog/aifg-a:181",
+    "fits": true,
+    "title": "Formation pattern interface",
+    "reading": "The corrected wing targets are centred on the anchor while the escorts still occupy their old target positions. The target mean is 0.00 units from the anchor and the escorts' mean is 1.00 units away.",
+    "rawKeys": 0
+   }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failed": [],
+  "catalogRequests": [
+   {
+    "scope": "studyCommon",
+    "at": "/tools/catalog/aifg-a:134"
+   },
+   {
+    "scope": "studyAifg",
+    "at": "/tools/catalog/aifg-a:134"
+   }
+  ],
+  "catalogRequestsOnShelf": 0,
+  "wall": [
+   {
+    "moment": "Ray first hits",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Turning along the wall",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Smallest clearance",
+    "value": "29",
+    "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   },
+   {
+    "moment": "End of run",
+    "value": "80",
+    "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   }
+  ],
+  "wallStepped": "0"
+ },
+ {
+  "width": 768,
+  "steps": [
+   {
+    "name": "01-shelf",
+    "url": "/tools/catalog",
+    "fits": true,
+    "shelf": "AI for Games768 concepts40 studiedunits on terrain",
+    "listHeading": " 40 studied concepts ",
+    "listLinks": 40
+   },
+   {
+    "name": "02-collision-step",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "title": "Collision avoidance",
+    "play": 0,
+    "steps": [
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "1",
+      "text": "At 0.10 s the courier is at (0.40, -0.06), moving at (4.00, -0.60) units/s, and the porter is at (9.60, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 9.26 units, time to closest approach is 1.13 s (ahead), projected centres are (4.93, -0.74) and (5.07, 1.00) with gap 1.75 against contact distance 2.00, and courier acceleration is (-0.45, -5.98) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "2",
+      "text": "At 0.20 s the courier is at (0.80, -0.18), moving at (3.96, -1.20) units/s, and the porter is at (9.20, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 8.49 units, time to closest approach is 1.01 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     },
+     {
+      "value": "40",
+      "text": "At 0.30 s the courier is at (1.19, -0.30), moving at (3.96, -1.20) units/s, and the porter is at (8.80, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 7.72 units, time to closest approach is 0.91 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     }
+    ]
+   },
+   {
+    "name": "03-collision-chart",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true
+   },
+   {
+    "name": "04-collision-pseudocode",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "pseudocode": true
+   },
+   {
+    "name": "05-collision-executable",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "module": " libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts ",
+    "spec": " The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps. "
+   },
+   {
+    "name": "06-collision-limits",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "limits": true
+   },
+   {
+    "name": "07-collision-elsewhere",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "implementations": 2
+   },
+   {
+    "name": "08-flee",
+    "url": "/tools/catalog/aifg-a:111",
+    "fits": true,
+    "title": "Flee",
+    "nearbyFromCollision": [
+     "Separation",
+     "Obstacle and wall avoidance",
+     "Flee",
+     "Time of closest approach",
+     "Cone check"
+    ]
+   },
+   {
+    "name": "09-wall-ray-first-hits",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-turning-along-the-wall",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-smallest-clearance",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-end-of-run",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "10-corner-trap",
+    "url": "/tools/catalog/aifg-a:139",
+    "fits": true,
+    "title": "Corner trap"
+   },
+   {
+    "name": "11-projectile-landing",
+    "url": "/tools/catalog/aifg-a:162",
+    "fits": true,
+    "title": "Projectile trajectory",
+    "landing": "At 2.73 s the dock flare is resting at the selected plane, at horizontal position 32.78 m and height 0.00 m, with vertical velocity 0.00 m/s; the line marks height 0.00 m and its predicted encounter is at x 32.78 m after 2.73 s."
+   },
+   {
+    "name": "12-firing-solution",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "title": "The firing solution"
+   },
+   {
+    "name": "13-firing-limits",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "limits": "The moved beacon has a negative discriminant at the configured speed. The comparison leaves its request unserved and draws no invented projectile flight. More aiming precision cannot make this request reachable.\nA valid ballistic solution need not be a safe route. The chosen low arc can hit a wall, while the high arc can meet an overhead obstacle. Both need collision checks in a game world.\nThe beacon is stationary. Motion during the longer flight can invalidate a high arc that was correct at launch; a moving-target solver must predict the encounter rather than aim at an old position.\nThe calculation assumes constant gravity, no drag and an instantaneous choice of muzzle direction. It does not include turret turn limits, wind, projectile size or an intervening collision. This example accepts only targets ahead of the launcher and at or above the water."
+   },
+   {
+    "name": "14-formation-pattern",
+    "url": "/tools/catalog/aifg-a:181",
+    "fits": true,
+    "title": "Formation pattern interface",
+    "reading": "The corrected wing targets are centred on the anchor while the escorts still occupy their old target positions. The target mean is 0.00 units from the anchor and the escorts' mean is 1.00 units away.",
+    "rawKeys": 0
+   }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failed": [],
+  "catalogRequests": [
+   {
+    "scope": "studyCommon",
+    "at": "/tools/catalog/aifg-a:134"
+   },
+   {
+    "scope": "studyAifg",
+    "at": "/tools/catalog/aifg-a:134"
+   }
+  ],
+  "catalogRequestsOnShelf": 0,
+  "wall": [
+   {
+    "moment": "Ray first hits",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Turning along the wall",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Smallest clearance",
+    "value": "29",
+    "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   },
+   {
+    "moment": "End of run",
+    "value": "80",
+    "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   }
+  ],
+  "wallStepped": "0"
+ },
+ {
+  "width": 1440,
+  "steps": [
+   {
+    "name": "01-shelf",
+    "url": "/tools/catalog",
+    "fits": true,
+    "shelf": "AI for Games768 concepts40 studiedunits on terrain",
+    "listHeading": " 40 studied concepts ",
+    "listLinks": 40
+   },
+   {
+    "name": "02-collision-step",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "title": "Collision avoidance",
+    "play": 0,
+    "steps": [
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "1",
+      "text": "At 0.10 s the courier is at (0.40, -0.06), moving at (4.00, -0.60) units/s, and the porter is at (9.60, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 9.26 units, time to closest approach is 1.13 s (ahead), projected centres are (4.93, -0.74) and (5.07, 1.00) with gap 1.75 against contact distance 2.00, and courier acceleration is (-0.45, -5.98) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "2",
+      "text": "At 0.20 s the courier is at (0.80, -0.18), moving at (3.96, -1.20) units/s, and the porter is at (9.20, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 8.49 units, time to closest approach is 1.01 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     },
+     {
+      "value": "40",
+      "text": "At 0.30 s the courier is at (1.19, -0.30), moving at (3.96, -1.20) units/s, and the porter is at (8.80, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 7.72 units, time to closest approach is 0.91 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     }
+    ]
+   },
+   {
+    "name": "03-collision-chart",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true
+   },
+   {
+    "name": "04-collision-pseudocode",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "pseudocode": true
+   },
+   {
+    "name": "05-collision-executable",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "module": " libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts ",
+    "spec": " The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps. "
+   },
+   {
+    "name": "06-collision-limits",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "limits": true
+   },
+   {
+    "name": "07-collision-elsewhere",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "implementations": 2
+   },
+   {
+    "name": "08-flee",
+    "url": "/tools/catalog/aifg-a:111",
+    "fits": true,
+    "title": "Flee",
+    "nearbyFromCollision": [
+     "Separation",
+     "Obstacle and wall avoidance",
+     "Flee",
+     "Time of closest approach",
+     "Cone check"
+    ]
+   },
+   {
+    "name": "09-wall-ray-first-hits",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-turning-along-the-wall",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-smallest-clearance",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-end-of-run",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "10-corner-trap",
+    "url": "/tools/catalog/aifg-a:139",
+    "fits": true,
+    "title": "Corner trap"
+   },
+   {
+    "name": "11-projectile-landing",
+    "url": "/tools/catalog/aifg-a:162",
+    "fits": true,
+    "title": "Projectile trajectory",
+    "landing": "At 2.73 s the dock flare is resting at the selected plane, at horizontal position 32.78 m and height 0.00 m, with vertical velocity 0.00 m/s; the line marks height 0.00 m and its predicted encounter is at x 32.78 m after 2.73 s."
+   },
+   {
+    "name": "12-firing-solution",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "title": "The firing solution"
+   },
+   {
+    "name": "13-firing-limits",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "limits": "The moved beacon has a negative discriminant at the configured speed. The comparison leaves its request unserved and draws no invented projectile flight. More aiming precision cannot make this request reachable.\nA valid ballistic solution need not be a safe route. The chosen low arc can hit a wall, while the high arc can meet an overhead obstacle. Both need collision checks in a game world.\nThe beacon is stationary. Motion during the longer flight can invalidate a high arc that was correct at launch; a moving-target solver must predict the encounter rather than aim at an old position.\nThe calculation assumes constant gravity, no drag and an instantaneous choice of muzzle direction. It does not include turret turn limits, wind, projectile size or an intervening collision. This example accepts only targets ahead of the launcher and at or above the water."
+   },
+   {
+    "name": "14-formation-pattern",
+    "url": "/tools/catalog/aifg-a:181",
+    "fits": true,
+    "title": "Formation pattern interface",
+    "reading": "The corrected wing targets are centred on the anchor while the escorts still occupy their old target positions. The target mean is 0.00 units from the anchor and the escorts' mean is 1.00 units away.",
+    "rawKeys": 0
+   }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failed": [],
+  "catalogRequests": [
+   {
+    "scope": "studyCommon",
+    "at": "/tools/catalog/aifg-a:134"
+   },
+   {
+    "scope": "studyAifg",
+    "at": "/tools/catalog/aifg-a:134"
+   }
+  ],
+  "catalogRequestsOnShelf": 0,
+  "wall": [
+   {
+    "moment": "Ray first hits",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Turning along the wall",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Smallest clearance",
+    "value": "29",
+    "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   },
+   {
+    "moment": "End of run",
+    "value": "80",
+    "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   }
+  ],
+  "wallStepped": "0"
+ },
+ {
+  "width": 2080,
+  "steps": [
+   {
+    "name": "01-shelf",
+    "url": "/tools/catalog",
+    "fits": true,
+    "shelf": "AI for Games768 concepts40 studiedunits on terrain",
+    "listHeading": " 40 studied concepts ",
+    "listLinks": 40
+   },
+   {
+    "name": "02-collision-step",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "title": "Collision avoidance",
+    "play": 0,
+    "steps": [
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "1",
+      "text": "At 0.10 s the courier is at (0.40, -0.06), moving at (4.00, -0.60) units/s, and the porter is at (9.60, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 9.26 units, time to closest approach is 1.13 s (ahead), projected centres are (4.93, -0.74) and (5.07, 1.00) with gap 1.75 against contact distance 2.00, and courier acceleration is (-0.45, -5.98) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "2",
+      "text": "At 0.20 s the courier is at (0.80, -0.18), moving at (3.96, -1.20) units/s, and the porter is at (9.20, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 8.49 units, time to closest approach is 1.01 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     },
+     {
+      "value": "40",
+      "text": "At 0.30 s the courier is at (1.19, -0.30), moving at (3.96, -1.20) units/s, and the porter is at (8.80, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 7.72 units, time to closest approach is 0.91 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     }
+    ]
+   },
+   {
+    "name": "03-collision-chart",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true
+   },
+   {
+    "name": "04-collision-pseudocode",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "pseudocode": true
+   },
+   {
+    "name": "05-collision-executable",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "module": " libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts ",
+    "spec": " The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps. "
+   },
+   {
+    "name": "06-collision-limits",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "limits": true
+   },
+   {
+    "name": "07-collision-elsewhere",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "implementations": 2
+   },
+   {
+    "name": "08-flee",
+    "url": "/tools/catalog/aifg-a:111",
+    "fits": true,
+    "title": "Flee",
+    "nearbyFromCollision": [
+     "Separation",
+     "Obstacle and wall avoidance",
+     "Flee",
+     "Time of closest approach",
+     "Cone check"
+    ]
+   },
+   {
+    "name": "09-wall-ray-first-hits",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-turning-along-the-wall",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-smallest-clearance",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-end-of-run",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "10-corner-trap",
+    "url": "/tools/catalog/aifg-a:139",
+    "fits": true,
+    "title": "Corner trap"
+   },
+   {
+    "name": "11-projectile-landing",
+    "url": "/tools/catalog/aifg-a:162",
+    "fits": true,
+    "title": "Projectile trajectory",
+    "landing": "At 2.73 s the dock flare is resting at the selected plane, at horizontal position 32.78 m and height 0.00 m, with vertical velocity 0.00 m/s; the line marks height 0.00 m and its predicted encounter is at x 32.78 m after 2.73 s."
+   },
+   {
+    "name": "12-firing-solution",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "title": "The firing solution"
+   },
+   {
+    "name": "13-firing-limits",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "limits": "The moved beacon has a negative discriminant at the configured speed. The comparison leaves its request unserved and draws no invented projectile flight. More aiming precision cannot make this request reachable.\nA valid ballistic solution need not be a safe route. The chosen low arc can hit a wall, while the high arc can meet an overhead obstacle. Both need collision checks in a game world.\nThe beacon is stationary. Motion during the longer flight can invalidate a high arc that was correct at launch; a moving-target solver must predict the encounter rather than aim at an old position.\nThe calculation assumes constant gravity, no drag and an instantaneous choice of muzzle direction. It does not include turret turn limits, wind, projectile size or an intervening collision. This example accepts only targets ahead of the launcher and at or above the water."
+   },
+   {
+    "name": "14-formation-pattern",
+    "url": "/tools/catalog/aifg-a:181",
+    "fits": true,
+    "title": "Formation pattern interface",
+    "reading": "The corrected wing targets are centred on the anchor while the escorts still occupy their old target positions. The target mean is 0.00 units from the anchor and the escorts' mean is 1.00 units away.",
+    "rawKeys": 0
+   }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failed": [],
+  "catalogRequests": [
+   {
+    "scope": "studyCommon",
+    "at": "/tools/catalog/aifg-a:134"
+   },
+   {
+    "scope": "studyAifg",
+    "at": "/tools/catalog/aifg-a:134"
+   }
+  ],
+  "catalogRequestsOnShelf": 0,
+  "wall": [
+   {
+    "moment": "Ray first hits",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Turning along the wall",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Smallest clearance",
+    "value": "29",
+    "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   },
+   {
+    "moment": "End of run",
+    "value": "80",
+    "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   }
+  ],
+  "wallStepped": "0"
+ },
+ {
+  "width": 3840,
+  "steps": [
+   {
+    "name": "01-shelf",
+    "url": "/tools/catalog",
+    "fits": true,
+    "shelf": "AI for Games768 concepts40 studiedunits on terrain",
+    "listHeading": " 40 studied concepts ",
+    "listLinks": 40
+   },
+   {
+    "name": "02-collision-step",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "title": "Collision avoidance",
+    "play": 0,
+    "steps": [
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "0",
+      "text": "At 0.00 s the courier is at (0.00, 0.00), moving at (4.00, 0.00) units/s, and the porter is at (10.00, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 10.05 units, time to closest approach is 1.25 s (ahead), projected centres are (5.00, 0.00) and (5.00, 1.00) with gap 1.00 against contact distance 2.00, and courier acceleration is (0.00, -6.00) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "1",
+      "text": "At 0.10 s the courier is at (0.40, -0.06), moving at (4.00, -0.60) units/s, and the porter is at (9.60, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 9.26 units, time to closest approach is 1.13 s (ahead), projected centres are (4.93, -0.74) and (5.07, 1.00) with gap 1.75 against contact distance 2.00, and courier acceleration is (-0.45, -5.98) units/s²: A future collision is predicted; the engine accelerates away from the projected relative offset."
+     },
+     {
+      "value": "2",
+      "text": "At 0.20 s the courier is at (0.80, -0.18), moving at (3.96, -1.20) units/s, and the porter is at (9.20, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 8.49 units, time to closest approach is 1.01 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     },
+     {
+      "value": "40",
+      "text": "At 0.30 s the courier is at (1.19, -0.30), moving at (3.96, -1.20) units/s, and the porter is at (8.80, 1.00), moving at (-4.00, 0.00) units/s; the current gap is 7.72 units, time to closest approach is 0.91 s (ahead), projected centres are (4.79, -1.39) and (5.16, 1.00) with gap 2.42 against contact distance 2.00, and courier acceleration is (0.00, 0.00) units/s²: The constant-velocity projection clears the combined radii; avoidance is silent."
+     }
+    ]
+   },
+   {
+    "name": "03-collision-chart",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true
+   },
+   {
+    "name": "04-collision-pseudocode",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "pseudocode": true
+   },
+   {
+    "name": "05-collision-executable",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "module": " libs/features/tools/src/lib/studies/movement/collision-avoidance.model.ts ",
+    "spec": " The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/collision-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps. "
+   },
+   {
+    "name": "06-collision-limits",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "limits": true
+   },
+   {
+    "name": "07-collision-elsewhere",
+    "url": "/tools/catalog/aifg-a:134",
+    "fits": true,
+    "implementations": 2
+   },
+   {
+    "name": "08-flee",
+    "url": "/tools/catalog/aifg-a:111",
+    "fits": true,
+    "title": "Flee",
+    "nearbyFromCollision": [
+     "Separation",
+     "Obstacle and wall avoidance",
+     "Flee",
+     "Time of closest approach",
+     "Cone check"
+    ]
+   },
+   {
+    "name": "09-wall-ray-first-hits",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-turning-along-the-wall",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-smallest-clearance",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "09-wall-end-of-run",
+    "url": "/tools/catalog/aifg-a:137",
+    "fits": true
+   },
+   {
+    "name": "10-corner-trap",
+    "url": "/tools/catalog/aifg-a:139",
+    "fits": true,
+    "title": "Corner trap"
+   },
+   {
+    "name": "11-projectile-landing",
+    "url": "/tools/catalog/aifg-a:162",
+    "fits": true,
+    "title": "Projectile trajectory",
+    "landing": "At 2.73 s the dock flare is resting at the selected plane, at horizontal position 32.78 m and height 0.00 m, with vertical velocity 0.00 m/s; the line marks height 0.00 m and its predicted encounter is at x 32.78 m after 2.73 s."
+   },
+   {
+    "name": "12-firing-solution",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "title": "The firing solution"
+   },
+   {
+    "name": "13-firing-limits",
+    "url": "/tools/catalog/aifg-a:163",
+    "fits": true,
+    "limits": "The moved beacon has a negative discriminant at the configured speed. The comparison leaves its request unserved and draws no invented projectile flight. More aiming precision cannot make this request reachable.\nA valid ballistic solution need not be a safe route. The chosen low arc can hit a wall, while the high arc can meet an overhead obstacle. Both need collision checks in a game world.\nThe beacon is stationary. Motion during the longer flight can invalidate a high arc that was correct at launch; a moving-target solver must predict the encounter rather than aim at an old position.\nThe calculation assumes constant gravity, no drag and an instantaneous choice of muzzle direction. It does not include turret turn limits, wind, projectile size or an intervening collision. This example accepts only targets ahead of the launcher and at or above the water."
+   },
+   {
+    "name": "14-formation-pattern",
+    "url": "/tools/catalog/aifg-a:181",
+    "fits": true,
+    "title": "Formation pattern interface",
+    "reading": "The corrected wing targets are centred on the anchor while the escorts still occupy their old target positions. The target mean is 0.00 units from the anchor and the escorts' mean is 1.00 units away.",
+    "rawKeys": 0
+   }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failed": [],
+  "catalogRequests": [
+   {
+    "scope": "studyCommon",
+    "at": "/tools/catalog/aifg-a:134"
+   },
+   {
+    "scope": "studyAifg",
+    "at": "/tools/catalog/aifg-a:134"
+   }
+  ],
+  "catalogRequestsOnShelf": 0,
+  "wall": [
+   {
+    "moment": "Ray first hits",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Turning along the wall",
+    "value": "5",
+    "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+   },
+   {
+    "moment": "Smallest clearance",
+    "value": "29",
+    "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   },
+   {
+    "moment": "End of run",
+    "value": "80",
+    "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+   }
+  ],
+  "wallStepped": "0"
+ }
+]

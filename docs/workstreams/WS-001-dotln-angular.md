@@ -631,8 +631,10 @@ intake, read 2026-10-21; they govern every sub-app):
   autoplay under it; it steps on command), and every visual state has a
   text equivalent.
 - **G3 Strings in the message system from the start.** House rule 9; the
-  board's own titles, labels and values and every catalog or record field
-  are data and are not translated.
+  message system covers authored on-screen text, including record fields and
+  generated study narration. A stored record is not a translation exemption;
+  machine identifiers and executable inputs retain their meaning, with display
+  labels supplied by messages ([WO-028-D042](https://github.com/DylanBWood/DotLn-Angular/blob/51bf26df57e66564b35406942368068ac1d6f5f6/docs/dotln/evidence/WO-028/decisions.md#wo-028-d042)).
 - **G4 Skins over tokens.** Appearance is a token layer (`[data-skin]`);
   CSS never decides behavior, and no utility-class string lives in domain
   state. The plain skin ships first.

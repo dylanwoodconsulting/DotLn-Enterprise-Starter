@@ -1,0 +1,154 @@
+{
+  "author": "author-01",
+  "date": "2026-11-04",
+  "status": "authored-awaiting-executor-checks",
+  "deliverables": [
+    "libs/shared/catalog/src/studies/aifg/steering-behaviors.json",
+    "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.ts",
+    "libs/features/tools/src/lib/studies/movement/steering-behaviors.model.spec.ts",
+    "libs/shared/catalog/src/studies/aifg/steering-output.json",
+    "libs/features/tools/src/lib/studies/movement/steering-output.model.ts",
+    "libs/features/tools/src/lib/studies/movement/steering-output.model.spec.ts",
+    "brief/result.json"
+  ],
+  "studies": [
+    {
+      "id": "aifg-a:105",
+      "slug": "steering-behaviors",
+      "example": "Mara\u2019s depot delivery",
+      "classification": "mixed",
+      "stepClassification": [
+        {
+          "step": 1,
+          "kind": "study-local",
+          "explanation": "Build a SteeringBody snapshot from the example\u2019s current position, velocity and limits."
+        },
+        {
+          "step": 2,
+          "kind": "engine",
+          "explanation": "Call scene-engine seek and arrive on the same body and target. The displayed desired velocity reproduces Arrive\u2019s readout only; acceleration always comes from the engine call."
+        },
+        {
+          "step": 3,
+          "kind": "study-local",
+          "explanation": "Select the candidate named by arrivalEnabled. This selection is an explicit toy policy, with no claim to implement blending or arbitration."
+        },
+        {
+          "step": 4,
+          "kind": "mixed",
+          "explanation": "The local fixed-step movement loop uses engine add, scale and clipLength to update velocity then position. It omits the scene\u2019s boundary, drag and rest-snap behaviour."
+        }
+      ],
+      "executableNullRationale": "The executable is not null: the model runs the described selection and integration mechanism using real engine Seek and Arrive outputs. It does not claim that the whole family is one algorithm.",
+      "rxjsRationale": "Null because streams add no explanatory value to choosing and applying a steering request at fixed simulation steps.",
+      "authoredFrameCount": 81,
+      "handWorkedSpecClaims": [
+        "The first step requests acceleration 4 and moves from x 0, velocity 0 to x 0.25, velocity 1.",
+        "At x 14.25, velocity 6, Seek requests 4; Arrive desires 111/19 and requests -12/19. The Arrive update reaches x 597/38.",
+        "Default Arrive remains short of the depot and inside its target radius at the end; the one-input Seek comparison reaches a maximum x of 28.5, then acquires negative velocity.",
+        "At the depot with velocity 2, zero Seek output preserves motion; Arrive instead requests braking.",
+        "Record parameters, mechanism-block alignment, nearby ids, all frame placeholders, deterministic output and drawing bounds are asserted by the written spec."
+      ],
+      "limitations": [
+        "One straight, unobstructed route; the model demonstrates two family members and explicit selection, not simultaneous composition or route planning.",
+        "Independent comparison runs are distinguished from the candidate arrows evaluated on one current state.",
+        "No scene field boundaries or exact rest snap; the teaching loop is declared local."
+      ]
+    },
+    {
+      "id": "aifg-a:94",
+      "slug": "steering-output",
+      "example": "Nori\u2019s inspection pulse",
+      "classification": "study-local",
+      "stepClassification": [
+        {
+          "step": 1,
+          "kind": "study-local",
+          "explanation": "A readonly local SteeringOutput pairs linear and angular acceleration and samples a fixed-duration pulse. The engine has no combined output record or angular steering primitive."
+        },
+        {
+          "step": 2,
+          "kind": "study-local with engine arithmetic",
+          "explanation": "The local consumer adds linear acceleration times the interval to current velocity using engine add and scale."
+        },
+        {
+          "step": 3,
+          "kind": "study-local",
+          "explanation": "Update angular velocity by scalar acceleration times the same interval. No angular integrator is provided by the engine."
+        },
+        {
+          "step": 4,
+          "kind": "study-local with engine arithmetic",
+          "explanation": "Advance position and heading with the updated rates. Linear requests remain in world coordinates; orientation does not redirect them."
+        }
+      ],
+      "executableNullRationale": "The executable is not null: the module executes the record\u2019s pulse producer and complete linear/angular consumer. This is explicitly a local teaching mechanism for a data structure, not an engine steering primitive.",
+      "rxjsRationale": "Null because a fixed pulse and state update already expose the data boundary; no asynchronous stream behaviour is under study.",
+      "authoredFrameCount": 17,
+      "handWorkedSpecClaims": [
+        "The first 0.25 s update changes velocity (2,0) to (2,0.5), rotation to 0.125, position to (0.5,0.125) and heading to 0.03125.",
+        "At 1 s both output channels become zero, while velocity remains (2,2) and rotation remains 0.5. Position is (2,1.25) and heading is 0.3125.",
+        "At 4 s the default state reaches position (8,7.25), heading 1.8125, with unchanged coasting rates.",
+        "Changing only world-y acceleration to zero keeps y at zero while every heading and rotation sample remains identical. Changing the initial heading also leaves the world-coordinate linear update unchanged.",
+        "A coarser interval changes integrated position and heading despite matching end-of-pulse velocities; a pulse ending between samples remains active to the next boundary.",
+        "Record parameters, mechanism-block alignment, nearby ids, all frame placeholders, deterministic output and offered-input drawing bounds are asserted by the written spec."
+      ],
+      "limitations": [
+        "No drag, speed limit, collision response or heading-dependent actuator; the choice of consumer is explicit throughout.",
+        "The output\u2019s units and coordinate convention require producer/consumer agreement; the data shape cannot enforce them.",
+        "Pulse timing is sampled and the rates-first integrator has a time-step-dependent position and heading."
+      ]
+    }
+  ],
+  "openedSources": [
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "accessed": "2026-11-04",
+      "observations": [
+        "Ordinary web open reported the DOI as inaccessible.",
+        "A direct urllib request with Accept: application/vnd.citationstyles.csl+json succeeded with HTTP 200 and final URL https://api.crossref.org/v1/works/10.1201%2F9781351053303/transform.",
+        "The returned metadata identifies AI for Games, edition 3, Ian Millington and CRC Press. No book text or chapter contents were read.",
+        "Each study cites the DOI once only for the topic\u2019s location supplied by its assigned catalog row: Chapter 3 \u00a73.3 for Steering behaviors and Chapter 3 \u00a73.1.3 for Steering output."
+      ]
+    },
+    {
+      "url": "https://www.red3d.com/cwr/steer/gdc99/",
+      "accessed": "2026-11-04",
+      "status": "Opened successfully with the web tool; article text visible.",
+      "observedClaim": "Reynolds separates action selection, steering and locomotion, and describes combining steering behaviours for wider goals. The study cites only the steering/locomotion separation and composition claim."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringBehavior.java",
+      "accessed": "2026-11-04",
+      "status": 200,
+      "observedClaim": "calculateSteering delegates to calculateRealSteering when enabled and otherwise zeroes its supplied output. Owner and limiter accessors and the shared abstract output contract are present."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Seek.java",
+      "accessed": "2026-11-04",
+      "status": 200,
+      "observedClaim": "The subclass normalises target-minus-owner position, scales by maximum linear acceleration, explicitly writes angular = 0 and returns the output."
+    },
+    {
+      "url": "https://github.com/libgdx/gdx-ai/blob/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/SteeringAcceleration.java",
+      "accessed": "2026-11-04",
+      "status": "Opened successfully with the web tool; Java class source visible.",
+      "observedClaim": "The complete class has linear and angular fields, setZero clears both, and add, scl and mulAdd update both channels. It contains no position or orientation update."
+    }
+  ],
+  "verification": {
+    "readBackFromDisk": true,
+    "testsRun": false,
+    "gatesRun": false,
+    "dependenciesInstalled": false,
+    "reason": "The author assignment delegates all executable checks to the integrating executor.",
+    "executorWork": "Integrate the six files and register both studies/models through the executor-owned catalog and registry surfaces, then run their specs and the required repository checks."
+  },
+  "tokenUsage": {
+    "cumulativeTokens": null,
+    "status": "unknown",
+    "scope": "author-01 child session; not a root-session or team total",
+    "cutoff": "2026-11-04 18:38:07 UTC, after deliverable readback and before this result file was written",
+    "availableCounterObservation": "get_goal returned goal: null, remainingTokens: null and completionBudgetReport: null. No cumulative per-agent token counter was exposed."
+  }
+}

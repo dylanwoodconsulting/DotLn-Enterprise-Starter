@@ -1,0 +1,130 @@
+{
+  "kind": "criteria-adversary",
+  "round": 1,
+  "workOrder": "WO-028",
+  "model": "gpt-6.1-sol",
+  "effort": "max",
+  "modelEffortSource": "Parent native-worker launch selection in review-common.md. Separate runtime model/effort telemetry is not exposed; effective effort is not independently observed.",
+  "candidateIdentities": {
+    "target": {
+      "base": "55b59c9133056c1d6471274a9676a7d5649196ac",
+      "candidateChangedFilesSha256": "55ac7d90dd7df4cf7bfe3d1e6faed9113a2322404f7edcfda429aa455ccf62c3"
+    },
+    "launchpad": {
+      "base": "a5e7076cfe1082d888966223f544e17d471324ae",
+      "candidateChangedFilesSha256": "35f079567f7e85d7fc9d857eb74230494cf9c934bb45a7be8bf014ed8f78cdf3"
+    }
+  },
+  "integrity": {
+    "changedFileHashesVerified": {
+      "target": 79,
+      "launchpad": 107
+    },
+    "mismatches": [],
+    "identityRecomputed": true,
+    "identityMethod": "SHA-256 of Python json.dumps(side.files), preserving manifest insertion order and default separators; both equal the assigned identities.",
+    "packet": "Frozen non-Git review-candidate-r1 only; no Git commands or real-worktree reads."
+  },
+  "searchedPaths": [
+    "target.diff: entire text-change scope, including all twenty new record/model/spec triples; binary changed-file hashes only",
+    "launchpad.diff: criteria-relevant evidence, scope and configuration changes; document-maintenance judgments excluded",
+    "launchpad/docs/operator/{README.md,implementation-guidance.md}",
+    "launchpad/docs/work-orders/WO-028-concept-research-movement.md",
+    "launchpad/docs/workstreams/WS-002-concept-research.md",
+    "launchpad/docs/workstreams/WS-001-dotln-angular.md: cited house rules and app/sub-app section",
+    "launchpad/docs/repositories/dotln-angular.md: Run content workers; Catalog and concept studies",
+    "launchpad/docs/product/concept-study.md; launchpad/docs/evidence/WO-020/fan-out.md: author/factual critic duties",
+    "target/docs/ai-reference/catalog-rules.md; target/docs/dev-reference/architecture/catalog.md: Studies",
+    "target/libs/shared/catalog/src/studies/aifg/: twenty new bodies and forty-record inventory; references/implementations cross-checked against retained factual receipts",
+    "target/libs/shared/catalog/src/studies/{aifg.ts,studies-summary.json}",
+    "target/libs/features/tools/src/lib/studies/movement/: all twenty new modules and adjacent specs",
+    "target/libs/features/tools/src/lib/studies/{study-models.ts,study-models.spec.ts}",
+    "target/libs/features/tools/src/lib/mappers/{study-mapper.ts,study-mapper.spec.ts}",
+    "target/libs/features/tools/src/lib/composites/study/{study.html,study.spec.ts,fixtures.ts}",
+    "target/libs/features/tools/src/lib/composites/study-explanation/{study-explanation.html,study-explanation.scss,study-explanation.spec.ts}",
+    "target/libs/features/tools/src/lib/types.ts; target/apps/dotln/public/i18n/en.json; target/libs/features/tools/testing/src/lib/tools-en.json",
+    "target/apps/dotln-e2e/src/{catalog.spec.ts,catalog.visual.spec.ts}; target/tools/studies.test.mjs",
+    "target/libs/shared/catalog/src/lib/catalog-loader.ts: lazy study/summary chunk producers",
+    "target/libs/shared/scene-engine/src/lib/{steering.ts,blending.ts}; formation.ts and simulation.ts supporting call sites",
+    "launchpad/docs/evidence/WO-028/{README.md,review.md,walkthrough.md,validation.json,bundle.json,content-identity.json,decisions.md}",
+    "launchpad/docs/evidence/WO-028/critics/*.json: findings, source-access scope, coverage, rechecks and dispositions",
+    "command-logs/results.jsonl; retained logs: preflight hash correspondence, failures, later successful outcomes and cache disclosures"
+  ],
+  "findings": [],
+  "producerConsumerPairs": [
+    {
+      "producer": "Study records, aifg.ts and studies-summary.json",
+      "consumer": "Catalog loader; both batch inventory tests; summary-derived shelf/list/facet e2e counts",
+      "observation": "Forty unique AI for Games records equal the forty summary IDs. All twenty assigned additions are checked with two distinct reviewers; no substitution or executable:null exception is used."
+    },
+    {
+      "producer": "Twenty movement models",
+      "consumer": "Twenty adjacent importing specs; study-models.ts and existing registry-wide tests",
+      "observation": "Every new record names the same TypeScript executable and visual module. The twenty specs contain 154 cases, including hand-checkable arithmetic, failure cases, selected-frame/chart agreement and offered-input bounds. Existing registry tests compare all named model paths and exercise input extremes."
+    },
+    {
+      "producer": "Engine steering/blending/formation functions",
+      "consumer": "Study mechanisms, ordinary pseudocode, models and per-study factual confirmations",
+      "observation": "Engine-owned requests are called. Ballistic, ray, kinematic, angular, volume and local integration boundaries are identified. Exact head-on avoidance failure remains visible and tested."
+    },
+    {
+      "producer": "mapStudy executableModel and timeline.series",
+      "consumer": "Existing deferred mechanism disclosure; selected-view guide; component and objective e2e regressions",
+      "observation": "Module/spec provenance stays inside Follow the mechanism, with no executable label for illustrative records. Chart uses its series labels; switching to Movement restores its own legend."
+    },
+    {
+      "producer": "Record references/implementations",
+      "consumer": "README status matrix and factual critic confirmations",
+      "observation": "All 33 unique URLs cover all 78 occurrences and have recorded status. Publisher HTML 403 and DOI metadata success are distinguished; the DOI claim does not describe unread book text."
+    },
+    {
+      "producer": "Retained production/preflight execution",
+      "consumer": "validation.json, bundle.json and executor walkthrough",
+      "observation": "All eleven selected target preflight log hashes match their recorded zero exits. Executed Tools output reports 101 files / 860 tests; final Tools/build cache restoration is disclosed. Bundle evidence records forty lazy AI for Games record inputs, initialBytes 405832, aifgBytes 314011, no lazy code in initial, and unchanged dependency keys."
+    }
+  ],
+  "criterionBoundaries": [
+    {
+      "criterion": 1,
+      "observation": "Candidate enables the required linked-reading/disclosure/stepping journey, with explicit three-width e2e assertions and executor production evidence. The executor walkthrough expressly reserves the later verifier own dated VER Walkthrough and understanding statement. This review does not claim that act has occurred."
+    },
+    {
+      "criteria": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "observation": "No concrete candidate defect found in this static criteria review. Retained successful execution supports record/model/browser/tooling/bundle checks, and the coverage row names forty and both batches."
+    },
+    {
+      "criterion": 8,
+      "observation": "No complete-gate pass is claimed in this packet before the independent review ladder finishes. This review neither executes the gates nor awards this pending lifecycle criterion."
+    }
+  ],
+  "unsearchedBoundaries": [
+    "No test, gate, bounded model probe, installation, browser or external network request was run by this worker.",
+    "No real worktree or docs/control/local path was read; no candidate file was changed.",
+    "Raster render and visual-baseline aesthetics were not independently judged; frozen changed-file hashes were verified. Design assessment belongs to the separate reviewer.",
+    "External URLs were not reopened; source support/reachability rely on the retained independent factual critic receipts and disclosed access scope.",
+    "Author-worker usage accounting and document-maintenance consistency belong to the other reviewer scope; raw session receipts were not independently audited.",
+    "No later verifier walkthrough, complete target gate, publication or final-review outcome is inferred."
+  ],
+  "usage": {
+    "total": "unknown",
+    "cachedInput": "unknown",
+    "source": "No cumulative token/cache counters are exposed to this native worker.",
+    "scope": "This fresh round-1 criteria-adversary worker only; no descendants.",
+    "cutoff": "report.json completion"
+  },
+  "completedAt": "2026-11-04T20:08:36.447015+00:00",
+  "retention": {
+    "sourceReportSha256": "695c26355c64df087d0c8965915ae9b952348a5c8d6ab814ab87694514e948da",
+    "workerType": "codex-spawn-agent",
+    "launchModel": "gpt-6.1-sol",
+    "launchEffort": "max",
+    "launchSource": "parent native spawn_agent arguments; worker effective runtime telemetry unavailable"
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "capturedAt": "2026-11-04T21:23:50.031Z",
+  "errors": [],
+  "frames": [
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 5,
+      "name": "wall-5-360.png",
+      "equivalent": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+      "accessibility": "- 'img \"At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\"': Courier Delivery Hit\n- text: Time · 0.5 seconds\n- slider \"Time · 0.5 seconds\": \"5\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 16,
+      "name": "wall-16-360.png",
+      "equivalent": "At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 1.6 seconds\n- slider \"Time · 1.6 seconds\": \"16\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 40,
+      "name": "wall-40-360.png",
+      "equivalent": "At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"40\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 80,
+      "name": "wall-80-360.png",
+      "equivalent": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 8.0 seconds\n- slider \"Time · 8.0 seconds\": \"80\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "name": "wall-reading-360.png",
+      "accessibility": "- region \"Authored study\":\n  - paragraph: Authored study · Codex gpt-6.1-sol, study author 3 · 2026-11-04\n  - heading \"Courier at the depot courtyard wall\" [level=3]\n  - paragraph: \"Give the courier a feeler ahead of its travel. A hit supplies more than a warning: the surface normal tells it which way leads back into free space. Put a temporary target along that normal and let the courier pull towards it. The ray can see a wall before the courier’s body reaches it, but detection still needs time to change motion.\"\n  - paragraph: \"A courier approaches the end of a depot courtyard wall on the way to an offset delivery point. Watch its forward ray meet the wall and the temporary target turn it towards free space. Then put the delivery straight ahead: the same local rule brakes and switches targets without choosing a side.\"\n  - group:\n    - text: The example in full\n    - paragraph: The courier starts at (0, 0) with velocity (4, 0) units/s and radius 1. Its delivery point is (18, 15); a vertical wall runs from (10, -6) to (10, 6). A forward ray of length 9 units constructs an avoidance target 6 units along the hit normal. Maximum speed is 4 units/s and acceleration 8 units/s². The run takes 80 fixed steps of 0.1 s. Segment intersection and target selection are study-local; the actual pull to either target calls engine Seek.\n  - figure:\n    - group \"Views of the same example\":\n      - button \"Movement\" [pressed]\n      - button \"Chart\"\n    - 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n    - text: Time · 8.0 seconds\n    - slider \"Time · 8.0 seconds\": \"80\"\n    - button \"Step back\"\n    - button \"Step forward\" [disabled]\n    - button \"Ray first hits\"\n    - button \"Turning along the wall\"\n    - button \"Smallest clearance\"\n    - button \"End of run\"\n    - paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n    - group:\n      - text: Show the numbers\n      - paragraph: \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"\n    - group:\n      - text: Try another value Delivery height · 15 units\n      - slider \"Delivery height · 15 units\": \"15\"\n      - text: Forward ray length · 9 units\n      - slider \"Forward ray length · 9 units\": \"9\"\n      - button \"Back to the example\"\n    - group:\n      - text: How to read this drawing\n      - paragraph: Courier and physical radius Wall segment and ray hit Ray; amber cross · avoidance target; lower lane · acceleration × 0.25 s² Upper lane · velocity × 1 s Surface normal × avoid distance Delivery point beyond the wall\n      - paragraph: \"The long line is the wall. The forward ray runs from the courier to its ray end. On a hit, the normal points back from the surface to the amber avoidance cross. The courier ring is its physical radius. Below the courier, parallel lanes separate velocity above and acceleration below at the same scale as the construction. The offset delivery gives the approach a sideways cue: watch the avoidance target turn the courier along the face and the delivery pull resume when the ray clears the end. The clearance chart includes distance round the wall’s ends; it does not treat the wall as infinite.\"\n  - paragraph: Choose another way into the idea.\n  - group: Follow the mechanism Ordinary pseudocode, read top to bottom, with each step explained on this example.\n  - group: Where this breaks down When this fails, and what to reach for instead.\n  - group: See it elsewhere Where public projects implement it, and the sources this study rests on.\n  - heading \"Nearby concepts\" [level=4]\n  - list:\n    - listitem:\n      - link \"Corner trap\":\n        - /url: /tools/catalog/aifg-a:139\n      - text: Reach for Corner trap when adjacent faces make ray-selected targets alternate and the character cannot free itself.\n    - listitem:\n      - link \"Ray configurations\":\n        - /url: /tools/catalog/aifg-a:138\n      - text: Ray configurations is the next choice when one centre feeler misses edges or needs side coverage in a passage.\n    - listitem:\n      - link \"Collision detector interface\":\n        - /url: /tools/catalog/aifg-a:140\n      - text: The Collision detector interface separates geometry from steering when several obstacle shapes must provide consistent hit points and normals.\n    - listitem:\n      - link \"Seek\":\n        - /url: /tools/catalog/aifg-a:110\n      - text: Seek is the actual motor used here once a ray hit has supplied a temporary target.\n    - listitem:\n      - link \"Collision avoidance\":\n        - /url: /tools/catalog/aifg-a:134\n      - text: Collision avoidance predicts another moving centre’s closest approach; use it for moving characters rather than a static surface normal.\n  - paragraph:\n    - 'link \"Next study: Corner trap\"':\n      - /url: /tools/catalog/aifg-a:139\n  - paragraph: \"Reviewed by . This study is separate from the mined definition above: it was written for this page in its author's own words, from the sources it names, and it does not reproduce the book's text.\""
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 50,
+      "name": "motor-control-50-360.png",
+      "equivalent": "At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 5.0 seconds\n- slider \"Time · 5.0 seconds\": \"50\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 100,
+      "name": "motor-control-100-360.png",
+      "equivalent": "At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 10.0 seconds\n- slider \"Time · 10.0 seconds\": \"100\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 4,
+      "name": "iterative-targeting-4-360.png",
+      "equivalent": "Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.",
+      "accessibility": "- 'img \"Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.\"': Harbour launcher Impact\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"4\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The signed miss chooses which half of the angle bracket remains.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 7,
+      "name": "iterative-targeting-7-360.png",
+      "equivalent": "Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.",
+      "accessibility": "- 'img \"Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.\"': Harbour launcher Impact\n- text: Time · 7.0 seconds\n- slider \"Time · 7.0 seconds\": \"7\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The simulated impact is inside tolerance, so this candidate is accepted.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 37,
+      "name": "firing-solution-37-360.png",
+      "equivalent": "At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.\": Alternative high arc Launcher Beacon\n- text: Time · 1.8 seconds\n- slider \"Time · 1.8 seconds\": \"37\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: The chosen low shot has landed. The high candidate is still flying; showing it does not mean the launcher fires both.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 74,
+      "name": "firing-solution-74-360.png",
+      "equivalent": "At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.\": Launcher Beacon\n- text: Time · 3.6 seconds\n- slider \"Time · 3.6 seconds\": \"74\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: Both candidate flights have reached the water and remain at their landing points.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 12,
+      "name": "third-dimension-12-360.png",
+      "equivalent": "At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 3.0 seconds\n- slider \"Time · 3.0 seconds\": \"12\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The height connector separates the drone from its ground projection; the wing line shows roll independently of the nose direction.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 360,
+        "height": 900
+      },
+      "step": 24,
+      "name": "third-dimension-24-360.png",
+      "equivalent": "At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 6.0 seconds\n- slider \"Time · 6.0 seconds\": \"24\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The drone has reached the beacon. Its last yaw and pitch remain defined while its velocity is zero.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 5,
+      "name": "wall-5-2080.png",
+      "equivalent": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+      "accessibility": "- 'img \"At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\"': Courier Delivery Hit\n- text: Time · 0.5 seconds\n- slider \"Time · 0.5 seconds\": \"5\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 16,
+      "name": "wall-16-2080.png",
+      "equivalent": "At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 1.6 seconds\n- slider \"Time · 1.6 seconds\": \"16\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 40,
+      "name": "wall-40-2080.png",
+      "equivalent": "At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"40\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 80,
+      "name": "wall-80-2080.png",
+      "equivalent": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 8.0 seconds\n- slider \"Time · 8.0 seconds\": \"80\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "name": "wall-reading-2080.png",
+      "accessibility": "- region \"Authored study\":\n  - paragraph: Authored study · Codex gpt-6.1-sol, study author 3 · 2026-11-04\n  - heading \"Courier at the depot courtyard wall\" [level=3]\n  - paragraph: \"Give the courier a feeler ahead of its travel. A hit supplies more than a warning: the surface normal tells it which way leads back into free space. Put a temporary target along that normal and let the courier pull towards it. The ray can see a wall before the courier’s body reaches it, but detection still needs time to change motion.\"\n  - paragraph: \"A courier approaches the end of a depot courtyard wall on the way to an offset delivery point. Watch its forward ray meet the wall and the temporary target turn it towards free space. Then put the delivery straight ahead: the same local rule brakes and switches targets without choosing a side.\"\n  - group:\n    - text: The example in full\n    - paragraph: The courier starts at (0, 0) with velocity (4, 0) units/s and radius 1. Its delivery point is (18, 15); a vertical wall runs from (10, -6) to (10, 6). A forward ray of length 9 units constructs an avoidance target 6 units along the hit normal. Maximum speed is 4 units/s and acceleration 8 units/s². The run takes 80 fixed steps of 0.1 s. Segment intersection and target selection are study-local; the actual pull to either target calls engine Seek.\n  - figure:\n    - group \"Views of the same example\":\n      - button \"Movement\" [pressed]\n      - button \"Chart\"\n    - 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n    - text: Time · 8.0 seconds\n    - slider \"Time · 8.0 seconds\": \"80\"\n    - button \"Step back\"\n    - button \"Step forward\" [disabled]\n    - button \"Ray first hits\"\n    - button \"Turning along the wall\"\n    - button \"Smallest clearance\"\n    - button \"End of run\"\n    - paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n    - group:\n      - text: Show the numbers\n      - paragraph: \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"\n    - group:\n      - text: Try another value Delivery height · 15 units\n      - slider \"Delivery height · 15 units\": \"15\"\n      - text: Forward ray length · 9 units\n      - slider \"Forward ray length · 9 units\": \"9\"\n      - button \"Back to the example\"\n    - group:\n      - text: How to read this drawing\n      - paragraph: Courier and physical radius Wall segment and ray hit Ray; amber cross · avoidance target; lower lane · acceleration × 0.25 s² Upper lane · velocity × 1 s Surface normal × avoid distance Delivery point beyond the wall\n      - paragraph: \"The long line is the wall. The forward ray runs from the courier to its ray end. On a hit, the normal points back from the surface to the amber avoidance cross. The courier ring is its physical radius. Below the courier, parallel lanes separate velocity above and acceleration below at the same scale as the construction. The offset delivery gives the approach a sideways cue: watch the avoidance target turn the courier along the face and the delivery pull resume when the ray clears the end. The clearance chart includes distance round the wall’s ends; it does not treat the wall as infinite.\"\n  - paragraph: Choose another way into the idea.\n  - group: Follow the mechanism Ordinary pseudocode, read top to bottom, with each step explained on this example.\n  - group: Where this breaks down When this fails, and what to reach for instead.\n  - group: See it elsewhere Where public projects implement it, and the sources this study rests on.\n  - heading \"Nearby concepts\" [level=4]\n  - list:\n    - listitem:\n      - link \"Corner trap\":\n        - /url: /tools/catalog/aifg-a:139\n      - text: Reach for Corner trap when adjacent faces make ray-selected targets alternate and the character cannot free itself.\n    - listitem:\n      - link \"Ray configurations\":\n        - /url: /tools/catalog/aifg-a:138\n      - text: Ray configurations is the next choice when one centre feeler misses edges or needs side coverage in a passage.\n    - listitem:\n      - link \"Collision detector interface\":\n        - /url: /tools/catalog/aifg-a:140\n      - text: The Collision detector interface separates geometry from steering when several obstacle shapes must provide consistent hit points and normals.\n    - listitem:\n      - link \"Seek\":\n        - /url: /tools/catalog/aifg-a:110\n      - text: Seek is the actual motor used here once a ray hit has supplied a temporary target.\n    - listitem:\n      - link \"Collision avoidance\":\n        - /url: /tools/catalog/aifg-a:134\n      - text: Collision avoidance predicts another moving centre’s closest approach; use it for moving characters rather than a static surface normal.\n  - paragraph:\n    - 'link \"Next study: Corner trap\"':\n      - /url: /tools/catalog/aifg-a:139\n  - paragraph: \"Reviewed by . This study is separate from the mined definition above: it was written for this page in its author's own words, from the sources it names, and it does not reproduce the book's text.\""
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 50,
+      "name": "motor-control-50-2080.png",
+      "equivalent": "At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 5.0 seconds\n- slider \"Time · 5.0 seconds\": \"50\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 100,
+      "name": "motor-control-100-2080.png",
+      "equivalent": "At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 10.0 seconds\n- slider \"Time · 10.0 seconds\": \"100\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 4,
+      "name": "iterative-targeting-4-2080.png",
+      "equivalent": "Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.",
+      "accessibility": "- 'img \"Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.\"': Harbour launcher Impact\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"4\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The signed miss chooses which half of the angle bracket remains.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 7,
+      "name": "iterative-targeting-7-2080.png",
+      "equivalent": "Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.",
+      "accessibility": "- 'img \"Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.\"': Harbour launcher Impact\n- text: Time · 7.0 seconds\n- slider \"Time · 7.0 seconds\": \"7\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The simulated impact is inside tolerance, so this candidate is accepted.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 37,
+      "name": "firing-solution-37-2080.png",
+      "equivalent": "At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.\": Alternative high arc Launcher Beacon\n- text: Time · 1.8 seconds\n- slider \"Time · 1.8 seconds\": \"37\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: The chosen low shot has landed. The high candidate is still flying; showing it does not mean the launcher fires both.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 74,
+      "name": "firing-solution-74-2080.png",
+      "equivalent": "At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.\": Launcher Beacon\n- text: Time · 3.6 seconds\n- slider \"Time · 3.6 seconds\": \"74\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: Both candidate flights have reached the water and remain at their landing points.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 12,
+      "name": "third-dimension-12-2080.png",
+      "equivalent": "At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 3.0 seconds\n- slider \"Time · 3.0 seconds\": \"12\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The height connector separates the drone from its ground projection; the wing line shows roll independently of the nose direction.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "step": 24,
+      "name": "third-dimension-24-2080.png",
+      "equivalent": "At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 6.0 seconds\n- slider \"Time · 6.0 seconds\": \"24\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The drone has reached the beacon. Its last yaw and pitch remain defined while its velocity is zero.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 5,
+      "name": "wall-5-3840.png",
+      "equivalent": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+      "accessibility": "- 'img \"At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\"': Courier Delivery Hit\n- text: Time · 0.5 seconds\n- slider \"Time · 0.5 seconds\": \"5\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 16,
+      "name": "wall-16-3840.png",
+      "equivalent": "At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 1.6 seconds\n- slider \"Time · 1.6 seconds\": \"16\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 40,
+      "name": "wall-40-3840.png",
+      "equivalent": "At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"40\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 80,
+      "name": "wall-80-3840.png",
+      "equivalent": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+      "accessibility": "- 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n- text: Time · 8.0 seconds\n- slider \"Time · 8.0 seconds\": \"80\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Ray first hits\"\n- button \"Turning along the wall\"\n- button \"Smallest clearance\"\n- button \"End of run\"\n- paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:137",
+      "name": "wall-reading-3840.png",
+      "accessibility": "- region \"Authored study\":\n  - paragraph: Authored study · Codex gpt-6.1-sol, study author 3 · 2026-11-04\n  - heading \"Courier at the depot courtyard wall\" [level=3]\n  - paragraph: \"Give the courier a feeler ahead of its travel. A hit supplies more than a warning: the surface normal tells it which way leads back into free space. Put a temporary target along that normal and let the courier pull towards it. The ray can see a wall before the courier’s body reaches it, but detection still needs time to change motion.\"\n  - paragraph: \"A courier approaches the end of a depot courtyard wall on the way to an offset delivery point. Watch its forward ray meet the wall and the temporary target turn it towards free space. Then put the delivery straight ahead: the same local rule brakes and switches targets without choosing a side.\"\n  - group:\n    - text: The example in full\n    - paragraph: The courier starts at (0, 0) with velocity (4, 0) units/s and radius 1. Its delivery point is (18, 15); a vertical wall runs from (10, -6) to (10, 6). A forward ray of length 9 units constructs an avoidance target 6 units along the hit normal. Maximum speed is 4 units/s and acceleration 8 units/s². The run takes 80 fixed steps of 0.1 s. Segment intersection and target selection are study-local; the actual pull to either target calls engine Seek.\n  - figure:\n    - group \"Views of the same example\":\n      - button \"Movement\" [pressed]\n      - button \"Chart\"\n    - 'img \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"': Courier Delivery\n    - text: Time · 8.0 seconds\n    - slider \"Time · 8.0 seconds\": \"80\"\n    - button \"Step back\"\n    - button \"Step forward\" [disabled]\n    - button \"Ray first hits\"\n    - button \"Turning along the wall\"\n    - button \"Smallest clearance\"\n    - button \"End of run\"\n    - paragraph: The forward segment misses the wall, so the courier seeks the delivery point.\n    - group:\n      - text: Show the numbers\n      - paragraph: \"At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\"\n    - group:\n      - text: Try another value Delivery height · 15 units\n      - slider \"Delivery height · 15 units\": \"15\"\n      - text: Forward ray length · 9 units\n      - slider \"Forward ray length · 9 units\": \"9\"\n      - button \"Back to the example\"\n    - group:\n      - text: How to read this drawing\n      - paragraph: Courier and physical radius Wall segment and ray hit Ray; amber cross · avoidance target; lower lane · acceleration × 0.25 s² Upper lane · velocity × 1 s Surface normal × avoid distance Delivery point beyond the wall\n      - paragraph: \"The long line is the wall. The forward ray runs from the courier to its ray end. On a hit, the normal points back from the surface to the amber avoidance cross. The courier ring is its physical radius. Below the courier, parallel lanes separate velocity above and acceleration below at the same scale as the construction. The offset delivery gives the approach a sideways cue: watch the avoidance target turn the courier along the face and the delivery pull resume when the ray clears the end. The clearance chart includes distance round the wall’s ends; it does not treat the wall as infinite.\"\n  - paragraph: Choose another way into the idea.\n  - group: Follow the mechanism Ordinary pseudocode, read top to bottom, with each step explained on this example.\n  - group: Where this breaks down When this fails, and what to reach for instead.\n  - group: See it elsewhere Where public projects implement it, and the sources this study rests on.\n  - heading \"Nearby concepts\" [level=4]\n  - list:\n    - listitem:\n      - link \"Corner trap\":\n        - /url: /tools/catalog/aifg-a:139\n      - text: Reach for Corner trap when adjacent faces make ray-selected targets alternate and the character cannot free itself.\n    - listitem:\n      - link \"Ray configurations\":\n        - /url: /tools/catalog/aifg-a:138\n      - text: Ray configurations is the next choice when one centre feeler misses edges or needs side coverage in a passage.\n    - listitem:\n      - link \"Collision detector interface\":\n        - /url: /tools/catalog/aifg-a:140\n      - text: The Collision detector interface separates geometry from steering when several obstacle shapes must provide consistent hit points and normals.\n    - listitem:\n      - link \"Seek\":\n        - /url: /tools/catalog/aifg-a:110\n      - text: Seek is the actual motor used here once a ray hit has supplied a temporary target.\n    - listitem:\n      - link \"Collision avoidance\":\n        - /url: /tools/catalog/aifg-a:134\n      - text: Collision avoidance predicts another moving centre’s closest approach; use it for moving characters rather than a static surface normal.\n  - paragraph:\n    - 'link \"Next study: Corner trap\"':\n      - /url: /tools/catalog/aifg-a:139\n  - paragraph: \"Reviewed by . This study is separate from the mined definition above: it was written for this page in its author's own words, from the sources it names, and it does not reproduce the book's text.\""
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 50,
+      "name": "motor-control-50-3840.png",
+      "equivalent": "At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 5.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 5.0 seconds\n- slider \"Time · 5.0 seconds\": \"50\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:192",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 100,
+      "name": "motor-control-100-3840.png",
+      "equivalent": "At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.",
+      "accessibility": "- img \"At 10.00 s the cart is at 4.24 units and moves forwards at 0.00 units/s; steering requests -0.00 units/s², the motor applies -0.00 units/s², and the safety line has 1.76 units of signed clearance.\": Cart Safety line\n- text: Time · 10.0 seconds\n- slider \"Time · 10.0 seconds\": \"100\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Brake command\"\n- button \"Braking under the cap\"\n- button \"Request fits the motor\"\n- button \"End of run\"\n- paragraph: \"Speed is below the displayed precision. This run has no position snap: the brake continues to reduce the remaining velocity.\"\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 4,
+      "name": "iterative-targeting-4-3840.png",
+      "equivalent": "Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.",
+      "accessibility": "- 'img \"Search step 4 predicts a shot at 27.50° from the harbour launcher towards the drum at 6 m: impact 6.36 m after 0.78 s of simulated flight, signed miss 0.36 m, current bracket [25.00, 30.00]°, next bracket [25.00, 27.50]°, status refining.\"': Harbour launcher Impact\n- text: Time · 4.0 seconds\n- slider \"Time · 4.0 seconds\": \"4\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The signed miss chooses which half of the angle bracket remains.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:166",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 7,
+      "name": "iterative-targeting-7-3840.png",
+      "equivalent": "Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.",
+      "accessibility": "- 'img \"Search step 7 predicts a shot at 25.31° from the harbour launcher towards the drum at 6 m: impact 5.99 m after 0.72 s of simulated flight, signed miss -0.01 m, current bracket [25.00, 25.63]°, next bracket [25.31, 25.63]°, status hit.\"': Harbour launcher Impact\n- text: Time · 7.0 seconds\n- slider \"Time · 7.0 seconds\": \"7\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Endpoint probes\"\n- button \"Refine the angle\"\n- button \"Last decision\"\n- paragraph: The simulated impact is inside tolerance, so this candidate is accepted.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 37,
+      "name": "firing-solution-37-3840.png",
+      "equivalent": "At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 1.79 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 16.00 m, height 16.00 m; their target times are 1.79 s and 3.58 s.\": Alternative high arc Launcher Beacon\n- text: Time · 1.8 seconds\n- slider \"Time · 1.8 seconds\": \"37\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: The chosen low shot has landed. The high candidate is still flying; showing it does not mean the launcher fires both.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:163",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 74,
+      "name": "firing-solution-74-3840.png",
+      "equivalent": "At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.",
+      "accessibility": "- img \"At 3.58 s the beacon is at x 32.00 m and height 0.00 m; there are 2 launch directions with D 57600.00, the chosen low candidate is x 32.00 m, height 0.00 m and the high alternative is x 32.00 m, height 0.00 m; their target times are 1.79 s and 3.58 s.\": Launcher Beacon\n- text: Time · 3.6 seconds\n- slider \"Time · 3.6 seconds\": \"74\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"Launch candidates\"\n- button \"Low apex\"\n- button \"Chosen shot arrives\"\n- button \"High shot arrives\"\n- paragraph: Both candidate flights have reached the water and remain at their landing points.\n- group: Show the numbers\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 12,
+      "name": "third-dimension-12-3840.png",
+      "equivalent": "At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 3.00 s the drone is at (5.56, 4.94, 7.41), 6.50 units from the beacon, moving at 4.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 3.0 seconds\n- slider \"Time · 3.0 seconds\": \"12\"\n- button \"Step back\"\n- button \"Step forward\"\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The height connector separates the drone from its ground projection; the wing line shows roll independently of the nose direction.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    },
+    {
+      "id": "aifg-a:196",
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "step": 24,
+      "name": "third-dimension-24-3840.png",
+      "equivalent": "At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.",
+      "accessibility": "- img \"At 6.00 s the drone is at (9.00, 8.00, 12.00), 0.00 units from the beacon, moving at 0.00 units/s; its nose has yaw 53.13° and pitch 28.07°, and its wing has independent roll 30.00° above a ground projection at height 0.00.\": Drone Ground projection Beacon\n- text: Time · 6.0 seconds\n- slider \"Time · 6.0 seconds\": \"24\"\n- button \"Step back\"\n- button \"Step forward\" [disabled]\n- button \"At rest\"\n- button \"First volume step\"\n- button \"Climbing and rolled\"\n- button \"End of approach\"\n- paragraph: The drone has reached the beacon. Its last yaw and pitch remain defined while its velocity is zero.\n- group: Show the numbers\n- group: Try another value\n- group: How to read this drawing",
+      "overflow": false
+    }
+  ]
+}

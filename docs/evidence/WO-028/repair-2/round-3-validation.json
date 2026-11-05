@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "scope": "Two-presenter delta after round 2; native checks before the final combined review",
+  "checks": [
+    {
+      "command": "npm run lint -- --output-style=static",
+      "log": "review-last-lint.log",
+      "logSha256": "3046fb931885dd726e3f39641488b440804795fb295218919fe9bee34d7a6abc",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 48156,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 48156,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1764588952,
+        "peakRssBytes": 1841954816,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T08:59:23.594Z",
+        "finishedAt": "2026-11-05T09:00:11.750Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "temporary complete-output comparison; npm run test -- --projects=tools --testFile=src/lib/studies/movement-reuse-comparison.spec.ts --skip-nx-cache --output-style=static",
+      "log": "movement-reuse-round-3.log",
+      "logSha256": "3f1ea2a7af838853c28186c2de84c347236b1d0551ad299d8c1de815007322c5",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 6738,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 6738,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1414658792,
+        "peakRssBytes": 1527545856,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T09:01:01.896Z",
+        "finishedAt": "2026-11-05T09:01:08.634Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    },
+    {
+      "command": "npm run check:bundle",
+      "log": "review-last-bundle.log",
+      "logSha256": "2ccd6f6b7465478764323750185ee209acb2858655ded885364d1bb14c4189bb",
+      "result": {
+        "name": "bounded-probe",
+        "durationMs": 5856,
+        "slowestCases": [
+          {
+            "name": "bounded-probe",
+            "durationMs": 5856,
+            "exitCode": 0,
+            "granularity": "task"
+          }
+        ],
+        "peakFootprintBytes": 1831261840,
+        "peakRssBytes": 2037055488,
+        "memoryBudgetBytes": 4294967296,
+        "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+        "droppedOutputBytes": 0,
+        "startedAt": "2026-11-05T09:01:41.169Z",
+        "finishedAt": "2026-11-05T09:01:47.025Z",
+        "exitCode": 0,
+        "executed": true
+      }
+    }
+  ],
+  "bundle": {
+    "initialBytes": 406485,
+    "initialFiles": [
+      "main-BRYHYW65.js",
+      "chunk-CNF5_8HZ.js",
+      "chunk-SUwCjcuu.js",
+      "chunk-BwCtja5l.js",
+      "chunk-RJxHZrND.js",
+      "chunk-B21jaIjC.js",
+      "styles-QSFL7DXU.css"
+    ],
+    "attributedInputBytes": {
+      "@ngrx/signals": 6419,
+      "@angular-architects/ngrx-toolkit": 8962,
+      "libs/shared/data-access": 2989,
+      "libs/shared/events": 1691,
+      "libs/shared/state": 2352,
+      "libs/dotln/shell": 6862,
+      "apps/dotln/src": 9237,
+      "rxjs": 39262,
+      "tslib": 2477,
+      "@angular/core": 187064,
+      "@jsverse/utils": 580,
+      "@jsverse/transloco": 19143,
+      "libs/shared/i18n": 2163,
+      "@angular/common": 33897,
+      "@angular/platform-browser": 16157,
+      "libs/shared/utils": 145,
+      "ramda": 19278,
+      "ramda-adjunct": 750,
+      "libs/shared/core": 1085,
+      "@angular/router": 97568,
+      "@angular/cdk": 12202,
+      "libs/shared/ui": 16981,
+      "@angular/aria": 17732,
+      "styles and generated": 0
+    },
+    "lazyCodeInInitial": [],
+    "menuAvailableWithTools": true
+  },
+  "comparison": "comparison/round-3-results.json",
+  "notes": [
+    "All 176 complete movement outputs match the unchanged round-1 capture.",
+    "Lint includes foundation type checks and the 77-case tooling selection.",
+    "The prior full unit/browser preflight remains dated in review-fix-validation.json; complete gates will validate the final target."
+  ]
+}

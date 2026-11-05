@@ -1,0 +1,1651 @@
+{
+ "files": 171,
+ "functions": 2057,
+ "overEighty": [],
+ "top": [
+  {
+   "file": "movement/formation-pattern-interface.presentation.ts",
+   "name": "frameWorkedLines",
+   "lines": 80
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "name": "frameOf",
+   "lines": 80
+  },
+  {
+   "file": "movement/slot-assignment.presentation.ts",
+   "name": "present",
+   "lines": 80
+  },
+  {
+   "file": "movement/two-level-formation-steering.presentation.ts",
+   "name": "escortWorkedLines",
+   "lines": 80
+  },
+  {
+   "file": "movement/align.presentation.ts",
+   "name": "lateBraking",
+   "lines": 79
+  },
+  {
+   "file": "movement/formation-pattern-interface.presentation.ts",
+   "name": "frameValues",
+   "lines": 79
+  },
+  {
+   "file": "movement/wander.presentation.ts",
+   "name": "present",
+   "lines": 79
+  },
+  {
+   "file": "movement/weighted-blending.presentation.ts",
+   "name": "frameOf",
+   "lines": 79
+  },
+  {
+   "file": "movement/formation-pattern-interface.presentation.ts",
+   "name": "frameOf",
+   "lines": 78
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "name": "describeFrame",
+   "lines": 78
+  },
+  {
+   "file": "movement/corner-trap.presentation.ts",
+   "name": "frameDrawing",
+   "lines": 77
+  },
+  {
+   "file": "movement/steering-pipeline.presentation.ts",
+   "name": "readingOf",
+   "lines": 77
+  }
+ ],
+ "modelEntryMax": 4,
+ "modelEntriesOverTen": [],
+ "localFixedHelpers": [
+  "presentation.ts:fixed"
+ ],
+ "localBoundsHelpers": [
+  "drawing.ts:boundsOf",
+  "coordinated-movement.simulation.ts:formation",
+  "fixed-formations.simulation.ts:formation",
+  "formation-pattern-interface.presentation.ts:bounds",
+  "group-movement.simulation.ts:formation",
+  "presentation.ts:boundsOfPoints",
+  "scalable-formations.presentation.ts:boundsOf",
+  "scalable-formations.presentation.ts:bounds",
+  "steering-pipeline.presentation.ts:boundsOf",
+  "steering-pipeline.presentation.ts:bounds",
+  "two-level-formation-steering.presentation.ts:formation",
+  "two-level-formation-steering.presentation.ts:bounds",
+  "two-level-formation-steering.simulation.ts:formation"
+ ],
+ "simulationBoundary": [],
+ "proseLiteralCount": 195,
+ "prose": [
+  {
+   "file": "eip/aggregator.ts",
+   "line": 27,
+   "text": "Criteria",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 28,
+   "text": "Design",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 29,
+   "text": "Consistency",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 30,
+   "text": "Criteria",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 31,
+   "text": "Design",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 32,
+   "text": "Consistency",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "filed"
+  },
+  {
+   "file": "eip/aggregator.ts",
+   "line": 45,
+   "text": " findings from ",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 120,
+   "text": "Session 1",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "startWith"
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 120,
+   "text": "Session 2",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "startWith"
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 120,
+   "text": "Session 3",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "startWith"
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 137,
+   "text": "Session 1",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "takenBy"
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 138,
+   "text": "Session 2",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "takenBy"
+  },
+  {
+   "file": "eip/competing-consumers.ts",
+   "line": 139,
+   "text": "Session 3",
+   "parent": "CallExpression",
+   "property": null,
+   "callee": "takenBy"
+  },
+  {
+   "file": "eip/content-based-router.ts",
+   "line": 42,
+   "text": "stale index line",
+   "parent": "PropertyAssignment",
+   "property": "defect",
+   "callee": null
+  },
+  {
+   "file": "eip/content-based-router.ts",
+   "line": 43,
+   "text": "widen the scope",
+   "parent": "PropertyAssignment",
+   "property": "choice",
+   "callee": null
+  },
+  {
+   "file": "eip/content-based-router.ts",
+   "line": 44,
+   "text": "shown by probe 3",
+   "parent": "PropertyAssignment",
+   "property": "regression",
+   "callee": null
+  },
+  {
+   "file": "eip/content-based-router.ts",
+   "line": 45,
+   "text": "waive or repair",
+   "parent": "PropertyAssignment",
+   "property": "choice",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 18,
+   "text": "No performer takes ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 38,
+   "text": "implement order 31",
+   "parent": "PropertyAssignment",
+   "property": "i",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 39,
+   "text": "fix order 30",
+   "parent": "PropertyAssignment",
+   "property": "f",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 40,
+   "text": "review order 29",
+   "parent": "PropertyAssignment",
+   "property": "r",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 41,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "v",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 53,
+   "text": "implement order 31",
+   "parent": "PropertyAssignment",
+   "property": "'implement order 31'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 56,
+   "text": "implement order 31",
+   "parent": "PropertyAssignment",
+   "property": "i",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 63,
+   "text": "review order 29",
+   "parent": "PropertyAssignment",
+   "property": "'review order 29'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 66,
+   "text": "review order 29",
+   "parent": "PropertyAssignment",
+   "property": "r",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 73,
+   "text": "fix order 30",
+   "parent": "PropertyAssignment",
+   "property": "'fix order 30'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 76,
+   "text": "fix order 30",
+   "parent": "PropertyAssignment",
+   "property": "f",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 83,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "'verify order 31'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 86,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "v",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 100,
+   "text": "implement order 31",
+   "parent": "PropertyAssignment",
+   "property": "i",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 101,
+   "text": "fix order 30",
+   "parent": "PropertyAssignment",
+   "property": "f",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 102,
+   "text": "review order 29",
+   "parent": "PropertyAssignment",
+   "property": "r",
+   "callee": null
+  },
+  {
+   "file": "eip/message-dispatcher.ts",
+   "line": 103,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "v",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 45,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "a",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 45,
+   "text": "verify order 32",
+   "parent": "PropertyAssignment",
+   "property": "b",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 45,
+   "text": "verify order 33",
+   "parent": "PropertyAssignment",
+   "property": "c",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 71,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "'verify order 31'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 76,
+   "text": "verify order 33",
+   "parent": "PropertyAssignment",
+   "property": "'verify order 33'",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 90,
+   "text": "verify order 31",
+   "parent": "PropertyAssignment",
+   "property": "a",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 90,
+   "text": "verify order 33",
+   "parent": "PropertyAssignment",
+   "property": "c",
+   "callee": null
+  },
+  {
+   "file": "eip/message-expiration.ts",
+   "line": 100,
+   "text": "verify order 32",
+   "parent": "PropertyAssignment",
+   "property": "b",
+   "callee": null
+  },
+  {
+   "file": "eip/message-translator.ts",
+   "line": 36,
+   "text": "an unnamed shape",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/message-translator.ts",
+   "line": 44,
+   "text": "no translation from ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 24,
+   "text": "nothing yet",
+   "parent": "PropertyAssignment",
+   "property": "phrase",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 42,
+   "text": "verification-result fail",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 48,
+   "text": "stop after ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 48,
+   "text": " failed verifications",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 52,
+   "text": "verification-result pass",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 53,
+   "text": "resume: final review",
+   "parent": "PropertyAssignment",
+   "property": "phrase",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 54,
+   "text": "final-review-result pass",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 57,
+   "text": "stop for the operator merge",
+   "parent": "PropertyAssignment",
+   "property": "phrase",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 61,
+   "text": "The router has no rule for ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 67,
+   "text": "verification-result fail",
+   "parent": "PropertyAssignment",
+   "property": "x",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 69,
+   "text": "verification-result pass",
+   "parent": "PropertyAssignment",
+   "property": "p",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 70,
+   "text": "final-review-result pass",
+   "parent": "PropertyAssignment",
+   "property": "a",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 121,
+   "text": "resume: final review",
+   "parent": "PropertyAssignment",
+   "property": "R",
+   "callee": null
+  },
+  {
+   "file": "eip/process-manager.ts",
+   "line": 122,
+   "text": "stop for the operator merge",
+   "parent": "PropertyAssignment",
+   "property": "M",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 50,
+   "text": "CommandPersisted",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 51,
+   "text": "CommandReceipt",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 52,
+   "text": "CommandResult",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 53,
+   "text": "CommandPersisted",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 54,
+   "text": "CommandReceipt",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "eip/resequencer.ts",
+   "line": 55,
+   "text": "CommandResult",
+   "parent": "PropertyAssignment",
+   "property": "type",
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 114,
+   "text": "Two nodes of the flow share an id.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 117,
+   "text": "Link ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 117,
+   "text": " names no node ",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 119,
+   "text": "Two links of the flow share an id.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 124,
+   "text": "The flow has no node ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 129,
+   "text": "The flow has no node ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 143,
+   "text": "The flow has no link ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 256,
+   "text": "Moment ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 256,
+   "text": " is outside the flow.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 281,
+   "text": "The flow has no message ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 291,
+   "text": "The flow has no link ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 332,
+   "text": "The example has no line ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 335,
+   "text": "The flow has no step ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 340,
+   "text": "The flow has no link ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "flow.ts",
+   "line": 351,
+   "text": "The example has no message ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/collision-avoidance.simulation.ts",
+   "line": 141,
+   "text": "Engine avoid has a fixed prediction horizon of 1.5 seconds.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/coordinated-movement.presentation.ts",
+   "line": 26,
+   "text": "The survey member needs a presentation label.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/coordinated-movement.simulation.ts",
+   "line": 89,
+   "text": "The survey robot ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/coordinated-movement.simulation.ts",
+   "line": 89,
+   "text": " needs a slot.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/coordinated-movement.simulation.ts",
+   "line": 95,
+   "text": "The Harbour survey includes Camera.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 18,
+   "text": "None",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 24,
+   "text": "Wander fallback",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 40,
+   "text": "Beacon blend",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 46,
+   "text": "Wander fallback",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 307,
+   "text": "Nori",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 478,
+   "text": "Beacon blend",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 480,
+   "text": "Wander fallback",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.presentation.ts",
+   "line": 482,
+   "text": "None",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.simulation.ts",
+   "line": 118,
+   "text": "None",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.simulation.ts",
+   "line": 120,
+   "text": "Beacon blend",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/equilibrium-fallback.simulation.ts",
+   "line": 121,
+   "text": "Wander fallback",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/fixed-formations.simulation.ts",
+   "line": 79,
+   "text": "Mira",
+   "parent": "PropertyAssignment",
+   "property": "name",
+   "callee": null
+  },
+  {
+   "file": "movement/flee.simulation.ts",
+   "line": 70,
+   "text": "Flee needs finite values, positive limits, 4–239 steps and the engine radius of 20.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.presentation.ts",
+   "line": 626,
+   "text": "Mara",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.presentation.ts",
+   "line": 628,
+   "text": "Ivo",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.presentation.ts",
+   "line": 630,
+   "text": "Noor",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.simulation.ts",
+   "line": 82,
+   "text": "Mara",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.simulation.ts",
+   "line": 82,
+   "text": "Ivo",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/flocking.simulation.ts",
+   "line": 82,
+   "text": "Noor",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 66,
+   "text": "The roster needs an engine formation pattern.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 106,
+   "text": "The named roster needs an ordered release, turn and finish within 240 frames.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 109,
+   "text": "Drift correction must be enabled or disabled.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 122,
+   "text": "The pattern has no such slot.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 138,
+   "text": "Each present escort needs its original slot.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 164,
+   "text": "The pattern cannot hold the roster.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/formation-pattern-interface.simulation.ts",
+   "line": 198,
+   "text": "The pattern cannot hold the active roster.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 21,
+   "text": "North escort",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 21,
+   "text": "Medic",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 21,
+   "text": "South escort",
+   "parent": "ArrayLiteralExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 72,
+   "text": "Group parameters must be finite.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 96,
+   "text": "The journey needs positive distances and times, non-negative speeds and at most 239 steps.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/group-movement.simulation.ts",
+   "line": 100,
+   "text": "The engine planning interval and anchor pull are fixed.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/iterative-targeting.presentation.ts",
+   "line": 27,
+   "text": "The targeting status needs a presentation label.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/iterative-targeting.simulation.ts",
+   "line": 97,
+   "text": "Targeting needs finite positive limits, ordered angles and bounded integer budgets.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/jump-points.presentation.ts",
+   "line": 169,
+   "text": "A run-up frame needs its retained controller result.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/jump-points.simulation.ts",
+   "line": 88,
+   "text": "Jump points need finite values, a forward runway, positive limits and 1–239 steps.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "line": 358,
+   "text": "Kit",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "line": 584,
+   "text": "Fern",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "line": 586,
+   "text": "Moss",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "line": 588,
+   "text": "Flint",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.presentation.ts",
+   "line": 590,
+   "text": "Pebble",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.simulation.ts",
+   "line": 112,
+   "text": "The scene engine fixes fleeRadius at 20 units.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.simulation.ts",
+   "line": 118,
+   "text": "Fern",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.simulation.ts",
+   "line": 119,
+   "text": "Moss",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.simulation.ts",
+   "line": 120,
+   "text": "Flint",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/making-the-creatures.simulation.ts",
+   "line": 121,
+   "text": "Pebble",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 25,
+   "text": "None",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 29,
+   "text": "Travel",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 58,
+   "text": "Clearance",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 65,
+   "text": "None",
+   "parent": "BinaryExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 346,
+   "text": "Mica",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 351,
+   "text": "parked trolley",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 495,
+   "text": "Clearance",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 497,
+   "text": "Travel",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.presentation.ts",
+   "line": 499,
+   "text": "None",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.simulation.ts",
+   "line": 124,
+   "text": "None",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.simulation.ts",
+   "line": 124,
+   "text": "Clearance",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/priority-steering.simulation.ts",
+   "line": 124,
+   "text": "Travel",
+   "parent": "ConditionalExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.presentation.ts",
+   "line": 435,
+   "text": "Ari",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.presentation.ts",
+   "line": 437,
+   "text": "Bryn",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.presentation.ts",
+   "line": 439,
+   "text": "Cleo",
+   "parent": "CaseClause",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 12,
+   "text": "Ari",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 13,
+   "text": "Bryn",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 14,
+   "text": "Cleo",
+   "parent": "PropertyAssignment",
+   "property": "id",
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 36,
+   "text": " must be finite and non-negative.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 42,
+   "text": "The engine counts costs strictly below one.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/slot-assignment.simulation.ts",
+   "line": 59,
+   "text": "The layout and decision interval must be finite, with positive spacing and time.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/two-level-formation-steering.simulation.ts",
+   "line": 61,
+   "text": "The escort needs an engine formation pattern.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/two-level-formation-steering.simulation.ts",
+   "line": 72,
+   "text": " must describe the scene engine's fixed anchor rule.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/two-level-formation-steering.simulation.ts",
+   "line": 104,
+   "text": "This escort has three named members and at most 240 frames.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/two-level-formation-steering.simulation.ts",
+   "line": 155,
+   "text": "Each escort needs an assigned slot.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/two-level-formation-steering.simulation.ts",
+   "line": 222,
+   "text": "An assigned escort must be present.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/variable-matching.simulation.ts",
+   "line": 75,
+   "text": "Variable matching needs finite values, positive limits, a direction of ±1 and 4–239 steps.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/velocity-matching.simulation.ts",
+   "line": 63,
+   "text": "Velocity matching needs finite values, positive limits and 2–239 steps.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/wander.simulation.ts",
+   "line": 75,
+   "text": "The wander tape needs pairs of uniform inputs between zero and one.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/wander.simulation.ts",
+   "line": 122,
+   "text": "Wander needs finite values, positive motion limits and 2–239 steps.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "movement/wander.simulation.ts",
+   "line": 125,
+   "text": "The scene engine fixes wander walkingFraction at 0.4.",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "parameters.ts",
+   "line": 6,
+   "text": "Parameter ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "parameters.ts",
+   "line": 6,
+   "text": " must be a number.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "parameters.ts",
+   "line": 13,
+   "text": "Parameter ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "parameters.ts",
+   "line": 13,
+   "text": " must be text.",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/catch-error.ts",
+   "line": 7,
+   "text": "feed lost",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 33,
+   "text": "cat stored",
+   "parent": "PropertyAssignment",
+   "property": "1",
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 43,
+   "text": "dog stored",
+   "parent": "PropertyAssignment",
+   "property": "2",
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 53,
+   "text": "owl stored",
+   "parent": "PropertyAssignment",
+   "property": "3",
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 66,
+   "text": "cat stored",
+   "parent": "PropertyAssignment",
+   "property": "1",
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 66,
+   "text": "dog stored",
+   "parent": "PropertyAssignment",
+   "property": "2",
+   "callee": null
+  },
+  {
+   "file": "rxjs/concat-map.ts",
+   "line": 66,
+   "text": "owl stored",
+   "parent": "PropertyAssignment",
+   "property": "3",
+   "callee": null
+  },
+  {
+   "file": "rxjs/marbles.ts",
+   "line": 92,
+   "text": "Error: ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/marbles.ts",
+   "line": 118,
+   "text": "No display message for marble ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/marbles.ts",
+   "line": 226,
+   "text": "origins names ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/marbles.ts",
+   "line": 226,
+   "text": ", which is no input or inner stream",
+   "parent": "TemplateSpan",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/marbles.ts",
+   "line": 272,
+   "text": "two lines share the id ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/materialize.ts",
+   "line": 7,
+   "text": "row 3 is unreadable",
+   "parent": "VariableDeclaration",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 33,
+   "text": "cat stored",
+   "parent": "PropertyAssignment",
+   "property": "1",
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 43,
+   "text": "dog stored",
+   "parent": "PropertyAssignment",
+   "property": "2",
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 53,
+   "text": "owl stored",
+   "parent": "PropertyAssignment",
+   "property": "3",
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 66,
+   "text": "cat stored",
+   "parent": "PropertyAssignment",
+   "property": "1",
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 66,
+   "text": "dog stored",
+   "parent": "PropertyAssignment",
+   "property": "2",
+   "callee": null
+  },
+  {
+   "file": "rxjs/merge-map.ts",
+   "line": 66,
+   "text": "owl stored",
+   "parent": "PropertyAssignment",
+   "property": "3",
+   "callee": null
+  },
+  {
+   "file": "rxjs/observe-on.ts",
+   "line": 24,
+   "text": "connection lost",
+   "parent": "PropertyAssignment",
+   "property": "error",
+   "callee": null
+  },
+  {
+   "file": "rxjs/observe-on.ts",
+   "line": 37,
+   "text": "the browser paints",
+   "parent": "PropertyAssignment",
+   "property": "p",
+   "callee": null
+  },
+  {
+   "file": "rxjs/observe-on.ts",
+   "line": 50,
+   "text": "connection lost",
+   "parent": "PropertyAssignment",
+   "property": "error",
+   "callee": null
+  },
+  {
+   "file": "rxjs/replay-subject.ts",
+   "line": 7,
+   "text": "lint ok",
+   "parent": "PropertyAssignment",
+   "property": "a",
+   "callee": null
+  },
+  {
+   "file": "rxjs/replay-subject.ts",
+   "line": 8,
+   "text": "types ok",
+   "parent": "PropertyAssignment",
+   "property": "b",
+   "callee": null
+  },
+  {
+   "file": "rxjs/replay-subject.ts",
+   "line": 9,
+   "text": "tests ok",
+   "parent": "PropertyAssignment",
+   "property": "c",
+   "callee": null
+  },
+  {
+   "file": "rxjs/replay-subject.ts",
+   "line": 10,
+   "text": "build ok",
+   "parent": "PropertyAssignment",
+   "property": "d",
+   "callee": null
+  },
+  {
+   "file": "rxjs/replay-subject.ts",
+   "line": 11,
+   "text": "docs ok",
+   "parent": "PropertyAssignment",
+   "property": "e",
+   "callee": null
+  },
+  {
+   "file": "rxjs/retry.ts",
+   "line": 14,
+   "text": "timed out",
+   "parent": "NewExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "study-message.ts",
+   "line": 32,
+   "text": "No display message for parameter ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  },
+  {
+   "file": "study-record.ts",
+   "line": 9,
+   "text": "No study messages are registered for ",
+   "parent": "TemplateExpression",
+   "property": null,
+   "callee": null
+  }
+ ]
+}

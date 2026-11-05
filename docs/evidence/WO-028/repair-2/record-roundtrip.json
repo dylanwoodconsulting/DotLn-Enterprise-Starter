@@ -1,0 +1,407 @@
+{
+  "checkedAt": "2026-11-05T06:59:48.053Z",
+  "records": 80,
+  "differences": 0,
+  "rows": [
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/actuator.json",
+      "equal": true,
+      "originalDigest": "d703e184fcd1123d5429776feaa31936a1e109e5ce0efd72db8719555e24a83a"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/align.json",
+      "equal": true,
+      "originalDigest": "4591044910db51bd46391f6bf483fe404a765e6b79964240ac1fbfb00feca02d"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/arrive.json",
+      "equal": true,
+      "originalDigest": "33e3334339969b07d0cc55eb2f8e766abf74705983856fdb177d407c25a06144"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/blending-versus-arbitration.json",
+      "equal": true,
+      "originalDigest": "4d5ae76631413034df81548cd5b2ffe8b5b8288308ccf43880131f73ce0fdb9c"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/collision-avoidance.json",
+      "equal": true,
+      "originalDigest": "3ec4bd583fbd1453e680e67eb7770a74ab81fab36275231819a92dbf593e8268"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/coordinated-movement.json",
+      "equal": true,
+      "originalDigest": "cf1a2dc7edaf360409461300a67624e0afb9310cba5386eb0a445d2d6f8531a0"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/corner-trap.json",
+      "equal": true,
+      "originalDigest": "4d9123f210311db1160a5e604d2024923ce4ab6c9bd286b77aefa58189aa1ac3"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/equilibrium-fallback.json",
+      "equal": true,
+      "originalDigest": "a2919261905185233a3678dc6f34b99f16b243e34596ad01b493db874e9b0a70"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/face.json",
+      "equal": true,
+      "originalDigest": "3acc22d9b855b3a55cef867b8430bbb8da25284ebb83dd35f2e9807729406325"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/fixed-formations.json",
+      "equal": true,
+      "originalDigest": "61121b2428fb08cf71345228ddb960115c601f55ce1ef7d032bb4d3f459e1cb7"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/flee.json",
+      "equal": true,
+      "originalDigest": "fbc221e583944aaaaa73af520014359e97f6559df0a7f60f032300e297a18e62"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/flocking.json",
+      "equal": true,
+      "originalDigest": "6d040c5901a83021c81d238cfa4e5df3c66142cd3940a18cae830b910f7bfdcc"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/formation-pattern-interface.json",
+      "equal": true,
+      "originalDigest": "86c64037d19698946407ee7b61e32c02bf9a6a8d8c5def78301e96dae558d75b"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/group-movement.json",
+      "equal": true,
+      "originalDigest": "309c96158b89ce0eacc2dc4c003e72de6d627077bdf8bcfaa48941ee1888ad75"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/iterative-targeting.json",
+      "equal": true,
+      "originalDigest": "01e5ac01e21856b77b2749380b9b82a6469145ed5697726e9d9661de38cfc4d8"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/jump-points.json",
+      "equal": true,
+      "originalDigest": "c729bd98f24b80108fd26734f36972764c3107c00712c9ba2d87dfdc67b37497"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/kinematic-arrive.json",
+      "equal": true,
+      "originalDigest": "8eaafc037b6aa91c3d78b468609473f6fac763f7b2f969a7eb15e3788c53db57"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/kinematic-wander.json",
+      "equal": true,
+      "originalDigest": "0bdc41d66385af451b64dbc80d39ce43db8f0250e92ca22f3b4a7f94b5a81efe"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/making-the-creatures.json",
+      "equal": true,
+      "originalDigest": "744fc0c7431cbcd05684ee2a9661546ce7afa23afcd1e24317d37268d18eb0d8"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/motor-control.json",
+      "equal": true,
+      "originalDigest": "44b6ebf29c2c889da0ace935c270ebc5c75c636f4d5c5332d6076845c6a33618"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/movement-in-the-third-dimension.json",
+      "equal": true,
+      "originalDigest": "bd9c1f9b1808e4de7f035231343d2676331c3f4654f722695adc76d2fcb3ee4e"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+      "equal": true,
+      "originalDigest": "2e2d5e9d73e32fc08122a452e47792651fbd237143c5d1d5f7db1488c2efe4aa"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/priority-steering.json",
+      "equal": true,
+      "originalDigest": "636e429ca8223070a9faadf0f069be15e6f1870cbc8e874349bb96e0a0a66a99"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/projectile-trajectory.json",
+      "equal": true,
+      "originalDigest": "95f2aaaf4d8824a0b706727e64fc30511a46491f1380530b9db71f00bf83339b"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/pursue.json",
+      "equal": true,
+      "originalDigest": "e7eb3acaac83775cb98df5e1cfe00e7420eeee30fa7b4a4a219c70fb014a41e1"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/satisfaction-radius.json",
+      "equal": true,
+      "originalDigest": "bc87d199cd1702f17296602dab9d9c9b1c06aee823e52caab0ddd142f937df27"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/scalable-formations.json",
+      "equal": true,
+      "originalDigest": "40f1215cbbfff10ca53b056d08c70520519b52d0b8b67e150d27d36625f73159"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/seek.json",
+      "equal": true,
+      "originalDigest": "a1c2172dbaafea9453bed03698ccc52eea87fb88a967787a9395a0ca8055fb89"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/separation.json",
+      "equal": true,
+      "originalDigest": "fbb0051e04daa48c03adb67e3d3b76349eb4b8f04186273482a05051c7afb436"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/slot-assignment.json",
+      "equal": true,
+      "originalDigest": "5f79c4f6ca8cde48624e885943e6e386fea320e679aa50938793961f0038620a"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/steering-behaviors.json",
+      "equal": true,
+      "originalDigest": "aebe0956b838fedfa03e527b7e361b9787f359d6b4ece6c4279fe7d1d4170520"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/steering-output.json",
+      "equal": true,
+      "originalDigest": "ed912fb7aad698c82a160d87789d1326b0d15afc737ef152e912093e06442a88"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/steering-pipeline.json",
+      "equal": true,
+      "originalDigest": "6a316ef4daa67cd2255df577d11290ac7cad030f2230e43920329ef4adf24171"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/the-firing-solution.json",
+      "equal": true,
+      "originalDigest": "a99675c9bdc116962f6e4c4ddb7479944b217770dca20ee03c0626c511032ae0"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/two-and-a-half-dimensions.json",
+      "equal": true,
+      "originalDigest": "130925043464f5e572c53eece9c7b30f262e51d3ede71ffbe50d0f527171c879"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/two-level-formation-steering.json",
+      "equal": true,
+      "originalDigest": "2b8645ff440b4bde31ca040d07362288cea5a20598ba3e010f9a7be74b8b2712"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/variable-matching.json",
+      "equal": true,
+      "originalDigest": "3b46bc4d50a13af5f633ae63391acdd7af8241a7f4cdc0b50c8bef466fc75b21"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/velocity-matching.json",
+      "equal": true,
+      "originalDigest": "bba1c4f4dc3d512a5325a22b4ed23ef350f4dcda5bf27496d10787dd29c04752"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/wander.json",
+      "equal": true,
+      "originalDigest": "efae2178024e191df64e2cfa7ccf15fe6c25764246dff5717edf96724dd3702c"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/aifg/weighted-blending.json",
+      "equal": true,
+      "originalDigest": "b6386743079dc4a0baa402d69e64e575bdd1b37d7df48c4f9dd33a69126b67b7"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/behavior-subject.json",
+      "equal": true,
+      "originalDigest": "50b51bef1740d1bd6a54d3ebad94f5c38842edd802a09c1a522c99919eb97915"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/catch-error.json",
+      "equal": true,
+      "originalDigest": "abe305784ea0e806af06bc0a65fe61bc0991ad8e17b7155458a5af5ac190c9cc"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/combine-latest.json",
+      "equal": true,
+      "originalDigest": "c9352e6745b4daf21808f0942ca5a38cc7733d31072fb2b3594e81dca0624ec3"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/concat-map.json",
+      "equal": true,
+      "originalDigest": "caeaa47c6e8406046c0f7905a86539dc78e18eae0356d53a9036ad31d0dedddf"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/exhaust-map.json",
+      "equal": true,
+      "originalDigest": "eda59dc8107cef2f6d8c7bdfaa4ee8855fa4e27243cb6b5a6057acf61e5ff47f"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/finalize.json",
+      "equal": true,
+      "originalDigest": "4335eb5e40051627354a72da887f266053033877535a68fe2579763df27291d0"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/materialize.json",
+      "equal": true,
+      "originalDigest": "8b7a86a5dbb4262248b70b9b6d2ef27f5ee6af181f6b033849f94a3b1add4dfb"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/merge-map.json",
+      "equal": true,
+      "originalDigest": "0b4eed0c1ab5ad00e7d51cb39b0fa2f743d8818b4c4396b25fa9fc9e869659d4"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/observe-on.json",
+      "equal": true,
+      "originalDigest": "50ffc22fd6c942f98ba9f9cb93075aa5824fcec2947ca77347bdbc283b34b552"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/repeat.json",
+      "equal": true,
+      "originalDigest": "45e6729da4294299912d2957bb19a56bae0bd00704ebbca0a59b1d4597a96c05"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/replay-subject.json",
+      "equal": true,
+      "originalDigest": "c0558c1ab60bf10d5d20caaaa18451769087cb064d126aa5ede4ae01183b289c"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/retry.json",
+      "equal": true,
+      "originalDigest": "72fc94108585021c2cb03c095de2031d29c88a3bf248bd9ece79b9d0b92d1762"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/scan.json",
+      "equal": true,
+      "originalDigest": "576ac48187bd981f2ba4566dd17dc3bd8900da86b31949ae5f1a3ff7855a965b"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/share-replay.json",
+      "equal": true,
+      "originalDigest": "f0720467c8c697a2ff032e0916e69822d6b3707fb92ebafa4f6cb8084e2ba683"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/share.json",
+      "equal": true,
+      "originalDigest": "260da70aa709c37178db4cd9a330467ca5f7705073eb08ec6dee433d0dbf6179"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/start-with.json",
+      "equal": true,
+      "originalDigest": "01e2b7d7f59fb867c845566b019ad57147cbdbf28ca38d25b10760cff70a9602"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/subject.json",
+      "equal": true,
+      "originalDigest": "0c2bf29139ec6e92c945a9f87f218e0765c5b15fe88d168ce50dcdec4a16a436"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/switch-map.json",
+      "equal": true,
+      "originalDigest": "d44eaf1e53c7b2e9a49a302c90d949c05b8ed7655cbd7716e9653732ebc02570"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/take-until.json",
+      "equal": true,
+      "originalDigest": "f75d35e7db835664ec9824de9c667d2e442c75d7794c89b7c8b304d2cfd019d6"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/rxjs/timeout.json",
+      "equal": true,
+      "originalDigest": "21805a9b293ff811dab06729ddc049959a0dfeeb6ac15c6da2e362e06ab48109"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/aggregator.json",
+      "equal": true,
+      "originalDigest": "0868f48baff529d04fb823a8b756e9d0076112e5cb6669400bb48beea201243b"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/canonical-data-model.json",
+      "equal": true,
+      "originalDigest": "c3efecf9373ccee477e24e53eff3fff04afdb25915728fced57b7f1dacb3f084"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/channel-adapter.json",
+      "equal": true,
+      "originalDigest": "a3ce0c3fea3cbe02bbb236ca876754d94efc6e918aee6eb2ea7a5f2ec2825038"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/command-message.json",
+      "equal": true,
+      "originalDigest": "ed4949c56d81af54d87937196450240fad9763b353ef29d00fb6501ae6c4f1c6"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/competing-consumers.json",
+      "equal": true,
+      "originalDigest": "2c9a925c4074fbcc88e78e8751edb9a5396cdf1d7040b032a0a7bb8fa0dcbb21"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/content-based-router.json",
+      "equal": true,
+      "originalDigest": "46ae9c7b1aa4ec4a10b1cec979d6fdbbc0fd7e474f5b06bed81d24764d99f81f"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/control-bus.json",
+      "equal": true,
+      "originalDigest": "78242ca35f137de5c8b11e107f91c7deee86479cacf2c7561099ecabbb27fa28"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/correlation-identifier.json",
+      "equal": true,
+      "originalDigest": "befbe8492e324004fbbfa123ed93544c4ad74957adcb0785d60a997449067b1e"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/event-message.json",
+      "equal": true,
+      "originalDigest": "df7d1523322d3220a7a72f993dca95a892cb3eb706843e58e8f74e89800f7cd0"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/guaranteed-delivery.json",
+      "equal": true,
+      "originalDigest": "12db7aa384eccbd58d1359bd9fd428de8fafab56b1d274372ea6e4621b690ad0"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/message-dispatcher.json",
+      "equal": true,
+      "originalDigest": "c2945d01a38e154fb9f020491084d813fbec4ecab369e7397e3053c293e8895d"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/message-expiration.json",
+      "equal": true,
+      "originalDigest": "351521bf5c984503937164e8e6cbf63e27d4617e10b2d367ae1d6a4b98bd3fd5"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/message-store.json",
+      "equal": true,
+      "originalDigest": "c12d901721e4e8a17c491c43ff6752c81b0605ad644c0f819750852431246380"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/message-translator.json",
+      "equal": true,
+      "originalDigest": "617614205b9eb6621d1ecf64f060eba7c0fbf0b94f1a6838282300f2779341d2"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/process-manager.json",
+      "equal": true,
+      "originalDigest": "5b385d70910858915765eb7dae103cba62d4bb787f50754c3f412b3eee1ddac3"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/publish-subscribe-channel.json",
+      "equal": true,
+      "originalDigest": "07aadc54f279eb944ca5e8c4ab6a906d7cc3fb6f3e91c4e788f6f4f2b709be9b"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/recipient-list.json",
+      "equal": true,
+      "originalDigest": "cbf167880a000d8ab6cb4e32ecc2da7680d28d39d3187ef653430365c3648b30"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/request-reply.json",
+      "equal": true,
+      "originalDigest": "b73fc52fd6a04c2244eda282b3eb7d4f0acc205ea8a9ab0bc5898a8c3189fc3c"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/resequencer.json",
+      "equal": true,
+      "originalDigest": "4be7124d442d2ceebdd63a560b30f151f45e213ec02a76f66c6f4966a8ce59b7"
+    },
+    {
+      "path": "libs/shared/catalog/src/studies/eip/transactional-client.json",
+      "equal": true,
+      "originalDigest": "a60559a32b0a1c9926a10c25896485a32868282c84ead8681e8cb0e88cf5c458"
+    }
+  ]
+}

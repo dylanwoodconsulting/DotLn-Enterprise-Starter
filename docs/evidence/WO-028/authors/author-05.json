@@ -1,0 +1,125 @@
+{
+  "author": "author-05",
+  "authoredOn": "2026-11-04",
+  "status": "authored; integration and executable verification belong to the executor",
+  "studies": [
+    {
+      "id": "aifg-a:162",
+      "slug": "projectile-trajectory",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/projectile-trajectory.json",
+        "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.ts",
+        "libs/features/tools/src/lib/studies/movement/projectile-trajectory.model.spec.ts"
+      ],
+      "engineOrLocal": "study-local",
+      "engineSteps": [],
+      "localSteps": [
+        "Resolve the selected height encounter with the vertical quadratic, rejecting a negative discriminant and past roots.",
+        "Evaluate horizontal position, height and vertical velocity from one shared time under constant gravity.",
+        "Replace the first preview sample beyond contact with the unrounded contact event, then end the primary preview.",
+        "Compare the same launch against a raised selected height, with no fabricated landing when the height exceeds the apex."
+      ],
+      "engineExplanation": "The public scene-engine exports and its vector implementation were read. The engine exposes no ballistic trajectory or height-intersection helper. All mechanism arithmetic is therefore local and the record states this. No trigonometric helper is needed: the launch velocity components are parameters.",
+      "executableNullRationale": null,
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "status": "Publisher HTML was inaccessible through web.run; curl content negotiation with Accept: application/vnd.citationstyles.csl+json returned HTTP 200.",
+          "observed": "Metadata identifies AI for Games, Ian Millington, CRC Press and edition 3. It does not contain chapter text or a table of contents. The section location in the citation comes from brief/rows.json; no chapter-text claim is made."
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "status": "Opened successfully through web.run as HTML.",
+          "observed": "Section 4.3 presents independent horizontal and vertical motion, constant horizontal velocity, vertical velocity decreasing by g times t, and the height quadratic. It explicitly neglects air resistance."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/forrestthewoods/lib_fts/350529579db315c3d0c579f70d871ef13400d418/projects/unity/ballistic_trajectory/Assets/Scripts/BallisticMotion.cs",
+          "status": "Opened with curl; HTTP 200.",
+          "observed": "FixedUpdate advances current and previous positions using an impulse and downward acceleration, points the transform along the displacement, clears the impulse and destroys objects below a height cutoff. The implementation explanation does not claim that this file computes exact landing roots."
+        }
+      ],
+      "specCoverageAuthored": [
+        "Record parameters and required cross-link to The firing solution.",
+        "Concrete positions and velocity at launch, the first sample, the apex and descent.",
+        "D = 300, landing time 1 + sqrt(3), range 12 times that time, and the exact contact inserted after the 2.7-second sample.",
+        "D = -60 at height 18, no future contact, past-root rejection, an apex touch and initial-surface cases.",
+        "A preview time limit that occurs before a known landing is not labelled contact.",
+        "Determinism, per-frame placeholders, chart reference visibility and drawing bounds including paths and arrows."
+      ],
+      "limitations": [
+        "The selected height is an unlimited absorbing plane or a height query, not a finite platform collision test; an earlier obstacle is not modelled.",
+        "Only constant gravity is modelled; no drag, lift, wind or bounce is included.",
+        "A selected height can have a rising encounter and a descending encounter; this study deliberately selects the later root.",
+        "The preview is bounded in time; its endpoint is not automatically a landing."
+      ]
+    },
+    {
+      "id": "aifg-a:163",
+      "slug": "the-firing-solution",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/the-firing-solution.json",
+        "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.ts",
+        "libs/features/tools/src/lib/studies/movement/the-firing-solution.model.spec.ts"
+      ],
+      "engineOrLocal": "study-local",
+      "engineSteps": [],
+      "localSteps": [
+        "Calculate the relative horizontal distance and height offset.",
+        "Reject a negative fixed-speed firing discriminant without taking its square root.",
+        "Reconstruct low and high fixed-speed launch velocities from the two slopes, retaining one candidate at a zero discriminant.",
+        "Select the shorter target time and draw both independent candidate predictions.",
+        "Evaluate each candidate's actual water-contact time rather than clipping a raised-target flight at its target position.",
+        "Compare a target moved beyond range: no projectile is invented, and the comparison explicitly charts the request left unserved."
+      ],
+      "engineExplanation": "The engine has no publicly exported fixed-speed ballistic launch solver. The slope quadratic, velocity reconstruction, candidate prediction and exact water-contact event are local. No sine or cosine is used, because algebra reconstructs the velocity directly.",
+      "executableNullRationale": null,
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "status": "Publisher HTML was inaccessible through web.run; curl CSL content negotiation returned HTTP 200.",
+          "observed": "Metadata confirms the book identity and third edition only. The catalogued Chapter 3, section 3.5.3 location was supplied by brief/rows.json; the citation asserts coverage there without claiming to have read its text."
+        },
+        {
+          "url": "https://www.forrestthewoods.com/blog/solving_ballistic_trajectories/",
+          "status": "Opened successfully through web.run as HTML.",
+          "observed": "The stationary-target section eliminates time, substitutes launch slope and applies a quadratic to produce a low and a high firing angle. It links to the source and Unity demo."
+        },
+        {
+          "url": "https://github.com/forrestthewoods/lib_fts/blob/350529579db315c3d0c579f70d871ef13400d418/code/fts_ballistic_trajectory.cs",
+          "status": "Opened successfully through web.run as HTML; the corresponding pinned raw source was also opened with curl.",
+          "observed": "The stationary-target overload separates ground distance and height difference, returns zero for a negative discriminant, calculates low and high angles, counts equal angles once and forms launch vectors from horizontal direction plus up. A distinct overload handles constant-velocity moving targets."
+        }
+      ],
+      "specCoverageAuthored": [
+        "Record parameters and cross-link to Projectile trajectory.",
+        "D = 57600, slopes 0.5 and 2, speed-preserving velocity components and distinct target times.",
+        "Low apex at height 4; the high candidate at x 16 and height 16 when the selected low shot lands at x 32.",
+        "The x = 48 request yields D = -70400 and no shot; x = 40 yields one arc, with no clamping of a just-negative discriminant.",
+        "A raised target is passed during flight before a later true water contact.",
+        "Exact event samples, no nearly duplicate playback times, deterministic frames, matching chart lengths, empty unreachable-flight drawings and bounded positions, arrows and paths."
+      ],
+      "limitations": [
+        "Targets must be ahead of the muzzle and at or above water; vertical and behind-the-launcher targets are outside the example's admitted domain.",
+        "Candidates are analytic constant-gravity flights with fixed launch speed, no drag and a stationary target.",
+        "Neither arc is checked for obstacles, projectile size or turret turn limits.",
+        "The high candidate is an alternative launch, not a second projectile the launcher actually fires."
+      ]
+    }
+  ],
+  "verification": {
+    "testsRun": false,
+    "gatesRun": false,
+    "installsRun": false,
+    "subagentsSpawned": false,
+    "realWorktreesWritten": false,
+    "note": "The author reviewed the written records, models and specs as source. The executor must register and run them after integration; this report does not claim executable verification."
+  },
+  "usage": {
+    "cumulativeInputTokens": "unknown",
+    "cumulativeOutputTokens": "unknown",
+    "cumulativeTotalTokens": "unknown",
+    "source": "No cumulative model-token counter was exposed to this worker. Per-tool output-size fields are not model-token usage.",
+    "scope": "author-05 worker session only",
+    "cutoff": "2026-11-04 18:52:43 UTC, the last observed clock reading before handoff preparation"
+  }
+}

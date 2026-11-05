@@ -1,0 +1,16 @@
+{
+  "record": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+  "reviewedHash": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+  "checkedHash": "c10aa39986178411f2a1306cc287d4ce5aaa1b9429947ec38ddab22049927ea7",
+  "transforms": [
+    "authored.state draft to checked",
+    "authored.reviewedBy names both passing repair critics"
+  ],
+  "factual": "critics/factual-final.json",
+  "reading": "critics/reading-final.json",
+  "sourceHashes": {
+    "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json": "c5faebb865e39e3c9be6c92fd6bafe5abe41c2f3206b622441a3bd87bdc5bdff",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts": "fda69f35108911a325263c96b4091492b172d41d51193f338a01e0802dd4f109",
+    "libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts": "a6dc8f54b1fdb2c4b31060a8eb8c036664ccca19a0397fefd63e11937456692b"
+  }
+}

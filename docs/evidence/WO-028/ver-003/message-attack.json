@@ -1,0 +1,154 @@
+[
+ {
+  "name": "an empty catalog served with 200",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg"
+  ],
+  "result": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 19,
+   "firstKey": "studyAifg.flee.record.example.name",
+   "heading": "studyAifg.flee.record.example.name",
+   "alert": [],
+   "retry": false
+  }
+ },
+ {
+  "name": "a stale catalog that lacks this study",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg"
+  ],
+  "result": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 14,
+   "firstKey": "studyAifg.flee.record.example.name",
+   "heading": "studyAifg.flee.record.example.name",
+   "alert": [],
+   "retry": false
+  }
+ },
+ {
+  "name": "malformed JSON served with 200",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg",
+   "studyAifg",
+   "studyAifg"
+  ],
+  "result": {
+   "study": false,
+   "figure": false,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": null,
+   "alert": [
+    "This study could not load."
+   ],
+   "retry": true
+  }
+ },
+ {
+  "name": "only the shared narration fails, then the reader retries",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg",
+   "studyCommon",
+   "studyCommon",
+   "studyCommon"
+  ],
+  "failed": {
+   "study": false,
+   "figure": false,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": null,
+   "alert": [
+    "This study could not load."
+   ],
+   "retry": true
+  },
+  "retried": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": "Pip leaves the test beacon",
+   "alert": [],
+   "retry": false
+  }
+ },
+ {
+  "name": "the reader moves to another work while the first catalog is slow",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg",
+   "studyEip"
+  ],
+  "result": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": "Three reviewers' reports on two orders",
+   "alert": [],
+   "retry": false
+  },
+  "url": "/tools/catalog/eip:110"
+ },
+ {
+  "name": "a second reading in the same work fetches no catalog again, and back returns",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg"
+  ],
+  "second": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": "Mica's courier and the beacon",
+   "alert": [],
+   "retry": false
+  },
+  "fetchedOnSecond": 0,
+  "back": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": "Pip leaves the test beacon",
+   "alert": [],
+   "retry": false
+  },
+  "backMatches": true
+ },
+ {
+  "name": "every offered value of an input keeps the reading whole, and the example returns",
+  "pageErrors": [],
+  "requests": [
+   "studyCommon",
+   "studyAifg"
+  ],
+  "values": 11,
+  "bad": 0,
+  "after": {
+   "study": true,
+   "figure": true,
+   "rawKeys": 0,
+   "firstKey": null,
+   "heading": "Pip leaves the test beacon",
+   "alert": [],
+   "retry": false
+  }
+ }
+]

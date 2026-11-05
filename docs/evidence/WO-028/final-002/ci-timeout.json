@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "measured": "2026-11-05",
+  "note": "Single local runs of four specs under vitest verbose; localBefore is draft commit f0e70879efc6c7b757e0e378efbb97d88f03d7fc extracted to scratch with the target node_modules linked, localAfter the reviewed working tree. hostedRunner is run 42038514286; equilibrium-fallback did not finish, so its figure is the time at which the 5000 ms default stopped it.",
+  "defaultTimeoutMs": 5000,
+  "newTimeoutMs": 20000,
+  "rows": [
+    {
+      "study": "seek",
+      "test": "keeps every offered sideways start readable, labelled and inside the drawing",
+      "localBeforeMs": 1342,
+      "localAfterMs": 1256,
+      "hostedRunnerMs": 3687,
+      "hostedOverLocal": 2.94
+    },
+    {
+      "study": "flocking",
+      "test": "keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes",
+      "localBeforeMs": 1723,
+      "localAfterMs": 1655,
+      "hostedRunnerMs": 3858,
+      "hostedOverLocal": 2.33
+    },
+    {
+      "study": "equilibrium-fallback",
+      "test": "keeps every slider setting and corner finite, labelled, in bounds and true to its prose",
+      "localBeforeMs": 1791,
+      "localAfterMs": 1941,
+      "hostedRunnerMs": 5143,
+      "hostedOverLocal": 2.65
+    },
+    {
+      "study": "priority-steering",
+      "test": "keeps every slider setting and corner finite, labelled, in bounds and true to its prose",
+      "localBeforeMs": 1686,
+      "localAfterMs": 1775,
+      "hostedRunnerMs": 4355,
+      "hostedOverLocal": 2.45
+    }
+  ],
+  "ciHistory": "From the first movement batch branch on 2026-10-31 to the earlier draft of this branch on 2026-11-04, ten CI runs on heads holding these specs concluded success (gh run list --workflow CI): two on the first batch branch, two on each stream batch branch, a push to main after each of the three merges, and the earlier draft. Run 42038514286 is the first failure. A passing run prints no per-test output, so their margins, and whether nx affected ran the Tools suite in every one, are unknown."
+}

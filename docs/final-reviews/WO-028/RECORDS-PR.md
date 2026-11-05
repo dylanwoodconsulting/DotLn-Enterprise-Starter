@@ -1,0 +1,27 @@
+# WO-028 records
+
+This branch files the instance records of WO-028, the research track's first batch: twenty more Movement-chapter studies from AI for Games in DotLn-Angular, together with the shared migration the operator included in the order, which moves the text of all eighty studies into message catalogs and splits each movement model into a simulation, a presentation and an entry. The change was reviewed and published to `DylanBWood/DotLn-Angular` as pull request 14 on `feat/movement-concept-studies-2`, for the operator to merge. This branch carries no launchpad code change: its code identity is `main`'s, so no launchpad complete run is owed, and the records are the whole of it.
+
+## What a reviewer gets
+
+- FINAL-002, filed in the target at `docs/dotln/final-reviews/WO-028/FINAL-002.md` with FINAL-001, the three verification reports and the decisions once the records move. It passes all eight criteria, names one design finding the operator chose to board, and records three bounded repairs.
+- The order's [evidence](../../evidence/WO-028/README.md): the [fan-out](../../evidence/WO-028/fan-out.md) and the [critics' review](../../evidence/WO-028/review.md) of the twenty studies, the [first repair](../../evidence/WO-028/repair-1/README.md) of the drawing labels, [FINAL-001's measurements](../../evidence/WO-028/final-001/README.md), the [shared-migration repair](../../evidence/WO-028/repair-2/README.md) with its review ladder and output comparisons, [VER-003's probes](../../evidence/WO-028/ver-003/README.md), [this review's probes and repairs](../../evidence/WO-028/final-002/README.md), the walkthrough screenshots of three verifications and the [pull request record](../../evidence/WO-028/preview-pr.json).
+- Decisions D001 to D063. D039 to D041 are FINAL-001's fail on the operator's direction; D042 is the operator's expansion of the order to the shared migration; D052 to D058 are VER-003's verdict, its boarded findings and the draft refresh; D059 is this verdict and the route the operator chose; D060 boards the first batch's presentation code; D061 and D062 are this review's repairs; D063 judges the standing documents and the register.
+- The [workstream](../../workstreams/WS-002-concept-research.md), whose delivery row reads final-reviewed and whose rules 3 and 7 carry the message-system rule and the v1 record; [WS-001](../../workstreams/WS-001-dotln-angular.md), whose guard G3 no longer exempts record fields from translation; the [repository profile](../../repositories/dotln-angular.md), whose implementation map names the v1 schema and the message catalogs; and `docs/control/budgets.json`, which keeps the gate's memory share the operator set on 2026-11-04 (D013).
+- The control segment `docs/control/orders/WO-028.jsonl`, the current-state projection, the work-order index, the decisions index and the follow-up register, in which D023's and D025's rows are settled and D060's is new.
+
+## Validation
+
+- The target's declared review gate passed at the reviewed tree `45888224fe4f1b0e7c7fca4da935325e4b0df865` (commit `edb8e02dd150cec693459bf1508f275a4d6a164d`) with no tracked-byte mutation, and before that at the tree of each earlier commit in the series: the tree VER-002 verified and the tree VER-003 verified.
+- VER-003 performed the Objective's session independently in the production build at five widths through an isolated browser and compared every frame of all eighty studies with the tree before the migration. This review performed the session again on the reviewed sources, and its 80 shared step records match VER-003's byte for byte.
+- All eight criteria are met and none is waived or recorded defective. Criterion 1, which the executor recorded unmet for the verifier to perform, is met by VER-003's walkthrough.
+- On the draft, CI's `visual` and `title` jobs passed and `checks` failed on one test timeout, which D062 diagnoses and repairs in the reviewed commit. The jobs run again on the published head; their outcome is not read in these records.
+- Gates in this worktree: no launchpad code changed, so the branch's code identity is `main`'s and the records publish cites `main`'s row. `npm run test:docs` passed after the review's last record edit and again after the records moved.
+
+## Limits and follow-ups
+
+- **The first movement batch's presentation code was cut to fit the size guard.** D060 holds the measurements and the repair rule, and its follow-up gates the next movement batch. The operator chose the pass with it boarded (D059).
+- **Five verifier findings stay boarded:** the guards' two gaps (D053, with two of its three items repaired by D061), raw keys from a stale catalog (D054), the first reading's transfer size (D055), digits leading sentences (D056) and the wall study's short avoidance (D036).
+- **The operator record does not yet carry two directions** this order followed: the translation rule of 2026-11-04 and the route chosen in this review. The next planning pass writes them from the captures (D063).
+- **The kit could not bind the operator's expansion as an amendment**, because the judged horizon omits the research track's orders (D043). The order carries the authorization in its text and decisions.
+- After both merges, the operator fast-forwards `main` and dispatches `resume: release close` there. That closes the target worktree with the no-release outcome for the launchpad and cuts the target's minor release with the reviewed notes.

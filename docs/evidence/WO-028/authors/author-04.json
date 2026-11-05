@@ -1,0 +1,104 @@
+{
+  "author": "author-04",
+  "date": "2026-11-04",
+  "status": "authored; awaiting parent integration and verification",
+  "ownership": {
+    "writes": "Only the two assigned study JSON records, their model/spec pairs, and this result in the assigned private non-Git copy.",
+    "git": "Working directory verified; git rev-parse confirmed this private copy is not a Git repository. No Git mutations, real-worktree edits, workers, installations or gates.",
+    "tests": "Not run, as assigned. Specs contain executable assertions for the parent to run after registry integration.",
+    "readLimitation": "docs/operator/README.md was absent in the supplied private copy. No outside copy or local control path was opened. The parent was informed."
+  },
+  "studies": [
+    {
+      "slug": "corner-trap",
+      "id": "aifg-a:139",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/corner-trap.json",
+        "libs/features/tools/src/lib/studies/movement/corner-trap.model.ts",
+        "libs/features/tools/src/lib/studies/movement/corner-trap.model.spec.ts"
+      ],
+      "execution": "mixed",
+      "engineSteps": [
+        "seek calculates the delivery acceleration from the current rover position.",
+        "blend combines destination and admitted wall-normal requests and caps acceleration.",
+        "Public vector operations normalise whisker directions and integrate/cap velocity."
+      ],
+      "localSteps": [
+        "Finite ray/finite wall intersection, nearest-hit selection and outward wall normals: no corresponding wall-raycast helper is exported by public_api.ts.",
+        "A hit requests a fixed-strength outward normal; the baseline admits both hits.",
+        "The comparison changes only winnerRay from disabled to enabled, admitting the upper correction alone when both rays hit.",
+        "Fixed-step position update and a stall predicate requiring both ray hits, small acceleration and small speed."
+      ],
+      "exampleAndChecks": "The starting rays intersect actual walls at (14, \u00b11.5). Wall requests (-3, \u00b14) and engine seek (6, 0) cancel. The winning upper correction produces acceleration (3, 4), velocity (0.75, 1) and next position (8.1875, 0.25). Specs also cover finite-segment misses, repeated stall, coasting, initial recovery, caps, shown values and drawing bounds.",
+      "limitations": [
+        "This executes the cancellation version of a corner trap, with deliberately balanced strengths, rather than reproducing gdx-ai's alternating-nearest-hit implementation.",
+        "The short winning-ray comparison demonstrates breaking the local equilibrium and starting a detour; it does not claim a complete collision-free route around the wedge.",
+        "No body sweep, adaptive fan, general collision response, automatic recovery detector or route planner is supplied."
+      ],
+      "executableNullRationale": null,
+      "rxjsNullRationale": "A deterministic sampled geometry calculation needs no stream representation to explain the failure."
+    },
+    {
+      "slug": "blending-versus-arbitration",
+      "id": "aifg-a:143",
+      "files": [
+        "libs/shared/catalog/src/studies/aifg/blending-versus-arbitration.json",
+        "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.ts",
+        "libs/features/tools/src/lib/studies/movement/blending-versus-arbitration.model.spec.ts"
+      ],
+      "execution": "mixed",
+      "engineSteps": [
+        "seek calculates the marshal and delivery requests from each lane's current trolley position.",
+        "blend calculates the weighted sum and separately caps each arbitration group.",
+        "firstActive actually selects the first capped group above epsilon; its strict comparison and all-silent result are covered in the spec.",
+        "Public vector operations cap velocity after the selected acceleration is applied."
+      ],
+      "localSteps": [
+        "A held-then-linearly-fading marshal signal supplies the deterministic example input.",
+        "The two policies integrate their own trolley states with the same fixed time step.",
+        "The comparison changes only marshalWeight from its baseline value to heavierWeight, exposing that a larger multiplier does not establish precedence."
+      ],
+      "exampleAndChecks": "Opposing \u00b16 requests give zero blended acceleration but marshal-first arbitration gives -6. At 2.75 s, blend gives 5.25 and priority -0.75; at 3 s priority changes to +6 while velocity remains continuous. With marshal weight 2, at 2.25 s the blend gives +1.5 while priority still gives -4.5. Specs cover these numbers, threshold equality, caps, motion, model values and drawing bounds.",
+      "limitations": [
+        "The marshal envelope is a scripted instruction, not a collision detector.",
+        "The monotonic signal demonstrates one handover, not suppression of noise-driven winner chatter.",
+        "Neither combination rule validates the safety or wisdom of its child requests."
+      ],
+      "executableNullRationale": null,
+      "rxjsNullRationale": "The mechanism is vector combination and selection; introducing streams would add a clock wrapper without clarifying that distinction."
+    }
+  ],
+  "openedUrls": [
+    {
+      "url": "https://doi.org/10.1201/9781351053303",
+      "accessed": "2026-11-04",
+      "status": "Web HTML open was inaccessible. curl with Accept: application/vnd.citationstyles.csl+json succeeded with observed HTTP 200.",
+      "observedClaim": "Crossref metadata identifies AI for Games, author Ian Millington, edition 3, publisher CRC Press and DOI 10.1201/9781351053303.",
+      "scope": "No chapter text was obtained. Section placement in the minimal book references follows the supplied catalog rows; no claim is made to have read the book's treatment."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/RaycastObstacleAvoidance.java",
+      "accessed": "2026-11-04",
+      "status": "Opened successfully with web tool; text/plain source returned, 210 lines.",
+      "observedClaim": "The implementation selects the nearest ray hit, offsets it along the normal and seeks that target. Its class documentation describes alternating turn requests at a pointed corner and discusses adaptive fans and temporary winning rays."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/BlendedSteering.java",
+      "accessed": "2026-11-04",
+      "status": "Opened successfully with web tool; text/plain source returned, 177 lines.",
+      "observedClaim": "Child outputs are multiplied by weights, accumulated and capped. Its documentation says the weights need not sum to one."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/PrioritySteering.java",
+      "accessed": "2026-11-04",
+      "status": "Opened successfully with web tool; text/plain source returned, 156 lines.",
+      "observedClaim": "Children are evaluated in order against epsilon squared; the final small output is returned if none qualifies. The documentation describes placing blended groups in priority order."
+    }
+  ],
+  "tokenUsage": {
+    "cumulativeTokens": "unknown",
+    "availableCounters": "No cumulative input/output token counter is exposed to this author session.",
+    "scope": "author-04 work in its private copy only; excludes parent and other authors",
+    "cutoff": "After authored-file readback and source checks, before parent integration or test execution"
+  }
+}

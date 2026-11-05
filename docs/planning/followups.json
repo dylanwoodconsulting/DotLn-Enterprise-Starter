@@ -6373,6 +6373,427 @@
           "at": "2026-11-03T18:57:56.411Z"
         }
       ]
+    },
+    {
+      "id": "FUP-2c1a53924446e9dd",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d005",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "20946e8782973945d754d260e43aa4853543958e2bd15ba831ad34260e5c7254",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d005",
+          "title": "WO-028-D005: Plan a soldier-scene shooting and bullets feature order. Priority: next Angular road planning pass. The operator wants the request retained so it is not forgotten; the current scene has…",
+          "summary": "{ \"id\": \"WO-028-D005\", \"date\": \"2026-11-04\", \"dispatch\": \"operator follow-up request during resume: next\", \"decision\": \"Record shooting and bullets in the soldier scene as a candidate for the next Angular road planning pass. The current research batch continues to add Catalog studies only; this request authorizes retaining the feature request, not implementing new scene behaviour in WO-028.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-scene-shooting-followup-2026-11-04.md, SHA-256 91de02f4aa54b9300fe157b373b277993302cddf81d95f67344a8409b6733085\", \"WO-028 adds Projectile trajectory, The firing solution and Iterative targeting studies with executable models. WS-002 rule 4 ",
+          "missing": false
+        },
+        {
+          "hash": "bb4bc985a866dcfe64dc1e92e4ee9d453a14e19c6f81ca9bd6684a64080635bb",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d005",
+          "title": "WO-028-D005: Plan a soldier-scene shooting and bullets feature order. Priority: next Angular road planning pass. The operator wants the request retained so it is not forgotten; the current scene has…",
+          "summary": "{ \"id\": \"WO-028-D005\", \"date\": \"2026-11-04\", \"dispatch\": \"operator follow-up request during resume: next\", \"decision\": \"Record shooting and bullets in the soldier scene as a candidate for the next Angular road planning pass. The current research batch continues to add Catalog studies only; this request authorizes retaining the feature request, not implementing new scene behaviour in WO-028.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-scene-shooting-followup-2026-11-04.md, SHA-256 91de02f4aa54b9300fe157b373b277993302cddf81d95f67344a8409b6733085\", \"WO-028 adds Projectile trajectory, The firing solution and Iterative targeting studies with executable models. WS-002 rule 4 ",
+          "missing": false
+        },
+        {
+          "hash": "7d17ba37ba7a652da2851e409d1cda9ebad9c724f464679446d57d11ae2d380c",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d005",
+          "title": "WO-028-D005: Plan a soldier-scene shooting and bullets feature order. Priority: next Angular road planning pass. The operator wants the request retained so it is not forgotten; the current scene has…",
+          "summary": "{ \"id\": \"WO-028-D005\", \"date\": \"2026-11-04\", \"dispatch\": \"operator follow-up request during resume: next\", \"decision\": \"Record shooting and bullets in the soldier scene as a candidate for the next Angular road planning pass. The current research batch continues to add Catalog studies only; this request authorizes retaining the feature request, not implementing new scene behaviour in WO-028.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-scene-shooting-followup-2026-11-04.md, SHA-256 91de02f4aa54b9300fe157b373b277993302cddf81d95f67344a8409b6733085\", \"WO-028 adds Projectile trajectory, The firing solution and Iterative targeting studies with executable models. WS-002 rule 4 ",
+          "missing": false
+        },
+        {
+          "hash": "4e55232435d714ab5a607040198a715d4aa4b41f3736d22d479c97f4910b7d54",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d005",
+          "title": "WO-028-D005: Plan a soldier-scene shooting and bullets feature order. Priority: next Angular road planning pass. The operator wants the request retained so it is not forgotten; the current scene has…",
+          "summary": "{ \"id\": \"WO-028-D005\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: next; operator follow-up request\", \"decision\": \"Record shooting and bullets in the soldier scene as a candidate for the next Angular road planning pass. The current research batch continues to add Catalog studies only; this request authorizes retaining the feature request, not implementing new scene behaviour in WO-028.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-scene-shooting-followup-2026-11-04.md, SHA-256 91de02f4aa54b9300fe157b373b277993302cddf81d95f67344a8409b6733085\", \"WO-028 adds Projectile trajectory, The firing solution and Iterative targeting studies with executable models. WS-002 rule 4 limits",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-4074e73fddc1a963",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d018",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "9f438301a2981c424e50cd323508f0602572e9b9fd5fd7f20824180bbf7b5419",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d018",
+          "title": "WO-028-D018: Save this verifier duty for DotLn-Angular work orders that are research heavy, whether research is all they do or only part of them. Priority: next planning pass. The verifier takes a…",
+          "summary": "{ \"id\": \"WO-028-D018\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; operator direction during verification\", \"decision\": \"Add a quality read to VER-001: a random sample of the new studies, judged for quality and content, with a pattern of low quality admitted as grounds to fail the order. File the concept as a follow-up for the next planning pass, which is the form the operator settled on after first asking to save it; no standing document changes in this session.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-verifier-quality-sample-2026-11-04.md, SHA-256 01ddf8780c481f59f1758d8814ad1fd617ba5fa81f85dd81173ac1769cc0c7a1 (the first three messages it holds).\", \"The sam",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-0878f70cba928b9c",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d019",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "8b820c374148c45d46e43ce4c1c982040f86f13477c5ecd30b202411324b36eb",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d019",
+          "title": "WO-028-D019: Save the rule of cool for scene-type DotLn-Angular work orders only, in both directions. Priority: next planning pass. Failing direction: the WO-015-D003 bar, sharpened to a hostile…",
+          "summary": "{ \"id\": \"WO-028-D019\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; operator direction during verification\", \"decision\": \"File a follow-up carrying the rule of cool into verification for scene-type DotLn-Angular work orders only. It does not bind WO-028, which is a research order, and VER-001 does not judge WO-028 by it.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-verifier-quality-sample-2026-11-04.md, SHA-256 01ddf8780c481f59f1758d8814ad1fd617ba5fa81f85dd81173ac1769cc0c7a1 (the fourth, fifth and sixth messages it holds).\", \"The scene order's bar is recorded in the target's docs/dotln/evidence/WO-015/decisions.md, WO-015-D003, with its own capture, SHA-256 ecf1583",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-38a529604503d7df",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d020",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "2a94c4bbae2f04f847edb1115413f8dfe77c87520cea555e2749ad38567546ce",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d020",
+          "title": "WO-028-D020: Make this a standing rule for DotLn-Angular verification. Priority: next planning pass. UI issues at the operator's full size can fail an order; issues at other resolutions are boarded…",
+          "summary": "{ \"id\": \"WO-028-D020\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; operator direction during verification\", \"decision\": \"For VER-001, UI issues at the operator's full size can fail the order and issues at other resolutions are boarded follow-ups. The full size is either of two viewports: 3840×1620, and the centre browser window of about 2080×1460 where the operator mostly opens the UI. File a follow-up to make this a standing rule.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-verifier-quality-sample-2026-11-04.md, SHA-256 01ddf8780c481f59f1758d8814ad1fd617ba5fa81f85dd81173ac1769cc0c7a1 (the seventh, eighth and ninth messages it holds).\", \"A 5120×2160 panel at 133%",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-dd62a5660d894ef0",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d021",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "a0c6350039c7ba8b812819626cf02405406f3681cd272fbab2e948f33be823b6",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d021",
+          "title": "WO-028-D021: Record the operator's preference that paired-comparison (eye doctor test) screenshots are captured at about 2080×1460, the centre browser window they mostly use. Priority: next planning…",
+          "summary": "{ \"id\": \"WO-028-D021\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; operator direction during verification\", \"decision\": \"File a follow-up for the operator's preferred size of paired-comparison screenshots: about 2080×1460, the centre browser window WO-028-D020 measured. WO-028 renders no pair, so this binds nothing in this order.\", \"evidence\": [ \"Ignored operator capture docs/intake/notes/wo028-verifier-eye-test-size-2026-11-04.md, SHA-256 cc1746dc2f88f599e55de07d589955a63aeff8cf31f409babf87492a14e53898.\", \"WO-028's Design engages no paired comparison (WS-002 rule 1); the operator record and WS-001 rule 25 carry the eye doctor test.\" ], \"rejected\": [ { \"option\": \"Edit the operator rec",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-60963b928b85daa5",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d023",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "a4cdc0ff75409b9e1f14656b7487f1c575bbc6ea5480d399077952dd51725ee9",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d023",
+          "title": "WO-028-D023: Clear WO-028's narrow-width drawing labels. At 360 pixels, beyond F1's labels: Blending versus arbitration cuts marshal on all 21 frames (reading arshal), Iterative targeting cuts…",
+          "summary": "{ \"id\": \"WO-028-D023\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment under the operator's directions\", \"decision\": \"Board the label defects that appear only below the operator's full sizes, as their rule directs.\", \"evidence\": [ \"docs/evidence/WO-028/ver-001/label-sweep.json, viewport 360x900, against 3840x1620; docs/evidence/WO-028/ver-001/frames/ holds the 360-pixel captures.\" ], \"rejected\": [ { \"option\": \"Count them toward the failure\", \"reason\": \"The operator's rule makes other resolutions boarded follow-ups.\" } ], \"reopenWhen\": \"A repair clears them, or the standing rule of D020's follow-up changes how narrow widths are judged.\", \"followup\": \"Clear WO-028's narrow",
+          "missing": false
+        },
+        {
+          "hash": "852774634131b52388095392d7a582d6351c60a57d4563c819cfdd95ff77a743",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d023",
+          "title": "WO-028-D023: Clear WO-028's narrow-width drawing labels. At 360 pixels, beyond F1's labels: Blending versus arbitration cuts marshal on all 21 frames (reading arshal), Iterative targeting cuts…",
+          "summary": "{ \"id\": \"WO-028-D023\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment under the operator's directions\", \"decision\": \"Board the label defects that appear only below the operator's full sizes, as their rule directs.\", \"evidence\": [ \"docs/evidence/WO-028/ver-001/label-sweep.json, viewport 360x900, against 3840x1620; docs/evidence/WO-028/ver-001/frames/ holds the 360-pixel captures.\" ], \"rejected\": [ { \"option\": \"Count them toward the failure\", \"reason\": \"The operator's rule makes other resolutions boarded follow-ups.\" } ], \"reopenWhen\": \"A repair clears them, or the standing rule of D020's follow-up changes how narrow widths are judged.\", \"followup\": \"Clear WO-028's narrow",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-028 final review (FINAL-002, D063): the first repair's shared label placement cleared the narrow-width labels D023 boarded (D031), and VER-002 and VER-003 read zero cut or overprinted labels for both movement batches at 360, 768 and 1440 with VER-001's unchanged sweep.",
+          "reopenWhen": "A rendered case reproduces a cut or overprinted drawing label at a narrow width.",
+          "targets": [],
+          "at": "2026-11-05T14:28:37.489Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-191e65317f5e73f4",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d024",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "0b6824e14067d4f71f481e7f51b1aa76ec489bff0e7798d5a91090b089bfe46b",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d024",
+          "title": "WO-028-D024: Decide how the catalog and its studies use a full 3840×1620 screen. Priority: next Angular road planning pass. Today a 686-pixel reading column floats between about 830 and 880 pixels of…",
+          "summary": "{ \"id\": \"WO-028-D024\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment under the operator's directions\", \"decision\": \"Board the catalog's full-screen layout at 3840×1620 for road planning. It is a UI issue at the operator's full size, but it does not fail this order: it predates WO-028, this order changes no catalog page layout, and changing it is a design round the research track excludes. The operator can overrule this.\", \"evidence\": [ \"Measured in the served production build at 3840×1620: the study column is 686 pixels wide from x 2271 to x 2957, with about 830 pixels empty to its left and about 880 to its right, and the drawing stays 686×248. At the centre window of ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-a86466d345ee6410",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d025",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "a94ed39cd6c74bdfb290ff10a86ec2fd407e87754932b00685f059fb533935da",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d025",
+          "title": "WO-028-D025: In WO-028's repair, or in the next movement batch if it is not made there: give Obstacle and wall avoidance a default run on a glancing approach, so the normal-offset target visibly…",
+          "summary": "{ \"id\": \"WO-028-D025\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment from the quality sample\", \"decision\": \"Route two study defects to WO-028's repair under Adjacent Repair; neither fails the order. Obstacle and wall avoidance's default run demonstrates the failure and never the avoidance, and all twenty new studies are bylined with a bare worker label.\", \"evidence\": [ \"Obstacle and wall avoidance: on all 81 frames the courier's y stays 0.00; it stops at clearance 3.80 and holds near clearance 4.92 with its velocity reversing, the delivery unreachable, and its only input is the ray length. The record and caption say so honestly. The Objective reaches Corner trap to rea",
+          "missing": false
+        },
+        {
+          "hash": "93803a49487b0a64fbb10149f627b67d6852b8b79c47764b9181ec583c3107f4",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d025",
+          "title": "WO-028-D025: In WO-028's repair, or in the next movement batch if it is not made there: give Obstacle and wall avoidance a default run on a glancing approach, so the normal-offset target visibly…",
+          "summary": "{ \"id\": \"WO-028-D025\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment from the quality sample\", \"decision\": \"Route two study defects to WO-028's repair under Adjacent Repair; neither fails the order. Obstacle and wall avoidance's default run demonstrates the failure and never the avoidance, and all twenty new studies are bylined with a bare worker label.\", \"evidence\": [ \"Obstacle and wall avoidance: on all 81 frames the courier's y stays 0.00; it stops at clearance 3.80 and holds near clearance 4.92 with its velocity reversing, the delivery unreachable, and its only input is the ray length. The record and caption say so honestly. The Objective reaches Corner trap to rea",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-028 final review (FINAL-002, D063): the first repair gave Obstacle and wall avoidance a default run that passes the wall with the head-on run as its comparison, and all twenty bylines name their author (D032); VER-002 and VER-003 confirm both. What the repair left, the short action of the ray, is carried by D036's own row.",
+          "reopenWhen": "The wall study's default run or the bylines regress from the verified state.",
+          "targets": [],
+          "at": "2026-11-05T14:28:37.505Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-fe64fadae3ba9bae",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d036",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "17376f40dc627e83a2e65cdc1ee7207448bc6e346f5d714de9beec4c1503e3a2",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d036",
+          "title": "WO-028-D036: Make Obstacle and wall avoidance's default run show the avoidance doing the turning. Priority: next movement batch or the road pass that takes shooting, obstacles and walls. Hold this…",
+          "summary": "{ \"id\": \"WO-028-D036\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment of the repaired wall study\", \"decision\": \"Board the repaired wall study's weak demonstration of avoidance. It does not fail the order. D032's claim that the default run visibly turns and passes the wall holds, but the turn is almost entirely Seek's pull towards the offset delivery, so D025's rule that the normal-offset target visibly turns the courier along the wall is only partly met.\", \"evidence\": [ \"docs/evidence/WO-028/ver-002/wall-recompute.py and wall-recompute.txt, which share no code with the model and reproduce its printed numbers: the ray hits on 2 of 81 frames (0.5 s and 0.6 s). With the ra",
+          "missing": false
+        },
+        {
+          "hash": "8af34a12a805ba1358402efac44d997e32ec78451924d76daf63b92f04d52f0c",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d036",
+          "title": "WO-028-D036: Make Obstacle and wall avoidance's default run show the avoidance doing the turning. Priority: next movement batch or the road pass that takes shooting, obstacles and walls. Hold this…",
+          "summary": "{ \"id\": \"WO-028-D036\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment of the repaired wall study\", \"decision\": \"Board the repaired wall study's weak demonstration of avoidance. It does not fail the order. D032's claim that the default run visibly turns and passes the wall holds, but the turn is almost entirely Seek's pull towards the offset delivery, so D025's rule that the normal-offset target visibly turns the courier along the wall is only partly met.\", \"evidence\": [ \"docs/evidence/WO-028/ver-002/wall-recompute.py and wall-recompute.txt, which share no code with the model and reproduce its printed numbers: the ray hits on 2 of 81 frames (0.5 s and 0.6 s). With the ra",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-ead16d35dae7cde7",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d037",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "db9507bf154ed884cb8712d146d21e4a6e795b9b8167b0c182e8300cac791996",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d037",
+          "title": "WO-028-D037: Tidy the shared motion drawing's marks. Priority: next movement batch. Rules: a guide ends at the near edge of its name, never behind it; a vector too short to read is not drawn; and the…",
+          "summary": "{ \"id\": \"WO-028-D037\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment of the shared label placement\", \"decision\": \"Board three small marks the label repair leaves. None cuts or overprints a name, and all names read in the frames examined, so none fails the order.\", \"evidence\": [ \"A guide runs to labelY + 4 whichever side of the anchor its name sits on, so a name placed below its anchor has the guide behind its whole height with a stub showing beneath it. docs/evidence/WO-028/ver-002/frames/blending-10.png shows it under marshal, blend and delivery. By the shared drawing's own coordinates this affects 160 of 990 new frames and 121 of 2,485 first-batch frames, the latter ",
+          "missing": false
+        },
+        {
+          "hash": "6bf6c7c9014338c31e1c0976dc5de89847e080ae7537812aae20a28f4deca7b4",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d037",
+          "title": "WO-028-D037: Tidy the shared motion drawing's marks. Priority: next movement batch. Rules: a guide ends at the near edge of its name, never behind it; a vector too short to read is not drawn; and the…",
+          "summary": "{ \"id\": \"WO-028-D037\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; verifier judgment of the shared label placement\", \"decision\": \"Board three small marks the label repair leaves. None cuts or overprints a name, and all names read in the frames examined, so none fails the order.\", \"evidence\": [ \"A guide runs to labelY + 4 whichever side of the anchor its name sits on, so a name placed below its anchor has the guide behind its whole height with a stub showing beneath it. docs/evidence/WO-028/ver-002/frames/blending-10.png shows it under marshal, blend and delivery. By the shared drawing's own coordinates this affects 160 of 990 new frames and 121 of 2,485 first-batch frames, the latter ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-9c3d801c73d041b9",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d038",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "3ab65ca8a9eb659a2f7eb2539b3fe44f524438353bc39d3b44f1ae92c903d92a",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d038",
+          "title": "WO-028-D038: Make worker record state the worker that actually reviewed. Priority: next planning pass, as a request to core if the file stays kit-owned. Reproduction: run a non-Claude worker's…",
+          "summary": "{ \"id\": \"WO-028-D038\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: verify; defect outside the order's declared surfaces\", \"decision\": \"Board a recording defect in the kit's review helper. It is outside this order's criteria and surfaces and changes no judgment here, because repair-1/reviews/README.md states the workers' real identities and the reviewed target trees.\", \"evidence\": [ \"scripts/lib/review-worker.mjs, recordAgentReview: it refuses --host, appends --host claude itself, and takes its pins from TRANSPORT_DEFAULTS['claude-cli-print'], so the record it files names Claude's host and model whichever worker returned the text. Its reviewed tree is the working tree of the launchpad it runs ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-c184dca02ed41cf9",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d040",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "d3087a2cba3b8c7f6212806da0be67755931b87be27e0e4d58f7a6547e49d5e2",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d040",
+          "title": "WO-028-D040: File a road order that moves every on-screen study string into the message system and reshapes the study models, before any further research batch runs. Priority: next planning pass.…",
+          "summary": "{ \"id\": \"WO-028-D040\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: final review; the operator's direction during the final review\", \"decision\": \"Board the migration the fail needs as a road order for the next planning pass: every study string on screen through the message system, the mechanism split from frame assembly and narration with shared helpers, a function-size rule, and checks that refuse the next violation, over all 81 studies (61 merged, 20 in WO-028) and the research track's brief. This review files no order and edits no shared code; the pass owns the shape of the fix.\", \"evidence\": [ \"The same capture, SHA-256 f4f42e5c934cb06ed012351256de90a78b6f8f04ca5b5fff0de93955774f18c6.\", \"d",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "WO-028-D042 explicitly authorizes the shared authored-study migration in WO-028. D043 corrects the corpus to 80 and records the unavailable amendment binding. D044 separates the remaining mined-catalog planning question into FUP-277d3741530b7979; no separate study road order remains necessary.",
+          "reopenWhen": "WO-028 is withdrawn or its verification/final review finds the shared study translation and model repair incomplete.",
+          "targets": [
+            "WO-028"
+          ],
+          "at": "2026-11-05T07:21:56.588Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-347c210646a66468",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d041",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "5de05b0bcc1298b09bd5f4867144dfa8c0f0e4da00e4b58f3bf2a299ff8ee063",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d041",
+          "title": "WO-028-D041: Strike WS-001 G3's exemption and the catalog architecture's untranslated-data line in favour of the operator's rule that every string on screen goes through the message system, and give…",
+          "summary": "{ \"id\": \"WO-028-D041\", \"date\": \"2026-11-04\", \"dispatch\": \"resume: final review; the operator's direction during the final review\", \"decision\": \"Record for the next planning pass that the standing records contradict the operator's rule and that the roles' duties let the contradiction pass: WS-001 design guard G3 exempts every catalog or record field from translation, the target's catalog architecture says source text is untranslated data, the i18n check reads templates only, and the executor, the two critics, the three reviewers and the verifier judge conformance to the order and to WO-020's brief, which this order reuses by design, so a shape that entered with WO-020 passed through WO-021, W",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "WO-028-D042 includes the standing study rules and author/reviewer guidance. The candidate updates WS-001 G3, WS-002, the repository profile and target rules; the remaining planner-owned operator-record reconciliation is retained by FUP-277d3741530b7979.",
+          "reopenWhen": "WO-028 is withdrawn or its verification/final review finds the study guidance still exempts authored record text or reused models from the house rules.",
+          "targets": [
+            "WO-028"
+          ],
+          "at": "2026-11-05T07:21:56.602Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-ac85b05ea08a1dce",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d043",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "61734aa49a77ca5ecd4fc7cdadca51fc1bb3bbc9d4b87019b8946cd7a36d1930",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d043",
+          "title": "WO-028-D043: Core planning: include research-track member orders in the judged subject or provide a supported execution-amendment binding for an authorized active order outside that horizon.…",
+          "summary": "{ \"id\": \"WO-028-D043\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: fix\", \"decision\": \"The operator authorization and bounded expansion are recorded in D042 and in the order. The amend-order helper refused because the latest judged horizon lists only the road orders, excluding WO-028 and the other research-track orders. Its unchanged implementation admits an amendment only for an ID in receipt.subject.orders. The ordinary planning check passes at the current tree, with no hold or unmatched amendment. Continue the authorized repair without inventing an amendment event or altering kit code. Correct the corpus count in FINAL-001’s proposed migration: the actual registered directories contain 80 r",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "D043 records the reproducible core planning limitation. The explicit operator authorization permits this application repair to proceed; changing kit planning semantics is outside its scope.",
+          "reopenWhen": "The next planning pass routes the research-order amendment limitation to core, or a starter supplies the supported binding.",
+          "targets": [],
+          "at": "2026-11-05T07:21:56.615Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-277d3741530b7979",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d044",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "a879d4b9e16e3fc43390998e6bda0b0a877f2235c9151c493ede0de01248fc4d",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d044",
+          "title": "WO-028-D044: Planning: settle translation ownership for the mined catalog definitions and reconcile the operator record with the now-enforced authored-study rule. D040's authored-study migration and…",
+          "summary": "{ \"id\": \"WO-028-D044\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: fix\", \"decision\": \"Use concept-study-v1 for message-key records, lazy work catalogs for the preserved English text, and an explicit translator at the presentation boundary. Forty movement models compose simulation and presentation modules; shared formatting preserves each authored rounding mode. Stream examples retain raw payloads and use separate message descriptors. The message loader is provided at the lazy Tools route, waits for the requested language, and guards stale responses. The static consumer check, alternate-translator corpus test and 80-line lint rule enforce complementary boundaries; readability remains a review ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "D044 preserves the mined-catalog ownership and operator-record questions left by D040/D041. The approved repair covers all authored studies and their shared machinery; it does not authorize a wholesale migration of mined definitions or planner-owned records.",
+          "reopenWhen": "The next planning pass incorporates the operator's translation direction and judges the mined catalog's treatment.",
+          "targets": [],
+          "at": "2026-11-05T07:21:56.628Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-18196fce63f48718",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d053",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "062877896f2a8a662819d7ddb04a9d56e5f79c2b0801687cdd41247865bde1bd",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d053",
+          "title": "WO-028-D053: Tighten the study guards. Priority: before the next research batch. Rules: the corpus test in libs/features/tools/src/lib/studies/study-models.spec.ts brackets each message at both ends…",
+          "summary": "{ \"id\": \"WO-028-D053\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier attack on the study text and size guards\", \"decision\": \"Board three gaps in the guards the repair added. They hold the ordinary forms, so nothing fails: a bare literal is refused by i18n:check or the corpus test, and an oversized function by the gate's lint. A literal appended to a resolved message and a literal message parameter pass both, and the real corpus has one instance of the second. The 80-line rule also reaches study files only through Nx.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/README.md §Injection in a private copy: label: t(key) + ' the runner, in plain English' and a parameter of 'twenty pl",
+          "missing": false
+        },
+        {
+          "hash": "7aa3ace42ac19259ba9a53ebb936dbf69960ce8325b3b651881f99ab5240181e",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d053",
+          "title": "WO-028-D053: Tighten the study guards. Priority: before the next research batch. Rules: the corpus test in libs/features/tools/src/lib/studies/study-models.spec.ts brackets each message at both ends…",
+          "summary": "{ \"id\": \"WO-028-D053\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier attack on the study text and size guards\", \"decision\": \"Board three gaps in the guards the repair added. They hold the ordinary forms, so nothing fails: a bare literal is refused by i18n:check or the corpus test, and an oversized function by the gate's lint. A literal appended to a resolved message and a literal message parameter pass both, and the real corpus has one instance of the second. The 80-line rule also reaches study files only through Nx.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/README.md §Injection in a private copy: label: t(key) + ' the runner, in plain English' and a parameter of 'twenty pl",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-86db793258214c51",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d054",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "bdbc59859971098182f25c8ed3fac4981613d52795e2aeea00e35b879c6d4364",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d054",
+          "title": "WO-028-D054: Make a missing study message fail closed. Priority: before the app is deployed with long-lived asset caching. Rule: when a loaded catalog lacks a key the record or model asks for, the…",
+          "summary": "{ \"id\": \"WO-028-D054\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier attack on the lazily loaded catalogs\", \"decision\": \"Board that a catalog missing a study's keys renders those keys to the reader with no failure state. A failed or malformed response already reaches the alert with Try again; an empty or stale one answered 200 does not. The migration creates this: records and prose used to ship in one hashed chunk, and now a content-hashed chunk depends on an unhashed JSON file. No supported input reaches it today, because the two ship together and the target's profile records no deployment, so it fails nothing.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/message-attack.json:",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-b2ca88c7d6462f27",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d055",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "e6fbedd839ac034480104dc2276b5c161cd45d46b9d651fd6aa0283ac4229476",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d055",
+          "title": "WO-028-D055: Decide whether a study's narration loads with its own model. Priority: next planning pass, read with the next batches' growth. Measure on a throttled profile first, as the target's…",
+          "summary": "{ \"id\": \"WO-028-D055\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier measurement of the first reading\", \"decision\": \"Board the measured cost of work-level catalogs for a planning decision. The first AI for Games reading transfers 186 kB gzipped where it transferred 102 kB, because one catalog carries every model's narration and every title in the work. D042 chose work-level loading and no budget governs lazy assets, so this breaks nothing; D042 names a measured regression as its reopening condition, and these are the numbers. Later readings in the work fetch no catalog, and the initial bundle grows by 653 bytes.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/README.md §What a fi",
+          "missing": false
+        },
+        {
+          "hash": "eca865aa4a6c921548bdbaeb19b94c102a277ea3453d54d07612c9c527d04e2b",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d055",
+          "title": "WO-028-D055: Decide whether a study's narration loads with its own model. Priority: next planning pass, read with the next batches' growth. Measure on the target performance guide's constrained…",
+          "summary": "{ \"id\": \"WO-028-D055\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier measurement of the first reading\", \"decision\": \"Board the measured cost of work-level catalogs for a planning decision. The first AI for Games reading transfers 186 kB gzipped where it transferred 102 kB, because one catalog carries every model's narration and every title in the work. D042 chose work-level loading and no budget governs lazy assets, so this breaks nothing; D042 names a measured regression as its reopening condition, and these are the numbers. Later readings in the work fetch no catalog, and the initial bundle grows by 653 bytes.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/README.md §What a fi",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-84dd7018fe2c47a7",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d056",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "44b74779525366c35f82a93c46213e5279bd6365072d4407bc4dc89e74be30b7",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d056",
+          "title": "WO-028-D056: Reword the stream messages where a computed count opens a sentence or a label, so the digit does not lead: for example, There are now 2 photos waiting. Priority: with the next stream…",
+          "summary": "{ \"id\": \"WO-028-D056\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: verify; verifier reading of the narration changes\", \"decision\": \"Board the wording D047 accepted, for the operator's eye. D047 recorded 48 narration messages writing a computed count as a digit, and the audit is exact. The meaning holds and no number is wrong. But it is the one reader-visible prose change in the migration, it reaches 15 stream studies, and 17 of the 71 distinct outputs now open a sentence or a label with a digit, which reads less well than the original: a sentence starting 3 rows wait, a button reading 2 results.\", \"evidence\": [ \"docs/evidence/WO-028/ver-003/model-compare.json holds the before and after of eac",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-f2fe0f5b3ede6609",
+      "key": "decision:docs/evidence/WO-028/decisions.md#wo-028-d060",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "31def0153324812607007374808cb370af35bc4a13857fa2d47073fc96a3b564",
+          "ref": "docs/evidence/WO-028/decisions.md#wo-028-d060",
+          "title": "WO-028-D060: Reshape the first movement batch's twenty presentation modules and their messages, with every output unchanged. Priority: before the next movement batch is authored, and before any batch…",
+          "summary": "{ \"id\": \"WO-028-D060\", \"date\": \"2026-11-05\", \"dispatch\": \"resume: final review; the reviewer's reading of the migrated model code\", \"decision\": \"Board the shape of the first movement batch's presentation modules. The shared migration split each of that batch's twenty models into a simulation, a presentation and a model entry, and the simulations are clean. In the presentations, a function that ran long was cut to fit the 80-line guard and the variables its pieces had shared became positional parameters: 17 functions take eight to twelve, 38 are between 70 and 80 counted lines, parameter types are written inline or as the return type of another function, four modules spell one number format a",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

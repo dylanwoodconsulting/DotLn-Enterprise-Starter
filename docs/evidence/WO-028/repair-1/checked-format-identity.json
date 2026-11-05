@@ -1,0 +1,7 @@
+{
+  "record": "libs/shared/catalog/src/studies/aifg/obstacle-and-wall-avoidance.json",
+  "beforeHash": "c10aa39986178411f2a1306cc287d4ce5aaa1b9429947ec38ddab22049927ea7",
+  "afterHash": "723758935304683f159c452e5306aaf9c2bdf2ac3c277ed60ad5f96dfd4879f2",
+  "transform": "Prettier wraps authored.reviewedBy; parsed JSON is identical",
+  "sameParsedValue": true
+}

@@ -1,0 +1,190 @@
+{
+  "author": "author-09",
+  "date": "2026-11-04",
+  "gitMetadata": "No .git entry in the private author root; no Git commands were run.",
+  "requiredReading": [
+    "brief/assignment.md",
+    "brief/rows.json",
+    "brief/chapter-index.json",
+    "brief/concept-study.md",
+    "docs/operator/README.md",
+    "docs/operator/implementation-guidance.md",
+    "libs/shared/models/src/lib/concept-study.ts",
+    "libs/shared/catalog/src/schema/concept-study-v0.schema.json",
+    "libs/shared/catalog/src/studies/aifg/arrive.json",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.ts",
+    "libs/features/tools/src/lib/studies/movement/arrive.model.spec.ts",
+    "libs/features/tools/src/lib/studies/study-model.ts",
+    "libs/features/tools/src/lib/studies/parameters.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.ts",
+    "libs/features/tools/src/lib/composites/study-visuals/timeline/timeline-drawing.ts",
+    "docs/dev-reference/architecture/scene.md",
+    "libs/shared/scene-engine/src/public_api.ts",
+    "libs/shared/scene-engine/src/lib/steering.ts",
+    "libs/shared/scene-engine/src/lib/vectors.ts"
+  ],
+  "studies": [
+    {
+      "slug": "kinematic-arrive",
+      "id": "aifg-a:101",
+      "authoredState": "draft",
+      "paths": {
+        "record": "libs/shared/catalog/src/studies/aifg/kinematic-arrive.json",
+        "model": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts",
+        "spec": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.spec.ts"
+      },
+      "mechanismClassification": "local",
+      "stepsExplanation": "All four displayed steps execute locally: signed offset/distance; inclusive satisfaction check; offset/timeToTarget with a speed clamp; position integration using the assigned velocity. Public arrive was read and not substituted because it returns acceleration for a body whose velocity is already state; this study intentionally demonstrates immediate kinematic velocity. No private engine helper is imported.",
+      "publicEngineRead": [
+        "libs/shared/scene-engine/src/public_api.ts",
+        "libs/shared/scene-engine/src/lib/steering.ts",
+        "libs/shared/scene-engine/src/lib/vectors.ts",
+        "docs/dev-reference/architecture/scene.md"
+      ],
+      "engineImports": [],
+      "executable": {
+        "kind": "typescript",
+        "module": "libs/features/tools/src/lib/studies/movement/kinematic-arrive.model.ts"
+      },
+      "executableNullRationale": null,
+      "rxjs": "Absent because streams add no mechanism to these fixed-step decisions.",
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl with Accept: application/vnd.citationstyles.csl+json; default web open was inaccessible",
+          "observed": "Crossref metadata identifies AI for Games, Ian Millington, edition 3, CRC Press and DOI 10.1201/9781351053303. It does not contain the chapter text or verify the subsection. Study location comes from brief/rows.json."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/src/kinematic.cpp",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl",
+          "observed": "KinematicArrive clears its linear output when squared distance is strictly below radius squared; otherwise scales offset by inverse timeToTarget and limits its magnitude to maxSpeed."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/include/aicore/kinematic.h",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl",
+          "observed": "The header describes kinematic movement as adopting velocity immediately and declares timeToTarget and radius for KinematicArrive."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/README.md",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl",
+          "observed": "The maintainer calls this historical code and says it did not keep up with corrections or the third edition. The record preserves that limitation."
+        }
+      ],
+      "specCoverage": [
+        "Hand-verifiable far request: offset 11 / response 1 = requested velocity 11, capped at 4; dt 0.5 advances position 0 to 2.",
+        "At position 8, the velocity is 3 and the next position is 9.5; the selected frame, text equivalent, displacement vector and worked arithmetic share these values.",
+        "The supplied main run is expected to stop at 10.8125 with residual error 0.1875; it does not snap to target 11.",
+        "Changing only response time from 1 to 0.2 is expected to alternate positions 10 and 12, keeping distance 1 and never accepting the 0.2 radius.",
+        "Specs also cover equality acceptance, the target itself, return direction, speed limits, monotonic baseline distance, the uncapped signed-error multiplier, changed input values, drawing bounds, deterministic output and identical-comparison wording."
+      ],
+      "readBack": "All three authored files were read in full, with subsequent edits read back at their changed ranges.",
+      "limitations": [
+        "Draft only. No tests, gates, builds, dependency installs or browser sessions were run, as directed. The executor must integrate the record/model registration and run the authored specs and applicable checks.",
+        "The DOI response confirms book identity and edition only; chapter/subsection placement follows the assigned catalogue row, not inspected book text.",
+        "Only the stated one-dimensional, fixed-target teaching mechanism is modelled; it supplies no physical acceleration or obstacle handling."
+      ]
+    },
+    {
+      "slug": "satisfaction-radius",
+      "id": "aifg-a:102",
+      "authoredState": "draft",
+      "paths": {
+        "record": "libs/shared/catalog/src/studies/aifg/satisfaction-radius.json",
+        "model": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts",
+        "spec": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.spec.ts"
+      },
+      "mechanismClassification": "local",
+      "stepsExplanation": "All three displayed steps execute locally: sample the signed offset/distance; accept distance <= radius and assign zero velocity while preserving position; otherwise take a full constant-speed stride. The public engine has acceleration-based seek/arrive, not this direct-velocity controller or an exported stand-alone satisfaction check. No private engine helper is imported.",
+      "publicEngineRead": [
+        "libs/shared/scene-engine/src/public_api.ts",
+        "libs/shared/scene-engine/src/lib/steering.ts",
+        "libs/shared/scene-engine/src/lib/vectors.ts",
+        "docs/dev-reference/architecture/scene.md"
+      ],
+      "engineImports": [],
+      "executable": {
+        "kind": "typescript",
+        "module": "libs/features/tools/src/lib/studies/movement/satisfaction-radius.model.ts"
+      },
+      "executableNullRationale": null,
+      "rxjs": "Absent because streams add no mechanism to these fixed-step decisions.",
+      "openedSources": [
+        {
+          "url": "https://doi.org/10.1201/9781351053303",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl with Accept: application/vnd.citationstyles.csl+json; default web open was inaccessible",
+          "observed": "Crossref metadata identifies AI for Games, Ian Millington, edition 3, CRC Press and DOI 10.1201/9781351053303. It does not contain the chapter text or verify the subsection. Study location comes from brief/rows.json."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/39b5b3ffa261ba9576379cf64ca84e7d90463068/src/KinematicArrive.cs",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl",
+          "observed": "DoTranslation moves only at distance >= targetRadius, normalises direction, translates by maxSpeed without elapsed-time multiplication and waits between iterations. No proportional slowing appears in that method."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/libgdx/gdx-ai/1.8.2/gdx-ai/src/com/badlogic/gdx/ai/steer/behaviors/Arrive.java",
+          "accessed": "2026-11-04",
+          "status": "HTTP 200 via curl",
+          "observed": "distance <= arrivalTolerance returns zero steering acceleration. Outside it, decelerationRadius controls target speed and the velocity gap generates limited acceleration; owner velocity is not reset."
+        }
+      ],
+      "specCoverage": [
+        "Hand-verifiable stride: speed 2 \u00d7 dt 0.5 = 1. At position 9 the next position is 10; distance 0.5 at position 10 is accepted by radius 0.5, including equality.",
+        "The supplied main run is expected to stay at position 10, leaving error 0.5 from target 10.5; it does not snap.",
+        "Changing only radius to 0 is expected to alternate positions 10 and 11 with signed velocities 2 and -2, never accepting a sampled place.",
+        "Specs additionally cover both radius boundaries, exact target, approach from the far side, crossing a narrower region between samples without acceptance, a region large enough to accept the start, selected text/arithmetic/chart coherence, input reruns, bounds, deterministic output and identical-comparison wording."
+      ],
+      "readBack": "All three authored files were read in full, with subsequent edits read back at their changed ranges.",
+      "limitations": [
+        "Draft only. No tests, gates, builds, dependency installs or browser sessions were run, as directed. The executor must integrate the record/model registration and run the authored specs and applicable checks.",
+        "The DOI response confirms book identity and edition only; chapter/subsection placement follows the assigned catalogue row, not inspected book text.",
+        "Only the stated one-dimensional, fixed-target teaching mechanism is modelled; it supplies no physical acceleration or obstacle handling."
+      ]
+    }
+  ],
+  "uncitedResearch": [
+    {
+      "url": "https://github.com/highnet/AI-Steering-Behaviors-for-Games/tree/main/src",
+      "status": "Web open failed as a restricted URL; used the successful pinned raw file instead."
+    },
+    {
+      "url": "https://pygame-ai.readthedocs.io/en/latest/_modules/steering/kinematic.html",
+      "status": "Opened with web; Arrive produces acceleration despite the module name. Not cited because more direct implementations were available."
+    },
+    {
+      "url": "https://api.github.com/repos/highnet/AI-Steering-Behaviors-for-Games/git/trees/main?recursive=1",
+      "status": "Initial unquoted shell URL did not execute; quoted curl request returned HTTP 200 and located KinematicArrive.cs."
+    },
+    {
+      "url": "https://api.github.com/repos/highnet/AI-Steering-Behaviors-for-Games/commits/main",
+      "status": "HTTP 200 via curl; established the immutable source revision used in the study."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/highnet/AI-Steering-Behaviors-for-Games/main/src/KinematicArrive.cs",
+      "status": "HTTP 200 via curl; then reopened at the pinned revision before citing."
+    },
+    {
+      "url": "https://api.github.com/repos/idmillington/aicore/git/trees/master?recursive=1",
+      "status": "HTTP 200 via curl; located source paths and the revision used by pinned raw-file reads."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/idmillington/aicore/52fc032d2d605265e7ec2cc93c949d10efc70f5d/src/steering.cpp",
+      "status": "HTTP 200 via curl; read for context but not cited because it does not implement the assigned kinematic arrival mechanism."
+    }
+  ],
+  "tokenCounters": {
+    "source": "No author-session token usage counters were exposed by the available tools or task brief.",
+    "scope": "This author-09 session only; no parent, sibling or aggregate totals are inferred.",
+    "cutoff": "After authoring and reading back the two draft record/model/spec triples, before final handoff.",
+    "inputTokens": "unknown",
+    "outputTokens": "unknown",
+    "totalTokens": "unknown",
+    "cachedInputTokens": "unknown",
+    "reasoningTokens": "unknown"
+  },
+  "ownership": "Only the six assigned study deliverables and brief/result.json were written in the private author copy. No real-worktree, shared model, engine, registry, summary or chunk file was changed; no workers were spawned or retasked."
+}
