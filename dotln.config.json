@@ -199,5 +199,11 @@
         ]
       }
     }
+  },
+  "features": {
+    "desktop-control": {
+      "on": false,
+      "note": "Operator direction of 2026-11-01, docs/operator/README.md \u00a7Harness / Browser verification: use Playwright in a fresh isolated browser or the project browser tests. Desktop control and existing operator browser sessions require an explicit session request; this instance keeps desktop control off."
+    }
   }
 }

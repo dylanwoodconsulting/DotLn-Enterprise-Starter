@@ -165,7 +165,7 @@ decisions and `fan-out.md`:
 use WO-014's order total from `npm run meta` when available; otherwise use the
 recorded 117,733,609 from WO-020-D004. WO-020-D012 lifted it for WO-020 alone;
 that exception does not travel to another order. The
-[2026-11-03 planning pass](../planning/entropy-reducer-2026-11-03.md) records this
+[2026-11-03 planning pass](../planning/passes/entropy-reducer-2026-11-03.md) records this
 clarification from WO-022-D023/D028 and its [fan-out evidence](../evidence/WO-022/fan-out.md#tokens-against-the-stop-figure).
 
 Before every launch or re-task, read the current session's harness usage and
@@ -478,7 +478,7 @@ ignored control directory. Before removal it retains the order's launchpad and
 target session journals in the launchpad's closed-journal lane. This instance's
 configured window is 720 h 0 min (`docs/control/budgets.json`,
 `retention.closed-journal`); routine retention pruning applies after that
-window. The [2026-11-03 pass](../planning/entropy-reducer-2026-11-03.md#d9-integrate-the-independent-reviews-and-repair-the-unpublished-receipt)
+window. The [2026-11-03 pass](../planning/passes/entropy-reducer-2026-11-03.md#d9-integrate-the-independent-reviews-and-repair-the-unpublished-receipt)
 settles `FUP-64d1967b092ea18a` against the carrying release.
 `**Target release notes:** reviewed` on the order makes the Release body the
 order's reviewed `RELEASE-NOTES.md` at the merged revision, linted as a target's
@@ -639,11 +639,11 @@ History stays here only where it explains a boundary or a recovery route:
   and `perf:sample`. See the [WO-014 evidence](../evidence/WO-014/README.md) and
   the target's `docs/dotln/evidence/WO-014/decisions.md` (D011, D016 to D028).
 - **Acceptance by use.** Rules 24 and 25 are why a green gate does not accept a page.
-  Read [acceptance by use](../planning/acceptance-by-use-2026-10-26.md) and
-  [the v0.100.0 pass](../planning/standard-pass-v0-100-0-2026-10-28.md).
+  Read [acceptance by use](../planning/passes/acceptance-by-use-2026-10-26.md) and
+  [the v0.100.0 pass](../planning/passes/standard-pass-v0-100-0-2026-10-28.md).
 - **Target writes under Claude Code.** The kit refused WO-019's first Claude Code
   target write. Starter v0.101.0's executor-only `target-worktree` grant is the
-  route. See [the v0.101.0 pass](../planning/standard-pass-v0-101-0-2026-10-28.md)
+  route. See [the v0.101.0 pass](../planning/passes/standard-pass-v0-101-0-2026-10-28.md)
   and the target's `docs/dotln/evidence/WO-019/decisions.md` (D022, D023).
 - **A defect after the final review passes.** The lifecycle has no repair phase
   there, and the closed-phase publish helper refuses a head that differs from the

@@ -47,10 +47,10 @@ evidence, what each graduates into, first slice, dependencies; SHA-256
 run is the operator's own research and lies outside the clean room (WS-001
 rule 23 as corrected on 2026-10-26); the quarantine files stay closed
 because they were quarantined for employer material. Planner-synthesized by
-the 2026-10-24 planning pass ([planning document](../planning/mining-run-orders-2026-10-24.md)
+the 2026-10-24 planning pass ([planning document](../planning/passes/mining-run-orders-2026-10-24.md)
 §6 D10 and §9); amended by the 2026-10-24 second pass and the 2026-10-25
 pass for receipts 008 and 009. Rewritten by the 2026-10-26 pass
-([planning document](../planning/acceptance-by-use-2026-10-26.md) §6 D8) on
+([planning document](../planning/passes/acceptance-by-use-2026-10-26.md) §6 D8) on
 the operator's direction of that day (capture SHA-256
 `9ec78ddbc267936d59fc7fe88b4a8b9c8d42d4692979db31be5129c817fd72a6`): the
 "never a passage" overlap check, the "mapper's own words" rule and the
@@ -59,7 +59,7 @@ the operator never gave and go; the toys enter in full; the map rows carry
 the public text's maxims where a maxim is the concept; the shelf is a page
 the operator reads to pick the next toy, accepted by use (rule 24) and
 briefed for its look (rule 25). Amended by the 2026-10-28 pass
-([planning document](../planning/standard-pass-v0-100-0-2026-10-28.md) §6
+([planning document](../planning/passes/standard-pass-v0-100-0-2026-10-28.md) §6
 D4 and D6): the design comparison reads as the operator corrected it in
 WO-019, with the shelf's first pair named, and receipt 011's items are
 written in: the fan-out stops by decision when its token total passes

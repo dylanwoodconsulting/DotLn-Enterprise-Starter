@@ -1,4 +1,4 @@
-# WO-033 — The launchpad's documents follow the kit's contract as core's do: the dated planning documents move under `docs/planning/passes/` with a moves map and rewritten standing links, the planning README names the planning root's documents, the elections the operator decided are declared in the features file with their reasons, and the control projection is regenerated from its fold
+# WO-033 — The launchpad's documents follow the kit's contract as core's do: the dated planning documents move under `docs/planning/passes/` with a moves map and rewritten standing links, the planning README names the planning root's documents, the elections the operator decided are declared in the features file with their reasons, and the control projection is regenerated from its fold (v0.3.5)
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
@@ -33,7 +33,8 @@ profile, the open orders, the sequence, `docs/product/purpose.md` and
 `concept-study.md`, the directory READMEs) and in the idea ledger's Record
 links, which the plan tooling reads, while every record (decisions, evidence,
 verifications, final reviews, receipts, the moved passes themselves, the
-entropy review pages) keeps its bytes; rewrites `docs/planning/README.md`
+entropy review pages) keeps its original bytes, with only the six
+append-only decision entries authorized below; rewrites `docs/planning/README.md`
 from the export's one line into the planning root's page (the sequence, the
 register and the cost table, `passes/`, `refutations/`, `entropy-reviews/`,
 the generated index, and where a pass's document is found); declares
@@ -130,7 +131,12 @@ their explicit request in a session.
   through it, as core's does; only standing documents and the ledger's
   Record links are rewritten. A digest manifest of every record taken at
   activation and compared through the map after the moves is the witness
-  that no record's bytes changed. Rejected: rewriting the links inside the moved
+  that no original record bytes changed. On 2026-11-05 the operator approved
+  one appended path-amendment decision in each existing `decisions.md` for
+  WO-008, WO-016, WO-017, WO-018, WO-023 and WO-024, preserving each complete
+  original prefix. `authorized-appends.json` records their original lengths
+  and exact suffix digests; WO-033-D007 records the authorization. No other
+  captured record may change. Rejected: rewriting the links inside the moved
   records and the receipts (axis: a record is never rewritten); leaving the
   records where they are (axis: the kit's layout since v0.113.0, and the
   operator's ask for core's passes here).
@@ -175,11 +181,16 @@ and its comparison, the link rewrite inventory and the handoff.
    names and in the idea ledger's Record links, by inventory
    (`grep -rn -E "planning/[a-z0-9-]+-2026-[0-9]{2}-[0-9]{2}\.md"` over the
    standing documents before and after, recorded in
-   `docs/evidence/WO-033/links.md`); touch no record. Check: the grep over
+   `docs/evidence/WO-033/links.md`); preserve original record bytes and append
+   only the six decisions authorized in the Design. Bind the affected orders
+   with `npm run plan -- amend-order` and their path-amendment decisions.
+   Check: the grep over
    the standing documents prints nothing; `node
    docs/evidence/WO-033/compare-records.mjs` maps every path of
    `records-before.json` through `document-moves.json` and prints
-   `unchanged <N>` with no `changed` or `missing` line, the order's own
+   `unchanged <N>` for whole-file matches and `original bytes preserved 6;
+   authorized appends 6` for the six exact appends, with no `changed` or
+   `missing` line, the order's own
    `docs/evidence/WO-033/` excluded as new.
 4. Rewrite `docs/planning/README.md` as the Design states. Check:
    `node scripts/docs-check.mjs` passes; the page links `sequence.md`,
@@ -233,12 +244,15 @@ step 7; `npm run test:docs` when a document changes; each under
    link).
 3. Over the standing documents the Cost names,
    `grep -rn -E "planning/[a-z0-9-]+-2026-[0-9]{2}-[0-9]{2}\.md"` prints
-   nothing, and the records keep their bytes: `node
+   nothing, and the records keep their original bytes: `node
    docs/evidence/WO-033/compare-records.mjs` maps every path of
    `records-before.json` through `document-moves.json` and finds every
-   digest equal to the file at its current path, printing no `changed` or
-   `missing` line, with the order's own `docs/evidence/WO-033/` excluded as
-   new; `npm run plan -- check` also finds every refutation receipt's
+   digest equal to the file at its current path, except the six decision
+   files authorized in the Design, whose complete original prefixes must
+   match those digests and whose appended suffixes must match
+   `authorized-appends.json`. It prints no `changed` or `missing` line, with
+   the order's own `docs/evidence/WO-033/` excluded as new;
+   `npm run plan -- check` also finds every refutation receipt's
    recorded hash matching its file.
 4. `npm run plan -- followups --sync` reports no `sourceMissing` row and
    `npm run plan -- check` passes.
@@ -267,7 +281,7 @@ before-and-after listings and `handoff.md`; `npm test` and
 
 **Known issues and carry-ins:**
 
-- The critical-path declaration (`docs/planning/critical-path-2026-09-08.md`)
+- The critical-path declaration (`docs/planning/passes/critical-path-2026-09-08.md`)
   is among the nineteen and a dated name the kit reads at either its passes
   or its root location (`plan-subject.mjs` 743 to 744): after the move the
   executor confirms `npm run plan -- subject` still reads it (reopen: the subject
@@ -284,7 +298,8 @@ before-and-after listings and `handoff.md`; `npm test` and
   through the map, as core's does (reopen: a moved document is red-tagged
   after the move because its reads were counted at the old path).
 
-**Non-goals:** rewriting any record's bytes; declaring `plan-first`,
+**Non-goals:** rewriting any original record bytes or appending beyond the
+six decision entries authorized in the Design; declaring `plan-first`,
 `private-destination` or `tinkerer-economy`; the kit's templates or the
 execution guide (kit files); a quality pass over the standing documents
 (WO-025 did it; the 2026-11-04 pass's red tags are disposed there); the

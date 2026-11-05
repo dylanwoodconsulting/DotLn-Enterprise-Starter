@@ -13,7 +13,7 @@ playbook.
 - [`docs/evidence/`](evidence/README.md) — per-order decisions, handoffs and evidence
 - [`docs/verifications/`](verifications/README.md) — immutable verifier reports
 - [`docs/final-reviews/`](final-reviews/README.md) — immutable final-review reports with their PR and release-notes handoffs
-- [`docs/planning/`](planning/README.md) — dated planning passes, the proposed sequence and the follow-up register
+- [`docs/planning/`](planning/README.md) — the proposed sequence, follow-up register and cost table, with pass documents, refutation receipts and entropy reviews in their own directories
 - [`docs/publication/`](publication/README.md) — the implementation overlay template and any compiled publication
 - [`docs/product/`](product/README.md) — the kit's two product documents and this instance's overlay
 - [`docs/discovery/`](discovery/README.md) — the environment truth

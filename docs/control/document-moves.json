@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Resolve historical references to the planning documents at their current paths while preserving every moved record and the directory its links were written from.",
+  "moves": [
+    {
+      "from": "docs/planning/acceptance-by-use-2026-10-26.md",
+      "to": "docs/planning/passes/acceptance-by-use-2026-10-26.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/angular-workstream-2026-10-18.md",
+      "to": "docs/planning/passes/angular-workstream-2026-10-18.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md",
+      "to": "docs/planning/passes/concept-batches-and-quality-passes-2026-10-30.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/criterion-9-phase-2026-11-01.md",
+      "to": "docs/planning/passes/criterion-9-phase-2026-11-01.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/critical-path-2026-09-08.md",
+      "to": "docs/planning/passes/critical-path-2026-09-08.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/entropy-reducer-2026-11-03.md",
+      "to": "docs/planning/passes/entropy-reducer-2026-11-03.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/latest-upstream-2026-10-19.md",
+      "to": "docs/planning/passes/latest-upstream-2026-10-19.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/latest-upstream-and-core-answers-2026-10-20.md",
+      "to": "docs/planning/passes/latest-upstream-and-core-answers-2026-10-20.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/latest-upstream-fixes-2026-10-21.md",
+      "to": "docs/planning/passes/latest-upstream-fixes-2026-10-21.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/main-rules-and-platform-items-2026-10-18.md",
+      "to": "docs/planning/passes/main-rules-and-platform-items-2026-10-18.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/mining-run-orders-2026-10-24.md",
+      "to": "docs/planning/passes/mining-run-orders-2026-10-24.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-100-0-2026-10-28.md",
+      "to": "docs/planning/passes/standard-pass-v0-100-0-2026-10-28.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-101-0-2026-10-28.md",
+      "to": "docs/planning/passes/standard-pass-v0-101-0-2026-10-28.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-103-0-2026-10-30.md",
+      "to": "docs/planning/passes/standard-pass-v0-103-0-2026-10-30.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-105-0-2026-11-01.md",
+      "to": "docs/planning/passes/standard-pass-v0-105-0-2026-11-01.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-93-0-2026-10-23.md",
+      "to": "docs/planning/passes/standard-pass-v0-93-0-2026-10-23.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-96-1-2026-10-24.md",
+      "to": "docs/planning/passes/standard-pass-v0-96-1-2026-10-24.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/standard-pass-v0-99-0-2026-10-25.md",
+      "to": "docs/planning/passes/standard-pass-v0-99-0-2026-10-25.md",
+      "workOrder": "WO-033"
+    },
+    {
+      "from": "docs/planning/ui-planning-2026-10-21.md",
+      "to": "docs/planning/passes/ui-planning-2026-10-21.md",
+      "workOrder": "WO-033"
+    }
+  ]
+}

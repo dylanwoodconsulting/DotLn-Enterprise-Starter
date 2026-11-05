@@ -21,7 +21,7 @@ events and state documents, the client library's documentation, this order,
 about 160 KB. Commands added in the target: none. Tokens: unknown until run.
 Steps: 15. Re-mints: none. Refutations paid: eleven receipts (001 to 011) name this order and the 2026-10-28 pass's receipt judged its text before the 2026-11-01 second pass's authorized amendment (WO-008-D001), which the next planning pass's refutation judges.
 **Nomination provenance:** the 2026-10-18 angular-workstream planning pass
-([planning document](../planning/angular-workstream-2026-10-18.md) §5 and §8),
+([planning document](../planning/passes/angular-workstream-2026-10-18.md) §5 and §8),
 on the operator's direction of 2026-10-17 (ignored intake capture, SHA-256
 `4f14c6c09512576abfd701335f4dd8a347694ff23785724422cb8d943b5d67aa`),
 paraphrased: permissions enforced by deterministic conventions (a state
@@ -32,33 +32,33 @@ are stored); and authentication around the third week of a ten-pull-request
 foundation. Planner-synthesized. Opaque identifier, not a priority. Clean-room screen:
 public standards (RFC 6749, RFC 7636, OpenID Connect Core) and public
 packages. Amended by the 2026-10-18 main-rules planning pass
-([planning document](../planning/main-rules-and-platform-items-2026-10-18.md)
+([planning document](../planning/passes/main-rules-and-platform-items-2026-10-18.md)
 §6 D5, D7 and §8.1): the `--draft` route, the final-review obligation and
 the repairs of receipt 001's known issues.
 **Depends on:** WO-007 merged (hard: the event tiers, interceptors, stores and
 MSW this order extends; the base above is provisional and is set to the merge
 commit of the member before this one in the sequence, WO-016, by the planning
 pass that follows it). Amended by the 2026-10-21
-UI planning pass ([planning document](../planning/ui-planning-2026-10-21.md)
+UI planning pass ([planning document](../planning/passes/ui-planning-2026-10-21.md)
 §6 D1 and D4): the release header, the node-spelled draft publish and the
 board's path enum. Amended by the 2026-10-23 standard pass
-([planning document](../planning/standard-pass-v0-93-0-2026-10-23.md) §6
+([planning document](../planning/passes/standard-pass-v0-93-0-2026-10-23.md) §6
 D4): the publication rules of starter v0.91.0, the reviewed release notes
 and the plan-gate carry-in; the base stays provisional until WO-007 merges.
 Amended by the 2026-10-24 standard pass
-([planning document](../planning/mining-run-orders-2026-10-24.md) §6 D4 and
+([planning document](../planning/passes/mining-run-orders-2026-10-24.md) §6 D4 and
 §9): the plan-gate carry-in closed by starter v0.94.0 (update #23), the
 record-path advisory of that starter, and the order's place in the sequence
 after the first four sub-app orders (WO-013 to WO-016), so its base is set to
 WO-016's merge commit by the planning pass that follows that merge; the
 dependency on WO-007 stands. Amended by the 2026-10-24 second pass
-([planning document](../planning/standard-pass-v0-96-1-2026-10-24.md) §6 D4): the base above is provisional: since starter v0.96.1 (core WO-230) the target publish describes the change from the merge base of the subject and the target's `main` and names the activation base beside it, so activation on this base publishes right; the planning pass that runs after WO-016 merges may set it to that merge commit, and none is required to (the 2026-10-24 second pass, D4); the record-path advisory
+([planning document](../planning/passes/standard-pass-v0-96-1-2026-10-24.md) §6 D4): the base above is provisional: since starter v0.96.1 (core WO-230) the target publish describes the change from the merge base of the subject and the target's `main` and names the activation base beside it, so activation on this base publishes right; the planning pass that runs after WO-016 merges may set it to that merge commit, and none is required to (the 2026-10-24 second pass, D4); the record-path advisory
 closed at v0.96.1; and receipt 008's known issues (the storage assertion over
 issued tokens, the signing key never committed, the provider swap not
-exercised). Amended by the 2026-10-25 pass ([planning document](../planning/standard-pass-v0-99-0-2026-10-25.md)
+exercised). Amended by the 2026-10-25 pass ([planning document](../planning/passes/standard-pass-v0-99-0-2026-10-25.md)
 §6 D4): receipt 009's known issues (the storage grep's scope, the public
 sub-app routes and the gated `/account` page, a production build without a
-provider, `jose` as a development dependency, the refutations paid) and the multi-project check form of WO-013-D005. Amended by the 2026-10-26 pass ([planning document](../planning/acceptance-by-use-2026-10-26.md) §6 D9): rule 24's acceptance-by-use criterion (criterion 8) and the walkthrough, and receipt 010's items: the at-rest probe covers IndexedDB, Cache Storage and cookies as well as web storage (its item (b)), and the matrix gains a page reload during a session (c). Amended by the 2026-10-28 pass ([planning document](../planning/standard-pass-v0-100-0-2026-10-28.md) §6 D6 and D14): receipt 011's items (the walkthrough and the e2e run on the served `mocked` configuration build while criterion 5's production grep stands, its item (a); criterion 5 greps the mock's one marker string and the key identifier rather than endpoint paths, (b)), the `/account` page as prose rather than a key-value list (WS-001 rule 24 and G6), and a one-line design brief under rule 25.
+provider, `jose` as a development dependency, the refutations paid) and the multi-project check form of WO-013-D005. Amended by the 2026-10-26 pass ([planning document](../planning/passes/acceptance-by-use-2026-10-26.md) §6 D9): rule 24's acceptance-by-use criterion (criterion 8) and the walkthrough, and receipt 010's items: the at-rest probe covers IndexedDB, Cache Storage and cookies as well as web storage (its item (b)), and the matrix gains a page reload during a session (c). Amended by the 2026-10-28 pass ([planning document](../planning/passes/standard-pass-v0-100-0-2026-10-28.md) §6 D6 and D14): receipt 011's items (the walkthrough and the e2e run on the served `mocked` configuration build while criterion 5's production grep stands, its item (a); criterion 5 greps the mock's one marker string and the key identifier rather than endpoint paths, (b)), the `/account` page as prose rather than a key-value list (WS-001 rule 24 and G6), and a one-line design brief under rule 25.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
