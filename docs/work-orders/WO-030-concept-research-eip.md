@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
+**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/eip/`,
@@ -188,8 +188,9 @@ executable in RxJS (axis: WO-022's reason stands, a channel or a message
 form has no stream to run); the concepts chosen by the planner's taste
 (axis: the rule is checkable against the data).
 
-Live-run surfaces at the base: the catalog with sixty studies, the three
-landed families, the messaging study directory and the addressable readings.
+Live-run surfaces at the base: the catalog with eighty studies in the
+message system, the three landed families, the messaging study directory
+and the addressable readings.
 
 **Deliverables:** the twenty records with their flow models and, where
 executable, their modules and specs; the summary rows; the coverage row;
@@ -334,8 +335,18 @@ each.
   final-review obligation read from `docs/evidence/WO-030/preview-pr.json`,
   never a criterion); whether the operator reads twenty records before the
   final review is their choice (the assumption below).
-- The record's shape is closed (`concept-study-v0`); a change is a new
-  schema version, never an edit. `Target release classification: minor` and
+- The record's shape is `concept-study-v1` (WS-002 rule 7): every authored
+  on-screen field is a message key in
+  `apps/dotln/public/i18n/studyEip/en.json`, each model is a language-free
+  simulation, a presentation taking a `StudyTranslate` and an entry of a few
+  lines, with nested keys, named placeholders and no function split to fit
+  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-028's own
+  twenty and WO-034's reshaped batch set), and the authors' and critics'
+  briefs name those rules; a changed record shape is a new schema version,
+  never an edit. The base is WO-028's merge (#14), set by the 2026-11-05
+  pass; a batch that lands before WO-034 is judged by its tightened corpus
+  test when WO-034 integrates `main`, and WO-034 rewords this work's
+  count-led stream messages. `Target release classification: minor` and
   `Target release notes: reviewed` are set under WO-012's declared policy.
 - A study's "see it in the machinery view" link remains the candidate after
   WO-016 merges (`FUP-4fde2cb5fc229dc2`), not this order's. The remaining
