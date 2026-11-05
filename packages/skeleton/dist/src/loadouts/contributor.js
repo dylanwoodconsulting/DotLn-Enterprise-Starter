@@ -58,14 +58,20 @@ export const reviewerBriefs = {
 /** What a recheck and the last combined round admit; it is what ends them. */
 export const reviewAdmissionRule = "a new finding is admitted only when it breaks an acceptance criterion or a behavior `main` had, and any other new finding is recorded in the handoff, not fixed";
 const operatorControls = "Operator controls precede workflow: `analysis:` pauses for diagnosis/direction; `operator override:` suspends DotLn gates for authorized recovery, regardless of harness/repo state. Preserve pending work; invent no dispatch or passing check. Exit with either prefix plus `off`. Codex: `node scripts/operator-control.mjs analysis|override|off|status` needs no build or Git. Host permissions apply. Read product 07 §Operator recovery controls for the broader recovery candidate.";
-const sessionBoundaries = "Under Codex, lifecycle dispatch reserves the writer and completion releases it; inspect with `node scripts/harness.mjs writer --show`, never a hand-built hook payload. Await a gate or background task through `node scripts/harness.mjs evidence --wait [--timeout <seconds>]` in the background or the host's completion signal, then do bounded listed work or stay quiet; never poll or narrate the wait.";
+const sessionBoundaries = "Under Codex, lifecycle dispatch reserves the writer; a turn that stops without asking to continue releases it, the next prompt of the outstanding dispatch reserves it again, and completion releases it. A holder the process table shows exited or a zombie is dead: the next guarded call reclaims it and `node scripts/harness.mjs writer --release` releases it without force; forcing a live holder's release is the operator's. Inspect with `node scripts/harness.mjs writer --show` as that exact command, never a hand-built hook payload. Await a gate or background task through `node scripts/harness.mjs evidence --wait [--timeout <seconds>]` in the background or the host's completion signal, then do bounded listed work or stay quiet; never poll or narrate the wait.";
+// Every role in both harnesses carries these two (WO-254): the hook injects
+// the first for Claude, and Codex prompts are unhooked.
+const questionPathways = "An operator message that ends in a question mark is a smell, never a stop or a rule: answer it in your next message one of two ways, with the evidence, why the current course is right or what the question changes in your reading and what you will now do differently, and keep working; a message that also asks for an action, pausing, stopping or waiting included, is a request whatever its grammar, so do it. A question is not a waiver.";
+const blockedTurn = "When only the operator can clear what blocks this session, say so once: state the block and the one line that clears it in a single message, then end your turn, because the host holds a `!` command the operator types until the turn ends.";
 const sharedCorrections = [
     "Launch all adversaries, reviewers, refuters and research workers as Claude `dotln-worker` (claude-opus-5-5, xhigh) without a model override, or Codex spawn_agent with fork_turns none, model gpt-6.1-sol and reasoning_effort max. Only when the operator's planning: or resume: dispatch line names fable or fable 5.1, use Claude `dotln-worker-fable` (claude-fable-5-1, xhigh); record the actual worker type in the response and direct refutation receipt via --worker-type (Codex: codex-spawn-agent). The default and Codex pin stay unchanged; product 07 §Model-specific notes records the pins and readback limits. Every such worker probes with single tests under node scripts/harness.mjs bounded -- node --test --test-name-pattern and starts no test-runner gate in any form (npm test with or without --only, test-runner.mjs, target-gate.mjs, test:docs), because a gate run holds the worktree's live-gate refusal against the launching session: the generated Claude definition carries that rule, the hook refuses such a gate from a spawned `dotln-worker` with DOTLN_WORKER_GATE_REFUSED, and a Codex brief states it. For a review worker on the other host (Codex from Claude, a Claude print worker from Codex) or a planning subject, run `npm run worker -- review --kind criteria|design|consistency|combined --host codex|claude [--order WO-NNN | --subject planning] [--round N] [--recheck <report>] [--since <tree>]`, which renders the canonical brief and writes the report to the subject's reviews lane. Every launch, re-task (a `SendMessage` or a resumed agent) and kit launch counts one use against subagentCap, `npm run plan -- review` three; a hooked session counts the literal command, and under Codex the helper counts its own launch.",
     "Run probes outside gates, one process at a time, under `node scripts/harness.mjs bounded -- <command>`; the host guard also watches attributable session descendants.",
     "Resolve routine version, waiver-route, live-episode, regeneration and reinstall questions within existing authority. An executor records an unmet criterion of the five defect classes unmet with its class named for the verifier and asks the operator nothing. Every phase owns decisions, including no-op or deferred outcomes and blockers: record evidence, tradeoffs and reopening conditions in the ADR or decision record; do not ask the operator to arbitrate implementation or change criteria. Preserve scope and authority, and record the safe default for any expressly permitted operator-only packet without demanding a response.",
     "Before acting on an operator message, state its aim in one line and act on the evidence-backed reading; record any consequential assumption and its reopening condition.",
+    questionPathways,
     "Claims of cause, blockers, unreachable services or completion name their supporting command and output; partial searches name their boundary.",
     "Request needed authority here through the host permission flow; give the operator a command to run in your place only when the order or role names that fallback.",
+    blockedTurn,
     "When expired or retained temporary roots need removing, run `node scripts/harness.mjs prune --apply` yourself under host permissions and record its receipt; hand the operator the printed command only after a recorded host denial of that exact command, the fallback release close keeps for its publish.",
     "Operator commands must be copy-paste runnable with real paths and no placeholders; questions plainly state what they decide and why.",
     "For stale gate rows, run the gate at the current identity; never restore bytes to match a row or remove a reviewed fix to pass a check.",
@@ -127,7 +133,9 @@ export const contributorRoles = [
             "For that single literal driver command, request the host's normal one-invocation outside-sandbox approval: in Claude use Bash dangerouslyDisableSandbox: true; in Codex use its normal tool approval request. This lets native phases initialize their own sandboxes and request their own command permissions. Add no cd, redirect or compound wrapper. Do not edit sandbox settings or persist an allow rule. If the host denies the request, stop; do not retry or choose another launcher. Each native phase keeps its sandbox and approval policy; this request grants no authority to override a host restriction.",
             "The driver uses separate native CLI sessions in the order's worktree (the target worktree for a registered target), with preloaded role skills. Keep the selected host; --host claude|codex is an explicit selection, otherwise the native session selects it. Claude pins Opus 5.5 at xhigh with project and local hooks; Codex pins gpt-6.1-sol at max, and xhigh for an independent verifier, with its sandbox and role-text duties. Never substitute a host or claim Codex hook parity.",
             "The router spawn boundary refuses any Agent prompt except an exact lifecycle phrase given to the agent type that phrase names, with DOTLN_ROUTER_SPAWN_REFUSED, and DOTLN_ROUTER_WRITE_REFUSED refuses any router edit and any shell command beyond the live gate's read list, its driver and its usage command. An order identifier belongs to the recorded working directory, never to the worker prompt. The check is only on the router's own spawns; a phase worker's spawns use its ordinary policy.",
-            "Stop for awaiting-merge, operator-finding, off-ramp, typed-correction, analysis, operator-override, dispatch-refused, three verification failures, two final-review failures, two incomplete endings in the same phase, or budget-exhausted. Report the route's next step. A dead writer requires the operator's `operator override:` phrase; never release a foreign reservation yourself.",
+            "Stop for awaiting-merge, operator-finding, off-ramp, typed-correction, analysis, operator-override, dispatch-refused, three verification failures, two final-review failures, two incomplete endings in the same phase, or budget-exhausted. Report the route's next step. A writer whose owner the process table shows exited or a zombie is no conflict: the phase worker's entry reclaims it with a record. A live or unknown holder stops the drive; never release a foreign reservation yourself.",
+            questionPathways,
+            blockedTurn,
             "Re-entry reads current status and gives an interrupted phase's same briefing to a fresh worker. Release close runs in main only once the order is merged as close judges it: its branch is an ancestor of the remote base and its passing final review is in its own control record there, and for a target its branch has left its recorded base and reached the target's remote base. Status reads local refs; a drive of a closed order fetches both bases first, because a hosted merge reaches neither clone by itself. A close the host declines is not retried: the drive stops at awaiting-close naming the attended phrase and the one admitted host change, --host claude for release close only. Finish only on a validated local release attribution or recorded no-release close.",
             "Plan phase workers against subagentCap (default 20, null disables) and all attributable descendants against drivenSessionCeiling (default four times the cap). Each phase attempt is limited by its role's dispatch wall clock and the optional drivenPhaseTimeoutMs, whichever is shorter. Task and qualification deadlines still apply. The helper reports minimum observed counts and unknown remainder, worker usage and router usage separately. First driven orders are attended; unset token or dollar limits are not enforced limits. Budget exhaustion stops before another launch.",
         ],
@@ -245,7 +253,7 @@ export const contributorRoles = [
             "Screen every acceptance criterion before filing against the five defect classes of product 07 §Operator-opened planning pass: bookkeeping (a count, ceiling, cost, duration or token figure as its subject), later-phase (a final-review or release-close judgment, or HEAD or a commit range before the final review's commit), absent-input (data the base lacks and no step creates), host-behavior (a host, service or account behavior the order cannot produce, with no fallback) and contradiction (with another criterion or a non-goal). `npm run work-orders -- index --check` prints a `criteria advisory` line for wording that often marks one; read each before filing.",
             "Use `npm run reader -- score` with one fresh pinned reader outside the repository and record its result only when plan start reports a changed profile with three unscored releases or the operator asks; record surface corrections only through `score --correction <surface> --capture-hash sha256:<digest>`.",
             "After committing the planning subject locally, load dotln-refuter for one independent goal review per pass. Before editing judged text, resolve its refutation hold or record the operator-authorized amendment; judgment reuse never authorizes a repair. Reuse the judgment only while its observed evidence and judged subject remain valid; for a new judgment dispatch one fresh background refuter with no inherited conversation. Use the canonical direct prompt and receipt helper; keep the parent as the sole repository writer. Do not launch an external refutation CLI unless the operator explicitly requests that transport.",
-            "After the refutation receipt is filed with its holds answered and npm run test:docs is green, a planning or ideation pass on a planning branch pushes that branch and opens its :memo: pull request; the dispatch phrase is the operator's authorization for those two effects, and the pass never merges.",
+            "After the refutation receipt is filed with its holds answered and npm run test:docs is green, a planning or ideation pass on a planning branch pushes that branch and opens its :memo: pull request with `node scripts/refute-plan.mjs publish --title <title> --body-file <path>`, the spelling the emitted allow rule admits (`npm run plan -- publish` takes the same flags and has no rule), never with raw git push or gh; the dispatch phrase is the operator's authorization for those two effects, and the pass never merges.",
         ],
     },
     {
@@ -951,7 +959,8 @@ export const contributorProfiles = [
             evidence: `${record}#C6`,
             path: ".claude/settings.json",
             deny: true,
-            allow: false,
+            allow: true,
+            allowEvidence: "docs/evidence/WO-246/decisions.md#wo-246-d010--the-operator-authorizes-the-two-allow-rules",
         },
         instruction: {
             available: true,
@@ -1037,7 +1046,10 @@ export const contributorProfiles = [
             evidence: `${copilotRecord}#H1`,
             path: ".claude/settings.json",
             deny: false,
-            allow: false,
+            // Copilot shares Claude's settings file, so it carries the same rules; no
+            // contract for them has been read or observed under Copilot itself.
+            allow: true,
+            allowEvidence: "docs/evidence/WO-246/decisions.md#wo-246-d010--the-operator-authorizes-the-two-allow-rules",
         },
         instruction: {
             available: true,
@@ -1056,6 +1068,7 @@ export const targetWorkerProfiles = contributorProfiles
     .filter((profile) => profile.harness !== "copilot-cli")
     .map((profile) => {
     const { codexContinuation: _continuation, ...workerProfile } = profile;
+    const { allowEvidence: _allowEvidence, ...workerSettings } = profile.settings;
     const evidence = "docs/discovery/writing-worker-smoke-2026-09-14.md";
     const unavailable = {
         available: false,
@@ -1097,7 +1110,8 @@ export const targetWorkerProfiles = contributorProfiles
             format: profile.skills.format,
         },
         settings: {
-            ...profile.settings,
+            ...workerSettings,
+            allow: false,
             evidence: `${evidence}#${profile.harness === "claude-code" ? "C-W3" : "X-W3"}`,
         },
         instruction: {

@@ -1,6 +1,14 @@
 /** Classification could not establish an effect; generated hooks advise the host. */
 export declare class HarnessCommandRefused extends Error {
 }
+/** The three shell forms the classifier leaves to the host's permissions on
+ * nearly every compound call: control syntax, a dynamic substitution and a
+ * working-directory override. Each names no refusal, so a hook journals it
+ * and shows nothing; every other classification advisory is still shown. */
+export declare const SHELL_CONTROL_SYNTAX = "Shell control syntax requires an explicit effect adapter";
+export declare const DYNAMIC_SHELL_SUBSTITUTION = "Dynamic shell substitution requires an explicit effect adapter";
+export declare const SHELL_WORKING_DIRECTORY = "Shell working-directory override needs a separately reviewed host adapter";
+export declare const HOST_DECIDED_CLASSIFICATIONS: ReadonlySet<string>;
 /** Effect inventory for the tools exposed by the observed harness profiles.
  * Unknown names are never presumed to be reads. Opaque shell/delegation routes
  * are delegated to host permissions when their effects cannot be classified.
@@ -39,10 +47,28 @@ export declare const harnessToolEffects: {
     readonly "functions.exec": "shell";
     readonly "collaboration.spawn_agent": "spawn";
 };
-/** Prefix rules name host namespaces; Skill carries its selection in input. */
+/** Prefix rules name host namespaces; Skill carries its selection in input,
+ * judged under every name the host documents for a listed skill. */
 export declare function isDesktopControlTool(name: string, input?: Readonly<Record<string, unknown>>): boolean;
 /** Public token view for diagnostics; classification uses the provenance above. */
 export declare function shellInvocations(source: string): string[][];
+/** One command a shell line would run, by the words the line wrote. */
+export interface WrittenCommand {
+    /** The `NAME=value` words before its first word. */
+    readonly assignments: readonly string[];
+    /** Its words as the line wrote them, a wrapper among them. */
+    readonly words: readonly string[];
+    /** The program behind any wrapper, named without its path, and its operands;
+     * empty when a wrapper's options cannot be read. */
+    readonly program: readonly string[];
+}
+/** Every command a line would run, read without refusing any form: control
+ * syntax, a substitution and a script handed to a shell or to eval are read,
+ * so a program inside one is found, while quoted text stays its command's
+ * argument. Text the shell substitutes stands as U+0000. Unlike the effect
+ * classification this is for a judgment of one program's literal words; a line
+ * too deep to read holds no commands. */
+export declare function writtenCommands(source: string): WrittenCommand[];
 /** Normalize executable operands for admission without requiring an effect
  * adapter for every operand. Effect classification keeps its own full checks. */
 export declare function executableShellInvocations(source: string): string[][];

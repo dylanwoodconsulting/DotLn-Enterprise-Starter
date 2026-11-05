@@ -398,6 +398,14 @@ export and install its pinned dependencies first. On clean `main`, run
 the current follow-up feed. Draft this instance's orders and sequence, then
 record its dated planning pass in `docs/lineage/idea-ledger.md`. `plan start`
 also writes the pass's planning document with its standard section headings.
+Its `Rules recorded` section starts as an empty block: a pass that writes a
+standing rule from the operator's words into a standing document, this
+instance's operator record included, names the rule there with the
+document, the section, the message's journal reference and its capture
+digest. `npm run plan -- check` refuses a rule whose message the session
+journal lacks, one from the host's task notification, one from a message
+journaled as a question, a class the journal contradicts and a digest that is
+not the message's; the operator strikes a rule by removing its entry.
 
 - `npm run plan -- followups` pages the register; `--export <file>` exports it;
   `--apply <batch.json>` applies dispositions against the revision read.
@@ -431,6 +439,23 @@ also writes the pass's planning document with its standard section headings.
   the former reports that release surfaces are unavailable. With an order,
   it checks the instance's release declaration and license surfaces as described
   below; a target order records no release. These reads do not publish anything.
+- `node scripts/refute-plan.mjs publish --title <title> --body-file <path>` ends
+  a pass; `npm run plan -- publish` takes the same flags. The emitted
+  `.claude/settings.json` allows that node spelling and `node scripts/launchpad.mjs
+  update --publish`, and nothing else: Claude Code resolves a narrow allow rule
+  before its auto-mode classifier, unless `autoMode.classifyAllShell` is set. No
+  rule admits raw `git push` or `gh`, and `npm run` has none. On a `planning/<date>-<slug>` branch with a clean tree and its planning
+  document committed, it lints the title and body, pushes the branch to
+  `origin`, opens the pull request against `main` on the repository `origin`'s
+  push URL names, ready rather than draft, and prints its URL. A title is a
+  gitmoji and a subject, with or without a conventional type, or a conventional
+  type alone, and has no length limit. A listed private term refuses in either
+  mode, because this route has no reviewer's confirmation; so does an absent
+  local-terms list, and so does AI attribution. The public review words pass: a
+  launchpad's own pull request is about them. This route needs no
+  `outward-vocabulary.json`. A retry after a failed create repeats no push and
+  adopts the open pull request whose head, branch and base match; that pull
+  request keeps its title and body, which the command does not edit.
 
 Export writes these instance-owned seeds once; ordinary kit updates leave their bytes alone:
 `docs/planning/sequence.md`, `docs/planning/followups.json` (empty schema-1
@@ -720,6 +745,102 @@ surfaces. The `docs/LEGAL.md` pin rule reports unavailable when that file is
 absent; a declared file must pass its normal validation. `UPSTREAM.md` names
 the core commit to inspect for the carried runtime.
 
+### Hooks
+
+The generated hooks enforce the harness contract's refusals where they can
+observe a call and journal what they see in the ignored
+`docs/control/local/harness/` lane. Codex tool calls are unhooked, so under
+Codex the lifecycle commands and the role text carry the same rules. What a
+refusal names, the session can run or say; nothing below asks the operator
+to run a kit command for a state the kit can judge.
+
+- **The writer reservation.** One session writes a worktree at a time. A
+  session refused by another's reservation may run
+  `node scripts/harness.mjs writer --show` to see the holder, and
+  `node scripts/harness.mjs writer --release` when the holder is dead, each
+  as that exact command with no pipe, redirect or other command beside it. A
+  live holder is released only from an operator terminal, with
+  `node scripts/harness.mjs writer --release --force`.
+- **A dead holder.** A holder is dead when its recorded host process no
+  longer exists, its process id now names a process started at another time,
+  or the process table shows it a zombie (a state beginning with `Z`). The
+  next write dispatch reclaims a dead holder's reservation itself and logs
+  the reclaim in `writer-events.jsonl`; a holder of unknown liveness is
+  released from an operator terminal without `--force`.
+- **The release at a stop.** Claude's finish hook releases the session's
+  reservation at every stop, and its next guarded call reserves it again. A
+  Codex session releases its own reservation and journals `dispatchStopped`
+  when a `release close --publish` attempt ends before it completes, and when
+  a turn ends without a continuation once its prompt hook has been observed;
+  the retried close reserves it again before it moves `main`, and with no
+  built runtime it refuses while another session's reservation is there; the
+  next prompt of a dispatch still awaiting its completion event reserves it
+  again, and a foreign holder at that prompt is named in its context.
+- **A denied activation.** When the host denies a step after
+  `worktree start` creates an order's worktree, or a registered target's
+  pair, whether a write, the spawn of its activation or a denial its
+  bootstrap reports on either output stream, the start puts back the records
+  it moved out of `main`, removes each worktree and branch it created, and
+  appends what it did, and any step it could not undo, to
+  `docs/control/local/worktree-start-denials.jsonl`. A worktree holding a
+  record it could not put back is kept, and a retry of a pending target start
+  keeps what its earlier attempt made. A start the host refuses before
+  anything is made says so and names the grant to request.
+- **A fork's `gh`.** In a clone whose `origin` and `upstream` remotes name
+  different repositories and whose gh default is unset, gh sends a command that
+  names no repository to `upstream` without saying so. The hook refuses such a
+  `gh pr` or `gh issue` command, naming `-R <origin>`, in the clone the command
+  runs in, including after a session's `cd` has moved it. It admits the command
+  with a value for `-R` or `--repo`, with `GH_REPO=` and a value in the command,
+  with a pull request or issue URL as its selector, and once `gh repo set-default`
+  has set a default, which gh stores as `remote.<name>.gh-resolved` and `gh repo
+  set-default --view` reports. `gh repo set-default`, `gh auth` and `gh --version`
+  reach no pull request or issue, and a clone with one remote sees no change. The
+  judgment reads the command as written: a script that calls `gh` is unobserved,
+  and a clone whose remotes cannot be read is admitted with one advisory.
+
+  Two remotes are one repository only when their hosts, owners and names all
+  match, and the hook reads a host only as far as its spelling establishes the
+  server, because it cannot read an SSH configuration or which servers gh is signed
+  in to. So an SSH alias spelled from `github.com`, such as `github.com-work`, is
+  `github.com`, but any other alias, or the same owner and name on another server,
+  is refused until the command names one. On two
+  servers, name one with `-R`: `gh repo set-default origin` fails there, and the
+  refusal does not offer it. An alias with no dot is named by owner and name alone,
+  which gh takes to its default host, so where that alias is another server, name
+  the server in `-R`. An upstream gh cannot reach, on GitLab.com, Bitbucket or
+  Codeberg or in a form it cannot read as a repository, leaves gh with `origin`, so
+  the command is admitted. An origin of either kind, such as a local path or a
+  subgroup, leaves gh only `upstream`, so the refusal stands and names `-R
+  <upstream>` alone. A self-hosted forge cannot be told from a GitHub server, so
+  there too the refusal stands, and `-R <origin>` is the way past it.
+- **A question.** An unprefixed operator message that ends in a question mark
+  is journaled with the class `question`, by its form alone. Claude's hook
+  adds a note to that turn: the next message answers it, with the evidence,
+  either why the current course is right or what the question changes and
+  what the session will now do differently, and the session keeps working;
+  an action the message also asks for, a pause included, is done. Under Codex
+  the role text carries the same two answers. A question records no rule
+  (§Planning in this instance, the `Rules recorded` block).
+- **Codex after compaction.** The Codex prompt hook keeps each operator
+  message of a dispatched session, cut at 64 KiB, in the session's
+  `<key>.codex-messages.jsonl` beside its journal. After a compaction the
+  restored context carries the unfinished task and then every one of those
+  messages since the dispatch began, verbatim and oldest first, each bounded
+  only when it was captured. The first stop after a compaction journals a
+  `compactionProbe` row naming the first assistant message after the latest
+  compaction before that stop, read from the turn's transcript, or the stop's
+  own last message labelled `stop-last-message`; an earlier compaction in the
+  same turn has no separate sample.
+- **Quiet advisories.** A shell command that uses control syntax, a dynamic
+  substitution or a working-directory change is judged by host permissions;
+  the hook journals that classification and shows no message. A refused
+  command's message is unchanged.
+- **A blocked turn.** When only the operator can clear what blocks a session,
+  every role's text says to state the block and the one line that clears it
+  in a single message and end the turn, since the host holds a `!` command
+  the operator types until the turn ends.
+
 ## Attestations
 
 Every lifecycle completion records the harness, version, model, effort and
@@ -923,20 +1044,34 @@ refuses the preview.
 
 The update reaches the instance's `main` through its own update pull request,
 so a later order's pull request carries only that order's commits. From clean
-`main`, the session creates a branch (for example `chore/starter-update`),
-merges the previewed revision into it (a fast-forward when `main` has no
-commits of its own), runs `node
+`main`, the session creates a `chore/<slug>` branch (for example
+`chore/starter-update`), merges the previewed revision into it (a fast-forward
+when `main` has no commits of its own), runs `node
 scripts/harness.mjs emit` and `node scripts/lineage.mjs index`, and commits
 the regenerated bytes on that update branch. This includes a lineage index
-missing from an older export. It pushes the
-branch to `origin` and opens a pull request against `main`, which the operator
+missing from an older export. It publishes the branch with
+`node scripts/launchpad.mjs update --publish --title <title> --body-file <path>`.
+That command refuses on `main`, off a `chore/<slug>` branch and with uncommitted
+changes, and until the update is whole: `UPSTREAM.md` and `KIT-MANIFEST.json`
+name one commit, neither the one they named where the branch left `main` nor the
+one `main` names now, and `node scripts/harness.mjs check` and
+`node scripts/lineage.mjs index --check` pass. It then does what `plan publish`
+does (§Planning in this instance): it lints the title and body, pushes the branch
+to `origin`, opens a pull request against `main` and prints its URL. The operator
 reviews and merges with a merge commit, so `main` keeps the starter's history
-and the next update does not apply this one again. The session then switches
+and the next update does not apply this one again. A session in a fork that still
+spells raw `gh` names the repository with `-R <fork>`, or runs `gh repo
+set-default origin` once in the clone (§Hooks). The session then switches
 back to clean `main` and runs `node scripts/launchpad.mjs update --finish`.
-That command fetches `origin`, checks the fast-forward before changing the
-checkout, advances `main` to `origin/main` and runs bootstrap; main stays
-ready for the next worktree. It refuses a dirty tree, a non-fast-forward or
-a checkout other than `main`, naming the fact.
+That command reads `origin`'s `main` first and fetches nothing when the checkout
+already holds it; otherwise it downloads only what the checkout lacks. It checks
+the fast-forward before changing the checkout, advances `main` to `origin/main`
+and runs bootstrap; main stays ready for the next worktree. It refuses a dirty
+tree, a non-fast-forward or a checkout other than `main`, naming the fact. A read
+or fetch past its bound, ten minutes unless `--fetch-timeout <seconds>` says
+otherwise, is refused with the checkout unchanged and prints the by-hand finish:
+`git fetch origin main`, `git merge --ff-only origin/main` and `node
+scripts/bootstrap.mjs`.
 Bootstrap prepares local dependencies and harness files without generating
 the tracked lineage index on main. A `.runtime/upstream-preview` left by an interrupted
 preview holds only a detached checkout: the session removes it with `git
