@@ -504,9 +504,12 @@ grep -cE '^\*\*Target release classification:\*\*[[:space:]]*(patch|minor|major)
 ```
 
 Counting recognized values alone misses a second header with a malformed value.
-The kit checks recognized headers only at close, so the before-start check also
-rejects that malformed duplicate, which is boarded in
-[WO-012-D008](../evidence/WO-012/decisions.md#wo-012-d008).
+Since starter v0.119.0 (core WO-257) the kit's reader counts every header
+before it reads the value and refuses a valid header beside a malformed
+duplicate, naming both lines, wherever the classification is read; the two
+counts stay as the quick read before activation, and
+[WO-012-D008](../evidence/WO-012/decisions.md#wo-012-d008), which boarded the
+kit defect, is settled.
 
 ### What close deletes, retains or refuses
 

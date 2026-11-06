@@ -770,6 +770,14 @@
           "reopenWhen": "A starter carries core WO-257, or a publish helper is denied in a session that started after its rule was emitted.",
           "targets": [],
           "at": "2026-11-06T20:21:47.726Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 step 17) emits Bash(node scripts/worktree.mjs publish *) beside the two WO-246 rules in .claude/settings.json (read on the updated main after harness emit), so every publish helper an order runs (the target publish, the update publish, the plan publish) has its allow rule and no publication step needs a manual command; the release says a session started after the emit reads the rule, and the two earlier rules were observed admitted on the first try on 2026-11-06.",
+          "reopenWhen": "A publish helper is denied in a session that started after its rule was emitted, or an order's publication again needs the operator to run a command by hand.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.608Z"
         }
       ]
     },
@@ -1575,6 +1583,14 @@
           "reopenWhen": "A starter carries core WO-257, or a target order contains a malformed duplicate before it lands.",
           "targets": [],
           "at": "2026-11-04T17:17:28.241Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 step 10) makes scripts/release.mjs count every Target release classification header before reading the value, refusing a valid header beside a malformed duplicate and naming both lines (the release notes and scripts/test-target-worktree-release.mjs on the updated main); the profile's pre-start check now says the kit refuses the case and keeps the two commands as the quick read.",
+          "reopenWhen": "A target order whose text carries a valid classification header beside a malformed duplicate is admitted by worktree start or release prepare.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.625Z"
         }
       ]
     },
@@ -6032,6 +6048,14 @@
           "reopenWhen": "A starter carries core WO-257, or a consumer treats the historical line as a current block.",
           "targets": [],
           "at": "2026-11-04T17:17:28.265Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 step 8, scripts/lib/criteria-status.mjs) renders the index card's and the projection's criteria line from the executor's unmet record and the later judgment: the regenerated history page now reads, for example, \"Criteria: 1 met by VER-001 (executor: unmet at handoff, ordinal 2)\", and the executor's ordinal is shown as the current state only while no later judgment exists.",
+          "reopenWhen": "A generated page or the projection shows an executor-recorded unmet criterion as the current state beside a later passing verdict, or a consumer treats the historical ordinal as a current block.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.640Z"
         }
       ]
     },
@@ -6115,6 +6139,14 @@
           "reopenWhen": "A starter carries core WO-257, or the documented setup fails on a configured clone.",
           "targets": [],
           "at": "2026-11-04T17:17:28.277Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 step 9) makes scripts/bootstrap.mjs name, before its preparation steps, every registered target whose clone mapping none of the launchpad's checkouts records, with the registration command, so a fresh clone learns what the plan check and the document gate will refuse before either runs (missingTargetClones in scripts/bootstrap.mjs on the updated main; the kit guide's First steps say so).",
+          "reopenWhen": "A fresh clone's document gate or plan check refuses with recorded target clone unavailable and bootstrap said nothing, or the documented setup fails on a configured clone.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.657Z"
         }
       ]
     },
@@ -6235,6 +6267,14 @@
           "reopenWhen": "A starter carries core WO-257, or another probe is misread as proof of confinement.",
           "targets": [],
           "at": "2026-11-04T17:17:28.301Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 steps 5 and 8) renders an entropy receipt's frozen copy under the temporary-directory placeholder, names the uninstalled copy and the unobserved host coordination in its confinement sentences, and screens the statement and the worker's output for private absolute paths before filing, with the originals retained; receipts filed earlier re-render byte for byte. No full-confinement claim is made for any receipt.",
+          "reopenWhen": "A receipt filed from v0.119.0 or later claims confinement its inventories do not show, or another probe is misread as proof of confinement.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.673Z"
         }
       ]
     },
@@ -6891,6 +6931,14 @@
           "reopenWhen": "A starter carries core WO-257, or an authorized change to a research order is refused by the ordinary planning check.",
           "targets": [],
           "at": "2026-11-06T20:21:47.708Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: its condition fired. Starter v0.119.0 (core WO-257 step 13) builds the planning subject from the sequence and then the open members of every track: separate workstream, so npm run plan -- subject on the updated main lists WO-029, WO-030, WO-031 and WO-032 after the sequenced orders and the receipt this pass files judges them, which puts them inside the amend-order horizon; the never-judged route of WO-028-D043 is no longer needed for a research order.",
+          "reopenWhen": "An authorized change to a research order is refused by amend-order or by the ordinary planning check after a receipt that names the order, or a separate-track member is missing from a receipt filed from v0.119.0 or later.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.590Z"
         }
       ]
     },
@@ -7189,6 +7237,14 @@
           "reopenWhen": "Core answers with a route or a release, someone without the operator's launchpad clone needs to follow a filed record's links, or the kit's record filing or checkpoint publication changes.",
           "targets": [],
           "at": "2026-11-06T20:21:47.744Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D2: core answered with a release. Starter v0.119.0 (core WO-257, scripts/lib/target-records.mjs) appends one provenance footer to every record target-records files, naming the launchpad by its release display name, the launchpad tree at filing (the commit kept in the pending operation, so a retried filing writes the same bytes) and the record's path there, against which its relative links resolve; that commit reaches the launchpad's main through the order's merge, so a reader of the two public repositories follows a filed record's links by opening the launchpad at the named commit. Records filed before v0.119.0 (WO-027's and earlier) carry no footer and stay as filed; WO-034 carries the target developer reference's row as a carry-in so it says where a footer's links resolve.",
+          "reopenWhen": "The next target order's filed records carry no footer, a footer names a commit that is not reachable on the launchpad's public repository, or a reader without the launchpad clone still cannot follow a filed record's links.",
+          "targets": [],
+          "at": "2026-11-06T21:23:15.689Z"
         }
       ]
     },

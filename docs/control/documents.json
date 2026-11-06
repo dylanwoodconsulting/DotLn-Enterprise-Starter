@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "purpose": "The reader entry points every session starts from, and the documents whose kind their path does not say. Every other document's kind is derived by scripts/lib/document-kinds.mjs: records by root, the planning passes directory and dated names; the paths the kit's own commands write by its kit kinds; generated pages by their marker line; the rest standing. Declared by the 2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) on core's answer of 2026-11-03 that README.md may be declared a front-page entry point until core's WO-257 makes it a kit default.",
+  "purpose": "The reader entry points every session starts from, and the documents whose kind their path does not say. Every other document's kind is derived by scripts/lib/document-kinds.mjs: records by root, the planning passes directory and dated names; the paths the kit's own commands write by its kit kinds; generated pages by their marker line; the rest standing. Declared by the 2026-11-04 planning pass (docs/planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md) on core's answer of 2026-11-03 that README.md may be declared a front-page entry point; since starter v0.119.0 (core WO-257) front-page is the kit's default entry point, and it stays listed here because a declared entryPoints list replaces the kit's defaults.",
   "entryPoints": [
     {
       "id": "instruction-start-here",

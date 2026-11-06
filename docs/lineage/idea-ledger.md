@@ -4,6 +4,17 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-06 — planning pass: starter v0.119.0 merged on the operator's word, the seven register rows core's WO-257 answers settled, the records that waited on it brought current and the plan gate's grown subject re-judged (operator dispatch of 2026-11-06, `merge upstream`)
+
+Dispatch: a `planning: merge upstream` request, the operator's in-session
+word for taking the newer starter release, followed by one mid-turn word,
+`merged`, for update #64, captured verbatim in ignored intake
+(`docs/intake/notes/planning-2026-11-06-merge-upstream.md`). The record is
+[the planning document](../planning/passes/merge-upstream-v0-119-0-2026-11-06.md);
+this heading registers the pass for the plan tooling. The pass filed no
+order and amended one carry-in; no idea enters the ledger, because the pass
+was not an ideation dispatch.
+
 ## 2026-11-06 — planning pass: starter v0.118.0 taken on the operator's word, core's answers of 2026-11-06 read against the records, WO-033 and WO-027 retired as closed, the next five orders re-based on WO-027's merge and the review rule recorded (operator dispatch of 2026-11-06)
 
 Dispatch: a `planning:` request for a standard pass with the latest

@@ -292,7 +292,12 @@ an audience beyond the operator (2026-11-05, journal row
   (refreshing or replacing an open one, recording its choice), and orders
   activate only on the updated `main`; the operator merges the update and the
   planning pull request themselves, and the session finishes the merged
-  update with `node scripts/launchpad.mjs update --finish` on clean `main`; a
+  update with `node scripts/launchpad.mjs update --finish` on clean `main`
+  (since starter v0.119.0 the publish and the finish refuse under a
+  journaled `planning:` or `ideation:` dispatch unless `--operator-request
+  --capture <ignored intake file> --capture-hash sha256:<digest>` names the
+  operator's in-session words, which the session captures before it
+  publishes); a
   repair a release's Read before upgrading names is made on the update branch
   so it merges green; where the plan gate binds a closed order's bytes,
   `amend-order --withdraw` is used with the reason recorded and the original
@@ -434,10 +439,12 @@ an audience beyond the operator (2026-11-05, journal row
   (2026-11-06, given in core's session, capture there SHA-256
   `cd1cb6d60eba1bc4ea82e39f73983da8ab61813fa87c492f5412819bbaa6aa00`, and
   relayed in core's block of 2026-11-06, pasted the same day, journal row
-  2026-11-06T19:52:35Z, digest `df22b458…`; core's WO-257 step 12 carries
-  the kit's batches, and until a starter carries it the reviews run over the
-  orders before the pass document grows, or the refusal is recorded with its
-  measured size and no amendment is withdrawn).
+  2026-11-06T19:52:35Z, digest `df22b458…`; starter v0.119.0 (core WO-257
+  step 12) carries the kit's batches: `npm run worker -- review` bounds a
+  round's documents by its base, splits a brief past the ceiling into
+  batches of whole documents over more workers, merges the batch reports
+  into one report and prints the measured size and the batch plan in its
+  dry run).
 
 ## When this record changes
 

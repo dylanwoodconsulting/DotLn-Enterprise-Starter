@@ -288,7 +288,9 @@ the verifier's reading; the two documents.
     README records each file with the verdict reshaped or left and its
     reason. Check: `node --test tools/` passes with the three tools' tests
     unchanged; the README lists the three files.
-11. Documents (`catalog.md` §The models, `catalog-rules.md`); dependency
+11. Documents (`catalog.md` §The models, `catalog-rules.md`, and the
+    `docs/dotln` row of `docs/dev-reference/README.md`, which says where a
+    filed record's links resolve: the carry-in below); dependency
     check as WO-015 step 15; gate plain and review. Check: passing rows, no
     tracked-byte mutation.
 12. Launchpad write-back (WS-001's delivery states and the profile's
@@ -391,8 +393,17 @@ the work (D042; the filing pass's NoOp with D055's reopening). This order
 activates only on a launchpad whose starter carries core WO-221's `--draft`
 form; the draft pull request and its workflow runs are a final-review
 obligation read from `docs/evidence/WO-034/preview-pr.json`, never a
-criterion. `Target release classification: patch` and `Target release
-notes: reviewed` are set under WO-012's declared policy.
+criterion. The target developer reference's `docs/dotln` row
+(`docs/dev-reference/README.md`) says a filed record's links resolve at a
+local checkpoint that may not be on GitHub; since starter v0.119.0 (core
+WO-257) `target-records` ends every record it files with a provenance
+footer naming the launchpad commit and path the links resolve against, so
+this order, the first whose records carry the footer, rewrites that row in
+step 11 to say so for the records filed from then on and leaves the
+checkpoint sentence for the records filed before (the 2026-11-06
+merge-upstream pass, D3; `FUP-575ebb5d3b7e46e0`); a one-row document edit
+under this carry-in, not a criterion. `Target release classification: patch`
+and `Target release notes: reviewed` are set under WO-012's declared policy.
 
 **Non-goals:** a parameter-count lint or a lower line ceiling; reshaping
 WO-028's twenty or the RxJS and EIP modules; per-model catalog loading; new
