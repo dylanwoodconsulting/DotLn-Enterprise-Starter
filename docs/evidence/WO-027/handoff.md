@@ -1,0 +1,43 @@
+# WO-027 repair handoff
+
+Observed on 2026-11-06 under `resume: fix`, repairing VER-001 F1 and F2. Both target references now name the public launchpad repository established by origin and GitHub. The catalog links its design records at a verified immutable commit. The developer reference explains the original record paths, the final-review event's checkpoint field and the fact that checkpoints may exist only locally. The outcome matches the bounded repair objective; a fresh independent verification owns acceptance of the corrected walkthrough.
+
+The target base remains `48c7f8e6916692bca833c4985e2cf95978ab2c06`, and the launchpad base remains `a33191ae54f68ea9d0051f2dc9f54ccd1a1069fa`. Local and remote `main` agree in each repository, so no integration was needed. The final target tree is `0dd65acc3de303551c7e52a45d53f8b47d97aaff`. Compared with VER-001's candidate, this repair changes only `docs/dev-reference/README.md` and `docs/dev-reference/architecture/catalog.md`; application code, tools, tests, dependencies and filed target records retain their bytes.
+
+## Criterion judgments
+
+**Criterion 1:** unmet — independent re-verification remains pending. VER-001 performed and recorded the required walkthrough, but failed its repository-pointer result. F1 and F2 are repaired and the additional lookup case passes; the executor does not replace that filed verdict or claim a new verifier walkthrough. The next verifier judges the corrected candidate.
+
+**Criterion 2:** met — carry forward the unchanged scanner's 1/3/1 scratch results and complete occurrence census, independently confirmed by VER-001. The repaired documents change no marker input. The current plain and review lint gates run the same tooling regression cases successfully. [The evidence README](README.md#board-count-and-occurrence-census) retains the controls and classifications.
+
+**Criterion 3:** met — the unchanged script-reference controls passed through `test:tooling` in both current lint gates, including the unmodified copy and expected missing/stale-row refusals. `check:scripts` is also part of both passing lint gates. The direct 92-test run and named control output remain in the implementation evidence and VER-001; this repair changes none of their inputs.
+
+**Criterion 4:** met — VER-001 confirmed the exact plain-tier list, no duplicated lint subcommands, the READMEs' lint/tooling relationship and the affected-project CI wording. Those passages are unchanged. The new target gates execute the declared selections successfully.
+
+**Criterion 5:** met — the corrected repository and pinned design directory resolve through independent GitHub reads. All seven local catalog Markdown links and anchors resolve; the eighth is the checked public link. The records row identifies the launchpad, original `docs/` locations and `FinalReviewCompleted.checkpointSha` in the order's control segment, with its local-public boundary. An additional WO-026 case reproduces the filed report byte for byte and resolves its preview link at that checkpoint. VER-001's passing barrel, cache and scene clauses carry forward unchanged. [D011](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d011-correct-repository-identity-and-make-record-links-traceable) corrects D003; [the repair evidence](README.md#ver-001-repair--repository-identity-and-record-lookup) records the reads.
+
+**Criterion 6:** met — `git diff --name-only` against the integrated target base names no path under `apps/`, `libs/` or `docs/dotln/`, and no package or lockfile change. A comparison of all candidate file blobs with the verified tree identifies only the two repaired documents. Runtime dependency keys therefore retain the verified equality with the base. Both complete target selections recorded no candidate-byte or HEAD mutation.
+
+**Criterion 7:** met — the unchanged title workflow and its supported gitmoji-only, conventional-title and bare-subject tests pass in `test:tooling` through both current lint gates. VER-001 independently confirmed the three forms. Live workflow observation remains the later draft-publication obligation.
+
+**Criterion 8:** met — the fresh plain target gate passed all five commands, and `node scripts/target-gate.mjs WO-027 --review` passed all eight at the final tree, with no tracked-byte mutation. Review evidence is `target-gate:cd6d0120-cc3b-4dd5-a5a4-e25e6f86e07f`, recorded at 2026-11-06T16:36:27.484Z. The original Preflight preceded the first full gate, as the implementation evidence and VER-001 record. The final launchpad `npm run test:docs` passed all 14 fresh checks at 2026-11-06T16:40:29.044Z, with zero failures. Its `documentTreeHash` is `e3de18171e5240d3fe1d5d9bbd5fa3bd5368e69c` and excludes this order’s evidence directory, so these post-pass handoff judgments retain that passing row.
+
+## Independent review and final delta
+
+self-review: found 0; fixed 0; recorded 0; rounds 1; unreviewed 157 lines (Markdown table padding, D012 and its generated index row, and final executor-owned evidence/handoff; zero behavioral source lines)
+
+VER-001 prescribes round 3 for this bounded repair; rounds 1 and 2 were skipped. One read-only native `codex-spawn-agent`, supplied `gpt-6.1-sol` at `max`, judged the six-line substantive target delta and its write-backs. The combined report found no blocking or nonblocking finding and is retained at `docs/control/local/reviews/WO-027/repair-1/round-3-combined.md`. It independently checked the public repository and pinned path, checkpoint/report identity and record-filing contract, then traced the decision/index consumers. It ran no test or gate. Manual accounting is one of twenty worker uses, with no descendants or re-tasks; the host's zero observed count does not include this native launch. D007's recorder-wrapper qualification remains applicable.
+
+The first repair plain gate failed only on the developer reference's table padding, after install, lint, typecheck and test passed. The installed Prettier formatter corrected that file without changing its wording, and the focused format check passed. [D012](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d012-apply-the-reference-tables-required-formatting) records the formatting-only exception to another review round. Fresh complete plain and review gates then passed. No reviewer ran after either complete selection passed.
+
+## Evidence and limits
+
+The passing plain target selection took 0 h 1 min and the review selection 0 h 2 min. All declared commands executed successfully at the current candidate identity; Nx may reuse cached task outputs, and this repair leaves their behavioral source unchanged. Focused results were not composed into either complete result. Launchpad formatting, synchronization, publication checking, release preparation and both worktrees' whitespace checks passed. Release preparation assigned no launchpad version. The repair adds no test or dependency for a documentation-only change; its additional lookup control ran from session scratch.
+
+The inherited F3 and F4 observations retain their D009/D010 follow-up dispositions. They are outside the blocking repair and were not widened here. No immutable report, application source or target record was rewritten. The extra WO-026 check proved that the local checkpoint is absent on GitHub; the document now states that limit instead of promising public recovery from it.
+
+No scratch repository or persistent server was created by this repair. The project gates completed their browser work. The inspected non-runtime/dependency/intake/control paths in both worktrees contain no nested Git repository. No monitor needs stopping. All authored repair outputs were read; generated outputs have synchronization and document-gate evidence. No commit, push, pull request, publication or account-setting change occurred.
+
+Actor attestation: harness `codex-cli`, version `0.167.0`, model `gpt-6-astra`, selected effort `max`, source `codex-session-readback`. Usage is read through `node scripts/harness.mjs usage 01a1b1a8-3b3a-70d0-ad64-70e3d0a7ba86`: source `codex-transcript-counter`, scope this parent dispatch. Final available totals and cutoff stay in the ignored receipt and response; worker tokens and monetary cost remain unknown. The extra lookup check exposed an unpublished-checkpoint limitation, while the missed table formatting cost one failed gate and a replacement run; no equivalent-outcome timing comparison establishes savings.
+
+The repair is ready for the `repair-complete` transition. The next independent lifecycle action is `resume: verify`.

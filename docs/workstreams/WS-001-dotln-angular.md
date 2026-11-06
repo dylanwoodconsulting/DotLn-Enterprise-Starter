@@ -333,12 +333,10 @@ changes the other.
     2026-10-30). Since starter v0.117.0 (core WO-246) the kit's publish lint
     admits a gitmoji followed by a subject with or without a conventional
     type and lints a target title as a title only; the repository's title
-    workflow (WO-004, the 2026-10-18 pass's D9) still requires the type to
-    choose the gitmoji it prepends until WO-027 changes it, so a member's
-    title carries both until then and the gitmoji and the subject alone
-    after (the 2026-10-30 second pass, addendum 2; the 2026-11-05 pass, D2);
-    the launchpad's own pull requests carry the gitmoji and the subject
-    only. Merge commits
+    workflow preserves a supported gitmoji and subject as written and still
+    decorates a conventional title with its type's gitmoji
+    ([WO-027-D003](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d003-align-the-standing-instructions)).
+    The launchpad's own pull requests carry the gitmoji and subject only. Merge commits
     carry the pull-request title (repository setting, operator-owned). The
     draft at verified is the kit's `--draft` form of `worktree publish`, run
     by the session that records the verification pass and reused by the final
@@ -843,7 +841,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-022 | merged | DotLn-Angular #13, `DotLn Angular v0.9.0`, its records #50; [evidence](../evidence/WO-022/README.md) |
 | WO-023 | filed    | [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
-| WO-027 | filed    | [the order](../work-orders/WO-027-workspace-says-and-checks-what-is-so.md) |
+| WO-027 | final-reviewed | DotLn-Angular #15 on `docs/workspace-says-and-checks-what-is-so`, opened as a draft at verification and marked ready by the final publish, for the operator to merge; its records pull request follows; [evidence](../evidence/WO-027/README.md) |
 | WO-034 | filed    | [the order](../work-orders/WO-034-standards-pass-movement-presentations.md) |
 | WO-035 | filed    | [the order](../work-orders/WO-035-catalog-text-through-messages.md) |
 | WO-036 | filed    | [the order](../work-orders/WO-036-scene-walls-and-ways.md) |

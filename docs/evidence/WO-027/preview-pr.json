@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-027",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 15,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/15",
+  "title": ":memo: Make the gate tools and reference documents say and check what is so",
+  "baseBranch": "main",
+  "headBranch": "docs/workspace-says-and-checks-what-is-so",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-027 --target-worktree --draft --branch docs/workspace-says-and-checks-what-is-so --title \":memo: Make the gate tools and reference documents say and check what is so\" --body-file docs/evidence/WO-027/draft-pr-body.md",
+      "exitCode": 0,
+      "headAndIndexUnchanged": true,
+      "session": "the verifying Claude Code session, after verification-result pass (VerificationCompleted for VER-002 at 2026-11-06T17:26:30.580Z), on the operator's answer to its one question",
+      "source": "docs/evidence/WO-027/host-qualification.md, where the verifying session recorded the invocation, the hook's admission and the host's run; the final review read the pull request back from the forge (gh pr view, gh run list, gh run view, one GraphQL query for the thread counts) and the draft commit from the target's object store"
+    },
+    "headSha": "47e739acbdb3be999f817ed1817815f2a848f36b",
+    "parent": "48c7f8e6916692bca833c4985e2cf95978ab2c06",
+    "tree": "0dd65acc3de303551c7e52a45d53f8b47d97aaff",
+    "body": "the bytes of docs/evidence/WO-027/draft-pr-body.md above the helper's Change table",
+    "verification": {
+      "id": "VER-002",
+      "path": "docs/verifications/WO-027/VER-002.md",
+      "verdict": "pass",
+      "treeHash": "0dd65acc3de303551c7e52a45d53f8b47d97aaff"
+    },
+    "targetGate": "target-gate:cd6d0120-cc3b-4dd5-a5a4-e25e6f86e07f at the same tree, recorded 2026-11-06T16:36:27.484Z by the repair",
+    "notes": [
+      "The draft's tree is the tree VER-002 verified. The title workflow left the gitmoji-and-subject title as written: run 42262742002 succeeded at 17:33:48Z and gh pr view read the title unchanged afterwards. That is the live observation the order's known issues place after verification.",
+      "The draft's tree holds a RELEASE-NOTES.md at the target's root that the final review removed from the candidate (WO-027-D014); the reviewed commits below do not carry it."
+    ]
+  },
+  "finalReview": {
+    "observedAt": "2026-11-06T17:55:15Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "47e739acbdb3be999f817ed1817815f2a848f36b",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 42262741905,
+        "workflow": "CI",
+        "createdAt": "2026-11-06T17:33:35Z",
+        "conclusion": "success"
+      },
+      {
+        "id": 42262742002,
+        "workflow": "Pull request title",
+        "createdAt": "2026-11-06T17:33:35Z",
+        "conclusion": "success"
+      }
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-06T17:33:37Z",
+        "completedAt": "2026-11-06T17:46:38Z"
+      },
+      {
+        "name": "title",
+        "workflow": "Pull request title",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-06T17:33:37Z",
+        "completedAt": "2026-11-06T17:33:47Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-06T17:38:42Z",
+        "completedAt": "2026-11-06T17:42:17Z"
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the final publish reuses this pull request, pushes the four reviewed commits and the records commit over the draft and marks it ready",
+    "reviewedCommits": [
+      {
+        "sha": "f23ddcc7280c0bf7c1ad11de3fdfb2ae0d8f375d",
+        "subject": "fix(tools): count boarded defects wherever they sit",
+        "tree": "8d84522cfe252239cdf95e349596bbb5d8debf24",
+        "note": "tools/board-count.mjs and its new test"
+      },
+      {
+        "sha": "031ea86379a2e2baf088e577d0af1d81cfc1b75a",
+        "subject": "fix(tools): check the script reference by its table rows",
+        "tree": "07d6d0716716fd58797e25c936cffbed7e6990a4",
+        "note": "tools/scripts/check-script-reference.mjs and its new test"
+      },
+      {
+        "sha": "dd9546489ccfde6ed5d7b03dbf33b92bcfc65b32",
+        "subject": "feat(tools): leave a gitmoji-and-subject pull-request title as written",
+        "tree": "ab37ed4d2a155d0f2c51b7be82e0c66ff2eb7647",
+        "note": "tools/pr-title.mjs, its test and the boarded fork-title marker"
+      },
+      {
+        "sha": "739569041b6ab4289825df372598b034746bd4b8",
+        "subject": "docs: fix the references on the gate, barrels, cache, records and scene",
+        "tree": "314fb0e0bc20fcdb7b78d9eac74111b0d9037fb5",
+        "note": "the root README and the nine documents under docs/ai-reference and docs/dev-reference; this commit's tree is the reviewed tree, which review gate row target-gate:90148375-fd5e-4d3f-a14b-95e2dfc8eb70 covers"
+      }
+    ],
+    "reviewGate": "target-gate:90148375-fd5e-4d3f-a14b-95e2dfc8eb70 at tree 314fb0e0bc20fcdb7b78d9eac74111b0d9037fb5, recorded 2026-11-06T17:52:57.577Z by the final review after the root release-notes file left the candidate; the draft's tree 0dd65acc… differs from the reviewed tree by that one file"
+  }
+}
