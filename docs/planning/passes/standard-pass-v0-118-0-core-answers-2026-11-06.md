@@ -487,7 +487,10 @@ From DotLn-Enterprise-Starter's 2026-11-06 planning pass, docs/planning/passes/s
 
 Model and effort: Fable 5.1 at `max`, operator-selected (the session's
 `/model` line). Usage: unknown before 19:59:28Z (no role); 419,456 tokens
-at the role's resolution (20:00:20Z); the exit reading is in the handoff.
+at the role's resolution (20:00:20Z); 19,486,208 total tokens at exit
+(20:50:51Z: 1,424 input, 19,035,465 cached, 299,012 cache-write, 150,307
+output; reasoning and cost unavailable), source the transcript counter,
+scope dispatch; dispatch standing 0 h 53 min of an unset bound.
 Subagents: budget 20 (`subagentCap`); the plan stated before the first
 spawn: three Codex review workers through `npm run worker -- review --host
 codex --subject planning` (the criteria adversary with `--capture`, the
@@ -499,8 +502,9 @@ descendant. Spent: three review launches that ran (the criteria adversary
 2,269,720 tokens, the consistency reviewer 0 h 10 min and 3,770,244 tokens,
 by the codex-result-envelope) and the dry run that measured the brief,
 which the hooked session counted as a fourth use; the refuter's use and the
-exit reading are in §Validation: five uses against the cap of twenty, no
-re-task, no descendant observed.
+exit reading are above: five uses against the cap of twenty (the usage line
+reads launched 5: claude 1, codex 3, unattributed 1), no re-task, no
+descendant observed.
 Wall-clock of the pass's commands: the preview 326 ms; the update's four
 gates 0 h 1 min; `update --finish` seconds; `plan start` 0 h 1 min with its
 prune; the index, the register sync and the cost table seconds each; the
@@ -546,6 +550,63 @@ product 07's ladder, and the refuter judged the repaired text.
 | Consistency F3 (`FUP-223cde718a523e67`) | Fixed: a second disposition corrects the first's prose to the source's third revision with the same state and condition. |
 | Consistency F4 (D4's figure) | Fixed: the tooling delta is 462 additions and 27 deletions across the six files, by `git diff --numstat`, not about 2,000 added lines (that figure was the whole merge's). |
 
-**Independent refutation.** REFUTATION_BODY
+**Independent refutation.** [Receipt 022](../refutations/2026-11-06-planning-dd0bc51a5d896a94-022.md)
+is the fresh judgment through the direct route: one background Claude
+`dotln-worker` (claude-opus-5-5 at xhigh by its generated definition, no
+model override, effective readback unknown) with no inherited conversation,
+reading the canonical prompt of `npm run plan -- refute --direct` saved in
+ignored intake and nothing else (its statement names the one file, its
+three reads and that it ran no command and made no write): aligned-with-
+findings for the plan and for WO-034, the one order the scope judged (the
+kit hashes an order's title, objective, cost, criteria and non-goals, so
+the base and dependency edits to WO-023, WO-024 and WO-018 left their
+judged text unchanged and their verdicts carry from receipt 021 by hash,
+with WO-035 to WO-038, WO-016, WO-008 and WO-017: ten carried), zero
+holds, twelve known issues with reopening observations on WO-034, 0 h 10
+min dispatch to file (0 h 6 min from the worker's launch to its hand-back,
+116,108 tokens and 4 tool uses by the host's usage line), the subject
+`sha256:eb5a8ba8…` at `1e73c2c`, no carried disposition. The receipt
+helper refused the first filing because the result and statement sat in the
+session scratch outside the repository; their ignored-intake copies filed
+without a word changed. The twelve known issues are NoOps for this pass
+(kind NoOp; reason: none is an observed failure and each names its
+reopening observation; evidence: the receipt's findings; reevaluation: each
+finding's `reopenWhen`; usefulWhen: that observation showing a repair would
+improve the stated outcome); the ones WO-034's roles read before they run
+are named here: the audit measures arity, not the semantic shape, and is
+self-graded with criterion 1's random reading as the one independent
+check; criteria 3 and 5 could meet on a motion-drawing text node outside
+the wall study; `eslint --print-config` shows a rule configured, not
+enforced; criterion 6 pins the 0.74 overlap while the simulation changes;
+the 48 reworded stream messages have no render check; criterion 8's
+pathspec proves nothing when a named test path is absent; and the order
+bundles six outcomes under nine criteria in a series where four of the
+last eight first verifications failed. The receipt's plan check printed the
+same advisories as the previous pass's: WO-034's step 2 naming a launchpad
+record path a draft publish body must not name, and the two standing
+criteria advisories.
 
-**Document gate.** GATE_BODY
+**Document gate.** `npm run test:docs` at the tree with the receipt
+(`f2f833c`) passed all fourteen tasks (format, configuration-root,
+registrations, declarations, generated, host, kit-verify, harness-context,
+license-surfaces, docs-check, reader-profiles, entropy, plan,
+plan-refutation-current) in 0 h 1 min with zero failures; the kit verifies
+1,106 files at `772979ea`, and the advisories are the five historical
+operator-word lines, WO-034's path advisory and the two criteria
+advisories. Before the receipt the gate failed twice as expected: once on a
+stale lineage index after the ledger's registration (regenerated), and once
+on the plan check's own rule that a pass needs a receipt, after the three
+withdrawals cleared the unmatched amendments. The gate runs once more after
+this closing edit, before the push, and the handoff names that result.
+
+Outcome against the dispatch: starter v0.118.0 is taken on the operator's
+word and finished on `main`; every answer of core's has a home in the
+records, with two rows settled by the release, three re-disposed on WO-257
+and one ask returned to core; the closed orders are retired; the five
+orders that can activate next stand at WO-027's merge; the first standards
+pass reads what landed since the previous pass; the operator's review
+direction is the rule it is; and the three independent reviews and the
+refutation judged the result. What the pass could not do as asked of
+itself: nothing; the one thing it did wrong and corrected is the `--tags`
+fetch (§Entry observations). This record creates no target implementation
+or activation.
