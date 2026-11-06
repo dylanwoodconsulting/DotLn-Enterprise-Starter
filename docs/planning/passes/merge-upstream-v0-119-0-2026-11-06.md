@@ -2,9 +2,9 @@
 
 ## Dispatch and capture
 
-The operator dispatched `planning: merge upstream` as a message of its own,
-and one word followed mid-turn, `merged`, at about 21:19Z, after the session
-said update #64 was open. Both are captured verbatim in ignored intake at
+The operator dispatched a planning pass asking for the upstream merge, as a
+message of its own, and one word followed mid-turn at about 21:19Z, after
+the session said update #64 was open, saying it was merged. Both are captured verbatim in ignored intake at
 `docs/intake/notes/planning-2026-11-06-merge-upstream.md` (SHA-256
 `78897db75ff18771a2283ec71ef247e15328fe5a03c3faab93dca0c0b604c90a` as the
 update publish and finish read it, with the dispatch alone;
@@ -85,8 +85,8 @@ sibling declaration cannot run (§Requests to core, item 3).
 
 | Item | Aim read | Disposition | Planner's inference |
 | --- | --- | --- | --- |
-| `planning: merge upstream` | take the newer starter release in this session, then plan over what it changes | #64 opened by the kit's helper, merged by the operator, finished on `main`; the planning branch from the updated `main` (D1) | that the phrase asks for the update and the pass the operator record describes for it, not for a standard pass over the whole queue; the queue is read anyway (the feed, the conditions, the register) and nothing in it fired beyond the release's own rows |
-| `merged` | the update may finish | `update --finish` ran on clean `main` | none |
+| the dispatch line (the upstream merge) | take the newer starter release in this session, then plan over what it changes | #64 opened by the kit's helper, merged by the operator, finished on `main`; the planning branch from the updated `main` (D1) | that the phrase asks for the update and the pass the operator record describes for it, not for a standard pass over the whole queue; the queue is read anyway (the feed, the conditions, the register) and nothing in it fired beyond the release's own rows |
+| the mid-turn word (the update merged) | the update may finish | `update --finish` ran on clean `main` | none |
 
 ## Orders filed and amended
 
@@ -145,7 +145,7 @@ release fired. The NoOp of staying on v0.118.0 was declined because the
 operator asked, and because v0.119.0 carries the seven answers the fork's
 rows waited on.
 
-### D2. The seven rows that waited on WO-257 are settled by the release
+### D2. Six of the seven rows that waited on WO-257 are settled by the release; the seventh stays deferred
 
 Each row whose reopening condition read "a starter carries core WO-257" was
 read against the release on the updated `main`, not against the release
@@ -265,7 +265,7 @@ recognized headers only at close; it now says the kit's reader refuses the
 malformed duplicate wherever it reads the classification and keeps the two
 counts as the quick read. Each is a replacement of a sentence that became
 wrong, in the paragraph it lives in; no dated account is appended. The
-`Rules recorded` block stays empty: `merge upstream` is a request the record
+`Rules recorded` block stays empty: the dispatch is a request the record
 already names the route for, and no message of this session gives a
 direction.
 
@@ -348,7 +348,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 | A standard pass over the whole queue | The dispatch asks for the upstream merge; the feed, the conditions and the register were read and nothing fired beyond the release's rows; no order closed since the previous pass four hours earlier. Evidence: `npm run plan -- failures` (0 items in the window); `npm run plan -- conditions` (0 holding). | An order closes, or the operator dispatches a standard pass. | The queue is re-read when it has moved. |
 | Refilling the research track | Four research orders are queued and the refill rule is fewer than two (WS-002 rule 6). Evidence: WS-002's member table. | Two of the four close. | The Codex capacity has a next order waiting. |
 | Running the reader score | Not due: no profile is declared and `plan start` reports no changed profile with three unscored releases. Evidence: the start report's `readerScores`. | The operator asks or a profile is declared. | A reader's score shows a surface drifting. |
-| Recording the dispatch phrase as a rule | `merge upstream` is a request the Starter updates item already names the route for; a request is not a standing direction. Evidence: the operator record's Starter updates item; this session's journal rows. | The operator says the phrase should mean something more. | Every phrase the operator uses has a recorded meaning. |
+| Recording the dispatch phrase as a rule | The phrase is a request the Starter updates item already names the route for; a request is not a standing direction. Evidence: the operator record's Starter updates item; this session's journal rows. | The operator says the phrase should mean something more. | Every phrase the operator uses has a recorded meaning. |
 | Removing the profile's two-count classification check | The kit now refuses the case, but the two commands are a quick read before activation that costs nothing and the operator's rule is that a check stays while it is useful (WS-001 rule 26). Evidence: the profile's §Check the release classification before activation; the release notes. | The check misleads a role or the kit prints the same read at `worktree start`. | The kit's own read is the only one a role runs. |
 | Re-running the merge watcher as an agent or asking the operator to say "merged" | A background shell loop observed the merge and the operator's word arrived at the same time; neither needs a rule. Evidence: the watcher's output; the capture. | The hook's worker count misleads a budget. | The hook distinguishes a shell loop from an agent. |
 | Reopening an order on the "seeking the wrong goal" reopen candidate | Unchanged since the previous pass, no order having closed since; its NoOp stands. Evidence: the cost table's trap signals; the 2026-11-06 pass's NoOps. | The next closed order's delta worsens again. | The share falls because delivery orders closed. |
@@ -402,9 +402,9 @@ It is repeated in the handoff after this pass's checks.
 ```text
 planning: fork observations after starter v0.119.0
 
-From DotLn-Enterprise-Starter's 2026-11-06 merge-upstream planning pass, docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md. These are the fork's findings, not new operator direction. The seven register rows that waited on WO-257 are settled on the updated main: the research orders in the judged subject, the target publish's allow rule, the classification reader, the criteria line, bootstrap's clone diagnostic, the entropy receipt's wording and the record footer.
+From DotLn-Enterprise-Starter's 2026-11-06 merge-upstream planning pass, docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md. These are the fork's findings, not new operator direction. Six of the seven register rows that waited on WO-257 are settled on the updated main: the research orders in the judged subject, the target publish's allow rule, the classification reader, the criteria line, bootstrap's clone diagnostic and the entropy receipt's wording; the record-links row stays deferred (item 4).
 
-1. Starter v0.119.0 is taken (#64), on the operator's word in the dispatch of that session (planning: merge upstream). Preview 95 replaced, 3 added, 0 refused, no instance action; one merge, no conflict; harness emit 43 surfaces, no drift; harness check, launchpad verify and npm test green in 0 h 2 min with test:docs; update --publish admitted with --operator-request --capture --capture-hash on the first try and the admission journaled; update --finish ran under v0.118.0's launchpad before the fast-forward, so it needed no flags. Nothing asked.
+1. Starter v0.119.0 is taken (#64), on the operator's word in the dispatch of that session, which asked for the upstream merge. Preview 95 replaced, 3 added, 0 refused, no instance action; one merge, no conflict; harness emit 43 surfaces, no drift; harness check, launchpad verify and npm test green in 0 h 2 min with test:docs; update --publish admitted with --operator-request --capture --capture-hash on the first try and the admission journaled; update --finish ran under v0.118.0's launchpad before the fast-forward, so it needed no flags. Nothing asked.
 
 2. Ask (a compatibility gap the release's own rule names): npm run test:docs fails on the update branch and on main between the update's merge and the planning pull request's, in the plan and plan-refutation-current tasks, with "sequence, vision, roles or order inventory changed". v0.119.0 lists the open separate-track members (the fork's WO-029 to WO-032) after the sequence in the subject; receipt 022 was filed on v0.118.0 over the sequence alone; plan-receipts.mjs rebuilds that receipt under its filed rule, but checkPlanContinuation in scripts/lib/plan-continuation.mjs removes only the judged receipt's order paths from the fixed inputs, so the four new order inputs survive the comparison and the check fails. No instance file can repair it. The fork's route is its own next receipt, filed by this pass over the grown subject. Decide whether the continuation check builds the current subject under the judged receipt's rule (separateTrack only when the receipt carries the key), or treats the separate-track members as order inputs, and whether the instance-history fixture should carry a track: separate workstream so WO-232's compatibility rule catches the case before release.
 
