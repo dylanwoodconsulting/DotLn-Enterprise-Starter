@@ -109,6 +109,71 @@
         "note": "the root README and the nine documents under docs/ai-reference and docs/dev-reference; this commit's tree is the reviewed tree, which review gate row target-gate:90148375-fd5e-4d3f-a14b-95e2dfc8eb70 covers"
       }
     ],
-    "reviewGate": "target-gate:90148375-fd5e-4d3f-a14b-95e2dfc8eb70 at tree 314fb0e0bc20fcdb7b78d9eac74111b0d9037fb5, recorded 2026-11-06T17:52:57.577Z by the final review after the root release-notes file left the candidate; the draft's tree 0dd65acc… differs from the reviewed tree by that one file"
+    "reviewGate": "target-gate:90148375-fd5e-4d3f-a14b-95e2dfc8eb70 at tree 314fb0e0bc20fcdb7b78d9eac74111b0d9037fb5, recorded 2026-11-06T17:52:57.577Z by the final review after the root release-notes file left the candidate; the draft's tree 0dd65acc\u2026 differs from the reviewed tree by that one file"
+  },
+  "finalPublish": {
+    "observedAt": "2026-11-06T19:12:36Z (after the re-run; the publish itself was read back at 18:40:24Z and the first CI attempt at 19:01:57Z)",
+    "command": "node scripts/worktree.mjs publish WO-027 --target-worktree --branch docs/workspace-says-and-checks-what-is-so --title \":memo: Make the gate tools and reference documents say and check what is so\" --body-file docs/final-reviews/WO-027/PR.md",
+    "exitCode": 0,
+    "session": "this final-review Claude Code session, from the launchpad order worktree's root after final-review-result pass, target-records and the instance records commit e643e9970d3103040e18a36ad771186fc8824495",
+    "headSha": "47f7a2f02f1374f2e635260c4a69d528e3e909e3",
+    "overDraft": "47e739acbdb3be999f817ed1817815f2a848f36b",
+    "commits": [
+      "f23ddcc7280c0bf7c1ad11de3fdfb2ae0d8f375d",
+      "031ea86379a2e2baf088e577d0af1d81cfc1b75a",
+      "dd9546489ccfde6ed5d7b03dbf33b92bcfc65b32",
+      "739569041b6ab4289825df372598b034746bd4b8",
+      "47f7a2f02f1374f2e635260c4a69d528e3e909e3"
+    ],
+    "recordsCommit": "47f7a2f02f1374f2e635260c4a69d528e3e909e3 (docs: record reviewed change and validation; the order, decisions, VER-001, VER-002 and FINAL-001 under docs/dotln/)",
+    "state": "OPEN",
+    "isDraft": false,
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "workflowRuns": [
+      {
+        "id": 42272762780,
+        "workflow": "CI",
+        "createdAt": "2026-11-06T18:40:04Z",
+        "conclusion": "success",
+        "attempt1": {
+          "conclusion": "failure",
+          "checks": "success, 18:40:07Z to 19:01:37Z, every step green",
+          "visual": "cancelled at 18:55:05Z with no runner and no step run; GitHub's annotation: the job was not acquired by a hosted runner after multiple attempts, with capacity notices for macOS arm64 runners"
+        },
+        "attempt2": {
+          "requestedAt": "2026-11-06T19:03:22Z",
+          "command": "gh run rerun 42272762780 --failed --repo DylanBWood/DotLn-Angular",
+          "visual": "success, 19:08:32Z to 19:12:01Z",
+          "conclusion": "success"
+        }
+      }
+    ],
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "routed": "nothing to route; the pull request waits for the operator to read and merge it",
+    "notes": [
+      "The title workflow runs on the opened and edited events, so the push and the ready-for-review change did not rerun it; its passing run 42262742002 on the draft stands for the unchanged title."
+    ],
+    "checks": [
+      {
+        "name": "checks",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-06T18:40:07Z",
+        "completedAt": "2026-11-06T19:01:37Z"
+      },
+      {
+        "name": "visual",
+        "workflow": "CI",
+        "status": "COMPLETED",
+        "conclusion": "SUCCESS",
+        "startedAt": "2026-11-06T19:08:32Z",
+        "completedAt": "2026-11-06T19:12:01Z",
+        "note": "second attempt; the first was cancelled before any runner acquired it"
+      }
+    ]
   }
 }

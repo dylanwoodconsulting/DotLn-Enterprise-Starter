@@ -109,3 +109,43 @@ record's new home in the target at that commit, the form WO-028's evidence and
 the workstream already use for a moved record; no wording changed, and no
 filed report or target byte changed. The check reran green before the
 instance records were committed.
+
+### The final publish
+
+From this launchpad worktree's root, after `final-review-result pass` at
+18:36:41Z, `target-records` (records commit
+`47f7a2f02f1374f2e635260c4a69d528e3e909e3`) and the instance records commit
+`e643e9970d3103040e18a36ad771186fc8824495`, the exact registered helper ran
+plainly, with no environment prefix, pipe or redirect:
+
+```sh
+node scripts/worktree.mjs publish WO-027 --target-worktree --branch docs/workspace-says-and-checks-what-is-so --title ":memo: Make the gate tools and reference documents say and check what is so" --body-file docs/final-reviews/WO-027/PR.md
+```
+
+The hook admitted it with no refusal or advisory, and the host ran it without a
+permission prompt. It exited 0 with one output line: pushed the branch at
+`47f7a2f0…` over the draft `47e739ac…` and marked pull request 15 on
+`github.com/DylanBWood/DotLn-Angular` ready.
+
+A read-only forge read at 18:40:24Z confirmed `isDraft` false, head
+`47f7a2f0…`, the five commits in order (the four reviewed commits and the
+records commit), merge state mergeable, and no review, comment or thread. CI
+run 42272762780 was queued on that head; the title workflow runs on the opened
+and edited events only, so its passing run on the draft stands for the
+unchanged title. The CI outcome is recorded in
+[the preview record](preview-pr.json) once the run ends. The published body is
+PR.md with the helper's Change and Target checks sections.
+
+CI run 42272762780 on the published head ended at 19:01:37Z with the required
+`checks` job green at every step and the `visual` job cancelled at 18:55:05Z
+with no runner and no step run; the job's own annotation reads that it was not
+acquired by a hosted runner after multiple attempts, beside GitHub's capacity
+notices for macOS arm64 runners. The same visual suite passed on the draft's
+tree an hour earlier, and the reviewed tree differs from it only by the removed
+root release-notes file and the filed records. At 19:03:22Z the reviewer ran
+`gh run rerun 42272762780 --failed --repo DylanBWood/DotLn-Angular` from the
+target worktree; the host ran it without a prompt. The re-run's outcome is in
+[the preview record](preview-pr.json).
+
+The records branch publish follows this section's commit, so its result is in
+the review session's closing message rather than here.
