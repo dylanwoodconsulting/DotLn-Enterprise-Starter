@@ -1,63 +1,83 @@
 {
   "schemaVersion": 1,
-  "subjectSourceHash": "sha256:0b16b17d9975df8c3783b239f85799a4f8206425966d65db701eacebbf634f6f",
+  "subjectSourceHash": "sha256:b347449419ae5708be0b69ca5dd209fa6953011901c696af3ccf3e7d68c3295b",
   "acceptances": [],
-  "observedAt": "2026-11-06T20:40:17.825Z",
-  "subjectRevision": "3ad1a1c8cd7ee865c2b55d31e4a29eae91c0e46b",
+  "observedAt": "2026-11-06T21:48:29.033Z",
+  "subjectRevision": "8b14c5c627c56bf28a8ae91a25d730fbfec1784f",
   "rows": [
     {
       "workOrder": "WO-034",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-023",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-024",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-035",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-036",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-037",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-038",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-016",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-008",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-017",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     },
     {
       "workOrder": "WO-018",
-      "observedAt": "2026-11-06T20:40:17.825Z",
+      "observedAt": "2026-11-06T21:48:29.033Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-029",
+      "observedAt": "2026-11-06T21:48:29.033Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-030",
+      "observedAt": "2026-11-06T21:48:29.033Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-031",
+      "observedAt": "2026-11-06T21:48:29.033Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-032",
+      "observedAt": "2026-11-06T21:48:29.033Z",
       "metrics": null
     }
   ],
@@ -607,6 +627,11 @@
       "reopenCandidate": false,
       "planningCaptures": [
         {
+          "pass": "planning-24a2db426d5b445a",
+          "date": "2026-11-06",
+          "captures": 1
+        },
+        {
           "pass": "planning-dd0bc51a5d896a94",
           "date": "2026-11-06",
           "captures": 1
@@ -800,8 +825,8 @@
             },
             {
               "workOrder": "WO-027",
-              "value": 106,
-              "delta": -33
+              "value": 139,
+              "delta": 0
             }
           ]
         },
@@ -933,11 +958,11 @@
             "role": "planner",
             "skillsRoot": ".claude/skills",
             "path": ".claude/skills/dotln-planner/SKILL.md",
-            "skillBytes": 22782,
-            "bytes": 30062,
+            "skillBytes": 23400,
+            "bytes": 30680,
             "previousBytes": 29543,
             "previousCause": null,
-            "delta": 519,
+            "delta": 1137,
             "ceiling": null,
             "lastAcceptance": {
               "date": null,
@@ -1087,11 +1112,11 @@
             "role": "planner",
             "skillsRoot": ".agents/skills",
             "path": ".agents/skills/dotln-planner/SKILL.md",
-            "skillBytes": 22782,
-            "bytes": 30062,
+            "skillBytes": 23400,
+            "bytes": 30680,
             "previousBytes": 29543,
             "previousCause": null,
-            "delta": 519,
+            "delta": 1137,
             "ceiling": null,
             "lastAcceptance": {
               "date": null,
