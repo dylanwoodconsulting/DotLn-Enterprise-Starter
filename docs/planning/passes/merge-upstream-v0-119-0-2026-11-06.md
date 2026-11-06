@@ -420,8 +420,11 @@ From DotLn-Enterprise-Starter's 2026-11-06 merge-upstream planning pass, docs/pl
 Model and effort: Fable 5.1 at `xhigh` (`CLAUDE_EFFORT`; operator-selected).
 Usage: 93,996 tokens at the role's resolution (21:05:33Z); 5,416,045 total
 tokens at the subject's drafting (21:23:14Z: 870 input, 5,104,782 cached,
-248,465 cache-write, 61,928 output; reasoning and cost unavailable), source
-the transcript counter, scope dispatch; the exit reading is in the handoff.
+248,465 cache-write, 61,928 output); 22,575,548 total tokens at the receipt
+(22:05:43Z: 2,106 input, 22,015,867 cached, 406,755 cache-write, 150,820
+output; reasoning and cost unavailable), source the transcript counter,
+scope dispatch; dispatch standing 1 h 0 min of an unset bound at the
+receipt; the exit reading is in the handoff.
 Subagents: budget 20 (`subagentCap`); the plan stated before the first
 spawn: three Codex review workers through `npm run worker -- review --host
 codex --subject planning` (the criteria adversary with `--capture`, the
@@ -442,4 +445,120 @@ builds has a receipt.
 
 ## Validation
 
-Filled after the reviews and the refutation; the handoff names the result.
+The dispatch capture's final digest is
+`1011fac89303dadcba782730b088aba2759b4bce544187d900a0cfa6e2023309`: the
+file grew twice after the update publish read it, with the merge word and
+then with the two messages numbered as items and one sentence saying where
+a criteria review's table goes (below); every digest the records name is
+the file as it stood when that record read it.
+
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning` under the lane
+`planning-2026-11-06-merge-upstream-v0-119-0` (keyed by the branch), round
+1, over the change since `e32ce0c`; the brief measured 108,876 characters
+by the helper's dry run, under the 400,000-character ceiling, one batch of
+three inlined documents (the pass document, the work-order index and
+WO-034) with the brief directing each worker at the whole branch diff by
+`git diff` and listing the ten changed files, so the operator record, the
+profile, the declaration, the ledger and the register were in every
+worker's reach and in the design and consistency workers' files read. The
+design improver and the consistency reviewer were launched together over
+tree `94a6183` (the first committed subject): the design improver 0 h 4
+min, 1,008,976 tokens, 2 findings (0 blocking, 1 should-fix, 1 note); the
+consistency reviewer 0 h 11 min, 3,233,134 tokens, 2 findings (0 blocking,
+2 should-fix), with its `Traced consumers` table of seventeen rows; both by
+the codex-result-envelope, the effective effort unknown; each records the
+checkout unchanged across its episode. The criteria adversary, launched
+with the dispatch capture through `--capture`, was refused by the helper
+three times (0 h 5 min, 0 h 5 min and 0 h 3 min; each returned 2 findings)
+because its report carried no `## Items` table; the helper writes nothing
+for a refused report and the worker runs ephemeral, so the three texts are
+unobserved and the cause is unknown. The capture was given the two
+messages as numbered items before the third launch and one sentence
+saying the table sits directly under the heading before the fourth, which
+ran over the corrected tree `cb1cdaa` after the design and consistency
+findings were folded in: 0 h 4 min, 876,210 tokens, 2 findings (0
+blocking, 2 should-fix), its `## Items` table answering both items as
+acted on. Self-review: found 6 (6 distinct); fixed 6; recorded 0. No
+recheck round ran: no finding was blocking and every repair is record or
+order text, the precedent of the passes since 2026-11-03 for
+documentation-only repairs, and the refuter judged the repaired text.
+
+| Finding | Disposition |
+| --- | --- |
+| Design F1 (the footer's post-filing owner) | Fixed: WO-034's final reviewer records the footer observation in the records step; the row stays deferred (D3). |
+| Design F2 and consistency F2 (WO-034 "first") | Fixed: the carry-in says a research order filed first owes nothing and WO-034 records the observation whatever landed before it. |
+| Consistency F1 (the footer's guarantee) | Fixed: the settlement withdrawn by a second register batch; the row deferred on the kit's comment and WO-027's checkpoint parent; D2, D3, the register table, the NoOps, the sequence and item 4 to core corrected. |
+| Criteria F1 (direct quotes of the operator's messages) | Fixed: the pass document and the ledger paraphrase the two messages and cite the capture's digests (the operator record's Direct quotes item). |
+| Criteria F2 (seven settlements claimed after the re-deferral) | Fixed: six settlements and one deferral in the aim, D2's heading, the ledger heading and the block to core. |
+
+**Independent refutation.** [Receipt 023](../refutations/2026-11-06-planning-2c2b36a3d2d53945-023.md)
+is the fresh judgment through the direct route: one background Claude
+`dotln-worker` (claude-opus-5-5 at xhigh by its generated definition, no
+model override, effective readback unknown) with no inherited conversation,
+reading the canonical prompt of `npm run plan -- refute` saved in ignored
+intake and nothing else (its statement names the one file, its two reads
+and that it ran no command and made no write): aligned-with-findings for
+the plan and for the four orders the scope judged, WO-029, WO-030, WO-031
+and WO-032, which v0.119.0 brought into the subject (D4) and which no
+receipt had judged before; the eleven sequenced orders carry their
+verdicts from receipt 022 by hash, WO-034 included (its judged text is
+unchanged by the carry-in); zero holds; eighteen known issues with
+reopening observations; 0 h 11 min dispatch to file (0 h 8 min from the
+worker's launch to its hand-back, 147,225 tokens and 3 tool uses by the
+host's usage line); the subject `sha256:a7a7f71e…` at `b0f25cd`; no
+carried disposition. The receipt helper refused the first filing because
+the worker's statement named the prompt file by its absolute path; the
+same worker restated the one path as `<worktree>/…` on a re-task (8 s, 1
+tool use) with no other word changed, and the pair filed. The eighteen
+known issues are NoOps for this pass (kind NoOp; reason: none is an
+observed failure and each names its reopening observation; evidence: the
+receipt's findings; reevaluation: each finding's `reopenWhen`;
+usefulWhen: that observation showing a repair would improve the stated
+outcome); the ones the research orders' roles read before they run are
+named here: criterion 3 of WO-029, WO-030 and WO-032 reaches the whole
+work directory rather than the order's own records, so an earlier batch's
+Illustrative or null-executable record can fail a later batch (WO-031's
+clause is the model); criterion 5's regenerated baselines pass by
+construction and the screenshots carry the visual judgment; criterion 2's
+exact count refuses a batch with two unsupported candidates; WO-035's
+fail-closed messages may reach the studies' on-screen text, which no
+research Cost line names; the non-goals give the catalog's search to
+WO-018, whose title names no search; WO-031's criterion 7 may carry an
+unconfirmed embodiment into the architecture reference; WO-032's
+criterion 1 and criterion 3 conflict if the relations family cannot step
+levels; and each batch is the next point of the machinery-share series.
+The pass before each research order activates reads these against the
+order; WO-029 and WO-030 are runnable now, so their executors read them
+from this record. The receipt's plan check printed the same advisories as
+the previous pass's: WO-034's step 2 naming a launchpad record path a
+draft publish body must not name, and the two standing criteria
+advisories.
+
+**Worker uses.** By the role's count: the merge watcher (a shell loop the
+hook counted as an unattributed use), the review dry run, six review
+launches (design, consistency, criteria four times), the refuter and its
+one re-task: ten of twenty. The hook's own line reads launched 2 (claude 1,
+unattributed 1), re-tasked 1, remaining 17: the six Codex review launches
+and the dry run were spelled `npm run worker --silent -- review`, which
+the hook's literal match did not count; the pass's count is the ten above
+and the six Codex launches are in the lane's reports and the journal's
+launch rows.
+
+**Document gate.** `npm run test:docs` at the tree with the receipt and
+this closing edit is named in the handoff with its result; the kit verifies
+1,109 files at `62b0332a`.
+
+Outcome against the dispatch: starter v0.119.0 is taken on the operator's
+word and finished on `main`; six of the seven rows that waited on WO-257
+are settled and the seventh is deferred on evidence the reviews found; the
+standing documents say what the kit does; WO-034 carries the one
+observation the release makes possible; the subject the kit now builds,
+the four research orders included, has a receipt that turns the document
+gate green again; and the three independent reviews and the refutation
+judged the result. What the pass did wrong and corrected: the `--tags`
+fetch (§Entry observations), a settlement that over-claimed (D3), the
+quoted messages, and the stale count. This record creates no target
+implementation or activation.
