@@ -250,12 +250,12 @@ an audience beyond the operator (2026-11-05, journal row
 
 - **Commits:** conventional commits in the present imperative. **Pull-request
   titles:** a gitmoji prefix and the subject, no conventional type (2026-10-17,
-  capture `4f14c6c0…`; restated 2026-10-30, capture `58331059…`). Where a
-  lint requires a conventional type in a title (the kit's publish lint for a
-  target order, and the DotLn-Angular title workflow WO-004 added under the
-  2026-10-18 pass's D9), the type is that lint's requirement and not the
-  operator's preference; the fork asks core to lift it and keeps the
-  workflow until an order changes it.
+  capture `4f14c6c0…`; restated 2026-10-30, capture `58331059…`). The
+  preference holds in both repositories: the kit's publish lint admits a
+  gitmoji and a subject with or without a type since starter v0.117.0
+  (core WO-246), and the DotLn-Angular title workflow leaves such a title
+  as written since WO-027 (DotLn-Angular #15;
+  [WO-027-D010](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d010-note-the-operator-records-stale-title-sentence)).
 - **Merges:** merge commits whose message is the pull-request title. The operator
   sets repository settings themselves; sessions do not change them (the one
   directed exception was WO-010's branch rules, 2026-10-18).
@@ -424,7 +424,17 @@ an audience beyond the operator (2026-11-05, journal row
   existing, and whatever else the pass gives them, as Codex DotLn workers
   (`gpt-6.1-sol` at max, one `codex exec` per reviewer from a Claude Code
   session); the pass fixes or records every finding before the refutation
-  and names the three reports in its document.
+  and names the three reports in its document. A review is never refused or
+  narrowed for the subject's size: a brief past a worker's context is split
+  into batches over more workers, every document the pass changed is
+  reviewed, and no pass withdraws an amendment to fit a reviewer
+  (2026-11-06, given in core's session, capture there SHA-256
+  `cd1cb6d60eba1bc4ea82e39f73983da8ab61813fa87c492f5412819bbaa6aa00`, and
+  relayed in core's block of 2026-11-06, pasted the same day, journal row
+  2026-11-06T19:52:35Z, digest `df22b458…`; core's WO-257 step 12 carries
+  the kit's batches, and until a starter carries it the reviews run over the
+  orders before the pass document grows, or the refusal is recorded with its
+  measured size and no amendment is withdrawn).
 
 ## When this record changes
 

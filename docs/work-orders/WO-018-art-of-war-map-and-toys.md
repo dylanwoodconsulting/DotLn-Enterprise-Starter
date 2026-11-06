@@ -155,7 +155,11 @@ commit concept rows that carry the maxim where the maxim is the concept.
   text and returns the rows that misstate it, which the mapper rewrites.
   This is the first map the app owns: a work mined in public into the app's
   own store, the direction the operator gave; the text's source and SHA-256
-  are recorded in the evidence README.
+  are recorded in the evidence README. The work's generated message
+  catalog (WO-035's per-work catalogs derived from the data files) is
+  regenerated for the rows this map adds and the check keeps it equal to
+  the data; the pass before this order activates writes the command into
+  the steps (the 2026-11-06 pass; WO-035's known issues).
 - **Typing and joining** reuse WO-014's classifier brief, WO-019's
   `join-maps.mjs` (which learns the in-repo maps directory as a second
   root) and `merge-checkpoints.mjs`: one classifier over the map's rows

@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
+**Repository:** dotln-angular @ d7d842dc4fdbde03099695933a448d9632fa4335
 **Target release classification:** patch
 **Target release notes:** reviewed
 **Cost:** edits the twenty `*.presentation.ts` modules of the first movement
@@ -23,18 +23,20 @@ stream catalogs `apps/dotln/public/i18n/studyEip/en.json` and
 `studyRxjs/en.json` (the spec-only keys, the unread key and the 48 messages
 where a computed count opens a sentence or a label), and the documents
 that describe them (`catalog.md` §The models, `catalog-rules.md`); about
-30 source files, no new page, family, route, composite or dependency.
+30 source files, plus WO-027's three tool scripts and their tests under
+`tools/`, read and reshaped only where the rules fail; no new page, family,
+route, composite or dependency.
 Removes the 94 `valueN` placeholders, the twelve spec-only keys of
 `studyEip/en.json`,
 `studyAifg.wander.record.parameters.drawPairs`, the title rows no record or
 nearby link names, and every positional-parameter split the migration
-left. Wall-clock: about 4 h 0 min to 6 h 0 min of executor work plus the
+left. Wall-clock: about 4 h 30 min to 6 h 30 min of executor work plus the
 fixed cycle; unknown until run. Context bytes: the forty movement modules
 and their messages (about 600 KB), `catalog-rules.md`, conventions §13, the
 shape audit `docs/evidence/WO-028/final-002/shape-audit.{mjs,json}`,
 WO-028-D036, D037, D042, D053, D055, D060 and D061, FINAL-002 F18, this
 order; about 750 KB for the executor. Commands added: none. Tokens: unknown
-until run. Steps: 11. Re-mints: none. Refutations paid: this pass's receipt.
+until run. Steps: 12. Re-mints: none. Refutations paid: this pass's receipt.
 **Nomination provenance:** the operator's direction of 2026-11-05 (journal
 row 2026-11-05T15:26:03Z, SHA-256
 `4d21fba1ced2decdbfa1a96d947c802d4090948955eb7e30130780eac3c5c532`;
@@ -92,7 +94,10 @@ they hold; one shared helper formats every number; a function is as long as
 its job and no longer, and nothing in it was cut to fit a guard. They open
 the study on screen and nothing has moved: the same frames, the same words,
 the same numbers. They open the wall study and watch the avoidance turn the
-courier along the wall with the ray-too-short run beside it. What the
+courier along the wall with the ray-too-short run beside it. They open
+`tools/board-count.mjs`, `tools/scripts/check-script-reference.mjs` and
+`tools/pr-title.mjs`, the workspace tools WO-027 landed, and read them
+under the same rules. What the
 operator learns is that this batch now reads like the example they mean
 other Angular developers to copy; what they decide is whether the next
 standards pass reads the stream batches the same way.
@@ -118,7 +123,13 @@ VER-002 (D036) showed the wall study's default run turning almost entirely
 under Seek's pull, with the ray hitting on 2 of 81 frames; VER-003 (D055)
 found twelve keys of `studyEip/en.json` read only by specs, one key read by
 nothing and a title catalog of which records and nearby links name 89 of
-768 rows.
+768 rows. Re-read on 2026-11-06 at `d7d842d` (WO-027's merge, #15): that
+merge changed twenty-one files, none under `apps/` or `libs/` (`git diff
+--name-only 48c7f8e..d7d842d`), so every count above holds; it added the
+three tool scripts `tools/board-count.mjs`,
+`tools/scripts/check-script-reference.mjs` and `tools/pr-title.mjs` with
+their tests, the code that landed between the 2026-11-05 and 2026-11-06
+passes and that rule 31 gives this pass to read.
 
 **Design:**
 
@@ -221,7 +232,7 @@ the verifier's reading; the two documents.
 
 1. Base guard read with WO-014-D001, for WO-034: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
-   48c7f8e6916692bca833c4985e2cf95978ab2c06 origin/main` exits 0 (a `main`
+   d7d842dc4fdbde03099695933a448d9632fa4335 origin/main` exits 0 (a `main`
    that does not contain the pin stops for a planning pass); the target
    worktree then fast-forwards to the target's `main`, and that integrated
    commit is the baseline of every later comparison; then the route guard
@@ -265,10 +276,19 @@ the verifier's reading; the two documents.
 9. The crawl after over the forty studies into `dom-after.json` and the
    diff. Check: zero differing text nodes outside the wall study's named
    frames.
-10. Documents (`catalog.md` §The models, `catalog-rules.md`); dependency
+10. WO-027's three tools (`tools/board-count.mjs`,
+    `tools/scripts/check-script-reference.mjs`, `tools/pr-title.mjs`) and
+    their tests read under rules 26, 30 and 31 and the operator's code
+    directions, with the Design's reshape rule applied where a function
+    fails it (named types, at most four parameters, one job per function)
+    and every test unchanged as the oracle; the evidence README records
+    each file with the verdict reshaped or left and its reason. Check:
+    `node --test tools/` passes with the base's tests unchanged; the README
+    lists the three files.
+11. Documents (`catalog.md` §The models, `catalog-rules.md`); dependency
     check as WO-015 step 15; gate plain and review. Check: passing rows, no
     tracked-byte mutation.
-11. Launchpad write-back (WS-001's delivery states and the profile's
+12. Launchpad write-back (WS-001's delivery states and the profile's
     implementation map row for the shared helpers), then the publish, review
     and records steps as WO-007 steps 15 to 17, with the branch
     `refactor/movement-presentations`, the title `refactor: reshape the
@@ -336,7 +356,14 @@ the verifier's reading; the two documents.
    placeholder, the evidence README lists each reworded message with its
    text before and after, and the evidence records the first AI for Games
    reading's gzipped transfer at the base and at the candidate.
-8. `node scripts/target-gate.mjs WO-034 --review` records a passing row for
+8. `docs/evidence/WO-034/README.md` records, for each of WO-027's three tools
+   (`tools/board-count.mjs`, `tools/scripts/check-script-reference.mjs`,
+   `tools/pr-title.mjs`), the executor's reading under rules 26, 30 and 31
+   with the verdict reshaped or left and its reason; `node --test tools/`
+   passes on the candidate; and `git diff --name-only <integrated base> --
+   tools`, the working tree against the commit step 1 records, names no
+   `*.test.mjs` file, so every output those tests fix is unchanged.
+9. `node scripts/target-gate.mjs WO-034 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
    line ran before the first full gate.
@@ -346,8 +373,10 @@ audits, `dom-diff.json`, `review.md`, `walkthrough.md` and its frames, and
 `docs/evidence/WO-034/host-qualification.md`.
 
 **Known issues and carry-ins:** This is the first standards pass under
-WS-001 rule 31; the next reads WO-028's twenty, the stream batches and
-whatever the pair lands. The next Movement research batch is cut only after
+WS-001 rule 31; it also reads WO-027's three tools and their tests, the
+code that landed between the 2026-11-05 and 2026-11-06 passes (the
+2026-11-06 pass, D4); the next reads WO-028's twenty, the stream batches
+and whatever the pair lands. The next Movement research batch is cut only after
 this order merges (WS-002 rule 6); WO-029 and WO-030 may land before it, and
 this order's corpus test then judges their records when it integrates
 `main`. No page changes, so no paired comparison runs (rule 25); the use

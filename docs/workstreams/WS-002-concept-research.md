@@ -106,8 +106,8 @@ their decisions hold the history.
 | Order  | Repository    | Base                                       | Role in the outcome |
 | ------ | ------------- | ------------------------------------------ | ------------------- |
 | WO-028 | dotln-angular | `55b59c9133056c1d6471274a9676a7d5649196ac` (WO-022's merge; step 1 integrates the target's `main`) | twenty more Movement-chapter studies from AI for Games, drawn by `motion` and `timeline` |
-| WO-029 | dotln-angular | `48c7f8e6916692bca833c4985e2cf95978ab2c06` (WO-028's merge, set by the 2026-11-05 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
-| WO-030 | dotln-angular | `48c7f8e6916692bca833c4985e2cf95978ab2c06` (WO-028's merge, set by the 2026-11-05 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
+| WO-029 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
+| WO-030 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
 | WO-031 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-023 merges may set it | twenty more enterprise application patterns, drawn by `states` with executable models |
 | WO-032 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-024 merges may set it | ten more Gödel, Escher, Bach and ten more Team Topologies concepts, drawn by `relations` |
 
