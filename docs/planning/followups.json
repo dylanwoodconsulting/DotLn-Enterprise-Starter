@@ -540,6 +540,22 @@
           "reopenWhen": "A fork pull request needs decoration or an order explicitly changes the privileged workflow route.",
           "targets": [],
           "at": "2026-11-06T15:25:43.060Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §Register: read at the source's second revision (WO-027 made the limitation a visible BOARDED marker that CI's board count reads as 1); no fork pull request exists against DotLn-Angular and the operator is its only contributor, so the privileged base-context route stays unbuilt.",
+          "reopenWhen": "A pull request from a fork is opened against DotLn-Angular, or an order explicitly changes the privileged workflow route.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.777Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §Register, correcting the previous disposition's prose: read at its third source revision (WO-027 made the limitation a visible BOARDED marker that CI's board count reads as 1); no fork pull request exists against DotLn-Angular and the operator is its only contributor, so the privileged base-context route stays unbuilt.",
+          "reopenWhen": "A pull request from a fork is opened against DotLn-Angular, or an order explicitly changes the privileged workflow route.",
+          "targets": [],
+          "at": "2026-11-06T20:39:30.886Z"
         }
       ]
     },
@@ -746,6 +762,14 @@
           "reopenWhen": "A fresh session's helper publish is admitted or refused, or a starter carries an allow rule for the target publish.",
           "targets": [],
           "at": "2026-11-05T16:10:30.868Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: in this session, whose emitted settings carried v0.117.0's rules at start, node scripts/launchpad.mjs update --publish opened #62 with no host prompt on the first try, which confirms the fork's reading that the rules are read at session start; the target publish's rule is core's answer of 2026-11-06, WO-257 step 17 (Bash(node scripts/worktree.mjs publish *) joins the two rules; a release that changes the settings says to start a new session); until then the target publish is run by hand when the classifier denies it.",
+          "reopenWhen": "A starter carries core WO-257, or a publish helper is denied in a session that started after its rule was emitted.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.726Z"
         }
       ]
     },
@@ -6123,6 +6147,14 @@
           "reopenWhen": "A starter carries core WO-255, or an explicitly required Codex target bridge cannot be qualified.",
           "targets": [],
           "at": "2026-11-04T17:17:28.289Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: the row's condition fired: starter v0.118.0 carries WO-255's target form (npm run worker -- review --target <repository-id> --order WO-NNN binds the target's base and worktree, counted once and reported in the launchpad's lane); core's release notes record a live --target launch as untested, so the fork's first use is observed by the order that runs it.",
+          "reopenWhen": "A target review through the helper reads a tree other than the order's worktree, or the profile's native route and the helper disagree on what was reviewed.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.655Z"
         }
       ]
     },
@@ -6759,6 +6791,14 @@
           "reopenWhen": "A starter carries a record form that names the worker's actual host, model and effort and the target tree, or core declines with a route.",
           "targets": [],
           "at": "2026-11-05T16:10:30.798Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: the same fix as FUP-aa144bbe9a1b6ec9; core's answer of 2026-11-06 (block of 2026-11-05, item 3) names WO-255-D006 in v0.118.0, taken by this pass.",
+          "reopenWhen": "A record filed through the flags names a host, model, effort or tree other than the worker's.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.639Z"
         }
       ]
     },
@@ -6843,6 +6883,14 @@
           "reopenWhen": "A starter admits an execution amendment for a separate-track member, or a pass's judged horizon includes them.",
           "targets": [],
           "at": "2026-11-05T16:10:30.826Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: core's answer of 2026-11-06 files the fix in WO-257 step 13 (the judged subject lists the sequence's orders and then the open members of every separate-track workstream, so a receipt names them and amend-order admits them); until a starter carries it, an authorized change to a separate-track order takes product 07's never-judged route, as WO-028-D043 did. WO-257 is in execution in core.",
+          "reopenWhen": "A starter carries core WO-257, or an authorized change to a research order is refused by the ordinary planning check.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.708Z"
         }
       ]
     },
@@ -7061,6 +7109,14 @@
           "reopenWhen": "The next core planning pass or a consumer relying on native-review wrapper metadata.",
           "targets": [],
           "at": "2026-11-06T15:25:43.079Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: starter v0.118.0 (core WO-255-D006) carries the record form the row asked for: npm run worker -- record takes --host claude|codex, --model and --effort for what ran and --tree for the reviewed tree, and a target order's record binds the target worktree; read from the command's usage line on the updated main.",
+          "reopenWhen": "A record filed through the flags names a host, model, effort or tree other than the worker's, or a native codex-spawn-agent report cannot be recorded with them.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.621Z"
         }
       ]
     },
@@ -7077,7 +7133,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §NoOps: no kit-published title has failed the target's workflow (every order's title opens with a mapped gitmoji), the final review declined the widening as new scope under rule 26 with no reproduced failure, and a standard pass files an order only for a condition that occurred; the order that next edits tools/pr-title.mjs takes D009's case list.",
+          "reopenWhen": "A kit-published pull-request title fails the target's title workflow, or an order next edits tools/pr-title.mjs or the kit's title lint.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.759Z"
+        }
+      ]
     },
     {
       "id": "FUP-f02f3bea111d8864",
@@ -7092,7 +7157,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §Write-backs: the operator record's pull-request title item now says the preference holds in both repositories, the kit's publish lint since starter v0.117.0 and the DotLn-Angular title workflow since WO-027 (#15) leaving a gitmoji-and-subject title as written; the stale sentence naming them as lints that require a type is gone.",
+          "reopenWhen": "A lint in either repository requires a conventional type in a pull-request title again.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.690Z"
+        }
+      ]
     },
     {
       "id": "FUP-575ebb5d3b7e46e0",
@@ -7107,7 +7181,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) D2: the record filing and the checkpoint refs are the kit's (target-records, the FinalReviewCompleted checkpoint), so the decision is core's; asked in this pass's block to core (item 3) with WO-027-D013's evidence; the developer reference's docs/dotln row states the limit meanwhile.",
+          "reopenWhen": "Core answers with a route or a release, someone without the operator's launchpad clone needs to follow a filed record's links, or the kit's record filing or checkpoint publication changes.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.744Z"
+        }
+      ]
     },
     {
       "id": "FUP-5d0c7879f6a5bd1d",
@@ -7122,7 +7205,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §Write-backs: WS-001's what-has-landed paragraph and lies-ahead table carry WO-027 as merged (DotLn-Angular #15, DotLn Angular v0.10.1), its delivery row is closed and its typed edge leaves the open members' table.",
+          "reopenWhen": "A sequence member is missing from the table again.",
+          "targets": [],
+          "at": "2026-11-06T20:21:47.673Z"
+        }
+      ]
     }
   ]
 }

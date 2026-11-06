@@ -6,9 +6,6 @@ Two entries between blank lines are a lane pair; the entries after the last
 pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
-- WO-033 — The launchpad's documents follow the kit's contract
-- WO-027 — The workspace says and checks what is so
-
 - WO-034 — Standards pass I: the movement studies' code as the example
 
 - WO-023 — Concept studies IV: the enterprise application patterns

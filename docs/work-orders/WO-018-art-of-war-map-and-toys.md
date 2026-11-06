@@ -72,7 +72,7 @@ identifier, not a priority.
 brief this order's map pass reuses); WO-019 merged (hard: the `v1` schema
 with definitions, the join, and the catalog check as it leaves them); WO-017
 merged (hard: the member before this one in the sequence; the base above is
-provisional: since starter v0.96.1 (core WO-230) the target publish describes the change from the merge base of the subject and the target's `main` and names the activation base beside it, so activation on this base publishes right; the planning pass that runs after WO-017 merges may set it to that merge commit, and none is required to (the 2026-10-24 second pass, D4)).
+provisional: since starter v0.96.1 (core WO-230) the target publish describes the change from the merge base of the subject and the target's `main` and names the activation base beside it, so activation on this base publishes right; the planning pass that runs after WO-017 merges may set it to that merge commit, and none is required to (the 2026-10-24 second pass, D4)); WO-035 reference-only (non-blocking: once it has landed, the work's generated message catalog is regenerated for the rows this map adds; before it, the rows' text stays data in the catalog's data files as every row's does today; the later of the two to land integrates the target's `main`).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -91,6 +91,11 @@ provisional: since starter v0.96.1 (core WO-230) the target publish describes th
     "workOrderId": "WO-017",
     "relation": "hard",
     "reason": "the preceding member in the serial chain; the base line is provisional and publishes right under starter v0.96.1's merge-base publish"
+  },
+  {
+    "workOrderId": "WO-035",
+    "relation": "reference-only",
+    "reason": "the generated per-work message catalogs this order regenerates for the rows its map adds once WO-035 has landed; before it, the rows' text stays data"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -155,7 +160,12 @@ commit concept rows that carry the maxim where the maxim is the concept.
   text and returns the rows that misstate it, which the mapper rewrites.
   This is the first map the app owns: a work mined in public into the app's
   own store, the direction the operator gave; the text's source and SHA-256
-  are recorded in the evidence README.
+  are recorded in the evidence README. Once WO-035 has landed, the work's
+  generated message catalog (WO-035's per-work catalogs derived from the
+  data files) is regenerated for the rows this map adds and the check
+  keeps it equal to the data; before it, the rows' text stays data as every
+  row's does today; the pass before this order activates writes the
+  command into the steps (the 2026-11-06 pass; WO-035's known issues).
 - **Typing and joining** reuse WO-014's classifier brief, WO-019's
   `join-maps.mjs` (which learns the in-repo maps directory as a second
   root) and `merge-checkpoints.mjs`: one classifier over the map's rows

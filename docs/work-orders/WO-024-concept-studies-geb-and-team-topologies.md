@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
+**Repository:** dotln-angular @ d7d842dc4fdbde03099695933a448d9632fa4335
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -43,9 +43,8 @@ Planner-synthesized by the 2026-10-30 second planning pass
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
-the study guards every batch now writes to). The base above is WO-028's
-merge (#14), released as `DotLn Angular v0.10.0`, with the four study
-batches and the shared migration integrated.
+the study guards every batch now writes to; its merge brought the four
+study batches and the shared migration, which the base above includes).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -325,9 +324,10 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The 2026-11-05 pass sets the base to WO-028's
-merge (#14), released as v0.10.0, and carries the migrated record and code
-shape into the Design; this order runs after WO-034, the first standards
+**Known issues and carry-ins:** The 2026-11-06 pass sets the base to WO-027's
+merge (#15), released as v0.10.1, which changed no file under apps/ or libs/
+(the 2026-11-05 pass set it to WO-028's merge and carried the migrated
+record and code shape into the Design); this order runs after WO-034, the first standards
 pass, so its authors copy a reshaped batch. Step 1 still integrates the
 target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's

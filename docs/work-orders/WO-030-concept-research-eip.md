@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 48c7f8e6916692bca833c4985e2cf95978ab2c06
+**Repository:** dotln-angular @ d7d842dc4fdbde03099695933a448d9632fa4335
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/eip/`,
@@ -49,8 +49,8 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-022 merged (hard: the `flow` family and its two builders,
 the analogy rule and the messaging study directory this batch reuses; the
 `marbles` family and WO-020's record, check, composite, route and fan-out
-procedure come with it). The base above is WO-028's merge (#14), released
-as `DotLn Angular v0.10.0`; step 1 integrates the target's current `main`.
+procedure come with it). The base above is WO-027's merge (#15), released
+as `DotLn Angular v0.10.1`; step 1 integrates the target's current `main`.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
@@ -343,7 +343,7 @@ each.
   the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-028's own
   twenty and WO-034's reshaped batch set), and the authors' and critics'
   briefs name those rules; a changed record shape is a new schema version,
-  never an edit. The base is WO-028's merge (#14), set by the 2026-11-05
+  never an edit. The base is WO-027's merge (#15), set by the 2026-11-06
   pass; a batch that lands before WO-034 is judged by its tightened corpus
   test when WO-034 integrates `main`, and WO-034 rewords this work's
   count-led stream messages. `Target release classification: minor` and
