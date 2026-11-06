@@ -116,14 +116,15 @@ its lint command.
 
 Every tool script states its purpose and whether it runs in a gate, as a helper
 or as a module in the target's `docs/dev-reference/workspace/scripts.md`, and
-`check:scripts` refuses an npm script or a file directly under `tools/scripts` that the
-document does not name (rule 26). These helpers run outside the gate:
+`check:scripts` requires a table row for every npm script and every `.mjs` file
+directly under `tools/scripts`, and refuses rows naming nonexistent scripts or
+direct modules (rule 26). These helpers run outside the gate:
 
 | Helper | What it is for |
 | --- | --- |
 | `npm run check:bundle` | builds production, asserts route placement and reports package attribution; CI runs it |
 | `npm run perf:sample` | records controlled local journeys; the target's performance guide separates these from field Core Web Vitals and leaves ordinary calibration to the implementing session |
-| `npm run boards` | counts `// BOARDED:` comments; CI prints the count |
+| `npm run boards` | counts leading `BOARDED:` comment markers in tracked script, Sass, HTML and YAML files outside `docs/` and `node_modules`, including tools and workflows; CI prints the count |
 | `npm run lint:fixtures` | proves a forbidden dependency or role is rejected, when lint policy changes |
 | `npm run studies:report`, `npm run studies:links` | prints each work's studied, checked and total rows; opens every address the studies cite, which no gate does |
 | `npm run env:prime`, `npm run build:configured` | validate public settings and build the `configured` profile |
@@ -271,6 +272,11 @@ Storybook lives in `.storybook/` and component-local stories, and
 `tools/check-taxonomy-fixtures.mjs`, `tools/scripts/check-component-order.mjs` and
 `tools/scripts/check-shared-types.mjs` enforce the roles and conventions, and
 `tools/check-lint-fixtures.mjs` runs the isolated dependency fixtures.
+`tools/scripts/check-script-reference.mjs` checks table coverage of npm scripts
+and direct `tools/scripts/*.mjs` files in the script reference, including stale
+rows; `tools/check-script-reference.test.mjs` supplies the missing-row and stale-row
+controls in the tooling suite. `tools/board-count.mjs` scans tracked source and
+workflow comments, with lexical and scope controls in `tools/board-count.test.mjs`.
 
 ### The soldier scene
 
@@ -388,10 +394,12 @@ operator grant `operator.dotln-angular.publication`; package publication is
 denied.
 
 Commits are conventional and in the present imperative. Under rule 20 a member's
-pull-request title carries both a type and a gitmoji for now: write
-`type(scope)?: subject`, and `.github/workflows/pr-title.yml` runs
-`tools/pr-title.mjs`, which validates that form and prepends the type's gitmoji
-from `.github/gitmoji-map.json`.
+pull-request title is a supported gitmoji and a subject, without a conventional
+type. `.github/workflows/pr-title.yml` runs `tools/pr-title.mjs`, which preserves
+that form, also decorates a conventional title with its type's gitmoji from
+`.github/gitmoji-map.json`, and refuses a bare subject.
+[WO-027's decisions](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d003-align-the-standing-instructions)
+record the tool and documentation alignment.
 
 The route, draft at verified, is:
 

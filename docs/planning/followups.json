@@ -500,6 +500,20 @@
           "title": "WO-004-D010: Decorate fork pull-request titles without running pull-request code (pull_request_target with the default base checkout running the base's tools/pr-title.mjs), or state that fork titles…",
           "summary": "{ \"id\": \"WO-004-D010\", \"date\": \"2026-10-18\", \"dispatch\": \"resume: verify (VER-001 implementation review, authority lens)\", \"decision\": \"Record as a follow-up: pr-title.yml runs on pull_request, so a pull request from a fork gets a read-only GITHUB_TOKEN and gh pr edit cannot decorate its title. Same-repository pull requests, the operator's route and criterion 5, are unaffected.\", \"evidence\": [ \"<worktree>/.github/workflows/pr-title.yml triggers on pull_request types opened and edited, checks out the pull request and runs node tools/pr-title.mjs with GH_TOKEN set to github.token\", \"GitHub Docs, Events that trigger workflows, read 2026-10-18: the GITHUB_TOKEN has read-only permissions in pull ",
           "missing": false
+        },
+        {
+          "hash": "55995f17c21274fef49cd02e9b21fde2dbe9146c8f215ea5113a078845062da4",
+          "ref": "docs/evidence/WO-004/decisions.md#wo-004-d010-board-the-title-workflows-failure-on-pull-requests-from-forks",
+          "title": "WO-004-D010: Decorate fork pull-request titles without running pull-request code (pull_request_target with the default base checkout running the base's tools/pr-title.mjs), or state that fork titles…",
+          "summary": "{ \"id\": \"WO-004-D010\", \"date\": \"2026-10-18\", \"dispatch\": \"resume: verify (VER-001 implementation review, authority lens)\", \"decision\": \"Record as a follow-up: pr-title.yml runs on pull_request, so a pull request from a fork gets a read-only GITHUB_TOKEN and gh pr edit cannot decorate its title. Same-repository pull requests, the operator's route and criterion 5, are unaffected.\", \"evidence\": [ \"<worktree>/.github/workflows/pr-title.yml triggers on pull_request types opened and edited, checks out the pull request and runs node tools/pr-title.mjs with GH_TOKEN set to github.token\", \"GitHub Docs, Events that trigger workflows, read 2026-10-18: the GITHUB_TOKEN has read-only permissions in pull ",
+          "missing": false
+        },
+        {
+          "hash": "087b9b68c46243172c59f33260b0c2cd12cd54b70187be0c873d7898fe83475a",
+          "ref": "docs/evidence/WO-004/decisions.md#wo-004-d010-board-the-title-workflows-failure-on-pull-requests-from-forks",
+          "title": "WO-004-D010: Decorate fork pull-request titles without running pull-request code (pull_request_target with the default base checkout running the base's tools/pr-title.mjs), or state that fork titles…",
+          "summary": "{ \"id\": \"WO-004-D010\", \"date\": \"2026-10-18\", \"dispatch\": \"resume: verify (VER-001 implementation review, authority lens)\", \"decision\": \"Record as a follow-up: pr-title.yml runs on pull_request, so a pull request from a fork gets a read-only GITHUB_TOKEN and gh pr edit cannot decorate its title. Same-repository pull requests, the operator's route and criterion 5, are unaffected.\", \"evidence\": [ \"<worktree>/.github/workflows/pr-title.yml triggers on pull_request types opened and edited, checks out the pull request and runs node tools/pr-title.mjs with GH_TOKEN set to github.token\", \"GitHub Docs, Events that trigger workflows, read 2026-10-18: the GITHUB_TOKEN has read-only permissions in pull ",
+          "missing": false
         }
       ],
       "dispositions": [
@@ -518,6 +532,14 @@
           "reopenWhen": "A fork PR opens against DotLn-Angular or an order edits its title workflow.",
           "targets": [],
           "at": "2026-11-03T16:55:14.477Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "The existing fork-title limitation now has a visible marker. No workflow event or permissions changed; decoration of a fork title still requires a separately reviewed base-context route.",
+          "reopenWhen": "A fork pull request needs decoration or an order explicitly changes the privileged workflow route.",
+          "targets": [],
+          "at": "2026-11-06T15:25:43.060Z"
         }
       ]
     },
@@ -7010,6 +7032,97 @@
           "at": "2026-11-05T16:10:30.700Z"
         }
       ]
+    },
+    {
+      "id": "FUP-aa144bbe9a1b6ec9",
+      "key": "decision:docs/evidence/WO-027/decisions.md#wo-027-d007",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "8d96d6d556cde49d65552e272f56db8c142d261bc5cab31b523cea493f64d94e",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d007-qualify-native-worker-recording-metadata",
+          "title": "WO-027-D007: Ask the next core planning pass to make worker record accept and preserve the actual native host, model and effort for codex-spawn-agent reports; scripts/lib/review-worker.mjs…",
+          "summary": "{ \"id\": \"WO-027-D007\", \"date\": \"2026-11-06\", \"dispatch\": \"Executor implementation of the selected WO-027\", \"decision\": \"Use the required worker record command to retain the native reviewers and their findings. Treat its wrapper host/model fields as helper defaults, not worker readback: the actual reviewers are codex-spawn-agent, gpt-6.1-sol at max, named in each report and the handoff. Keep this target order out of kit implementation.\", \"evidence\": [ \"scripts/lib/review-worker.mjs recordAgentReview hard-codes host claude and TRANSPORT_DEFAULTS[claude-cli-print] even for a native Codex returned report.\", \"The three actual collaboration.spawn_agent calls used fork_turns none, model gpt-6.1-sol",
+          "missing": false
+        },
+        {
+          "hash": "8319b2a8337d176c3a767e013cd351bb28bc6526c95e640a751ed29de2f2a44f",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d007-qualify-native-worker-recording-metadata",
+          "title": "WO-027-D007: Ask the next core planning pass to make worker record accept and preserve the actual native host, model and effort for codex-spawn-agent reports; scripts/lib/review-worker.mjs…",
+          "summary": "{ \"id\": \"WO-027-D007\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: next — implement the selected WO-027\", \"decision\": \"Use the required worker record command to retain the native reviewers and their findings. Treat its wrapper host/model fields as helper defaults, not worker readback: the actual reviewers are codex-spawn-agent, gpt-6.1-sol at max, named in each report and the handoff. Keep this target order out of kit implementation.\", \"evidence\": [ \"scripts/lib/review-worker.mjs recordAgentReview hard-codes host claude and TRANSPORT_DEFAULTS[claude-cli-print] even for a native Codex returned report.\", \"The three actual collaboration.spawn_agent calls used fork_turns none, model gpt-6.1-sol a",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "Target correction cannot change the pinned kit. Actual native Codex metadata is retained in reviewer report text; request a core fix in the next planning pass.",
+          "reopenWhen": "The next core planning pass or a consumer relying on native-review wrapper metadata.",
+          "targets": [],
+          "at": "2026-11-06T15:25:43.079Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-5538fd060f7a5e9c",
+      "key": "decision:docs/evidence/WO-027/decisions.md#wo-027-d009",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "c56b4a6c361fe6dfaeafb77895e9128cec269f8b34f1c44db0f23ca2201f73d7",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d009-board-the-title-workflows-narrower-gitmoji-set",
+          "title": "WO-027-D009: Align tools/pr-title.mjs with the kit's pull-request title lint: leave as written any title that opens with a gitmoji the kit admits (any emoji with an optional variation selector, or…",
+          "summary": "{ \"id\": \"WO-027-D009\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify — VER-001 implementation review of WO-027\", \"decision\": \"Record as a follow-up, not a block: tools/pr-title.mjs admits only the eleven gitmoji in .github/gitmoji-map.json, while the kit's publish lint admits any gitmoji, in emoji or shortcode form, followed by a subject. A title the kit lint admits can therefore still fail the target's title workflow. Criterion 7 names a supported gitmoji, and main refused the same titles, so no criterion fails and no behavior main had is broken.\", \"evidence\": [ \"Verifier probe of decorateTitle at target tree a0dd5f8e034b425fd1c0765ae50f12822e20bdf9: ':memo: Make the gate tools and refe",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-f02f3bea111d8864",
+      "key": "decision:docs/evidence/WO-027/decisions.md#wo-027-d010",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "052d93c9dc527d65bd0ec0643d7287d89e0f459e4a5881327b2f9a87144ea80e",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d010-note-the-operator-records-stale-title-sentence",
+          "title": "WO-027-D010: In the next planning pass, update docs/operator/README.md's pull-request title item: neither the kit's publish lint (since starter v0.117.0) nor the DotLn-Angular title workflow (since…",
+          "summary": "{ \"id\": \"WO-027-D010\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify — VER-001 implementation review of WO-027\", \"decision\": \"Record as a follow-up for the next planning pass: docs/operator/README.md, Standing preferences, Commits, reviews and releases, still says that the DotLn-Angular title workflow requires a conventional type and stays until an order changes it. This order changes that workflow, and WS-001 rule 20 and the repository profile now say so. The operator record changes only through a planning pass, and the launchpad's own documents are this order's non-goal.\", \"evidence\": [ \"docs/operator/README.md, Pull-request titles item: names the WO-004 title workflow among the lints ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-575ebb5d3b7e46e0",
+      "key": "decision:docs/evidence/WO-027/decisions.md#wo-027-d013",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "3260d48a3cfd6c16b604e498b42809abeddf40b293fced105fe82a903e68f1e0",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d013-board-the-filed-records-local-only-link-resolution",
+          "title": "WO-027-D013: In a core planning pass, decide how a filed target record's relative links become resolvable from the public repositories. Either publish each order's FinalReviewCompleted checkpoint as…",
+          "summary": "{ \"id\": \"WO-027-D013\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify — VER-002 implementation review of WO-027\", \"decision\": \"Record as a follow-up, not a block. The developer reference's docs/dotln row now names the right place for a filed record's relative links: the record's original docs/ path in the launchpad, at the order's FinalReviewCompleted checkpoint. It also says that the checkpoint may exist only locally. For the filed orders it does exist only locally, and the target orders' records are not kept on the launchpad's main, so a colleague reading both repositories on GitHub cannot follow the links that leave the target. Criterion 5 asks the row to say where the links resolve. I",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-5d0c7879f6a5bd1d",
+      "key": "decision:docs/evidence/WO-027/decisions.md#wo-027-d015",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "cab626d24e826d837276aa064e258495cb4c50f2271288683dd6dd7c54f6ffae",
+          "ref": "docs/evidence/WO-027/decisions.md#wo-027-d015-pass-the-final-review-on-the-reproduced-criteria-and-publish-over-the-draft",
+          "title": "WO-027-D015: In the next planning pass, add WO-027 to WS-001's What lies ahead table, which lists every sequence member but this one, with its state; the Delivery states table already carries it.",
+          "summary": "{ \"id\": \"WO-027-D015\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: final review — FINAL-001 acceptance of WO-027\", \"decision\": \"Pass the final review on the reproduced criteria. Integration took in nothing in either repository. The tools and documents are the bytes VER-002 verified; the one change is the root release-notes file removed under D014, and the review gate reran and passed at the resulting tree. Commit the target as four reviewed commits (the board gauge, the script-reference check, the title workflow, the documents) and publish them over the draft with the order's title; publish the launchpad records on their own branch. Write the workstream's delivery state. Leave the eight follo",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }
