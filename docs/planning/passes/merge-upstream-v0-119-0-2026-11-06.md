@@ -9,7 +9,8 @@ said update #64 was open. Both are captured verbatim in ignored intake at
 `78897db75ff18771a2283ec71ef247e15328fe5a03c3faab93dca0c0b604c90a` as the
 update publish and finish read it, with the dispatch alone;
 `8895e8fa567abf95556985a7b5ec69ade643eebf0a4b33e15567c70ee8884274` with the
-merge word appended). Received 2026-11-06T21:05:23Z (prompt-hook time) in
+merge word appended; the final digest, with the two messages numbered as
+items for the criteria review, is in §Validation). Received 2026-11-06T21:05:23Z (prompt-hook time) in
 Claude Code 2.1.319, Fable 5.1 at `xhigh` (`CLAUDE_EFFORT` in the session's
 environment; operator-selected). The hook journaled the message as a
 `planning:` dispatch of class `direction` and resolved the role planner on
@@ -23,11 +24,12 @@ session in which the operator asks for the newer starter release, so the
 pass takes it first through an update pull request, the operator merges it,
 the session finishes it on `main`, and the planning pass then runs over
 what the release changes in this fork's records. This is document-only
-planning: it takes starter v0.119.0 (core WO-257), settles the seven register
-rows whose condition was that a starter carries WO-257, corrects the standing
-sentences that said what the fork does until then, gives WO-034 one carry-in
-the release makes possible, files no order, activates nothing, records no
-new rule and leaves its pull request for the operator's merge.
+planning: it takes starter v0.119.0 (core WO-257), settles six of the seven
+register rows whose condition was that a starter carries WO-257 and keeps the
+seventh deferred on the reviews' evidence, corrects the standing sentences
+that said what the fork does until then, gives WO-034 one observation to
+make with the release's record footer, files no order, activates nothing,
+records no new rule and leaves its pull request for the operator's merge.
 
 ## Readings
 
@@ -46,7 +48,7 @@ new rule and leaves its pull request for the operator's merge.
 | `plan start` | the branch `planning/2026-11-06-merge-upstream-v0-119-0` and the eleven-heading skeleton, with an empty `Rules recorded` block and no red tag carried; failures, reader scores, conditions, census and branch 0 h 0 min each; prune 0 h 0 min (9 candidates, 4,885,918 bytes, 9 removed, 662 retained, remaining 0) | `npm run plan -- start merge-upstream-v0-119-0` |
 | The failure feed | the window since receipt 022 (2026-11-06T20:50Z) holds no lifecycle event: 0 failed verifications, 0 failed final reviews, 0 repairs, 0 orders made ready, 0 off-ramps, 0 host denials, 0 long phases, 0 bound stops; the local rows are this session's own (2 failed gate rows, the update branch's two document-gate tasks of D4; 3 shell diagnostics, unquoted patterns the session corrected; 2 interventions, the dispatch and the merge word); the record holds 7 failed verifications, 3 failed final reviews and 10 repairs, each routed by the pass that read it; nothing to route | `npm run plan -- failures` |
 | Conditions | 0 holding, 0 unknown; 482 decision conditions and 209 register rows not evaluated by the mechanical read (1.9 s); 16 logical CPUs, no lane held; the seven register conditions that fired are read by hand in §Register | `npm run plan -- conditions` |
-| Register | 209 rows, 45 pending at entry (all deferred); seven settled in §Register, 38 pending after | `npm run plan -- followups --export` |
+| Register | 209 rows, 45 pending at entry (all deferred); six settled in §Register and one re-disposed as deferred, 39 pending after | `npm run plan -- followups --export` |
 | Documents | 78 standing, 533 record, 10 generated; no red tag; 28 unread over the five-release window (35 of 60 sessions observed; a lower bound with Codex unobserved); reader scores not due and no profile declared (`docs/control/reader-profiles.json` absent) | `npm run plan -- documents`, the start report |
 | Issues | no open issue on the fork's repository | `gh issue list -R dylanwoodconsulting/DotLn-Enterprise-Starter` |
 | Process health | unchanged from the previous pass: 2 budget breaches (the kit's router skill at 17,024 bytes against the 16,384-byte cold-start ceiling in both skill roots), WO-027's 97,154,668 tokens under an unset token limit, a first verification failed in 4 of the last 8 closed orders, the one reopen candidate "seeking the wrong goal" (machinery share 0.663); no order closed since, so the previous pass's NoOp on the candidate stands | `npm run meta -- --plan-cost`, `npm run work-orders -- index` |
@@ -88,29 +90,35 @@ sibling declaration cannot run (§Requests to core, item 3).
 
 ## Orders filed and amended
 
-No order is filed: no reopening condition fired that an order answers, the
-seven that fired are settled by the release itself, and the operator gave no
-direction for one (§NoOps). One order is amended, bounded to what the
-release makes possible:
+No order is filed: no reopening condition fired that an order answers, six
+of the seven that fired are settled by the release itself, and the operator
+gave no direction for one (§NoOps). One order is amended, bounded to what
+the release makes observable:
 
-- WO-034: step 11 (documents) names the `docs/dotln` row of the target's
-  `docs/dev-reference/README.md` beside the two catalog documents, and the
-  known-issues paragraph carries why: since v0.119.0 `target-records` ends
-  every filed record with a provenance footer naming the launchpad commit
-  and path its links resolve against, so the first order whose records carry
-  the footer rewrites the row that says the links resolve at a local
-  checkpoint (D3; `FUP-575ebb5d3b7e46e0`). The title, objective, cost,
-  criteria and non-goals are unchanged, so the receipt's judgment of
-  WO-034 carries by hash; the three reviews read the changed text.
+- WO-034: the known-issues paragraph carries one observation for its final
+  reviewer in the records step: since v0.119.0 `target-records` ends every
+  filed record with a provenance footer naming the launchpad commit at
+  filing and the record's path, the reviewer reads one filed record's footer
+  and records in the order's decisions the commit it names, whether that
+  commit is reachable on the launchpad's public repository and whether the
+  link destinations exist there (D3; `FUP-575ebb5d3b7e46e0`). The pass's
+  first draft made it a document edit in step 11 that rewrote the target's
+  developer-reference row; the design and consistency reviews showed the
+  footer claims the layout and not the destinations, and that a research
+  order may file footered records first, so the edit was withdrawn before
+  the refutation and step 11 reads as filed (§Validation). The title,
+  objective, cost, criteria and non-goals are unchanged, so the receipt's
+  judgment of WO-034 carries by hash; the three reviews read the changed
+  text.
 
 Not amended: WO-023 and WO-024 (the pair after WO-034), WO-035 to WO-038,
 WO-016, WO-008, WO-017, WO-018 and the four research orders: the release
 changes no base, no criterion and no step of theirs, and nothing landed on
 the target since the previous pass. No existing order's criteria change.
 The five defect classes were screened over the changed text: the carry-in
-adds no criterion, names a document that exists at the base, depends on no
-host and contradicts no non-goal (the row edit is a document, not a page or
-a study). `npm run work-orders -- index --check` prints only the two
+adds no criterion, reads a footer the kit writes at filing, names GitHub as
+the thing observed with the decision record as the evidence whatever it
+shows, and contradicts no non-goal. `npm run work-orders -- index --check` prints only the two
 advisories the 2026-11-03 pass judged (WO-008 criterion 1, WO-016
 criterion 5).
 
@@ -151,42 +159,59 @@ screens its texts (`scripts/lib/entropy-review.mjs`), and `target-records`
 appends the provenance footer (`scripts/lib/target-records.mjs`). Each is
 settled with a reopening condition that names the behavior failing on a
 record filed from this release (§Register). The record-links row
-(`FUP-575ebb5d3b7e46e0`) is settled on the route core chose, the footer,
-with WO-034 carrying the target's developer-reference row (D3); the records
-filed before v0.119.0 keep the checkpoint sentence, which is true of them.
+(`FUP-575ebb5d3b7e46e0`) was first settled on the footer; the reviews showed
+the footer names the layout its links are read against and not a snapshot
+that holds the destinations, so the row stays deferred with the footer's
+observation given to WO-034 (D3) and the ask restated to core.
 
-Traps: a settled row that only moved its wait from one release to the next.
-Each disposition names the file on the updated `main` that carries the
-behavior, and the one unobserved piece (a footer on a filed record) is the
-condition of the row and WO-034's carry-in. NoOp of leaving the rows
+Traps: a settled row that only moved its wait from one release to the next,
+and a row settled on more than the release gives, which the record-links
+row was until the reviews read the kit's comment. Each disposition names
+the file on the updated `main` that carries the behavior, and the one
+unobserved piece (a footer on a filed record) is WO-034's observation. NoOp of leaving the rows
 deferred until an order observes each behavior: declined, because the
 conditions as written fired, and a deferred row whose condition has
 occurred is the queue the 2026-10-02 and 2026-10-10 passes found rotting.
 
-### D3. WO-034 carries the developer reference's record-links row
+### D3. WO-034's final reviewer observes the first record footer; the record-links row stays deferred
 
 The target's `docs/dev-reference/README.md` says, in its `docs/dotln` row,
 that a filed record's links resolve at the `FinalReviewCompleted`
 checkpoint, which may not be on GitHub (WO-027-D013's limit). Since
-v0.119.0 the footer names the launchpad commit and path the links resolve
-against, and that commit reaches the launchpad's `main` through the order's
-merge, so a reader of the two public repositories can follow them. The row
-is one sentence in a target document; the pass before an order activates
-gives it what the records changed, so WO-034, next to activate and the first
-whose records carry the footer, rewrites the row in its documents step
-(step 11) under the carry-in, for the records filed from then on, and
-leaves the checkpoint sentence for the records filed before. No criterion
-is added: the edit is a document whose truth the final reviewer reads, and
-a criterion over it would judge prose.
+v0.119.0 `target-records` ends every filed record with a footer naming the
+launchpad's HEAD when the filing began and the record's path there. The
+pass's first draft read that as the route core chose for the fork's ask of
+2026-11-06 and had WO-034 rewrite the row; the design and consistency
+reviews read the kit's own comment (`scripts/lib/target-records.mjs`: the
+footer claims the tree's layout, not that the record's bytes are committed
+there) and WO-027's retained flow (the `FinalReviewCompleted` checkpoint
+`ec306b22` holds the records; its parent `a33191a`, the HEAD the footer
+would have named, lacks the record and evidence paths), so the footer tells
+a reader what layout the links are read against and does not promise that
+the destinations exist at that commit, let alone on GitHub. The row stays
+deferred with that evidence, the ask to core is restated (§Requests to
+core, item 4), and the one thing this fork can add is an observation:
+WO-034's final reviewer, after `target-records`, reads one filed record's
+footer and records in the order's decisions the commit it names, whether it
+is reachable on the launchpad's public repository and whether the link
+destinations exist there. The developer reference's row keeps its sentence
+until a pass has that reading. The observation is a carry-in, not a
+criterion, because its value is the record whatever it shows. The reviews
+also showed the draft's "first order whose records carry the footer" was
+wrong on its own terms: WO-029 and WO-030 may land before WO-034, so the
+carry-in now says a research order filed first owes nothing and WO-034
+records the observation whatever landed before it.
 
-Rejected: an order of its own (axis: one order pays the cycle once, and the
-edit is one row); leaving the row until the next planning pass (axis: the
-operator record's Complete work item, and WO-034 is the first order whose records
-show the footer, so its reviewer sees both sentences true at once). NoOp
-of leaving the row as it is: declined, because it states a limit the kit
-has removed for every record from now on. Reopen: the footer's commit is
-not reachable on the launchpad's public repository, which returns the row
-to its earlier sentence and the ask to core.
+Rejected: the row edit as drafted (axis: it stated a guarantee the kit
+does not make); an order of its own for the links (axis: the filing and the
+checkpoint refs are the kit's, and the decision is core's); leaving the
+footer unobserved until core answers (axis: the fork's own reading is the
+evidence core's answer needs, and WO-034 is the next order whose records
+are filed). NoOp of recording nothing in WO-034: declined, because the
+next pass would otherwise re-read the row with no new fact. Reopen: the
+observation shows the destinations reachable at the named commit, which
+settles the row and gives the developer reference its sentence; or core
+answers with a published snapshot.
 
 ### D4. The plan gate's grown subject: the update branch is red for one kit cause and this pass's receipt closes it
 
@@ -264,10 +289,13 @@ hook observed it. Neither enters a standing document.
 The register was synced before the dispositions (no public source had
 changed) and the batch applied at revision `104cebac…`, leaving it at
 `abced228…` (the batch is kept in ignored intake as
-`docs/intake/followups-apply-2026-11-06-merge-upstream.json`). Seven rows
-were settled on the release, leaving 38 pending rows, all deferred and none
-untriaged or needing review; the other thirty-eight keep their state, read
-as this pass's scope touched them.
+`docs/intake/followups-apply-2026-11-06-merge-upstream.json`; a second
+batch, `-b.json`, re-disposes the record-links row as deferred at revision
+`abced228…` on the reviews' evidence, leaving the register at the revision
+§Validation names). Six rows were settled on the release and one was
+re-deferred, leaving 39 pending rows, all deferred and none untriaged or
+needing review; the other thirty-eight keep their state, read as this
+pass's scope touched them.
 
 | Row | Disposition and evidence | Reopening condition |
 | --- | --- | --- |
@@ -277,7 +305,7 @@ as this pass's scope touched them.
 | FUP-8c4dcd0be9399981 (ER-VER-01, the projection's unmet line) | **settled** — v0.119.0 (WO-257 step 8, `scripts/lib/criteria-status.mjs`): the index card and the projection show the executor's unmet ordinal beside the later judgment, never as the current state (the regenerated history page). | A page or the projection shows an executor-recorded unmet criterion as the current state beside a later passing verdict. |
 | FUP-b948f8094f0419e5 (ER-MAINT-02, the fresh clone's diagnostic) | **settled** — v0.119.0 (WO-257 step 9): bootstrap names a registered target with no recorded clone, with the registration command, before its preparation steps. | A fresh clone's document gate or plan check refuses with `recorded target clone unavailable` and bootstrap said nothing. |
 | FUP-290ea887a40dcd8e (ER-RUN-03, the receipt's confinement wording) | **settled** — v0.119.0 (WO-257 steps 5 and 8): the frozen copy renders as `<tmp>/…`, the uninstalled copy and the unobserved host coordination are named, and private paths are screened before filing. | A receipt filed from v0.119.0 claims confinement its inventories do not show, or a probe is misread as proof. |
-| FUP-575ebb5d3b7e46e0 (WO-027-D013, the filed records' links) | **settled** — core answered with a release: the provenance footer names the launchpad commit and path a filed record's links resolve against; WO-034 carries the target's developer-reference row (D3). | The next target order's filed records carry no footer, a footer names a commit not reachable on the launchpad's public repository, or a reader without the clone still cannot follow the links. |
+| FUP-575ebb5d3b7e46e0 (WO-027-D013, the filed records' links) | **deferred** — first settled on the footer, then re-deferred on the reviews' evidence: the footer names the layout commit, not a snapshot that holds the destinations (the kit's comment; WO-027's checkpoint parent); WO-034's final reviewer observes the first footer (D3); the ask restated to core. | WO-034's decisions record the footer's commit reachable on the launchpad's public repository with the destinations present, or core answers with a published snapshot or a route. |
 
 Rows read and left as they stand, their conditions not fired:
 `FUP-4091de8ba4313b4c` (the three reviews as a kit step: WO-244 has not
@@ -315,7 +343,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 | Candidate (kind: NoOp) | reason and evidence | reevaluation | usefulWhen |
 | --- | --- | --- | --- |
 | A fork repair of the plan continuation check, or holding the update until core repairs it | The check and the subject builder are kit files; editing one is the true-fork path the kit guide names, and holding the update leaves the seven answers unused. The receipt this pass files closes the gap (D4). Evidence: `scripts/lib/plan-continuation.mjs` (`fixedInputs` filters by the judged receipt's order paths); `npm run plan -- check` on the update branch. | Core answers item 2, or a later release grows the subject again without admitting the previous receipt. | The instance-history suite carries a separate-track workstream so the gap is caught before release. |
-| An order for the developer reference's record-links row | One row in a target document; WO-034 is next and first with the footer (D3). Evidence: `docs/dev-reference/README.md` line 71 in the target; `scripts/lib/target-records.mjs`. | WO-034's reviewer finds the footer's commit unreachable on GitHub. | Every filed record's links resolve through GitHub alone. |
+| An order for the filed records' links, or the developer reference's row rewritten now | The filing and the checkpoint refs are the kit's and the footer does not promise the destinations (D3); the row's sentence is still true. Evidence: `docs/dev-reference/README.md` line 71 in the target; `scripts/lib/target-records.mjs`; the consistency review's F1. | WO-034's observation shows the destinations reachable, or core answers. | Every filed record's links resolve through GitHub alone. |
 | Re-basing WO-023 and WO-024, WO-035 to WO-038 or the research orders | Nothing landed on the target since the previous pass set the five bases at WO-027's merge; the pass before each of the rest activates sets its base (WS-001 §Bases). Evidence: `git -C ../DotLn-Angular log` (`d7d842d` unchanged); the index's integration column. | An order of that group is next to activate. | Every open order's base is current at every pass. |
 | A standard pass over the whole queue | The dispatch asks for the upstream merge; the feed, the conditions and the register were read and nothing fired beyond the release's rows; no order closed since the previous pass four hours earlier. Evidence: `npm run plan -- failures` (0 items in the window); `npm run plan -- conditions` (0 holding). | An order closes, or the operator dispatches a standard pass. | The queue is re-read when it has moved. |
 | Refilling the research track | Four research orders are queued and the refill rule is fewer than two (WS-002 rule 6). Evidence: WS-002's member table. | Two of the four close. | The Codex capacity has a next order waiting. |
@@ -333,8 +361,8 @@ them. WS-002's members stay a separate track with no sequence entry, and
 from this release they are in the judged subject after the sequence (D4):
 WO-029 and WO-030 runnable now on Codex at WO-027's merge, WO-031 and
 WO-032 after the pair. What the operator sees after each order lands is as
-the previous pass wrote it; WO-034 additionally leaves the target's
-developer reference saying where a filed record's links resolve. The pass
+the previous pass wrote it; WO-034 additionally leaves, in its decisions,
+the first reading of a filed record's footer against GitHub. The pass
 before WO-016 activates still owes WO-016 its base and the receipt 012
 known issues (`FUP-2ed0c79e62b53dd7`).
 
@@ -347,7 +375,7 @@ known issues (`FUP-2ed0c79e62b53dd7`).
 - `docs/control/documents.json`: the purpose sentence (D5).
 - `docs/repositories/dotln-angular.md`: §Check the release classification
   before activation (D5).
-- WO-034: step 11 and the known-issues paragraph (D3).
+- WO-034: the known-issues paragraph (D3); step 11 reads as filed.
 - The follow-up register (the batch above); the idea ledger's registration
   heading; the generated lineage index, work-order index and cost table.
 - No budget, ceiling or baseline is raised; `docs/control/budgets.json` is
@@ -382,7 +410,7 @@ From DotLn-Enterprise-Starter's 2026-11-06 merge-upstream planning pass, docs/pl
 
 3. For your information: the release's derived Read before upgrading line names node scripts/siblings.mjs index, which refuses in an instance with no sibling declaration (docs/siblings/siblings.json); the two instance commands it names beside it ran. No kit change asked unless the derived line is meant to be instance-safe.
 
-4. For your information: the record footer settles the fork's WO-027-D013 ask for records filed from this release; WO-034, the next target order, rewrites the target developer reference's row that stated the checkpoint limit, and the fork reads the first footer there. Records filed before v0.119.0 keep the limit, which the fork records as true of them. Nothing asked.
+4. Ask (the fork's WO-027-D013 again, with the reviews' reading): the record footer names the launchpad HEAD when the filing began and the record's path, and target-records.mjs says it claims the tree's layout, not that the record's bytes are committed there. In the fork's WO-027 flow the FinalReviewCompleted checkpoint ec306b22 holds the records and its parent a33191a, the HEAD the footer would name, lacks the record and evidence paths, so a reader of the two public repositories who opens the named commit on GitHub finds the layout and not the destinations. The fork keeps the row deferred and has WO-034's final reviewer record what the first footer resolves to. Decide whether the footer should name a published snapshot that holds the destinations (the FinalReviewCompleted checkpoint pushed as a ref, or the records committed on the pushed order branch before the move), or state in the kit guide that the footer gives the layout only and the links are read in the target's docs/dotln tree.
 
 5. For your information: the dispatch was sent as a message of its own and the hook read it on the first row with no host block before it, so the fork cannot yet say whether WO-257 step 11's reader skips a slash command's block in a live session; the next pass that dispatches after a slash command reports it. Nothing asked.
 ```

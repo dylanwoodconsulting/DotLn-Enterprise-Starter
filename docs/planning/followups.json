@@ -7245,6 +7245,14 @@
           "reopenWhen": "The next target order's filed records carry no footer, a footer names a commit that is not reachable on the launchpad's public repository, or a reader without the launchpad clone still cannot follow a filed record's links.",
           "targets": [],
           "at": "2026-11-06T21:23:15.689Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-06 merge-upstream planning pass (docs/planning/passes/merge-upstream-v0-119-0-2026-11-06.md) D3, after the pass's design and consistency reviews: the settlement recorded minutes earlier over-claimed. Starter v0.119.0's footer names the launchpad HEAD when the filing began and the record's path, and scripts/lib/target-records.mjs says it claims the tree's layout, not that the record's bytes are committed there; in WO-027's retained flow the FinalReviewCompleted checkpoint ec306b22 holds the records and its parent a33191a, the HEAD the footer would have named, lacks the record and evidence paths, so a reader who opens the named commit on GitHub finds the layout and not the destinations. The row stays deferred; WO-034's final reviewer records in its decisions what the first footer names and whether that commit is reachable on the launchpad's public repository with the destinations present; the ask is restated to core with this evidence.",
+          "reopenWhen": "WO-034's decisions record the footer's commit reachable on the launchpad's public repository with the destinations present (which settles the row), core answers with a published snapshot or a route, or the kit's record filing or checkpoint publication changes.",
+          "targets": [],
+          "at": "2026-11-06T21:48:21.920Z"
         }
       ]
     },
