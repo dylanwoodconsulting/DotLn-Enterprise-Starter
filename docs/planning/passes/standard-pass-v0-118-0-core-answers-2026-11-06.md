@@ -123,15 +123,29 @@ each change bounded to what the records changed since its filing:
   every count holds); WO-027's three tools and their tests added as what
   rule 31 gives this pass to read, as a step, a criterion, a Cost line
   addition, an Objective sentence and a known issue (D4); step 1's pin.
+  After the reviews: the criterion's preservation check names the three
+  tools' own test files, so a sibling's `tools/studies.test.mjs` taken at
+  an integration is outside it (the criteria review's F1), and the step
+  states the tools' JavaScript conventions in place of the TypeScript
+  reshape rule's types (the design review's F3).
 - WO-023 and WO-024: the base to WO-027's merge; the known-issues sentence
-  that names which pass set it and why the counts hold (D3).
+  that names which pass set it and why the counts hold (D3). After the
+  reviews: the dependency paragraphs describe what WO-028's merge brought
+  and no longer assert the base a second time (the design review's F2 and
+  the consistency review's F1, the same drift). After the
+  reviews: the dependency paragraphs describe what WO-028's merge brought
+  and no longer assert the base a second time (the design review's F2 and
+  the consistency review's F1, the same drift).
 - WO-029 and WO-030: the base to WO-027's merge in the Repository line, the
   dependency sentence and the known issues (D3); WS-002's rule that step 1
   integrates the target's `main` is unchanged.
 - WO-018: the one sentence the 2026-11-05 pass could not add after its
   receipt bound the text: the work's generated message catalog (WO-035's)
   is regenerated for the rows the map adds and the pass before WO-018
-  activates writes the command into its steps.
+  activates writes the command into its steps. After the reviews: WO-035
+  is a reference-only typed prerequisite and the regeneration is
+  conditional on its having landed, the rows' text staying data before it
+  (the design review's F1).
 
 WO-033's append-only link amendments of 2026-11-05 (planning control log rows
 52 to 54, WO-033-D007's approval) bound the bytes of WO-018, WO-023 and
@@ -224,7 +238,8 @@ over the code the orders since the previous one landed, ahead of the next
 feature order. Since the 2026-11-05 pass one order landed code on the
 target: WO-027's three tool scripts (`tools/board-count.mjs`,
 `tools/scripts/check-script-reference.mjs`, `tools/pr-title.mjs`) and
-their tests, about 2,000 added lines. WO-034 is sequenced first and is the
+their tests (462 additions and 27 deletions across the six files, `git diff
+--numstat 48c7f8e..d7d842d -- tools`). WO-034 is sequenced first and is the
 standards pass; it reads the movement batch, which landed before the
 previous pass. Decision: WO-034 also reads WO-027's three tools and their
 tests under rules 26, 30 and 31 and the operator's code directions, with
@@ -297,7 +312,9 @@ observations and not asked of core, because the guide already says it.
 
 The register was synced before the dispositions and the batch applied at
 revision `e96bb926…`, leaving it at `3a577f4f…` (the batch is kept in ignored intake as
-`docs/intake/followups-apply-2026-11-06.json`). Ten rows were disposed on
+`docs/intake/followups-apply-2026-11-06.json`; a second batch,
+`-b.json`, corrects one disposition's prose at revision `3a577f4f…`, leaving
+the register at `104cebac…`). Ten rows were disposed on
 the update, core's answers and the two closes, leaving 45 pending rows and
 none untriaged or needing review; the thirty-five untouched rows keep their
 state, read as this pass's scope touched them.
@@ -477,7 +494,13 @@ codex --subject planning` (the criteria adversary with `--capture`, the
 design improver, the consistency reviewer), one recheck round if a blocking
 finding is repaired, and one background `dotln-worker` refuter through the
 direct route, each launched once: four to five uses, no re-task, no
-descendant. Spent: VALIDATION_SPENT.
+descendant. Spent: three review launches that ran (the criteria adversary
+0 h 6 min and 2,853,518 tokens, the design improver 0 h 6 min and
+2,269,720 tokens, the consistency reviewer 0 h 10 min and 3,770,244 tokens,
+by the codex-result-envelope) and the dry run that measured the brief,
+which the hooked session counted as a fourth use; the refuter's use and the
+exit reading are in §Validation: five uses against the cap of twenty, no
+re-task, no descendant observed.
 Wall-clock of the pass's commands: the preview 326 ms; the update's four
 gates 0 h 1 min; `update --finish` seconds; `plan start` 0 h 1 min with its
 prune; the index, the register sync and the cost table seconds each; the
@@ -489,6 +512,40 @@ landed since the last pass.
 
 ## Validation
 
-The three independent reviews, the refutation and the document gate are
-recorded here when they have run; until then this section is the
-placeholder the subject commit carries, and the reviewers read it as such.
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning` under the lane
+`planning-2026-11-06-standard-pass-v0-118-0-core-answers` (v0.118.0 keys
+it by branch), round 1, over the change since `eb34636` at tree `7294609`,
+launched together and retained in the ignored reviews lane; the brief
+measured 250,141 characters by the helper's dry run, under the ceiling, so
+no document was withdrawn and the operator's rule of 2026-11-06 was met
+without the refusal route. The criteria adversary read the dispatch
+capture through `--capture` and answered it in an `## Items` table (the
+helper's advisory that the table names no row for the block's numbered
+items 4 to 8 is the worker's nested numbering, each item present under its
+block's date): 0 h 6 min, 2,853,518 tokens, 1 finding (0 blocking); the
+design improver 0 h 6 min, 2,269,720 tokens, 3 (0 blocking); the
+consistency reviewer 0 h 10 min, 3,770,244 tokens, 4 (0 blocking), with
+its `Traced consumers` table of eleven rows; all by the
+codex-result-envelope, the effective effort unknown; each report records
+the checkout unchanged across its episode. Self-review: found 8 (7
+distinct); fixed 7; recorded 0. No recheck round ran: no finding was
+blocking and every repair is order or record text, the precedent of the
+2026-11-03 to 2026-11-05 passes for documentation-only repairs under
+product 07's ladder, and the refuter judged the repaired text.
+
+| Finding | Disposition |
+| --- | --- |
+| Criteria F1 (WO-034 criterion 8) | Fixed: the preservation check names the three tools' own test files, so a sibling's `tools/studies.test.mjs` taken from `main` at an integration is outside it. |
+| Design F1 (WO-018) | Fixed: WO-035 is a reference-only typed prerequisite, the regeneration is conditional on its having landed and the rows' text stays data before it. |
+| Design F2 and consistency F1 (WO-023 and WO-024) | Fixed: the dependency paragraphs describe what WO-028's merge brought and no longer assert the base; the Repository line and the known issues carry it once. |
+| Design F3 (WO-034 step 10) | Fixed: the step states the tools' JavaScript conventions (ES modules under `tools/`, a named-options object past four parameters, JSDoc for types, one job per function) in place of the TypeScript reshape rule's types. |
+| Consistency F2 (the operator record) | Fixed: the title item says the workflow leaves a gitmoji-and-subject title as written for the eleven gitmoji its map names and links WO-027-D009 for the kit-admitted gitmoji outside it. |
+| Consistency F3 (`FUP-223cde718a523e67`) | Fixed: a second disposition corrects the first's prose to the source's third revision with the same state and condition. |
+| Consistency F4 (D4's figure) | Fixed: the tooling delta is 462 additions and 27 deletions across the six files, by `git diff --numstat`, not about 2,000 added lines (that figure was the whole merge's). |
+
+**Independent refutation.** REFUTATION_BODY
+
+**Document gate.** GATE_BODY

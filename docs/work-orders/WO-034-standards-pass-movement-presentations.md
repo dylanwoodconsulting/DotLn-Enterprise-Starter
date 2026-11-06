@@ -279,12 +279,15 @@ the verifier's reading; the two documents.
 10. WO-027's three tools (`tools/board-count.mjs`,
     `tools/scripts/check-script-reference.mjs`, `tools/pr-title.mjs`) and
     their tests read under rules 26, 30 and 31 and the operator's code
-    directions, with the Design's reshape rule applied where a function
-    fails it (named types, at most four parameters, one job per function)
-    and every test unchanged as the oracle; the evidence README records
-    each file with the verdict reshaped or left and its reason. Check:
-    `node --test tools/` passes with the base's tests unchanged; the README
-    lists the three files.
+    directions, with the Design's reshape rule read for shape and not for
+    types: the tools stay ES modules under `tools/` that import nothing
+    from `libs/`, a function that would take more than four positional
+    parameters takes a named-options object instead, parameters and
+    returns are described in JSDoc rather than TypeScript interfaces, and a
+    function does one job; every test unchanged as the oracle; the evidence
+    README records each file with the verdict reshaped or left and its
+    reason. Check: `node --test tools/` passes with the three tools' tests
+    unchanged; the README lists the three files.
 11. Documents (`catalog.md` §The models, `catalog-rules.md`); dependency
     check as WO-015 step 15; gate plain and review. Check: passing rows, no
     tracked-byte mutation.
@@ -361,8 +364,11 @@ the verifier's reading; the two documents.
    `tools/pr-title.mjs`), the executor's reading under rules 26, 30 and 31
    with the verdict reshaped or left and its reason; `node --test tools/`
    passes on the candidate; and `git diff --name-only <integrated base> --
-   tools`, the working tree against the commit step 1 records, names no
-   `*.test.mjs` file, so every output those tests fix is unchanged.
+   tools/board-count.test.mjs tools/check-script-reference.test.mjs
+   tools/pr-title.test.mjs`, the working tree against the commit step 1
+   records, prints nothing, so every output those three suites fix is
+   unchanged (a sibling's `tools/studies.test.mjs` taken from `main` at an
+   integration is outside the check).
 9. `node scripts/target-gate.mjs WO-034 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight

@@ -255,7 +255,10 @@ an audience beyond the operator (2026-11-05, journal row
   gitmoji and a subject with or without a type since starter v0.117.0
   (core WO-246), and the DotLn-Angular title workflow leaves such a title
   as written since WO-027 (DotLn-Angular #15;
-  [WO-027-D010](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d010-note-the-operator-records-stale-title-sentence)).
+  [WO-027-D010](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d010-note-the-operator-records-stale-title-sentence)), for the
+  eleven gitmoji its map names; a kit-admitted gitmoji outside that map is
+  the boarded gap of
+  [WO-027-D009](https://github.com/DylanBWood/DotLn-Angular/blob/47f7a2f02f1374f2e635260c4a69d528e3e909e3/docs/dotln/evidence/WO-027/decisions.md#wo-027-d009-board-the-title-workflows-narrower-gitmoji-set).
 - **Merges:** merge commits whose message is the pull-request title. The operator
   sets repository settings themselves; sessions do not change them (the one
   directed exception was WO-010's branch rules, 2026-10-18).

@@ -548,6 +548,14 @@
           "reopenWhen": "A pull request from a fork is opened against DotLn-Angular, or an order explicitly changes the privileged workflow route.",
           "targets": [],
           "at": "2026-11-06T20:21:47.777Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "2026-11-06 planning pass (docs/planning/passes/standard-pass-v0-118-0-core-answers-2026-11-06.md) §Register, correcting the previous disposition's prose: read at its third source revision (WO-027 made the limitation a visible BOARDED marker that CI's board count reads as 1); no fork pull request exists against DotLn-Angular and the operator is its only contributor, so the privileged base-context route stays unbuilt.",
+          "reopenWhen": "A pull request from a fork is opened against DotLn-Angular, or an order explicitly changes the privileged workflow route.",
+          "targets": [],
+          "at": "2026-11-06T20:39:30.886Z"
         }
       ]
     },

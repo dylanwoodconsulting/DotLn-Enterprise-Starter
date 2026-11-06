@@ -1,63 +1,63 @@
 {
   "schemaVersion": 1,
-  "subjectSourceHash": "sha256:f7b20ca7ebb840e0b7ed6e875def5cd7a9a8c08391a8576cfb5159be492b2d03",
+  "subjectSourceHash": "sha256:0b16b17d9975df8c3783b239f85799a4f8206425966d65db701eacebbf634f6f",
   "acceptances": [],
-  "observedAt": "2026-11-06T20:22:41.567Z",
-  "subjectRevision": "eb346368c28f70393d3aeaff08cf0ea869cbd67b",
+  "observedAt": "2026-11-06T20:40:17.825Z",
+  "subjectRevision": "3ad1a1c8cd7ee865c2b55d31e4a29eae91c0e46b",
   "rows": [
     {
       "workOrder": "WO-034",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-023",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-024",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-035",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-036",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-037",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-038",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-016",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-008",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-017",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     },
     {
       "workOrder": "WO-018",
-      "observedAt": "2026-11-06T20:22:41.567Z",
+      "observedAt": "2026-11-06T20:40:17.825Z",
       "metrics": null
     }
   ],

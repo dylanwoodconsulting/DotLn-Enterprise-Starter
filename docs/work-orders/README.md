@@ -255,7 +255,7 @@ None.
 - Repository: dotln-angular @ bc9133e932a00d33c15bc5289d683b8078f51ee4.
 - Application target: unassigned.
 - Dependencies: typed; blocked on WO-017.
-- References: WO-014: hard (met) — the Tool schema and the classifier brief this order's map pass reuses; WO-019: hard (met) — the v1 schema with definitions, the join and the catalog check this order's map and toys extend; WO-017: hard (unmet) — the preceding member in the serial chain; the base line is provisional and publishes right under starter v0.96.1's merge-base publish.
+- References: WO-014: hard (met) — the Tool schema and the classifier brief this order's map pass reuses; WO-019: hard (met) — the v1 schema with definitions, the join and the catalog check this order's map and toys extend; WO-017: hard (unmet) — the preceding member in the serial chain; the base line is provisional and publishes right under starter v0.96.1's merge-base publish; WO-035: reference-only (non-blocking) — the generated per-work message catalogs this order regenerates for the rows its map adds once WO-035 has landed; before it, the rows' text stays data.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.

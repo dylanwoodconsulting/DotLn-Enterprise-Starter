@@ -45,9 +45,8 @@ WO-020 to WO-024. Planner-synthesized by the 2026-10-30 second planning pass
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
-the study guards every batch now writes to). The base above is WO-028's
-merge (#14), released as `DotLn Angular v0.10.0`, with the four study
-batches and the shared migration integrated.
+the study guards every batch now writes to; its merge brought the four
+study batches and the shared migration, which the base above includes).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
