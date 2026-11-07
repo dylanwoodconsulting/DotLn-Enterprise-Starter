@@ -1,0 +1,1015 @@
+{
+ "startedAt": "2026-11-07T00:56:28.718Z",
+ "address": "/tools/catalog/aifg-a:137",
+ "sizes": [
+  {
+   "viewport": {
+    "width": 360,
+    "height": 800
+   },
+   "screenshots": {
+    "arrival": {
+     "path": "360x800-arrival.png",
+     "sha256": "0551e357543474d36cab26aa23ac8005e1b69818ddad0f217639914f3e6a0763"
+    },
+    "comparison": {
+     "path": "360x800-comparison.png",
+     "sha256": "6d771aa3035ecaa2daa8353911953e41d9f70c7009270d6a0f01a8fbd754be75"
+    }
+   },
+   "errors": [],
+   "failures": [],
+   "arrivalStep": 5,
+   "momentButtons": [
+    "Movement",
+    "Chart",
+    "Step back",
+    "Step forward",
+    "Ray first hits",
+    "Ray misses again",
+    "Smallest clearance",
+    "End of run",
+    "Back to the example",
+    "Show this moment in the diagram"
+   ],
+   "moments": [
+    {
+     "name": "Ray first hits",
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+     "screenshot": {
+      "path": "360x800-moment-5.png",
+      "sha256": "36e31e820da93d600c972366eb0ae62278f4c561a8332ff01aa8fc7bc214fcc0"
+     }
+    },
+    {
+     "name": "Ray misses again",
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "Smallest clearance",
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "End of run",
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    }
+   ],
+   "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning."
+  },
+  {
+   "viewport": {
+    "width": 768,
+    "height": 1024
+   },
+   "screenshots": {
+    "arrival": {
+     "path": "768x1024-arrival.png",
+     "sha256": "3cd6a01ffb1018a5486e976525d945508f06fd271c31119fca3482113207fcb5"
+    },
+    "comparison": {
+     "path": "768x1024-comparison.png",
+     "sha256": "851d3e33f26325799c2163c937aa88104d1a967e3fcfdbdd110fab33c3dc1813"
+    }
+   },
+   "errors": [],
+   "failures": [],
+   "arrivalStep": 5,
+   "momentButtons": [
+    "Movement",
+    "Chart",
+    "Step back",
+    "Step forward",
+    "Ray first hits",
+    "Ray misses again",
+    "Smallest clearance",
+    "End of run",
+    "Back to the example",
+    "Show this moment in the diagram"
+   ],
+   "moments": [
+    {
+     "name": "Ray first hits",
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+     "screenshot": {
+      "path": "768x1024-moment-5.png",
+      "sha256": "6f12f9f9ff0d9307e34da7eb07a65ce08f68e67ef49e881ab2273f7dd401f9de"
+     }
+    },
+    {
+     "name": "Ray misses again",
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "Smallest clearance",
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "End of run",
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    }
+   ],
+   "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning."
+  },
+  {
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshots": {
+    "arrival": {
+     "path": "1440x900-arrival.png",
+     "sha256": "0eefd4d9a14b4eac990ffbc1c3b7dc85a4baf8fb4ba46677fcbb93c597669f52"
+    },
+    "comparison": {
+     "path": "1440x900-comparison.png",
+     "sha256": "3317d0f6d1a8704447c3c94837b8ec9fdb6947bd57a8a0e13823685ffa5c29fb"
+    }
+   },
+   "errors": [],
+   "failures": [],
+   "arrivalStep": 5,
+   "momentButtons": [
+    "Movement",
+    "Chart",
+    "Step back",
+    "Step forward",
+    "Ray first hits",
+    "Ray misses again",
+    "Smallest clearance",
+    "End of run",
+    "Back to the example",
+    "Show this moment in the diagram"
+   ],
+   "moments": [
+    {
+     "name": "Ray first hits",
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+     "screenshot": {
+      "path": "1440x900-moment-5.png",
+      "sha256": "072f7020a59906389d1a66594f10cd45b800f1b141f89b9f926c86f7f0f45702"
+     }
+    },
+    {
+     "name": "Ray misses again",
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "Smallest clearance",
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "name": "End of run",
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    }
+   ],
+   "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning."
+  },
+  {
+   "viewport": {
+    "width": 2080,
+    "height": 1460
+   },
+   "screenshots": {
+    "arrival": {
+     "path": "2080x1460-arrival.png",
+     "sha256": "e9e807cdfd35424c5f172af05ab9b936020e1ccfb2459e24ed29a46bf79bd53d"
+    },
+    "comparison": {
+     "path": "2080x1460-comparison.png",
+     "sha256": "94336ef025289c25efe720d2161e05da611b61e7399b545e5ceaccb103d8f227"
+    },
+    "oneUnitSmallest": {
+     "path": "2080x1460-one-unit-ray-smallest.png",
+     "sha256": "b22d353970b12f3c80ad5f276cc7c28238385471e912db4ecca6b2d5712dc476"
+    },
+    "tenUnitSmallest": {
+     "path": "2080x1460-ten-unit-ray-smallest.png",
+     "sha256": "0cdc68e04bf380a53c1f85cb8a83dc3ddc3a725bbfc03f3b53350b207bd3b1cc"
+    }
+   },
+   "errors": [],
+   "failures": [],
+   "arrivalStep": 5,
+   "momentButtons": [
+    "Movement",
+    "Chart",
+    "Step back",
+    "Step forward",
+    "Ray first hits",
+    "Ray misses again",
+    "Smallest clearance",
+    "End of run",
+    "Back to the example",
+    "Show this moment in the diagram"
+   ],
+   "moments": [
+    {
+     "name": "Ray first hits",
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+     "screenshot": {
+      "path": "2080x1460-moment-5.png",
+      "sha256": "e1cebd19312bb889df1368063e77e8938e565285d336a04160b3a89fbea02324"
+     }
+    },
+    {
+     "name": "Ray misses again",
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "2080x1460-moment-7.png",
+      "sha256": "b1d4f100f0ab18ae075fa32e551648f5d4d8c40249a250843e596eedfe5d2302"
+     }
+    },
+    {
+     "name": "Smallest clearance",
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "2080x1460-moment-29.png",
+      "sha256": "dfa19062bb4b991637ae02d9e748fd5d8988c09687a7aa7f90f16726fb53e350"
+     }
+    },
+    {
+     "name": "End of run",
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "2080x1460-moment-80.png",
+      "sha256": "5a40b45f75d0abbe53ecc6fe80172eb74349c5549865075b8e6cf826d43cb6c9"
+     }
+    }
+   ],
+   "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+   "defaultRun": [
+    {
+     "step": 0,
+     "label": "At 0.00 s the courier is at (0.00, 0.00) with radius 1, velocity (4.00, 0.00) units/s and acceleration (6.15, 5.12) units/s²; its ray runs from (0.00, 0.00) to (9.00, 0.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 1,
+     "label": "At 0.10 s the courier is at (0.40, 0.04) with radius 1, velocity (3.98, 0.44) units/s and acceleration (6.10, 5.18) units/s²; its ray runs from (0.40, 0.04) to (9.34, 1.04) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.60 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 2,
+     "label": "At 0.20 s the courier is at (0.79, 0.13) with radius 1, velocity (3.92, 0.82) units/s and acceleration (6.05, 5.23) units/s²; its ray runs from (0.79, 0.13) to (9.60, 1.97) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 3,
+     "label": "At 0.30 s the courier is at (1.17, 0.24) with radius 1, velocity (3.83, 1.14) units/s and acceleration (6.01, 5.28) units/s²; its ray runs from (1.17, 0.24) to (9.80, 2.80) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.83 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 4,
+     "label": "At 0.40 s the courier is at (1.55, 0.38) with radius 1, velocity (3.74, 1.41) units/s and acceleration (5.98, 5.31) units/s²; its ray runs from (1.55, 0.38) to (9.97, 3.54) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.45 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+    },
+    {
+     "step": 6,
+     "label": "At 0.60 s the courier is at (2.26, 0.74) with radius 1, velocity (3.47, 1.99) units/s and acceleration (2.92, 7.45) units/s²; its ray runs from (2.26, 0.74) to (10.07, 5.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 5.18), normal (-1.00, 0.00), avoidance target (4.00, 5.18) and selected target (4.00, 5.18); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.74 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier."
+    },
+    {
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 8,
+     "label": "At 0.80 s the courier is at (2.90, 1.22) with radius 1, velocity (3.19, 2.41) units/s and acceleration (5.91, 5.39) units/s²; its ray runs from (2.90, 1.22) to (10.09, 6.64) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.10 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 9,
+     "label": "At 0.90 s the courier is at (3.22, 1.46) with radius 1, velocity (3.15, 2.46) units/s and acceleration (5.90, 5.40) units/s²; its ray runs from (3.22, 1.46) to (10.32, 7.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.78 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 10,
+     "label": "At 1.00 s the courier is at (3.53, 1.71) with radius 1, velocity (3.12, 2.50) units/s and acceleration (5.89, 5.41) units/s²; its ray runs from (3.53, 1.71) to (10.55, 7.34) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.47 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 11,
+     "label": "At 1.10 s the courier is at (3.84, 1.97) with radius 1, velocity (3.09, 2.54) units/s and acceleration (5.89, 5.42) units/s²; its ray runs from (3.84, 1.97) to (10.80, 7.67) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.16 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 12,
+     "label": "At 1.20 s the courier is at (4.15, 2.22) with radius 1, velocity (3.07, 2.56) units/s and acceleration (5.88, 5.42) units/s²; its ray runs from (4.15, 2.22) to (11.05, 8.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.85 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 13,
+     "label": "At 1.30 s the courier is at (4.45, 2.48) with radius 1, velocity (3.05, 2.59) units/s and acceleration (5.88, 5.43) units/s²; its ray runs from (4.45, 2.48) to (11.31, 8.31) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.55 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 14,
+     "label": "At 1.40 s the courier is at (4.75, 2.74) with radius 1, velocity (3.03, 2.61) units/s and acceleration (5.87, 5.43) units/s²; its ray runs from (4.75, 2.74) to (11.57, 8.62) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.25 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 15,
+     "label": "At 1.50 s the courier is at (5.06, 3.01) with radius 1, velocity (3.01, 2.63) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.06, 3.01) to (11.84, 8.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.94 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 16,
+     "label": "At 1.60 s the courier is at (5.36, 3.27) with radius 1, velocity (3.00, 2.64) units/s and acceleration (5.87, 5.44) units/s²; its ray runs from (5.36, 3.27) to (12.11, 9.22) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.64 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 17,
+     "label": "At 1.70 s the courier is at (5.65, 3.54) with radius 1, velocity (2.99, 2.66) units/s and acceleration (5.86, 5.44) units/s²; its ray runs from (5.65, 3.54) to (12.38, 9.51) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.35 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 18,
+     "label": "At 1.80 s the courier is at (5.95, 3.80) with radius 1, velocity (2.98, 2.67) units/s and acceleration (5.86, 5.45) units/s²; its ray runs from (5.95, 3.80) to (12.66, 9.81) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.05 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 19,
+     "label": "At 1.90 s the courier is at (6.25, 4.07) with radius 1, velocity (2.97, 2.68) units/s and acceleration (5.86, 5.45) units/s²; its ray runs from (6.25, 4.07) to (12.94, 10.09) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.75 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 20,
+     "label": "At 2.00 s the courier is at (6.55, 4.34) with radius 1, velocity (2.97, 2.68) units/s and acceleration (5.86, 5.45) units/s²; its ray runs from (6.55, 4.34) to (13.22, 10.38) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.45 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 21,
+     "label": "At 2.10 s the courier is at (6.84, 4.61) with radius 1, velocity (2.96, 2.69) units/s and acceleration (5.85, 5.45) units/s²; its ray runs from (6.84, 4.61) to (13.50, 10.67) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.16 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 22,
+     "label": "At 2.20 s the courier is at (7.14, 4.88) with radius 1, velocity (2.95, 2.70) units/s and acceleration (5.85, 5.45) units/s²; its ray runs from (7.14, 4.88) to (13.78, 10.95) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.86 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 23,
+     "label": "At 2.30 s the courier is at (7.43, 5.15) with radius 1, velocity (2.95, 2.70) units/s and acceleration (5.85, 5.45) units/s²; its ray runs from (7.43, 5.15) to (14.07, 11.23) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.57 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 24,
+     "label": "At 2.40 s the courier is at (7.73, 5.42) with radius 1, velocity (2.95, 2.71) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (7.73, 5.42) to (14.35, 11.51) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.27 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 25,
+     "label": "At 2.50 s the courier is at (8.02, 5.69) with radius 1, velocity (2.94, 2.71) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (8.02, 5.69) to (14.64, 11.79) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.98 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 26,
+     "label": "At 2.60 s the courier is at (8.32, 5.96) with radius 1, velocity (2.94, 2.71) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (8.32, 5.96) to (14.93, 12.07) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.68 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 27,
+     "label": "At 2.70 s the courier is at (8.61, 6.23) with radius 1, velocity (2.94, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (8.61, 6.23) to (15.22, 12.34) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.41 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 28,
+     "label": "At 2.80 s the courier is at (8.90, 6.51) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (8.90, 6.51) to (15.51, 12.62) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 30,
+     "label": "At 3.00 s the courier is at (9.49, 7.05) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.49, 7.05) to (16.08, 13.17) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 31,
+     "label": "At 3.10 s the courier is at (9.78, 7.32) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.78, 7.32) to (16.37, 13.45) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.34 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 32,
+     "label": "At 3.20 s the courier is at (10.07, 7.59) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (10.07, 7.59) to (16.66, 13.72) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.60 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 33,
+     "label": "At 3.30 s the courier is at (10.37, 7.87) with radius 1, velocity (2.93, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (10.37, 7.87) to (16.95, 14.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.90 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 34,
+     "label": "At 3.40 s the courier is at (10.66, 8.14) with radius 1, velocity (2.93, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (10.66, 8.14) to (17.25, 14.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.24 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 35,
+     "label": "At 3.50 s the courier is at (10.95, 8.41) with radius 1, velocity (2.93, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (10.95, 8.41) to (17.54, 14.55) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.59 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 36,
+     "label": "At 3.60 s the courier is at (11.25, 8.69) with radius 1, velocity (2.93, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (11.25, 8.69) to (17.83, 14.82) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.96 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 37,
+     "label": "At 3.70 s the courier is at (11.54, 8.96) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (11.54, 8.96) to (18.12, 15.10) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.33 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 38,
+     "label": "At 3.80 s the courier is at (11.83, 9.23) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (11.83, 9.23) to (18.41, 15.37) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.71 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 39,
+     "label": "At 3.90 s the courier is at (12.12, 9.50) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.12, 9.50) to (18.70, 15.65) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.10 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 40,
+     "label": "At 4.00 s the courier is at (12.42, 9.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.42, 9.78) to (18.99, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.48 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 41,
+     "label": "At 4.10 s the courier is at (12.71, 10.05) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (12.71, 10.05) to (19.28, 16.19) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.87 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 42,
+     "label": "At 4.20 s the courier is at (13.00, 10.32) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (13.00, 10.32) to (19.58, 16.47) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.26 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 43,
+     "label": "At 4.30 s the courier is at (13.29, 10.60) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.46) units/s²; its ray runs from (13.29, 10.60) to (19.87, 16.74) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.65 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 44,
+     "label": "At 4.40 s the courier is at (13.58, 10.87) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (13.58, 10.87) to (20.16, 17.01) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.05 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 45,
+     "label": "At 4.50 s the courier is at (13.88, 11.14) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (13.88, 11.14) to (20.45, 17.29) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.44 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 46,
+     "label": "At 4.60 s the courier is at (14.17, 11.42) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (14.17, 11.42) to (20.74, 17.56) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.83 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 47,
+     "label": "At 4.70 s the courier is at (14.46, 11.69) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (14.46, 11.69) to (21.04, 17.84) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.23 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 48,
+     "label": "At 4.80 s the courier is at (14.75, 11.96) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (14.75, 11.96) to (21.33, 18.11) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.62 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 49,
+     "label": "At 4.90 s the courier is at (15.05, 12.24) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (15.05, 12.24) to (21.62, 18.38) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.02 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 50,
+     "label": "At 5.00 s the courier is at (15.34, 12.51) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (15.34, 12.51) to (21.91, 18.66) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 51,
+     "label": "At 5.10 s the courier is at (15.63, 12.78) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (15.63, 12.78) to (22.20, 18.93) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.81 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 52,
+     "label": "At 5.20 s the courier is at (15.92, 13.06) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (15.92, 13.06) to (22.49, 19.20) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 53,
+     "label": "At 5.30 s the courier is at (16.21, 13.33) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (16.21, 13.33) to (22.79, 19.48) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.61 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 54,
+     "label": "At 5.40 s the courier is at (16.51, 13.60) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (16.51, 13.60) to (23.08, 19.75) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.01 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 55,
+     "label": "At 5.50 s the courier is at (16.80, 13.87) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (16.80, 13.87) to (23.37, 20.02) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.40 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 56,
+     "label": "At 5.60 s the courier is at (17.09, 14.15) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (17.09, 14.15) to (23.66, 20.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.80 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 57,
+     "label": "At 5.70 s the courier is at (17.38, 14.42) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (17.38, 14.42) to (23.95, 20.57) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.20 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 58,
+     "label": "At 5.80 s the courier is at (17.67, 14.69) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (17.67, 14.69) to (24.25, 20.84) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.60 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 59,
+     "label": "At 5.90 s the courier is at (17.97, 14.97) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.82, 5.49) units/s²; its ray runs from (17.97, 14.97) to (24.54, 21.12) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 60,
+     "label": "At 6.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.92, 2.74) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.26, 15.24) to (24.83, 21.40) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 61,
+     "label": "At 6.10 s the courier is at (18.49, 15.46) with radius 1, velocity (2.33, 2.19) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.49, 15.46) to (25.06, 21.62) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.71 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 62,
+     "label": "At 6.20 s the courier is at (18.67, 15.62) with radius 1, velocity (1.75, 1.64) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.67, 15.62) to (25.23, 21.78) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.95 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 63,
+     "label": "At 6.30 s the courier is at (18.78, 15.73) with radius 1, velocity (1.17, 1.09) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.78, 15.73) to (25.35, 21.89) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.11 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 64,
+     "label": "At 6.40 s the courier is at (18.84, 15.79) with radius 1, velocity (0.58, 0.55) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.84, 15.79) to (25.40, 21.95) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.19 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 65,
+     "label": "At 6.50 s the courier is at (18.84, 15.79) with radius 1, velocity (0.00, 0.00) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.84, 15.79) to (12.69, 22.36) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.19 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 66,
+     "label": "At 6.60 s the courier is at (18.78, 15.73) with radius 1, velocity (-0.58, -0.55) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.78, 15.73) to (12.21, 9.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.11 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 67,
+     "label": "At 6.70 s the courier is at (18.67, 15.62) with radius 1, velocity (-1.17, -1.09) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.67, 15.62) to (12.10, 9.47) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.95 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 68,
+     "label": "At 6.80 s the courier is at (18.49, 15.46) with radius 1, velocity (-1.75, -1.64) units/s and acceleration (-5.84, -5.47) units/s²; its ray runs from (18.49, 15.46) to (11.92, 9.31) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.71 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 69,
+     "label": "At 6.90 s the courier is at (18.26, 15.24) with radius 1, velocity (-2.33, -2.19) units/s and acceleration (-5.83, -5.47) units/s²; its ray runs from (18.26, 15.24) to (11.69, 9.09) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 70,
+     "label": "At 7.00 s the courier is at (17.97, 14.97) with radius 1, velocity (-2.92, -2.74) units/s and acceleration (5.85, 5.45) units/s²; its ray runs from (17.97, 14.97) to (11.40, 8.81) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 71,
+     "label": "At 7.10 s the courier is at (17.73, 14.75) with radius 1, velocity (-2.33, -2.19) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (17.73, 14.75) to (11.17, 8.59) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.68 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 72,
+     "label": "At 7.20 s the courier is at (17.56, 14.59) with radius 1, velocity (-1.75, -1.64) units/s and acceleration (5.83, 5.47) units/s²; its ray runs from (17.56, 14.59) to (11.00, 8.42) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.44 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 73,
+     "label": "At 7.30 s the courier is at (17.44, 14.48) with radius 1, velocity (-1.17, -1.10) units/s and acceleration (5.83, 5.47) units/s²; its ray runs from (17.44, 14.48) to (10.88, 8.31) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.28 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 74,
+     "label": "At 7.40 s the courier is at (17.38, 14.42) with radius 1, velocity (-0.58, -0.55) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (17.38, 14.42) to (10.83, 8.26) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.20 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 75,
+     "label": "At 7.50 s the courier is at (17.38, 14.42) with radius 1, velocity (0.00, 0.00) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (17.38, 14.42) to (23.50, 7.82) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.20 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 76,
+     "label": "At 7.60 s the courier is at (17.44, 14.48) with radius 1, velocity (0.58, 0.55) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (17.44, 14.48) to (24.01, 20.63) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.28 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 77,
+     "label": "At 7.70 s the courier is at (17.56, 14.58) with radius 1, velocity (1.17, 1.09) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (17.56, 14.58) to (24.12, 20.74) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.44 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 78,
+     "label": "At 7.80 s the courier is at (17.73, 14.75) with radius 1, velocity (1.75, 1.64) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (17.73, 14.75) to (24.30, 20.91) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.68 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 79,
+     "label": "At 7.90 s the courier is at (17.97, 14.97) with radius 1, velocity (2.33, 2.19) units/s and acceleration (5.81, 5.50) units/s²; its ray runs from (17.97, 14.97) to (24.53, 21.13) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    }
+   ],
+   "oneUnitComparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 1 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4\n8.08\n12.16\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 1\nRay length 1\n\nMinimum body clearance is -0.08 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 0 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 0.00 degrees.\n\nBoth ray lengths are equal, so these are the same run.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+   "oneUnitRun": [
+    {
+     "step": 0,
+     "label": "At 0.00 s the courier is at (0.00, 0.00) with radius 1, velocity (4.00, 0.00) units/s and acceleration (6.15, 5.12) units/s²; its ray runs from (0.00, 0.00) to (1.00, 0.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 1,
+     "label": "At 0.10 s the courier is at (0.40, 0.04) with radius 1, velocity (3.98, 0.44) units/s and acceleration (6.10, 5.18) units/s²; its ray runs from (0.40, 0.04) to (1.39, 0.15) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.60 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 2,
+     "label": "At 0.20 s the courier is at (0.79, 0.13) with radius 1, velocity (3.92, 0.82) units/s and acceleration (6.05, 5.23) units/s²; its ray runs from (0.79, 0.13) to (1.77, 0.33) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 3,
+     "label": "At 0.30 s the courier is at (1.17, 0.24) with radius 1, velocity (3.83, 1.14) units/s and acceleration (6.01, 5.28) units/s²; its ray runs from (1.17, 0.24) to (2.13, 0.52) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.83 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 4,
+     "label": "At 0.40 s the courier is at (1.55, 0.38) with radius 1, velocity (3.74, 1.41) units/s and acceleration (5.98, 5.31) units/s²; its ray runs from (1.55, 0.38) to (2.48, 0.73) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.45 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (5.95, 5.35) units/s²; its ray runs from (1.91, 0.54) to (2.83, 0.95) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 6,
+     "label": "At 0.60 s the courier is at (2.27, 0.73) with radius 1, velocity (3.56, 1.82) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.27, 0.73) to (3.16, 1.18) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.73 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.62, 0.92) with radius 1, velocity (3.48, 1.97) units/s and acceleration (5.90, 5.40) units/s²; its ray runs from (2.62, 0.92) to (3.49, 1.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.38 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 8,
+     "label": "At 0.80 s the courier is at (2.96, 1.13) with radius 1, velocity (3.40, 2.10) units/s and acceleration (5.88, 5.42) units/s²; its ray runs from (2.96, 1.13) to (3.81, 1.66) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.04 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 9,
+     "label": "At 0.90 s the courier is at (3.29, 1.35) with radius 1, velocity (3.34, 2.21) units/s and acceleration (5.86, 5.44) units/s²; its ray runs from (3.29, 1.35) to (4.12, 1.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.71 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 10,
+     "label": "At 1.00 s the courier is at (3.62, 1.58) with radius 1, velocity (3.27, 2.30) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (3.62, 1.58) to (4.44, 2.16) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.38 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 11,
+     "label": "At 1.10 s the courier is at (3.94, 1.82) with radius 1, velocity (3.22, 2.37) units/s and acceleration (5.84, 5.47) units/s²; its ray runs from (3.94, 1.82) to (4.75, 2.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.06 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 12,
+     "label": "At 1.20 s the courier is at (4.26, 2.06) with radius 1, velocity (3.17, 2.44) units/s and acceleration (5.83, 5.48) units/s²; its ray runs from (4.26, 2.06) to (5.05, 2.67) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.74 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 13,
+     "label": "At 1.30 s the courier is at (4.57, 2.31) with radius 1, velocity (3.13, 2.49) units/s and acceleration (5.82, 5.49) units/s²; its ray runs from (4.57, 2.31) to (5.35, 2.93) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.43 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 14,
+     "label": "At 1.40 s the courier is at (4.88, 2.57) with radius 1, velocity (3.10, 2.53) units/s and acceleration (5.81, 5.50) units/s²; its ray runs from (4.88, 2.57) to (5.65, 3.20) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.12 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 15,
+     "label": "At 1.50 s the courier is at (5.19, 2.82) with radius 1, velocity (3.07, 2.57) units/s and acceleration (5.80, 5.51) units/s²; its ray runs from (5.19, 2.82) to (5.95, 3.47) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.81 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 16,
+     "label": "At 1.60 s the courier is at (5.49, 3.08) with radius 1, velocity (3.04, 2.60) units/s and acceleration (5.79, 5.52) units/s²; its ray runs from (5.49, 3.08) to (6.25, 3.73) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.51 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 17,
+     "label": "At 1.70 s the courier is at (5.79, 3.35) with radius 1, velocity (3.02, 2.63) units/s and acceleration (5.79, 5.52) units/s²; its ray runs from (5.79, 3.35) to (6.55, 4.00) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 18,
+     "label": "At 1.80 s the courier is at (6.09, 3.61) with radius 1, velocity (3.00, 2.65) units/s and acceleration (5.78, 5.53) units/s²; its ray runs from (6.09, 3.61) to (6.84, 4.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.91 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 19,
+     "label": "At 1.90 s the courier is at (6.39, 3.88) with radius 1, velocity (2.98, 2.67) units/s and acceleration (5.78, 5.53) units/s²; its ray runs from (6.39, 3.88) to (7.13, 4.55) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.61 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 20,
+     "label": "At 2.00 s the courier is at (6.69, 4.15) with radius 1, velocity (2.96, 2.69) units/s and acceleration (5.77, 5.54) units/s²; its ray runs from (6.69, 4.15) to (7.43, 4.82) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.31 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 21,
+     "label": "At 2.10 s the courier is at (6.98, 4.42) with radius 1, velocity (2.95, 2.70) units/s and acceleration (5.77, 5.54) units/s²; its ray runs from (6.98, 4.42) to (7.72, 5.09) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.02 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 22,
+     "label": "At 2.20 s the courier is at (7.28, 4.69) with radius 1, velocity (2.94, 2.71) units/s and acceleration (5.77, 5.54) units/s²; its ray runs from (7.28, 4.69) to (8.01, 5.37) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.72 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 23,
+     "label": "At 2.30 s the courier is at (7.57, 4.96) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.76, 5.55) units/s²; its ray runs from (7.57, 4.96) to (8.30, 5.64) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.43 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 24,
+     "label": "At 2.40 s the courier is at (7.86, 5.23) with radius 1, velocity (2.92, 2.73) units/s and acceleration (5.76, 5.55) units/s²; its ray runs from (7.86, 5.23) to (8.59, 5.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.14 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 25,
+     "label": "At 2.50 s the courier is at (8.15, 5.51) with radius 1, velocity (2.92, 2.74) units/s and acceleration (5.76, 5.55) units/s²; its ray runs from (8.15, 5.51) to (8.88, 6.19) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.85 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 26,
+     "label": "At 2.60 s the courier is at (8.44, 5.78) with radius 1, velocity (2.91, 2.74) units/s and acceleration (5.76, 5.55) units/s²; its ray runs from (8.44, 5.78) to (9.17, 6.47) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.56 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 27,
+     "label": "At 2.70 s the courier is at (8.73, 6.06) with radius 1, velocity (2.90, 2.75) units/s and acceleration (5.76, 5.56) units/s²; its ray runs from (8.73, 6.06) to (9.46, 6.74) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.27 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 28,
+     "label": "At 2.80 s the courier is at (9.02, 6.33) with radius 1, velocity (2.90, 2.75) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.02, 6.33) to (9.75, 7.02) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.03 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.31, 6.61) with radius 1, velocity (2.90, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.31, 6.61) to (10.04, 7.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.08 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+    },
+    {
+     "step": 30,
+     "label": "At 3.00 s the courier is at (9.60, 6.88) with radius 1, velocity (2.89, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.60, 6.88) to (10.33, 7.57) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.03 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+    },
+    {
+     "step": 31,
+     "label": "At 3.10 s the courier is at (9.89, 7.16) with radius 1, velocity (2.89, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.89, 7.16) to (10.61, 7.85) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 32,
+     "label": "At 3.20 s the courier is at (10.18, 7.44) with radius 1, velocity (2.89, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (10.18, 7.44) to (10.90, 8.13) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.45 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 33,
+     "label": "At 3.30 s the courier is at (10.47, 7.71) with radius 1, velocity (2.89, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (10.47, 7.71) to (11.19, 8.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.78 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 34,
+     "label": "At 3.40 s the courier is at (10.76, 7.99) with radius 1, velocity (2.88, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (10.76, 7.99) to (11.48, 8.68) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.13 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 35,
+     "label": "At 3.50 s the courier is at (11.05, 8.27) with radius 1, velocity (2.88, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (11.05, 8.27) to (11.77, 8.96) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.50 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 36,
+     "label": "At 3.60 s the courier is at (11.33, 8.55) with radius 1, velocity (2.88, 2.77) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (11.33, 8.55) to (12.05, 9.24) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 1.87 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 37,
+     "label": "At 3.70 s the courier is at (11.62, 8.82) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (11.62, 8.82) to (12.34, 9.52) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.26 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 38,
+     "label": "At 3.80 s the courier is at (11.91, 9.10) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.57) units/s²; its ray runs from (11.91, 9.10) to (12.63, 9.80) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 2.64 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 39,
+     "label": "At 3.90 s the courier is at (12.20, 9.38) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.57) units/s²; its ray runs from (12.20, 9.38) to (12.92, 10.07) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.03 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 40,
+     "label": "At 4.00 s the courier is at (12.48, 9.66) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.57) units/s²; its ray runs from (12.48, 9.66) to (13.20, 10.35) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.42 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 41,
+     "label": "At 4.10 s the courier is at (12.77, 9.94) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.57) units/s²; its ray runs from (12.77, 9.94) to (13.49, 10.63) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 3.81 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 42,
+     "label": "At 4.20 s the courier is at (13.06, 10.21) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.75, 5.57) units/s²; its ray runs from (13.06, 10.21) to (13.78, 10.91) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.21 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 43,
+     "label": "At 4.30 s the courier is at (13.35, 10.49) with radius 1, velocity (2.88, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (13.35, 10.49) to (14.07, 11.19) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 4.60 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 44,
+     "label": "At 4.40 s the courier is at (13.64, 10.77) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (13.64, 10.77) to (14.35, 11.46) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.00 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 45,
+     "label": "At 4.50 s the courier is at (13.92, 11.05) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (13.92, 11.05) to (14.64, 11.74) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.39 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 46,
+     "label": "At 4.60 s the courier is at (14.21, 11.33) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (14.21, 11.33) to (14.93, 12.02) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 5.79 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 47,
+     "label": "At 4.70 s the courier is at (14.50, 11.60) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (14.50, 11.60) to (15.22, 12.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.19 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 48,
+     "label": "At 4.80 s the courier is at (14.78, 11.88) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (14.78, 11.88) to (15.50, 12.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.58 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 49,
+     "label": "At 4.90 s the courier is at (15.07, 12.16) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (15.07, 12.16) to (15.79, 12.86) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.98 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 50,
+     "label": "At 5.00 s the courier is at (15.36, 12.44) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (15.36, 12.44) to (16.08, 13.13) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.38 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 51,
+     "label": "At 5.10 s the courier is at (15.65, 12.72) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (15.65, 12.72) to (16.36, 13.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.78 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 52,
+     "label": "At 5.20 s the courier is at (15.93, 13.00) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (15.93, 13.00) to (16.65, 13.69) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 53,
+     "label": "At 5.30 s the courier is at (16.22, 13.27) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (16.22, 13.27) to (16.94, 13.97) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.57 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 54,
+     "label": "At 5.40 s the courier is at (16.51, 13.55) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (16.51, 13.55) to (17.23, 14.25) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 8.97 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 55,
+     "label": "At 5.50 s the courier is at (16.80, 13.83) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (16.80, 13.83) to (17.51, 14.53) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.37 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 56,
+     "label": "At 5.60 s the courier is at (17.08, 14.11) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (17.08, 14.11) to (17.80, 14.81) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 9.77 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 57,
+     "label": "At 5.70 s the courier is at (17.37, 14.39) with radius 1, velocity (2.87, 2.78) units/s and acceleration (5.74, 5.57) units/s²; its ray runs from (17.37, 14.39) to (18.09, 15.08) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 58,
+     "label": "At 5.80 s the courier is at (17.66, 14.67) with radius 1, velocity (2.87, 2.79) units/s and acceleration (5.74, 5.58) units/s²; its ray runs from (17.66, 14.67) to (18.37, 15.36) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.56 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 59,
+     "label": "At 5.90 s the courier is at (17.94, 14.94) with radius 1, velocity (2.87, 2.79) units/s and acceleration (5.72, 5.60) units/s²; its ray runs from (17.94, 14.94) to (18.66, 15.64) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.96 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 60,
+     "label": "At 6.00 s the courier is at (18.23, 15.22) with radius 1, velocity (2.87, 2.79) units/s and acceleration (-5.74, -5.57) units/s²; its ray runs from (18.23, 15.22) to (18.95, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.36 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 61,
+     "label": "At 6.10 s the courier is at (18.46, 15.45) with radius 1, velocity (2.29, 2.23) units/s and acceleration (-5.74, -5.57) units/s²; its ray runs from (18.46, 15.45) to (19.18, 16.14) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.68 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 62,
+     "label": "At 6.20 s the courier is at (18.63, 15.61) with radius 1, velocity (1.72, 1.67) units/s and acceleration (-5.74, -5.57) units/s²; its ray runs from (18.63, 15.61) to (19.35, 16.31) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.92 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 63,
+     "label": "At 6.30 s the courier is at (18.75, 15.73) with radius 1, velocity (1.15, 1.12) units/s and acceleration (-5.74, -5.58) units/s²; its ray runs from (18.75, 15.73) to (19.46, 16.42) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.08 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 64,
+     "label": "At 6.40 s the courier is at (18.80, 15.78) with radius 1, velocity (0.57, 0.56) units/s and acceleration (-5.74, -5.58) units/s²; its ray runs from (18.80, 15.78) to (19.52, 16.48) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.16 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 65,
+     "label": "At 6.50 s the courier is at (18.80, 15.78) with radius 1, velocity (0.00, 0.00) units/s and acceleration (-5.74, -5.58) units/s²; its ray runs from (18.80, 15.78) to (18.11, 16.50) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.16 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 66,
+     "label": "At 6.60 s the courier is at (18.75, 15.73) with radius 1, velocity (-0.57, -0.56) units/s and acceleration (-5.74, -5.58) units/s²; its ray runs from (18.75, 15.73) to (18.03, 15.03) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 12.08 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 67,
+     "label": "At 6.70 s the courier is at (18.63, 15.61) with radius 1, velocity (-1.15, -1.11) units/s and acceleration (-5.73, -5.58) units/s²; its ray runs from (18.63, 15.61) to (17.91, 14.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.92 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 68,
+     "label": "At 6.80 s the courier is at (18.46, 15.45) with radius 1, velocity (-1.72, -1.67) units/s and acceleration (-5.73, -5.58) units/s²; its ray runs from (18.46, 15.45) to (17.74, 14.75) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.68 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 69,
+     "label": "At 6.90 s the courier is at (18.23, 15.22) with radius 1, velocity (-2.29, -2.23) units/s and acceleration (-5.73, -5.58) units/s²; its ray runs from (18.23, 15.22) to (17.51, 14.53) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.36 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 70,
+     "label": "At 7.00 s the courier is at (17.94, 14.95) with radius 1, velocity (-2.87, -2.79) units/s and acceleration (5.76, 5.56) units/s²; its ray runs from (17.94, 14.95) to (17.23, 14.25) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.96 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 71,
+     "label": "At 7.10 s the courier is at (17.71, 14.72) with radius 1, velocity (-2.29, -2.23) units/s and acceleration (5.74, 5.58) units/s²; its ray runs from (17.71, 14.72) to (17.00, 14.02) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.64 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 72,
+     "label": "At 7.20 s the courier is at (17.54, 14.55) with radius 1, velocity (-1.72, -1.68) units/s and acceleration (5.73, 5.58) units/s²; its ray runs from (17.54, 14.55) to (16.83, 13.86) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.40 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 73,
+     "label": "At 7.30 s the courier is at (17.43, 14.44) with radius 1, velocity (-1.15, -1.12) units/s and acceleration (5.73, 5.58) units/s²; its ray runs from (17.43, 14.44) to (16.71, 13.74) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.25 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 74,
+     "label": "At 7.40 s the courier is at (17.37, 14.39) with radius 1, velocity (-0.57, -0.56) units/s and acceleration (5.73, 5.58) units/s²; its ray runs from (17.37, 14.39) to (16.66, 13.69) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 75,
+     "label": "At 7.50 s the courier is at (17.37, 14.39) with radius 1, velocity (0.00, 0.00) units/s and acceleration (5.73, 5.58) units/s²; its ray runs from (17.37, 14.39) to (18.07, 13.67) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.17 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 76,
+     "label": "At 7.60 s the courier is at (17.43, 14.44) with radius 1, velocity (0.57, 0.56) units/s and acceleration (5.73, 5.58) units/s²; its ray runs from (17.43, 14.44) to (18.15, 15.14) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.25 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 77,
+     "label": "At 7.70 s the courier is at (17.54, 14.55) with radius 1, velocity (1.15, 1.12) units/s and acceleration (5.73, 5.59) units/s²; its ray runs from (17.54, 14.55) to (18.26, 15.25) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.40 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 78,
+     "label": "At 7.80 s the courier is at (17.71, 14.72) with radius 1, velocity (1.72, 1.67) units/s and acceleration (5.72, 5.59) units/s²; its ray runs from (17.71, 14.72) to (18.43, 15.42) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.64 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 79,
+     "label": "At 7.90 s the courier is at (17.94, 14.94) with radius 1, velocity (2.29, 2.23) units/s and acceleration (5.70, 5.61) units/s²; its ray runs from (17.94, 14.94) to (18.66, 15.64) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 10.96 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    },
+    {
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.23, 15.22) with radius 1, velocity (2.86, 2.79) units/s and acceleration (-5.73, -5.58) units/s²; its ray runs from (18.23, 15.22) to (18.95, 15.92) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.36 units: The forward segment misses the wall, so the courier seeks the delivery point."
+    }
+   ],
+   "studyText": "AUTHORED STUDY · CODEX GPT-6.1-SOL, STUDY AUTHOR 3 · 2026-11-04\n\nCourier at the depot courtyard wall\n\nGive the courier a feeler ahead of its travel. A hit supplies more than a warning: the surface normal tells it which way leads back into free space. Put a temporary target along that normal and let the courier pull towards it. The ray can see a wall before the courier’s body reaches it, but detection still needs time to change motion.\n\nA courier approaches the end of a depot courtyard wall on the way to an offset delivery point. Compare its path with the same run using a ray too short to hit. The difference reveals how much of the turn comes from avoidance and how much comes from seeking the delivery.\n\nThe example in full\n\nThe courier starts at (0, 0) with velocity (4, 0) units/s and radius 1. Its delivery point is (18, 15); a vertical wall runs from (10, -6) to (10, 6). A forward ray of length 9 units constructs an avoidance target 6 units along the hit normal. Maximum speed is 4 units/s and acceleration 8 units/s². The run takes 80 fixed steps of 0.1 s. Segment intersection and target selection are study-local; the actual pull to either target calls engine Seek.\n\nMovement\nChart\nCourier\nDelivery\nTime · 8.0 seconds\nStep back\nStep forward\nRay first hits\nRay misses again\nSmallest clearance\nEnd of run\n\nThe forward segment misses the wall, so the courier seeks the delivery point.\n\nShow the numbers\n\nAt 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.\n\nTry another value\nDelivery height · 15 units\nForward ray length · 9 units\nBack to the example\nHow to read this drawing\n\nCourier and physical radius\nWall segment and ray hit\nRay; amber cross · avoidance target; lower lane · acceleration × 0.25 s²\nUpper lane · velocity × 1 s\nSurface normal × avoid distance\nDelivery point beyond the wall\n\nThe long line is the wall. The forward ray runs from the courier to its ray end. On a hit, the normal points back from the surface to the amber avoidance cross. The courier ring is its physical radius. Below it, parallel lanes separate velocity above and acceleration below. In the default run, seeking the offset delivery causes most of the turn; avoidance adds only a brief pull and slightly increases the closest clearance. Step from Ray first hits to Ray misses again, then compare the short-ray trace. This is a small clearance correction, not sustained steering along the wall. The chart measures the finite wall, including its ends.\n\nChoose another way into the idea.\n\nFollow the mechanism\nOrdinary pseudocode, read top to bottom, with each step explained on this example.\nREAD THE PSEUDOCODE\n\nORDINARY PSEUDOCODE\n\ndirection = normalise(velocity) if moving else lastTravelHeading\nrayEnd = position + direction * rayLength\nhit = intersectFiniteSegments(position, rayEnd, wallStart, wallEnd)\n// Accept only intersection fractions in [0, 1]; normal opposes the ray.\n\nif hit exists: target = hit.point + hit.normal * avoidDistance\nelse: target = deliveryPoint\n\nacceleration = sceneEngine.seek(body, target)\n// Seek pulls towards the selected point; it does not command a stop.\n\nnearestWallPoint = (wallX, clamp(position.y, wallBottom, wallTop))\nbodyClearance = distance(position, nearestWallPoint) - radius\nvelocity = clipLength(velocity + acceleration * dt, maxSpeed)\nposition += velocity * dt\nif moving: lastTravelHeading = normalise(velocity)\n1. Cast a finite forward ray\nShow this step's code\ndirection = normalise(velocity) if moving else lastTravelHeading\nrayEnd = position + direction * rayLength\nhit = intersectFiniteSegments(position, rayEnd, wallStart, wallEnd)\n// Accept only intersection fractions in [0, 1]; normal opposes the ray.\n\nNormalise the current velocity and extend it by 9; at zero speed retain the last travel heading. The local detector intersects this finite segment with the finite wall segment using cross products. Both intersection fractions must lie within the segments. It reports the actual hit point and a unit surface normal facing against the incoming ray. Parallel and collinear segments return no hit in this small detector.\n\n2. Build a target from the hit normal\nShow this step's code\nif hit exists: target = hit.point + hit.normal * avoidDistance\nelse: target = deliveryPoint\n\nA hit replaces the delivery point with hitPoint + normal × 6. The offset is a centre-target distance, not an automatic guarantee about the courier’s radius. The normal arrow ends at the avoidance cross. Without a hit the selected target is the delivery point, so local avoidance has no memory of the blocked route.\n\n3. Pull with engine Seek\nShow this step's code\nacceleration = sceneEngine.seek(body, target)\n// Seek pulls towards the selected point; it does not command a stop.\n\nThe model passes the selected target to the existing engine Seek function. It returns acceleration towards that target, capped at 8. When the target still lies ahead, a ray hit can initially leave the pull pointing towards the wall; once the courier passes the offset target the pull points back. Detection alone never sets the courier’s velocity to zero.\n\n4. Measure body clearance and advance\nShow this step's code\nnearestWallPoint = (wallX, clamp(position.y, wallBottom, wallTop))\nbodyClearance = distance(position, nearestWallPoint) - radius\nvelocity = clipLength(velocity + acceleration * dt, maxSpeed)\nposition += velocity * dt\nif moving: lastTravelHeading = normalise(velocity)\n\nFind the nearest point on the finite wall segment and subtract 1 from its distance to the courier’s centre. This body clearance stays meaningful beside the wall and round either end; a negative value means overlap. Add acceleration times 0.1 to velocity, clip speed to 4, then advance position. The local update applies no wall clamp or collision response.\n\nExecutable model\n\nlibs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.ts\n\nThe TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts. The ordinary pseudocode above explains its steps.\n\nRAY AND TARGET AT 8.00 SECONDS\n\nThis calculation follows the selected moment on the timeline.\n\nRay end = (18.26, 15.24) + (0.73, 0.69) × 9.00 = (24.81, 21.41).\nThe finite ray and wall segments do not intersect; there is no avoidance target.\nUse delivery target (18.00, 15.00).\nEngine seek towards (18.00, 15.00) returns acceleration (-5.83, -5.48) units/s².\nNext velocity = clip((2.91, 2.74) + (-5.83, -5.48) × 0.10, 4.00) = (2.33, 2.19).\nNext position = (18.26, 15.24) + (2.33, 2.19) × 0.10 = (18.49, 15.46); current body clearance = distance((18.26, 15.24), (10.00, 6.00)) − 1.00 = 11.39.\n\nAt zero speed the ray keeps the last travel heading. The ray is a line, not a swept disc. A normal offset changes the target; it does not teleport or stop the courier. Printed operands are rounded.\n\nShow this moment in the diagram\n\nDisplayed values are rounded to two decimal places; the calculation uses full precision.\n\nWhere this breaks down\nWhen this fails, and what to reach for instead.\nA longer ray is not automatically safer. Across the offered lengths from 10 to 12, the greatest body overlap in this setup is 0.74 units. These rays hit from the start and can pull towards a target still ahead before braking. A shorter ray of length 1 supplies the comparison; neither length guarantees collision-free motion.\nTry the delivery straight ahead at height 0: there is no sideways cue. The courier can switch between delivery and avoidance targets while staying on the same line. A ray-based local pull does not choose a route round a wall.\nA single centre ray does not sweep the whole disc. It can miss a wall edge that the courier’s radius clips. The local detector also deliberately returns no collision for parallel or collinear segments.\nSeveral rays can alternate between adjacent faces at a corner and keep reversing the chosen target. That is the Corner trap; this straight-wall example does not implement a remedy for it.\nCOMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.\n\nSee it elsewhere\nWhere public projects implement it, and the sources this study rests on.\nIN PUBLIC PROJECTS\ngdx-ai · RaycastObstacleAvoidance\n\ngdx-ai’s Java steering library separates ray configurations, collision detectors and obstacle-avoidance steering.\n\nVersion 1.8.2 updates its configured rays, asks the detector for each hit and retains the nearest hit to the owner. It constructs a target using the hit normal multiplied by the owner’s bounding radius plus distanceFromBoundary, then normalises the offset to maximum acceleration. No hit produces zero steering, so another behaviour must supply travel. The source discusses corner trapping and alternative ray configurations.\n\nREFERENCES\nAI for Games, third edition · Chapter 3 Movement, §3.3.15 Obstacle and Wall Avoidance\n\nThe book covers this topic at Chapter 3, §3.3.15; no claim is made about its unread text.\n\ngdx-ai 1.8.2 · RaycastObstacleAvoidance.java\n\nConfigurable rays, nearest-hit selection, normal-offset target construction and acceleration towards that target; its commentary identifies corner trapping.\n\nNEARBY CONCEPTS\nCorner trap\nReach for Corner trap when adjacent faces make ray-selected targets alternate and the character cannot free itself.\nRay configurations\nRay configurations is the next choice when one centre feeler misses edges or needs side coverage in a passage.\nCollision detector interface\nThe Collision detector interface separates geometry from steering when several obstacle shapes must provide consistent hit points and normals.\nSeek\nSeek is the actual motor used here once a ray hit has supplied a temporary target.\nCollision avoidance\nCollision avoidance predicts another moving centre’s closest approach; use it for moving characters rather than a static surface normal.\n\nNext study: Corner trap\n\nReviewed by Codex gpt-6.1-sol, factual critic, Codex gpt-6.1-sol, reading critic. This study is separate from the mined definition above: it was written for this page in its author's own words, from the sources it names, and it does not reproduce the book's text.",
+   "oneUnitSmallest": {
+    "step": 29,
+    "label": "At 2.90 s the courier is at (9.31, 6.61) with radius 1, velocity (2.90, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.31, 6.61) to (10.04, 7.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.08 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+   },
+   "tenUnitSmallest": {
+    "step": 39,
+    "label": "At 3.90 s the courier is at (9.80, 6.17) with radius 1, velocity (2.68, 2.97) units/s and acceleration (5.44, 5.86) units/s²; its ray runs from (9.80, 6.17) to (16.51, 13.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.74 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+   },
+   "tenUnitLimits": [
+    "A longer ray is not automatically safer. Across the offered lengths from 10 to 12, the greatest body overlap in this setup is 0.74 units. These rays hit from the start and can pull towards a target still ahead before braking. A shorter ray of length 1 supplies the comparison; neither length guarantees collision-free motion.",
+    "There is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning."
+   ]
+  },
+  {
+   "viewport": {
+    "width": 3840,
+    "height": 1620
+   },
+   "screenshots": {
+    "arrival": {
+     "path": "3840x1620-arrival.png",
+     "sha256": "85ed5f709f1c42d2aa5973a5d8310f22c54f64fe3581ffea12b368e15324e316"
+    },
+    "comparison": {
+     "path": "3840x1620-comparison.png",
+     "sha256": "198bcb7c3e78c518cd32e4dd0d75c3779d4c41e5e58951f0d660c5f8c315720e"
+    },
+    "oneUnitSmallest": {
+     "path": "3840x1620-one-unit-ray-smallest.png",
+     "sha256": "8b4d2a253e86c8ffb6def1015ac877cff24b3b2c2eb08994101c36ea5857dcc2"
+    },
+    "tenUnitSmallest": {
+     "path": "3840x1620-ten-unit-ray-smallest.png",
+     "sha256": "14af69bc3a0bf523c099da1690c067f66e8470c251605cb606f6dab61267a8ca"
+    }
+   },
+   "errors": [],
+   "failures": [],
+   "arrivalStep": 5,
+   "momentButtons": [
+    "Movement",
+    "Chart",
+    "Step back",
+    "Step forward",
+    "Ray first hits",
+    "Ray misses again",
+    "Smallest clearance",
+    "End of run",
+    "Back to the example",
+    "Show this moment in the diagram"
+   ],
+   "moments": [
+    {
+     "name": "Ray first hits",
+     "step": 5,
+     "label": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+     "screenshot": {
+      "path": "3840x1620-moment-5.png",
+      "sha256": "569f302515a25dcc4663ffb5fd6f594128d385578b24d0efbb71e28a84a30cb7"
+     }
+    },
+    {
+     "name": "Ray misses again",
+     "step": 7,
+     "label": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "3840x1620-moment-7.png",
+      "sha256": "fa7098659675ed9a489a0ab137d0e2a466545cce814806664b2546d525d0b764"
+     }
+    },
+    {
+     "name": "Smallest clearance",
+     "step": 29,
+     "label": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "3840x1620-moment-29.png",
+      "sha256": "284cdebde342b27386cb2329fee59f9fba8614c41151c49d7d565f68a3386e09"
+     }
+    },
+    {
+     "name": "End of run",
+     "step": 80,
+     "label": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+     "screenshot": {
+      "path": "3840x1620-moment-80.png",
+      "sha256": "c848ee0ca0906bbbd519734945f379854296ffe910e944001b84d183a9bcb3a7"
+     }
+    }
+   ],
+   "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+   "oneUnitSmallest": {
+    "step": 29,
+    "label": "At 2.90 s the courier is at (9.31, 6.61) with radius 1, velocity (2.90, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.31, 6.61) to (10.04, 7.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.08 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+   },
+   "tenUnitSmallest": {
+    "step": 39,
+    "label": "At 3.90 s the courier is at (9.80, 6.17) with radius 1, velocity (2.68, 2.97) units/s and acceleration (5.44, 5.86) units/s²; its ray runs from (9.80, 6.17) to (16.51, 13.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.74 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+   },
+   "tenUnitLimits": [
+    "A longer ray is not automatically safer. Across the offered lengths from 10 to 12, the greatest body overlap in this setup is 0.74 units. These rays hit from the start and can pull towards a target still ahead before braking. A shorter ray of length 1 supplies the comparison; neither length guarantees collision-free motion.",
+    "There is no wall clamp or collision response. In the default example, the shorter ray clips the wall slightly, and the longer ray gives a small clearance correction; the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning."
+   ]
+  }
+ ],
+ "finishedAt": "2026-11-07T00:56:47.162Z"
+}

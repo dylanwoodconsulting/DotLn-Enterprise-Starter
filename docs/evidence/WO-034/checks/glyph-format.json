@@ -1,0 +1,12 @@
+{
+  "command": "npx",
+  "args": [
+    "prettier",
+    "--write",
+    "apps/dotln-e2e/src/movement-labels.spec.ts"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T22:45:56.848Z",
+  "finishedAt": "2026-11-06T22:45:57.902Z",
+  "exitCode": 0
+}

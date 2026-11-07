@@ -1,0 +1,207 @@
+[
+  {
+    "key": "studyAifg.align.model.worked.desiredAngularVelocitySign",
+    "from": "calculationError2",
+    "to": "absoluteError"
+  },
+  {
+    "key": "studyAifg.align.model.worked.workedTurn",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.arrive.model.worked.workedStepSeconds",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.face.model.worked.desiredAngularVelocitySign",
+    "from": "alignmentError2",
+    "to": "absoluteError"
+  },
+  {
+    "key": "studyAifg.face.model.worked.workedFacingStep",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.centreOffsetLengthDesired",
+    "from": "desired",
+    "to": "desiredSpeed"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.centreOffsetLengthDesired",
+    "from": "desired2",
+    "to": "desiredVelocity"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.weightOutputsClipSum",
+    "from": "contributions",
+    "to": "separationContribution"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.weightOutputsClipSum",
+    "from": "contributions2",
+    "to": "cohesionContribution"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.weightOutputsClipSum",
+    "from": "contributions3",
+    "to": "alignmentContribution"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.weightOutputsClipSum",
+    "from": "contributions4",
+    "to": "cruiseContribution"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.gapStrengthAway",
+    "from": "pMaxAcceleration2",
+    "to": "separationStrength"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.maraSeconds",
+    "from": "step",
+    "to": "seconds"
+  },
+  {
+    "key": "studyAifg.flocking.model.worked.maraSeconds",
+    "from": "step2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.group-movement.model.worked.updateVelocityCappedX",
+    "from": "velocityX2",
+    "to": "nextVelocityX"
+  },
+  {
+    "key": "studyAifg.group-movement.model.worked.updateVelocityCappedX",
+    "from": "positionX2",
+    "to": "nextPositionX"
+  },
+  {
+    "key": "studyAifg.group-movement.model.worked.initialAnchorCruiseRequest",
+    "from": "exampleAnchorSpeed2",
+    "to": "planningSpeed"
+  },
+  {
+    "key": "studyAifg.group-movement.model.worked.medicStep",
+    "from": "step",
+    "to": "seconds"
+  },
+  {
+    "key": "studyAifg.group-movement.model.worked.medicStep",
+    "from": "step2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.group-movement.model.comparison.selectedPeakGapComparison",
+    "from": "seconds2",
+    "to": "comparedPeakSeconds"
+  },
+  {
+    "key": "studyAifg.making-the-creatures.model.worked.fernSeconds",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.pursue.model.worked.workedStepSeconds",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.pursue.model.worked.engineSeek",
+    "from": "offset2",
+    "to": "distance"
+  },
+  {
+    "key": "studyAifg.scalable-formations.model.comparison.firstFailedProposalScouts",
+    "from": "failedWidth2",
+    "to": "excessWidth"
+  },
+  {
+    "key": "studyAifg.seek.model.worked.workedStepSeconds",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.separation.model.worked.miraXVelocityAfter",
+    "from": "velocityX2",
+    "to": "nextVelocityX"
+  },
+  {
+    "key": "studyAifg.separation.model.worked.miraXPositionRowan",
+    "from": "positionX2",
+    "to": "nextPositionX"
+  },
+  {
+    "key": "studyAifg.separation.model.comparison.comparisonPairFirstOverlaps",
+    "from": "seconds",
+    "to": "firstOverlapSeconds"
+  },
+  {
+    "key": "studyAifg.separation.model.comparison.comparisonPairFirstOverlaps",
+    "from": "fastGaps",
+    "to": "firstOverlapGap"
+  },
+  {
+    "key": "studyAifg.separation.model.comparison.comparisonPairFirstOverlaps",
+    "from": "fastGaps2",
+    "to": "closestGap"
+  },
+  {
+    "key": "studyAifg.separation.model.comparison.comparisonPairFirstOverlaps",
+    "from": "seconds2",
+    "to": "closestSeconds"
+  },
+  {
+    "key": "studyAifg.steering-pipeline.model.worked.pipelineUpdate",
+    "from": "step",
+    "to": "seconds"
+  },
+  {
+    "key": "studyAifg.steering-pipeline.model.worked.pipelineUpdate",
+    "from": "step2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.two-level-formation-steering.model.worked.engineLimitsChangePlanning",
+    "from": "exampleAnchorAcceleration2",
+    "to": "maximumVelocityChange"
+  },
+  {
+    "key": "studyAifg.two-level-formation-steering.model.worked.escortUpdate",
+    "from": "seconds2",
+    "to": "nextSeconds"
+  },
+  {
+    "key": "studyAifg.two-level-formation-steering.model.comparison.tightAnchorLooseAnchor",
+    "from": "formationAnchor2",
+    "to": "looseAnchor"
+  },
+  {
+    "key": "studyAifg.velocity-matching.model.comparison.referenceRunEndsSuccessive",
+    "from": "tail",
+    "to": "penultimateVelocity"
+  },
+  {
+    "key": "studyAifg.velocity-matching.model.comparison.referenceRunEndsSuccessive",
+    "from": "tail2",
+    "to": "finalVelocity"
+  },
+  {
+    "key": "studyAifg.wander.model.worked.engineWalkingSpeedPoint",
+    "from": "exampleMaxSpeed2",
+    "to": "walkingSpeed"
+  },
+  {
+    "key": "studyAifg.weighted-blending.model.worked.linearStrengthPointingAway",
+    "from": "calculationSeparationRequest",
+    "to": "separationStrength"
+  },
+  {
+    "key": "studyAifg.weighted-blending.model.worked.linearStrengthPointingAway",
+    "from": "calculationSeparationRequest2",
+    "to": "separationRequest"
+  }
+]

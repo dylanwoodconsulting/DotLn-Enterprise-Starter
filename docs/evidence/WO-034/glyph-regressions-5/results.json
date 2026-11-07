@@ -1,0 +1,28 @@
+[
+  {
+    "name": "base",
+    "exitCode": 1,
+    "stats": {
+      "startTime": "2026-11-06T23:17:10.801Z",
+      "duration": 1813.058,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "report": "base.json"
+  },
+  {
+    "name": "candidate",
+    "exitCode": 0,
+    "stats": {
+      "startTime": "2026-11-06T23:17:12.877Z",
+      "duration": 1028.419,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report": "candidate.json"
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "capturedAt": "2026-11-06T22:46:20.639Z",
+  "recordId": "aifg-a:137",
+  "results": [
+    {
+      "viewport": {
+        "width": 2080,
+        "height": 1460
+      },
+      "moments": [
+        {
+          "name": "Ray first hits",
+          "step": 5,
+          "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+          "screenshot": {
+            "path": "2080x1460-selected-5.png",
+            "sha256": "e1cebd19312bb889df1368063e77e8938e565285d336a04160b3a89fbea02324"
+          }
+        },
+        {
+          "name": "Ray misses again",
+          "step": 7,
+          "text": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "2080x1460-selected-7.png",
+            "sha256": "b1d4f100f0ab18ae075fa32e551648f5d4d8c40249a250843e596eedfe5d2302"
+          }
+        },
+        {
+          "name": "Smallest clearance",
+          "step": 29,
+          "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "2080x1460-selected-29.png",
+            "sha256": "dfa19062bb4b991637ae02d9e748fd5d8988c09687a7aa7f90f16726fb53e350"
+          }
+        },
+        {
+          "name": "End of run",
+          "step": 80,
+          "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "2080x1460-selected-80.png",
+            "sha256": "5a40b45f75d0abbe53ecc6fe80172eb74349c5549865075b8e6cf826d43cb6c9"
+          }
+        }
+      ],
+      "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. The default short-ray run clips the wall slightly; the selected ray changes that clearance, but the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+      "comparisonScreenshot": {
+        "path": "2080x1460-comparison.png",
+        "sha256": "d6a68ed216c6477f9ee2ac640e6a06ae90d8f792ec40f8f14bbb5552b4537db9"
+      },
+      "shortRay": {
+        "step": 29,
+        "text": "At 2.90 s the courier is at (9.31, 6.61) with radius 1, velocity (2.90, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.31, 6.61) to (10.04, 7.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.08 units: The courier disc reaches through the wall; steering has no collision response to repair it.",
+        "screenshot": {
+          "path": "2080x1460-one-unit-ray.png",
+          "sha256": "d35c817fa9fcfbad4ba2ab9180957de825a1a1502e463e3e5517e9f142cf0c4f"
+        }
+      },
+      "halfUnitComparison": "COMPARE RAY LENGTHS\n\nChange only the ray length from 0.5 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4\n8.08\n12.16\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 0.5\nRay length 1\n\nMinimum body clearance is -0.08 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 0 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 0.00 degrees.\n\nThere is no wall clamp or collision response. The default short-ray run clips the wall slightly; the selected ray changes that clearance, but the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+      "longRay": {
+        "step": 39,
+        "text": "At 3.90 s the courier is at (9.80, 6.17) with radius 1, velocity (2.68, 2.97) units/s and acceleration (5.44, 5.86) units/s²; its ray runs from (9.80, 6.17) to (16.51, 13.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.74 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+      },
+      "errors": [],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "width": 3840,
+        "height": 1620
+      },
+      "moments": [
+        {
+          "name": "Ray first hits",
+          "step": 5,
+          "text": "At 0.50 s the courier is at (1.91, 0.54) with radius 1, velocity (3.65, 1.63) units/s and acceleration (4.01, 6.92) units/s²; its ray runs from (1.91, 0.54) to (10.13, 4.21) against the wall from (10.00, -6.00) to (10.00, 6.00), with hit at (10.00, 4.15), normal (-1.00, 0.00), avoidance target (4.00, 4.15) and selected target (4.00, 4.15); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 7.09 units: The ray hits; Seek pulls towards the offset target, which can still lie ahead of the courier.",
+          "screenshot": {
+            "path": "3840x1620-selected-5.png",
+            "sha256": "569f302515a25dcc4663ffb5fd6f594128d385578b24d0efbb71e28a84a30cb7"
+          }
+        },
+        {
+          "name": "Ray misses again",
+          "step": 7,
+          "text": "At 0.70 s the courier is at (2.58, 0.98) with radius 1, velocity (3.24, 2.35) units/s and acceleration (5.92, 5.38) units/s²; its ray runs from (2.58, 0.98) to (9.86, 6.27) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 6.42 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "3840x1620-selected-7.png",
+            "sha256": "fa7098659675ed9a489a0ab137d0e2a466545cce814806664b2546d525d0b764"
+          }
+        },
+        {
+          "name": "Smallest clearance",
+          "step": 29,
+          "text": "At 2.90 s the courier is at (9.20, 6.78) with radius 1, velocity (2.93, 2.72) units/s and acceleration (5.85, 5.46) units/s²; its ray runs from (9.20, 6.78) to (15.79, 12.90) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 0.12 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "3840x1620-selected-29.png",
+            "sha256": "284cdebde342b27386cb2329fee59f9fba8614c41151c49d7d565f68a3386e09"
+          }
+        },
+        {
+          "name": "End of run",
+          "step": 80,
+          "text": "At 8.00 s the courier is at (18.26, 15.24) with radius 1, velocity (2.91, 2.74) units/s and acceleration (-5.83, -5.48) units/s²; its ray runs from (18.26, 15.24) to (24.81, 21.41) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is 11.39 units: The forward segment misses the wall, so the courier seeks the delivery point.",
+          "screenshot": {
+            "path": "3840x1620-selected-80.png",
+            "sha256": "c848ee0ca0906bbbd519734945f379854296ffe910e944001b84d183a9bcb3a7"
+          }
+        }
+      ],
+      "comparisonText": "COMPARE RAY LENGTHS\n\nChange only the ray length from 9 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4.01\n8.1\n12.19\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 9\nRay length 1\n\nMinimum body clearance is 0.12 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 2 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 6.47 degrees.\n\nThere is no wall clamp or collision response. The default short-ray run clips the wall slightly; the selected ray changes that clearance, but the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+      "comparisonScreenshot": {
+        "path": "3840x1620-comparison.png",
+        "sha256": "aa1098e0c8b4d230f48b5b2566a695e04beb80a2c4d66858c24fe5f4687d0639"
+      },
+      "shortRay": {
+        "step": 29,
+        "text": "At 2.90 s the courier is at (9.31, 6.61) with radius 1, velocity (2.90, 2.76) units/s and acceleration (5.75, 5.56) units/s²; its ray runs from (9.31, 6.61) to (10.04, 7.30) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.08 units: The courier disc reaches through the wall; steering has no collision response to repair it.",
+        "screenshot": {
+          "path": "3840x1620-one-unit-ray.png",
+          "sha256": "8b4d2a253e86c8ffb6def1015ac877cff24b3b2c2eb08994101c36ea5857dcc2"
+        }
+      },
+      "halfUnitComparison": "COMPARE RAY LENGTHS\n\nChange only the ray length from 0.5 to 1. Keep the same initial motion, delivery point, radius, normal offset, speed and acceleration. In the default example the short ray never hits, so its curve shows Seek without an avoidance pull.\n\nThe same setup with the comparison ray\n\nDistance to wall − radius (units)\n-0.08\n4\n8.08\n12.16\n0\n2.67\n5.33\n8\nTime (s)\n\nRay length 0.5\nRay length 1\n\nMinimum body clearance is -0.08 units with the selected ray and -0.08 units with the comparison ray. A negative clearance is body overlap.\n\nThe selected ray hits on 0 of 81 frames; the comparison ray hits on 0. The greatest heading difference is 0.00 degrees.\n\nThere is no wall clamp or collision response. The default short-ray run clips the wall slightly; the selected ray changes that clearance, but the offset delivery supplies most of the turn. Use the ray-length control to step through either trace in the drawing. A centre ray can miss a wall end that the body clips; this is not route planning.",
+      "longRay": {
+        "step": 39,
+        "text": "At 3.90 s the courier is at (9.80, 6.17) with radius 1, velocity (2.68, 2.97) units/s and acceleration (5.44, 5.86) units/s²; its ray runs from (9.80, 6.17) to (16.51, 13.58) against the wall from (10.00, -6.00) to (10.00, 6.00), with no hit, normal none, avoidance target none and selected target (18.00, 15.00); delivery remains at (18.00, 15.00), and body clearance from the finite wall is -0.74 units: The courier disc reaches through the wall; steering has no collision response to repair it."
+      },
+      "errors": [],
+      "failures": []
+    }
+  ]
+}

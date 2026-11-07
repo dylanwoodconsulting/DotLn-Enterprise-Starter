@@ -1,0 +1,62 @@
+{
+  "sourceSha256": "6dee30fffae71e038f92369144cda58dd574504af2ebf3ac6e7bf8eae4106ee9",
+  "results": [
+    {
+      "name": "candidate",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/studies/study-models.spec.ts",
+        "-t",
+        "routes visible narration"
+      ],
+      "subject": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+      "injected": false,
+      "exitCode": 0,
+      "guardFailed": false,
+      "met": true,
+      "log": "candidate.log"
+    },
+    {
+      "name": "appended-literal",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/studies/study-models.spec.ts",
+        "-t",
+        "routes visible narration"
+      ],
+      "subject": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+      "injected": true,
+      "exitCode": 1,
+      "guardFailed": true,
+      "met": true,
+      "log": "appended-literal.log"
+    },
+    {
+      "name": "literal-parameter",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/studies/study-models.spec.ts",
+        "-t",
+        "routes visible narration"
+      ],
+      "subject": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+      "injected": true,
+      "exitCode": 1,
+      "guardFailed": true,
+      "met": true,
+      "log": "literal-parameter.log"
+    }
+  ]
+}

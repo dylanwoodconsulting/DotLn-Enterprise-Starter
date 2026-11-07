@@ -1,0 +1,149 @@
+✔ the board imports no process or platform control API (35.213292ms)
+✔ markers use each file type’s leading comment token and count once per line (4.866375ms)
+✔ multiline strings and comment bodies cannot manufacture markers (1.477584ms)
+✔ the gauge covers tracked tools, workflows and styles but excludes docs, dependencies and untracked files (56.673208ms)
+✔ script comments before closing delimiters count, including empty blocks (1.237334ms)
+✔ quotes inside YAML plain scalars do not swallow following comments (0.139291ms)
+✔ HTML raw-text and RCDATA elements keep apparent comments as literal content (0.115916ms)
+✔ YAML adjacent quoted flow-map values retain the real marker locations (0.070458ms)
+✔ HTML custom-element names are not raw-text tag names (0.0605ms)
+✔ fixture CLI failures withhold raw JSON and filesystem paths (292.167125ms)
+✔ scrubbing replaces only the launchpad root and never reports private values (1.0885ms)
+✔ the pinned schema rejects invalid versions, states and missing provenance (41.512208ms)
+✔ route-only code stays lazy while the menu arrives with its route (1.383208ms)
+✔ transitive menu and catalog data leaks fail even when an output is small (0.306667ms)
+✔ direct vendor menu and overlay imports cannot bypass the lazy-route guard (0.168375ms)
+✔ deferring the menu again, missing metadata and static cycles are handled explicitly (0.113792ms)
+✔ the join keeps full prose, resolves only a unique same-work title and never writes its source (187.595583ms)
+✔ a malformed map row stops the join with its file and line (92.911791ms)
+✔ a changed last source digest stops the join before any destination is replaced (79.949166ms)
+✔ verification keeps partial and model-knowledge distinctions (0.114542ms)
+✔ join diagnostics identify the declared file and operation without echoing input or paths (125.474625ms)
+✔ the missing-definition fixture fails and a full reading row passes (224.257916ms)
+✔ diagnostics identify safe schema locations and never print untrusted values or keys (0.335792ms)
+✔ tool schema pairs provenance, status and faces and rejects extra nested fields (1.080875ms)
+✔ checkpoint validation refuses omissions, duplicate lines, invalid ids, wrong digests and absolute paths (0.910042ms)
+✔ a stored verification kind must be the one its note implies (0.195209ms)
+✔ the full catalog refuses a dangling relation and a relation to the same concept (78.057125ms)
+✔ a partial read ignores hidden files and refuses unexpected data files (1.142833ms)
+✔ script reference passes on an unmodified candidate copy (82.807917ms)
+ℹ PASS script reference: 32 npm scripts; 17 files
+✔ expected failure: removing the npm run boards row fails even when prose still names it (46.238042ms)
+ℹ Expected failure: Undocumented scripts: npm run boards
+✔ expected failure: adding a row for npm run removed:check fails (49.023584ms)
+ℹ Expected failure: Stale script rows: npm run removed:check
+✔ script file rows must cover existing direct modules and cannot name removed files (59.905916ms)
+✔ each hygiene fixture fails independently through the CLI (549.004417ms)
+✔ reads a dispatch outside stores and facades, including aliased groups and injectDispatch (10.047167ms)
+Unable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+✔ Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+✔ Checking for missing keys ✨
+
+🎉 No missing keys were found 🎉
+
+
+
+Unable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+✔ Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+✔ Checking for missing keys ✨
+✔ [4mSummary[0m
+
+[37m┌───────────[39m[37m┬──────────────[39m[37m┬──────────────┐[39m
+[37m│[39m[31m File Name [39m[37m│[39m[31m Missing Keys [39m[37m│[39m[31m Extra Keys   [39m[37m│[39m
+[37m├───────────[39m[37m┼──────────────[39m[37m┼──────────────┤[39m
+[37m│[39m en        [37m│[39m 'home.title' [37m│[39m 'home.other' [37m│[39m
+[37m└───────────[39m[37m┴──────────────[39m[37m┴──────────────┘[39m
+Unable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+✔ Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+✔ Checking for missing keys ✨
+✔ [4mSummary[0m
+
+[37m┌───────────[39m[37m┬──────────────[39m[37m┬──────────────┐[39m
+[37m│[39m[31m File Name [39m[37m│[39m[31m Missing Keys [39m[37m│[39m[31m Extra Keys   [39m[37m│[39m
+[37m├───────────[39m[37m┼──────────────[39m[37m┼──────────────┤[39m
+[37m│[39m en        [37m│[39m --           [37m│[39m 'home.extra' [37m│[39m
+[37m└───────────[39m[37m┴──────────────[39m[37m┴──────────────┘[39m
+✔ the three checks reject their independent negative fixtures (26.008208ms)
+✔ template inspection covers multiline text, interpolation literals and accessible labels (6.31ms)
+✔ template discovery inspects component templates and leaves standalone HTML alone (12.821042ms)
+✔ the pipe adapter changes AST pipe names, leaving literal key contents intact (0.231333ms)
+✔ token inspection handles aliases, multiline constructors and nested generics (0.706666ms)
+✔ a locally forged kit name does not satisfy the spec-kit check (1.671334ms)
+✔ kit aliases resolve within their lexical scope in either test order (8.873917ms)
+✔ filter curries an omitted collection and rejects an explicit undefined collection (298.610875ms)
+✔ environment priming parses false, rejects invalid settings and keeps values out of diagnostics (0.577667ms)
+✔ priming writes typed local configuration and an isolated proxy, honoring named overrides (5.501958ms)
+✔ the real Transloco find command observes house-pipe missing and extra keys without modifying translations (1272.007917ms)
+✔ the Tools testing translations equal the app catalog’s tools block (2.826458ms)
+✔ the Scene testing translations equal the app catalog’s scene block (1.115333ms)
+✔ model specs use exactly the lazy study message catalogs served by the app (22.197958ms)
+✔ a supported shortcode or emoji and an untyped subject stays as written (1.869125ms)
+✔ a bare subject without a gitmoji or conventional type is refused (0.146125ms)
+✔ every supported conventional type gains its gitmoji exactly once (0.17375ms)
+✔ malformed titles are rejected before any remote operation (0.0835ms)
+✔ a stale event decorates the current title and passes its text as one literal argument (0.479834ms)
+✔ a rerun leaves an already decorated current title unchanged (0.116333ms)
+✔ the workflow leaves a current gitmoji-and-subject title unchanged (0.059125ms)
+✔ invalid identity or a failed current-title lookup cannot trigger an edit (0.156208ms)
+✔ a prefix that no longer matches the title type is replaced (0.075541ms)
+✔ a rerun replaces the prefix of a decorated title whose type changed (0.10275ms)
+PASS scene-twenty.json: scene-v0 schema
+PASS cost-table.json: scene-v0 schema
+PASS trial-known-outcome.json: scene-v0 schema
+✔ the committed scene fixtures pass (36.46425ms)
+✔ the schema refuses a scene that is not twenty units (13.779958ms)
+✔ the schema refuses an unknown field and a role outside the label sets (12.482584ms)
+✔ a wrong role count, a repeated id and an overlap are each named (0.445459ms)
+✔ the study-unknown-id fixture fails the check (284.812417ms)
+✔ the study-reference-without-supports fixture fails the check (268.730792ms)
+✔ the study-draft fixture fails the check (260.835875ms)
+✔ a named file that does not parse is a schema problem, not a crash (260.290334ms)
+✔ a complete checked record passes, and a null representation stays legal (2.360625ms)
+✔ the required parts are refused when empty or absent (0.61675ms)
+✔ a reference needs an ISO date and an https address (0.179834ms)
+✔ the catalog decides whether an id, its work and each nearby id are real (0.191458ms)
+✔ a checked record names two different reviewers (0.131459ms)
+✔ a model or executable module exists with a spec beside it (1.0965ms)
+✔ an executable RxJS reading shows the code its module runs, whitespace and trailing commas aside (1.513542ms)
+✔ an executable RxJS reading’s spec runs the example through expectMarbleExample (1.08425ms)
+✔ a marbles drawing reads the executable module, and an RxJS reading that runs nowhere says so (1.5015ms)
+✔ a flow drawn over an executable example reads its module, and a messaging reading that runs nowhere says so (1.372917ms)
+✔ the ordinary pseudocode has one blank-line block per mechanism step (0.160209ms)
+✔ a stale summary fails until --write-summary rewrites it (99.38275ms)
+✔ a repeated slug or id, a misplaced file and a chunk that misses a record all fail (33.03325ms)
+✔ a record imported but not exported by its chunk fails, because it could never load (26.6605ms)
+✔ a commented-out export or import stands for nothing in a chunk (29.397958ms)
+✔ a type-only import brings no record into a chunk, and a record loads from its own work (47.048042ms)
+✔ a record that is malformed or does not parse is reported, and nothing is written (46.464167ms)
+✔ the summary sorts a work by source line, and coverage counts every work (0.338708ms)
+✔ the link check lists each cited address once, with the studies that cite it (0.11125ms)
+✔ the first movement batch keeps every concept its order names (3.67875ms)
+✔ the second movement batch adds exactly its twenty concepts beside the first batch (2.493916ms)
+✔ the RxJS batch is exactly the concepts its order names (1.995625ms)
+✔ the messaging batch is exactly the patterns its order names, and the stream patterns run (2.509834ms)
+✔ the workspace check runs inside check:fixtures and the committed records pass it (297.528708ms)
+✔ the presentation check rejects literal labels, indirect prose, and conditional templates (6.986167ms)
+✔ message lookup fails closed and current study checks inspect translated prose (7.980916ms)
+ℹ tests 92
+ℹ suites 0
+ℹ pass 92
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2034.900125

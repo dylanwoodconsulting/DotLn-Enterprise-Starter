@@ -1,0 +1,100 @@
+{
+ "ranAt": "2026-11-07T01:32:49.375Z",
+ "viewport": "2080x1460",
+ "results": [
+  {
+   "build": "base",
+   "defaultFrame29": {
+    "name": {
+     "x": 207,
+     "y": 271,
+     "width": 53
+    },
+    "linesThroughName": [
+     "link"
+    ]
+   },
+   "rayTenFrame39": {
+    "name": {
+     "x": 261,
+     "y": 215,
+     "width": 53
+    },
+    "linesThroughName": [
+     "link"
+    ]
+   },
+   "straightAheadMoments": [
+    {
+     "label": "Step back",
+     "step": 38
+    },
+    {
+     "label": "Step forward",
+     "step": 39
+    },
+    {
+     "label": "Ray first hits",
+     "step": 3
+    },
+    {
+     "label": "Smallest clearance",
+     "step": 15
+    },
+    {
+     "label": "End of run",
+     "step": 80
+    }
+   ]
+  },
+  {
+   "build": "candidate",
+   "defaultFrame29": {
+    "name": {
+     "x": 207,
+     "y": 271,
+     "width": 53
+    },
+    "linesThroughName": [
+     "link"
+    ]
+   },
+   "rayTenFrame39": {
+    "name": {
+     "x": 261,
+     "y": 215,
+     "width": 53
+    },
+    "linesThroughName": [
+     "link"
+    ]
+   },
+   "straightAheadMoments": [
+    {
+     "label": "Step back",
+     "step": 38
+    },
+    {
+     "label": "Step forward",
+     "step": 39
+    },
+    {
+     "label": "Ray first hits",
+     "step": 3
+    },
+    {
+     "label": "Ray misses again",
+     "step": 17
+    },
+    {
+     "label": "Smallest clearance",
+     "step": 15
+    },
+    {
+     "label": "End of run",
+     "step": 80
+    }
+   ]
+  }
+ ]
+}

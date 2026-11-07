@@ -1,0 +1,7 @@
+
+> @dotln-angular/source@0.0.0 typecheck:e2e
+> tsc --noEmit -p apps/dotln-e2e/tsconfig.json
+
+apps/dotln-e2e/src/movement-labels.spec.ts(104,30): error TS2550: Property 'toSorted' does not exist on type '{ x: number; y: number; width: number; height: number; }[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2023' or later.
+apps/dotln-e2e/src/movement-labels.spec.ts(104,40): error TS7006: Parameter 'a' implicitly has an 'any' type.
+apps/dotln-e2e/src/movement-labels.spec.ts(104,43): error TS7006: Parameter 'b' implicitly has an 'any' type.

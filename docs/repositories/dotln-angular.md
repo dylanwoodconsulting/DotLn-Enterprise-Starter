@@ -339,6 +339,7 @@ relations, hooks and verification notes, across six works.
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
 | The visual families, `motion`, `timeline`, `marbles` and `flow`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
 | The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/eip/`, `libs/features/tools/src/lib/studies/study-models.ts` |
+| Movement presentation descriptions and number formatting | `libs/features/tools/src/lib/studies/movement/presentation.ts`, `libs/features/tools/src/lib/studies/number-format.ts`; each first-batch `*.presentation.ts` describes its own run and frames |
 | The flow builders: `flowModel` for a flow written step by step, `flowFromMarbles` for one drawn from a marble example that runs | `libs/features/tools/src/lib/studies/flow.ts` |
 | The executable marble examples, their specs, and the contract and spec helper they share | `libs/features/tools/src/lib/studies/rxjs/` and `libs/features/tools/src/lib/studies/eip/`, with `marbles.ts` and `marble-testing.ts` beside the RxJS examples |
 | Menu composition | `libs/shared/ui/menu/`, imported as `@dotln-angular/ui/menu` |

@@ -1,0 +1,1123 @@
+
+ NX   Running targets lint, test for 20 projects:
+
+- board-data-access
+- scene-data-access
+- scene-engine
+- data-access
+- machinery
+- board
+- catalog
+- scene
+- tools
+- events
+- models
+- state
+- utils
+- core
+- dotln-shell
+- i18n
+- dotln-e2e
+- ui
+- dotln
+- workspace-tools
+
+
+
+> nx run models:lint
+
+(node:15382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "models"...
+
+✔ All files pass linting
+
+
+> nx run models:test
+
+(node:17343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+(node:17677) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> nx run utils:lint
+
+(node:17729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "utils"...
+
+✔ All files pass linting
+
+
+> nx run utils:test
+
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/utils
+
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |utils| src/lib/public-api.spec.ts (1 test) 5ms
+ ✓ |utils| src/lib/upstream-specs/pipe.spec.ts (1 test) 5ms
+ ✓ |utils| src/lib/upstream-specs/map.spec.ts (1 test) 5ms
+ ✓ |utils| src/lib/upstream-specs/filter.spec.ts (6 tests) 6ms
+ ✓ |utils| src/lib/upstream-specs/is-non-empty-string.spec.ts (16 tests) 8ms
+
+ Test Files  5 passed (5)
+      Tests  25 passed (25)
+   Start at  17:42:20
+   Duration  977ms (environment 57%, import 20%, setup 18%, worker 4%, tests 1%)
+
+
+> nx run i18n:lint
+
+(node:21874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "i18n"...
+
+✔ All files pass linting
+
+
+> nx run i18n:test
+
+(node:22264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/i18n
+
+(node:22264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |i18n| src/lib/message-catalog.spec.ts (1 test) 16ms
+ ✓ |i18n| src/lib/i18n.spec.ts (8 tests) 39ms
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  17:42:24
+   Duration  534ms (environment 55%, setup 28%, worker 6%, tests 6%, import 5%)
+
+
+> nx run scene-engine:lint
+
+(node:22584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "scene-engine"...
+
+✔ All files pass linting
+
+
+> nx run scene-engine:test
+
+(node:22892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+(node:22929) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23035) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> nx run events:lint
+
+(node:23121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "events"...
+
+✔ All files pass linting
+
+
+> nx run events:test
+
+(node:23984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/events
+
+(node:23984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |events| src/lib/events.spec.ts (1 test) 4ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  17:42:30
+   Duration  467ms (environment 61%, setup 29%, worker 7%, import 2%, tests 1%)
+
+
+> nx run core:lint
+
+(node:24219) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "core"...
+
+✔ All files pass linting
+
+
+> nx run core:test
+
+(node:24395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/core
+
+(node:24395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |core| src/lib/paths/routes.spec.ts (3 tests) 6ms
+ ✓ |core| src/lib/core.spec.ts (10 tests) 24ms
+
+ Test Files  2 passed (2)
+      Tests  13 passed (13)
+   Start at  17:42:34
+   Duration  566ms (environment 51%, setup 26%, import 15%, worker 6%, tests 3%)
+
+
+> nx run data-access:lint
+
+(node:24602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "data-access"...
+
+✔ All files pass linting
+
+
+> nx run data-access:test
+
+(node:24844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/data-access
+
+(node:24844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24844) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |data-access| src/lib/start-mocks.spec.ts (5 tests) 17ms
+stderr | src/lib/data-access.spec.ts > HTTP interceptors > refuses an unhandled request that a live server would answer
+[MSW] Error: intercepted a request without a matching request handler:
+
+  • GET http://127.0.0.1:52335/no-handler
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/http/intercepting-requests
+
+ ✓ |data-access| src/lib/data-access.spec.ts (15 tests) 78ms
+
+ Test Files  2 passed (2)
+      Tests  20 passed (20)
+   Start at  17:42:38
+   Duration  638ms (environment 50%, setup 25%, import 11%, tests 9%, worker 6%)
+
+
+> nx run ui:lint
+
+(node:25578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "ui"...
+
+✔ All files pass linting
+
+
+> nx run ui:test
+
+(node:26764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/ui
+
+(node:26764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |ui| src/lib/wrappers/tabs/tabs.spec.ts (1 test) 106ms
+ ✓ |ui| src/lib/templates/button/button.spec.ts (6 tests) 112ms
+ ✓ |ui| src/lib/templates/card/card.spec.ts (1 test) 27ms
+ ✓ |ui| src/lib/wrappers/dialog/dialog.spec.ts (1 test) 39ms
+ ✓ |ui| src/lib/composites/key-value-list/key-value-list.spec.ts (1 test) 31ms
+ ✓ |ui| src/lib/composites/filter-menu/filter-menu.spec.ts (1 test) 36ms
+ ✓ |ui| src/lib/composites/page-header/page-header.spec.ts (1 test) 36ms
+ ✓ |ui| src/lib/wrappers/menu/menu.spec.ts (1 test) 32ms
+ ✓ |ui| src/lib/fragments/badge/badge.spec.ts (1 test) 29ms
+ ✓ |ui| src/lib/fragments/icon/icon.spec.ts (1 test) 20ms
+ ✓ |ui| src/lib/templates/unavailable/unavailable.spec.ts (1 test) 28ms
+ ✓ |ui| src/lib/templates/empty-state/empty-state.spec.ts (1 test) 21ms
+ ✓ |ui| src/lib/templates/skeleton/skeleton.spec.ts (1 test) 22ms
+
+ Test Files  13 passed (13)
+      Tests  18 passed (18)
+   Start at  17:42:42
+   Duration  1.40s (setup 32%, environment 22%, tests 21%, import 18%, worker 6%, transform 1%)
+
+
+> nx run state:lint
+
+(node:27048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "state"...
+
+✔ All files pass linting
+
+
+> nx run state:test
+
+(node:27515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/state
+
+(node:27515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |state| src/lib/state.spec.ts (8 tests) 139ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  17:42:47
+   Duration  685ms (environment 40%, tests 21%, setup 20%, import 15%, worker 4%)
+
+
+> nx run catalog:lint
+
+(node:29046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "catalog"...
+
+✔ All files pass linting
+
+
+> nx run catalog:test
+
+(node:29340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/shared/catalog
+
+(node:29340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |catalog| src/lib/catalog-loader.spec.ts (10 tests) 77ms
+ ✓ |catalog| src/lib/catalog-data.spec.ts (2 tests) 135ms
+ ✓ |catalog| src/lib/filters.spec.ts (9 tests) 4ms
+ ✓ |catalog| src/lib/reading.spec.ts (13 tests) 595ms
+
+ Test Files  4 passed (4)
+      Tests  34 passed (34)
+   Start at  17:42:54
+   Duration  1.29s (tests 33%, environment 22%, import 17%, worker 16%, setup 13%)
+
+
+> nx run board-data-access:lint
+
+(node:30626) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "board-data-access"...
+
+✔ All files pass linting
+
+
+> nx run board-data-access:test
+
+(node:30781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/board-data-access
+
+(node:30781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |board-data-access| src/lib/board-store.spec.ts (6 tests) 345ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  17:42:59
+   Duration  907ms (tests 39%, environment 29%, setup 16%, import 12%, worker 3%)
+
+
+> nx run scene-data-access:lint
+
+(node:31113) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "scene-data-access"...
+
+✔ All files pass linting
+
+
+> nx run scene-data-access:test
+
+(node:31260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/scene-data-access
+
+(node:31260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |scene-data-access| src/lib/scene-store.spec.ts (30 tests) 32ms
+
+ Test Files  1 passed (1)
+      Tests  30 passed (30)
+   Start at  17:43:03
+   Duration  557ms (environment 48%, setup 21%, import 20%, tests 6%, worker 5%)
+
+
+> nx run machinery:lint
+
+(node:31812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "machinery"...
+
+✔ All files pass linting
+
+
+> nx run machinery:test
+
+(node:31984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/machinery
+
+(node:31984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |machinery| src/lib/containers/machinery-arriving-page/machinery-arriving-page.spec.ts (1 test) 41ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  17:43:07
+   Duration  594ms (environment 45%, import 20%, setup 19%, tests 7%, worker 5%, transform 3%)
+
+
+> nx run board:lint
+
+(node:32241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "board"...
+
+✔ All files pass linting
+
+
+> nx run board:test
+
+(node:32463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/board
+
+(node:32463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |board| src/lib/mappers/link-mapper/link-mapper.spec.ts (1 test) 188ms
+ ✓ |board| src/lib/containers/board-page/board-page.spec.ts (4 tests) 293ms
+ ✓ |board| src/lib/mappers/cell-value-mapper/cell-value-mapper.spec.ts (6 tests) 76ms
+ ✓ |board| src/lib/facades/board.facade.spec.ts (1 test) 16ms
+
+ Test Files  4 passed (4)
+      Tests  12 passed (12)
+   Start at  17:43:12
+   Duration  1.04s (tests 29%, environment 27%, import 19%, setup 18%, worker 4%, transform 2%)
+
+
+> nx run scene:lint
+
+(node:32876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "scene"...
+
+✔ All files pass linting
+
+
+> nx run scene:test
+
+(node:33106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/scene
+
+(node:33106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |scene| src/lib/mappers/mappers.spec.ts (33 tests) 9ms
+ ✓ |scene| src/lib/wrappers/scene-canvas/scene-canvas.spec.ts (19 tests) 120ms
+ ✓ |scene| src/lib/composites/composites.spec.ts (10 tests) 117ms
+ ✓ |scene| src/lib/facades/scene.facade.spec.ts (84 tests) 1144ms
+ ✓ |scene| src/lib/known-outcome.spec.ts (4 tests) 70ms
+ ✓ |scene| src/lib/clock/scene-clock.spec.ts (6 tests) 10ms
+ ✓ |scene| src/lib/renderers/renderers.spec.ts (2 tests) 2ms
+ ✓ |scene| src/lib/containers/scene-page/scene-page.spec.ts (12 tests) 888ms
+
+ Test Files  8 passed (8)
+      Tests  170 passed (170)
+   Start at  17:43:19
+   Duration  2.25s (tests 54%, setup 14%, environment 13%, worker 10%, import 9%, transform 1%)
+
+
+> nx run dotln-shell:lint
+
+(node:33986) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "dotln-shell"...
+
+✔ All files pass linting
+
+
+> nx run dotln-shell:test
+
+(node:34974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/dotln/shell
+
+(node:34974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |dotln-shell| src/lib/templates/sub-app-menu/sub-app-menu.spec.ts (1 test) 49ms
+ ✓ |dotln-shell| src/lib/layouts/app-layout/app-layout.spec.ts (2 tests) 80ms
+ ✓ |dotln-shell| src/lib/containers/shell-notices/shell-notices.spec.ts (1 test) 46ms
+
+ Test Files  3 passed (3)
+      Tests  4 passed (4)
+   Start at  17:43:25
+   Duration  776ms (environment 42%, setup 25%, tests 14%, import 12%, worker 5%, transform 2%)
+
+
+> nx run tools:test
+
+(node:35193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/tools
+
+(node:35193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |tools| src/lib/facades/tools.facade.spec.ts (18 tests) 2197ms
+ ✓ |tools| src/lib/studies/study-models.spec.ts (9 tests) 2794ms
+   ✓ runs every model from its record in the family the record declares, and each moment supplies the values the prose reads 620ms
+   ✓ stays a sound example across the whole range of every input a model offers 510ms
+   ✓ keeps every supplied movement name visible and apart on every frame 410ms
+   ✓ routes visible narration through messages across every model and its input boundaries 1160ms
+ ✓ |tools| src/lib/studies/movement/equilibrium-fallback.model.spec.ts (9 tests) 2028ms
+   ✓ keeps every slider setting and corner finite, labelled, in bounds and true to its prose 1956ms
+ ✓ |tools| src/lib/studies/movement/flocking.model.spec.ts (12 tests) 2006ms
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 1706ms
+ ✓ |tools| src/lib/studies/movement/seek.model.spec.ts (10 tests) 1970ms
+   ✓ supplies every prose value, the worked arithmetic and bounds for the complete drawing 541ms
+   ✓ keeps every offered sideways start readable, labelled and inside the drawing 1392ms
+ ✓ |tools| src/lib/studies/movement/priority-steering.model.spec.ts (9 tests) 1848ms
+   ✓ keeps every slider setting and corner finite, labelled, in bounds and true to its prose 1758ms
+ ✓ |tools| src/lib/studies/movement/making-the-creatures.model.spec.ts (12 tests) 1340ms
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 1131ms
+ ✓ |tools| src/lib/studies/movement/steering-pipeline.model.spec.ts (15 tests) 947ms
+   ✓ keeps notes, prose, arithmetic, labels and every drawing sound over the offered input ranges 796ms
+ ✓ |tools| src/lib/composites/study/study.spec.ts (13 tests) 518ms
+Not implemented: navigation to another Document
+ ✓ |tools| src/lib/studies/movement/group-movement.model.spec.ts (11 tests) 1011ms
+   ✓ keeps every offered pace finite, labelled and readable through the whole journey 870ms
+ ✓ |tools| src/lib/studies/movement/face.model.spec.ts (13 tests) 485ms
+   ✓ keeps notes, names, moments, prose and bounds sound across the live ranges 397ms
+ ✓ |tools| src/lib/containers/catalog-page/catalog-page.spec.ts (8 tests) 487ms
+ ✓ |tools| src/lib/studies/movement/align.model.spec.ts (12 tests) 439ms
+   ✓ keeps notes, labels, moments, prose and geometry sound across the live ranges 376ms
+ ✓ |tools| src/lib/studies/movement/scalable-formations.model.spec.ts (9 tests) 401ms
+   ✓ keeps notes, labels, prose and the complete footprint sound at every control corner 306ms
+ ✓ |tools| src/lib/studies/movement/presentation.spec.ts (22 tests) 361ms
+ ✓ |tools| src/lib/studies/movement/wander.model.spec.ts (11 tests) 380ms
+   ✓ keeps every note, reading, label and complete circle sound across input endpoints and their combinations 302ms
+ ✓ |tools| src/lib/studies/movement/two-level-formation-steering.model.spec.ts (11 tests) 321ms
+ ✓ |tools| src/lib/facades/tools-study-loading.spec.ts (2 tests) 313ms
+ ✓ |tools| src/lib/studies/movement/formation-pattern-interface.model.spec.ts (10 tests) 356ms
+ ✓ |tools| src/lib/composites/study-explanation/study-explanation.spec.ts (9 tests) 294ms
+ ✓ |tools| src/lib/studies/movement/pursue.model.spec.ts (10 tests) 278ms
+ ✓ |tools| src/lib/studies/movement/the-firing-solution.model.spec.ts (11 tests) 231ms
+ ✓ |tools| src/lib/facades/tools-home.facade.spec.ts (3 tests) 216ms
+ ✓ |tools| src/lib/composites/study-visuals/marbles/marbles.spec.ts (5 tests) 155ms
+ ✓ |tools| src/lib/studies/rxjs/localization.spec.ts (40 tests) 151ms
+ ✓ |tools| src/lib/studies/movement/separation.model.spec.ts (11 tests) 165ms
+ ✓ |tools| src/lib/studies/movement/fixed-formations.model.spec.ts (9 tests) 156ms
+ ✓ |tools| src/lib/studies/movement/weighted-blending.model.spec.ts (13 tests) 108ms
+ ✓ |tools| src/lib/studies/rxjs/repeat.spec.ts (15 tests) 106ms
+ ✓ |tools| src/lib/composites/study-visuals/scrubber/scrubber.spec.ts (4 tests) 115ms
+ ✓ |tools| src/lib/composites/study-visuals/flow/flow.spec.ts (3 tests) 118ms
+ ✓ |tools| src/lib/composites/study-visuals/motion/motion.spec.ts (3 tests) 103ms
+ ✓ |tools| src/lib/composites/study-visuals/timeline/timeline.spec.ts (3 tests) 99ms
+ ✓ |tools| src/lib/studies/movement/velocity-matching.model.spec.ts (9 tests) 77ms
+ ✓ |tools| src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts (15 tests) 58ms
+ ✓ |tools| src/lib/composites/study-visuals/inputs/inputs.spec.ts (3 tests) 82ms
+ ✓ |tools| src/lib/studies/movement/coordinated-movement.model.spec.ts (8 tests) 95ms
+ ✓ |tools| src/lib/studies/movement/projectile-trajectory.model.spec.ts (10 tests) 104ms
+ ✓ |tools| src/lib/studies/movement/motor-control.model.spec.ts (8 tests) 77ms
+ ✓ |tools| src/lib/studies/movement/jump-points.model.spec.ts (10 tests) 61ms
+ ✓ |tools| src/lib/studies/movement/steering-behaviors.model.spec.ts (8 tests) 81ms
+ ✓ |tools| src/lib/studies/movement/actuator.model.spec.ts (8 tests) 50ms
+ ✓ |tools| src/lib/studies/movement/retained-samples.spec.ts (3 tests) 48ms
+ ✓ |tools| src/lib/studies/movement/variable-matching.model.spec.ts (9 tests) 22ms
+ ✓ |tools| src/lib/studies/movement/arrive.model.spec.ts (12 tests) 34ms
+ ✓ |tools| src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts (9 tests) 24ms
+ ✓ |tools| src/lib/studies/movement/kinematic-wander.model.spec.ts (7 tests) 47ms
+ ✓ |tools| src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts (7 tests) 24ms
+ ✓ |tools| src/lib/studies/rxjs/concat-map.spec.ts (12 tests) 16ms
+ ✓ |tools| src/lib/studies/eip/competing-consumers.spec.ts (9 tests) 30ms
+ ✓ |tools| src/lib/studies/movement/collision-avoidance.model.spec.ts (9 tests) 32ms
+ ✓ |tools| src/lib/studies/movement/flee.model.spec.ts (10 tests) 30ms
+ ✓ |tools| src/lib/studies/movement/slot-assignment.model.spec.ts (8 tests) 25ms
+ ✓ |tools| src/lib/studies/movement/steering-output.model.spec.ts (8 tests) 23ms
+ ✓ |tools| src/lib/studies/movement/blending-versus-arbitration.model.spec.ts (8 tests) 19ms
+ ✓ |tools| src/lib/studies/eip/content-based-router.spec.ts (7 tests) 17ms
+ ✓ |tools| src/lib/studies/eip/aggregator.spec.ts (10 tests) 22ms
+ ✓ |tools| src/lib/studies/movement/iterative-targeting.model.spec.ts (11 tests) 21ms
+ ✓ |tools| src/lib/studies/eip/recipient-list.spec.ts (8 tests) 27ms
+ ✓ |tools| src/lib/studies/rxjs/observe-on.spec.ts (12 tests) 24ms
+ ✓ |tools| src/lib/studies/rxjs/take-until.spec.ts (10 tests) 11ms
+ ✓ |tools| src/lib/studies/movement/corner-trap.model.spec.ts (8 tests) 16ms
+ ✓ |tools| src/lib/studies/eip/resequencer.spec.ts (10 tests) 17ms
+ ✓ |tools| src/lib/studies/eip/message-expiration.spec.ts (9 tests) 16ms
+ ✓ |tools| src/lib/studies/rxjs/combine-latest.spec.ts (11 tests) 13ms
+ ✓ |tools| src/lib/studies/rxjs/replay-subject.spec.ts (9 tests) 18ms
+ ✓ |tools| src/lib/studies/eip/message-translator.spec.ts (8 tests) 15ms
+ ✓ |tools| src/lib/studies/movement/kinematic-arrive.model.spec.ts (8 tests) 16ms
+ ✓ |tools| src/lib/studies/eip/correlation-identifier.spec.ts (9 tests) 15ms
+ ✓ |tools| src/lib/studies/eip/canonical-data-model.spec.ts (10 tests) 13ms
+ ✓ |tools| src/lib/studies/rxjs/scan.spec.ts (12 tests) 21ms
+ ✓ |tools| src/lib/studies/movement/satisfaction-radius.model.spec.ts (9 tests) 19ms
+ ✓ |tools| src/lib/studies/rxjs/subject.spec.ts (11 tests) 14ms
+ ✓ |tools| src/lib/studies/eip/publish-subscribe-channel.spec.ts (8 tests) 14ms
+ ✓ |tools| src/lib/studies/rxjs/finalize.spec.ts (11 tests) 13ms
+ ✓ |tools| src/lib/studies/eip/process-manager.spec.ts (10 tests) 12ms
+ ✓ |tools| src/lib/studies/eip/message-store.spec.ts (6 tests) 9ms
+ ✓ |tools| src/lib/studies/rxjs/merge-map.spec.ts (12 tests) 12ms
+ ✓ |tools| src/lib/studies/eip/message-dispatcher.spec.ts (9 tests) 12ms
+ ✓ |tools| src/lib/studies/rxjs/share-replay.spec.ts (10 tests) 11ms
+ ✓ |tools| src/lib/studies/rxjs/start-with.spec.ts (10 tests) 12ms
+ ✓ |tools| src/lib/studies/rxjs/retry.spec.ts (8 tests) 10ms
+ ✓ |tools| src/lib/studies/eip/event-message.spec.ts (10 tests) 19ms
+ ✓ |tools| src/lib/studies/rxjs/share.spec.ts (11 tests) 14ms
+ ✓ |tools| src/lib/studies/rxjs/materialize.spec.ts (10 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/exhaust-map.spec.ts (9 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/catch-error.spec.ts (7 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/timeout.spec.ts (8 tests) 11ms
+ ✓ |tools| src/lib/studies/eip/request-reply.spec.ts (5 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/behavior-subject.spec.ts (7 tests) 10ms
+ ✓ |tools| src/lib/studies/eip/guaranteed-delivery.spec.ts (8 tests) 11ms
+ ✓ |tools| src/lib/studies/eip/control-bus.spec.ts (6 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/command-message.spec.ts (9 tests) 8ms
+ ✓ |tools| src/lib/studies/rxjs/switch-map.spec.ts (4 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/transactional-client.spec.ts (7 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/channel-adapter.spec.ts (5 tests) 9ms
+ ✓ |tools| src/lib/composites/study-visuals/flow/flow-drawing.spec.ts (12 tests) 6ms
+ ✓ |tools| src/lib/studies/flow.spec.ts (6 tests) 5ms
+ ✓ |tools| src/lib/mappers/study-mapper.spec.ts (12 tests) 4ms
+ ✓ |tools| src/lib/studies/rxjs/marbles.spec.ts (7 tests) 5ms
+ ✓ |tools| src/lib/composites/study-visuals/motion/motion-drawing.spec.ts (10 tests) 4ms
+ ✓ |tools| src/lib/composites/study-visuals/timeline/timeline-drawing.spec.ts (4 tests) 3ms
+ ✓ |tools| src/lib/composites/study-visuals/marbles/marbles-drawing.spec.ts (5 tests) 5ms
+ ✓ |tools| src/lib/studies/drawing.spec.ts (5 tests) 3ms
+ ✓ |tools| src/lib/studies/study-text.spec.ts (2 tests) 2ms
+ ✓ |tools| src/lib/studies/number-format.spec.ts (2 tests) 2ms
+
+ Test Files  106 passed (106)
+      Tests  972 passed (972)
+   Start at  17:43:32
+   Duration  18.95s (tests 64%, import 17%, setup 13%, environment 2%, worker 2%, transform 1%)
+
+
+> nx run tools:lint
+
+(node:47597) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "tools"...
+
+✔ All files pass linting
+
+
+> nx run dotln:lint
+
+(node:48391) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "dotln"...
+
+✔ All files pass linting
+
+
+> nx run dotln:test
+
+(node:48640) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[33m❯[39m Building...
+(node:48640) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔[39m Building...
+Application bundle generation complete. [4.486 seconds] - 2026-11-06T22:44:03.517Z
+
+
+ RUN  v5.0.5 <target-worktree>
+
+(node:51803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Not implemented: HTMLCanvasElement's getContext() method: without installing the canvas npm package
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+   Start at  17:44:03
+   Duration  1.03s (environment 30%, tests 25%, import 17%, setup 15%, transform 13%)
+
+
+> nx run dotln-e2e:lint
+
+> eslint .
+
+(node:51976) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[0m
+[4m<target-worktree>/apps/dotln-e2e/src/catalog.spec.ts[24m
+  [2m485:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m492:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m516:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m787:9[22m   [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m915:9[22m   [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+
+[4m<target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts[24m
+  [2m123:5[22m   [33mwarning[39m  Avoid having conditionals in tests  [2mplaywright/no-conditional-in-test[22m
+  [2m156:19[22m  [33mwarning[39m  Forbidden non-null assertion        [2m@typescript-eslint/no-non-null-assertion[22m
+  [2m159:21[22m  [33mwarning[39m  Forbidden non-null assertion        [2m@typescript-eslint/no-non-null-assertion[22m
+
+[33m[1m✖ 8 problems (0 errors, 8 warnings)[22m[39m
+[0m
+
+> nx run workspace-tools:lint
+
+> npm run check:templates
+
+
+> @dotln-angular/source@0.0.0 check:templates
+> node tools/scripts/check-template-literals.mjs
+
+PASS checkTemplateLiterals: 0 findings
+> npm run check:tokens
+
+
+> @dotln-angular/source@0.0.0 check:tokens
+> node tools/scripts/check-token-names.mjs
+
+PASS checkTokenNames: 0 findings
+> npm run check:kits
+
+
+> @dotln-angular/source@0.0.0 check:kits
+> node tools/scripts/check-spec-kits.mjs
+
+PASS checkSpecKits: 0 findings
+> npm run i18n:check
+
+
+> @dotln-angular/source@0.0.0 i18n:check
+> node tools/scripts/check-i18n.mjs
+
+(node:54063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[30m[41mUnable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'[49m[39m
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+[32m✔[39m Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+[32m✔[39m Checking for missing keys ✨
+
+🎉 No missing keys were found 🎉
+
+
+
+> npm run typecheck:foundations
+
+
+> @dotln-angular/source@0.0.0 typecheck:foundations
+> node tools/scripts/check-foundation-types.mjs
+
+PASS libs/shared/core/tsconfig.lib.json
+PASS libs/shared/core/tsconfig.spec.json
+PASS libs/shared/utils/tsconfig.lib.json
+PASS libs/shared/utils/tsconfig.spec.json
+PASS libs/shared/i18n/tsconfig.lib.json
+PASS libs/shared/i18n/tsconfig.spec.json
+PASS libs/shared/models/tsconfig.lib.json
+PASS libs/shared/models/tsconfig.spec.json
+PASS libs/shared/catalog/tsconfig.lib.json
+PASS libs/shared/catalog/tsconfig.spec.json
+PASS libs/features/tools/tsconfig.lib.json
+PASS libs/features/tools/tsconfig.spec.json
+PASS libs/shared/ui/tsconfig.lib.json
+PASS libs/shared/ui/tsconfig.spec.json
+PASS libs/dotln/shell/tsconfig.lib.json
+PASS libs/dotln/shell/tsconfig.spec.json
+PASS libs/features/board/tsconfig.lib.json
+PASS libs/features/board/tsconfig.spec.json
+PASS libs/shared/scene-engine/tsconfig.lib.json
+PASS libs/shared/scene-engine/tsconfig.spec.json
+PASS libs/features/scene/tsconfig.lib.json
+PASS libs/features/scene/tsconfig.spec.json
+PASS libs/features/scene-data-access/tsconfig.lib.json
+PASS libs/features/scene-data-access/tsconfig.spec.json
+PASS libs/features/machinery/tsconfig.lib.json
+PASS libs/features/machinery/tsconfig.spec.json
+PASS libs/shared/events/tsconfig.lib.json
+PASS libs/shared/events/tsconfig.spec.json
+PASS libs/shared/data-access/tsconfig.lib.json
+PASS libs/shared/data-access/tsconfig.spec.json
+PASS libs/shared/state/tsconfig.lib.json
+PASS libs/shared/state/tsconfig.spec.json
+PASS libs/features/board-data-access/tsconfig.lib.json
+PASS libs/features/board-data-access/tsconfig.spec.json
+> npm run test:tooling
+
+
+> @dotln-angular/source@0.0.0 test:tooling
+> node --test tools/*.test.mjs
+
+(node:70346) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:70350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the board imports no process or platform control API [90m(33.822833ms)[39m[39m
+(node:70351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ markers use each file type’s leading comment token and count once per line [90m(4.938125ms)[39m[39m
+[32m✔ multiline strings and comment bodies cannot manufacture markers [90m(0.890709ms)[39m[39m
+[32m✔ the gauge covers tracked tools, workflows and styles but excludes docs, dependencies and untracked files [90m(89.98375ms)[39m[39m
+[32m✔ script comments before closing delimiters count, including empty blocks [90m(1.231416ms)[39m[39m
+[32m✔ quotes inside YAML plain scalars do not swallow following comments [90m(0.110792ms)[39m[39m
+[32m✔ HTML raw-text and RCDATA elements keep apparent comments as literal content [90m(0.086125ms)[39m[39m
+[32m✔ YAML adjacent quoted flow-map values retain the real marker locations [90m(0.064208ms)[39m[39m
+[32m✔ HTML custom-element names are not raw-text tag names [90m(0.055667ms)[39m[39m
+(node:70352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ fixture CLI failures withhold raw JSON and filesystem paths [90m(302.9995ms)[39m[39m
+[32m✔ scrubbing replaces only the launchpad root and never reports private values [90m(0.79025ms)[39m[39m
+[32m✔ the pinned schema rejects invalid versions, states and missing provenance [90m(41.640375ms)[39m[39m
+(node:70353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ route-only code stays lazy while the menu arrives with its route [90m(1.181167ms)[39m[39m
+[32m✔ transitive menu and catalog data leaks fail even when an output is small [90m(0.302084ms)[39m[39m
+[32m✔ direct vendor menu and overlay imports cannot bypass the lazy-route guard [90m(0.182875ms)[39m[39m
+[32m✔ deferring the menu again, missing metadata and static cycles are handled explicitly [90m(0.119917ms)[39m[39m
+(node:70354) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the join keeps full prose, resolves only a unique same-work title and never writes its source [90m(188.886125ms)[39m[39m
+[32m✔ a malformed map row stops the join with its file and line [90m(86.436958ms)[39m[39m
+[32m✔ a changed last source digest stops the join before any destination is replaced [90m(82.130917ms)[39m[39m
+[32m✔ verification keeps partial and model-knowledge distinctions [90m(0.127ms)[39m[39m
+[32m✔ join diagnostics identify the declared file and operation without echoing input or paths [90m(120.110708ms)[39m[39m
+(node:70355) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the missing-definition fixture fails and a full reading row passes [90m(224.892208ms)[39m[39m
+[32m✔ diagnostics identify safe schema locations and never print untrusted values or keys [90m(0.321125ms)[39m[39m
+[32m✔ tool schema pairs provenance, status and faces and rejects extra nested fields [90m(1.056791ms)[39m[39m
+[32m✔ checkpoint validation refuses omissions, duplicate lines, invalid ids, wrong digests and absolute paths [90m(0.395084ms)[39m[39m
+[32m✔ a stored verification kind must be the one its note implies [90m(0.124458ms)[39m[39m
+[32m✔ the full catalog refuses a dangling relation and a relation to the same concept [90m(73.905125ms)[39m[39m
+[32m✔ a partial read ignores hidden files and refuses unexpected data files [90m(1.169042ms)[39m[39m
+(node:70356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ script reference passes on an unmodified candidate copy [90m(63.590875ms)[39m[39m
+[34mℹ PASS script reference: 32 npm scripts; 17 files[39m
+[32m✔ expected failure: removing the npm run boards row fails even when prose still names it [90m(52.138666ms)[39m[39m
+[34mℹ Expected failure: Undocumented scripts: npm run boards[39m
+[32m✔ expected failure: adding a row for npm run removed:check fails [90m(69.18775ms)[39m[39m
+[34mℹ Expected failure: Stale script rows: npm run removed:check[39m
+[32m✔ script file rows must cover existing direct modules and cannot name removed files [90m(47.372209ms)[39m[39m
+(node:70357) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ each hygiene fixture fails independently through the CLI [90m(551.6515ms)[39m[39m
+[32m✔ reads a dispatch outside stores and facades, including aliased groups and injectDispatch [90m(8.840584ms)[39m[39m
+(node:70358) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:70511) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[30m[41mUnable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'[49m[39m
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+[32m✔[39m Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+[32m✔[39m Checking for missing keys ✨
+
+🎉 No missing keys were found 🎉
+
+
+
+(node:70561) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[30m[41mUnable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'[49m[39m
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+[32m✔[39m Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+[32m✔[39m Checking for missing keys ✨
+[32m✔[39m [4mSummary[0m
+
+[37m┌───────────[39m[37m┬──────────────[39m[37m┬──────────────┐[39m
+[37m│[39m[31m [36mFile Name[31m [39m[37m│[39m[31m [36mMissing Keys[31m [39m[37m│[39m[31m [36mExtra Keys[31m   [39m[37m│[39m
+[37m├───────────[39m[37m┼──────────────[39m[37m┼──────────────┤[39m
+[37m│[39m [94men[39m        [37m│[39m 'home.title' [37m│[39m 'home.other' [37m│[39m
+[37m└───────────[39m[37m┴──────────────[39m[37m┴──────────────┘[39m
+(node:70589) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[30m[41mUnable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'[49m[39m
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+[32m✔[39m Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+[32m✔[39m Checking for missing keys ✨
+[32m✔[39m [4mSummary[0m
+
+[37m┌───────────[39m[37m┬──────────────[39m[37m┬──────────────┐[39m
+[37m│[39m[31m [36mFile Name[31m [39m[37m│[39m[31m [36mMissing Keys[31m [39m[37m│[39m[31m [36mExtra Keys[31m   [39m[37m│[39m
+[37m├───────────[39m[37m┼──────────────[39m[37m┼──────────────┤[39m
+[37m│[39m [94men[39m        [37m│[39m --           [37m│[39m 'home.extra' [37m│[39m
+[37m└───────────[39m[37m┴──────────────[39m[37m┴──────────────┘[39m
+[32m✔ the three checks reject their independent negative fixtures [90m(30.74875ms)[39m[39m
+[32m✔ template inspection covers multiline text, interpolation literals and accessible labels [90m(4.358333ms)[39m[39m
+[32m✔ template discovery inspects component templates and leaves standalone HTML alone [90m(11.910416ms)[39m[39m
+[32m✔ the pipe adapter changes AST pipe names, leaving literal key contents intact [90m(0.327917ms)[39m[39m
+[32m✔ token inspection handles aliases, multiline constructors and nested generics [90m(1.06625ms)[39m[39m
+[32m✔ a locally forged kit name does not satisfy the spec-kit check [90m(2.017542ms)[39m[39m
+[32m✔ kit aliases resolve within their lexical scope in either test order [90m(7.632375ms)[39m[39m
+[32m✔ filter curries an omitted collection and rejects an explicit undefined collection [90m(295.39725ms)[39m[39m
+[32m✔ environment priming parses false, rejects invalid settings and keeps values out of diagnostics [90m(0.599917ms)[39m[39m
+[32m✔ priming writes typed local configuration and an isolated proxy, honoring named overrides [90m(2.681583ms)[39m[39m
+[32m✔ the real Transloco find command observes house-pipe missing and extra keys without modifying translations [90m(1119.832125ms)[39m[39m
+(node:70359) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the Tools testing translations equal the app catalog’s tools block [90m(3.052375ms)[39m[39m
+[32m✔ the Scene testing translations equal the app catalog’s scene block [90m(0.402541ms)[39m[39m
+[32m✔ model specs use exactly the lazy study message catalogs served by the app [90m(16.825708ms)[39m[39m
+(node:70360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ a supported shortcode or emoji and an untyped subject stays as written [90m(1.1575ms)[39m[39m
+[32m✔ a bare subject without a gitmoji or conventional type is refused [90m(0.1455ms)[39m[39m
+[32m✔ every supported conventional type gains its gitmoji exactly once [90m(0.187083ms)[39m[39m
+[32m✔ malformed titles are rejected before any remote operation [90m(0.088333ms)[39m[39m
+[32m✔ a stale event decorates the current title and passes its text as one literal argument [90m(0.489166ms)[39m[39m
+[32m✔ a rerun leaves an already decorated current title unchanged [90m(0.092042ms)[39m[39m
+[32m✔ the workflow leaves a current gitmoji-and-subject title unchanged [90m(0.06375ms)[39m[39m
+[32m✔ invalid identity or a failed current-title lookup cannot trigger an edit [90m(0.15925ms)[39m[39m
+[32m✔ a prefix that no longer matches the title type is replaced [90m(0.381334ms)[39m[39m
+[32m✔ a rerun replaces the prefix of a decorated title whose type changed [90m(0.513583ms)[39m[39m
+(node:70362) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS scene-twenty.json: scene-v0 schema
+PASS cost-table.json: scene-v0 schema
+PASS trial-known-outcome.json: scene-v0 schema
+[32m✔ the committed scene fixtures pass [90m(42.198208ms)[39m[39m
+[32m✔ the schema refuses a scene that is not twenty units [90m(21.040083ms)[39m[39m
+[32m✔ the schema refuses an unknown field and a role outside the label sets [90m(14.069708ms)[39m[39m
+[32m✔ a wrong role count, a repeated id and an overlap are each named [90m(0.371208ms)[39m[39m
+(node:70363) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the study-unknown-id fixture fails the check [90m(281.258625ms)[39m[39m
+[32m✔ the study-reference-without-supports fixture fails the check [90m(262.396917ms)[39m[39m
+[32m✔ the study-draft fixture fails the check [90m(261.89775ms)[39m[39m
+[32m✔ a named file that does not parse is a schema problem, not a crash [90m(258.754ms)[39m[39m
+[32m✔ a complete checked record passes, and a null representation stays legal [90m(2.142042ms)[39m[39m
+[32m✔ the required parts are refused when empty or absent [90m(0.852916ms)[39m[39m
+[32m✔ a reference needs an ISO date and an https address [90m(0.274125ms)[39m[39m
+[32m✔ the catalog decides whether an id, its work and each nearby id are real [90m(0.225916ms)[39m[39m
+[32m✔ a checked record names two different reviewers [90m(0.143709ms)[39m[39m
+[32m✔ a model or executable module exists with a spec beside it [90m(1.299084ms)[39m[39m
+[32m✔ an executable RxJS reading shows the code its module runs, whitespace and trailing commas aside [90m(1.832084ms)[39m[39m
+[32m✔ an executable RxJS reading’s spec runs the example through expectMarbleExample [90m(1.125375ms)[39m[39m
+[32m✔ a marbles drawing reads the executable module, and an RxJS reading that runs nowhere says so [90m(1.073708ms)[39m[39m
+[32m✔ a flow drawn over an executable example reads its module, and a messaging reading that runs nowhere says so [90m(1.165ms)[39m[39m
+[32m✔ the ordinary pseudocode has one blank-line block per mechanism step [90m(0.143291ms)[39m[39m
+[32m✔ a stale summary fails until --write-summary rewrites it [90m(97.021584ms)[39m[39m
+[32m✔ a repeated slug or id, a misplaced file and a chunk that misses a record all fail [90m(33.100166ms)[39m[39m
+[32m✔ a record imported but not exported by its chunk fails, because it could never load [90m(26.426ms)[39m[39m
+[32m✔ a commented-out export or import stands for nothing in a chunk [90m(25.711584ms)[39m[39m
+[32m✔ a type-only import brings no record into a chunk, and a record loads from its own work [90m(49.195667ms)[39m[39m
+[32m✔ a record that is malformed or does not parse is reported, and nothing is written [90m(46.943875ms)[39m[39m
+[32m✔ the summary sorts a work by source line, and coverage counts every work [90m(0.29875ms)[39m[39m
+[32m✔ the link check lists each cited address once, with the studies that cite it [90m(0.099ms)[39m[39m
+[32m✔ the first movement batch keeps every concept its order names [90m(3.595042ms)[39m[39m
+[32m✔ the second movement batch adds exactly its twenty concepts beside the first batch [90m(3.062667ms)[39m[39m
+[32m✔ the RxJS batch is exactly the concepts its order names [90m(2.353375ms)[39m[39m
+[32m✔ the messaging batch is exactly the patterns its order names, and the stream patterns run [90m(2.907666ms)[39m[39m
+[32m✔ the workspace check runs inside check:fixtures and the committed records pass it [90m(296.514917ms)[39m[39m
+(node:70364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m✔ the presentation check rejects literal labels, indirect prose, and conditional templates [90m(5.44275ms)[39m[39m
+[32m✔ message lookup fails closed and current study checks inspect translated prose [90m(7.612625ms)[39m[39m
+[34mℹ tests 92[39m
+[34mℹ suites 0[39m
+[34mℹ pass 92[39m
+[34mℹ fail 0[39m
+[34mℹ cancelled 0[39m
+[34mℹ skipped 0[39m
+[34mℹ todo 0[39m
+[34mℹ duration_ms 2000.251125[39m
+> npm run lint:components
+
+
+> @dotln-angular/source@0.0.0 lint:components
+> node tools/scripts/check-component-order.mjs
+
+PASS checkComponentOrder: 0 findings
+> npm run check:shared-types
+
+
+> @dotln-angular/source@0.0.0 check:shared-types
+> node tools/scripts/check-shared-types.mjs
+
+PASS checkSharedTypes: 0 findings
+> npm run check:fixtures
+
+
+> @dotln-angular/source@0.0.0 check:fixtures
+> node tools/scripts/check-board-fixtures.mjs && node tools/scripts/check-scene-fixtures.mjs && npm run catalog:check && npm run studies:check
+
+PASS launchpad-board-2026-10-21.json: uifa-board-v1 schema and path scrub
+PASS unavailable-board.json: uifa-board-v1 schema and path scrub
+PASS scene-twenty.json: scene-v0 schema
+PASS cost-table.json: scene-v0 schema
+PASS trial-known-outcome.json: scene-v0 schema
+
+> @dotln-angular/source@0.0.0 catalog:check
+> node tools/scripts/catalog/check-catalog.mjs
+
+PASS catalog: 8 checkpoints, 3463 tools; schema, provenance and counts.
+
+> @dotln-angular/source@0.0.0 studies:check
+> node tools/scripts/catalog/check-studies.mjs
+
+check-studies: 80 records; 0 problems
+> npm run lint:hygiene
+
+
+> @dotln-angular/source@0.0.0 lint:hygiene
+> node tools/scripts/check-event-hygiene.mjs
+
+PASS event hygiene: 0 exceptions; 16 files inspected
+> npm run check:scripts
+
+
+> @dotln-angular/source@0.0.0 check:scripts
+> node tools/scripts/check-script-reference.mjs
+
+PASS script reference: 32 npm scripts; 17 files
+
+
+
+ NX   Successfully ran targets lint, test for 20 projects
+
+
+  Run duration:      2m 42s
+  Cache:             0/38 hit (0%)
+  Critical path:     50.5s (1 task)
+  Recoverable time:  1m 52s (69% of the run)
+
+  Recommendations:
+    - Increase parallelism to recover up to 1m 52s → https://nx.dev/docs/concepts/ci-concepts/parallelization-distribution?utm_source=nx-cli&utm_medium=cli&utm_campaign=performance-report&utm_content=parallelization.
+    - Drastically reduce your run duration by sharing a cache across your team and CI → https://cloud.nx.app/connect/OGskHSG7zX.

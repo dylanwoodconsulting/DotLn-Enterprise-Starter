@@ -1,0 +1,15 @@
+{
+  "command": "npx",
+  "args": [
+    "nx",
+    "run-many",
+    "-t",
+    "lint",
+    "test",
+    "--output-style=static"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T23:10:39.068Z",
+  "finishedAt": "2026-11-06T23:11:38.705Z",
+  "exitCode": 0
+}

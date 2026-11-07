@@ -1,0 +1,399 @@
+{
+  "normalizedAt": "2026-11-06T23:46:28.901117+00:00",
+  "purpose": "Portable evidence paths and log whitespace; raw originals retained in session scratch. Test assertions, statuses, measurements, capture archives and image bytes are unchanged.",
+  "files": [
+    {
+      "file": "checks/e2e-lint-final.log",
+      "rawSha256": "f6a3f432746256ef407a531a7e4be61bb8d845aa6c0942e4bcaebd58eee1e09a",
+      "rawBytes": 1140,
+      "normalizedSha256": "68eed8e346491700789a275cacf13e1b1a0f80c96804f2f04e58e33466b16b9f",
+      "normalizedBytes": 1110,
+      "replacements": {
+        "<target-worktree>": 1
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/e2e-types-fixed.log",
+      "rawSha256": "27fcc501190e6334627c6cd9a44272af31bba85356ab78179680d5f23a2bdcb2",
+      "rawBytes": 93,
+      "replacements": {},
+      "normalizedSha256": "8f7361e9b0b291859fc01e6785cdce0c209c1300a8d6db5b23e473dbeee2171d",
+      "normalizedBytes": 92,
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/i18n-first.log",
+      "rawSha256": "903571a6af7d641db494574fc7853e579df374f3bfb0af9d593a2294100222da",
+      "rawBytes": 468,
+      "replacements": {},
+      "normalizedSha256": "176a8c85f6c3dfb5b41cd4cedac22c0c8009145de7a6e6f8f3725998707b1787",
+      "normalizedBytes": 464,
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/lint-first.log",
+      "rawSha256": "a5f6a234ddfd8ffec8a41be463d63132de5826455c303bd5c3340ae799a2d179",
+      "rawBytes": 31047,
+      "normalizedSha256": "f50373e1b13cca23cd4773356914e8a938eb9275301bdcf97d91968698e7a88c",
+      "normalizedBytes": 30375,
+      "replacements": {
+        "<target-worktree>": 24
+      }
+    },
+    {
+      "file": "checks/lint-second.log",
+      "rawSha256": "9d0a204d456a6598b025b29d17c7dd3c2727bcdf90a26a2897364c6cbe844504",
+      "rawBytes": 4571,
+      "normalizedSha256": "99d0fd4e60228cc15efe470fe1836a79751d2520524d78758e2d4072edf8ebf5",
+      "normalizedBytes": 4207,
+      "replacements": {
+        "<target-worktree>": 13
+      }
+    },
+    {
+      "file": "checks/lint-third.log",
+      "rawSha256": "5c733588bcf49a3151440dbd69ae53b41d2e3059875602dd5e97085ccfd19b11",
+      "rawBytes": 1363,
+      "normalizedSha256": "6a800e3fad2808ed42f5a9cf7f81081e0df4dbced855720603f49aedae83fa57",
+      "normalizedBytes": 1307,
+      "replacements": {
+        "<target-worktree>": 2
+      }
+    },
+    {
+      "file": "checks/preflight-final.log",
+      "rawSha256": "b1c5f1deebc6f7763c38ea1e6f84dcfdfea5ea73bc1482046450b4a1f786644c",
+      "rawBytes": 72323,
+      "normalizedSha256": "47c62402393da5f879f366c4e24cfeed0257b91485f8fc84fa9cd73f960466ed",
+      "normalizedBytes": 71819,
+      "replacements": {
+        "<target-worktree>": 17
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/preflight-lint-test.log",
+      "rawSha256": "fabe648181cb90477af4085c02c0a9b07778af7162ea7775f50ea1697a36542f",
+      "rawBytes": 71918,
+      "normalizedSha256": "dd5b0098c4e4aa77c25e92bb3be851c6442bbede805bd4b5f3900c41d60b724d",
+      "normalizedBytes": 71386,
+      "replacements": {
+        "<target-worktree>": 18
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/review-fixes-tools-final.log",
+      "rawSha256": "eff6fe241c05375a6b994625bdb8c82e0a58fd0592982a3e302aea6b9981ac71",
+      "rawBytes": 12188,
+      "normalizedSha256": "02e34a3527a5e423ea9b4bfa82382bbb627d2cee9d82f0b13081185f3f2db01e",
+      "normalizedBytes": 12160,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "checks/review-fixes-tools.log",
+      "rawSha256": "7db51d5cf9497f49373d408560d0361b2bdb5c3e44cf477c863b24babe914aa4",
+      "rawBytes": 14525,
+      "normalizedSha256": "0d53ed4f3a2efe3bb915c1878a542c73b491be9bc7bc0871c7a8a9d5087a2bd4",
+      "normalizedBytes": 14497,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "checks/study-lint-config.log",
+      "rawSha256": "04a7bf15727451d44c3db578478d711a1c4830a154b46ba839549bb9e50dbd53",
+      "rawBytes": 71658,
+      "normalizedSha256": "b879378bd3ad3ee2117a0172b2cfbf0e7b4b37c8328b0cb22c6276cd90b17aab",
+      "normalizedBytes": 71630,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "checks/tooling-first.log",
+      "rawSha256": "3ac3eaa0f6621d267b8825c3521583c00a6f8875ff303f73dab7700a34111550",
+      "rawBytes": 11153,
+      "replacements": {},
+      "normalizedSha256": "35171cfb6d72c27e610d7befd020fb7aa351486176a26154be916b54ff6cef4d",
+      "normalizedBytes": 11150,
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "checks/tools-first.log",
+      "rawSha256": "0b113c68d6d0e60025f122802b90e6c98b22a793681c58db25d54d8f73e65072",
+      "rawBytes": 307,
+      "normalizedSha256": "7061e30534b09b702bd67420767dec9d39ce39ec9c4e5ff5ceb32f7886a29a62",
+      "normalizedBytes": 279,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "checks/tools-second.log",
+      "rawSha256": "bbb385bd2f6db076a29d3b5130c84651fd5ebd59e13231f77b6b54e9ba59328b",
+      "rawBytes": 25957,
+      "normalizedSha256": "18eaf251ad1b9c585779448e9c990dea3497319be8a169055fbfc84f4a3cf3b7",
+      "normalizedBytes": 25929,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "checks/tools-third.log",
+      "rawSha256": "b1610a55cbb01aaa0338d079ef9b88e1ecd1b4edca9ec60ebf0ebeccfa90bd10",
+      "rawBytes": 11540,
+      "normalizedSha256": "118e6273e70626bc3c00aafc3a1830e7bc9ce1b921500e067da28de544f24d76",
+      "normalizedBytes": 11512,
+      "replacements": {
+        "<target-worktree>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-2/base.json",
+      "rawSha256": "ebb4115f5e0ee80d9385a0e6d4c673b0177ba39b98a2298c1ac370dcbecf058c",
+      "rawBytes": 17396,
+      "normalizedSha256": "1d22535aa4ebf205c894fd6c748e82543166e17b65082f1032022283bb03dbcf",
+      "normalizedBytes": 16030,
+      "replacements": {
+        "<session-scratch>": 7,
+        "<target-worktree>": 20,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-2/base.log",
+      "rawSha256": "2c0e35038650179fb489e8aa1f5991ca033575d90024d347317bfb2b298ca0e4",
+      "rawBytes": 4154,
+      "normalizedSha256": "f89a734f27df2a727a89397e515bd8369e926b83e6077c6841bcd1c2c5421064",
+      "normalizedBytes": 3734,
+      "replacements": {
+        "<session-scratch>": 3,
+        "<target-worktree>": 3
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions-2/candidate.json",
+      "rawSha256": "b2cb896bd1a98fd2e7511e2d5a1fccaf877b4120ef2a5a2122e9b48a0c39c4ca",
+      "rawBytes": 9516,
+      "normalizedSha256": "c7bb59b340ff1a33902b753670f2d798699c37e07f535e550e322699ca6b754a",
+      "normalizedBytes": 8650,
+      "replacements": {
+        "<session-scratch>": 5,
+        "<target-worktree>": 10,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-2/candidate.log",
+      "rawSha256": "a2c82fd33eeba40cc9d63069325c7b9d159a08e8ff7a6f333cfd00234769396b",
+      "rawBytes": 1596,
+      "normalizedSha256": "7003e4e2b93fd34968e68ec2de81481778c769e7cca49d7e45c24172d7148508",
+      "normalizedBytes": 1456,
+      "replacements": {
+        "<session-scratch>": 1,
+        "<target-worktree>": 1
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions-3/base.json",
+      "rawSha256": "c0913cce8d89c52b3d3185d5059f25d5d985c3158654deff3751c04715ad4c3b",
+      "rawBytes": 17852,
+      "normalizedSha256": "e151f879ad9be73eb4b5750c267210111d9d6a430c3da91a1f1865ecf03fd83a",
+      "normalizedBytes": 16486,
+      "replacements": {
+        "<session-scratch>": 7,
+        "<target-worktree>": 20,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-3/base.log",
+      "rawSha256": "247825880dd9e236bcac7c7b5991035ffbdedf462b533acce7e22a39e2d2734c",
+      "rawBytes": 4255,
+      "normalizedSha256": "fd13253999149f4bdc29ab0ba3455445be6c6454280c5bb8db82e016309a247b",
+      "normalizedBytes": 3835,
+      "replacements": {
+        "<session-scratch>": 3,
+        "<target-worktree>": 3
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions-3/candidate.json",
+      "rawSha256": "be83134b90f4d82e53d9713d8bfdd0786410e140adb6ec75e2bb41d37e82aa76",
+      "rawBytes": 6554,
+      "normalizedSha256": "cd33611c7d216bee8f0b64610b0f635d9b83483f4fff9c86d3e87226ee142a69",
+      "normalizedBytes": 5938,
+      "replacements": {
+        "<session-scratch>": 4,
+        "<target-worktree>": 5,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-4/base.json",
+      "rawSha256": "29bc49b5875edf89ec8e11da20790539a1822772a0a3f5b85bfd9446482ac12f",
+      "rawBytes": 18054,
+      "normalizedSha256": "a7e5be0141a2dc0dcb70bef8fba0bdfb65c6e98b80c23b0e35bce5cac3f71659",
+      "normalizedBytes": 16688,
+      "replacements": {
+        "<session-scratch>": 7,
+        "<target-worktree>": 20,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-4/base.log",
+      "rawSha256": "4103276db8176650d4b5280dbc82760ab47b2cd6fdb27015a8a78a560133fd9a",
+      "rawBytes": 4361,
+      "normalizedSha256": "64ec2ed8753432b1a2287546ece0d3195bff3bd4d5bdc952b127f2ff7a073823",
+      "normalizedBytes": 3941,
+      "replacements": {
+        "<session-scratch>": 3,
+        "<target-worktree>": 3
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions-4/candidate.json",
+      "rawSha256": "ed8f76d981645efe3d3256f058a139458e25591817b66183ec1c4aee7c31b79e",
+      "rawBytes": 6554,
+      "normalizedSha256": "7530ad56d30e9672e3bc6c8ef4bd4dece4d23f7a45699437d8c45c7e958895f9",
+      "normalizedBytes": 5938,
+      "replacements": {
+        "<session-scratch>": 4,
+        "<target-worktree>": 5,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-5/base.json",
+      "rawSha256": "b2cd98b1dd335ed00af9298d11854beb7eb6bcb170b73ef2e0c68d75ef9072e2",
+      "rawBytes": 18054,
+      "normalizedSha256": "31e0bc14199f97d737af8b5bcf7a2e8f66785ff4810b506beafcbc4cf03ff1a6",
+      "normalizedBytes": 16688,
+      "replacements": {
+        "<session-scratch>": 7,
+        "<target-worktree>": 20,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions-5/base.log",
+      "rawSha256": "26ca25ebf84c1cbc5fb4b30e5e176d0104478c534f55b49d7c4df983882180ac",
+      "rawBytes": 4361,
+      "normalizedSha256": "41a21b027522c15875690de5f778353457c67743eeea903cd8eabbeaaa859e58",
+      "normalizedBytes": 3941,
+      "replacements": {
+        "<session-scratch>": 3,
+        "<target-worktree>": 3
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions-5/candidate.json",
+      "rawSha256": "8de420484493622cf62116b4dcc8e0bba8e6b8cd7db1465e06406ce3b0edce36",
+      "rawBytes": 6544,
+      "normalizedSha256": "046869da48da7cb724970546e2450ba9023acc1a6d43207330a13c0882a3e160",
+      "normalizedBytes": 5928,
+      "replacements": {
+        "<session-scratch>": 4,
+        "<target-worktree>": 5,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions/base.json",
+      "rawSha256": "a0b0150f1197c06b98ce6dfb42d11e8600f602ecc31351fe8b1c5c36706d39ea",
+      "rawBytes": 9483,
+      "normalizedSha256": "b050d4a128934f2ae23395e1e12e45f93fddc9bafecb34436bcccad5c5a239ab",
+      "normalizedBytes": 8617,
+      "replacements": {
+        "<session-scratch>": 5,
+        "<target-worktree>": 10,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "glyph-regressions/base.log",
+      "rawSha256": "3dc6b5f18ac0f11c1c5de4886dfc6ce8c71f4847365e095244813d03766bc490",
+      "rawBytes": 1742,
+      "normalizedSha256": "913eae12ff538e3f4f5f3cc0397f10182947c4b1955ddeda19bcb59a47f6b018",
+      "normalizedBytes": 1602,
+      "replacements": {
+        "<session-scratch>": 1,
+        "<target-worktree>": 1
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "glyph-regressions/candidate.json",
+      "rawSha256": "7e6bcd64bf18ea72828575ad7101facf18adbb296353fb716062586cdf1ec787",
+      "rawBytes": 6546,
+      "normalizedSha256": "162ace03a912b9eaa354ceef25f1b7a236e04567ba987920d36445df490ddadc",
+      "normalizedBytes": 5930,
+      "replacements": {
+        "<session-scratch>": 4,
+        "<target-worktree>": 5,
+        "<launchpad-worktree>": 1,
+        "<home>": 1
+      }
+    },
+    {
+      "file": "negative-controls/appended-literal.log",
+      "rawSha256": "18442e71961f8d1e635fa68b97c805d014bdb351bf94104932faefd769772836",
+      "rawBytes": 2575,
+      "normalizedSha256": "44b920cb6d16d8f1817d08f01933ddaab085cbd128178ae89603c856f0512215",
+      "normalizedBytes": 2464,
+      "replacements": {
+        "<session-scratch>": 1
+      },
+      "whitespaceNormalized": true
+    },
+    {
+      "file": "negative-controls/candidate.log",
+      "rawSha256": "54c9764c498697d1815a5f773a6ad4662566c737cc2a05f7fcd51dfae97769c0",
+      "rawBytes": 1121,
+      "normalizedSha256": "523e9b96f33e8c9952e537eae10956c557c4061249afcd9541e9b0e8bbe5cb9b",
+      "normalizedBytes": 1011,
+      "replacements": {
+        "<session-scratch>": 1
+      }
+    },
+    {
+      "file": "negative-controls/literal-parameter.log",
+      "rawSha256": "43574a2655242fa10aaaec99f6d872ac6e33d24f4f302cde87976c5e4d719f21",
+      "rawBytes": 2546,
+      "normalizedSha256": "7629ea5277497ed056fb7bde69727d6e87c29992953f44c03bc5bb4ec6eaeda1",
+      "normalizedBytes": 2435,
+      "replacements": {
+        "<session-scratch>": 1
+      },
+      "whitespaceNormalized": true
+    }
+  ],
+  "authoredDocuments": [
+    {
+      "file": "README.md",
+      "replacements": {
+        "../DotLn-Angular-wo034": 1
+      }
+    }
+  ],
+  "whitespaceNormalizedAt": "2026-11-06T23:57:05.968647+00:00"
+}

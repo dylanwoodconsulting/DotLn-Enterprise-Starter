@@ -1,0 +1,29 @@
+
+> nx run tools:lint
+
+(node:99645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "tools"...
+[0m
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/formation-pattern-interface.presentation.ts[24m
+  [2m560:11[22m  [33mwarning[39m  'states' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/two-level-formation-steering.presentation.ts[24m
+  [2m487:35[22m  [33mwarning[39m  'states' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[33m[1m✖ 2 problems (0 errors, 2 warnings)[22m[39m
+[0m
+✖ 2 problems (0 errors, 2 warnings)
+
+
+
+
+ NX   Successfully ran target lint for project tools
+
+
+  Run duration:      5.4s
+  Cache:             0/1 hit (0%)
+  Critical path:     5.4s (1 task)
+  Recoverable time:  <1ms

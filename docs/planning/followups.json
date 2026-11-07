@@ -6774,6 +6774,14 @@
             "WO-034"
           ],
           "at": "2026-11-05T16:10:30.742Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-034 final review (FINAL-001; WO-034-D014): criterion 6's honest-caption alternative holds. A bounded search of 63 and then 945 parameter sets, rerun with a corrected angle metric, found no default in which avoidance does the turning (WO-034-D002, D005), so the caption, moments and comparison say what the run shows, beside the same run with a one-unit ray, and the limits state the 0.74 overlap computed for offered rays of 10 to 12; both critics' findings are disposed and the record stays checked. WO-034-D013 boards the comparison chart's scale and the straight-ahead moment order.",
+          "reopenWhen": "WO-036 changes the wall run or adds a second avoidance, or a later study demonstrates sustained avoidance with a valid short-ray counterfactual.",
+          "targets": [],
+          "at": "2026-11-07T02:52:42.107Z"
         }
       ]
     },
@@ -6807,6 +6815,14 @@
             "WO-034"
           ],
           "at": "2026-11-05T16:10:30.727Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-034 final review (FINAL-001; WO-034-D014): the shared motion drawing ends a guide at its name's near edge, omits a vector too short to carry a head and reserves label room by the font size in use, each with a browser regression that fails on the base drawing and passes on the candidate; the label sweep reads zero clipped and zero overprinted frames for both movement batches at 360, 768, 1440, 2080x1460 and 3840x1620. WO-034-D015 boards the drawing's hand-written breakpoint.",
+          "reopenWhen": "The label sweep reads a cut or overprinted frame at the operator's sizes, or a batch changes motion-labels.ts or motion.html.",
+          "targets": [],
+          "at": "2026-11-07T02:52:42.090Z"
         }
       ]
     },
@@ -7006,6 +7022,14 @@
             "WO-034"
           ],
           "at": "2026-11-05T16:10:30.714Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "settled",
+          "reason": "WO-034 final review (FINAL-001; WO-034-D014): the corpus test brackets every resolved message and refuses letters outside the brackets and literal string parameters outside declared machine values. VER-003's appended literal and literal parameter fail it on scratch copies (the executor's two controls and VER-001's four), it passes on the candidate, and eslint --print-config resolves max-lines-per-function at error with max 80 on study sources.",
+          "reopenWhen": "A study literal reaches the page past the corpus test, or the lint resolution for study sources changes.",
+          "targets": [],
+          "at": "2026-11-07T02:52:42.073Z"
         }
       ]
     },
@@ -7100,6 +7124,14 @@
             "WO-034"
           ],
           "at": "2026-11-05T16:22:43.941Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-034 final review (FINAL-001; WO-034-D014): no model message in studyRxjs/en.json or studyEip/en.json begins with a placeholder. Reading the current strings found 29 count- or placeholder-led messages rather than the estimated 48, each listed with its before and after text in the evidence README, with parameters and mechanisms unchanged. WO-034-D015 boards how nineteen relabelled flow states compose in the text equivalent.",
+          "reopenWhen": "The operator prefers the digits, or a placeholder-led model message appears in a stream catalog.",
+          "targets": [],
+          "at": "2026-11-07T02:52:42.124Z"
         }
       ]
     },
@@ -7126,6 +7158,14 @@
             "WO-034"
           ],
           "at": "2026-11-05T16:10:30.700Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "WO-034 final review (FINAL-001; WO-034-D014): the first movement batch's twenty presentation modules are reshaped with every output unchanged. docs/evidence/WO-034/shape-audit-after.json, reproduced byte for byte, lists no first-batch function over four positional parameters and no valueN placeholder; each of the 23 functions of 70 counted lines or more carries a cohesion judgment in the evidence README; and the production crawl of all forty movement studies differs only in the wall study. The remaining naming and reuse items are boarded as WO-034-D011, D012 and D015.",
+          "reopenWhen": "The operator sets a different bar for presentation code, or a later batch brings back positional-parameter splits or numbered placeholders.",
+          "targets": [],
+          "at": "2026-11-07T02:52:42.055Z"
         }
       ]
     },
@@ -7279,6 +7319,66 @@
           "at": "2026-11-06T20:21:47.673Z"
         }
       ]
+    },
+    {
+      "id": "FUP-faa38e54e1171e05",
+      "key": "decision:docs/evidence/WO-034/decisions.md#wo-034-d011",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "bd1132b23d3bdd677e6be8ebffd57108f304182ad923acf801120033d214f760",
+          "ref": "docs/evidence/WO-034/decisions.md#wo-034-d011",
+          "title": "WO-034-D011: Rename the eleven time-carrying placeholders for what they hold (seconds, duration, turnSeconds and the like) in studyAifg/en.json, the presentation calls and the testing copy, with…",
+          "summary": "{ \"id\": \"WO-034-D011\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify; VER-001 reading of the reshaped presentation modules\", \"decision\": \"Board eleven placeholders in nine of the first batch's presentation modules that are named for a step count while they carry a time in seconds. Every rendered value is right, and no criterion counts these names: criterion 2 counts numbered valueN placeholders, and those are zero. They miss the Design's rule that a placeholder is named for what it holds, so a reader of the message Nia's next update at {{step}} s cannot tell from the name that the value is seconds.\", \"evidence\": [ \"docs/evidence/WO-034/ver-001/time-placeholders.json, written by time-plac",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-4a627aac788f8295",
+      "key": "decision:docs/evidence/WO-034/decisions.md#wo-034-d012",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "64004b37d29822f2d1daaf4619a059eab06e47f07a84ef87b70ac0ba0b38adff",
+          "ref": "docs/evidence/WO-034/decisions.md#wo-034-d012",
+          "title": "WO-034-D012: Build the bounds points of Formation pattern interface and Group movement with motionPoints, and give the zone-extent projection two-level formation steering uses a shared name when a…",
+          "summary": "{ \"id\": \"WO-034-D012\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify; VER-001 reading of the reshaped presentation modules\", \"decision\": \"Board the shared motionPoints projection the reshape left unused. Formation pattern interface's present still rebuilds it inline, the instance WO-028-D060 named, and Group movement's present does the same; of the twenty first-batch modules only Seek imports it. Two-level formation steering builds the same projection plus zone extents. No output changes and no criterion breaks, but D060's rule that studies assembling the same frame part share it is not yet met.\", \"evidence\": [ \"libs/features/tools/src/lib/studies/movement/formation-pattern-interface.pre",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-4e24208e45d27a1d",
+      "key": "decision:docs/evidence/WO-034/decisions.md#wo-034-d013",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "2a0ecd7295bfe641013d01c3ef28ecaec9178e6f90d84c9c40c3a887e91ecaf3",
+          "ref": "docs/evidence/WO-034/decisions.md#wo-034-d013",
+          "title": "WO-034-D013: List the wall study's moments in step order whatever input the reader chooses, and pin the straight-ahead run's moment labels and steps in its spec; show the clearance comparison where…",
+          "summary": "{ \"id\": \"WO-034-D013\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: verify; VER-001 walkthrough of the wall study\", \"decision\": \"Board two small gaps in the wall study's revision. Neither fails criterion 6, whose honest-caption alternative holds, and every moment opens its right frame. First, the comparison chart plots both clearances on the full -0.08 to 12.19 axis, where the 0.2-unit correction is under 2% of its height, so the two traces the caption asks the reader to compare read as one line at both operator sizes; the findings under the chart carry the difference. Second, with the delivery straight ahead at height 0, an input the record's limits invite, the moment buttons now run Ray firs",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-fedaf34d00c578f1",
+      "key": "decision:docs/evidence/WO-034/decisions.md#wo-034-d015",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "691da3f1e034f4c479753935723f414a4034c2567593b6cec5b6c33e07aaf8de",
+          "ref": "docs/evidence/WO-034/decisions.md#wo-034-d015",
+          "title": "WO-034-D015: In the next standards pass over the stream batches, word the nineteen flow state messages so the '<node>: <state>' composition reads as English, or compose the text equivalent without a…",
+          "summary": "{ \"id\": \"WO-034-D015\", \"date\": \"2026-11-06\", \"dispatch\": \"resume: final review; FINAL-001 reading of the diff\", \"decision\": \"Board three findings of this review's reading. None breaks a criterion or a behavior main had. First, the rewording turned nineteen flow state messages into labels ('Records: {{count}}', 'To file: {{remaining}} findings', 'For 7: {{results}} result' and the like), and the flow text equivalent composes each state as '<node>: <state>', so a reader hears 'Work queue: Records: 1'. Second, the motion drawing reads globalThis.matchMedia where the workspace injects DOCUMENT and reads its defaultView, and it repeats the chart-text mixin's 600 px breakpoint and its 15 and 24 px",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

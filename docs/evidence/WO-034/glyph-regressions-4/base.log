@@ -1,0 +1,107 @@
+
+Running 3 tests using 1 worker
+
+(node:68196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] apps/dotln-e2e/src/movement-labels.spec.ts:75:5 › a displaced name guide stops before entering its glyphs
+  1) apps/dotln-e2e/src/movement-labels.spec.ts:75:5 › a displaced name guide stops before entering its glyphs
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 23
+
+    - Array []
+    + Array [
+    +   0,
+    +   1,
+    +   2,
+    +   3,
+    +   4,
+    +   5,
+    +   6,
+    +   7,
+    +   8,
+    +   9,
+    +   10,
+    +   11,
+    +   12,
+    +   13,
+    +   14,
+    +   15,
+    +   16,
+    +   17,
+    +   18,
+    +   19,
+    +   20,
+    + ]
+
+      124 |   }
+      125 |   expect(guides).toBeGreaterThan(0);
+    > 126 |   expect(measurements.filter(({ bad }) => bad).map(({ step }) => step)).toEqual([]);
+          |                                                                         ^
+      127 | });
+      128 |
+      129 | test('a stopped cart leaves no unreadable vector tick', async ({ page }) => {
+        at <target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts:126:73
+
+    Error Context: ../../../..<session-scratch>/glyph-regressions-4/base/movement-labels-a-displace-0b402--before-entering-its-glyphs/error-context.md
+
+
+(node:68269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/3] apps/dotln-e2e/src/movement-labels.spec.ts:129:5 › a stopped cart leaves no unreadable vector tick
+  2) apps/dotln-e2e/src/movement-labels.spec.ts:129:5 › a stopped cart leaves no unreadable vector tick
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      142 |     }),
+      143 |   );
+    > 144 |   expect(lengths.every((length) => length >= 4)).toBe(true);
+          |                                                  ^
+      145 | });
+      146 |
+      147 | test('a wide drawing keeps a fitting trolley name at its authored offset', async ({ page }) => {
+        at <target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts:144:50
+
+    Error Context: ../../../..<session-scratch>/glyph-regressions-4/base/movement-labels-a-stopped--65082-s-no-unreadable-vector-tick/error-context.md
+
+
+(node:68314) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/3] apps/dotln-e2e/src/movement-labels.spec.ts:147:5 › a wide drawing keeps a fitting trolley name at its authored offset
+  3) apps/dotln-e2e/src/movement-labels.spec.ts:147:5 › a wide drawing keeps a fitting trolley name at its authored offset
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 25.380001068115234
+    Received: 59.380001068115234
+
+    Expected precision:    4
+    Expected difference: < 0.00005
+    Received difference:   34
+
+      170 |   expect(placement.fontSize).toBe('15px');
+      171 |   expect(placement.preferredTop).toBeGreaterThanOrEqual(0);
+    > 172 |   expect(placement.actual).toBeCloseTo(placement.preferred, 4);
+          |                            ^
+      173 | });
+      174 |
+        at <target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts:172:28
+
+    Error Context: ../../../..<session-scratch>/glyph-regressions-4/base/movement-labels-a-wide-dra-9a8ef-name-at-its-authored-offset/error-context.md
+
+
+  3 failed
+    apps/dotln-e2e/src/movement-labels.spec.ts:75:5 › a displaced name guide stops before entering its glyphs
+    apps/dotln-e2e/src/movement-labels.spec.ts:129:5 › a stopped cart leaves no unreadable vector tick
+    apps/dotln-e2e/src/movement-labels.spec.ts:147:5 › a wide drawing keeps a fitting trolley name at its authored offset

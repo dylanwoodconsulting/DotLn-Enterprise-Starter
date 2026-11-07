@@ -1,0 +1,38 @@
+{
+ "resolved": {
+  "libs/features/tools/src/lib/studies/movement/wander.presentation.ts": [
+   2,
+   {
+    "max": 80,
+    "skipBlankLines": true,
+    "skipComments": true
+   }
+  ],
+  "libs/features/tools/src/lib/studies/movement/flee.presentation.ts": [
+   2,
+   {
+    "max": 80,
+    "skipBlankLines": true,
+    "skipComments": true
+   }
+  ],
+  "libs/features/tools/src/lib/studies/number-format.ts": [
+   2,
+   {
+    "max": 80,
+    "skipBlankLines": true,
+    "skipComments": true
+   }
+  ]
+ },
+ "enforcement": {
+  "probe": "libs/features/tools/src/lib/studies/movement/verifier-probe.presentation.ts",
+  "exitCode": 1,
+  "maxLinesMessages": [
+   {
+    "severity": 2,
+    "message": "Function 'longProbe' has too many lines (88). Maximum allowed is 80."
+   }
+  ]
+ }
+}

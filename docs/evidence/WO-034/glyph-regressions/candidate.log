@@ -1,0 +1,11 @@
+
+Running 3 tests using 1 worker
+
+(node:35573) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] apps/dotln-e2e/src/movement-labels.spec.ts:75:5 › a displaced name guide stops before entering its glyphs
+[2/3] apps/dotln-e2e/src/movement-labels.spec.ts:129:5 › a stopped cart leaves no unreadable vector tick
+[3/3] apps/dotln-e2e/src/movement-labels.spec.ts:147:5 › a wide drawing keeps a fitting launcher name at its authored offset
+  3 passed (1.9s)

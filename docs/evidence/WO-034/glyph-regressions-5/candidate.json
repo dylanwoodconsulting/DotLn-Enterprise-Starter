@@ -1,0 +1,213 @@
+{
+  "config": {
+    "argv": [
+      "<home>/.local/share/fnm/node-versions/v26.9.0/installation/bin/node",
+      "<target-worktree>/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config",
+      "<session-scratch>/glyph-regressions-5/candidate.config.cjs",
+      "--grep",
+      "a displaced name|a stopped cart|a wide drawing"
+    ],
+    "configFile": "<session-scratch>/glyph-regressions-5/candidate.config.cjs",
+    "rootDir": "<target-worktree>/apps/dotln-e2e/src",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "<session-scratch>/glyph-regressions-5/candidate",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "<target-worktree>/apps/dotln-e2e/src",
+        "testIgnore": [],
+        "testMatch": [
+          "movement-labels.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "<session-scratch>/glyph-regressions-5/candidate",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "<target-worktree>/apps/dotln-e2e/src",
+        "snapshotDir": "<target-worktree>/apps/dotln-e2e/src",
+        "testIgnore": [],
+        "testMatch": "movement-labels.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:54515",
+          "browserName": "chromium",
+          "reducedMotion": "reduce"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "<launchpad-worktree>/docs/evidence/WO-034/glyph-regressions-5/candidate.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "movement-labels.spec.ts",
+      "file": "movement-labels.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a displaced name guide stops before entering its glyphs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 324,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T23:17:13.086Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-2eb4535975b1eb92ae8c",
+          "file": "movement-labels.spec.ts",
+          "line": 75,
+          "column": 5
+        },
+        {
+          "title": "a stopped cart leaves no unreadable vector tick",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T23:17:13.512Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-60f63c78ab7d8d1f0618",
+          "file": "movement-labels.spec.ts",
+          "line": 129,
+          "column": 5
+        },
+        {
+          "title": "a wide drawing keeps a fitting trolley name at its authored offset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T23:17:13.696Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-384081ba41042c08bd1e",
+          "file": "movement-labels.spec.ts",
+          "line": 147,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T23:17:12.877Z",
+    "duration": 1028.419,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

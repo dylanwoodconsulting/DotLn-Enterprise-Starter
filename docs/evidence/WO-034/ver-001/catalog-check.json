@@ -1,0 +1,190 @@
+{
+ "titles": {
+  "studyAifg": {
+   "before": 768,
+   "after": 89,
+   "named": 89,
+   "missing": [],
+   "extra": [],
+   "keptTextUnchanged": true
+  },
+  "studyEip": {
+   "before": 288,
+   "after": 66,
+   "named": 66,
+   "missing": [],
+   "extra": [],
+   "keptTextUnchanged": true
+  },
+  "studyRxjs": {
+   "before": 742,
+   "after": 89,
+   "named": 89,
+   "missing": [],
+   "extra": [],
+   "keptTextUnchanged": true
+  }
+ },
+ "fixtureKeys": [
+  {
+   "key": "studyEip.content-based-router.model.renamedFinding",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.correlation-identifier.model.byArrival.operator",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.correlation-identifier.model.byArrival.label",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.correlation-identifier.model.byArrival.x",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.correlation-identifier.model.byArrival.y",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.correlation-identifier.model.byArrival.z",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.message-expiration.model.verification32",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.message-translator.model.unknownRow",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.message-translator.model.unknownShapeError",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.message-translator.model.refusedMoment",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.process-manager.model.failureStop",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  },
+  {
+   "key": "studyEip.process-manager.model.limitMoment",
+   "atBase": true,
+   "atCandidate": false,
+   "baseReadersOutsideSpecs": [],
+   "inCandidateSpec": true,
+   "sameEnglish": true
+  }
+ ],
+ "drawPairs": {
+  "atBase": true,
+  "atCandidate": false,
+  "readersAtBase": [
+   "libs/features/tools/src/lib/studies/movement/wander.model.spec.ts",
+   "libs/features/tools/src/lib/studies/movement/wander.simulation.ts",
+   "libs/shared/catalog/src/studies/aifg/wander.json"
+  ]
+ },
+ "placeholderStarts": {
+  "studyEip": {
+   "modelMessages": 1022,
+   "startingWithPlaceholder": []
+  },
+  "studyRxjs": {
+   "modelMessages": 486,
+   "startingWithPlaceholder": []
+  }
+ },
+ "sentenceStarts": {
+  "studyEip": [
+   {
+    "key": "message-store.model.example.steps.5.states.log",
+    "text": "down: 3 lost; {{count}} entries"
+   },
+   {
+    "key": "message-store.model.example.steps.6.states.log",
+    "text": "up; {{count}} entries"
+   }
+  ],
+  "studyRxjs": []
+ },
+ "reworded": {
+  "studyEip": {
+   "changed": 25,
+   "listedExactly": 25,
+   "unlisted": [],
+   "added": [],
+   "removedOutsideTitles": [
+    "content-based-router.model.renamedFinding",
+    "correlation-identifier.model.byArrival.operator",
+    "correlation-identifier.model.byArrival.label",
+    "correlation-identifier.model.byArrival.x",
+    "correlation-identifier.model.byArrival.y",
+    "correlation-identifier.model.byArrival.z",
+    "message-expiration.model.verification32",
+    "message-translator.model.unknownRow",
+    "message-translator.model.unknownShapeError",
+    "message-translator.model.refusedMoment",
+    "process-manager.model.failureStop",
+    "process-manager.model.limitMoment"
+   ],
+   "parametersChanged": []
+  },
+  "studyRxjs": {
+   "changed": 4,
+   "listedExactly": 4,
+   "unlisted": [],
+   "added": [],
+   "removedOutsideTitles": [],
+   "parametersChanged": []
+  }
+ },
+ "readmeRows": 29
+}

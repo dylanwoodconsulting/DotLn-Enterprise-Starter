@@ -780,7 +780,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-021 the RxJS studies | twenty operators and subjects with marble drawings their tests share | merged; DotLn-Angular #12, `DotLn Angular v0.8.0` |
 | WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | merged; DotLn-Angular #13, `DotLn Angular v0.9.0` |
 | WO-027 the workspace says and checks what is so | nothing on screen; CI's board count that counts a marker wherever a defect sits, a `check:scripts` that fails on a missing or stale row, a title workflow that leaves a gitmoji-and-subject title as written, reference documents whose command lists match the gate | merged; DotLn-Angular #15, `DotLn Angular v0.10.1` |
-| WO-034 standards pass I | nothing new on screen; the first movement batch's code read as the example, the wall study showing its avoidance, the guards tightened | filed |
+| WO-034 standards pass I | the first movement batch's code read as the example, the wall study explaining its brief clearance correction, the guards tightened | final-reviewed; DotLn-Angular #16; [evidence](../evidence/WO-034/README.md) |
 | WO-023 the enterprise pattern studies | twenty patterns with state drawings and small executable models, and where the app embodies each | filed |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
 | WO-035 every string on screen through the message system | nothing changed on screen; the catalog's mined text arriving through the message system, a missing message a visible failure | filed |
@@ -848,7 +848,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-023 | filed    | [the order](../work-orders/WO-023-concept-studies-poeaa.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
 | WO-027 | merged   | DotLn-Angular #15, `DotLn Angular v0.10.1`, its records #61; [evidence](../evidence/WO-027/README.md) |
-| WO-034 | filed    | [the order](../work-orders/WO-034-standards-pass-movement-presentations.md) |
+| WO-034 | final-reviewed | DotLn-Angular #16; [evidence](../evidence/WO-034/README.md) |
 | WO-035 | filed    | [the order](../work-orders/WO-035-catalog-text-through-messages.md) |
 | WO-036 | filed    | [the order](../work-orders/WO-036-scene-walls-and-ways.md) |
 | WO-037 | filed    | [the order](../work-orders/WO-037-scene-shooting-and-bullets.md) |

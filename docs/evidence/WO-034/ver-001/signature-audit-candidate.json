@@ -1,0 +1,5372 @@
+{
+ "schemaVersion": 1,
+ "summary": {
+  "files": 20,
+  "functions": 680,
+  "topLevelFunctions": 250,
+  "overFourParameters": 0,
+  "inlineObjectParameters": 0,
+  "borrowedParameterTypes": 0,
+  "topLevelWithoutReturnType": 10,
+  "flagged": 10,
+  "spellingTotals": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 4,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 20
+  }
+ },
+ "flags": [
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "namedPoints",
+   "line": 44,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "isArrived",
+   "line": 295,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "orderName",
+   "line": 54,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "closingRate",
+   "line": 106,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "namedPoints",
+   "line": 94,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "gapOf",
+   "line": 99,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "gapRate",
+   "line": 101,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "describeAssignment",
+   "line": 92,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "arrived",
+   "line": 166,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "comparisonChecks",
+   "line": 380,
+   "topLevel": true,
+   "problems": [
+    "no declared return type"
+   ]
+  }
+ ],
+ "spellings": {
+  "align.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "arrive.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "equilibrium-fallback.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 1,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "face.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "fixed-formations.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "flocking.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "formation-pattern-interface.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 1,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "group-movement.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "making-the-creatures.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "priority-steering.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 1,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "pursue.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "scalable-formations.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "seek.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "separation.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "slot-assignment.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "steering-pipeline.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "two-level-formation-steering.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 1,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "velocity-matching.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "wander.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  },
+  "weighted-blending.presentation.ts": {
+   "toFixed": 0,
+   "toPrecision": 0,
+   "intlNumberFormat": 0,
+   "stringOfNumber": 0,
+   "mathRoundDivision": 0,
+   "createNumberFormat": 1
+  }
+ },
+ "topLevel": [
+  {
+   "file": "align.presentation.ts",
+   "name": "selectMoments",
+   "line": 27,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: AlignParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly AlignSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "AlignmentMoments"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "workedLines",
+   "line": 67,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: AlignFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "workedStep",
+   "line": 121,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: AlignFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "phaseOf",
+   "line": 163,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: AlignFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "frameOf",
+   "line": 188,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: AlignFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "summarise",
+   "line": 274,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "states: readonly AngularState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: AlignParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "AlignmentSummary"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "lateBraking",
+   "line": 294,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: AlignParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "current: readonly AngularState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "runTimeline",
+   "line": 374,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly AngularState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: AlignParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "calculations: AlignStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "runMoments",
+   "line": 403,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "selection: AlignmentMoments",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "runInputs",
+   "line": 432,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "align.presentation.ts",
+   "name": "present",
+   "line": 453,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: AlignParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly AlignSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "parameters: StudyParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "describeComparison",
+   "line": 17,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: ArriveParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "normal: readonly ArriveState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "ArrivalComparison"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "brief",
+   "line": 70,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "value: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "phaseOf",
+   "line": 80,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: ArriveFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "workedLines",
+   "line": 98,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: ArriveFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "workedStep",
+   "line": 161,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: ArriveFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "frameOf",
+   "line": 215,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: ArriveFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "peakOf",
+   "line": 252,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frames: readonly ArriveState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: ArriveParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "ArrivalPeak"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "lateBrakingTimeline",
+   "line": 262,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "comparison: ArrivalComparison",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "lateBraking",
+   "line": 302,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: ArriveParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "normal: readonly ArriveState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "runTimeline",
+   "line": 361,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: ArriveParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly ArriveSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "arrive.presentation.ts",
+   "name": "present",
+   "line": 397,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: ArriveParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly ArriveSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "noteOf",
+   "line": 48,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: EquilibriumStep",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: EquilibriumParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "index: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "describeRun",
+   "line": 69,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: EquilibriumParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: readonly EquilibriumStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "EquilibriumDescription"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "frameWorked",
+   "line": 133,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: EquilibriumFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "compareRuns",
+   "line": 187,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: EquilibriumDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "frameValues",
+   "line": 245,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: EquilibriumFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "runMoments",
+   "line": 289,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: EquilibriumDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "motionFrames",
+   "line": 324,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: EquilibriumDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionFrame[]"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "runTimeline",
+   "line": 395,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: EquilibriumDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "present",
+   "line": 427,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: EquilibriumParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: readonly EquilibriumStep[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "equilibrium-fallback.presentation.ts",
+   "name": "groupName",
+   "line": 497,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "describeFrame",
+   "line": 33,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: FaceParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: FaceSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "parameterValues: StudyValues",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "FaceFrameDescription"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "alignmentLines",
+   "line": 45,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "workedLines",
+   "line": 100,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "workedStep",
+   "line": 152,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "phaseOf",
+   "line": 176,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "frameValues",
+   "line": 211,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "frameOf",
+   "line": 258,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: FaceFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "slowMotor",
+   "line": 317,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: FaceParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "currentSamples: readonly FaceSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "runTimeline",
+   "line": 393,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly AngularState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: FaceParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "calculations: FaceStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "runInputs",
+   "line": 423,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "face.presentation.ts",
+   "name": "present",
+   "line": 444,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: FaceParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly FaceSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "parameters: StudyParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "describeRun",
+   "line": 20,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: FixedFormationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly FixedFormationSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "FixedFormationDescription"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "namedPoints",
+   "line": 44,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "points: readonly Vec2[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "spacingInput",
+   "line": 56,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyInput"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "turnInput",
+   "line": 63,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyInput"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "workedStep",
+   "line": 72,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FixedFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: FixedFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "frameNote",
+   "line": 137,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FixedFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: FixedFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "frameOf",
+   "line": 155,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FixedFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: FixedFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "comparison",
+   "line": 226,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FixedFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "runTimeline",
+   "line": 292,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FixedFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "fixed-formations.presentation.ts",
+   "name": "present",
+   "line": 314,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: FixedFormationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly FixedFormationSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "describeRun",
+   "line": 36,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "p: FlockingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly FlockingSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "FlockDescription"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "workedLines",
+   "line": 101,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: FlockFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "calculation: FlockCalculation",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "worked",
+   "line": 176,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: FlockFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "layoutOf",
+   "line": 236,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "samples: readonly FlockingSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "p: FlockingParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "FlockLayout"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "flockNote",
+   "line": 267,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "walkers: readonly Walker[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "p: FlockingParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "frameLinks",
+   "line": 298,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "description: FlockFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionLink[]"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "steeringRows",
+   "line": 320,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "weighted: FlockForces",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "r: FlockingReading",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly AccelerationRow[]"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "labelMarks",
+   "line": 354,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: FlockFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionMark[]"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "describeFrame",
+   "line": 387,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FlockDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: FlockingSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "FlockFrame"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "frameOf",
+   "line": 460,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: FlockFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "compareRuns",
+   "line": 530,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: FlockDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "inputsOf",
+   "line": 582,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "present",
+   "line": 603,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "p: FlockingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly FlockingSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "flocking.presentation.ts",
+   "name": "walkerName",
+   "line": 661,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "describeRun",
+   "line": 71,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: RosterParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly RosterSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "RosterDescription"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "noteOf",
+   "line": 97,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: RosterFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "frameValues",
+   "line": 128,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: RosterFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "describeFrame",
+   "line": 193,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: RosterSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: RosterParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "RosterFrame"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "frameWorkedLines",
+   "line": 259,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: RosterFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "frameWorked",
+   "line": 337,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: RosterFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "frameOf",
+   "line": 347,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: RosterFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "compareRuns",
+   "line": 412,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: RosterDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "runTimeline",
+   "line": 465,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: RosterDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "motionLegend",
+   "line": 503,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyLegendEntry[]"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "runMoments",
+   "line": 532,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: RosterParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "present",
+   "line": 554,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: RosterParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly RosterSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "formation-pattern-interface.presentation.ts",
+   "name": "escortName",
+   "line": 598,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "describeFrame",
+   "line": 36,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: GroupDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: GroupSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "GroupFrame"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "arrivalSummary",
+   "line": 133,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly GroupState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: GroupExample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "ArrivalSummary"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "describeWorkedStep",
+   "line": 157,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "sample: GroupSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: GroupExample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MedicStep"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "memberLines",
+   "line": 187,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "workedLines",
+   "line": 200,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "workedStep",
+   "line": 276,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "isArrived",
+   "line": 295,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "state: GroupState",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "index: number",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: GroupExample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "frameNote",
+   "line": 301,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "frameValues",
+   "line": 325,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "frameMarks",
+   "line": 358,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionMark[]"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "frameOf",
+   "line": 386,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: GroupFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "describeRun",
+   "line": 429,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: GroupExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly GroupState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "GroupDescription"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "comparisonTimeline",
+   "line": 475,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: GroupDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "compareRuns",
+   "line": 510,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: GroupDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "runTimeline",
+   "line": 548,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: GroupDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "runMoments",
+   "line": 575,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: GroupDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "present",
+   "line": 599,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: GroupExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly GroupSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "group-movement.presentation.ts",
+   "name": "memberName",
+   "line": 660,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "index: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "describeRun",
+   "line": 34,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "p: CreatureParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly CreatureSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "CreatureDescription"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "worked",
+   "line": 87,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: CreatureFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "layoutOf",
+   "line": 174,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "samples: readonly CreatureSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "p: CreatureParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "CreatureLayout"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "creatureNote",
+   "line": 218,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "observation: CreatureObservation",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "steeringRows",
+   "line": 247,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "social: Vec2",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "weighted: CreatureForces",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "r: CreatureReading",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly AccelerationRow[]"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "labelMarks",
+   "line": 277,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "description: CreatureFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionMark[]"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "describeFrame",
+   "line": 301,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: CreatureDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: CreatureSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "CreatureFrame"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "frameOf",
+   "line": 378,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: CreatureFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "compareRuns",
+   "line": 458,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: CreatureDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "runTimeline",
+   "line": 511,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: CreatureDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "present",
+   "line": 536,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "p: CreatureParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly CreatureSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "making-the-creatures.presentation.ts",
+   "name": "creatureName",
+   "line": 603,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "orderName",
+   "line": 54,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "priority: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "noteOf",
+   "line": 59,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: PriorityStep",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "contactDistance: number",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PriorityParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "describeRun",
+   "line": 84,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PriorityParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: readonly PriorityStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PriorityDescription"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "frameWorked",
+   "line": 142,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: PriorityFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "compareRuns",
+   "line": 211,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: PriorityDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "frameValues",
+   "line": 263,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: PriorityFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "pushDirection: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "runTimeline",
+   "line": 296,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: PriorityDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "frameVectors",
+   "line": 328,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "step: PriorityStep",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: PriorityDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionVector[]"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "motionFrames",
+   "line": 353,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "reading: PriorityDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionFrame[]"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "runInputs",
+   "line": 416,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "present",
+   "line": 445,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PriorityParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: readonly PriorityStep[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "priority-steering.presentation.ts",
+   "name": "groupName",
+   "line": 522,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "describePursuit",
+   "line": 25,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly PursueFrame[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PursuitDescription"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "workedStep",
+   "line": 40,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "closingRate",
+   "line": 106,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frame: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "phaseNote",
+   "line": 112,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "previous?: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "frameOf",
+   "line": 132,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "previous?: PursueFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "labelFrame",
+   "line": 207,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: MotionFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "layout: MotionLabelRow",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "comparison",
+   "line": 221,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "runTimeline",
+   "line": 292,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PursuitDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "runMoments",
+   "line": 314,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PursuitDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "motionFrames",
+   "line": 333,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PursuitDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionFrame[]"
+  },
+  {
+   "file": "pursue.presentation.ts",
+   "name": "present",
+   "line": 352,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PursueParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly PursueFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "describeRun",
+   "line": 47,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: ScalableFormationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly ScalableFormationSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "ScalableFormationDescription"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "inputs",
+   "line": 67,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "namedPoints",
+   "line": 94,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "points: readonly Vec2[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "workedStep",
+   "line": 104,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: ScalableFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: ScalableFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "boundsOf",
+   "line": 166,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "samples: readonly ScalableFormationSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: ScalableFormationParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionBounds"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "frameNote",
+   "line": 192,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: ScalableFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: ScalableFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "frameValues",
+   "line": 211,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: ScalableFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: ScalableFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "frameOf",
+   "line": 248,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: ScalableFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: ScalableFormationSample",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "comparisonTimeline",
+   "line": 309,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "comparison: MembershipComparison",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "comparison",
+   "line": 361,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: ScalableFormationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "motionLegend",
+   "line": 423,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyLegendEntry[]"
+  },
+  {
+   "file": "scalable-formations.presentation.ts",
+   "name": "present",
+   "line": 452,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: ScalableFormationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly ScalableFormationSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "workedStep",
+   "line": 39,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeekFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "motionRelation",
+   "line": 97,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeekFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "phaseNote",
+   "line": 112,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeekFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "frameOf",
+   "line": 135,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeekFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "labelFrame",
+   "line": 203,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: MotionFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "layout: MotionLabelRow",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "comparison",
+   "line": 216,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: SeekParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "runMoments",
+   "line": 278,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: SeekParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "selection: SeekMoments",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "runTimeline",
+   "line": 307,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frames: MotionFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "gaps: number[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "seek.presentation.ts",
+   "name": "present",
+   "line": 326,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SeekParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly SeekSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "describeRun",
+   "line": 25,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SeparationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "squareSamples: readonly SeparationSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "SeparationDescription"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "gapOf",
+   "line": 99,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "pair: ShelfPair",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "gapRate",
+   "line": 101,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "pair: ShelfPair",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "motionOf",
+   "line": 107,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "pair: ShelfPair",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: SeparationParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "noteOf",
+   "line": 117,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeparationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "calculationLines",
+   "line": 138,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: SeparationSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: SeparationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "falloff: 1 | 2",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "frameValues",
+   "line": 202,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeparationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "frameWorked",
+   "line": 228,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeparationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "frameOf",
+   "line": 254,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: SeparationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "compareRuns",
+   "line": 318,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: SeparationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "runMoments",
+   "line": 396,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: SeparationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "runTimeline",
+   "line": 425,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: SeparationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "runInputs",
+   "line": 451,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "separation.presentation.ts",
+   "name": "present",
+   "line": 472,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SeparationParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "squareSamples: readonly SeparationSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "describeRun",
+   "line": 53,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SlotExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "assignment: readonly SlotAssignment[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "AllocationDescription"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "unitPoint",
+   "line": 82,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SlotExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "index: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyPoint"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "slotPoint",
+   "line": 87,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SlotExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "slot: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyPoint"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "describeAssignment",
+   "line": 92,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "assignment: readonly SlotAssignment[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "allocationNote",
+   "line": 102,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: AllocationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "describeFrame",
+   "line": 130,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: AllocationDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "stage: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "AllocationFrame"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "frameWorked",
+   "line": 193,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: AllocationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "frameOf",
+   "line": 252,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: AllocationFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "compareRuns",
+   "line": 309,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: AllocationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "runTimeline",
+   "line": 386,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: AllocationDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "present",
+   "line": 414,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: SlotExample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "assignment: readonly SlotAssignment[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "guardName",
+   "line": 474,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "roleName",
+   "line": 487,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "slot-assignment.presentation.ts",
+   "name": "roleLabel",
+   "line": 500,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "describeRun",
+   "line": 43,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly PipelineSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PipelineDescription"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "describeRequest",
+   "line": 93,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "sample: PipelineSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "WaypointRequest"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "arrived",
+   "line": 166,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "state: PipelineState",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "workedAttempt",
+   "line": 170,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: PipelineFrame",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "attempt: PipelineAttempt",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "index: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "workedLines",
+   "line": 215,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: PipelineFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "workedStep",
+   "line": 275,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: PipelineFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "pipelinePhase",
+   "line": 350,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "sample: PipelineSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "route: readonly Vec2[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PipelinePhase"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "readingOf",
+   "line": 370,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: PipelineSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "route: readonly Vec2[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PipelineReading"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "comparisonChecks",
+   "line": 380,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": null
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "frameMarks",
+   "line": 383,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: PipelineFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionMark[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "describeFrame",
+   "line": 415,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: PipelineSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "PipelineFrame"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "frameOf",
+   "line": 486,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: PipelineFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "boundsOf",
+   "line": 556,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frames: readonly MotionFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionBounds"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "spaceLabels",
+   "line": 582,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frames: readonly MotionFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "bounds: MotionBounds",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionFrame[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "compareRuns",
+   "line": 610,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PipelineDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "runMoments",
+   "line": 675,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PipelineDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "runTimeline",
+   "line": 714,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: PipelineDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "runInputs",
+   "line": 742,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "steering-pipeline.presentation.ts",
+   "name": "present",
+   "line": 763,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: PipelineParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly PipelineSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "describeRun",
+   "line": 63,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: EscortParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "samples: readonly EscortSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "EscortDescription"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "peakError",
+   "line": 77,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "run: readonly EscortState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "number"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "noteOf",
+   "line": 83,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "escortWorkedLines",
+   "line": 104,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "frameValues",
+   "line": 183,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "frameMarks",
+   "line": 227,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionMark[]"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "frameBodies",
+   "line": 260,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly MotionBody[]"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "describeFrame",
+   "line": 285,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "sample: EscortSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: EscortParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "EscortFrame"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "frameOf",
+   "line": 328,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: EscortFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "compareRuns",
+   "line": 365,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: EscortDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "motionLegend",
+   "line": 419,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyLegendEntry[]"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "runTimeline",
+   "line": 454,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: EscortDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "present",
+   "line": 481,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: EscortParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly EscortSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "two-level-formation-steering.presentation.ts",
+   "name": "escortName",
+   "line": 552,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "value: string",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "describeMatching",
+   "line": 21,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: VelocityMatchingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly VelocityMatchingSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "VelocityMatchingSummary"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "workedStep",
+   "line": 60,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: VelocityFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "frameNote",
+   "line": 116,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: VelocityFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "frameOf",
+   "line": 137,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: VelocityFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "shortResponseComparison",
+   "line": 209,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly VelocityMatchingState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: VelocityMatchingParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "runMoments",
+   "line": 277,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: VelocityMatchingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "summary: VelocityMatchingSummary",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "runTimeline",
+   "line": 312,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frames: MotionFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: VelocityMatchingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly VelocityMatchingState[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "runInputs",
+   "line": 341,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "velocity-matching.presentation.ts",
+   "name": "present",
+   "line": 362,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: VelocityMatchingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly VelocityMatchingSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "selectMoments",
+   "line": 33,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "calculations: readonly WanderStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "WanderMoments"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "describeFrame",
+   "line": 45,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: WanderParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: WanderSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "WanderFrameDescription"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "workedStep",
+   "line": 91,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: WanderFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "frameNote",
+   "line": 155,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: WanderFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "frameValues",
+   "line": 176,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "frame: WanderFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "frameOf",
+   "line": 235,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frame: WanderFrameDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "narrowCircleComparison",
+   "line": 285,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "states: readonly WanderState[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: WanderParameters",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "runMoments",
+   "line": 344,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: WanderParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "selection: WanderMoments",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "runTimeline",
+   "line": 375,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "frames: MotionFrame[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "calculations: WanderStep[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "wander.presentation.ts",
+   "name": "present",
+   "line": 403,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: WanderParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly WanderSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "describeRun",
+   "line": 39,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "example: WeightedBlendingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly BlendingSample[]",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "BlendingDescription"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "relationToRobot",
+   "line": 132,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "position: Vec2",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "robot: Vec2",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "directionOf",
+   "line": 153,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "offset: Vec2",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "pullsOf",
+   "line": 174,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: BlendingStep",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "noteOf",
+   "line": 185,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: BlendingFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "string"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "frameWorkedLines",
+   "line": 229,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: BlendingFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly string[]"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "frameWorked",
+   "line": 306,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: BlendingFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyWorkedStep"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "describeFrame",
+   "line": 324,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "run: BlendingDescription",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "sample: BlendingSample",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "step: number",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "BlendingFrame"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "frameValues",
+   "line": 359,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: BlendingFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyValues"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "frameOf",
+   "line": 401,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "description: BlendingFrame",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionFrame"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "compareRuns",
+   "line": 470,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: BlendingDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "StudyComparison"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "runMoments",
+   "line": 525,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: BlendingDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyMoment[]"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "runTimeline",
+   "line": 558,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "run: BlendingDescription",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "TimelineModel"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "motionLegend",
+   "line": 585,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyLegendEntry[]"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "inputsOf",
+   "line": 606,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "readonly StudyInput[]"
+  },
+  {
+   "file": "weighted-blending.presentation.ts",
+   "name": "present",
+   "line": 627,
+   "topLevel": true,
+   "parameters": [
+    {
+     "text": "example: WeightedBlendingParameters",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "statesSamples: readonly BlendingSample[]",
+     "kind": "named",
+     "destructured": 0
+    },
+    {
+     "text": "t: StudyTranslate",
+     "kind": "named",
+     "destructured": 0
+    }
+   ],
+   "returnType": "MotionStudyModel"
+  }
+ ]
+}

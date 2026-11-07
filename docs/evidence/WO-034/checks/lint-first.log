@@ -1,0 +1,242 @@
+
+> nx run tools:lint
+
+(node:75727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/eslint:lint` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/eslint:convert-to-inferred` to migrate to the `@nx/eslint/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+
+Linting "tools"...
+[0m
+[4m<target-worktree>/libs/features/tools/src/lib/composites/study-visuals/motion/motion-drawing.spec.ts[24m
+  [2m153:17[22m  [33mwarning[39m  Forbidden non-null assertion  [2m@typescript-eslint/no-non-null-assertion[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/composites/study-visuals/motion/motion.ts[24m
+  [2m33:28[22m  [31merror[39m  Presentational components receive inputs; they do not inject  [2mno-restricted-syntax[22m
+  [2m53:5[22m   [31merror[39m  Presentational components receive inputs; they do not inject  [2mno-restricted-syntax[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/align.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m496:27[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/arrive.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                                   [2msimple-import-sort/imports[22m
+  [2m169:9[22m   [33mwarning[39m  'position' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m171:9[22m   [33mwarning[39m  'desired' is assigned a value but never used. Allowed unused vars must match /^_/u   [2m@typescript-eslint/no-unused-vars[22m
+  [2m415:27[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u              [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/equilibrium-fallback.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/face.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m493:27[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/fixed-formations.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/flocking.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/formation-pattern-interface.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m561:33[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/group-movement.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                                         [2msimple-import-sort/imports[22m
+  [2m189:16[22m  [33mwarning[39m  'example' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m189:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m192:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u            [2m@typescript-eslint/no-unused-vars[22m
+  [2m193:5[22m   [33mwarning[39m  'slots' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m194:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m195:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m196:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m197:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m198:5[22m   [33mwarning[39m  'anchorLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m199:5[22m   [33mwarning[39m  'beaconLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m200:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m213:1[22m   [31merror[39m    Function 'workedLines' has too many lines (81). Maximum allowed is 80                      [2mmax-lines-per-function[22m
+  [2m215:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m219:5[22m   [33mwarning[39m  'slots' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m220:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m221:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m222:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m223:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m224:5[22m   [33mwarning[39m  'anchorLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m225:5[22m   [33mwarning[39m  'beaconLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m298:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m299:5[22m   [33mwarning[39m  'state' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m300:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m302:5[22m   [33mwarning[39m  'slots' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m303:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m304:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m305:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m306:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m307:5[22m   [33mwarning[39m  'anchorLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m308:5[22m   [33mwarning[39m  'beaconLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m309:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m333:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m335:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m337:5[22m   [33mwarning[39m  'slots' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m338:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m339:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m340:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m342:5[22m   [33mwarning[39m  'anchorLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m343:5[22m   [33mwarning[39m  'beaconLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m344:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m367:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m368:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u            [2m@typescript-eslint/no-unused-vars[22m
+  [2m369:5[22m   [33mwarning[39m  'slots' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m373:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m374:5[22m   [33mwarning[39m  'anchorLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m375:5[22m   [33mwarning[39m  'beaconLabel' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m376:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m405:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m407:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m408:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u            [2m@typescript-eslint/no-unused-vars[22m
+  [2m410:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m411:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m412:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m413:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m416:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m440:25[22m  [33mwarning[39m  'runValues' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m442:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m445:5[22m   [33mwarning[39m  'error' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m446:5[22m   [33mwarning[39m  'memberRelation' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m447:5[22m   [33mwarning[39m  'gapOwner' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m448:5[22m   [33mwarning[39m  'slowing' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m451:12[22m  [33mwarning[39m  'description' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m664:30[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u                    [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/making-the-creatures.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                            [2msimple-import-sort/imports[22m
+  [2m281:5[22m   [33mwarning[39m  'r' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m282:12[22m  [33mwarning[39m  'p' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts[24m
+  [2m176:22[22m  [33mwarning[39m  Forbidden non-null assertion  [2m@typescript-eslint/no-non-null-assertion[22m
+  [2m177:22[22m  [33mwarning[39m  Forbidden non-null assertion  [2m@typescript-eslint/no-non-null-assertion[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/obstacle-and-wall-avoidance.presentation.ts[24m
+   [2m1:1[22m  [31merror[39m    Run autofix to sort these imports!                                               [2msimple-import-sort/imports[22m
+  [2m19:3[22m  [33mwarning[39m  'wallClearance' is defined but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/priority-steering.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/pursue.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/scalable-formations.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/seek.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m334:33[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/separation.presentation.ts[24m
+  [2m1:1[22m  [31merror[39m  Run autofix to sort these imports!  [2msimple-import-sort/imports[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/slot-assignment.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                                     [2msimple-import-sort/imports[22m
+  [2m104:12[22m  [33mwarning[39m  'example' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m197:5[22m   [33mwarning[39m  'excess' is assigned a value but never used. Allowed unused vars must match /^_/u      [2m@typescript-eslint/no-unused-vars[22m
+  [2m255:21[22m  [33mwarning[39m  'assignment' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m257:5[22m   [33mwarning[39m  'excess' is assigned a value but never used. Allowed unused vars must match /^_/u      [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/steering-pipeline.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                                       [2msimple-import-sort/imports[22m
+  [2m177:35[22m  [33mwarning[39m  'result' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m179:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m180:5[22m   [33mwarning[39m  'route' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m181:16[22m  [33mwarning[39m  'gap' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m181:21[22m  [33mwarning[39m  'stop' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m181:27[22m  [33mwarning[39m  'desiredSpeed' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m181:41[22m  [33mwarning[39m  'desired' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m181:50[22m  [33mwarning[39m  'requested' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m222:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m223:5[22m   [33mwarning[39m  'route' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m282:15[22m  [33mwarning[39m  'state' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m285:5[22m   [33mwarning[39m  'route' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m286:16[22m  [33mwarning[39m  'gap' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m286:21[22m  [33mwarning[39m  'stop' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m286:27[22m  [33mwarning[39m  'desiredSpeed' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m286:41[22m  [33mwarning[39m  'desired' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m286:50[22m  [33mwarning[39m  'requested' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m300:1[22m   [31merror[39m    Function 'readingOf' has too many lines (88). Maximum allowed is 80                      [2mmax-lines-per-function[22m
+  [2m395:15[22m  [33mwarning[39m  'state' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m397:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m399:16[22m  [33mwarning[39m  'gap' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m399:21[22m  [33mwarning[39m  'stop' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m399:27[22m  [33mwarning[39m  'desiredSpeed' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m399:41[22m  [33mwarning[39m  'desired' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m399:50[22m  [33mwarning[39m  'requested' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m503:5[22m   [33mwarning[39m  'route' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m504:16[22m  [33mwarning[39m  'gap' is assigned a value but never used. Allowed unused vars must match /^_/u           [2m@typescript-eslint/no-unused-vars[22m
+  [2m504:21[22m  [33mwarning[39m  'stop' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m504:27[22m  [33mwarning[39m  'desiredSpeed' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m504:41[22m  [33mwarning[39m  'desired' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m504:50[22m  [33mwarning[39m  'requested' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m631:5[22m   [33mwarning[39m  'selection' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+  [2m730:57[22m  [33mwarning[39m  'selection' is assigned a value but never used. Allowed unused vars must match /^_/u     [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/two-level-formation-steering.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m488:33[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/velocity-matching.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m368:30[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/wander.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                       [2msimple-import-sort/imports[22m
+  [2m410:30[22m  [33mwarning[39m  'state' is defined but never used. Allowed unused args must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+
+[4m<target-worktree>/libs/features/tools/src/lib/studies/movement/weighted-blending.presentation.ts[24m
+    [2m1:1[22m   [31merror[39m    Run autofix to sort these imports!                                                       [2msimple-import-sort/imports[22m
+  [2m187:21[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m191:5[22m   [33mwarning[39m  'robot' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m192:5[22m   [33mwarning[39m  'target' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m193:5[22m   [33mwarning[39m  'rawMagnitude' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m194:5[22m   [33mwarning[39m  'factor' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m235:21[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m238:5[22m   [33mwarning[39m  'step' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m313:21[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m314:5[22m   [33mwarning[39m  'body' is assigned a value but never used. Allowed unused vars must match /^_/u          [2m@typescript-eslint/no-unused-vars[22m
+  [2m315:5[22m   [33mwarning[39m  'calculation' is assigned a value but never used. Allowed unused vars must match /^_/u   [2m@typescript-eslint/no-unused-vars[22m
+  [2m317:5[22m   [33mwarning[39m  'robot' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m318:5[22m   [33mwarning[39m  'target' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m319:5[22m   [33mwarning[39m  'rawMagnitude' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m320:5[22m   [33mwarning[39m  'factor' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m376:5[22m   [33mwarning[39m  'robot' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m377:5[22m   [33mwarning[39m  'target' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m378:5[22m   [33mwarning[39m  'rawMagnitude' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m379:5[22m   [33mwarning[39m  'factor' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m418:21[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m422:5[22m   [33mwarning[39m  'robot' is assigned a value but never used. Allowed unused vars must match /^_/u         [2m@typescript-eslint/no-unused-vars[22m
+  [2m423:5[22m   [33mwarning[39m  'target' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m424:5[22m   [33mwarning[39m  'rawMagnitude' is assigned a value but never used. Allowed unused vars must match /^_/u  [2m@typescript-eslint/no-unused-vars[22m
+  [2m425:5[22m   [33mwarning[39m  'factor' is assigned a value but never used. Allowed unused vars must match /^_/u        [2m@typescript-eslint/no-unused-vars[22m
+  [2m545:20[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+  [2m578:51[22m  [33mwarning[39m  'reading' is assigned a value but never used. Allowed unused vars must match /^_/u       [2m@typescript-eslint/no-unused-vars[22m
+
+[31m[1m✖ 164 problems (25 errors, 139 warnings)[22m[39m
+[31m[1m  21 errors and 0 warnings potentially fixable with the `--fix` option.[22m[39m
+[0m
+✖ 164 problems (25 errors, 139 warnings)
+
+  21 errors and 0 warnings are potentially fixable with the `--fix` option.
+
+
+
+
+ NX   Running target lint for project tools failed
+
+Failed tasks:
+
+- tools:lint
+
+Hint: run the command with --verbose for more details.
+
+  Run duration:      5.4s
+  Critical path:     5.4s (1 task)
+  Recoverable time:  <1ms

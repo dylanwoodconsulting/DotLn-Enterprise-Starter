@@ -1,0 +1,12 @@
+
+ NX   1 task: 0 succeeded, 1 failed
+
+
+✖ nx run tools:test
+  full log: <target-worktree>/.nx/cache/terminalOutputs/13542016053967784279
+
+Re-run with --output-style=static to inline logs.
+
+  Run duration:      22.3s
+  Critical path:     22.3s (1 task)
+  Recoverable time:  <1ms

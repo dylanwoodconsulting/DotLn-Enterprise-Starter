@@ -1,0 +1,27 @@
+
+> nx run dotln-e2e:lint
+
+> eslint .
+
+(node:62127) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[0m
+[4m<target-worktree>/apps/dotln-e2e/src/catalog.spec.ts[24m
+  [2m485:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m492:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m516:11[22m  [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m787:9[22m   [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+  [2m915:9[22m   [33mwarning[39m  Unexpected use of page.waitForTimeout()  [2mplaywright/no-wait-for-timeout[22m
+
+[33m[1m✖ 5 problems (0 errors, 5 warnings)[22m[39m
+[0m
+
+
+
+ NX   Successfully ran target lint for project dotln-e2e
+
+
+  Run duration:      1.4s
+  Cache:             0/1 hit (0%)
+  Critical path:     1.4s (1 task)
+  Recoverable time:  <1ms

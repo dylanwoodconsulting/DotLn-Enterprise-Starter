@@ -1,0 +1,5829 @@
+{
+  "schemaVersion": 1,
+  "subject": "libs/features/tools/src/lib/studies and apps/dotln/public/i18n/studyAifg/en.json",
+  "groups": [
+    {
+      "group": "eip",
+      "files": 20,
+      "functions": 96,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 3,
+      "lines70to80": 0,
+      "longest": 39
+    },
+    {
+      "group": "movement shared helpers",
+      "files": 1,
+      "functions": 17,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 3,
+      "lines70to80": 0,
+      "longest": 32
+    },
+    {
+      "group": "movement, first batch (WO-020)",
+      "files": 60,
+      "functions": 927,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 4,
+      "lines70to80": 23,
+      "longest": 79
+    },
+    {
+      "group": "movement, second batch (WO-028)",
+      "files": 60,
+      "functions": 730,
+      "parameters6": 39,
+      "parameters8": 1,
+      "mostParameters": 8,
+      "lines70to80": 11,
+      "longest": 77
+    },
+    {
+      "group": "rxjs",
+      "files": 21,
+      "functions": 123,
+      "parameters6": 0,
+      "parameters8": 0,
+      "mostParameters": 5,
+      "lines70to80": 0,
+      "longest": 53
+    },
+    {
+      "group": "shared",
+      "files": 9,
+      "functions": 186,
+      "parameters6": 1,
+      "parameters8": 1,
+      "mostParameters": 9,
+      "lines70to80": 0,
+      "longest": 64
+    }
+  ],
+  "firstBatchPresentations": [
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "selectMoments",
+      "line": 27,
+      "parameters": 2,
+      "lines": 22
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 31,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 32,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 35,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 39,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 42,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 45,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 67,
+      "parameters": 2,
+      "lines": 52
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 121,
+      "parameters": 2,
+      "lines": 40
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "phaseOf",
+      "line": 163,
+      "parameters": 2,
+      "lines": 23
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 188,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "summarise",
+      "line": 274,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 279,
+      "parameters": 3,
+      "lines": 2
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBraking",
+      "line": 294,
+      "parameters": 3,
+      "lines": 79
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 300,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "errorOf",
+      "line": 303,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 304,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 374,
+      "parameters": 4,
+      "lines": 28
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 384,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 391,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 397,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 403,
+      "parameters": 2,
+      "lines": 27
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 432,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 453,
+      "parameters": 4,
+      "lines": 58
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 459,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 460,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 467,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 496,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeComparison",
+      "line": 17,
+      "parameters": 2,
+      "lines": 27
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 23,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 31,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 32,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "brief",
+      "line": 70,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "phaseOf",
+      "line": 80,
+      "parameters": 2,
+      "lines": 16
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 98,
+      "parameters": 2,
+      "lines": 61
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 161,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 215,
+      "parameters": 2,
+      "lines": 34
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "peakOf",
+      "line": 252,
+      "parameters": 2,
+      "lines": 8
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 254,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBrakingTimeline",
+      "line": 262,
+      "parameters": 2,
+      "lines": 38
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 284,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 292,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBraking",
+      "line": 302,
+      "parameters": 3,
+      "lines": 58
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "overshootOf",
+      "line": 315,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 361,
+      "parameters": 3,
+      "lines": 33
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 366,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 367,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 368,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 397,
+      "parameters": 3,
+      "lines": 60
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 402,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 404,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/arrive.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 415,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 48,
+      "parameters": 4,
+      "lines": 20
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 69,
+      "parameters": 3,
+      "lines": 63
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 75,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 76,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 78,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 82,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 84,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 87,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 111,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 133,
+      "parameters": 2,
+      "lines": 52
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 187,
+      "parameters": 2,
+      "lines": 56
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 213,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 221,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 245,
+      "parameters": 2,
+      "lines": 42
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 289,
+      "parameters": 2,
+      "lines": 33
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionFrames",
+      "line": 324,
+      "parameters": 2,
+      "lines": 69
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 327,
+      "parameters": 2,
+      "lines": 66
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 395,
+      "parameters": 2,
+      "lines": 30
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 409,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 415,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 421,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 427,
+      "parameters": 3,
+      "lines": 69
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 434,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 437,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 444,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 444,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/equilibrium-fallback.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "groupName",
+      "line": 497,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 33,
+      "parameters": 4,
+      "lines": 9
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "alignmentLines",
+      "line": 45,
+      "parameters": 2,
+      "lines": 53
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 100,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 152,
+      "parameters": 2,
+      "lines": 22
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "phaseOf",
+      "line": 176,
+      "parameters": 2,
+      "lines": 33
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 211,
+      "parameters": 2,
+      "lines": 45
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 258,
+      "parameters": 2,
+      "lines": 56
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "slowMotor",
+      "line": 317,
+      "parameters": 3,
+      "lines": 75
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 322,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 324,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 325,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 326,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 327,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 393,
+      "parameters": 4,
+      "lines": 29
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 403,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 409,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 415,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 423,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 444,
+      "parameters": 4,
+      "lines": 76
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 450,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 451,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 455,
+      "parameters": 3,
+      "lines": 2
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 461,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 468,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 493,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 20,
+      "parameters": 2,
+      "lines": 11
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 24,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "namedPoints",
+      "line": 44,
+      "parameters": 2,
+      "lines": 9
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 46,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "spacingInput",
+      "line": 56,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "turnInput",
+      "line": 63,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 72,
+      "parameters": 3,
+      "lines": 63
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameNote",
+      "line": 137,
+      "parameters": 3,
+      "lines": 16
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 155,
+      "parameters": 3,
+      "lines": 69
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 177,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 182,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 189,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 190,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 226,
+      "parameters": 2,
+      "lines": 64
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 230,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 231,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 232,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 245,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 256,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 264,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 292,
+      "parameters": 2,
+      "lines": 20
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 299,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 300,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 308,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 314,
+      "parameters": 3,
+      "lines": 62
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 330,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 350,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/fixed-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 350,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 36,
+      "parameters": 2,
+      "lines": 17
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 40,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 48,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 48,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 51,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 101,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 117,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "worked",
+      "line": 176,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 191,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 192,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "layoutOf",
+      "line": 236,
+      "parameters": 2,
+      "lines": 29
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 237,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 238,
+      "parameters": 1,
+      "lines": 10
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 248,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 249,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 252,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 252,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 256,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "flockNote",
+      "line": 267,
+      "parameters": 4,
+      "lines": 30
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 275,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 276,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameLinks",
+      "line": 298,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 307,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 312,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "steeringRows",
+      "line": 320,
+      "parameters": 3,
+      "lines": 33
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "labelMarks",
+      "line": 354,
+      "parameters": 2,
+      "lines": 31
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 363,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 377,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 387,
+      "parameters": 4,
+      "lines": 71
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 405,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 407,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 412,
+      "parameters": 2,
+      "lines": 3
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 416,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 417,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 460,
+      "parameters": 2,
+      "lines": 68
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 470,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 475,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 530,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "inputsOf",
+      "line": 582,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 603,
+      "parameters": 3,
+      "lines": 57
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 610,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "walkerName",
+      "line": 661,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 71,
+      "parameters": 2,
+      "lines": 23
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 75,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 89,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 97,
+      "parameters": 2,
+      "lines": 29
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 115,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 116,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 128,
+      "parameters": 2,
+      "lines": 63
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 134,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 158,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 169,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 172,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 181,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 193,
+      "parameters": 3,
+      "lines": 64
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 203,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 208,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 213,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 223,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 259,
+      "parameters": 2,
+      "lines": 76
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 265,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 268,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 276,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 290,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 293,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 337,
+      "parameters": 2,
+      "lines": 9
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 347,
+      "parameters": 2,
+      "lines": 63
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 352,
+      "parameters": 1,
+      "lines": 11
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 376,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 381,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 391,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 412,
+      "parameters": 2,
+      "lines": 51
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 465,
+      "parameters": 2,
+      "lines": 36
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 475,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 485,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionLegend",
+      "line": 503,
+      "parameters": 1,
+      "lines": 28
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 532,
+      "parameters": 2,
+      "lines": 21
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 554,
+      "parameters": 3,
+      "lines": 43
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 560,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 561,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 564,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 567,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortName",
+      "line": 598,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 36,
+      "parameters": 4,
+      "lines": 47
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 45,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "arrivalSummary",
+      "line": 133,
+      "parameters": 3,
+      "lines": 23
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 141,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 145,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeWorkedStep",
+      "line": 157,
+      "parameters": 2,
+      "lines": 28
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 173,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "memberLines",
+      "line": 187,
+      "parameters": 2,
+      "lines": 11
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 190,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 200,
+      "parameters": 2,
+      "lines": 74
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 276,
+      "parameters": 2,
+      "lines": 17
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "isArrived",
+      "line": 295,
+      "parameters": 3,
+      "lines": 5
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameNote",
+      "line": 301,
+      "parameters": 2,
+      "lines": 22
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 310,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 314,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 325,
+      "parameters": 1,
+      "lines": 31
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameMarks",
+      "line": 358,
+      "parameters": 2,
+      "lines": 26
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 368,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 386,
+      "parameters": 2,
+      "lines": 42
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 397,
+      "parameters": 2,
+      "lines": 10
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 409,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 417,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 429,
+      "parameters": 3,
+      "lines": 45
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 436,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 442,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 444,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 460,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparisonTimeline",
+      "line": 475,
+      "parameters": 2,
+      "lines": 33
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 510,
+      "parameters": 2,
+      "lines": 35
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 548,
+      "parameters": 2,
+      "lines": 25
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 575,
+      "parameters": 2,
+      "lines": 22
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 589,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 599,
+      "parameters": 3,
+      "lines": 60
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 604,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 606,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 609,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 612,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "memberName",
+      "line": 660,
+      "parameters": 2,
+      "lines": 10
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 34,
+      "parameters": 2,
+      "lines": 16
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 38,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 41,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 44,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 48,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "worked",
+      "line": 87,
+      "parameters": 2,
+      "lines": 74
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 109,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "layoutOf",
+      "line": 174,
+      "parameters": 2,
+      "lines": 35
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 175,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 176,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 188,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 189,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 191,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 193,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 197,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 199,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "creatureNote",
+      "line": 218,
+      "parameters": 2,
+      "lines": 28
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "steeringRows",
+      "line": 247,
+      "parameters": 4,
+      "lines": 29
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "labelMarks",
+      "line": 277,
+      "parameters": 1,
+      "lines": 22
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 285,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 291,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 301,
+      "parameters": 4,
+      "lines": 75
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 324,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 327,
+      "parameters": 2,
+      "lines": 3
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 331,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 332,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 333,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 339,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 339,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 378,
+      "parameters": 2,
+      "lines": 78
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 389,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 397,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 406,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 407,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 408,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 458,
+      "parameters": 2,
+      "lines": 51
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 511,
+      "parameters": 2,
+      "lines": 23
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 524,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 530,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 536,
+      "parameters": 3,
+      "lines": 65
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 543,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "creatureName",
+      "line": 603,
+      "parameters": 2,
+      "lines": 14
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "orderName",
+      "line": 54,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 59,
+      "parameters": 4,
+      "lines": 24
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 84,
+      "parameters": 3,
+      "lines": 56
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 91,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 93,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 94,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 95,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 96,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 98,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 100,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 101,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 107,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 111,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 142,
+      "parameters": 2,
+      "lines": 67
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 211,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 230,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 231,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 236,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 241,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 263,
+      "parameters": 3,
+      "lines": 31
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 296,
+      "parameters": 2,
+      "lines": 30
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 310,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 316,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 322,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameVectors",
+      "line": 328,
+      "parameters": 2,
+      "lines": 24
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionFrames",
+      "line": 353,
+      "parameters": 2,
+      "lines": 61
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 356,
+      "parameters": 2,
+      "lines": 58
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 416,
+      "parameters": 1,
+      "lines": 28
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 445,
+      "parameters": 3,
+      "lines": 76
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 452,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 455,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 459,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 466,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 466,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "groupName",
+      "line": 522,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describePursuit",
+      "line": 25,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 29,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 30,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 31,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 33,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 40,
+      "parameters": 3,
+      "lines": 65
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "closingRate",
+      "line": 106,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "phaseNote",
+      "line": 112,
+      "parameters": 4,
+      "lines": 19
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 132,
+      "parameters": 4,
+      "lines": 73
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "labelFrame",
+      "line": 207,
+      "parameters": 3,
+      "lines": 13
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 221,
+      "parameters": 2,
+      "lines": 70
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 227,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 243,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 251,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 252,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 261,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 267,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 292,
+      "parameters": 2,
+      "lines": 20
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 299,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 314,
+      "parameters": 2,
+      "lines": 17
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionFrames",
+      "line": 333,
+      "parameters": 2,
+      "lines": 17
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 336,
+      "parameters": 2,
+      "lines": 14
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 352,
+      "parameters": 3,
+      "lines": 74
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 360,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 363,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 367,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 377,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 379,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 380,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 382,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 383,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 386,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 393,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 394,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 47,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "inputs",
+      "line": 67,
+      "parameters": 1,
+      "lines": 26
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "namedPoints",
+      "line": 94,
+      "parameters": 2,
+      "lines": 9
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 96,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 104,
+      "parameters": 3,
+      "lines": 60
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 115,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 116,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "boundsOf",
+      "line": 166,
+      "parameters": 2,
+      "lines": 25
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 170,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 174,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 182,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 187,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameNote",
+      "line": 192,
+      "parameters": 3,
+      "lines": 17
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 211,
+      "parameters": 3,
+      "lines": 35
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 248,
+      "parameters": 3,
+      "lines": 60
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 256,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 269,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 291,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 293,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 297,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparisonTimeline",
+      "line": 309,
+      "parameters": 2,
+      "lines": 50
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 325,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 330,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 331,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 344,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 352,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 361,
+      "parameters": 2,
+      "lines": 59
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 372,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 373,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionLegend",
+      "line": 423,
+      "parameters": 1,
+      "lines": 28
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 452,
+      "parameters": 3,
+      "lines": 60
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 463,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 469,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 472,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 484,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 504,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/scalable-formations.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 504,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 39,
+      "parameters": 2,
+      "lines": 56
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionRelation",
+      "line": 97,
+      "parameters": 2,
+      "lines": 13
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "phaseNote",
+      "line": 112,
+      "parameters": 2,
+      "lines": 21
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 135,
+      "parameters": 2,
+      "lines": 65
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 168,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "labelFrame",
+      "line": 203,
+      "parameters": 3,
+      "lines": 12
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 216,
+      "parameters": 2,
+      "lines": 61
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 219,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 221,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "distances",
+      "line": 223,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 224,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 227,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 241,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 278,
+      "parameters": 3,
+      "lines": 27
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 307,
+      "parameters": 3,
+      "lines": 18
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 312,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 326,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 331,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 334,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 343,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 344,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 346,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 347,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 348,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 353,
+      "parameters": 1,
+      "lines": 3
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 358,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 359,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 361,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 368,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 369,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 25,
+      "parameters": 2,
+      "lines": 48
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 29,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 31,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 33,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 34,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 38,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 40,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 45,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 51,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "exit",
+      "line": 52,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 52,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "gapOf",
+      "line": 99,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "gapRate",
+      "line": 101,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionOf",
+      "line": 107,
+      "parameters": 3,
+      "lines": 9
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 117,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 124,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "calculationLines",
+      "line": 138,
+      "parameters": 4,
+      "lines": 62
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 202,
+      "parameters": 2,
+      "lines": 24
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 228,
+      "parameters": 2,
+      "lines": 24
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 254,
+      "parameters": 2,
+      "lines": 62
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 266,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 267,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 275,
+      "parameters": 1,
+      "lines": 7
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 282,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 283,
+      "parameters": 2,
+      "lines": 7
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 291,
+      "parameters": 1,
+      "lines": 9
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 293,
+      "parameters": 1,
+      "lines": 6
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 300,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 318,
+      "parameters": 2,
+      "lines": 76
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 332,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 396,
+      "parameters": 2,
+      "lines": 27
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 425,
+      "parameters": 2,
+      "lines": 24
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 451,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 472,
+      "parameters": 3,
+      "lines": 38
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 479,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 53,
+      "parameters": 2,
+      "lines": 28
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 64,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 75,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 76,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "unitPoint",
+      "line": 82,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "slotPoint",
+      "line": 87,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeAssignment",
+      "line": 92,
+      "parameters": 2,
+      "lines": 9
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 97,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "allocationNote",
+      "line": 102,
+      "parameters": 2,
+      "lines": 26
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 130,
+      "parameters": 3,
+      "lines": 61
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 139,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 140,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 143,
+      "parameters": 2,
+      "lines": 4
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 152,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 153,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 157,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 159,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 168,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 193,
+      "parameters": 2,
+      "lines": 57
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 210,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 211,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 235,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 252,
+      "parameters": 2,
+      "lines": 55
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 260,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 265,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 270,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 273,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 309,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 331,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 333,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 386,
+      "parameters": 2,
+      "lines": 26
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 414,
+      "parameters": 3,
+      "lines": 59
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 420,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 438,
+      "parameters": 2,
+      "lines": 6
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "guardName",
+      "line": 474,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "roleName",
+      "line": 487,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "roleLabel",
+      "line": 500,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 43,
+      "parameters": 2,
+      "lines": 48
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 47,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 48,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 52,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 53,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 54,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 55,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 56,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "find",
+      "line": 57,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 58,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 61,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 62,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 65,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 70,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 71,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 73,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRequest",
+      "line": 93,
+      "parameters": 2,
+      "lines": 16
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "arrived",
+      "line": 166,
+      "parameters": 2,
+      "lines": 3
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedAttempt",
+      "line": 170,
+      "parameters": 4,
+      "lines": 43
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 183,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 184,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 215,
+      "parameters": 2,
+      "lines": 58
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 233,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 275,
+      "parameters": 2,
+      "lines": 17
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "pipelinePhase",
+      "line": 350,
+      "parameters": 3,
+      "lines": 18
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 359,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "readingOf",
+      "line": 370,
+      "parameters": 4,
+      "lines": 9
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparisonChecks",
+      "line": 380,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameMarks",
+      "line": 383,
+      "parameters": 2,
+      "lines": 30
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 403,
+      "parameters": 2,
+      "lines": 9
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 415,
+      "parameters": 4,
+      "lines": 69
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 463,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 486,
+      "parameters": 2,
+      "lines": 68
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 510,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 531,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 542,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "boundsOf",
+      "line": 556,
+      "parameters": 2,
+      "lines": 23
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 558,
+      "parameters": 1,
+      "lines": 5
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 561,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 563,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 564,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 565,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 566,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "spaceLabels",
+      "line": 582,
+      "parameters": 2,
+      "lines": 27
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 584,
+      "parameters": 1,
+      "lines": 24
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 585,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 590,
+      "parameters": 1,
+      "lines": 16
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 594,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 610,
+      "parameters": 2,
+      "lines": 63
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 675,
+      "parameters": 2,
+      "lines": 37
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 714,
+      "parameters": 2,
+      "lines": 26
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 733,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 742,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 763,
+      "parameters": 3,
+      "lines": 36
+    },
+    {
+      "file": "movement/steering-pipeline.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 769,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 63,
+      "parameters": 2,
+      "lines": 14
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 67,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 69,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 71,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 72,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "peakError",
+      "line": 77,
+      "parameters": 1,
+      "lines": 3
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 83,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortWorkedLines",
+      "line": 104,
+      "parameters": 2,
+      "lines": 77
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 122,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 125,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 183,
+      "parameters": 2,
+      "lines": 42
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 198,
+      "parameters": 1,
+      "lines": 8
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 209,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 212,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameMarks",
+      "line": 227,
+      "parameters": 2,
+      "lines": 31
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 249,
+      "parameters": 2,
+      "lines": 8
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameBodies",
+      "line": 260,
+      "parameters": 2,
+      "lines": 23
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 264,
+      "parameters": 1,
+      "lines": 11
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 285,
+      "parameters": 3,
+      "lines": 41
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 290,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 328,
+      "parameters": 2,
+      "lines": 35
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 338,
+      "parameters": 2,
+      "lines": 5
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 365,
+      "parameters": 2,
+      "lines": 52
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionLegend",
+      "line": 419,
+      "parameters": 1,
+      "lines": 34
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 454,
+      "parameters": 2,
+      "lines": 25
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 481,
+      "parameters": 3,
+      "lines": 70
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 488,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 491,
+      "parameters": 1,
+      "lines": 9
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 494,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 498,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 501,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortName",
+      "line": 552,
+      "parameters": 2,
+      "lines": 12
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeMatching",
+      "line": 21,
+      "parameters": 2,
+      "lines": 24
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 25,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 27,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 30,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 34,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 60,
+      "parameters": 2,
+      "lines": 54
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameNote",
+      "line": 116,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 137,
+      "parameters": 2,
+      "lines": 70
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "shortResponseComparison",
+      "line": 209,
+      "parameters": 3,
+      "lines": 67
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 215,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 217,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 218,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 236,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 246,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 254,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 277,
+      "parameters": 3,
+      "lines": 33
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 312,
+      "parameters": 4,
+      "lines": 28
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 322,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 329,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 335,
+      "parameters": 0,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runInputs",
+      "line": 341,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 362,
+      "parameters": 3,
+      "lines": 47
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 367,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 368,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 369,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 370,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 371,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "selectMoments",
+      "line": 33,
+      "parameters": 1,
+      "lines": 10
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 35,
+      "parameters": 3,
+      "lines": 2
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 39,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 40,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 45,
+      "parameters": 4,
+      "lines": 25
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "intoView",
+      "line": 55,
+      "parameters": 1,
+      "lines": 2
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedStep",
+      "line": 91,
+      "parameters": 2,
+      "lines": 62
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameNote",
+      "line": 155,
+      "parameters": 2,
+      "lines": 19
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 176,
+      "parameters": 1,
+      "lines": 57
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 235,
+      "parameters": 2,
+      "lines": 49
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "narrowCircleComparison",
+      "line": 285,
+      "parameters": 3,
+      "lines": 58
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 291,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "spread",
+      "line": 292,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 293,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 311,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 319,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 327,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 344,
+      "parameters": 3,
+      "lines": 29
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 375,
+      "parameters": 3,
+      "lines": 27
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 384,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 391,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 397,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 403,
+      "parameters": 3,
+      "lines": 75
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 408,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 409,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 410,
+      "parameters": 2,
+      "lines": 2
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 413,
+      "parameters": 1,
+      "lines": 12
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 416,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 420,
+      "parameters": 1,
+      "lines": 4
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 426,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 427,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 428,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 429,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeRun",
+      "line": 39,
+      "parameters": 3,
+      "lines": 55
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 44,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 46,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 47,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 56,
+      "parameters": 3,
+      "lines": 2
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 61,
+      "parameters": 2,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 62,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 63,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 65,
+      "parameters": 3,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 69,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 71,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 73,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 76,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 77,
+      "parameters": 1,
+      "lines": 1
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "relationToRobot",
+      "line": 132,
+      "parameters": 3,
+      "lines": 20
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "directionOf",
+      "line": 153,
+      "parameters": 2,
+      "lines": 20
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "pullsOf",
+      "line": 174,
+      "parameters": 2,
+      "lines": 10
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "noteOf",
+      "line": 185,
+      "parameters": 2,
+      "lines": 42
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 229,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorked",
+      "line": 306,
+      "parameters": 2,
+      "lines": 16
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 324,
+      "parameters": 3,
+      "lines": 33
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameValues",
+      "line": 359,
+      "parameters": 2,
+      "lines": 40
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 401,
+      "parameters": 2,
+      "lines": 67
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 470,
+      "parameters": 2,
+      "lines": 53
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runMoments",
+      "line": 525,
+      "parameters": 2,
+      "lines": 31
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "runTimeline",
+      "line": 558,
+      "parameters": 2,
+      "lines": 25
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "motionLegend",
+      "line": 585,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "inputsOf",
+      "line": 606,
+      "parameters": 1,
+      "lines": 20
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 627,
+      "parameters": 3,
+      "lines": 22
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "(anonymous)",
+      "line": 634,
+      "parameters": 2,
+      "lines": 1
+    }
+  ],
+  "firstBatchOverFourParameters": [],
+  "eightOrMoreParameters": [
+    {
+      "file": "flow.ts",
+      "group": "shared",
+      "name": "frameOf",
+      "line": 185,
+      "parameters": 9,
+      "lines": 31
+    },
+    {
+      "file": "movement/projectile-trajectory.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "motionOf",
+      "line": 340,
+      "parameters": 8,
+      "lines": 21
+    }
+  ],
+  "seventyOrMoreLines": [
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "lateBraking",
+      "line": 294,
+      "parameters": 3,
+      "lines": 79
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 378,
+      "parameters": 2,
+      "lines": 78
+    },
+    {
+      "file": "movement/corner-trap.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 105,
+      "parameters": 6,
+      "lines": 77
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "workedStep",
+      "line": 15,
+      "parameters": 4,
+      "lines": 77
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "escortWorkedLines",
+      "line": 104,
+      "parameters": 2,
+      "lines": 77
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 444,
+      "parameters": 4,
+      "lines": 76
+    },
+    {
+      "file": "movement/formation-pattern-interface.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 259,
+      "parameters": 2,
+      "lines": 76
+    },
+    {
+      "file": "movement/priority-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 445,
+      "parameters": 3,
+      "lines": 76
+    },
+    {
+      "file": "movement/separation.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 318,
+      "parameters": 2,
+      "lines": 76
+    },
+    {
+      "file": "movement/align.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 188,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/face.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "slowMotor",
+      "line": 317,
+      "parameters": 3,
+      "lines": 75
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 301,
+      "parameters": 4,
+      "lines": 75
+    },
+    {
+      "file": "movement/slot-assignment.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "compareRuns",
+      "line": 309,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/wander.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 403,
+      "parameters": 3,
+      "lines": 75
+    },
+    {
+      "file": "movement/weighted-blending.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameWorkedLines",
+      "line": 229,
+      "parameters": 2,
+      "lines": 75
+    },
+    {
+      "file": "movement/group-movement.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 200,
+      "parameters": 2,
+      "lines": 74
+    },
+    {
+      "file": "movement/making-the-creatures.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "worked",
+      "line": 87,
+      "parameters": 2,
+      "lines": 74
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 352,
+      "parameters": 3,
+      "lines": 74
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "workedLines",
+      "line": 101,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 132,
+      "parameters": 4,
+      "lines": 73
+    },
+    {
+      "file": "movement/seek.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 326,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "outOfRange",
+      "line": 257,
+      "parameters": 3,
+      "lines": 73
+    },
+    {
+      "file": "movement/iterative-targeting.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 73,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/kinematic-wander.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 16,
+      "parameters": 7,
+      "lines": 72
+    },
+    {
+      "file": "movement/steering-behaviors.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 16,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/the-firing-solution.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 155,
+      "parameters": 5,
+      "lines": 72
+    },
+    {
+      "file": "movement/flocking.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "describeFrame",
+      "line": 387,
+      "parameters": 4,
+      "lines": 71
+    },
+    {
+      "file": "movement/jump-points.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameDrawing",
+      "line": 202,
+      "parameters": 5,
+      "lines": 71
+    },
+    {
+      "file": "movement/coordinated-movement.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 30,
+      "parameters": 4,
+      "lines": 70
+    },
+    {
+      "file": "movement/obstacle-and-wall-avoidance.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "frameWorkedStep",
+      "line": 84,
+      "parameters": 5,
+      "lines": 70
+    },
+    {
+      "file": "movement/pursue.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "comparison",
+      "line": 221,
+      "parameters": 2,
+      "lines": 70
+    },
+    {
+      "file": "movement/two-level-formation-steering.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "present",
+      "line": 481,
+      "parameters": 3,
+      "lines": 70
+    },
+    {
+      "file": "movement/variable-matching.presentation.ts",
+      "group": "movement, second batch (WO-028)",
+      "name": "reversedComparison",
+      "line": 191,
+      "parameters": 3,
+      "lines": 70
+    },
+    {
+      "file": "movement/velocity-matching.presentation.ts",
+      "group": "movement, first batch (WO-020)",
+      "name": "frameOf",
+      "line": 137,
+      "parameters": 2,
+      "lines": 70
+    }
+  ],
+  "batchPlaceholders": [
+    {
+      "batch": "first",
+      "studies": 20,
+      "studiesWithNumberedPlaceholders": 0,
+      "numberedPlaceholders": 0,
+      "flatModelKeys": 0,
+      "nestedModelKeys": 1251
+    },
+    {
+      "batch": "second",
+      "studies": 20,
+      "studiesWithNumberedPlaceholders": 1,
+      "numberedPlaceholders": 2,
+      "flatModelKeys": 21,
+      "nestedModelKeys": 956
+    }
+  ],
+  "placeholders": [
+    {
+      "study": "movement-in-the-third-dimension",
+      "batch": "second",
+      "messages": 77,
+      "numbered": 2,
+      "flatModelKeys": 1,
+      "nestedModelKeys": 42
+    }
+  ]
+}

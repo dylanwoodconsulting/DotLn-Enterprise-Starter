@@ -1,0 +1,11 @@
+{
+  "command": "npm",
+  "args": [
+    "run",
+    "i18n:check"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T22:34:18.922Z",
+  "finishedAt": "2026-11-06T22:34:20.845Z",
+  "exitCode": 0
+}

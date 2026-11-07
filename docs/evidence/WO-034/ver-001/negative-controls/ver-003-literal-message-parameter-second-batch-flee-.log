@@ -1,0 +1,45 @@
+
+ RUN  v5.0.5 <verifier-scratch>/libs/features/tools
+
+ ❯ |tools| src/lib/studies/study-models.spec.ts (9 tests | 1 failed | 8 skipped) 1900ms
+   ↓ recognizes words appended or prepended to a message and accepts nested translated values
+   ↓ admits machine symbols only in declared message fields
+   ↓ lists a model for exactly the paths the records name
+   ↓ runs every model from its record in the family the record declares, and each moment supplies the values the prose reads
+   ↓ draws a token for each message moving at a step of a flow, and none where nothing moves, both ways
+   ↓ rests every moving message on its line clear of every box, both ways
+   ↓ stays a sound example across the whole range of every input a model offers
+   ↓ keeps every supplied movement name visible and apart on every frame
+   × routes visible narration through messages across every model and its input boundaries 1899ms
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  20:34:04
+   Duration  2.72s (tests 71%, environment 15%, import 8%, setup 5%, worker 2%)
+
+
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |tools| src/lib/studies/study-models.spec.ts > routes visible narration through messages across every model and its input boundaries
+AssertionError: expected [ Array(1) ] to deeply equal []
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- [][39m
+[31m+ [[39m
+[31m+   "studyAifg.flee.model.workedStep.steps.pipMinusBeaconDistance: literal parameter threat = twenty plain English units",[39m
+[31m+ ][39m
+
+ ❯ src/lib/studies/study-models.spec.ts:267:25
+    265|       inspect(model(parameters, translated), `${record.slug} case ${in…
+    266|   }
+    267|   expect([...problems]).toEqual([]);
+       |                         ^
+    268| });
+    269|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯

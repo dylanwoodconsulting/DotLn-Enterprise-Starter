@@ -1,0 +1,12 @@
+{
+  "source": "checks/study-lint-config.log",
+  "subject": "libs/features/tools/src/lib/studies/movement/seek.presentation.ts",
+  "max-lines-per-function": [
+    2,
+    {
+      "max": 80,
+      "skipBlankLines": true,
+      "skipComments": true
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+
+> nx run tools:test
+
+(node:19506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+The `@nx/vitest:test` executor is deprecated and will be removed in Nx v24. Run `nx g @nx/vitest:convert-to-inferred` to migrate to the `@nx/vitest/plugin` inferred targets. See https://nx.dev/docs/guides/tasks--caching/convert-to-inferred for details.
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+ RUN  v5.0.5 <target-worktree>/libs/features/tools
+
+(node:19506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ |tools| src/lib/studies/movement/equilibrium-fallback.model.spec.ts (9 tests) 1785ms
+   ✓ keeps every slider setting and corner finite, labelled, in bounds and true to its prose 1715ms
+ ✓ |tools| src/lib/studies/movement/flocking.model.spec.ts (12 tests) 2014ms
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 1707ms
+ ❯ |tools| src/lib/studies/movement/making-the-creatures.model.spec.ts (12 tests | 1 failed) 1190ms
+   ✓ uses exactly the draft record’s parameters and aligns its mechanism and code blocks 2ms
+   ✓ works Fern’s first composition and integration by hand 1ms
+   ✓ uses species membership for company and all nearby creatures for separation 0ms
+   ✓ uses a deterministic prescribed wobble, keeps stable signs and does not mutate the snapshot 6ms
+   ✓ caps the five-term blend and speed while the responsive herd moves east 6ms
+   ✓ lets Kit approach much more closely when only the flee scale is removed 12ms
+   ✓ exposes flee’s distance boundary, missing direction at coincidence and dependence on the player’s side 0ms
+   ✓ silences player response outside its range without inventing a new creature state 6ms
+   × gives every selected moment complete prose values and geometry on the same chart scales 30ms
+   ✓ separates the opening wander and flee requests into named rows with visible arrowheads 9ms
+   ✓ reruns the player response and goat profile without changing the other starting requests 33ms
+   ✓ keeps notes, prose, labels and all geometry sound at input endpoints and combined extremes 1084ms
+ ✓ |tools| src/lib/studies/movement/presentation.spec.ts (22 tests) 373ms
+ ✓ |tools| src/lib/studies/rxjs/localization.spec.ts (40 tests) 151ms
+ ❯ |tools| src/lib/studies/study-models.spec.ts (8 tests | 1 failed) 2834ms
+   ✓ recognizes words appended or prepended to a message and accepts nested translated values 1ms
+   ✓ lists a model for exactly the paths the records name 19ms
+   ✓ runs every model from its record in the family the record declares, and each moment supplies the values the prose reads 556ms
+   ✓ draws a token for each message moving at a step of a flow, and none where nothing moves, both ways 44ms
+   ✓ rests every moving message on its line clear of every box, both ways 31ms
+   ✓ stays a sound example across the whole range of every input a model offers 557ms
+   ✓ keeps every supplied movement name visible and apart on every frame 391ms
+   × routes visible narration through messages across every model and its input boundaries 1235ms
+ ✓ |tools| src/lib/studies/movement/steering-pipeline.model.spec.ts (14 tests) 975ms
+   ✓ keeps notes, prose, arithmetic, labels and every drawing sound over the offered input ranges 829ms
+ ✓ |tools| src/lib/studies/movement/formation-pattern-interface.model.spec.ts (10 tests) 336ms
+ ✓ |tools| src/lib/studies/movement/two-level-formation-steering.model.spec.ts (11 tests) 347ms
+ ✓ |tools| src/lib/studies/movement/retained-samples.spec.ts (3 tests) 42ms
+ ✓ |tools| src/lib/studies/movement/group-movement.model.spec.ts (11 tests) 1030ms
+   ✓ keeps every offered pace finite, labelled and readable through the whole journey 890ms
+ ✓ |tools| src/lib/studies/eip/resequencer.spec.ts (10 tests) 22ms
+ ✓ |tools| src/lib/studies/movement/weighted-blending.model.spec.ts (13 tests) 106ms
+ ✓ |tools| src/lib/studies/eip/message-translator.spec.ts (8 tests) 15ms
+ ✓ |tools| src/lib/studies/movement/obstacle-and-wall-avoidance.model.spec.ts (15 tests) 59ms
+ ✓ |tools| src/lib/studies/eip/content-based-router.spec.ts (7 tests) 17ms
+ ✓ |tools| src/lib/studies/movement/flee.model.spec.ts (10 tests) 28ms
+ ✓ |tools| src/lib/studies/movement/wander.model.spec.ts (11 tests) 382ms
+   ✓ keeps every note, reading, label and complete circle sound across input endpoints and their combinations 310ms
+ ✓ |tools| src/lib/studies/eip/message-expiration.spec.ts (9 tests) 17ms
+ ✓ |tools| src/lib/studies/movement/variable-matching.model.spec.ts (9 tests) 48ms
+ ✓ |tools| src/lib/studies/movement/scalable-formations.model.spec.ts (9 tests) 390ms
+   ✓ keeps notes, labels, prose and the complete footprint sound at every control corner 301ms
+ ✓ |tools| src/lib/studies/rxjs/combine-latest.spec.ts (11 tests) 13ms
+ ✓ |tools| src/lib/studies/eip/correlation-identifier.spec.ts (9 tests) 15ms
+ ✓ |tools| src/lib/studies/movement/separation.model.spec.ts (11 tests) 132ms
+ ✓ |tools| src/lib/studies/eip/process-manager.spec.ts (10 tests) 13ms
+ ✓ |tools| src/lib/studies/movement/collision-avoidance.model.spec.ts (9 tests) 28ms
+ ✓ |tools| src/lib/studies/eip/event-message.spec.ts (10 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/control-bus.spec.ts (6 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/command-message.spec.ts (9 tests) 16ms
+ ✓ |tools| src/lib/studies/movement/velocity-matching.model.spec.ts (9 tests) 78ms
+ ✓ |tools| src/lib/studies/movement/jump-points.model.spec.ts (10 tests) 66ms
+ ✓ |tools| src/lib/composites/study-visuals/motion/motion-drawing.spec.ts (10 tests) 5ms
+ ✓ |tools| src/lib/studies/movement/iterative-targeting.model.spec.ts (11 tests) 22ms
+ ✓ |tools| src/lib/studies/movement/slot-assignment.model.spec.ts (8 tests) 29ms
+ ✓ |tools| src/lib/studies/movement/seek.model.spec.ts (10 tests) 1948ms
+   ✓ supplies every prose value, the worked arithmetic and bounds for the complete drawing 543ms
+   ✓ keeps every offered sideways start readable, labelled and inside the drawing 1368ms
+ ✓ |tools| src/lib/facades/tools.facade.spec.ts (18 tests) 2140ms
+ ✓ |tools| src/lib/studies/movement/face.model.spec.ts (13 tests) 480ms
+   ✓ keeps notes, names, moments, prose and bounds sound across the live ranges 394ms
+ ✓ |tools| src/lib/containers/catalog-page/catalog-page.spec.ts (8 tests) 461ms
+ ✓ |tools| src/lib/composites/study/study.spec.ts (13 tests) 443ms
+Not implemented: navigation to another Document
+ ✓ |tools| src/lib/studies/movement/priority-steering.model.spec.ts (9 tests) 1941ms
+   ✓ keeps every slider setting and corner finite, labelled, in bounds and true to its prose 1875ms
+ ✓ |tools| src/lib/studies/movement/align.model.spec.ts (12 tests) 475ms
+   ✓ keeps notes, labels, moments, prose and geometry sound across the live ranges 380ms
+ ✓ |tools| src/lib/facades/tools-study-loading.spec.ts (2 tests) 361ms
+ ✓ |tools| src/lib/composites/study-explanation/study-explanation.spec.ts (9 tests) 292ms
+ ✓ |tools| src/lib/studies/movement/pursue.model.spec.ts (10 tests) 275ms
+ ✓ |tools| src/lib/studies/movement/the-firing-solution.model.spec.ts (11 tests) 234ms
+ ✓ |tools| src/lib/facades/tools-home.facade.spec.ts (3 tests) 215ms
+ ✓ |tools| src/lib/composites/study-visuals/marbles/marbles.spec.ts (5 tests) 146ms
+ ✓ |tools| src/lib/studies/movement/fixed-formations.model.spec.ts (9 tests) 145ms
+ ✓ |tools| src/lib/composites/study-visuals/flow/flow.spec.ts (3 tests) 105ms
+ ✓ |tools| src/lib/composites/study-visuals/scrubber/scrubber.spec.ts (4 tests) 119ms
+ ✓ |tools| src/lib/composites/study-visuals/motion/motion.spec.ts (3 tests) 98ms
+ ✓ |tools| src/lib/studies/rxjs/repeat.spec.ts (15 tests) 117ms
+ ✓ |tools| src/lib/composites/study-visuals/timeline/timeline.spec.ts (3 tests) 133ms
+ ✓ |tools| src/lib/composites/study-visuals/inputs/inputs.spec.ts (3 tests) 80ms
+ ✓ |tools| src/lib/studies/movement/coordinated-movement.model.spec.ts (8 tests) 73ms
+ ✓ |tools| src/lib/studies/movement/projectile-trajectory.model.spec.ts (10 tests) 78ms
+ ✓ |tools| src/lib/studies/movement/motor-control.model.spec.ts (8 tests) 69ms
+ ✓ |tools| src/lib/studies/eip/aggregator.spec.ts (10 tests) 25ms
+ ✓ |tools| src/lib/studies/movement/actuator.model.spec.ts (8 tests) 47ms
+ ✓ |tools| src/lib/studies/movement/steering-behaviors.model.spec.ts (8 tests) 59ms
+ ✓ |tools| src/lib/studies/movement/kinematic-wander.model.spec.ts (7 tests) 35ms
+ ✓ |tools| src/lib/studies/movement/arrive.model.spec.ts (12 tests) 48ms
+ ✓ |tools| src/lib/studies/movement/two-and-a-half-dimensions.model.spec.ts (7 tests) 25ms
+ ✓ |tools| src/lib/studies/movement/movement-in-the-third-dimension.model.spec.ts (9 tests) 25ms
+ ✓ |tools| src/lib/studies/movement/steering-output.model.spec.ts (8 tests) 21ms
+ ✓ |tools| src/lib/studies/rxjs/behavior-subject.spec.ts (7 tests) 11ms
+ ✓ |tools| src/lib/studies/movement/blending-versus-arbitration.model.spec.ts (8 tests) 20ms
+ ✓ |tools| src/lib/studies/eip/guaranteed-delivery.spec.ts (8 tests) 14ms
+ ✓ |tools| src/lib/studies/eip/recipient-list.spec.ts (8 tests) 17ms
+ ✓ |tools| src/lib/studies/eip/competing-consumers.spec.ts (9 tests) 16ms
+ ✓ |tools| src/lib/studies/eip/publish-subscribe-channel.spec.ts (8 tests) 14ms
+ ✓ |tools| src/lib/studies/rxjs/replay-subject.spec.ts (9 tests) 16ms
+ ✓ |tools| src/lib/studies/rxjs/concat-map.spec.ts (12 tests) 17ms
+ ✓ |tools| src/lib/studies/rxjs/scan.spec.ts (12 tests) 25ms
+ ✓ |tools| src/lib/studies/movement/corner-trap.model.spec.ts (8 tests) 15ms
+ ✓ |tools| src/lib/studies/movement/kinematic-arrive.model.spec.ts (8 tests) 15ms
+ ✓ |tools| src/lib/studies/movement/satisfaction-radius.model.spec.ts (9 tests) 26ms
+ ✓ |tools| src/lib/studies/eip/canonical-data-model.spec.ts (10 tests) 15ms
+ ✓ |tools| src/lib/studies/rxjs/subject.spec.ts (11 tests) 13ms
+ ✓ |tools| src/lib/studies/rxjs/observe-on.spec.ts (12 tests) 13ms
+ ✓ |tools| src/lib/studies/rxjs/merge-map.spec.ts (12 tests) 12ms
+ ✓ |tools| src/lib/studies/rxjs/start-with.spec.ts (10 tests) 11ms
+ ✓ |tools| src/lib/studies/rxjs/timeout.spec.ts (8 tests) 11ms
+ ✓ |tools| src/lib/studies/eip/message-dispatcher.spec.ts (9 tests) 11ms
+ ✓ |tools| src/lib/studies/rxjs/switch-map.spec.ts (4 tests) 11ms
+ ✓ |tools| src/lib/studies/rxjs/exhaust-map.spec.ts (9 tests) 20ms
+ ✓ |tools| src/lib/studies/rxjs/retry.spec.ts (8 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/share.spec.ts (11 tests) 12ms
+ ✓ |tools| src/lib/studies/rxjs/share-replay.spec.ts (10 tests) 21ms
+ ✓ |tools| src/lib/studies/rxjs/finalize.spec.ts (11 tests) 12ms
+ ✓ |tools| src/lib/studies/eip/request-reply.spec.ts (5 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/catch-error.spec.ts (7 tests) 8ms
+ ✓ |tools| src/lib/studies/rxjs/take-until.spec.ts (10 tests) 10ms
+ ✓ |tools| src/lib/studies/rxjs/materialize.spec.ts (10 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/message-store.spec.ts (6 tests) 9ms
+ ✓ |tools| src/lib/studies/eip/transactional-client.spec.ts (7 tests) 7ms
+ ✓ |tools| src/lib/studies/eip/channel-adapter.spec.ts (5 tests) 7ms
+ ✓ |tools| src/lib/composites/study-visuals/flow/flow-drawing.spec.ts (12 tests) 5ms
+ ✓ |tools| src/lib/studies/flow.spec.ts (6 tests) 6ms
+ ✓ |tools| src/lib/mappers/study-mapper.spec.ts (12 tests) 4ms
+ ✓ |tools| src/lib/studies/rxjs/marbles.spec.ts (7 tests) 5ms
+ ✓ |tools| src/lib/studies/drawing.spec.ts (5 tests) 3ms
+ ✓ |tools| src/lib/composites/study-visuals/marbles/marbles-drawing.spec.ts (5 tests) 4ms
+ ✓ |tools| src/lib/composites/study-visuals/timeline/timeline-drawing.spec.ts (4 tests) 3ms
+ ✓ |tools| src/lib/studies/study-text.spec.ts (2 tests) 2ms
+ ✓ |tools| src/lib/studies/number-format.spec.ts (2 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |tools| src/lib/studies/study-models.spec.ts > routes visible narration through messages across every model and its input boundaries
+AssertionError: expected [ …(177) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "studyCommon.marbles.emittedValue: literal parameter key = t",
++   "studyCommon.marbles.emittedValue: literal parameter key = T",
++   "studyCommon.marbles.keyValue: literal parameter key = T",
++   "studyCommon.marbles.valueAt: literal parameter key = t",
++   "studyCommon.marbles.valueAt: literal parameter key = T",
++   "studyCommon.marbles.emittedValue: literal parameter key = n",
++   "studyCommon.marbles.emittedValue: literal parameter key = N",
++   "studyCommon.marbles.keyValue: literal parameter key = N",
++   "studyCommon.marbles.valueAt: literal parameter key = n",
++   "studyCommon.marbles.valueAt: literal parameter key = N",
++   "studyCommon.marbles.emittedValue: literal parameter key = c",
++   "studyCommon.marbles.emittedValue: literal parameter key = C",
++   "studyCommon.marbles.keyValue: literal parameter key = C",
++   "studyCommon.marbles.valueAt: literal parameter key = c",
++   "studyCommon.marbles.valueAt: literal parameter key = C",
++   "studyCommon.flow.held: literal parameter keys = t⟦, ⟧n⟦, ⟧c",
++   "studyCommon.flow.moveOnChannel: literal parameter key = t",
++   "studyCommon.flow.moveOnChannel: literal parameter key = T",
++   "studyCommon.flow.held: literal parameter keys = n⟦, ⟧c",
++   "studyCommon.flow.held: literal parameter keys = T",
++   "studyCommon.flow.moveOnChannel: literal parameter key = n",
++   "studyCommon.flow.moveOnChannel: literal parameter key = N",
++   "studyCommon.flow.held: literal parameter keys = c",
++   "studyCommon.flow.held: literal parameter keys = T⟦, ⟧N",
++   "studyCommon.flow.moveOnChannel: literal parameter key = c",
++   "studyCommon.flow.moveOnChannel: literal parameter key = C",
++   "studyCommon.flow.held: literal parameter keys = T⟦, ⟧N⟦, ⟧C",
++   "studyCommon.marbles.emittedValue: literal parameter key = a",
++   "studyCommon.marbles.valueAt: literal parameter key = a",
++   "studyCommon.marbles.keyValue: literal parameter key = a",
++   "studyCommon.marbles.emittedValue: literal parameter key = b",
++   "studyCommon.marbles.valueAt: literal parameter key = b",
++   "studyCommon.marbles.keyValue: literal parameter key = b",
++   "studyCommon.marbles.keyValue: literal parameter key = c",
++   "studyCommon.marbles.emittedValue: literal parameter key = d",
++   "studyCommon.marbles.valueAt: literal parameter key = d",
++   "studyCommon.marbles.keyValue: literal parameter key = d",
++   "studyCommon.flow.move: literal parameter key = a",
++   "studyCommon.flow.held: literal parameter keys = a",
++   "studyCommon.flow.move: literal parameter key = b",
++   "studyCommon.flow.held: literal parameter keys = b",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧b",
++   "studyCommon.flow.move: literal parameter key = c",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧b⟦, ⟧c",
++   "studyCommon.flow.move: literal parameter key = d",
++   "studyCommon.flow.held: literal parameter keys = d",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧b⟦, ⟧c⟦, ⟧d",
++   "studyCommon.flow.move: literal parameter key = s",
++   "studyCommon.flow.move: literal parameter key = r",
++   "studyCommon.flow.moveOnChannel: literal parameter key = l",
++   "studyCommon.flow.held: literal parameter keys = l",
++   "studyCommon.flow.moveOnChannel: literal parameter key = g",
++   "studyCommon.flow.moveOnChannel: literal parameter key = d",
++   "studyCommon.flow.held: literal parameter keys = l⟦, ⟧d",
++   "studyCommon.flow.moveOnChannel: literal parameter key = s",
++   "studyCommon.flow.held: literal parameter keys = s",
++   "studyCommon.flow.moveOnChannel: literal parameter key = L",
++   "studyCommon.flow.held: literal parameter keys = L",
++   "studyCommon.flow.moveOnChannel: literal parameter key = G",
++   "studyCommon.flow.moveOnChannel: literal parameter key = E",
++   "studyCommon.flow.held: literal parameter keys = L⟦, ⟧E",
++   "studyCommon.flow.moveOnChannel: literal parameter key = F",
++   "studyCommon.flow.held: literal parameter keys = F",
++   "studyCommon.flow.held: literal parameter keys = b⟦, ⟧a",
++   "studyCommon.flow.move: literal parameter key = v",
++   "studyCommon.flow.held: literal parameter keys = v",
++   "studyCommon.flow.held: literal parameter keys = v⟦, ⟧r",
++   "studyCommon.flow.held: literal parameter keys = r",
++   "studyCommon.flow.move: literal parameter key = C",
++   "studyCommon.flow.held: literal parameter keys = C",
++   "studyCommon.flow.move: literal parameter key = A",
++   "studyCommon.flow.held: literal parameter keys = A",
++   "studyCommon.flow.move: literal parameter key = R",
++   "studyCommon.flow.held: literal parameter keys = R",
++   "studyCommon.marbles.emittedValue: literal parameter key = A",
++   "studyCommon.marbles.valueAt: literal parameter key = A",
++   "studyCommon.marbles.keyValue: literal parameter key = A",
++   "studyCommon.marbles.emittedValue: literal parameter key = B",
++   "studyCommon.marbles.valueAt: literal parameter key = B",
++   "studyCommon.marbles.keyValue: literal parameter key = B",
++   "studyCommon.marbles.emittedValue: literal parameter key = D",
++   "studyCommon.marbles.valueAt: literal parameter key = D",
++   "studyCommon.flow.move: literal parameter key = B",
++   "studyCommon.flow.held: literal parameter keys = B",
++   "studyCommon.flow.move: literal parameter key = D",
++   "studyCommon.flow.held: literal parameter keys = b⟦, ⟧c",
++   "studyCommon.marbles.emittedValue: literal parameter key = x",
++   "studyCommon.marbles.valueAt: literal parameter key = x",
++   "studyCommon.marbles.emittedValue: literal parameter key = p",
++   "studyCommon.marbles.keyValue: literal parameter key = p",
++   "studyCommon.marbles.valueAt: literal parameter key = p",
++   "studyCommon.marbles.emittedValue: literal parameter key = q",
++   "studyCommon.marbles.keyValue: literal parameter key = q",
++   "studyCommon.marbles.valueAt: literal parameter key = q",
++   "studyCommon.marbles.emittedValue: literal parameter key = y",
++   "studyCommon.marbles.valueAt: literal parameter key = y",
++   "studyCommon.marbles.emittedValue: literal parameter key = r",
++   "studyCommon.marbles.keyValue: literal parameter key = r",
++   "studyCommon.marbles.valueAt: literal parameter key = r",
++   "studyCommon.flow.move: literal parameter key = x",
++   "studyCommon.flow.move: literal parameter key = p",
++   "studyCommon.flow.held: literal parameter keys = p",
++   "studyCommon.flow.move: literal parameter key = q",
++   "studyCommon.flow.held: literal parameter keys = p⟦, ⟧q",
++   "studyCommon.flow.move: literal parameter key = y",
++   "studyCommon.flow.held: literal parameter keys = p⟦, ⟧q⟦, ⟧r",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧B",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧c⟦, ⟧B",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧c⟦, ⟧A⟦, ⟧B",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧c⟦, ⟧A⟦, ⟧B⟦, ⟧C",
++   "studyCommon.flow.held: literal parameter keys = a⟦, ⟧c",
++   "studyEip.process-manager.model.example.notes.0: literal parameter order = WO-031",
++   "studyEip.process-manager.model.example.notes.1: literal parameter order = WO-031",
++   "studyCommon.marbles.emittedValue: literal parameter key = i",
++   "studyCommon.marbles.valueAt: literal parameter key = i",
++   "studyCommon.marbles.emittedValue: literal parameter key = V",
++   "studyCommon.marbles.keyValue: literal parameter key = V",
++   "studyCommon.marbles.valueAt: literal parameter key = V",
++   "studyCommon.marbles.emittedValue: literal parameter key = F",
++   "studyCommon.marbles.keyValue: literal parameter key = F",
++   "studyCommon.marbles.valueAt: literal parameter key = F",
++   "studyCommon.marbles.emittedValue: literal parameter key = R",
++   "studyCommon.marbles.keyValue: literal parameter key = R",
++   "studyCommon.marbles.valueAt: literal parameter key = R",
++   "studyCommon.marbles.emittedValue: literal parameter key = M",
++   "studyCommon.marbles.keyValue: literal parameter key = M",
++   "studyCommon.marbles.valueAt: literal parameter key = M",
++   "studyEip.process-manager.model.flow.states.0.operator: literal parameter order = WO-031",
++   "studyEip.process-manager.model.flow.states.1.operator: literal parameter order = WO-031",
++   "studyEip.process-manager.model.flow.states.2.executor: literal parameter order = WO-031",
++   "studyCommon.flow.move: literal parameter key = N",
++   "studyCommon.flow.move: literal parameter key = i",
++   "studyEip.process-manager.model.flow.states.4.verifier: literal parameter order = WO-031",
++   "studyCommon.flow.move: literal parameter key = V",
++   "studyEip.process-manager.model.flow.states.6.executor: literal parameter order = WO-031",
++   "studyCommon.flow.move: literal parameter key = F",
++   "studyEip.process-manager.model.flow.states.10.reviewer: literal parameter order = WO-031",
++   "studyEip.process-manager.model.flow.states.12.operator: literal parameter order = WO-031",
++   "studyCommon.flow.move: literal parameter key = M",
++   "studyCommon.flow.held: literal parameter keys = g",
++   "studyCommon.flow.move: literal parameter key = t",
++   "studyCommon.flow.move: literal parameter key = g",
++   "studyCommon.flow.move: literal parameter key = n",
++   "studyCommon.flow.held: literal parameter keys = c⟦, ⟧r⟦, ⟧e",
++   "studyCommon.flow.move: literal parameter key = e",
++   "studyCommon.flow.held: literal parameter keys = e",
++   "studyCommon.marbles.keyValue: literal parameter key = i",
++   "studyCommon.marbles.emittedValue: literal parameter key = f",
++   "studyCommon.marbles.valueAt: literal parameter key = f",
++   "studyCommon.marbles.keyValue: literal parameter key = f",
++   "studyCommon.marbles.emittedValue: literal parameter key = v",
++   "studyCommon.marbles.valueAt: literal parameter key = v",
++   "studyCommon.marbles.keyValue: literal parameter key = v",
++   "studyCommon.flow.held: literal parameter keys = i",
++   "studyCommon.flow.move: literal parameter key = f",
++   "studyCommon.flow.held: literal parameter keys = f",
++   "studyCommon.flow.held: literal parameter keys = f⟦, ⟧r",
++   "studyCommon.flow.move: literal parameter key = E",
++   "studyCommon.flow.held: literal parameter keys = E",
++   "studyCommon.flow.move: literal parameter key = Q",
++   "studyCommon.flow.held: literal parameter keys = b⟦, ⟧d",
++   "studyCommon.marbles.emittedValue: literal parameter key = e",
++   "studyCommon.marbles.keyValue: literal parameter key = e",
++   "studyCommon.marbles.valueAt: literal parameter key = e",
++   "studyCommon.marbles.emittedValue: literal parameter key = w",
++   "studyCommon.marbles.valueAt: literal parameter key = w",
++   "studyCommon.marbles.keyValue: literal parameter key = x",
++   "studyCommon.marbles.keyValue: literal parameter key = y",
++   "studyCommon.marbles.emittedValue: literal parameter key = z",
++   "studyCommon.marbles.keyValue: literal parameter key = z",
++   "studyCommon.marbles.valueAt: literal parameter key = z",
++   "studyCommon.marbles.value: literal parameter value = x",
++   "studyCommon.marbles.keyValue: literal parameter key = w",
++   "studyCommon.marbles.keyValue: literal parameter key = t",
++   "studyCommon.marbles.emittedValue: literal parameter key = h",
++   "studyCommon.marbles.keyValue: literal parameter key = h",
++   "studyCommon.marbles.valueAt: literal parameter key = h",
++ ]
+
+ ❯ src/lib/studies/study-models.spec.ts:234:25
+    232|       inspect(model(parameters, translated), `${record.slug} case ${in…
+    233|   }
+    234|   expect([...problems]).toEqual([]);
+       |                         ^
+    235| });
+    236|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |tools| src/lib/studies/movement/making-the-creatures.model.spec.ts > gives every selected moment complete prose values and geometry on the same chart scales
+AssertionError: expected [ …(3) ] to have a length of 4 but got 3
+
+- Expected
++ Received
+
+- 4
++ 3
+
+ ❯ src/lib/studies/movement/making-the-creatures.model.spec.ts:241:53
+    239|     }
+    240|     expect(frame.bodies).toHaveLength(5);
+    241|     expect(motionDrawing(run.motion, step).vectors).toHaveLength(4);
+       |                                                     ^
+    242|     expect(run.timeline?.series[0].values[step]).toBe(speciesTravel(st…
+    243|     expect(run.timeline?.series[1].values[step]).toBe(speciesTravel(st…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 104 passed (106)
+      Tests  2 failed | 968 passed (970)
+   Start at  17:31:11
+   Duration  18.61s (tests 65%, import 17%, setup 13%, environment 2%, worker 2%, transform 1%)
+
+
+
+
+ NX   Running target test for project tools failed
+
+Failed tasks:
+
+- tools:test
+
+Hint: run the command with --verbose for more details.
+
+  Run duration:      24.1s
+  Critical path:     24.1s (1 task)
+  Recoverable time:  <1ms

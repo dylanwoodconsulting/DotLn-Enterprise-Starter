@@ -1,0 +1,98 @@
+{
+  "measurement": "Cold reading after shelf; gzipSync of each observed response asset, not a network compression claim",
+  "before": {
+    "id": "aifg-a:111",
+    "measurement": "Cold reading after shelf; gzipSync of each observed response asset, not a network compression claim",
+    "files": [
+      {
+        "path": "/chunk-5mizEzWL.js",
+        "raw": 9509,
+        "gzip": 2708,
+        "sha256": "675528eb1bce8bf507688f4161c4d66a1ca234e7a277b258f4db7cbbdba5aad3"
+      },
+      {
+        "path": "/chunk-BbBQ8Ris.js",
+        "raw": 843,
+        "gzip": 450,
+        "sha256": "bf388b7d634863510593f634e884fa43c8b230d5636499d0d45f3eca23a2e7ea"
+      },
+      {
+        "path": "/chunk-ChU_IOvJ.js",
+        "raw": 19126,
+        "gzip": 7199,
+        "sha256": "994e9f6e65cd73c1e1ca1c30518cbe52c0406cdffa6723aa7082d3c881570d4b"
+      },
+      {
+        "path": "/chunk-Dn80Ydwx.js",
+        "raw": 135351,
+        "gzip": 12792,
+        "sha256": "3852268dd4bff6e09027a3d219a0f8e0b97c4a93c53695e09ffbf0eb4d8197f2"
+      },
+      {
+        "path": "/i18n/studyAifg/en.json",
+        "raw": 590447,
+        "gzip": 161466,
+        "sha256": "1b70f42ae5eb374d2de6ad99de215e697a2c47e6c9478dfa08418b8471f776f4"
+      },
+      {
+        "path": "/i18n/studyCommon/en.json",
+        "raw": 3216,
+        "gzip": 1173,
+        "sha256": "bf847ef023e9bc8b86603a0c59e509724b558ebc3652fb12b733af8ad130f02c"
+      }
+    ],
+    "raw": 758492,
+    "gzip": 185788
+  },
+  "after": {
+    "id": "aifg-a:111",
+    "measurement": "Cold reading after shelf; gzipSync of each observed response asset, not a network compression claim",
+    "files": [
+      {
+        "path": "/chunk-CUE55p2R.js",
+        "raw": 1569,
+        "gzip": 843,
+        "sha256": "cb5d9d58de5e4a44e2d3f3cd7660301a8a0d07ba04343262a1db433f16a86833"
+      },
+      {
+        "path": "/chunk-ChU_IOvJ.js",
+        "raw": 19126,
+        "gzip": 7199,
+        "sha256": "994e9f6e65cd73c1e1ca1c30518cbe52c0406cdffa6723aa7082d3c881570d4b"
+      },
+      {
+        "path": "/chunk-CpiwD4OO.js",
+        "raw": 9642,
+        "gzip": 2720,
+        "sha256": "00c855f7b8f260da0f7674ff9798382c740262386d8b3181cf79d8fce462d7d1"
+      },
+      {
+        "path": "/chunk-Dg9FuWfe.js",
+        "raw": 513,
+        "gzip": 310,
+        "sha256": "a6cd8c622f31655fa02e41a94b81e20397082615290abdbf1822445b1c1d67db"
+      },
+      {
+        "path": "/chunk-Dn80Ydwx.js",
+        "raw": 135351,
+        "gzip": 12792,
+        "sha256": "3852268dd4bff6e09027a3d219a0f8e0b97c4a93c53695e09ffbf0eb4d8197f2"
+      },
+      {
+        "path": "/i18n/studyAifg/en.json",
+        "raw": 563676,
+        "gzip": 153558,
+        "sha256": "91cf1489b2ba6fa90c0229be03257c818d00755bd1d9de276bcbc6e8f5491883"
+      },
+      {
+        "path": "/i18n/studyCommon/en.json",
+        "raw": 3216,
+        "gzip": 1173,
+        "sha256": "bf847ef023e9bc8b86603a0c59e509724b558ebc3652fb12b733af8ad130f02c"
+      }
+    ],
+    "raw": 733093,
+    "gzip": 178595
+  },
+  "gzipDelta": -7193
+}

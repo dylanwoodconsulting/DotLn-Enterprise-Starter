@@ -1,0 +1,94 @@
+{
+ "schemaVersion": 1,
+ "rule": "placeholders named for what they hold (WO-034 Design)",
+ "sites": [
+  {
+   "module": "fixed-formations.presentation.ts",
+   "line": 253,
+   "placeholder": "exampleTurnSteps",
+   "code": "exampleTurnSteps: fixed(example.turnSteps * example.timeStep),",
+   "key": "studyAifg.fixed-formations.model.comparison.solidGreenTurnOver",
+   "english": "Solid green · turn over {{exampleTurnSteps}} s"
+  },
+  {
+   "module": "fixed-formations.presentation.ts",
+   "line": 261,
+   "placeholder": "exampleFastTurnSteps",
+   "code": "exampleFastTurnSteps: fixed(example.fastTurnSteps * example.timeStep),",
+   "key": "studyAifg.fixed-formations.model.comparison.dashedAmberTurnOver",
+   "english": "Dashed amber · turn over {{exampleFastTurnSteps}} s"
+  },
+  {
+   "module": "formation-pattern-interface.presentation.ts",
+   "line": 453,
+   "placeholder": "exampleSteps",
+   "code": "exampleSteps: decimal(example.steps * example.timeStep),",
+   "key": "studyAifg.formation-pattern-interface.model.comparison.actualCentreGapCorrection",
+   "english": "At {{exampleSteps}} s the actual centre gap is {{correctedGap}} units with correction and {{uncorrectedGap}} without it."
+  },
+  {
+   "module": "group-movement.presentation.ts",
+   "line": 142,
+   "placeholder": "step",
+   "code": "`${memberName(t, index)} ${step === null ? t('studyAifg.group-movement.model.labels.notYet') : t('studyAifg.group-movement.model.labels.arrivalSummaryS', { step: fixed(step * example.timeStep) })}`,",
+   "key": "studyAifg.group-movement.model.labels.arrivalSummaryS",
+   "english": "{{step}} s"
+  },
+  {
+   "module": "pursue.presentation.ts",
+   "line": 237,
+   "placeholder": "exampleSteps",
+   "code": "exampleSteps: fixed(example.steps * example.timeStep),",
+   "key": "studyAifg.pursue.model.comparison.changeReedReversalTime",
+   "english": "Change only Reed's reversal time from {{exampleTurnAt}} s to {{changedTurnAt}} s, keeping the selected {{exampleMaxPrediction}} s prediction cap; the main run ends at {{exampleSteps}} s before its turn."
+  },
+  {
+   "module": "separation.presentation.ts",
+   "line": 235,
+   "placeholder": "step",
+   "code": "step: shown(step * example.timeStep),",
+   "key": "studyAifg.separation.model.worked.shelfCalculation",
+   "english": "Shelf calculation at {{step}} s"
+  },
+  {
+   "module": "two-level-formation-steering.presentation.ts",
+   "line": 410,
+   "placeholder": "exampleSteps",
+   "code": "exampleSteps: decimal(example.steps * example.timeStep),",
+   "key": "studyAifg.two-level-formation-steering.model.comparison.tightAnchorLooseAnchor",
+   "english": "At {{exampleSteps}} s the tight anchor is {{formationAnchor}}, while the loose anchor is {{looseAnchor}}. Advancing the plan farther does not mean its members have reached their slots."
+  },
+  {
+   "module": "velocity-matching.presentation.ts",
+   "line": 69,
+   "placeholder": "step",
+   "code": "step: decimal(step * example.timeStep),",
+   "key": "studyAifg.velocity-matching.model.worked.miraNextUpdate",
+   "english": "Mira's next update at {{step}} s"
+  },
+  {
+   "module": "wander.presentation.ts",
+   "line": 100,
+   "placeholder": "step",
+   "code": "step: decimal(step * example.timeStep),",
+   "key": "studyAifg.wander.model.worked.niaNextUpdate",
+   "english": "Nia's next update at {{step}} s"
+  },
+  {
+   "module": "wander.presentation.ts",
+   "line": 333,
+   "placeholder": "exampleSteps",
+   "code": "exampleSteps: decimal(example.steps * example.timeStep),",
+   "key": "studyAifg.wander.model.comparison.overSidewaysRangeChosen",
+   "english": "Over {{exampleSteps}} s, the sideways range is {{selectedRange}} units with the chosen circle and {{narrowRange}} units with the reference circle. The angle inputs are identical."
+  },
+  {
+   "module": "weighted-blending.presentation.ts",
+   "line": 314,
+   "placeholder": "step",
+   "code": "step: shown(step * example.timeStep),",
+   "key": "studyAifg.weighted-blending.model.worked.loadingBayCalculation",
+   "english": "Loading-bay calculation at {{step}} s"
+  }
+ ]
+}

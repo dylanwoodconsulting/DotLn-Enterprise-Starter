@@ -1,0 +1,12 @@
+{
+  "command": "npx",
+  "args": [
+    "nx",
+    "test",
+    "tools"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T22:28:23.825Z",
+  "finishedAt": "2026-11-06T22:28:48.168Z",
+  "exitCode": 1
+}
