@@ -97,5 +97,62 @@
       "The draft head's tree is the tree VER-001 verified, and the six reviewed commits end at the same tree, so the draft's runs judged the reviewed bytes.",
       "The pull request had no review, comment or review thread to route."
     ]
+  },
+  "finalPublish": {
+    "command": "node scripts/worktree.mjs publish WO-034 --target-worktree --branch refactor/movement-presentations --title \":recycle: Reshape the first twenty movement studies' code into the example to copy\" --body-file docs/final-reviews/WO-034/PR.md",
+    "exitCode": 0,
+    "output": "Pushed refactor/movement-presentations at c6f0fb2f6d62cc885866fbad95c2cb37899390b1 over draft 76f8bcee89abec81f66f3120268a4879de097aef and marked pull request #16 on github.com/DylanBWood/DotLn-Angular ready.",
+    "observedAt": "2026-11-07T03:01:06Z",
+    "title": ":recycle: Reshape the first twenty movement studies' code into the example to copy",
+    "isDraft": false,
+    "headSha": "c6f0fb2f6d62cc885866fbad95c2cb37899390b1",
+    "commits": [
+      "4228e01 fix: end label guides at their names and omit unreadable vectors",
+      "9ea00ba refactor: reshape the first movement batch's presentations",
+      "c1f2157 fix: say what the wall study's default run shows",
+      "9d7e77c refactor: trim the study catalogs and reword count-led messages",
+      "86ca9c3 test: refuse literals outside resolved study messages",
+      "0ac470e docs: describe the workspace tools' parameters and returns",
+      "c6f0fb2 docs: record reviewed change and validation"
+    ],
+    "workflowRuns": [
+      {
+        "workflow": "Pull request title",
+        "runId": 42331984785,
+        "event": "pull_request",
+        "headSha": "c6f0fb2f6d62cc885866fbad95c2cb37899390b1",
+        "conclusion": "success",
+        "completedAt": "2026-11-07T03:01:14Z",
+        "note": "The title read the same afterwards: the workflow left the gitmoji-and-subject title as written."
+      },
+      {
+        "workflow": "CI",
+        "runId": 42331983498,
+        "event": "pull_request",
+        "headSha": "c6f0fb2f6d62cc885866fbad95c2cb37899390b1",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "checks",
+            "conclusion": "success",
+            "startedAt": "2026-11-07T03:01:01Z",
+            "completedAt": "2026-11-07T03:09:41Z"
+          },
+          {
+            "name": "visual",
+            "conclusion": "success",
+            "startedAt": "2026-11-07T03:01:01Z",
+            "completedAt": "2026-11-07T03:04:37Z"
+          }
+        ],
+        "annotations": "one notice-level annotation per job about queue times for macOS arm64 runners"
+      }
+    ],
+    "afterRuns": {
+      "mergeable": "MERGEABLE",
+      "mergeStateStatus": "CLEAN",
+      "reviews": 0,
+      "comments": 0
+    }
   }
 }

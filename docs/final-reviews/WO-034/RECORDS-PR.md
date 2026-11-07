@@ -11,7 +11,7 @@ This branch files the instance records of WO-034, the first standards pass under
 
 ## Validation
 
-- The target's declared review gate (install, lint, e2e type check, unit tests, format, build, e2e and visual) passed at the tree VER-001 verified, `d554030f…`, with no tracked-byte mutation, and the six reviewed commits end at that tree. Each commit passes the Tools unit suite on its own export, and CI passed `checks`, `visual` and `title` on the draft's head, whose tree is the same.
+- The target's declared review gate (install, lint, e2e type check, unit tests, format, build, e2e and visual) passed at the tree VER-001 verified, `d554030f…`, with no tracked-byte mutation, and the six reviewed commits end at that tree. Each commit passes the Tools unit suite on its own export. CI passed `checks`, `visual` and `title` on the draft's head, whose tree is the same, and again on the published head, where the title workflow left the gitmoji-and-subject title as written.
 - All nine criteria are met, none waived or recorded defective. Criterion 1, which the executor recorded unmet for the verifier to perform, is met by VER-001's walkthrough, and the final review performed the Objective's session again on the reviewed sources with the same frame data.
 - Gates in this worktree: no launchpad code changed, so the branch's code identity is `main`'s and no launchpad complete run is owed. `npm run test:docs` passed after the review's last record edit and again after the records moved.
 
