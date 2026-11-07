@@ -1,0 +1,13 @@
+{
+  "command": "npx",
+  "args": [
+    "nx",
+    "lint",
+    "dotln-e2e",
+    "--output-style=static"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T22:55:42.502Z",
+  "finishedAt": "2026-11-06T22:55:45.095Z",
+  "exitCode": 0
+}

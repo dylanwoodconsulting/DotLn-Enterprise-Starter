@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-034",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 16,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/16",
+  "baseBranch": "main",
+  "headBranch": "refactor/movement-presentations",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-034 --target-worktree --draft --branch refactor/movement-presentations --title \"refactor: reshape the first movement batch's presentations and tighten the study guards\" --body-file docs/evidence/WO-034/ver-001/preview-pr-body.md",
+      "session": "the verifying Claude Code session, after verification-result pass (VerificationCompleted for VER-001 at 2026-11-07T01:49:55.939Z)",
+      "source": "docs/evidence/WO-034/host-qualification.md, where the verifying session recorded the invocation and the hook's and host's decisions; the final review read the pull request back from the forge (gh pr view, gh run list, gh run view and one GraphQL query for threads, comments, reviews and title events)"
+    },
+    "headSha": "76f8bcee89abec81f66f3120268a4879de097aef",
+    "parent": "d7d842dc4fdbde03099695933a448d9632fa4335",
+    "tree": "d554030f09eb631952b8b6f1c2396b6938f20398",
+    "titleAsPublished": "refactor: reshape the first movement batch's presentations and tighten the study guards",
+    "verification": {
+      "id": "VER-001",
+      "path": "docs/verifications/WO-034/VER-001.md",
+      "verdict": "pass",
+      "treeHash": "d554030f09eb631952b8b6f1c2396b6938f20398"
+    },
+    "targetGate": "target-gate:4fdd7930-df81-42b8-8222-ecb3d52bd60e (review selection) at the same tree, recorded 2026-11-06T23:55:19.949Z by the executor"
+  },
+  "finalReview": {
+    "observedAt": "2026-11-07T02:47:57Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "76f8bcee89abec81f66f3120268a4879de097aef",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "titleEvents": [
+      {
+        "at": "2026-11-07T02:04:21Z",
+        "actor": "github-actions",
+        "previousTitle": "refactor: reshape the first movement batch's presentations and tighten the study guards",
+        "currentTitle": ":recycle: refactor: reshape the first movement batch's presentations and tighten the study guards"
+      }
+    ],
+    "workflowRuns": [
+      {
+        "workflow": "CI",
+        "runId": 42327336350,
+        "event": "pull_request",
+        "headSha": "76f8bcee89abec81f66f3120268a4879de097aef",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "checks",
+            "conclusion": "success",
+            "startedAt": "2026-11-07T02:04:12Z",
+            "completedAt": "2026-11-07T02:13:34Z"
+          },
+          {
+            "name": "visual",
+            "conclusion": "success",
+            "startedAt": "2026-11-07T02:04:12Z",
+            "completedAt": "2026-11-07T02:06:55Z"
+          }
+        ]
+      },
+      {
+        "workflow": "Pull request title",
+        "runId": 42327336318,
+        "event": "pull_request",
+        "headSha": "76f8bcee89abec81f66f3120268a4879de097aef",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "title",
+            "conclusion": "success",
+            "startedAt": "2026-11-07T02:04:12Z",
+            "completedAt": "2026-11-07T02:04:23Z"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "item": "The title workflow decorated the draft's conventional title with its type's gitmoji, leaving a conventional type in the title.",
+        "route": "fixed at the final publish",
+        "disposition": "WS-001 rule 20 asks for a gitmoji and a subject with no conventional type; the final publish sets such a title, which the workflow leaves as written (WO-034-D014)."
+      },
+      {
+        "item": "CI's checks and visual jobs on the draft head.",
+        "route": "none needed",
+        "disposition": "Both passed on the tree the reviewed commits end at; the published head's runs follow the final publish."
+      }
+    ],
+    "notes": [
+      "The draft head's tree is the tree VER-001 verified, and the six reviewed commits end at the same tree, so the draft's runs judged the reviewed bytes.",
+      "The pull request had no review, comment or review thread to route."
+    ]
+  }
+}

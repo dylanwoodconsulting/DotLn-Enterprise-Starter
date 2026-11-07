@@ -1,0 +1,31 @@
+{
+ "drawnAt": "2026-11-07T00:54:10.435Z",
+ "source": "node:crypto randomInt",
+ "firstBatch": [
+  "align.presentation.ts",
+  "arrive.presentation.ts",
+  "equilibrium-fallback.presentation.ts",
+  "face.presentation.ts",
+  "fixed-formations.presentation.ts",
+  "flocking.presentation.ts",
+  "formation-pattern-interface.presentation.ts",
+  "group-movement.presentation.ts",
+  "making-the-creatures.presentation.ts",
+  "priority-steering.presentation.ts",
+  "pursue.presentation.ts",
+  "scalable-formations.presentation.ts",
+  "seek.presentation.ts",
+  "separation.presentation.ts",
+  "slot-assignment.presentation.ts",
+  "steering-pipeline.presentation.ts",
+  "two-level-formation-steering.presentation.ts",
+  "velocity-matching.presentation.ts",
+  "wander.presentation.ts",
+  "weighted-blending.presentation.ts"
+ ],
+ "picked": [
+  "wander.presentation.ts",
+  "formation-pattern-interface.presentation.ts",
+  "arrive.presentation.ts"
+ ]
+}

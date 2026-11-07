@@ -1,0 +1,11 @@
+{
+  "command": "node",
+  "args": [
+    "--test",
+    "tools/"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T22:34:18.918Z",
+  "finishedAt": "2026-11-06T22:34:20.990Z",
+  "exitCode": 0
+}

@@ -1,0 +1,59 @@
+{
+ "ranAt": "2026-11-07T01:24:08.558Z",
+ "results": [
+  {
+   "build": "base",
+   "exitCode": 1,
+   "stats": {
+    "startTime": "2026-11-07T01:24:04.607Z",
+    "duration": 2338.0240000000003,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+   },
+   "byRule": {
+    "the guide's end": "failed",
+    "the unread vector": "failed",
+    "the room by font size": "failed"
+   }
+  },
+  {
+   "build": "candidate",
+   "exitCode": 0,
+   "stats": {
+    "startTime": "2026-11-07T01:24:07.224Z",
+    "duration": 1327.0430000000001,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+   },
+   "byRule": {
+    "the guide's end": "passed",
+    "the unread vector": "passed",
+    "the room by font size": "passed"
+   }
+  }
+ ],
+ "verdict": [
+  {
+   "rule": "the guide's end",
+   "base": "failed",
+   "candidate": "passed",
+   "holds": true
+  },
+  {
+   "rule": "the unread vector",
+   "base": "failed",
+   "candidate": "passed",
+   "holds": true
+  },
+  {
+   "rule": "the room by font size",
+   "base": "failed",
+   "candidate": "passed",
+   "holds": true
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": "npm",
+  "args": [
+    "run",
+    "check:bundle"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T23:11:46.037Z",
+  "finishedAt": "2026-11-06T23:11:53.523Z",
+  "exitCode": 0
+}

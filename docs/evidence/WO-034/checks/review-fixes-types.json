@@ -1,0 +1,13 @@
+{
+  "command": "npx",
+  "args": [
+    "tsc",
+    "--noEmit",
+    "-p",
+    "libs/features/tools/tsconfig.spec.json"
+  ],
+  "cwd": "target",
+  "startedAt": "2026-11-06T23:12:01.219Z",
+  "finishedAt": "2026-11-06T23:12:06.047Z",
+  "exitCode": 0
+}

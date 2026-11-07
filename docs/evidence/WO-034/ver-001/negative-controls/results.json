@@ -1,0 +1,65 @@
+{
+ "ranAt": "2026-11-07T01:34:07.629Z",
+ "command": [
+  "node",
+  "node_modules/vitest/vitest.mjs",
+  "run",
+  "--config",
+  "libs/features/tools/vite.config.mts",
+  "src/lib/studies/study-models.spec.ts",
+  "-t",
+  "routes visible narration"
+ ],
+ "results": [
+  {
+   "name": "candidate",
+   "file": null,
+   "injected": null,
+   "exitCode": 0,
+   "outcome": "pass",
+   "expected": "pass",
+   "met": true,
+   "log": "candidate.log"
+  },
+  {
+   "name": "VER-003 appended literal (first batch, wander)",
+   "file": "libs/features/tools/src/lib/studies/movement/wander.presentation.ts",
+   "injected": "label: t('studyAifg.wander.model.labels.target') + ' the runner, in plain English',",
+   "exitCode": 1,
+   "outcome": "fail",
+   "expected": "fail",
+   "met": true,
+   "log": "ver-003-appended-literal-first-batch-wander-.log"
+  },
+  {
+   "name": "VER-003 literal message parameter (first batch, arrive)",
+   "file": "libs/features/tools/src/lib/studies/movement/arrive.presentation.ts",
+   "injected": "exampleTarget: 'twenty plain English units',",
+   "exitCode": 1,
+   "outcome": "fail",
+   "expected": "fail",
+   "met": true,
+   "log": "ver-003-literal-message-parameter-first-batch-arrive-.log"
+  },
+  {
+   "name": "prepended literal (first batch, formation pattern interface)",
+   "file": "libs/features/tools/src/lib/studies/movement/formation-pattern-interface.presentation.ts",
+   "injected": "label: 'Note: ' + t('studyAifg.formation-pattern-interface.model.labels.anchor'),",
+   "exitCode": 1,
+   "outcome": "fail",
+   "expected": "fail",
+   "met": true,
+   "log": "prepended-literal-first-batch-formation-pattern-interface-.log"
+  },
+  {
+   "name": "VER-003 literal message parameter (second batch, flee)",
+   "file": "libs/features/tools/src/lib/studies/movement/flee.presentation.ts",
+   "injected": "threat: 'twenty plain English units',",
+   "exitCode": 1,
+   "outcome": "fail",
+   "expected": "fail",
+   "met": true,
+   "log": "ver-003-literal-message-parameter-second-batch-flee-.log"
+  }
+ ]
+}

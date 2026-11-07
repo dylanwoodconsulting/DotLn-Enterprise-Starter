@@ -1,0 +1,243 @@
+{
+  "config": {
+    "argv": [
+      "<home>/.local/share/fnm/node-versions/v26.9.0/installation/bin/node",
+      "<target-worktree>/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config",
+      "<session-scratch>/glyph-regressions-2/candidate.config.cjs",
+      "--grep",
+      "a displaced name|a stopped cart|a wide drawing"
+    ],
+    "configFile": "<session-scratch>/glyph-regressions-2/candidate.config.cjs",
+    "rootDir": "<target-worktree>/apps/dotln-e2e/src",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "<session-scratch>/glyph-regressions-2/candidate",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "<target-worktree>/apps/dotln-e2e/src",
+        "testIgnore": [],
+        "testMatch": [
+          "movement-labels.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "<session-scratch>/glyph-regressions-2/candidate",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "<target-worktree>/apps/dotln-e2e/src",
+        "snapshotDir": "<target-worktree>/apps/dotln-e2e/src",
+        "testIgnore": [],
+        "testMatch": "movement-labels.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:51725",
+          "browserName": "chromium",
+          "reducedMotion": "reduce"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "<launchpad-worktree>/docs/evidence/WO-034/glyph-regressions-2/candidate.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "movement-labels.spec.ts",
+      "file": "movement-labels.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a displaced name guide stops before entering its glyphs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T22:35:54.947Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-2eb4535975b1eb92ae8c",
+          "file": "movement-labels.spec.ts",
+          "line": 75,
+          "column": 5
+        },
+        {
+          "title": "a stopped cart leaves no unreadable vector tick",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T22:35:55.940Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-60f63c78ab7d8d1f0618",
+          "file": "movement-labels.spec.ts",
+          "line": 129,
+          "column": 5
+        },
+        {
+          "title": "a wide drawing keeps a fitting trolley name at its authored offset",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 227,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m25.380001068115234\u001b[39m\nReceived: \u001b[31m25.3799991607666\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m25.380001068115234\u001b[39m\nReceived: \u001b[31m25.3799991607666\u001b[39m\n    at <target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts:171:28",
+                    "location": {
+                      "file": "<target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts",
+                      "column": 28,
+                      "line": 171
+                    },
+                    "snippet": "  169 |   expect(placement.fontSize).toBe('15px');\n  170 |   expect(placement.preferredTop).toBeGreaterThanOrEqual(0);\n> 171 |   expect(placement.actual).toBe(placement.preferred);\n      |                            ^\n  172 | });\n  173 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "<target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts",
+                        "column": 28,
+                        "line": 171
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m25.380001068115234\u001b[39m\nReceived: \u001b[31m25.3799991607666\u001b[39m\n\n  169 |   expect(placement.fontSize).toBe('15px');\n  170 |   expect(placement.preferredTop).toBeGreaterThanOrEqual(0);\n> 171 |   expect(placement.actual).toBe(placement.preferred);\n      |                            ^\n  172 | });\n  173 |\n    at <target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts:171:28"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T22:35:56.160Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "<session-scratch>/glyph-regressions-2/candidate/movement-labels-a-wide-dra-9a8ef-name-at-its-authored-offset/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "<target-worktree>/apps/dotln-e2e/src/movement-labels.spec.ts",
+                    "column": 28,
+                    "line": 171
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fb2689aaef3b654b7f80-384081ba41042c08bd1e",
+          "file": "movement-labels.spec.ts",
+          "line": 147,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T22:35:54.728Z",
+    "duration": 1710.9470000000001,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

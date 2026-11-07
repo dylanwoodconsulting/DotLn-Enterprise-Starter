@@ -1,0 +1,3415 @@
+{
+  "base": {
+    "parameters": {
+      "startX": 0,
+      "startY": 0,
+      "velocityX": 4,
+      "velocityY": 0,
+      "goalX": 18,
+      "goalY": 15,
+      "wallX": 10,
+      "wallBottom": -6,
+      "wallTop": 6,
+      "radius": 1,
+      "rayLength": 9,
+      "avoidDistance": 6,
+      "comparisonRayLength": 1,
+      "comparisonGoalY": 0,
+      "maxSpeed": 4,
+      "maxAcceleration": 8,
+      "timeStep": 0.1,
+      "steps": 80,
+      "velocitySeconds": 1,
+      "accelerationSecondsSquared": 0.25
+    },
+    "firstHit": 5,
+    "turning": -1,
+    "hits": 2,
+    "longest": 2,
+    "minClearance": 0.11866483316878607,
+    "shortClearance": -0.08282527990117705,
+    "shortHits": 0,
+    "maxHeadingGap": 6.470312969983208,
+    "end": {
+      "x": 18.257651145167323,
+      "y": 15.24208958171175
+    },
+    "firstState": {
+      "position": {
+        "x": 1.912284842159487,
+        "y": 0.543510185225659
+      },
+      "velocity": {
+        "x": 3.652842184662994,
+        "y": 1.6299521385447138
+      },
+      "heading": {
+        "x": 0.9132105461657485,
+        "y": 0.40748803463617844
+      }
+    }
+  },
+  "useful": [],
+  "candidates": [
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 11,
+      "turning": -1,
+      "hits": 9,
+      "longest": 2,
+      "minClearance": -0.93096260503082,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 304.9092087083868,
+      "end": {
+        "x": 18.26649431808241,
+        "y": 3.8527118265262152
+      },
+      "firstState": {
+        "position": {
+          "x": 4.325286801185335,
+          "y": 0.7543154763295277
+        },
+        "velocity": {
+          "x": 3.872498448064203,
+          "y": 1.0018761249477603
+        },
+        "heading": {
+          "x": 0.9681246120160507,
+          "y": 0.2504690312369401
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 9,
+      "turning": -1,
+      "hits": 10,
+      "longest": 3,
+      "minClearance": -0.8751495579230504,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 341.28368678026834,
+      "end": {
+        "x": 18.210196520324413,
+        "y": 4.011561384794182
+      },
+      "firstState": {
+        "position": {
+          "x": 3.5498709808362454,
+          "y": 0.5575505609576881
+        },
+        "velocity": {
+          "x": 3.8919343900270564,
+          "y": 0.9234969971389867
+        },
+        "heading": {
+          "x": 0.9729835975067641,
+          "y": 0.23087424928474667
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 6,
+      "turning": -1,
+      "hits": 11,
+      "longest": 5,
+      "minClearance": -0.8590242339198433,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 55.50322426972379,
+      "end": {
+        "x": 18.29343779004221,
+        "y": 4.131973398152325
+      },
+      "firstState": {
+        "position": {
+          "x": 2.3787494983345456,
+          "y": 0.29622402520523305
+        },
+        "velocity": {
+          "x": 3.9295190238549145,
+          "y": 0.7475829326317736
+        },
+        "heading": {
+          "x": 0.9823797559637286,
+          "y": 0.1868957331579434
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 3,
+      "turning": -1,
+      "hits": 17,
+      "longest": 7,
+      "minClearance": -0.9356627931938029,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 318.60354022892056,
+      "end": {
+        "x": 18.03808928204571,
+        "y": 3.83181989126809
+      },
+      "firstState": {
+        "position": {
+          "x": 1.1955333179152792,
+          "y": 0.09740359643130639
+        },
+        "velocity": {
+          "x": 3.9731785595042965,
+          "y": 0.46244149283488695
+        },
+        "heading": {
+          "x": 0.9932946398760744,
+          "y": 0.11561037320872176
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 28,
+      "longest": 17,
+      "minClearance": -0.9943568835195187,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 207.73639127493618,
+      "end": {
+        "x": 17.683969279617184,
+        "y": 6.07116046855784
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.96352894058064,
+          "y": 1.1297650412480065
+        },
+        "velocity": {
+          "x": 2.4534051829143904,
+          "y": 2.9088920296729106
+        },
+        "heading": {
+          "x": 0.6447216488630285,
+          "y": 0.7644174222813982
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 28,
+      "longest": 17,
+      "minClearance": -0.9943568835195187,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 207.73639127493618,
+      "end": {
+        "x": 17.683969279617184,
+        "y": 6.07116046855784
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.96352894058064,
+          "y": 1.1297650412480063
+        },
+        "velocity": {
+          "x": 2.4534051829143904,
+          "y": 2.90889202967291
+        },
+        "heading": {
+          "x": 0.6447216488630285,
+          "y": 0.7644174222813981
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 5,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 28,
+      "longest": 17,
+      "minClearance": -0.9943568835195187,
+      "shortClearance": -0.9782649007202089,
+      "shortHits": 4,
+      "maxHeadingGap": 207.7363912749359,
+      "end": {
+        "x": 17.683969279617198,
+        "y": 6.071160468557832
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.96352894058064,
+          "y": 1.1297650412480063
+        },
+        "velocity": {
+          "x": 2.4534051829143904,
+          "y": 2.90889202967291
+        },
+        "heading": {
+          "x": 0.6447216488630285,
+          "y": 0.7644174222813981
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 11,
+      "turning": -1,
+      "hits": 8,
+      "longest": 2,
+      "minClearance": -0.8535733276084533,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 243.67519707969302,
+      "end": {
+        "x": 18.361380221475923,
+        "y": 5.19444574160617
+      },
+      "firstState": {
+        "position": {
+          "x": 4.295170323981162,
+          "y": 0.8916313615760616
+        },
+        "velocity": {
+          "x": 3.821207015878755,
+          "y": 1.1825298904463182
+        },
+        "heading": {
+          "x": 0.9553017539696887,
+          "y": 0.29563247261157954
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 9,
+      "turning": -1,
+      "hits": 9,
+      "longest": 3,
+      "minClearance": -0.8282487562626599,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 216.43879122297193,
+      "end": {
+        "x": 18.37646867892704,
+        "y": 5.155418445313839
+      },
+      "firstState": {
+        "position": {
+          "x": 3.5296481462670237,
+          "y": 0.6593463239476963
+        },
+        "velocity": {
+          "x": 3.8483910146476097,
+          "y": 1.0908192326776898
+        },
+        "heading": {
+          "x": 0.9620977536619024,
+          "y": 0.27270480816942244
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 6,
+      "turning": -1,
+      "hits": 11,
+      "longest": 4,
+      "minClearance": -0.9265246678457082,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 218.55550411662716,
+      "end": {
+        "x": 18.332614652953147,
+        "y": 5.119282213978774
+      },
+      "firstState": {
+        "position": {
+          "x": 2.3701706859169946,
+          "y": 0.35055036761244623
+        },
+        "velocity": {
+          "x": 3.9010635171608974,
+          "y": 0.8841399408895906
+        },
+        "heading": {
+          "x": 0.9752658792902243,
+          "y": 0.22103498522239765
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 3,
+      "turning": -1,
+      "hits": 13,
+      "longest": 6,
+      "minClearance": -0.9738457438065371,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 250.8877685354593,
+      "end": {
+        "x": 18.453601391328917,
+        "y": 4.988011532117461
+      },
+      "firstState": {
+        "position": {
+          "x": 1.1937318316362573,
+          "y": 0.1153263525948296
+        },
+        "velocity": {
+          "x": 3.9623530198846977,
+          "y": 0.5475020966266839
+        },
+        "heading": {
+          "x": 0.9905882549711746,
+          "y": 0.136875524156671
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 19,
+      "hits": 34,
+      "longest": 17,
+      "minClearance": -0.9949968422607451,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 330.52206344512433,
+      "end": {
+        "x": 15.818385141387918,
+        "y": 3.119071577563738
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.177633097597918,
+          "y": 0.10117194474304414
+        },
+        "velocity": {
+          "x": 0.6511544900281239,
+          "y": 0.6739043142234261
+        },
+        "heading": {
+          "x": 0.6948641181897879,
+          "y": 0.7191410551848144
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 19,
+      "hits": 35,
+      "longest": 17,
+      "minClearance": -0.9949968422607451,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 330.5220634451244,
+      "end": {
+        "x": 15.766189848727741,
+        "y": 2.8673561593016332
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.177633097597918,
+          "y": 0.10117194474304414
+        },
+        "velocity": {
+          "x": 0.6511544900281239,
+          "y": 0.6739043142234261
+        },
+        "heading": {
+          "x": 0.6948641181897879,
+          "y": 0.7191410551848144
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 6,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 19,
+      "hits": 35,
+      "longest": 17,
+      "minClearance": -0.9949968422607451,
+      "shortClearance": -0.9894341059414771,
+      "shortHits": 11,
+      "maxHeadingGap": 330.5220634451244,
+      "end": {
+        "x": 15.766189848727741,
+        "y": 2.8673561593016337
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.177633097597918,
+          "y": 0.10117194474304414
+        },
+        "velocity": {
+          "x": 0.6511544900281239,
+          "y": 0.6739043142234261
+        },
+        "heading": {
+          "x": 0.6948641181897879,
+          "y": 0.7191410551848144
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 12,
+      "turning": -1,
+      "hits": 7,
+      "longest": 2,
+      "minClearance": -0.8415775238162855,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 342.6025230439867,
+      "end": {
+        "x": 18.503090283675363,
+        "y": 6.316017041699823
+      },
+      "firstState": {
+        "position": {
+          "x": 4.6363895065964105,
+          "y": 1.1619550244280903
+        },
+        "velocity": {
+          "x": 3.7490069277596705,
+          "y": 1.3946135864855156
+        },
+        "heading": {
+          "x": 0.9372517319399178,
+          "y": 0.34865339662137895
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 9,
+      "turning": -1,
+      "hits": 8,
+      "longest": 2,
+      "minClearance": -0.8756860774071367,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 340.86623237119903,
+      "end": {
+        "x": 18.66870388821607,
+        "y": 6.102535074379311
+      },
+      "firstState": {
+        "position": {
+          "x": 3.507021017025486,
+          "y": 0.7564999696566644
+        },
+        "velocity": {
+          "x": 3.799703584058465,
+          "y": 1.2499010654020792
+        },
+        "heading": {
+          "x": 0.9499258960146165,
+          "y": 0.31247526635051986
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 6,
+      "turning": -1,
+      "hits": 9,
+      "longest": 3,
+      "minClearance": -0.9266765603743763,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 344.6901696458048,
+      "end": {
+        "x": 17.95679913972337,
+        "y": 6.896194687427685
+      },
+      "firstState": {
+        "position": {
+          "x": 2.3605683347958646,
+          "y": 0.4025142247912128
+        },
+        "velocity": {
+          "x": 3.869209722664505,
+          "y": 1.0145028940513015
+        },
+        "heading": {
+          "x": 0.9673024306661262,
+          "y": 0.25362572351282536
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 3,
+      "turning": -1,
+      "hits": 11,
+      "longest": 6,
+      "minClearance": -0.9760722504168913,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 346.59767732441776,
+      "end": {
+        "x": 18.08014002862814,
+        "y": 6.860967089846748
+      },
+      "firstState": {
+        "position": {
+          "x": 1.1917167727399027,
+          "y": 0.13249697448238879
+        },
+        "velocity": {
+          "x": 3.950238194284191,
+          "y": 0.6289818824245857
+        },
+        "heading": {
+          "x": 0.9875595485710478,
+          "y": 0.15724547060614644
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 23,
+      "hits": 24,
+      "longest": 17,
+      "minClearance": -0.9082188870935223,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 247.3298437152229,
+      "end": {
+        "x": 17.5822200173064,
+        "y": 7.567891110302437
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.8357608607437825,
+          "y": 0.9098571567322009
+        },
+        "velocity": {
+          "x": 2.4898273959896065,
+          "y": 2.637825707686856
+        },
+        "heading": {
+          "x": 0.6864118637535322,
+          "y": 0.7272130040767988
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 23,
+      "hits": 24,
+      "longest": 17,
+      "minClearance": -0.9082188870935223,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 247.3298437152229,
+      "end": {
+        "x": 17.5822200173064,
+        "y": 7.567891110302437
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.8357608607437825,
+          "y": 0.9098571567322009
+        },
+        "velocity": {
+          "x": 2.4898273959896065,
+          "y": 2.637825707686856
+        },
+        "heading": {
+          "x": 0.6864118637535322,
+          "y": 0.7272130040767988
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 7,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 23,
+      "hits": 24,
+      "longest": 17,
+      "minClearance": -0.9082188870935223,
+      "shortClearance": -0.9458003305615357,
+      "shortHits": 3,
+      "maxHeadingGap": 247.3298437152229,
+      "end": {
+        "x": 17.5822200173064,
+        "y": 7.567891110302437
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.8357608607437825,
+          "y": 0.9098571567322009
+        },
+        "velocity": {
+          "x": 2.4898273959896065,
+          "y": 2.637825707686856
+        },
+        "heading": {
+          "x": 0.6864118637535322,
+          "y": 0.7272130040767988
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 12,
+      "turning": -1,
+      "hits": 6,
+      "longest": 1,
+      "minClearance": -0.9071506753390679,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 323.9479623756217,
+      "end": {
+        "x": 18.34798367139385,
+        "y": 7.642653932819338
+      },
+      "firstState": {
+        "position": {
+          "x": 4.5932730778023245,
+          "y": 1.3025129712899244
+        },
+        "velocity": {
+          "x": 3.683117272061552,
+          "y": 1.5603355921858197
+        },
+        "heading": {
+          "x": 0.920779318015388,
+          "y": 0.39008389804645494
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 9,
+      "turning": -1,
+      "hits": 6,
+      "longest": 2,
+      "minClearance": -0.9520468073140261,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 320.650666579682,
+      "end": {
+        "x": 17.73112908853073,
+        "y": 8.126051486484796
+      },
+      "firstState": {
+        "position": {
+          "x": 3.482470029745316,
+          "y": 0.8486973187680639
+        },
+        "velocity": {
+          "x": 3.7469134130024653,
+          "y": 1.4002285083022057
+        },
+        "heading": {
+          "x": 0.9367283532506163,
+          "y": 0.3500571270755514
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 6,
+      "turning": -1,
+      "hits": 8,
+      "longest": 3,
+      "minClearance": -0.9605530670859178,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 327.10533537156147,
+      "end": {
+        "x": 18.402870731893472,
+        "y": 7.712019313536663
+      },
+      "firstState": {
+        "position": {
+          "x": 2.3501456975244883,
+          "y": 0.45194732966340384
+        },
+        "velocity": {
+          "x": 3.834629431721441,
+          "y": 1.1382517829442207
+        },
+        "heading": {
+          "x": 0.9586573579303604,
+          "y": 0.28456294573605523
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 3,
+      "turning": -1,
+      "hits": 9,
+      "longest": 5,
+      "minClearance": -0.9125395994747889,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 343.2480020862023,
+      "end": {
+        "x": 18.22480893151408,
+        "y": 7.94956181536869
+      },
+      "firstState": {
+        "position": {
+          "x": 1.1895313828374559,
+          "y": 0.1488592955114788
+        },
+        "velocity": {
+          "x": 3.937091911479736,
+          "y": 0.7066167847998229
+        },
+        "heading": {
+          "x": 0.9842729778699342,
+          "y": 0.17665419619995576
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 31,
+      "longest": 17,
+      "minClearance": -0.8561611804820652,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 313.5929506040913,
+      "end": {
+        "x": 15.956707462365486,
+        "y": 5.190356332333184
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.288218623565245,
+          "y": 0.2525006065479787
+        },
+        "velocity": {
+          "x": 1.2422678659604367,
+          "y": 1.2605998375443872
+        },
+        "heading": {
+          "x": 0.7019088302209865,
+          "y": 0.712266799772253
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 31,
+      "longest": 17,
+      "minClearance": -0.8561611804820652,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 313.5929506040913,
+      "end": {
+        "x": 16.193318885283464,
+        "y": 4.832061555768345
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.288218623565245,
+          "y": 0.2525006065479787
+        },
+        "velocity": {
+          "x": 1.2422678659604367,
+          "y": 1.2605998375443872
+        },
+        "heading": {
+          "x": 0.7019088302209865,
+          "y": 0.712266799772253
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 8,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 32,
+      "longest": 17,
+      "minClearance": -0.8561611804820652,
+      "shortClearance": -0.9911950266789766,
+      "shortHits": 7,
+      "maxHeadingGap": 313.5929506040913,
+      "end": {
+        "x": 16.28693587708219,
+        "y": 4.793621661891766
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.288218623565245,
+          "y": 0.2525006065479787
+        },
+        "velocity": {
+          "x": 1.2422678659604367,
+          "y": 1.2605998375443872
+        },
+        "heading": {
+          "x": 0.7019088302209865,
+          "y": 0.712266799772253
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 13,
+      "turning": -1,
+      "hits": 4,
+      "longest": 2,
+      "minClearance": -0.9869756280302724,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 346.24921517111807,
+      "end": {
+        "x": 18.55109198622087,
+        "y": 9.00389492299963
+      },
+      "firstState": {
+        "position": {
+          "x": 4.906980154338013,
+          "y": 1.6105943267224228
+        },
+        "velocity": {
+          "x": 3.5935030540318005,
+          "y": 1.756910868730717
+        },
+        "heading": {
+          "x": 0.8983757635079501,
+          "y": 0.4392277171826792
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 10,
+      "turning": -1,
+      "hits": 5,
+      "longest": 2,
+      "minClearance": -0.9090407098635651,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 348.70821022885485,
+      "end": {
+        "x": 18.547758615282675,
+        "y": 8.97647199831787
+      },
+      "firstState": {
+        "position": {
+          "x": 3.822660165018644,
+          "y": 1.096687321068925
+        },
+        "velocity": {
+          "x": 3.66200154740729,
+          "y": 1.6092683638183585
+        },
+        "heading": {
+          "x": 0.9155003868518224,
+          "y": 0.4023170909545896
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 7,
+      "turning": -1,
+      "hits": 6,
+      "longest": 2,
+      "minClearance": -0.9011518583613325,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 349.78983047837664,
+      "end": {
+        "x": 18.543547869502884,
+        "y": 8.963344604421945
+      },
+      "firstState": {
+        "position": {
+          "x": 2.715015663605063,
+          "y": 0.6354509394187577
+        },
+        "velocity": {
+          "x": 3.7591580631693704,
+          "y": 1.3670152362386843
+        },
+        "heading": {
+          "x": 0.9397895157923428,
+          "y": 0.3417538090596711
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 3,
+      "turning": -1,
+      "hits": 8,
+      "longest": 5,
+      "minClearance": -0.8642282364112771,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 345.45372331987096,
+      "end": {
+        "x": 18.559458266946905,
+        "y": 9.017904681054766
+      },
+      "firstState": {
+        "position": {
+          "x": 1.1872176002086468,
+          "y": 0.16437838736833887
+        },
+        "velocity": {
+          "x": 3.9231643904552476,
+          "y": 0.7802442985782735
+        },
+        "heading": {
+          "x": 0.9807910976138121,
+          "y": 0.19506107464456843
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 22,
+      "longest": 17,
+      "minClearance": -0.8063646315084476,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 314.3582312718162,
+      "end": {
+        "x": 17.456115603984827,
+        "y": 9.170145862221837
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.2739950563009135,
+          "y": 0.274165641489741
+        },
+        "velocity": {
+          "x": 1.1713118071109616,
+          "y": 1.3689035080599203
+        },
+        "heading": {
+          "x": 0.6501402934752158,
+          "y": 0.7598141870220377
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 22,
+      "longest": 17,
+      "minClearance": -0.8063646315084494,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 314.35823127181646,
+      "end": {
+        "x": 17.456115603984827,
+        "y": 9.17014586222184
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.2739950563009135,
+          "y": 0.274165641489741
+        },
+        "velocity": {
+          "x": 1.1713118071109616,
+          "y": 1.3689035080599203
+        },
+        "heading": {
+          "x": 0.6501402934752158,
+          "y": 0.7598141870220377
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 9,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 20,
+      "hits": 22,
+      "longest": 17,
+      "minClearance": -0.8063646315084494,
+      "shortClearance": -0.9586073983669507,
+      "shortHits": 6,
+      "maxHeadingGap": 314.35823127181646,
+      "end": {
+        "x": 17.456115603984827,
+        "y": 9.17014586222184
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.2739950563009135,
+          "y": 0.274165641489741
+        },
+        "velocity": {
+          "x": 1.1713118071109616,
+          "y": 1.3689035080599203
+        },
+        "heading": {
+          "x": 0.6501402934752158,
+          "y": 0.7598141870220377
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 13,
+      "turning": -1,
+      "hits": 3,
+      "longest": 1,
+      "minClearance": -0.8821447224237415,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 341.6172990994296,
+      "end": {
+        "x": 18.814736051303147,
+        "y": 10.210406851130417
+      },
+      "firstState": {
+        "position": {
+          "x": 4.851991578143863,
+          "y": 1.7494784775763836
+        },
+        "velocity": {
+          "x": 3.517689504581043,
+          "y": 1.9041692543890045
+        },
+        "heading": {
+          "x": 0.8794223761452608,
+          "y": 0.47604231359725113
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 10,
+      "turning": -1,
+      "hits": 4,
+      "longest": 1,
+      "minClearance": -0.8825810362666036,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 345.6057002957734,
+      "end": {
+        "x": 18.79742511856705,
+        "y": 10.132905777247778
+      },
+      "firstState": {
+        "position": {
+          "x": 3.789284773180256,
+          "y": 1.1922741195728155
+        },
+        "velocity": {
+          "x": 3.598610404640471,
+          "y": 1.7464258231065375
+        },
+        "heading": {
+          "x": 0.8996526011601178,
+          "y": 0.4366064557766344
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 7,
+      "turning": -1,
+      "hits": 4,
+      "longest": 2,
+      "minClearance": -0.8567653384855092,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 352.59877337265726,
+      "end": {
+        "x": 18.41613402069277,
+        "y": 10.023600663497621
+      },
+      "firstState": {
+        "position": {
+          "x": 2.6989906395957264,
+          "y": 0.6914738456034064
+        },
+        "velocity": {
+          "x": 3.7137590840599484,
+          "y": 1.485931850914507
+        },
+        "heading": {
+          "x": 0.9284397710149871,
+          "y": 0.37148296272862674
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 4,
+      "turning": -1,
+      "hits": 6,
+      "longest": 4,
+      "minClearance": -0.7673518064226273,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 346.7735626565394,
+      "end": {
+        "x": 18.780749500663227,
+        "y": 10.13504548212171
+      },
+      "firstState": {
+        "position": {
+          "x": 1.5707445150656696,
+          "y": 0.28419574535655856
+        },
+        "velocity": {
+          "x": 3.8592995683413336,
+          "y": 1.0515735075592179
+        },
+        "heading": {
+          "x": 0.9648248920853334,
+          "y": 0.26289337688980446
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 21,
+      "hits": 21,
+      "longest": 17,
+      "minClearance": -0.8509137355684739,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 319.3341151829852,
+      "end": {
+        "x": 17.40913489895633,
+        "y": 10.126371041353536
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.433382698985281,
+          "y": 0.48869260491271194
+        },
+        "velocity": {
+          "x": 1.7364981564446795,
+          "y": 1.950912259814588
+        },
+        "heading": {
+          "x": 0.6648671542561263,
+          "y": 0.7469616236403047
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 21,
+      "hits": 29,
+      "longest": 17,
+      "minClearance": -0.8509137355684739,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 309.515408717064,
+      "end": {
+        "x": 16.404614336486887,
+        "y": 7.531097488304734
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.433382698985281,
+          "y": 0.48869260491271194
+        },
+        "velocity": {
+          "x": 1.7364981564446795,
+          "y": 1.950912259814588
+        },
+        "heading": {
+          "x": 0.6648671542561263,
+          "y": 0.7469616236403047
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 10,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 21,
+      "hits": 29,
+      "longest": 17,
+      "minClearance": -0.8509137355684739,
+      "shortClearance": -0.9626982018360533,
+      "shortHits": 5,
+      "maxHeadingGap": 309.515408717064,
+      "end": {
+        "x": 16.501641354618076,
+        "y": 7.172305794376274
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 5.433382698985281,
+          "y": 0.48869260491271194
+        },
+        "velocity": {
+          "x": 1.7364981564446795,
+          "y": 1.950912259814588
+        },
+        "heading": {
+          "x": 0.6648671542561263,
+          "y": 0.7469616236403047
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 14,
+      "turning": -1,
+      "hits": 1,
+      "longest": 1,
+      "minClearance": -0.7483885781633772,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 16.754150584415797,
+      "end": {
+        "x": 18.801859280052298,
+        "y": 12.562690082355763
+      },
+      "firstState": {
+        "position": {
+          "x": 5.072547406323746,
+          "y": 2.2206506944941284
+        },
+        "velocity": {
+          "x": 3.3354800055393286,
+          "y": 2.2078435480457768
+        },
+        "heading": {
+          "x": 0.8338700013848321,
+          "y": 0.5519608870114442
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 11,
+      "turning": -1,
+      "hits": 1,
+      "longest": 1,
+      "minClearance": -0.7806280395044181,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 17.95231433212946,
+      "end": {
+        "x": 18.801745893820183,
+        "y": 12.58296539452403
+      },
+      "firstState": {
+        "position": {
+          "x": 4.063453550406335,
+          "y": 1.57137512404485
+        },
+        "velocity": {
+          "x": 3.4283393715890007,
+          "y": 2.060701131462963
+        },
+        "heading": {
+          "x": 0.8570848428972502,
+          "y": 0.5151752828657408
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 8,
+      "turning": -1,
+      "hits": 2,
+      "longest": 1,
+      "minClearance": -0.6756469875553113,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 16.884160161480168,
+      "end": {
+        "x": 18.813536408852947,
+        "y": 12.56926530724223
+      },
+      "firstState": {
+        "position": {
+          "x": 3.0224220533590462,
+          "y": 0.974876646714202
+        },
+        "velocity": {
+          "x": 3.5642395468016317,
+          "y": 1.8155430187729775
+        },
+        "heading": {
+          "x": 0.8910598867004081,
+          "y": 0.4538857546932445
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 4,
+      "turning": -1,
+      "hits": 4,
+      "longest": 4,
+      "minClearance": -0.6242041490430283,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 16.795326754871724,
+      "end": {
+        "x": 18.83625328992868,
+        "y": 12.581291097388464
+      },
+      "firstState": {
+        "position": {
+          "x": 1.5612073471528443,
+          "y": 0.3265754310731075
+        },
+        "velocity": {
+          "x": 3.8132984726240546,
+          "y": 1.2077892029170698
+        },
+        "heading": {
+          "x": 0.9533246181560137,
+          "y": 0.30194730072926745
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 19,
+      "longest": 17,
+      "minClearance": -0.9056037996908703,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 195.28253506738275,
+      "end": {
+        "x": 17.245616727915813,
+        "y": 11.590737667637496
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 6.124340184708246,
+          "y": 1.4196689166611083
+        },
+        "velocity": {
+          "x": 2.6498062010069265,
+          "y": 2.9964190456451916
+        },
+        "heading": {
+          "x": 0.6624515502517316,
+          "y": 0.7491047614112979
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 19,
+      "longest": 17,
+      "minClearance": -0.9056037996908703,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 195.28253506738275,
+      "end": {
+        "x": 17.245616727915813,
+        "y": 11.590737667637496
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 6.124340184708246,
+          "y": 1.4196689166611083
+        },
+        "velocity": {
+          "x": 2.6498062010069265,
+          "y": 2.9964190456451916
+        },
+        "heading": {
+          "x": 0.6624515502517316,
+          "y": 0.7491047614112979
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 12,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": 24,
+      "hits": 19,
+      "longest": 17,
+      "minClearance": -0.9056037996908703,
+      "shortClearance": -0.8752640467958821,
+      "shortHits": 1,
+      "maxHeadingGap": 195.28253506738275,
+      "end": {
+        "x": 17.245616727915813,
+        "y": 11.590737667637496
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      "turningState": {
+        "position": {
+          "x": 6.124340184708246,
+          "y": 1.4196689166611083
+        },
+        "velocity": {
+          "x": 2.6498062010069265,
+          "y": 2.9964190456451916
+        },
+        "heading": {
+          "x": 0.6624515502517316,
+          "y": 0.7491047614112979
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": -0.08282527990117705,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 18.23009304852111,
+        "y": 15.224195955840841
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": -0.08282527990117705,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 18.23009304852111,
+        "y": 15.224195955840841
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": -0.08282527990117705,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 18.23009304852111,
+        "y": 15.224195955840841
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 5,
+      "turning": -1,
+      "hits": 2,
+      "longest": 2,
+      "minClearance": 0.11866483316878607,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 6.470312969983208,
+      "end": {
+        "x": 18.257651145167323,
+        "y": 15.24208958171175
+      },
+      "firstState": {
+        "position": {
+          "x": 1.912284842159487,
+          "y": 0.543510185225659
+        },
+        "velocity": {
+          "x": 3.652842184662994,
+          "y": 1.6299521385447138
+        },
+        "heading": {
+          "x": 0.9132105461657485,
+          "y": 0.40748803463617844
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.7393721503523196,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 182.81857425549984,
+      "end": {
+        "x": 17.965807958224712,
+        "y": 14.962870442277758
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.7393721503523196,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 182.81857425549984,
+      "end": {
+        "x": 17.965807958224712,
+        "y": 14.962870442277758
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 15,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.7393721503523196,
+      "shortClearance": -0.08282527990117705,
+      "shortHits": 0,
+      "maxHeadingGap": 182.81857425549984,
+      "end": {
+        "x": 17.965807958224712,
+        "y": 14.962870442277758
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 6,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": 0.7726546990643948,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 17.36797502583669,
+        "y": 17.2622642123981
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 7,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": 0.7726546990643948,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 17.36797502583669,
+        "y": 17.2622642123981
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 8,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": -1,
+      "turning": -1,
+      "hits": 0,
+      "longest": 0,
+      "minClearance": 0.7726546990643948,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 0,
+      "end": {
+        "x": 17.36797502583669,
+        "y": 17.2622642123981
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 9,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 6,
+      "turning": -1,
+      "hits": 1,
+      "longest": 1,
+      "minClearance": 0.8752172307124515,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 3.2981403587593903,
+      "end": {
+        "x": 17.37448521546734,
+        "y": 17.28114599461204
+      },
+      "firstState": {
+        "position": {
+          "x": 2.235515467118451,
+          "y": 0.8076123525129608
+        },
+        "velocity": {
+          "x": 3.453398102399937,
+          "y": 2.0184255117146415
+        },
+        "heading": {
+          "x": 0.8633495255999845,
+          "y": 0.5046063779286605
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 10,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.0053146686361382756,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 182.85179032544488,
+      "end": {
+        "x": 18.501828901107626,
+        "y": 18.640122650590047
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 11,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.0053146686361382756,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 182.85179032544488,
+      "end": {
+        "x": 18.501828901107626,
+        "y": 18.640122650590047
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    },
+    {
+      "parameters": {
+        "startX": 0,
+        "startY": 0,
+        "velocityX": 4,
+        "velocityY": 0,
+        "goalX": 18,
+        "goalY": 18,
+        "wallX": 10,
+        "wallBottom": -6,
+        "wallTop": 6,
+        "radius": 1,
+        "rayLength": 12,
+        "avoidDistance": 6,
+        "comparisonRayLength": 1,
+        "comparisonGoalY": 0,
+        "maxSpeed": 4,
+        "maxAcceleration": 8,
+        "timeStep": 0.1,
+        "steps": 80,
+        "velocitySeconds": 1,
+        "accelerationSecondsSquared": 0.25
+      },
+      "firstHit": 0,
+      "turning": -1,
+      "hits": 17,
+      "longest": 17,
+      "minClearance": -0.0053146686361382756,
+      "shortClearance": 0.7726546990643948,
+      "shortHits": 0,
+      "maxHeadingGap": 182.85179032544488,
+      "end": {
+        "x": 18.501828901107626,
+        "y": 18.640122650590047
+      },
+      "firstState": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "velocity": {
+          "x": 4,
+          "y": 0
+        },
+        "heading": {
+          "x": 1,
+          "y": 0
+        }
+      }
+    }
+  ]
+}

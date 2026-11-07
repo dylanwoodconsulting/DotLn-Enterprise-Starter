@@ -1,0 +1,234 @@
+{
+  "trimmed": [
+    {
+      "scope": "studyAifg",
+      "before": 768,
+      "after": 89
+    },
+    {
+      "scope": "studyEip",
+      "before": 288,
+      "after": 66
+    },
+    {
+      "scope": "studyRxjs",
+      "before": 742,
+      "after": 89
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "libs/features/tools/src/lib/studies/eip/content-based-router.spec.ts",
+      "messages": {
+        "studyEip.content-based-router.model.renamedFinding": "finding F1, unmetCriterion criterion 2"
+      }
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/eip/correlation-identifier.spec.ts",
+      "messages": {
+        "studyEip.correlation-identifier.model.byArrival.operator": "zip(command$, result$)",
+        "studyEip.correlation-identifier.model.byArrival.label": "paired$",
+        "studyEip.correlation-identifier.model.byArrival.x": "cmd_1 got cmd_3",
+        "studyEip.correlation-identifier.model.byArrival.y": "cmd_2 got cmd_1",
+        "studyEip.correlation-identifier.model.byArrival.z": "cmd_3 got cmd_2"
+      }
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/eip/message-expiration.spec.ts",
+      "messages": {
+        "studyEip.message-expiration.model.verification32": "verification(32)"
+      }
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/eip/message-translator.spec.ts",
+      "messages": {
+        "studyEip.message-translator.model.unknownRow": "id {{id}}, schema {{schema}}",
+        "studyEip.message-translator.model.unknownShapeError": "Error: no translation from {{schema}}",
+        "studyEip.message-translator.model.refusedMoment": "Refused"
+      }
+    },
+    {
+      "path": "libs/features/tools/src/lib/studies/eip/process-manager.spec.ts",
+      "messages": {
+        "studyEip.process-manager.model.failureStop": "stop after {{failures}} failed verifications",
+        "studyEip.process-manager.model.limitMoment": "Limit"
+      }
+    }
+  ],
+  "reworded": [
+    {
+      "scope": "studyEip",
+      "key": "command-message.model.example.steps.6.states.store",
+      "before": "{{results}} result for 7",
+      "after": "For 7: {{results}} result"
+    },
+    {
+      "scope": "studyEip",
+      "key": "command-message.model.example.steps.7.states.store",
+      "before": "{{results}} results for 7",
+      "after": "For 7: {{results}} results"
+    },
+    {
+      "scope": "studyEip",
+      "key": "command-message.model.example.moments.4.label",
+      "before": "{{results}} results",
+      "after": "Results: {{results}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "content-based-router.model.flow.states.0.verifier",
+      "before": "{{remaining}} findings to file",
+      "after": "To file: {{remaining}} findings"
+    },
+    {
+      "scope": "studyEip",
+      "key": "content-based-router.model.flow.states.1.verifier",
+      "before": "{{remaining}} to file",
+      "after": "To file: {{remaining}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "content-based-router.model.flow.states.3.verifier",
+      "before": "{{remaining}} to file",
+      "after": "To file: {{remaining}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "content-based-router.model.flow.states.5.verifier",
+      "before": "{{remaining}} to file",
+      "after": "To file: {{remaining}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "content-based-router.model.flow.states.7.verifier",
+      "before": "{{remaining}} to file",
+      "after": "To file: {{remaining}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "control-bus.model.example.steps.0.states.queue",
+      "before": "{{count}} record",
+      "after": "Records: {{count}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "control-bus.model.example.steps.2.states.queue",
+      "before": "{{count}} record",
+      "after": "Records: {{count}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "control-bus.model.example.steps.9.states.queue",
+      "before": "{{count}} records",
+      "after": "Records: {{count}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "correlation-identifier.model.flow.states.0.kernel",
+      "before": "{{pending}} to send",
+      "after": "To send: {{pending}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "correlation-identifier.model.flow.states.1.kernel",
+      "before": "{{pending}} to send",
+      "after": "To send: {{pending}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "correlation-identifier.model.flow.states.2.kernel",
+      "before": "{{pending}} to send",
+      "after": "To send: {{pending}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "event-message.model.sweepState",
+      "before": "{{time}}: {{status}}, {{age}} min old",
+      "after": "At {{time}}: {{status}}, {{age}} min old"
+    },
+    {
+      "scope": "studyEip",
+      "key": "message-expiration.model.example.moments.1.label",
+      "before": "{{waiting}} waiting",
+      "after": "Waiting: {{waiting}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "message-expiration.model.flow.states.0.operator",
+      "before": "{{requests}} requests to send",
+      "after": "To send: {{requests}} requests"
+    },
+    {
+      "scope": "studyEip",
+      "key": "message-store.model.example.steps.0.states.log",
+      "before": "{{count}} entry",
+      "after": "Entries: {{count}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "message-store.model.example.steps.1.states.log",
+      "before": "{{count}} entries",
+      "after": "Entries: {{count}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "message-translator.model.example.notes.0",
+      "before": "Nothing has moved yet. {{inputCount}} rows wait in the legacy chunk: t, n and c.",
+      "after": "Nothing has moved yet. The legacy chunk holds {{inputCount}} rows: t, n and c."
+    },
+    {
+      "scope": "studyEip",
+      "key": "recipient-list.model.example.notes.8",
+      "before": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. {{closes}} closes made {{copies}} copies, and v0.96.0 is C's first release.",
+      "after": "The Recipient list sends a copy of close 2 to each of A, B and C and entry r to the Close record, and the closes end. The {{closes}} closes made {{copies}} copies, and v0.96.0 is C's first release."
+    },
+    {
+      "scope": "studyEip",
+      "key": "recipient-list.model.flow.states.3.record",
+      "before": "{{entries}} entry",
+      "after": "Entries: {{entries}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "recipient-list.model.flow.states.5.record",
+      "before": "{{entries}} entries",
+      "after": "Entries: {{entries}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "recipient-list.model.flow.states.8.record",
+      "before": "{{entries}} entries",
+      "after": "Entries: {{entries}}"
+    },
+    {
+      "scope": "studyEip",
+      "key": "resequencer.model.example.moments.2.label",
+      "before": "{{held}} held",
+      "after": "Held: {{held}}"
+    },
+    {
+      "scope": "studyRxjs",
+      "key": "combine-latest.model.budget",
+      "before": "{{budget}}% left",
+      "after": "Left: {{budget}}%"
+    },
+    {
+      "scope": "studyRxjs",
+      "key": "combine-latest.model.row",
+      "before": "{{state}}, {{budget}}% left",
+      "after": "State: {{state}}, {{budget}}% left"
+    },
+    {
+      "scope": "studyRxjs",
+      "key": "concat-map.model.example.notes.5",
+      "before": "owl arrives and queues behind dog. {{waiting}} photos now wait, in the order they were added.",
+      "after": "owl arrives and queues behind dog. There are now {{waiting}} photos waiting, in the order they were added."
+    },
+    {
+      "scope": "studyRxjs",
+      "key": "repeat.model.example.notes.8",
+      "before": "The second run completes. {{completed}} runs are finished, so repeat waits once more.",
+      "after": "The second run completes. Repeat has finished {{completed}} runs, so it waits once more."
+    }
+  ]
+}

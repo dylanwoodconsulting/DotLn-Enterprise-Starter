@@ -1,0 +1,14 @@
+
+> @dotln-angular/source@0.0.0 i18n:check
+> node tools/scripts/check-i18n.mjs
+
+Unable to load workspace config from angular.json, .angular.json, workspace.json, project.json. Defaulting source root to 'src'
+
+ 🕵 🔎 [4mStarting Search For Missing Keys[0m 🔍 🕵
+
+- Extracting Template and Component Keys
+✔ Extracting Template and Component Keys 🗝
+- Checking for missing keys ✨
+✔ Checking for missing keys ✨
+
+🎉 No missing keys were found 🎉

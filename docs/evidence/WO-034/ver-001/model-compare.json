@@ -1,0 +1,561 @@
+{
+ "schemaVersion": 1,
+ "summary": {
+  "studies": 40,
+  "cases": 302,
+  "erroredCases": 0,
+  "comparedFrames": 27315,
+  "differingCases": 9,
+  "studiesWithDifferences": [
+   "obstacle-and-wall-avoidance (9)"
+  ]
+ },
+ "studies": [
+  {
+   "slug": "actuator",
+   "cases": 9,
+   "errored": 0,
+   "frames": 441,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "align",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1449,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "arrive",
+   "cases": 9,
+   "errored": 0,
+   "frames": 2169,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "blending-versus-arbitration",
+   "cases": 1,
+   "errored": 0,
+   "frames": 21,
+   "equal": 1,
+   "differing": []
+  },
+  {
+   "slug": "collision-avoidance",
+   "cases": 4,
+   "errored": 0,
+   "frames": 164,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "coordinated-movement",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1449,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "corner-trap",
+   "cases": 1,
+   "errored": 0,
+   "frames": 9,
+   "equal": 1,
+   "differing": []
+  },
+  {
+   "slug": "equilibrium-fallback",
+   "cases": 9,
+   "errored": 0,
+   "frames": 729,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "face",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1449,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "fixed-formations",
+   "cases": 9,
+   "errored": 0,
+   "frames": 459,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "flee",
+   "cases": 9,
+   "errored": 0,
+   "frames": 369,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "flocking",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1809,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "formation-pattern-interface",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1089,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "group-movement",
+   "cases": 4,
+   "errored": 0,
+   "frames": 924,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "iterative-targeting",
+   "cases": 9,
+   "errored": 0,
+   "frames": 49,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "jump-points",
+   "cases": 9,
+   "errored": 0,
+   "frames": 133,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "kinematic-arrive",
+   "cases": 9,
+   "errored": 0,
+   "frames": 297,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "kinematic-wander",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1089,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "making-the-creatures",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1449,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "motor-control",
+   "cases": 9,
+   "errored": 0,
+   "frames": 909,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "movement-in-the-third-dimension",
+   "cases": 9,
+   "errored": 0,
+   "frames": 225,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "obstacle-and-wall-avoidance",
+   "cases": 9,
+   "errored": 0,
+   "frames": 729,
+   "equal": 0,
+   "differing": [
+    {
+     "name": "default",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.74"
+      }
+     ]
+    },
+    {
+     "name": "goalY=min",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.00"
+      }
+     ]
+    },
+    {
+     "name": "goalY=mid",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.81"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.81"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.81"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.81"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.81"
+      }
+     ]
+    },
+    {
+     "name": "goalY=max",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.01"
+      }
+     ]
+    },
+    {
+     "name": "rayLength=min",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.74"
+      }
+     ]
+    },
+    {
+     "name": "rayLength=mid",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.74"
+      }
+     ]
+    },
+    {
+     "name": "rayLength=max",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.74"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.74"
+      }
+     ]
+    },
+    {
+     "name": "all=min",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.00"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.00"
+      }
+     ]
+    },
+    {
+     "name": "all=max",
+     "differences": [
+      {
+       "path": ".motion.frames.0.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.1.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.2.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.3.values.longRayOverlap",
+       "candidate": "0.01"
+      },
+      {
+       "path": ".motion.frames.4.values.longRayOverlap",
+       "candidate": "0.01"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "priority-steering",
+   "cases": 12,
+   "errored": 0,
+   "frames": 1452,
+   "equal": 12,
+   "differing": []
+  },
+  {
+   "slug": "projectile-trajectory",
+   "cases": 4,
+   "errored": 0,
+   "frames": 117,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "pursue",
+   "cases": 4,
+   "errored": 0,
+   "frames": 324,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "satisfaction-radius",
+   "cases": 4,
+   "errored": 0,
+   "frames": 116,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "scalable-formations",
+   "cases": 12,
+   "errored": 0,
+   "frames": 612,
+   "equal": 12,
+   "differing": []
+  },
+  {
+   "slug": "seek",
+   "cases": 4,
+   "errored": 0,
+   "frames": 884,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "separation",
+   "cases": 9,
+   "errored": 0,
+   "frames": 549,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "slot-assignment",
+   "cases": 4,
+   "errored": 0,
+   "frames": 16,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "steering-behaviors",
+   "cases": 4,
+   "errored": 0,
+   "frames": 324,
+   "equal": 4,
+   "differing": []
+  },
+  {
+   "slug": "steering-output",
+   "cases": 9,
+   "errored": 0,
+   "frames": 153,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "steering-pipeline",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1989,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "the-firing-solution",
+   "cases": 1,
+   "errored": 0,
+   "frames": 75,
+   "equal": 1,
+   "differing": []
+  },
+  {
+   "slug": "two-and-a-half-dimensions",
+   "cases": 9,
+   "errored": 0,
+   "frames": 225,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "two-level-formation-steering",
+   "cases": 9,
+   "errored": 0,
+   "frames": 1089,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "variable-matching",
+   "cases": 9,
+   "errored": 0,
+   "frames": 225,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "velocity-matching",
+   "cases": 9,
+   "errored": 0,
+   "frames": 297,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "wander",
+   "cases": 9,
+   "errored": 0,
+   "frames": 909,
+   "equal": 9,
+   "differing": []
+  },
+  {
+   "slug": "weighted-blending",
+   "cases": 9,
+   "errored": 0,
+   "frames": 549,
+   "equal": 9,
+   "differing": []
+  }
+ ]
+}

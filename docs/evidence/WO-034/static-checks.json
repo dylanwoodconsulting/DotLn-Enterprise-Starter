@@ -1,0 +1,13 @@
+{
+  "baseCommit": "d7d842dc4fdbde03099695933a448d9632fa4335",
+  "dependencyKeysUnchanged": true,
+  "devDependencyKeysUnchanged": true,
+  "toolOraclePaths": [
+    "tools/board-count.test.mjs",
+    "tools/check-script-reference.test.mjs",
+    "tools/pr-title.test.mjs"
+  ],
+  "toolOracleDiff": "",
+  "changedMovementSimulations": [],
+  "leadingModelPlaceholders": []
+}

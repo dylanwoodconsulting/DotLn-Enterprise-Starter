@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-11-06 23:55:31 UTC",
+  "source": "Observed target-gate command output; canonical gate rows remain the completion authority",
+  "repository": "dotln-angular",
+  "reviewedTree": "d554030f09eb631952b8b6f1c2396b6938f20398",
+  "plain": {
+    "command": "node scripts/target-gate.mjs WO-034",
+    "exitCode": 0,
+    "commit": "d7d842dc4fdbde03099695933a448d9632fa4335",
+    "durationMs": 113268,
+    "commands": [
+      {
+        "name": "install",
+        "durationMs": 57121,
+        "exitCode": 0
+      },
+      {
+        "name": "lint",
+        "durationMs": 51931,
+        "exitCode": 0
+      },
+      {
+        "name": "typecheck",
+        "durationMs": 1005,
+        "exitCode": 0
+      },
+      {
+        "name": "test",
+        "durationMs": 1184,
+        "exitCode": 0
+      },
+      {
+        "name": "format",
+        "durationMs": 2027,
+        "exitCode": 0
+      }
+    ],
+    "output": "PASS target dotln-angular install (57121 ms)\nPASS target dotln-angular lint (51931 ms)\nPASS target dotln-angular typecheck (1005 ms)\nPASS target dotln-angular test (1184 ms)\nPASS target dotln-angular format (2027 ms)\nPASS target dotln-angular plain at d7d842dc4fdbde03099695933a448d9632fa4335 (113268 ms)\n"
+  },
+  "review": {
+    "command": "node scripts/target-gate.mjs WO-034 --review",
+    "exitCode": 0,
+    "commit": "d7d842dc4fdbde03099695933a448d9632fa4335",
+    "durationMs": 316852,
+    "commands": [
+      {
+        "name": "install",
+        "durationMs": 54823,
+        "exitCode": 0
+      },
+      {
+        "name": "lint",
+        "durationMs": 51658,
+        "exitCode": 0
+      },
+      {
+        "name": "typecheck",
+        "durationMs": 1049,
+        "exitCode": 0
+      },
+      {
+        "name": "test",
+        "durationMs": 1045,
+        "exitCode": 0
+      },
+      {
+        "name": "format",
+        "durationMs": 2292,
+        "exitCode": 0
+      },
+      {
+        "name": "build",
+        "durationMs": 7484,
+        "exitCode": 0
+      },
+      {
+        "name": "e2e",
+        "durationMs": 174090,
+        "exitCode": 0
+      },
+      {
+        "name": "visual",
+        "durationMs": 24411,
+        "exitCode": 0
+      }
+    ],
+    "output": "PASS target dotln-angular install (54823 ms)\nPASS target dotln-angular lint (51658 ms)\nPASS target dotln-angular typecheck (1049 ms)\nPASS target dotln-angular test (1045 ms)\nPASS target dotln-angular format (2292 ms)\nPASS target dotln-angular build (7484 ms)\nPASS target dotln-angular e2e (174090 ms)\nPASS target dotln-angular visual (24411 ms)\nPASS target dotln-angular review at d7d842dc4fdbde03099695933a448d9632fa4335 (316852 ms)\n"
+  },
+  "documentPreflight": {
+    "command": "npm run test:docs",
+    "exitCode": 0,
+    "passed": 14,
+    "failed": 0,
+    "summary": "npm run test:docs: 14 passed; 0 failed; 0 h 1 min; 14 fresh tasks"
+  },
+  "earlierDocumentAttempt": {
+    "exitCode": 1,
+    "failedCheck": "docs-check",
+    "reportedFailures": 193,
+    "resolution": "WO-034-D009; portable paths in evidence"
+  }
+}

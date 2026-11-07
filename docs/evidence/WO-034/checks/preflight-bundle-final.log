@@ -1,0 +1,54 @@
+
+> @dotln-angular/source@0.0.0 check:bundle
+> nx build dotln --configuration=production --stats-json && node tools/scripts/check-bundle.mjs
+
+
+ NX   1 task: 1 succeeded
+
+
+Re-run with --output-style=static to inline logs.
+
+  Run duration:      6.3s
+  Cache:             0/1 hit (0%)
+  Critical path:     6.2s (1 task)
+  Recoverable time:  <1ms
+{
+  "initialBytes": 406485,
+  "initialFiles": [
+    "main-KEW5UC7H.js",
+    "chunk-CNF5_8HZ.js",
+    "chunk-SUwCjcuu.js",
+    "chunk-BwCtja5l.js",
+    "chunk-RJxHZrND.js",
+    "chunk-B21jaIjC.js",
+    "styles-QSFL7DXU.css"
+  ],
+  "attributedInputBytes": {
+    "@ngrx/signals": 6419,
+    "@angular-architects/ngrx-toolkit": 8962,
+    "libs/shared/data-access": 2989,
+    "libs/shared/events": 1691,
+    "libs/shared/state": 2352,
+    "libs/dotln/shell": 6862,
+    "apps/dotln/src": 9237,
+    "rxjs": 39262,
+    "tslib": 2477,
+    "@angular/core": 187064,
+    "@jsverse/utils": 580,
+    "@jsverse/transloco": 19143,
+    "libs/shared/i18n": 2163,
+    "@angular/common": 33897,
+    "@angular/platform-browser": 16157,
+    "libs/shared/utils": 145,
+    "ramda": 19278,
+    "ramda-adjunct": 750,
+    "libs/shared/core": 1085,
+    "@angular/router": 97568,
+    "@angular/cdk": 12202,
+    "libs/shared/ui": 16981,
+    "@angular/aria": 17732,
+    "styles and generated": 0
+  },
+  "lazyCodeInInitial": [],
+  "menuAvailableWithTools": true
+}
