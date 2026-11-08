@@ -296,6 +296,13 @@
       "reason": "missing file",
       "count": 1,
       "note": "WO-015's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-10-30, records commit b4c51461); the launchpad record keeps its original link; declared by WO-015's final review (FINAL-001, 2026-10-30) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/final-reviews/WO-033/PR.md",
+      "href": "../../evidence/WO-023/decisions.md#wo-023-d005",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-023's decisions.md moved into DotLn-Angular's docs/dotln/evidence/WO-023/ by target-records (TargetRecordsCommitted at records commit a98d59c7c641a6bb50de2165b1694a4a954f9835, 2026-11-08); WO-033's reviewed pull-request body keeps its original link to WO-023-D005; declared by WO-023's final review."
     }
   ],
   "homePaths": {

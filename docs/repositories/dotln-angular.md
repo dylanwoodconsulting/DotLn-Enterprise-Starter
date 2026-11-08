@@ -34,8 +34,8 @@ platform's repository.
 The menu has three groups today. **Scene** is the soldier scene at the root
 route. **Machinery** holds the actor board at `/board` and a placeholder page at
 `/machinery`. **Tools** links the catalog at `/tools/catalog`, six works read as a
-shelf, contents and a reading at `/tools/catalog/<tool id>`, eighty of its concepts with an authored
-study; `/tools` is a home page above it.
+shelf, contents and a reading at `/tools/catalog/<tool id>`, a hundred of its concepts with an
+authored study; `/tools` is a home page above it.
 
 The app owns its data and its API. The board keeps the `uifa-board-v1` response
 shape as its own contract; the platform's resident and its token are not a data
@@ -337,8 +337,9 @@ relations, hooks and verification notes, across six works.
 | The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
 | The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
-| The visual families, `motion`, `timeline`, `marbles` and `flow`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
-| The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/eip/`, `libs/features/tools/src/lib/studies/study-models.ts` |
+| The visual families, `motion`, `timeline`, `marbles`, `flow` and `states`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
+| The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/eip/`, `libs/features/tools/src/lib/studies/poeaa/`, `libs/features/tools/src/lib/studies/study-models.ts` |
+| The `states` builder, which reads a simulation's snapshots into the steps the family draws | `libs/features/tools/src/lib/studies/states.ts` |
 | Movement presentation descriptions and number formatting | `libs/features/tools/src/lib/studies/movement/presentation.ts`, `libs/features/tools/src/lib/studies/number-format.ts`; each first-batch `*.presentation.ts` describes its own run and frames |
 | The flow builders: `flowModel` for a flow written step by step, `flowFromMarbles` for one drawn from a marble example that runs | `libs/features/tools/src/lib/studies/flow.ts` |
 | The executable marble examples, their specs, and the contract and spec helper they share | `libs/features/tools/src/lib/studies/rxjs/` and `libs/features/tools/src/lib/studies/eip/`, with `marbles.ts` and `marble-testing.ts` beside the RxJS examples |
@@ -346,8 +347,8 @@ relations, hooks and verification notes, across six works.
 
 `join-maps.mjs` validates all eleven declared source digests before writing and
 resolves only unique exact relation titles within a work; schema, inventory and
-relation checks cover the generated data. The loader keeps a `tool-v0` compatibility
-reader for one release and the explicit `CatalogToken` provider seam. `/tools`
+relation checks cover the generated data. The loader reads `tool-v1` only, behind the
+explicit `CatalogToken` provider seam. `/tools`
 shows the works and the last reading; `/tools/catalog` composes the shelf, contents,
 reading, search facets and history through its event-backed facade, and the address owns the open
 reading, so Back and a shared link return to it. The last ten
@@ -369,12 +370,17 @@ where the pattern transforms a stream, `flowFromMarbles` builds it from the marb
 study's spec runs, and the reader can switch to that run's marble diagram at the same step.
 Standalone explanations use Angular `@defer` on first expansion:
 closed sections create no explanation view, and visited sections keep theirs on
-collapse. The `states` and `relations` families land with the batch that needs each. The
+collapse. An enterprise-pattern study's drawing is a `states` register: the example's records
+as rows and their states as columns, each object moving between them step by step, built by
+`statesModel` from the snapshots the study's simulation produces, so the drawing and the spec
+read the same run. The `relations` family lands with the batch that needs it. The
 design comparisons and their outcome are in the launchpad's
 [`docs/evidence/WO-019/design/`](../evidence/WO-019/design/),
 [`docs/evidence/WO-020/design/`](../evidence/WO-020/design/),
-[`docs/evidence/WO-021/design/`](../evidence/WO-021/design/) and
-[`docs/evidence/WO-022/design/`](../evidence/WO-022/design/). Menu behavior and its
+[`docs/evidence/WO-021/design/`](../evidence/WO-021/design/),
+[`docs/evidence/WO-022/design/`](../evidence/WO-022/design/) and
+[`docs/evidence/WO-023/design/`](../evidence/WO-023/design/comparisons.md), whose first round
+waits for a dedicated A/B testing pass. Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 
@@ -518,14 +524,14 @@ kit defect, is settled.
 the same ignored-material and filesystem judgment. The target worktree's declared
 disposable output is still deleted. `loadConfig` composes the class's declaration,
 `classes.angular-nx-monorepo.disposable` in `dotln.config.json`, into this sorted
-list of thirty roots:
+list of thirteen entries:
 
 ```json
-[".angular",".nx",".runtime","__screenshots__","coverage","dist","docs/control/local","libs/dotln/shell/node_modules","libs/features/board-data-access/node_modules","libs/features/board/node_modules","libs/features/machinery/node_modules","libs/features/scene-data-access/node_modules","libs/features/scene/node_modules","libs/features/tools/node_modules","libs/shared/catalog/node_modules","libs/shared/core/node_modules","libs/shared/data-access/node_modules","libs/shared/events/node_modules","libs/shared/i18n/node_modules","libs/shared/models/node_modules","libs/shared/scene-engine/node_modules","libs/shared/state/node_modules","libs/shared/ui/node_modules","libs/shared/utils/node_modules","node_modules","out-tsc","playwright-report","test-output","test-results","tmp"]
+["**/node_modules",".angular",".nx",".runtime","__screenshots__","coverage","dist","docs/control/local","out-tsc","playwright-report","test-output","test-results","tmp"]
 ```
 
-The entries are relative to each checkout, not directory-name globs:
-`test-output/result.json` is covered, while
+Every entry but the first is a literal path relative to each checkout, not a
+directory-name glob: `test-output/result.json` is covered, while
 `apps/example/test-output/result.json` is not. The scaffold's build and the Nx
 Playwright preset use paths under root `dist`; a later generator or configuration
 that introduces nested output must identify its exact path before extending the
@@ -534,9 +540,15 @@ close receipt name the base policy and the retained output, and keeping
 dependencies and caches avoids the base reinstall the default `delete` policy
 requires.
 
-The seventeen `libs/*/*/node_modules` entries are the project roots that carry a
-Vite config, whose Vitest caches are the only nested output; each is an exact path,
-and a new project root with a Vite config adds its own entry before its first close.
+`**/node_modules`, which the kit admits since starter v0.112.0, is the one pattern.
+It matches a directory named exactly `node_modules` at the root or at any depth,
+such as the Vitest caches under each project root that carries a Vite config, so a
+new project needs no entry of its own; a source path, or a directory whose name
+only begins with `node_modules`, stays unmatched. The order that adopted it records
+its probe in the launchpad's
+[`docs/evidence/WO-023/cleanup-declaration.md`](../evidence/WO-023/cleanup-declaration.md).
+The pattern changes only what matches: selection is still ignored-only, tracked
+files and the filesystem judgment still refuse, and journal retention is unchanged.
 `.runtime` is what the kit's temporary-root module writes into whichever repository
 a session runs in, so the target's `.gitignore` carries `/.runtime/` as well and an
 untracked file there cannot fail the close's clean check.

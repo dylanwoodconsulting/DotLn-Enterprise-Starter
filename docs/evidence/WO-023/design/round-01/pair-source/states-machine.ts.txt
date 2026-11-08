@@ -1,0 +1,352 @@
+import type { StatesFrame, StatesModel, StudyTone } from '../../../studies/study-model';
+import {
+  arrivals,
+  type DrawnStatesGhost,
+  type DrawnStatesText,
+  type DrawnStatesToken,
+  fitting,
+  frameAt,
+  type StatesLayout,
+  statesText,
+  statesWidth,
+  tokenRadius,
+  toneOf,
+  wrapWords,
+} from './states-drawing';
+
+const margin = 8;
+// Room between two boxes across, and the side gutter a phone's arcs and their names run in.
+const gap = 30;
+const narrowGutter = 108;
+const tokenStep = tokenRadius * 2 + 5;
+
+/** A state's box, with its name at the top and the tokens of the objects in it below. */
+export interface DrawnStatesBox {
+  readonly id: string;
+  readonly x: number;
+  readonly y: number;
+  readonly width: number;
+  readonly height: number;
+  readonly tone: StudyTone;
+  /** True when an object moves into this state at the stepped moment: the box is raised. */
+  readonly raised: boolean;
+  readonly label: readonly DrawnStatesText[];
+}
+
+/** A transition as a curved arrow from one box to another, or a loop back to its own box. */
+export interface DrawnStatesEdge {
+  readonly id: string;
+  readonly d: string;
+  readonly head: string;
+  /** True when an object takes this transition at the stepped moment. */
+  readonly active: boolean;
+  readonly label: DrawnStatesText;
+  /** The dot an arrow from outside the example starts at, or the ring one out of it ends at. */
+  readonly end: { readonly x: number; readonly y: number; readonly entering: boolean } | null;
+}
+
+export interface MachineDrawing {
+  readonly viewBox: string;
+  readonly width: number;
+  readonly height: number;
+  readonly boxes: readonly DrawnStatesBox[];
+  readonly edges: readonly DrawnStatesEdge[];
+  readonly tokens: readonly DrawnStatesToken[];
+  readonly ghosts: readonly DrawnStatesGhost[];
+  /** Which object each token's letter stands for, with what it holds, one entry per object. */
+  readonly keys: readonly (DrawnStatesText & {
+    readonly key: string;
+    readonly note: string | null;
+  })[];
+}
+
+interface Place {
+  readonly x: number;
+  readonly y: number;
+  readonly width: number;
+  readonly height: number;
+}
+
+interface MachineGrid {
+  readonly model: StatesModel;
+  readonly layout: StatesLayout;
+  readonly boxWidth: number;
+  readonly boxHeight: number;
+  readonly labelHeight: number;
+  /** How far above the boxes the highest arc reaches, across; 0 down a phone. */
+  readonly above: number;
+}
+
+const indexOf = (model: StatesModel, node: string) =>
+  model.nodes.findIndex(({ id }) => id === node);
+
+/** How many objects share a state at most, over the whole run, so a box keeps one size. */
+const mostHeld = (model: StatesModel, node: string) =>
+  Math.max(
+    1,
+    ...model.frames.map((frame) => frame.placements.filter((place) => place.node === node).length),
+  );
+
+function gridOf(model: StatesModel, layout: StatesLayout): MachineGrid {
+  const width = statesWidth[layout];
+  const count = model.nodes.length;
+  const boxWidth =
+    layout === 'wide'
+      ? (width - 2 * margin - gap * (count - 1)) / count
+      : width - 2 * margin - narrowGutter;
+  const lines = Math.max(
+    1,
+    ...model.nodes.map(({ label }) => wrapWords(label, fitting(boxWidth - 10, 'heading')).length),
+  );
+  const labelHeight = lines * statesText.heading.line + 8;
+  const perRow = Math.max(1, Math.floor((boxWidth - 10) / tokenStep));
+  const tokenRows = Math.max(
+    ...model.nodes.map(({ id }) => Math.ceil(mostHeld(model, id) / perRow)),
+  );
+  const spans = model.transitions.flatMap(({ from, to }) =>
+    from === null || to === null ? [] : [indexOf(model, to) - indexOf(model, from)],
+  );
+  const forward = Math.max(0, ...spans.filter((span) => span >= 0));
+  return {
+    model,
+    layout,
+    boxWidth,
+    boxHeight: labelHeight + tokenRows * tokenStep + 8,
+    labelHeight,
+    above: layout === 'wide' ? arcHeight(forward) + statesText.transition.line + 8 : margin,
+  };
+}
+
+/** How far an arc bows out, by how many states it spans; a loop back to its own box bows least. */
+const arcHeight = (span: number) =>
+  18 + 16 * Math.max(0, Math.abs(span) - 1) + (span === 0 ? 0 : 6);
+
+function boxPlace(grid: MachineGrid, index: number): Place {
+  const { boxWidth: width, boxHeight: height } = grid;
+  return grid.layout === 'wide'
+    ? { x: margin + index * (width + gap), y: grid.above, width, height }
+    : { x: margin, y: grid.above + index * (height + gap), width, height };
+}
+
+/** Where each object of a frame sits: in its state's box, in the shape's order, row by row. */
+function tokenPlaces(
+  grid: MachineGrid,
+  frame: StatesFrame,
+): ReadonlyMap<string, { x: number; y: number }> {
+  const perRow = Math.max(1, Math.floor((grid.boxWidth - 10) / tokenStep));
+  const places = new Map<string, { x: number; y: number }>();
+  for (const [index, node] of grid.model.nodes.entries()) {
+    const box = boxPlace(grid, index);
+    frame.placements
+      .filter((place) => place.node === node.id)
+      .forEach(({ object }, slot) =>
+        places.set(object, {
+          x: box.x + 5 + tokenRadius + (slot % perRow) * tokenStep,
+          y: box.y + grid.labelHeight + tokenRadius + Math.floor(slot / perRow) * tokenStep,
+        }),
+      );
+  }
+  return places;
+}
+
+/** Where an arrow runs, its head, where its name goes, and the dot or ring at an open end. */
+interface EdgeShape {
+  readonly d: string;
+  readonly head: string;
+  readonly label: Omit<DrawnStatesText, 'text'>;
+  readonly end?: DrawnStatesEdge['end'];
+}
+
+/** The arrowhead at a curve's end, pointing away from its last control point. */
+function headFrom(cx: number, cy: number, x: number, y: number): string {
+  const angle = Math.atan2(y - cy, x - cx);
+  const point = (turn: number) =>
+    `${x - 9 * Math.cos(angle + turn)},${y - 9 * Math.sin(angle + turn)}`;
+  return `${x},${y} ${point(0.45)} ${point(-0.45)}`;
+}
+
+/** A transition across: forward arcs bow above the boxes, backward ones below, loops over the box. */
+function wideEdge(from: Place, to: Place, span: number): EdgeShape {
+  const h = arcHeight(span);
+  if (span === 0) {
+    const cx = from.x + from.width / 2;
+    const top = from.y;
+    return {
+      d: `M ${cx - 12} ${top} C ${cx - 22} ${top - h - 8}, ${cx + 22} ${top - h - 8}, ${cx + 12} ${top}`,
+      head: headFrom(cx + 22, top - h - 8, cx + 12, top),
+      label: { x: cx, y: top - h - 4, anchor: 'middle' as const },
+    };
+  }
+  const ahead = span > 0;
+  const y = ahead ? from.y : from.y + from.height;
+  const x1 = from.x + from.width / 2 + (ahead ? 10 : -10);
+  const x2 = to.x + to.width / 2 + (ahead ? -10 : 10);
+  const cy = ahead ? y - 2 * h : y + 2 * h;
+  const cx = (x1 + x2) / 2;
+  return {
+    d: `M ${x1} ${y} Q ${cx} ${cy} ${x2} ${y}`,
+    head: headFrom(cx, cy, x2, y),
+    label: {
+      x: cx,
+      y: ahead ? y - h - 4 : y + h + statesText.transition.line,
+      anchor: 'middle' as const,
+    },
+  };
+}
+
+/** A transition down a phone: every arc bows out to the right, the longer the further it reaches. */
+function narrowEdge(from: Place, to: Place, span: number): EdgeShape {
+  const x = from.x + from.width;
+  const bow = 16 + 12 * Math.abs(span);
+  const y1 = from.y + from.height / 2 + (span === 0 ? -10 : span > 0 ? 6 : -6);
+  const y2 = to.y + to.height / 2 + (span === 0 ? 10 : span > 0 ? -6 : 6);
+  const cx = x + 2 * bow;
+  const cy = (y1 + y2) / 2;
+  return {
+    d: `M ${x} ${y1} Q ${cx} ${cy} ${x} ${y2}`,
+    head: headFrom(cx, cy, x, y2),
+    // The name ends at the drawing's right edge, so a long one stays inside it.
+    label: { x: x + narrowGutter - 2, y: cy + 4, anchor: 'end' as const },
+  };
+}
+
+/** The way in from outside, from a dot above the box, or out of it, to a ring below the box. */
+function endEdge(place: Place, entering: boolean, layout: StatesLayout): EdgeShape {
+  // Down a phone the ways in and out run across the right-hand gutter, beside their own box.
+  if (layout === 'narrow') {
+    const x = place.x + place.width;
+    const y = place.y + place.height / 2 + (entering ? -12 : 12);
+    const [x1, x2] = entering ? [x + 26, x] : [x, x + 26];
+    return {
+      d: `M ${x1} ${y} L ${x2} ${y}`,
+      head: headFrom(x1, y, x2, y),
+      label: { x: x + 34, y: y + 4, anchor: 'start' },
+      end: { x: entering ? x1 : x2 + 5, y, entering },
+    };
+  }
+  const x = place.x + (entering ? 16 : place.width - 16);
+  const [y1, y2] = entering
+    ? [place.y - 26, place.y]
+    : [place.y + place.height, place.y + place.height + 26];
+  return {
+    d: `M ${x} ${y1} L ${x} ${y2}`,
+    head: headFrom(x, y1, x, y2),
+    // The way in is named to its right, over its own box; the way out to its left, inside the drawing.
+    label: entering
+      ? { x: x + 8, y: (y1 + y2) / 2 + 4, anchor: 'start' as const }
+      : { x: x - 8, y: (y1 + y2) / 2 + 4, anchor: 'end' as const },
+    end: { x, y: entering ? y1 : y2 + 5, entering },
+  };
+}
+
+function edgesOf(grid: MachineGrid, frame: StatesFrame): readonly DrawnStatesEdge[] {
+  const taken = new Set(frame.moves.flatMap(({ transition }) => (transition ? [transition] : [])));
+  return grid.model.transitions.map(({ id, from, to, label }) => {
+    const shape =
+      from === null || to === null
+        ? endEdge(
+            boxPlace(grid, indexOf(grid.model, (from ?? to) as string)),
+            from === null,
+            grid.layout,
+          )
+        : grid.layout === 'wide'
+          ? wideEdge(
+              boxPlace(grid, indexOf(grid.model, from)),
+              boxPlace(grid, indexOf(grid.model, to)),
+              indexOf(grid.model, to) - indexOf(grid.model, from),
+            )
+          : narrowEdge(
+              boxPlace(grid, indexOf(grid.model, from)),
+              boxPlace(grid, indexOf(grid.model, to)),
+              indexOf(grid.model, to) - indexOf(grid.model, from),
+            );
+    return {
+      id,
+      d: shape.d,
+      head: shape.head,
+      active: taken.has(id),
+      label: { ...shape.label, text: label },
+      end: shape.end ?? null,
+    };
+  });
+}
+
+/**
+ * The machine at a step: each state a box, each transition an arrow between boxes, and each
+ * tracked object's token inside the box of its state. The boxes an object moves into at the step
+ * are raised, and the transitions taken there are drawn green with their names.
+ */
+export function machineDrawing(
+  model: StatesModel,
+  step: number,
+  layout: StatesLayout = 'wide',
+): MachineDrawing {
+  const grid = gridOf(model, layout);
+  const frame = frameAt(model, step);
+  const previous = frameAt(model, Math.max(0, step - 1));
+  const now = tokenPlaces(grid, frame);
+  const before = step > 0 ? tokenPlaces(grid, previous) : now;
+  const moving = new Set(frame.moves.map(({ object }) => object));
+  const raised = arrivals(frame.moves);
+  const lastBox = boxPlace(grid, model.nodes.length - 1);
+  const leaving = layout === 'wide' && model.transitions.some(({ to }) => to === null) ? 32 : 0;
+  const below =
+    layout === 'wide'
+      ? Math.max(leaving, arcHeight(model.nodes.length - 1) + 2 * statesText.transition.line)
+      : leaving;
+  const keysTop = lastBox.y + lastBox.height + below + 14;
+  const width = statesWidth[layout];
+  const keys = model.objects.map(({ id, key, label }, index) => {
+    const note = frame.placements.find((place) => place.object === id)?.note ?? null;
+    return {
+      x: margin,
+      y: keysTop + index * statesText.name.line,
+      text: label,
+      anchor: 'start' as const,
+      key,
+      note,
+    };
+  });
+  const height = keysTop + model.objects.length * statesText.name.line + margin;
+  return {
+    viewBox: `0 0 ${width} ${height}`,
+    width,
+    height,
+    boxes: model.nodes.map(({ id, label, tone }, index) => {
+      const place = boxPlace(grid, index);
+      const lines = wrapWords(label, fitting(place.width - 10, 'heading'));
+      return {
+        id,
+        ...place,
+        tone: toneOf(tone),
+        raised: raised.has(id),
+        label: lines.map((text, line) => ({
+          x: place.x + place.width / 2,
+          y: place.y + (line + 1) * statesText.heading.line,
+          text,
+          anchor: 'middle' as const,
+        })),
+      };
+    }),
+    edges: edgesOf(grid, frame),
+    tokens: frame.placements.map(({ object }) => {
+      const place = now.get(object) ?? { x: 0, y: 0 };
+      const start = before.get(object) ?? place;
+      return {
+        // A moving token is drawn afresh at each step it moves, so its glide plays every time.
+        id: moving.has(object) ? `${object}@${step}` : object,
+        key: model.objects.find(({ id }) => id === object)?.key ?? '',
+        ...place,
+        r: tokenRadius,
+        state: moving.has(object) ? ('moving' as const) : ('resting' as const),
+        fromDx: start.x - place.x,
+        fromDy: start.y - place.y,
+      };
+    }),
+    ghosts: frame.moves.flatMap(({ object, to }) => {
+      const place = before.get(object);
+      return to === null && place ? [{ id: object, ...place, r: tokenRadius }] : [];
+    }),
+    keys,
+  };
+}

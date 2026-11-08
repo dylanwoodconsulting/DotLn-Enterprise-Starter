@@ -1,0 +1,50 @@
+import { statesFixture } from '../fixtures';
+import { machineDrawing } from './states-machine';
+
+it('draws each state as a box and raises the one an object has just entered', () => {
+  const drawing = machineDrawing(statesFixture, 2);
+  expect(drawing.boxes.map(({ label }) => label.map(({ text }) => text).join(' '))).toEqual([
+    'Clean',
+    'New',
+    'Dirty',
+    'Removed',
+  ]);
+  expect(drawing.boxes.filter(({ raised }) => raised).map(({ id }) => id)).toEqual(['dirty']);
+  expect(drawing.edges.filter(({ active }) => active).map(({ label }) => label.text)).toEqual([
+    'registerDirty',
+  ]);
+  const boxOf = (x: number, y: number) =>
+    drawing.boxes.find(
+      (box) => x > box.x && x < box.x + box.width && y > box.y && y < box.y + box.height,
+    )?.id;
+  expect(drawing.tokens.map(({ key, x, y }) => [key, boxOf(x, y)])).toEqual([
+    ['A', 'clean'],
+    ['B', 'dirty'],
+    ['C', 'new'],
+  ]);
+  // The list under the drawing says which object each letter stands for and what it holds.
+  expect(drawing.keys.map(({ key, text, note }) => [key, text, note])).toEqual([
+    ['A', 'Scene A', 'version 3'],
+    ['B', 'Scene B', 'title changed'],
+    ['C', 'Scene C', 'not stored yet'],
+  ]);
+});
+
+it('glides a moving token from the box it left, and rings where an object left the example', () => {
+  const edited = machineDrawing(statesFixture, 2);
+  const before = machineDrawing(statesFixture, 1);
+  const moved = edited.tokens.find(({ key }) => key === 'B');
+  const was = before.tokens.find(({ key }) => key === 'B');
+  expect(moved?.state).toBe('moving');
+  expect(moved && was && [moved.x + moved.fromDx, moved.y + moved.fromDy]).toEqual(
+    was && [was.x, was.y],
+  );
+  expect(machineDrawing(statesFixture, 4).ghosts.map(({ id }) => id)).toEqual(['a']);
+});
+
+it('stacks the boxes down a phone with every box inside its width', () => {
+  const drawing = machineDrawing(statesFixture, 2, 'narrow');
+  const tops = drawing.boxes.map(({ y }) => y);
+  expect([...tops].sort((a, b) => a - b)).toEqual(tops);
+  for (const box of drawing.boxes) expect(box.x + box.width).toBeLessThanOrEqual(drawing.width);
+});

@@ -7379,6 +7379,140 @@
         }
       ],
       "dispositions": []
+    },
+    {
+      "id": "FUP-02c1ebe8146fe2f1",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d008",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "dff591d3b7cd530a4ffe1bcc7b038b9b76f800a58957bd7b3371990b89beef1b",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d008",
+          "title": "WO-023-D008: A dedicated A/B testing pass, design comparisons under WS-001 rule 25 and distinct from the rule-31 coding-standards passes, runs WO-023's deferred rounds for the states family. It…",
+          "summary": "{ \"id\": \"WO-023-D008\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: next; step 3, the operator's message of about 19:37Z during execution\", \"decision\": \"Defer this order's rule-25 rounds for the states family to a dedicated A/B testing pass, apart from the rule-31 coding-standards passes, as the operator directed; the follow-up below carries them. The first pair, A the register table and B the state machine, is rendered at about 2080 by 1460 and at 360 and recorded in design/comparisons.md as round 1, without a pick. Until the A/B testing pass decides, the family ships the register table. The state-machine candidate left the code: libs/features/tools/src/lib/composites/study-visuals/states/sta",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "The operator delayed WO-023's A/B testing on 2026-11-07 and asked that it trigger during a dedicated A/B testing pass, distinct from the coding-standards passes (ignored intake capture SHA-256 8bf3461a1ae5324956ec7f45fc12f4753977998ddf5f59cbf678c526042efc68; WO-023-D008). Round 1's pair is recorded in docs/evidence/WO-023/design/comparisons.md without a pick; the register table ships meanwhile.",
+          "reopenWhen": "A planning pass files or sequences a dedicated A/B testing pass (rule-25 design comparisons, not a rule-31 standards pass): allocate this item to it, and that pass runs the states family's rounds from round 1's pair until the operator says done.",
+          "targets": [],
+          "at": "2026-11-07T19:42:59.286Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-ddae97970891fbc1",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d012",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "61818fc204bf3e76dcbc9401dfdf49693e578b3119492f638cc7dc428a3ef4dd",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d012",
+          "title": "WO-023-D012: A standards pass decides whether the drawing families' token symbols (flow and marble letters, states tokens) are translatable text, and if so gives every family's tokens messages…",
+          "summary": "{ \"id\": \"WO-023-D012\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: next; step 5, the reading critic's findings\", \"decision\": \"Keep each states drawing's token letters as symbols shown through the house symbol template, tools.study.symbol, as the flow and marble families show theirs; the row's name, which sits beside every token in the register and is a message, is the display label. Replace the letters the reading critic found misleading: Identity Map's M becomes I, Gateway's request and reply become Rq and Rp, and Service Stub's recorded board and lost connection become D and L. Apply the critic's other findings in full: one sentence for objects that take the same way at a step, a caption th",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-023-D012 kept the states drawing's token letters as symbols, as the flow and marble families show theirs, rather than splitting the convention inside one batch; the reading critic asked for messages.",
+          "reopenWhen": "The next coding-standards pass over the study drawing families, or the first shipped language other than English: decide whether token symbols are translatable and change every family together.",
+          "targets": [],
+          "at": "2026-11-07T20:41:08.177Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-54793e1f600d5c5d",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d016",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "ca3dade6019f85a422e3819550c69938cda2e89bdb64f6dd2749bc659a5d1f60",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d016",
+          "title": "WO-023-D016: The next coding-standards pass over the PoEAA batch: replace the fifteen other presentations' switch-with-default name lookups and nested-ternary token letters with lookup tables checked…",
+          "summary": "{ \"id\": \"WO-023-D016\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: next; review round 1, the dispositions\", \"decision\": \"Fix every round-1 finding that touches a criterion, a rule or a reader, and leave the design findings that only change how the code reads for the next coding-standards pass. Fixed: the stale generated launchpad files (npm run meta); D012's and D006's statements (D015); the documents that said every PoEAA study draws a register, the catalog paragraph naming the states geometry, and the patterns section that swallowed events-and-state.md; at 360, state headings now shrink to fit their columns and transition names stay inside the drawing, with a corpus test over every model, i",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-023-D016 fixed every round-1 finding that touches a criterion, a rule or a reader, and left the design findings that only change how the PoEAA batch's code reads, with behaviour unchanged and tested, for the dedicated coding-standards pass WS-001 rule 31 gives them.",
+          "reopenWhen": "The next coding-standards pass over the enterprise pattern batch (libs/features/tools/src/lib/studies/poeaa/), or a later batch that copies one of the deferred shapes: apply the lookup tables, listOf, boolean flags, move inference, state unions, comparison runs, loader merge, timeline naming and spec separation the decision lists.",
+          "targets": [],
+          "at": "2026-11-07T21:35:41.244Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-762c13bca9cf4a31",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d017",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "ce21ada36803cbf687fa89d566a7fb966591add8c497f33a0e2d6ffcb03dba1a",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d017",
+          "title": "WO-023-D017: The next coding-standards pass over the study drawing families, or the dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1), whichever runs first: say in…",
+          "summary": "{ \"id\": \"WO-023-D017\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: next; review round 2, the dispositions\", \"decision\": \"End the review ladder at round 2. Every round-1 fix held under the reviewers' recheck but one: of the four comments the design improver named, which D016 listed among the fixes, three were unchanged, and they now describe the code (the StatesSnapshot interface, the test kit's StatesStudy type and Registry's snapshotOf). That change touches only comments, so no third round runs. No reviewer admitted a new finding. The observations that break no criterion and no behavior main had are recorded, not fixed, by the ladder's rule: catalog.md still says the narrow register keeps it",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-023-D017 ended the review ladder at round 2: the reviewers' remaining observations break no criterion and no behavior main had, so the ladder's rule records them for a later pass instead of fixing them on an unreviewed tree.",
+          "reopenWhen": "The next coding-standards pass over the study drawing families, or the dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1), whichever runs first: apply the narrow headings' documentation and size decision, the scale test, the empty-label guard, the study check's function name, moveSentence's listOf, the catalog's account of the states rule and the illustrative mark, and Gateway's note measurement the decision lists.",
+          "targets": [],
+          "at": "2026-11-07T22:04:21.158Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-023's final review (WO-023-D019) completed two of this row's items: catalog.md now says a state's name too wide for its narrow column is drawn smaller, and catalog.md's study-check paragraph and catalog-rules.md name the states drawing rule and the enterprise work's illustrative mark. The rest stays deferred: whether such a name breaks, abbreviates or keeps a floor size, a test that the template applies the column's scale, a guard for an empty label, the states rule's place in check-studies.mjs's rxjsProblems, listOf in moveSentence, and Gateway's narrow note measured with real glyphs.",
+          "reopenWhen": "The next coding-standards pass over the study drawing families, or the dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1), whichever runs first: apply the remaining items.",
+          "targets": [],
+          "at": "2026-11-08T00:13:22.225Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-66323999ef4b69aa",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d019",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "47823cef8e585e2c6df7ce4331729b346c0c99a983f1f55d1b2d7e979ffe5f0e",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d019",
+          "title": "WO-023-D019: The next coding-standards pass over the PoEAA batch: make Foreign Key Mapping's simulation stop on its read limit only when the next key needs a read (the loop in…",
+          "summary": "{ \"id\": \"WO-023-D019\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: final review\", \"decision\": \"Repair in the order, within its declared surfaces, the reader-facing defects this final review reproduced, and board the one it leaves. Sixteen messages of seven PoEAA studies now agree with their own run at every declared input and with the app's code: Unit of Work's first implementation says a save drops a stored composition that could not be read, so criterion 4's accurate embodiment holds; Unit of Work's and Pessimistic Offline Lock's first limits name the inputs their claims need; Service Stub's description, second mechanism step and third limit tell the stub that reads the scenario from the st",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-18c53da8259f9980",
+      "key": "decision:docs/evidence/WO-023/decisions.md#wo-023-d020",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "90210227d8834ab41e50a1d8da4781debab3ef37531690c35163ae215969a7fe",
+          "ref": "docs/evidence/WO-023/decisions.md#wo-023-d020",
+          "title": "WO-023-D020: The next planning pass that touches the dotln-angular profile: name a target order's publication bodies in the profile's publish route (the records body as PR.md, carrying any…",
+          "summary": "{ \"id\": \"WO-023-D020\", \"date\": \"2026-11-07\", \"dispatch\": \"resume: final review\", \"decision\": \"Name this order's publication bodies so that both the pass's check and the target's word rules hold. docs/final-reviews/WO-023/PR.md is the launchpad records body and ends with the hand-written criterion-records block for criterion 8's waiver, which final-review-result pass reads from PR.md and the records publish reads from the body it is given; TARGET-PR.md is the DotLn-Angular body, which carries no launchpad identifier. WO-028 and WO-034 named the target body PR.md and the records body RECORDS-PR.md; neither had a waived or defective criterion, so neither met the check. No session opened a draft",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

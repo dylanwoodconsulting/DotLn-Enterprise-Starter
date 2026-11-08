@@ -1,0 +1,284 @@
+[
+ {
+  "at": "2026-11-07T21:50:55.599Z",
+  "width": 360,
+  "id": "01-poeaa-shelf",
+  "note": "shelf reads: Patterns of Enterprise Application Architecture455 concepts20 studiedchannels"
+ },
+ {
+  "at": "2026-11-07T21:50:55.933Z",
+  "width": 360,
+  "id": "02-unit-of-work-start",
+  "note": "opens at: Step 0: nothing moves. Where each composition stands: Clean: Flank left, Hold the ridge; New: none; Dirty: none; Removed: none. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:50:56.258Z",
+  "width": 360,
+  "id": "03-unit-of-work-registers",
+  "note": "at Removed: Step 4: Flank left moves from Clean to Removed by registerRemoved. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:50:56.578Z",
+  "width": 360,
+  "id": "04-unit-of-work-commit",
+  "note": "at Commit: Step 5: Flank left leaves Removed by commit; Hold the ridge moves from Dirty to Clean by commit; Night march moves from New to Clean by commit. Where each composition stands: Clean: Hold the ridge, Night march; New: none; Dirty: none; Removed: none. Store calls so far: 1."
+ },
+ {
+  "at": "2026-11-07T21:50:56.999Z",
+  "width": 360,
+  "id": "05-unit-of-work-mechanism",
+  "note": "pseudocode and executable model open"
+ },
+ {
+  "at": "2026-11-07T21:50:57.387Z",
+  "width": 360,
+  "id": "06-unit-of-work-limits",
+  "note": "limits open"
+ },
+ {
+  "at": "2026-11-07T21:50:57.825Z",
+  "width": 360,
+  "id": "07-identity-map-miss",
+  "note": "at Miss: Step 1: Unit of Work moves from Store only to Mapped by find: a miss. The reading asks for poeaa:246: a miss, because this session's map holds nothing under that id, so the loader makes read 1 of the store and keeps the object under poeaa:246. Where each study stands: Store only: Identity Map; Mapped: Unit of Work; Two copies: none. Store reads so far: 1; hits: 0."
+ },
+ {
+  "at": "2026-11-07T21:50:58.154Z",
+  "width": 360,
+  "id": "07-identity-map-hit",
+  "note": "at Hit: Step 4: Unit of Work stays in Mapped by find: a hit. The nearby list asks for poeaa:246: a hit, because its map already holds the object built by read 1, so nothing is read and that same object comes back. Where each study stands: Store only: none; Mapped: Unit of Work, Identity Map; Two copies: none. Store reads so far: 2; hits: 1."
+ },
+ {
+  "at": "2026-11-07T21:50:58.670Z",
+  "width": 360,
+  "id": "08-locks-optimistic",
+  "note": "poeaa:370 opens at: Minute 0, step 0: nothing moves. The tabs: Editing: Tab A; Saved: none; Refused: none. Browser storage holds version 4; saves refused so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:50:59.185Z",
+  "width": 360,
+  "id": "08-locks-pessimistic",
+  "note": "poeaa:377 opens at: Minute 0, step 0: nothing moves. The tabs: Waiting: none; Holds lock: Tab A; Saved: none; Expired: none. The lock on Hold the ridge: held by Tab A until minute 20. Minutes spent waiting so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:50:59.749Z",
+  "width": 360,
+  "id": "09-data-transfer-object",
+  "note": "poeaa:363 opens at: Step 0: nothing moves. Where each object stands: Domain object: Actor definition, Saved build, Evidence record; In the DTO: none; Encoded: none; Page view: none; Refused: none. The text on the wire: not written yet."
+ },
+ {
+  "at": "2026-11-07T21:51:00.352Z",
+  "width": 360,
+  "id": "09-remote-facade",
+  "note": "poeaa:357 opens at: Step 0: nothing moves. The panels: In its source: Actors, Builds, Mechanisms, Work, Blueprint; In the response: none; On the page: none. Calls across the network so far: 1; local calls inside the facade: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:00.353Z",
+  "width": 360,
+  "id": "checks",
+  "note": "page errors 0; fits width true"
+ },
+ {
+  "at": "2026-11-07T21:51:00.833Z",
+  "width": 768,
+  "id": "01-poeaa-shelf",
+  "note": "shelf reads: Patterns of Enterprise Application Architecture455 concepts20 studiedchannels"
+ },
+ {
+  "at": "2026-11-07T21:51:01.204Z",
+  "width": 768,
+  "id": "02-unit-of-work-start",
+  "note": "opens at: Step 0: nothing moves. Where each composition stands: Clean: Flank left, Hold the ridge; New: none; Dirty: none; Removed: none. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:01.580Z",
+  "width": 768,
+  "id": "03-unit-of-work-registers",
+  "note": "at Removed: Step 4: Flank left moves from Clean to Removed by registerRemoved. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:01.967Z",
+  "width": 768,
+  "id": "04-unit-of-work-commit",
+  "note": "at Commit: Step 5: Flank left leaves Removed by commit; Hold the ridge moves from Dirty to Clean by commit; Night march moves from New to Clean by commit. Where each composition stands: Clean: Hold the ridge, Night march; New: none; Dirty: none; Removed: none. Store calls so far: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:02.440Z",
+  "width": 768,
+  "id": "05-unit-of-work-mechanism",
+  "note": "pseudocode and executable model open"
+ },
+ {
+  "at": "2026-11-07T21:51:02.878Z",
+  "width": 768,
+  "id": "06-unit-of-work-limits",
+  "note": "limits open"
+ },
+ {
+  "at": "2026-11-07T21:51:03.348Z",
+  "width": 768,
+  "id": "07-identity-map-miss",
+  "note": "at Miss: Step 1: Unit of Work moves from Store only to Mapped by find: a miss. The reading asks for poeaa:246: a miss, because this session's map holds nothing under that id, so the loader makes read 1 of the store and keeps the object under poeaa:246. Where each study stands: Store only: Identity Map; Mapped: Unit of Work; Two copies: none. Store reads so far: 1; hits: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:03.693Z",
+  "width": 768,
+  "id": "07-identity-map-hit",
+  "note": "at Hit: Step 4: Unit of Work stays in Mapped by find: a hit. The nearby list asks for poeaa:246: a hit, because its map already holds the object built by read 1, so nothing is read and that same object comes back. Where each study stands: Store only: none; Mapped: Unit of Work, Identity Map; Two copies: none. Store reads so far: 2; hits: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:04.240Z",
+  "width": 768,
+  "id": "08-locks-optimistic",
+  "note": "poeaa:370 opens at: Minute 0, step 0: nothing moves. The tabs: Editing: Tab A; Saved: none; Refused: none. Browser storage holds version 4; saves refused so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:04.851Z",
+  "width": 768,
+  "id": "08-locks-pessimistic",
+  "note": "poeaa:377 opens at: Minute 0, step 0: nothing moves. The tabs: Waiting: none; Holds lock: Tab A; Saved: none; Expired: none. The lock on Hold the ridge: held by Tab A until minute 20. Minutes spent waiting so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:05.394Z",
+  "width": 768,
+  "id": "09-data-transfer-object",
+  "note": "poeaa:363 opens at: Step 0: nothing moves. Where each object stands: Domain object: Actor definition, Saved build, Evidence record; In the DTO: none; Encoded: none; Page view: none; Refused: none. The text on the wire: not written yet."
+ },
+ {
+  "at": "2026-11-07T21:51:05.963Z",
+  "width": 768,
+  "id": "09-remote-facade",
+  "note": "poeaa:357 opens at: Step 0: nothing moves. The panels: In its source: Actors, Builds, Mechanisms, Work, Blueprint; In the response: none; On the page: none. Calls across the network so far: 1; local calls inside the facade: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:05.964Z",
+  "width": 768,
+  "id": "checks",
+  "note": "page errors 0; fits width true"
+ },
+ {
+  "at": "2026-11-07T21:51:06.505Z",
+  "width": 1440,
+  "id": "01-poeaa-shelf",
+  "note": "shelf reads: Patterns of Enterprise Application Architecture455 concepts20 studiedchannels"
+ },
+ {
+  "at": "2026-11-07T21:51:06.912Z",
+  "width": 1440,
+  "id": "02-unit-of-work-start",
+  "note": "opens at: Step 0: nothing moves. Where each composition stands: Clean: Flank left, Hold the ridge; New: none; Dirty: none; Removed: none. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:07.282Z",
+  "width": 1440,
+  "id": "03-unit-of-work-registers",
+  "note": "at Removed: Step 4: Flank left moves from Clean to Removed by registerRemoved. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:07.829Z",
+  "width": 1440,
+  "id": "04-unit-of-work-commit",
+  "note": "at Commit: Step 5: Flank left leaves Removed by commit; Hold the ridge moves from Dirty to Clean by commit; Night march moves from New to Clean by commit. Where each composition stands: Clean: Hold the ridge, Night march; New: none; Dirty: none; Removed: none. Store calls so far: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:08.480Z",
+  "width": 1440,
+  "id": "05-unit-of-work-mechanism",
+  "note": "pseudocode and executable model open"
+ },
+ {
+  "at": "2026-11-07T21:51:08.946Z",
+  "width": 1440,
+  "id": "06-unit-of-work-limits",
+  "note": "limits open"
+ },
+ {
+  "at": "2026-11-07T21:51:09.516Z",
+  "width": 1440,
+  "id": "07-identity-map-miss",
+  "note": "at Miss: Step 1: Unit of Work moves from Store only to Mapped by find: a miss. The reading asks for poeaa:246: a miss, because this session's map holds nothing under that id, so the loader makes read 1 of the store and keeps the object under poeaa:246. Where each study stands: Store only: Identity Map; Mapped: Unit of Work; Two copies: none. Store reads so far: 1; hits: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:09.919Z",
+  "width": 1440,
+  "id": "07-identity-map-hit",
+  "note": "at Hit: Step 4: Unit of Work stays in Mapped by find: a hit. The nearby list asks for poeaa:246: a hit, because its map already holds the object built by read 1, so nothing is read and that same object comes back. Where each study stands: Store only: none; Mapped: Unit of Work, Identity Map; Two copies: none. Store reads so far: 2; hits: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:10.478Z",
+  "width": 1440,
+  "id": "08-locks-optimistic",
+  "note": "poeaa:370 opens at: Minute 0, step 0: nothing moves. The tabs: Editing: Tab A; Saved: none; Refused: none. Browser storage holds version 4; saves refused so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:11.042Z",
+  "width": 1440,
+  "id": "08-locks-pessimistic",
+  "note": "poeaa:377 opens at: Minute 0, step 0: nothing moves. The tabs: Waiting: none; Holds lock: Tab A; Saved: none; Expired: none. The lock on Hold the ridge: held by Tab A until minute 20. Minutes spent waiting so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:11.654Z",
+  "width": 1440,
+  "id": "09-data-transfer-object",
+  "note": "poeaa:363 opens at: Step 0: nothing moves. Where each object stands: Domain object: Actor definition, Saved build, Evidence record; In the DTO: none; Encoded: none; Page view: none; Refused: none. The text on the wire: not written yet."
+ },
+ {
+  "at": "2026-11-07T21:51:12.282Z",
+  "width": 1440,
+  "id": "09-remote-facade",
+  "note": "poeaa:357 opens at: Step 0: nothing moves. The panels: In its source: Actors, Builds, Mechanisms, Work, Blueprint; In the response: none; On the page: none. Calls across the network so far: 1; local calls inside the facade: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:12.283Z",
+  "width": 1440,
+  "id": "checks",
+  "note": "page errors 0; fits width true"
+ },
+ {
+  "at": "2026-11-07T21:51:13.018Z",
+  "width": 2080,
+  "id": "03-unit-of-work-registers",
+  "note": "at Removed: Step 4: Flank left moves from Clean to Removed by registerRemoved. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:14.190Z",
+  "width": 2080,
+  "id": "07-identity-map-hit",
+  "note": "at Hit: Step 4: Unit of Work stays in Mapped by find: a hit. The nearby list asks for poeaa:246: a hit, because its map already holds the object built by read 1, so nothing is read and that same object comes back. Where each study stands: Store only: none; Mapped: Unit of Work, Identity Map; Two copies: none. Store reads so far: 2; hits: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:15.135Z",
+  "width": 2080,
+  "id": "08-locks-pessimistic",
+  "note": "poeaa:377 opens at: Minute 0, step 0: nothing moves. The tabs: Waiting: none; Holds lock: Tab A; Saved: none; Expired: none. The lock on Hold the ridge: held by Tab A until minute 20. Minutes spent waiting so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:15.761Z",
+  "width": 2080,
+  "id": "checks",
+  "note": "page errors 0; fits width true"
+ },
+ {
+  "at": "2026-11-07T21:51:16.600Z",
+  "width": 3840,
+  "id": "03-unit-of-work-registers",
+  "note": "at Removed: Step 4: Flank left moves from Clean to Removed by registerRemoved. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:17.720Z",
+  "width": 3840,
+  "id": "07-identity-map-hit",
+  "note": "at Hit: Step 4: Unit of Work stays in Mapped by find: a hit. The nearby list asks for poeaa:246: a hit, because its map already holds the object built by read 1, so nothing is read and that same object comes back. Where each study stands: Store only: none; Mapped: Unit of Work, Identity Map; Two copies: none. Store reads so far: 2; hits: 1."
+ },
+ {
+  "at": "2026-11-07T21:51:18.668Z",
+  "width": 3840,
+  "id": "08-locks-pessimistic",
+  "note": "poeaa:377 opens at: Minute 0, step 0: nothing moves. The tabs: Waiting: none; Holds lock: Tab A; Saved: none; Expired: none. The lock on Hold the ridge: held by Tab A until minute 20. Minutes spent waiting so far: 0; minutes of work thrown away: 0."
+ },
+ {
+  "at": "2026-11-07T21:51:19.311Z",
+  "width": 3840,
+  "id": "checks",
+  "note": "page errors 0; fits width true"
+ }
+]
