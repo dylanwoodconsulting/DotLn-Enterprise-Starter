@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "subagentCap": 20,
+  "subagentCap": 40,
   "memory": {
     "gateShare": 0.6666666666666666,
     "hostShare": 0.6666666666666666,
@@ -8,7 +8,7 @@
     "footprintIntervalMs": 4000,
     "outputTailBytes": 1048576
   },
-  "source": "Kit defaults with instance-owned overrides. Operator direction 2026-11-04 (WO-028-D013) permanently retains memory.gateShare at two thirds: 4 GiB per task on the observed 48 GiB host with eight lanes; hostShare and dynamic host/lane calculation remain in force. This instance owns its budgets and records its own acceptances. Operator correction 2026-10-28: each consumer resolves local-median from its own completed phase history as max(4 times its median, 8 hours), using 8 hours without history; no DotLn timing samples are exported.",
+  "source": "Kit defaults with instance-owned overrides. Operator direction 2026-11-07 (WO-023-D014) raises subagentCap to 40. Operator direction 2026-11-04 (WO-028-D013) permanently retains memory.gateShare at two thirds: 4 GiB per task on the observed 48 GiB host with eight lanes; hostShare and dynamic host/lane calculation remain in force. This instance owns its budgets and records its own acceptances. Operator correction 2026-10-28: each consumer resolves local-median from its own completed phase history as max(4 times its median, 8 hours), using 8 hours without history; no DotLn timing samples are exported.",
   "dispatches": {
     "executor": {
       "tokens": null,
