@@ -2,13 +2,10 @@
 
 ## Dispatch and capture
 
-The operator dispatched `planning: standard planning pass + get latest
-upstream +` with one item, `1) core response:`, followed by the answer block
+The operator dispatched a `planning:` pass asking for a standard planning pass and the latest upstream, with one item, core's response, followed by the answer block
 core's planning pass of 2026-11-07 drafted for them to paste (core's answers
 to this fork's two blocks of 2026-11-06, on starter v0.118.0 and v0.119.0).
-Two words followed mid-turn: a bare `planning:` two seconds after the
-dispatch, while the session loaded the planner skill, and `merged` at about
-01:50Z, after the session said update #68 was open. The dispatch, the block
+Two messages followed mid-turn: the bare dispatch prefix two seconds after the dispatch, while the session loaded the planner skill, and one word at about 01:50Z, after the session said update #68 was open, saying it was merged. The dispatch, the block
 and the two words are captured in ignored intake at
 `docs/intake/notes/planning-2026-11-07.md` (the operator's evening of
 2026-11-07; the kit dates this pass by the hook's clock), SHA-256
@@ -33,8 +30,7 @@ planner on the first prompt (journal row 2026-11-08T01:25:43.768Z, prefix
 slash command's block and the wrapper together in a live session; the
 session had its role, its scratch grant and its usage standing from the
 first prompt, where the two passes of 2026-11-06 waited for a bare
-`planning:`. The operator's bare `planning:` of this session (row
-2026-11-08T01:25:46.021Z, `prefixLine` 0, 9 bytes) was therefore a repeat
+`planning:`. The operator's bare prefix of this session (row 2026-11-08T01:25:46.021Z, `prefixLine` 0, 9 bytes) was therefore a repeat
 of a resolved dispatch and recorded nothing new (D7). The pasted block is
 core's session's text and not the operator's words; only the dispatch
 line, the item label and the two later words are the operator's.
@@ -116,9 +112,9 @@ so the saving is in the briefing's clarity, not the clock (§NoOps).
 | Item | Aim read | Disposition | Planner's inference |
 | --- | --- | --- | --- |
 | the dispatch line | a standard pass that takes the latest upstream, asked for in this session | #68 opened first by the kit's helper, merged by the operator, finished on `main`; the planning branch from the updated `main` (D1) | none |
-| `1) core response:` and the block | core's answers read against the records they name, the fork's requests reconciled | each of the ten read, the rows re-disposed, the routes recorded until WO-258 and WO-259 land (D2; §Core's answers) | that the block carries no operator direction (the operator record's Pasted blocks item); the one direction this pass records came from the operator in WO-023's session (D6) |
-| `planning:` (01:25:45Z) | the session's role, were it unresolved | the hook had resolved the role on the first prompt; nothing recorded (D7) | none |
-| `merged` | the update may finish | `update --finish` ran on clean `main` | none |
+| the core-response item and the block | core's answers read against the records they name, the fork's requests reconciled | each of the ten read, the rows re-disposed, the routes recorded until WO-258 and WO-259 land (D2; §Core's answers) | that the block carries no operator direction (the operator record's Pasted blocks item); the one direction this pass records came from the operator in WO-023's session (D6) |
+| the bare prefix (01:25:45Z) | the session's role, were it unresolved | the hook had resolved the role on the first prompt; nothing recorded (D7) | none |
+| the merge word | the update may finish | `update --finish` ran on clean `main` | none |
 
 ### Core's answers, read against the records
 
@@ -190,8 +186,7 @@ criterion 5).
 Six orders are amended, each change bounded to what the records changed
 since its filing (D4):
 
-- WO-024: the base to WO-023's merge (`f99580f`, #17); a reference-only
-  edge on WO-039 (the example its executable models copy); the Design's
+- WO-024: the base to WO-023's merge (`f99580f`, #17); a hard edge on WO-039 (the example its executable models copy; step 1's guard refuses a `main` without WO-039's merge, as the design review asked); the Design's
   shape sentence names WO-034's first batch and the enterprise batch as
   WO-039 leaves it, and no longer WO-028's twenty, which the audit shows
   off the rule and WO-040 reshapes (rule 30); the known issues say WO-023
@@ -285,9 +280,7 @@ question), and reads WO-028's twenty, which WO-034 left to "the next" by
 its own known issues, at 39 functions over the rule.
 
 Decision: two orders, not one, on one subsystem but on disjoint surfaces.
-WO-039 reads the enterprise batch and the `states` family and runs first,
-alone, because WO-024's four executable models would otherwise copy the
-shapes D016 deferred (the operator's message 8 of 2026-11-04: a shape that
+WO-039 reads the enterprise batch and the `states` family and runs first, alone, with WO-024 holding a hard edge on it, because WO-024's four executable models would otherwise copy the shapes D016 deferred (the operator's message 8 of 2026-11-04: a shape that
 entered once was copied by every later batch). WO-040 reads the second
 movement batch, the first batch's residue and the stream batches and pairs
 with WO-024, whose surfaces (the GEB and Team Topologies records and the
@@ -401,8 +394,7 @@ the route.
 ### D7. Observed, not rules: the hook's reading, the watcher and the session's diagnostics
 
 The hook read this dispatch behind the host's command block and inside the
-wrapper on the first prompt (§Dispatch and capture); the operator's bare
-`planning:` was a repeat and recorded nothing. The merge watcher, a shell
+wrapper on the first prompt (§Dispatch and capture); the operator's bare prefix was a repeat and recorded nothing. The merge watcher, a shell
 loop over `gh pr view`, was counted by the hook as one unattributed worker
 use against the cap of forty, as it was on 2026-11-06; it is a shell
 command and the count is reported as observed. The three shell
@@ -485,6 +477,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 | Refilling the research track | Four research orders are queued (WO-029 to WO-032) and the queue is refilled when fewer than two are (WS-002 rule 6). Evidence: WS-002's member table. | Two of the four close. | The Codex capacity has a next order waiting. |
 | Raising the router skill's cold-start ceiling or trimming the kit's skill | Unchanged from the 2026-11-06 pass: the skill is the kit's and the ceiling the operator's; a breach refuses nothing here. Evidence: the cost table's breach lines. | A starter trims the skill, or the operator sets the ceiling. | The router's cold start is under the ceiling the operator set. |
 | Reopening an order on the machinery-share signal | The share fell to 0.234 (Δ −0.253) as the two delivery orders closed, which is what the 2026-11-06 pass's NoOp said would happen; no reopen candidate prints. Evidence: `npm run meta -- --plan-cost`. | The next closed order's delta worsens with a delivery order closed. | The share falls because delivery orders closed. |
+| Promoting the shape audit and the crawl into the target's `tools/` | Each standards order copies WO-034's evidence scripts, adapts them to its inventory and permitted differences, and records the source commit and the invocation; a maintained tool is WS-001 rule 26's question (a purpose, a status, a check worth running on every change), which the standards pass that makes a third copy answers with what the copies share. Evidence: the design review's F3; `docs/evidence/WO-034/`. | A third standards pass copies the scripts again with a behavior change. | One audit and one crawl, run by every standards pass from the target's tools. |
 | Updating the README's release block | The block names the release the next launchpad order prepares; `v0.3.5` is published and no self order is queued. Evidence: `README.md` §Close a release. | A launchpad order activates. | The block is never stale between orders. |
 
 ## Sequence
@@ -524,8 +517,7 @@ still owes WO-016 its base and the receipt 012 known issues
   row and capture (D6). Nothing else in the record changed today.
 - WS-001: the acceptance contract (WO-034 to WO-040); the member table's
   rows for WO-039 and WO-040; the side-members paragraph (WO-024 pairs with
-  WO-040; the standards passes as side members); the typed-edges table
-  (WO-039, WO-040, WO-031's edge); rule 25's A/B sentence (D6); the landed
+  WO-040; the standards passes as side members); the typed-edges table (WO-039, WO-040, WO-024's and WO-031's edges, and where WO-040's edge on WO-028 lives); rule 25's A/B sentence (D6); the landed
   paragraph (WO-034 as `v0.10.2`, WO-023 as `v0.11.0`); the lies-ahead
   table (the two merged rows; WO-039 and WO-040 filed); the delivery states
   (WO-034 and WO-023 merged with their records #66 and #67; the two new

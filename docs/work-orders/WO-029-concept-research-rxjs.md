@@ -47,8 +47,7 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-021 merged (hard: the `marbles` family, the marble
 contract and spec helper, the executable rule and the RxJS study directory
 this batch reuses; WO-020's record, check, composite, route and fan-out
-procedure come with it). The base above is WO-027's merge (#15), released
-as `DotLn Angular v0.10.1`; step 1 integrates the target's current `main`.
+procedure come with it). The base above is WO-023's merge (#17), released as `DotLn Angular v0.11.0`, set by the 2026-11-08 pass; step 1 integrates the target's current `main`.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
@@ -184,9 +183,7 @@ remaining core operators (axis: WO-021's reason stands, the patterns' rows
 relate to the operators); the concepts chosen by the planner's taste (axis:
 the rule is checkable against the data).
 
-Live-run surfaces at the base: the catalog with eighty studies in the
-message system, the three landed families, the forty movement studies in
-the migrated model shape, the RxJS study directory and the addressable readings.
+Live-run surfaces at the base: the catalog with a hundred studies in the message system, the five landed families, the forty movement studies (the first batch reshaped by WO-034), the twenty enterprise studies with the `states` register, the RxJS study directory and the addressable readings.
 
 **Deliverables:** the twenty records and executable modules with marble
 specs; the summary rows; the coverage row; `docs/evidence/WO-029/` with

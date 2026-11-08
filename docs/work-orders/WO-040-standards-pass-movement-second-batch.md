@@ -22,9 +22,7 @@ nine `names.*` keys), the shared motion drawing
 `composites/study-visuals/motion/motion.ts` with `_tones.scss` (the
 narrow-screen query through the injected document, the font sizes from one
 place), the nineteen flow state labels in `apps/dotln/public/i18n/studyEip/en.json`
-with the specs that pin their composed text, and the RxJS and messaging
-modules under `studies/rxjs/` and `studies/eip/`, read under the rules and
-changed only where a rule fails; `catalog.md` §The models; about 50 source
+with the specs that pin their composed text, and the RxJS and messaging modules under `studies/rxjs/` and `studies/eip/` present at the integrated base (the forty studies' modules at `f99580f`), read under the rules and changed only where a rule fails; `catalog.md` §The models; about 50 source
 files; no new page, family, route, composite or dependency. Removes the 39
 loose parameter lists of six or more, the two `valueN` placeholders, the 21
 flat model keys and the three inline projections. Wall-clock: about 4 h 0
@@ -174,14 +172,8 @@ which `control-bus.spec.ts` pins as "Work queue: Records: 1" (D015).
   recorded in the decisions, the English only in `studyEip/en.json`, the
   specs that pin the composed text updated with the before and after listed
   in the evidence README. These are the only rendered words that change.
-- **The stream modules, read.** Every module under `studies/rxjs/` and
-  `studies/eip/` is read under the rules with its verdict recorded in the
-  evidence README, reshaped where a rule fails and left where none does; the
-  measures already hold, so a change needs a named rule.
-- **Every output unchanged.** WO-034's crawl over every frame of the forty
-  movement studies and the forty stream studies at the integrated base and
-  at the candidate: the two text-node sequences are equal except in the
-  nineteen state sentences; every movement and stream model spec keeps its
+- **The stream modules, read.** Every module under `studies/rxjs/` and `studies/eip/` present at the integrated base, listed by path in the inventory step 2 records, is read under the rules with its verdict recorded in the evidence README, reshaped where a rule fails and left where none does; the measures already hold, so a change needs a named rule. A research batch that lands after the inventory (WO-029 or WO-030) adds modules this order does not read, since that batch's own critics and reviews read them against the same rules; the integration reruns their specs and nothing more, so the research queue does not change this order's workload.
+- **Every output unchanged.** WO-034's production crawl and comparator (`crawl.mjs`, `open-study-details.mjs`, `compare-dom.mjs`), copied into this order's evidence and adapted as this order's own scripts, the historical WO-034 copies and their pins left as they are: the crawl enumerates the inventory's movement studies (both batches, through the Time slider) and stream studies (through the marbles and flow step controls, a flow's marble diagram included where its example runs) and pins their counts to the inventory's, capturing at 1440 as WO-034's did, since no admitted change here depends on the width; the comparator permits differences only in the nineteen state sentences, listed by study and frame. It runs at the integrated base and at the candidate; the two text-node sequences are equal outside those sentences; a control run of the comparator over the base crawl and a copy of it with one unrelated text node changed exits non-zero, so the comparator is shown to refuse a difference it does not permit; every movement and stream model spec keeps its
   assertions; the marble specs and the flow specs stay green; the label
   sweep stays at zero cut and zero overprinted frames at the five sizes;
   the catalog's visual baselines are unchanged.
@@ -222,20 +214,8 @@ modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
 1. Base guard read with WO-014-D001, for WO-040: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
    f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3 origin/main` exits 0 (a `main`
-   that does not contain the pin stops for a planning pass); the target
-   worktree then fast-forwards to the target's `main`, and that integrated
-   commit is the baseline of every later comparison; then the route guard
-   and activation as WO-005 step 1. Check: the decisions carry the
-   integrated commit.
-2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`,
-   `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and
-   `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`; run the
-   audit over `studies/` at the integrated base into
-   `shape-audit-before.json`, the placeholder script into
-   `time-placeholders-before.json`, and the crawl over the forty movement
-   and forty stream studies into `dom-before.json`. Check: the files exist
-   and the before counts match this order's Observed gap (39, 1, 11, 21, 2,
-   11).
+   that does not contain the pin stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
+2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `f99580f`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), and the crawl's record counts are the inventory's.
 3. `flow.ts`'s `frameOf` with a frame description; the shared
    description-object types the second batch needs added beside WO-034's
    under `studies/`. Check: `npx nx test tools` exits 0 over the flow and
@@ -266,9 +246,7 @@ modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
    with a verdict per file in the evidence README, reshaped where a rule
    fails. Check: `npx nx test tools` exits 0; the README lists every module
    of `studies/rxjs/` and `studies/eip/` with its verdict.
-9. The crawl after over the eighty studies into `dom-after.json` and the
-   diff into `dom-diff.json`. Check: zero differing text nodes outside the
-   nineteen sentences step 8 lists.
+9. The adapted crawl after over the inventory's studies into `dom-after.json` and the diff into `dom-diff.json`; the comparator's control (the base crawl against a copy of it with one unrelated text node changed) recorded with its exit code. Check: zero differing text nodes outside the nineteen sentences step 8 lists; the control exits non-zero.
 10. `catalog.md` §The models; dependency check as WO-015 step 15;
     `npm run check:bundle`; gate plain and review. Check: passing rows, no
     tracked-byte mutation.
@@ -290,8 +268,7 @@ each.
 
 **Acceptance criteria (all required)**
 
-1. **Use (WS-001 rule 24, the code as the surface).** The verifier performs
-   the Objective's reading on the committed tree: three second-batch
+1. **Use (WS-001 rule 24, the code as the surface).** The verifier performs the Objective's reading on the candidate in the target worktree: three second-batch
    presentation modules chosen at random (the command and its output
    recorded) and one RxJS or messaging module chosen the same way, read top
    to bottom with the README's verdict beside it, and Control bus's study
@@ -314,13 +291,9 @@ each.
    `shape-audit-before.json` from the integrated base records the Observed
    gap's counts.
 3. Every other output is unchanged: `docs/evidence/WO-040/dom-diff.json`,
-   the production crawl over every frame of the forty movement and forty
-   stream studies at the integrated base and at the candidate, records zero
-   differing text nodes outside the nineteen state sentences the evidence
+   produced by the evidence directory's adapted crawl and comparator over every frame of the movement and stream studies the inventory names at the integrated base and at the candidate, records zero differing text nodes outside the nineteen state sentences the evidence
    README lists with their text before and after; every movement and stream
-   model spec passes with its assertions retained, the marble and flow specs
-   included; and `npx nx e2e dotln-e2e` passes with the catalog's visual
-   baselines unchanged.
+   model spec passes with its assertions retained, the marble and flow specs included; the comparator's control exits non-zero (recorded in the evidence README with its command); and `npx nx e2e dotln-e2e` passes with the catalog's visual baselines equal to the latest integrated `main`'s (a sibling's regenerated baselines that an integration brings are recorded in the decisions file as the sibling's, never this order's).
 4. `docs/evidence/WO-040/time-placeholders-after.json`, produced by the
    evidence directory's `time-placeholders.mjs` at the candidate, lists no
    placeholder; `tools/i18n-copies.test.mjs` passes; `grep -c
@@ -346,10 +319,7 @@ each.
    choice the decisions file records; `control-bus.spec.ts` and the other
    specs that pin composed text pass with the new text; and no model message
    in `studyRxjs/en.json` or `studyEip/en.json` begins with a placeholder.
-7. `docs/evidence/WO-040/README.md` lists every module under
-   `libs/features/tools/src/lib/studies/rxjs/` and `studies/eip/` with the
-   executor's verdict (reshaped or left) and, for a reshaped module, the rule
-   that failed; `docs/dev-reference/architecture/catalog.md` §The models
+7. `docs/evidence/WO-040/README.md` lists every module under `libs/features/tools/src/lib/studies/rxjs/` and `studies/eip/` present at the integrated base (the inventory step 2 records) with the executor's verdict (reshaped or left) and, for a reshaped module, the rule that failed; `docs/dev-reference/architecture/catalog.md` §The models
    says both movement batches and the enterprise batch follow the shape
    (`grep -c "both movement batches" docs/dev-reference/architecture/catalog.md`
    is at least 1).
@@ -371,9 +341,7 @@ models copy a reshaped example; this order and WO-024 are a lane pair
 `relations` family; the two share `catalog.md`, which the second publisher
 integrates), and the operator may run them one at a time. A research batch
 that lands first (WO-029 or WO-030) adds keys to `studyRxjs/en.json` or
-`studyEip/en.json` beside the nineteen this order rewords; this order
-integrates the target's `main` before its handoff and again before its
-final publish and reruns the stream specs. The next Movement research batch
+`studyEip/en.json` beside the nineteen this order rewords; this order integrates the target's `main` before its handoff and again before its final publish, reruns the stream specs, recaptures the before-crawl at the new base and records the sibling's regenerated catalog baselines as the sibling's. The next Movement research batch
 may be cut now that WO-034 has merged (WS-002 rule 6) and copies this
 order's example once it merges; the stream works' next batches after
 WO-029 and WO-030 are cut after this order merges, since it is the

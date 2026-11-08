@@ -196,11 +196,7 @@ since the preceding pass.
 - **The check's home.** The states drawing rule leaves `rxjsProblems` for a
   function named for it (`statesProblems`), the tooling test's outcome
   unchanged.
-- **Every output unchanged.** WO-034's production crawl (`crawl.mjs` with
-  `compare-dom.mjs`, copied into this order's evidence and pointed at the
-  twenty enterprise studies) runs at the integrated base and at the
-  candidate; the two text-node sequences are equal except in the
-  narrow-register frames the decision names; every enterprise model spec
+- **Every output unchanged.** WO-034's production crawl and comparator (`crawl.mjs`, `open-study-details.mjs`, `compare-dom.mjs`), copied into this order's evidence and adapted as this order's own scripts, the historical WO-034 copies and their pins left as they are: the crawl enumerates the enterprise studies from `studies-summary.json`, steps the sixteen with a `states` drawing through the family's step control to every moment, reads the four structural records as text, and pins the record count at twenty, capturing at 1440 and at 360 since the admitted change is the narrow register's; the comparator takes that inventory and permits differences only in the narrow-register frames the decision names. It runs at the integrated base and at the candidate; the two text-node sequences are equal outside those frames; a control run of the comparator over the base crawl and a copy of it with one unrelated text node changed exits non-zero, so the comparator is shown to refuse a difference it does not permit; every enterprise model spec
   keeps its assertions; the corpus test, `studies:check`, `i18n:check` and
   `test:tooling` stay green; the catalog's visual baselines are unchanged,
   or the 360 baseline is regenerated with the heading decision named in
@@ -247,18 +243,8 @@ two documents.
 1. Base guard read with WO-014-D001, for WO-039: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
    f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3 origin/main` exits 0 (a `main`
-   that does not contain the pin stops for a planning pass); the target
-   worktree then fast-forwards to the target's `main`, and that integrated
-   commit is the baseline of every later comparison; then the route guard
-   and activation as WO-005 step 1. Check: the decisions carry the
-   integrated commit.
-2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`,
-   `crawl.mjs`, `compare-dom.mjs` and `open-study-details.mjs` into
-   `docs/evidence/WO-039/`, run the audit over `studies/` at the integrated
-   base into `shape-audit-before.json` and the crawl over the twenty
-   enterprise studies into `dom-before.json`. Check: both files exist and
-   the before counts for the `poeaa` group match this order's Observed gap
-   (764 functions, 0 over four positional parameters, 1 at 70 or more).
+   that does not contain the pin stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
+2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs` and `open-study-details.mjs` into `docs/evidence/WO-039/`, adapt the crawl and the comparator to the enterprise inventory and this order's permitted differences as the Design states (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json` and the adapted crawl over the twenty enterprise studies into `dom-before.json`. Check: both files exist, the before counts for the `poeaa` group match this order's Observed gap (764 functions, 0 over four positional parameters, 1 at 70 or more), and the crawl's record count is twenty.
 3. The shared pieces: `listOf` in `moveSentence`; the builder's transition
    inference and its ambiguity refusal with their specs; `registerOf` and
    `placeOf` returning state unions; the one loader in `tools-test-kits.ts`
@@ -289,9 +275,7 @@ two documents.
 8. Documents: `catalog-rules.md` (the token rule, the lookup-table
    sentence) and `catalog.md` §The models and §The families. Check:
    `grep -c "symbol" docs/ai-reference/catalog-rules.md` is at least 1.
-9. The crawl after over the twenty enterprise studies into `dom-after.json`
-   and the diff into `dom-diff.json`. Check: zero differing text nodes
-   outside the frames step 7 names.
+9. The adapted crawl after over the twenty enterprise studies into `dom-after.json` and the diff into `dom-diff.json`; the comparator's control (the base crawl against a copy of it with one unrelated text node changed) recorded with its exit code. Check: zero differing text nodes outside the frames step 7 names; the control exits non-zero.
 10. Dependency check as WO-015 step 15; `npm run check:bundle`; gate plain
     and review. Check: passing rows, no tracked-byte mutation.
 11. Launchpad write-back (WS-001's delivery states; the profile's
@@ -312,9 +296,7 @@ each.
 
 **Acceptance criteria (all required)**
 
-1. **Use (WS-001 rule 24, the code as the surface).** The verifier performs
-   the Objective's reading on the committed tree: three enterprise
-   presentation modules chosen at random (the command and its output
+1. **Use (WS-001 rule 24, the code as the surface).** The verifier performs the Objective's reading on the candidate in the target worktree: three enterprise presentation modules chosen at random (the command and its output
    recorded), read top to bottom, and Foreign Key Mapping's and Service
    Layer's studies opened in the served production build at 360 and at the
    operator's sizes (rule 29) and stepped. The VER report carries a
@@ -335,15 +317,9 @@ each.
    `grep -c "switch (" libs/features/tools/src/lib/studies/poeaa/*.presentation.ts`
    prints 0 for each of the sixteen files, the evidence README naming each
    presentation's lookup table, its `listOf` use and its boolean helper.
-3. Every output is unchanged: `docs/evidence/WO-039/dom-diff.json`, the
-   production crawl over every frame of the twenty enterprise studies at
-   the integrated base and at the candidate, records zero differing text
-   nodes outside the narrow-register frames the decisions file names; every
+3. Every output is unchanged: `docs/evidence/WO-039/dom-diff.json`, produced by the evidence directory's adapted crawl and comparator over every frame of the twenty enterprise studies at the integrated base and at the candidate, records zero differing text nodes outside the narrow-register frames the decisions file names; every
    enterprise model spec passes with its mechanism assertions retained and
-   none reads the register drawing; and `npx nx e2e dotln-e2e` passes with
-   the catalog's visual baselines unchanged, or the 360 baseline regenerated
-   with the heading decision named in the decisions file and the pull
-   request.
+   none reads the register drawing; the comparator's control exits non-zero (recorded in the evidence README with its command); and `npx nx e2e dotln-e2e` passes with the catalog's visual baselines equal to the latest integrated `main`'s, except the 360 baseline where the heading decision changed it, regenerated with the decision named in the decisions file and the pull request (a sibling's regenerated baselines that an integration brings are recorded in the decisions file as the sibling's).
 4. The states builder infers a move's transition when exactly one joins its
    states and refuses an ambiguous move when it builds, each with a spec
    that passes on the candidate; `registerOf` and `placeOf` return their
@@ -392,9 +368,7 @@ authors copy the reshaped batch. The states family's deferred A/B rounds
 belong to the dedicated A/B testing pass the operator asked for on
 2026-11-07 (WO-023-D008, `FUP-02c1ebe8146fe2f1`); where that pass has run
 first, its pick governs the narrow register and this order's step 7 is a
-record. No page changes beyond the narrow register's decided rendering, so
-no paired comparison runs (rule 25); the use criterion reads code and two
-studies. Before `target-records`, the final reviewer commits the order's
+record. No page changes beyond the narrow register's decided rendering, so no paired comparison runs (rule 25); the use criterion reads code and two studies. A sibling that merges while this order runs (WO-029 or WO-030) is integrated before the handoff and again before the final publish; the before-crawl is recaptured at the new base, and a sibling's regenerated catalog baselines are the sibling's, recorded in the decisions. Before `target-records`, the final reviewer commits the order's
 records on the order branch so the launchpad commit the filed records'
 footer names holds them (the profile's publish route, step 3; core's route
 until its WO-259 lands). This order activates only on a launchpad whose
