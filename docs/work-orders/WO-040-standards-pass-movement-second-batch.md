@@ -350,7 +350,8 @@ WO-029 and WO-030 are cut after this order merges, since it is the
 standards pass that read their code. Before `target-records`, the final
 reviewer commits the order's records on the order branch so the launchpad
 commit the filed records' footer names holds them (the profile's publish
-route, step 3; core's route until its WO-259 lands). No page changes, so no
+route, step 3; since starter v0.122.0 the filing refuses a source that is
+uncommitted at the launchpad's `HEAD`). No page changes, so no
 paired comparison runs (rule 25); the use criterion reads code and two
 studies. This order activates only on a launchpad whose starter carries
 core WO-221's `--draft` form; the draft pull request and its workflow runs

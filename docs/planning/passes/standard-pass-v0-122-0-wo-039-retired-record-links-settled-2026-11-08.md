@@ -144,10 +144,14 @@ what WO-039's merge changed at the base they will activate on (D4):
 Not amended: WO-032 (it waits for WO-024 and keeps its provisional base),
 WO-035, WO-037 and WO-038, whose bases the pass before each activates sets
 (WS-001 §Bases), WO-036 (its base is WO-028's merge and its surfaces are the
-scene's), and WO-016, WO-008, WO-017 and WO-018. No order's criteria change;
-the kit hashes an order's title, objective, cost, criteria and non-goals, so
-every amended order's verdict carries from receipts 023 and 024 by hash and
-this pass's receipt judges the plan. The five defect classes were screened
+scene's), and WO-016, WO-008, WO-017 and WO-018. No order's criteria change.
+The kit hashes an order's title, objective, cost, criteria and non-goals:
+WO-024, WO-029, WO-030 and WO-031 change none of those fields, so their
+verdicts carry from receipts 023 and 024 by hash; WO-040's Cost line now
+names the integrated base and the loader import its stream specs carry, so
+its hash moved (`sha256:6e485509…` in receipt 024 to `sha256:f128c1e3…`)
+and this pass's receipt judges WO-040 afresh beside the plan (the three
+reviews' finding, §Validation). The five defect classes were screened
 over the changed text: a base line and a guard state no count, cost or
 duration as a criterion's subject, read no `HEAD` or commit range, name
 GitHub only where the order already did, and contradict no non-goal.
@@ -533,4 +537,50 @@ rule.
 
 ## Validation
 
-TBD-VALIDATION
+The dispatch capture's digest is
+`2a83b92bf8aa1d2f124405495d931b34dfb4ff847c2363168c2ce18859556bf4` at every
+record that names it: the update publish and the finish read the same file,
+the operator sent no later word in the session, and the criteria review read
+the same bytes (1,681 bytes).
+
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning` under the lane
+`planning-2026-11-08-standard-pass-v0-122-0-wo-039-retired-record-links-settled`
+(keyed by the branch), round 1, over the change since `711f185` at tree
+`d562744` (the first committed subject, `acf0490`); the brief measured
+227,316 characters by the helper's dry run, under the 400,000-character
+ceiling, one batch of eight inlined documents (the pass document, the
+sequence, the work-order index and the five amended orders), with the brief
+directing each worker at the whole branch diff, so the operator record, the
+profile, the workstreams, the ledger and the register were in every worker's
+reach and in their files read. The three were launched together at
+22:48:20Z. The design improver: 0 h 4 min, 1,345,555 tokens, 1 finding (0
+blocking, 1 should-fix). The criteria adversary, launched with the dispatch
+capture through `--capture`: 0 h 5 min, 1,836,896 tokens, 2 findings (0
+blocking, 2 should-fix), its `## Items` table answering the one item (acted
+on). The consistency reviewer: 0 h 13 min, 4,655,894 tokens, 4 findings (0
+blocking, 3 should-fix, 1 note), with its `Traced consumers` table of
+fifteen rows: the generated pages, the cost-table binding and the register
+projection confirmed current, the four unchanged order hashes confirmed and
+WO-040's moved hash named, the one loader's 126 changed lines over 21 specs
+read as the import alone, and the link check's local half reproduced (all 38
+destinations exist at `62c22c9` in the clone). All by the
+codex-result-envelope, the effective effort unknown; each report records the
+checkout unchanged across its episode. No finding was blocking, so no recheck
+round ran. Self-review: found 7 (4 distinct: all three found the carry-in
+drift, two the hash claim); fixed 4; recorded 0.
+
+| Finding | Disposition |
+| --- | --- |
+| Design F1, criteria F2, consistency F2 (the carry-in drift in WO-029 and WO-030) | Fixed: both carry-ins name the Repository line's pin, WO-039's merge, as the base, with the first pass's base as dated history, and name the one loader among what the base holds. |
+| Criteria F1, consistency F1 (the hash claim) | Fixed: §Orders filed and amended says the four orders carry by hash and that WO-040's Cost line moved its hash (`6e485509…` to `f128c1e3…`), so this pass's receipt judges it. |
+| Consistency F3 (the ledger entry's digest) | Fixed: the registration heading cites the capture's SHA-256; the lineage index regenerated. |
+| Consistency F4 (WO-040's interim qualifier) | Fixed: the carry-in names v0.122.0's refusal of an uncommitted source in place of the route pending core's WO-259. |
+
+**Independent refutation.** TBD-REFUTATION
+
+**Worker uses.** TBD-USES
+
+**Document gate.** TBD-GATE

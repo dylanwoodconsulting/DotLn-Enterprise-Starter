@@ -8,7 +8,9 @@ Insert this instance's dated sessions below, newest first.
 
 Dispatch: a `planning:` request for a standard pass with the latest
 upstream, one typed line, captured in ignored intake
-(`docs/intake/notes/planning-2026-11-08.md`). The record is
+(`docs/intake/notes/planning-2026-11-08.md`, SHA-256
+`2a83b92bf8aa1d2f124405495d931b34dfb4ff847c2363168c2ce18859556bf4`). The
+record is
 [the planning document](../planning/passes/standard-pass-v0-122-0-wo-039-retired-record-links-settled-2026-11-08.md);
 this heading registers the pass for the plan tooling. The pass filed no
 order and amended five; no idea enters the ledger, because the pass was not
