@@ -1,0 +1,19 @@
+== unit-of-work {"renames":0,"otherTabSaves":1}: 5 frames
+  [0] Flank left and Hold the ridge are read from the store. Both are clean: they sit in no register, and the unit notes the version each was read at.
+  [1] The operator creates Night march. The unit registers it as new; nothing is written yet.
+  [2] The operator deletes Flank left. It moves to the removed register; its row stays in the store until the commit.
+  [3] Another tab saves its own rename of Hold the ridge. The store now has version 6, while this session still holds version 5.
+  [4] The save commits once: a single call carries insert Night march, delete Flank left, and every register is empty again.
+  CMP: {"title":"Writing each change at once","intro":"The same session written two ways: the unit of work holds every change for one call at the save, while writing at once calls the store for each change as it happens.","timeline":{"title":"Store calls so far","xLabel":"Step","yLabel":"Calls","seconds":[0,1,2,3,4],"series":[{"id":"unit","label":"One unit of work","tone":"actual","values":[0,0,0,0,1]},{
+== pessimistic-offline-lock {"tabASaves":0,"timeout":5}: 5 frames
+  [0] Tab A asks for the lock on Hold the ridge, gets it and reads version 4. The lock is its own until minute 5.
+  [1] Tab B asks for the lock, but Tab A holds it, so it is turned away at once, before it has changed anything, and told who has it.
+  [2] Tab A's lock ran out at minute 5, so Tab B, after waiting 3 minutes, takes it over and reads version 4. Tab A no longer holds the composition.
+  [3] Tab A is closed. Its lock had already been taken over, so there is nothing to release.
+  [4] Tab B still owns the lock, so it writes version 5 and releases the lock.
+== pessimistic-offline-lock {"tabASaves":0,"timeout":20}: 5 frames
+  [0] Tab A asks for the lock on Hold the ridge, gets it and reads version 4. The lock is its own until minute 20.
+  [1] Tab B asks for the lock, but Tab A holds it, so it is turned away at once, before it has changed anything, and told who has it.
+  [2] Tab A is closed without saving or releasing. Its lock stays taken until minute 20, keeping the other tab out.
+  [3] Tab A's lock ran out at minute 20, so Tab B, after waiting 18 minutes, takes it over and reads version 4. Tab A no longer holds the composition.
+  [4] Tab B still owns the lock, so it writes version 5 and releases the lock.

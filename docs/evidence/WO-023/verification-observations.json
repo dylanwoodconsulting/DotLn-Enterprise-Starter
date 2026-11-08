@@ -1,0 +1,272 @@
+{
+  "workOrder": "WO-023",
+  "verification": "VER-001",
+  "observedOn": "2026-11-07",
+  "subject": {
+    "commit": "9637f73539e387b46f65855db78f3c4b5285e561",
+    "tree": "08c77326385e1652b9f68d8bcc1c66b0a5453e85"
+  },
+  "browser": {
+    "kind": "fresh Playwright MCP Chromium session",
+    "build": "production output restored by npm run check:bundle",
+    "origin": "loopback port 43123",
+    "viewportMatrix": [
+      [
+        360,
+        900
+      ],
+      [
+        768,
+        1000
+      ],
+      [
+        1440,
+        1000
+      ],
+      [
+        2080,
+        1460
+      ],
+      [
+        3840,
+        1620
+      ]
+    ],
+    "captures": {
+      "verifier": 32,
+      "executor": 42,
+      "total": 74
+    },
+    "overflow": false,
+    "consoleErrors": 0,
+    "messageRequests": {
+      "studyCommon": 200,
+      "studyPoeaa": 200
+    },
+    "sessionStopped": true,
+    "objective": [
+      "Tools and Catalog; PoEAA shows twenty studied",
+      "Unit of Work: new, dirty, removed, commit; ordinary pseudocode, executable model and limits expanded",
+      "Identity Map: miss at step 1 and hit at step 4",
+      "Both offline locks: step and read failure cases",
+      "Data Transfer Object and Remote Facade: step, mechanism and limits"
+    ],
+    "capturesByStudy": [
+      {
+        "id": "370",
+        "slug": "optimistic-lock",
+        "captures": [
+          {
+            "width": 360,
+            "height": 900,
+            "overflow": false
+          },
+          {
+            "width": 768,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 1440,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 2080,
+            "height": 1460,
+            "overflow": false
+          },
+          {
+            "width": 3840,
+            "height": 1620,
+            "overflow": false
+          }
+        ]
+      },
+      {
+        "id": "377",
+        "slug": "pessimistic-lock",
+        "captures": [
+          {
+            "width": 360,
+            "height": 900,
+            "overflow": false
+          },
+          {
+            "width": 768,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 1440,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 2080,
+            "height": 1460,
+            "overflow": false
+          },
+          {
+            "width": 3840,
+            "height": 1620,
+            "overflow": false
+          }
+        ]
+      },
+      {
+        "id": "363",
+        "slug": "dto",
+        "captures": [
+          {
+            "width": 360,
+            "height": 900,
+            "overflow": false
+          },
+          {
+            "width": 768,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 1440,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 2080,
+            "height": 1460,
+            "overflow": false
+          },
+          {
+            "width": 3840,
+            "height": 1620,
+            "overflow": false
+          }
+        ]
+      },
+      {
+        "id": "357",
+        "slug": "remote-facade",
+        "captures": [
+          {
+            "width": 360,
+            "height": 900,
+            "overflow": false
+          },
+          {
+            "width": 768,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 1440,
+            "height": 1000,
+            "overflow": false
+          },
+          {
+            "width": 2080,
+            "height": 1460,
+            "overflow": false
+          },
+          {
+            "width": 3840,
+            "height": 1620,
+            "overflow": false
+          }
+        ]
+      }
+    ],
+    "conflict": {
+      "conflict": {
+        "text": "Step 6: nothing moves. Where each composition stands: Clean: none; New: Night march; Dirty: Hold the ridge; Removed: Flank left. Store calls so far: 1.",
+        "note": "The commit finds Hold the ridge stored at version 6 where this session read 5, so the whole call is rolled back: nothing is written, and every register keeps its objects."
+      },
+      "resetParameters": true,
+      "selectedStep": "Step 5: Flank left leaves Removed by commit; Hold the ridge moves from Dirty to Clean by commit; Night march moves from New to Clean by commit. Where each composition stands: Clean: Hold the ridge, Night march; New: none; Dirty: none; Removed: none. Store calls so far: 1."
+    },
+    "probeCorrections": [
+      "Read the rerendered step before taking its accessible name.",
+      "After changing the rival-save input, await the new input label before clicking its newly indexed Commit moment.",
+      "Back to the example restores parameters and keeps the selected step clamped to the rebuilt model; the initial probe's expectation of step zero was incorrect."
+    ]
+  },
+  "corpusProbe": {
+    "file": "verification-probe.cjs",
+    "records": 20,
+    "executable": 16,
+    "structural": 4,
+    "variants": 84,
+    "frames": 593,
+    "result": "pass"
+  },
+  "researchSample": [
+    "lazy-load",
+    "service-layer",
+    "identity-map",
+    "remote-facade",
+    "identity-field"
+  ],
+  "researchSamplingMethod": "Python random.SystemRandom().sample over the sorted twenty PoEAA JSON paths, size five; selection retained in session scratch.",
+  "primaryPagesOpened": [
+    "https://martinfowler.com/eaaCatalog/unitOfWork.html",
+    "https://martinfowler.com/eaaCatalog/identityMap.html",
+    "https://martinfowler.com/eaaCatalog/lazyLoad.html",
+    "https://martinfowler.com/eaaCatalog/serviceLayer.html",
+    "https://martinfowler.com/eaaCatalog/remoteFacade.html",
+    "https://martinfowler.com/eaaCatalog/identityField.html",
+    "https://martinfowler.com/eaaCatalog/optimisticOfflineLock.html"
+  ],
+  "appEmbodimentProbe": {
+    "checkedAtIntegratedBase": 20,
+    "result": "pass",
+    "pin": "9637f73539e387b46f65855db78f3c4b5285e561"
+  },
+  "cleanupProbe": {
+    "criterion": "10",
+    "result": "pass",
+    "output": "cleanup declaration matches dependencies and excludes source",
+    "destructiveOperations": 0
+  },
+  "productionBundle": {
+    "initialBytes": 406523,
+    "lazyCodeInInitial": [],
+    "result": "pass",
+    "source": "bounded npm --prefix target run check:bundle"
+  },
+  "reviewGate": {
+    "evidenceRef": "target-gate:942560fa-563b-4dc7-814d-23cc436fa8c7",
+    "recordedAt": "2026-11-07T23:08:38.684Z",
+    "durationMs": 174571,
+    "checks": [
+      "install",
+      "lint",
+      "typecheck",
+      "test",
+      "format",
+      "build",
+      "e2e",
+      "visual"
+    ],
+    "executed": true,
+    "exitCode": 0,
+    "treeUnchanged": true
+  },
+  "formatting": {
+    "result": "pass",
+    "firstAttempt": "Only the verifier's automatically written Playwright snapshot YAML failed; moved that scratch output into session scratch and reran successfully."
+  },
+  "waiver": {
+    "criterion": "8",
+    "ordinal": 4,
+    "followup": "FUP-02c1ebe8146fe2f1"
+  },
+  "carriedFinding": {
+    "id": "F1",
+    "decision": "WO-023-D017",
+    "followup": "FUP-762c13bca9cf4a31",
+    "source": "states/states-register.ts columnsOf applies column.scale; catalog.md says narrow words keep their size",
+    "reproduction": "Read walkthrough/verifier-dto-360.png and the source's columnsOf scale, alongside docs/dev-reference/architecture/catalog.md §The families. The existing decision also names Service Layer's smaller Announced heading.",
+    "route": "follow-up"
+  }
+}

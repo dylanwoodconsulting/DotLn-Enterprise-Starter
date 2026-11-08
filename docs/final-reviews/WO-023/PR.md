@@ -1,0 +1,30 @@
+# WO-023 records
+
+This branch files the instance records of WO-023, the twenty concept studies of Patterns of Enterprise Application Architecture in DotLn-Angular: sixteen run a small TypeScript model that the new `states` family draws, four structural choices are described without a drawing, and each names the app's own file where the pattern or its cousin lives; the same change removes the catalog loader's `tool-v0` reader. It also carries the order's launchpad write-back, which replaces the eighteen exact `node_modules` declarations of the `dotln-angular` registration's disposable list with one `**/node_modules` pattern, and the instance's worker cap, raised from 20 to 40 on the operator's word. The target change was reviewed as three commits for `feat/poeaa-concept-studies` and goes up in its own pull request for the operator to merge.
+
+## What a reviewer gets
+
+- The order's [evidence](../../evidence/WO-023/README.md) with its link check and chunk sizes: the [fan-out](../../evidence/WO-023/fan-out.md) with its briefs and accounting, the [review record](../../evidence/WO-023/review.md) of both critics, the executor's [walkthrough](../../evidence/WO-023/walkthrough.md) and the verifier's captures under `walkthrough/`, the [comparison record](../../evidence/WO-023/design/comparisons.md) whose rounds wait for an A/B testing pass, the [cleanup declaration](../../evidence/WO-023/cleanup-declaration.md), the [host qualification](../../evidence/WO-023/host-qualification.md), the executor's [handoff](../../evidence/WO-023/handoff.md), VER-001's probe and observations, and this review's [evidence](../../evidence/WO-023/final-001/README.md).
+- Decisions [D001 to D020](https://github.com/DylanBWood/DotLn-Angular/blob/a98d59c7c641a6bb50de2165b1694a4a954f9835/docs/dotln/evidence/WO-023/decisions.md), [VER-001](https://github.com/DylanBWood/DotLn-Angular/blob/a98d59c7c641a6bb50de2165b1694a4a954f9835/docs/dotln/verifications/WO-023/VER-001.md) (pass, with criterion 8 waived) and [FINAL-001](https://github.com/DylanBWood/DotLn-Angular/blob/a98d59c7c641a6bb50de2165b1694a4a954f9835/docs/dotln/final-reviews/WO-023/FINAL-001.md) (pass), filed in the target under `docs/dotln/` by its records commit `a98d59c`. [D019](https://github.com/DylanBWood/DotLn-Angular/blob/a98d59c7c641a6bb50de2165b1694a4a954f9835/docs/dotln/evidence/WO-023/decisions.md#wo-023-d019) records the final review's repairs and [D020](https://github.com/DylanBWood/DotLn-Angular/blob/a98d59c7c641a6bb50de2165b1694a4a954f9835/docs/dotln/evidence/WO-023/decisions.md#wo-023-d020) the publication bodies' names.
+- `dotln.config.json`'s any-depth declaration and the [repository profile](../../repositories/dotln-angular.md), whose cleanup section lists the thirteen effective entries and whose implementation map names the `states` family and builder; `docs/control/budgets.json`'s cap of 40 and its generated `FEATURES.md` row.
+- The [workstream](../../workstreams/WS-001-dotln-angular.md), whose two rows for this order read final-reviewed; the control segment `docs/control/orders/WO-023.jsonl`, the current-state projection, the work-order index, the decisions index and the follow-up register; and `docs/control/doc-baseline.json`, which declares WO-033's reviewed body's link to WO-023-D005 as historical now that the decisions live in the target.
+- [TARGET-PR.md](TARGET-PR.md), the DotLn-Angular body, and [RELEASE-NOTES.md](RELEASE-NOTES.md), the target's reviewed notes.
+
+## Validation
+
+- The target's declared review gate (install, lint, type check, unit tests, format, build, browser and visual tests) passed at the reviewed tree `f2f4b640…` with no tracked-byte mutation, as row `target-gate:520f26b2-4af3-41bf-acea-571d1d377f7b`; the verifier's review gate passed at the verified tree, which is the second of the three commits. A fresh production build keeps the initial bundle at 406,523 bytes.
+- Nine criteria are met. Criterion 8 is waived on the operator's words during verification, because the operator had moved the `states` family's design rounds to a dedicated A/B testing pass (D008, D018); the line below names the command that undoes the waiver before the merge if those words did not ask for it.
+- The final review repaired sixteen sentences in seven studies that contradicted their own run or the app's code, and two documentation passages (D019), then ran the target review gate again on the repaired tree.
+- Launchpad: `npm run test:docs` passed after the review's last record edit, and criterion 10's non-deleting probe passes over the new declaration.
+
+## Limits and follow-ups
+
+- The `states` family's rounds, the register against a state machine, wait for a dedicated A/B testing pass (`FUP-02c1ebe8146fe2f1`); until it decides, the register ships.
+- Boarded for later passes: the presentations' lookups and helpers (D016), token symbols as translatable text (D012), the narrow headings' size decision and its tests (D017), Foreign Key Mapping's read limit (D019), and the profile's naming of a target order's publication bodies (D020).
+- After both merges, the operator fast-forwards `main` and dispatches `resume: release close` there, which closes the target worktree with the no-release outcome for the launchpad and cuts the target's minor release with the reviewed notes.
+
+<!-- dotln-criterion-records:start -->
+
+- Criterion 8: waived by ordinal 4; npm run resume -- retract 4 --work-order WO-023 in the order's worktree undoes a waiver the operator's words did not ask for.
+
+<!-- dotln-criterion-records:end -->

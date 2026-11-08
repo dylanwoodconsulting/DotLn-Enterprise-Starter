@@ -1,0 +1,27 @@
+== unit-of-work {"renames":0,"otherTabSaves":1}
+  example.description: Two compositions are stored: Flank left at version 3 and Hold the ridge at version 5. In one session the operator creates Night march and deletes Flank left, with renames of Hold the ridge in between: 0. Then the operator saves once. Before that save, another tab saves its own rename of Hold the ridge.
+  limits.0: A unit of work kept open for a long session holds the versions it read at the start. With Hold the ridge renamed at least once, set the saves by another tab to 1 and step to the commit: Hold the ridge is stored at a newer version than the one held here, so the whole save is refused, and the creation and the deletion are lost with the rename unless the operator makes them again. A composition the session left unchanged is not checked, so with no rename the same save goes through.
+  findings: By the save, writing at once has made 2 calls; the unit of work has made 1. | Written at once, a failure halfway leaves some changes stored and others not; the unit of work's commit stores all of them or none.
+  last worked note: The commit is the only call this session makes to the store.
+== unit-of-work {"renames":1}
+  example.description: Two compositions are stored: Flank left at version 3 and Hold the ridge at version 5. In one session the operator creates Night march and deletes Flank left, with renames of Hold the ridge in between: 1. Then the operator saves once. No other tab saves in between.
+  findings: By the save, writing at once has made 3 calls; the unit of work has made 1. | Written at once, a failure halfway leaves some changes stored and others not; the unit of work's commit stores all of them or none.
+  last worked note: The commit is the only call this session makes to the store.
+== lazy-load {"chunkPerStudy":1}
+  mechanism.steps.1.text: The first read of a study looks up its work in the summary and asks for the chunk that holds the study: the work's chunk, as the app has it, or the study's own when every study has one. The pending load is kept under that chunk's name. A concept with no study answers none and loads nothing. Chunk requests so far: 3.
+  mechanism.steps.2.text: With one chunk for the work, as the app has it, one request fills every study of the work, however few the reader opens; with a chunk for each study, every study read costs a request of its own. Records in memory now: 3.
+  mechanism.steps.3.text: A later read of a study whose chunk is already kept finds the kept load and waits on it, so it costs no request, and every reading receives the same record.
+  findings: Readings: 3. One chunk for the work: requests 1, records held 20. A chunk for each study: requests 3, records held 3. | A page that read every study's record instead of its marker would need 20 requests with a chunk for each study, and one with the work's chunk.
+  last worked note: A study not read yet still waits for a read of its own.
+== service-stub {"dynamicStub":0}
+  example.description: Four of the cases the board store's spec runs go through the board gateway, with the app's HTTP API replaced by a stub that answers in memory: the recorded board, a refusal with status 503, a dropped connection, and a timeout, which a stub that reads the scenario stages by holding the answer 200 ms against a case limit of 30 ms. The stub is static: it answers every request with the recorded board. The stub's board is contract version 1; at release one call goes to the live API, which serves version 1.
+  mechanism.steps.2.text: The gateway waits for the stub's answer and translates it exactly as it would the API's. A stub that reads the scenario holds the timeout case's answer for 200 ms, longer than the case's limit of 30 ms, so that case costs only its own limit; a static stub answers it at once, with the board.
+  limits.2: A staged timeout holds only while the stub outwaits the case. With a stub that reads the scenario, the timeout case passes because the stub holds its answer for 200 ms and the case stops waiting after 30 ms; were the case's limit longer than the stub's delay, the board would arrive in time and the case would fail, as it does when a static stub answers at once. In this app the two numbers live in two files, the handler and the store's spec, and nothing ties them together.
+  last worked note: Only the recorded case can be run against the live API.
+== remote-facade {"buildsDown":1,"reportsFailures":1}
+  limits.1: Coarse cuts both ways. The board's one call brings every panel's rows, 65 when every source answers, although the page shows one panel at a time, and a refresh reloads the whole board. A facade shaped for each screen grows a method for every new view; one shaped too broadly sends what nobody reads. Its operations should follow what clients do, not the objects behind them.
+  findings: Calls across the network by the reply: 1 through the facade, 65 one object at a time. | The facade made 65 calls of its own, all inside one process.
+  last worked note: The facade holds nothing once it has answered.
+== identity-map {"maps":1,"revisits":0}
+  findings: By the last step, store reads through the map: 3; lookups: 4; hits among them: 1. | Reading on every lookup would also build a new object each time, so the reading and its nearby list could never be handed the same one.
+  last worked note: Reads a loader with no map would have made by now: 4.
