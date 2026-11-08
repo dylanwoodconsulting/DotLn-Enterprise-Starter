@@ -89,8 +89,8 @@ an audience beyond the operator (2026-11-05, journal row
   in a dedicated A/B testing pass, distinct from the standards passes: the
   order records its first pair without a pick, ships its first-named
   candidate meanwhile, and carries the rounds as a follow-up the planning
-  pass that files the A/B testing pass allocates to it (2026-11-07, in
-  WO-023's execution, capture
+  pass that files the A/B testing pass allocates to it (2026-11-07, in WO-023's execution, journal row
+  2026-11-07T19:37:43Z, digest `30fc5e7a…`; the executor's capture
   `8bf3461a1ae5324956ec7f45fc12f4753977998ddf5f59cbf678c526042efc68`;
   WO-023-D008; WS-001 rule 25).
 - **No separation:** the session is an extension of the operator and they of
