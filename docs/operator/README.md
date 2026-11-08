@@ -85,7 +85,14 @@ an audience beyond the operator (2026-11-05, journal row
   are about 2080 by 1460, the centre browser window where the operator
   mostly opens the UI (2026-11-04, capture
   `cc1746dc2f88f599e55de07d589955a63aeff8cf31f409babf87492a14e53898`;
-  WO-028-D021).
+  WO-028-D021). The operator may delay an order's rounds and have them run
+  in a dedicated A/B testing pass, distinct from the standards passes: the
+  order records its first pair without a pick, ships its first-named
+  candidate meanwhile, and carries the rounds as a follow-up the planning
+  pass that files the A/B testing pass allocates to it (2026-11-07, in
+  WO-023's execution, capture
+  `8bf3461a1ae5324956ec7f45fc12f4753977998ddf5f59cbf678c526042efc68`;
+  WO-023-D008; WS-001 rule 25).
 - **No separation:** the session is an extension of the operator and they of
   it; acting as if there were a separation is acting in discord (2026-10-17,
   capture `4f14c6c0…`).

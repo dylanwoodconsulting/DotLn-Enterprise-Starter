@@ -81,7 +81,7 @@ their decisions hold the history.
    order; a work whose drawable rows are exhausted leaves the track until a
    road order lands the family its remaining rows need; a work's next batch
    is cut only after a standards pass boarded against that work's code has
-   merged (WS-001 rule 31; WO-034 gates the next Movement batch); and the
+   merged (WS-001 rule 31; WO-034, merged on 2026-11-07, gated the next Movement batch, WO-039 gates WO-031 and WO-040 gates the stream works' batches after WO-029 and WO-030); and the
    pathfinding chapter's 76 rows join AI for Games' drawable rows once
    WO-036 lands the `grid` family. (The operator record §What the operator
    wants, Depth in batches; the 2026-11-04 pass, D6; the 2026-11-05 pass,
@@ -106,21 +106,16 @@ their decisions hold the history.
 | Order  | Repository    | Base                                       | Role in the outcome |
 | ------ | ------------- | ------------------------------------------ | ------------------- |
 | WO-028 | dotln-angular | `55b59c9133056c1d6471274a9676a7d5649196ac` (WO-022's merge; step 1 integrates the target's `main`) | twenty more Movement-chapter studies from AI for Games, drawn by `motion` and `timeline` |
-| WO-029 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
-| WO-030 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
-| WO-031 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-023 merges may set it | twenty more enterprise application patterns, drawn by `states` with executable models |
+| WO-029 | dotln-angular | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` (WO-023's merge, set by the 2026-11-08 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
+| WO-030 | dotln-angular | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` (WO-023's merge, set by the 2026-11-08 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
+| WO-031 | dotln-angular | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` (WO-023's merge, set by the 2026-11-08 pass; activates after WO-039, the standards pass over its work's code, merges; step 1 integrates the target's `main`) | twenty more enterprise application patterns, drawn by `states` with executable models |
 | WO-032 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-024 merges may set it | ten more Gödel, Escher, Bach and ten more Team Topologies concepts, drawn by `relations` |
 
 ## Dependency and compatibility plan
 
 WO-028 depends on WO-020, WO-029 on WO-021 and WO-030 on WO-022, all merged:
-the three can run now, in any order or beside one another. WO-031 depends on
-WO-023 and WO-032 on WO-024, the lane pair at the front of WS-001's sequence:
-each activates after the family it draws with has merged, and the pass after
-that merge sets its base. Every member shares `studies-summary.json` and the
-coverage table in `catalog.md` §Studies with every other batch, so a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it. The members hold no edge among
-themselves; each depends only on the road order that landed its family, and
-WS-001's members owe this track nothing. The edges in the block below run
+the three can run now, in any order or beside one another. WO-031 depends on WO-023, merged on 2026-11-08 as DotLn-Angular #17, and on WO-039, the standards pass that reads the enterprise batch's code (rule 6), so it activates after WO-039 merges; WO-032 depends on WO-024 and activates after the `relations` family has merged, the pass after that merge setting its base. Every member shares `studies-summary.json` and the
+coverage table in `catalog.md` §Studies with every other batch, so a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it. The members hold no edge among themselves; each depends only on the road order that landed its family and, for WO-031, on the standards pass that read that family's batch, and WS-001's members owe this track nothing. The edges in the block below run
 from the member to the order it depends on, because the kit admits an edge
 only from a member (`scripts/lib/work-order-workstream.mjs`, the edge
 validation) and the prerequisites here are WS-001's; each order's typed
@@ -138,5 +133,5 @@ run the other way.
 | WO-032 | filed | [the order](../work-orders/WO-032-concept-research-geb-and-team-topologies.md) |
 
 <!-- dotln-workstream:start -->
-{ "id": "WS-002", "track": "separate", "members": [{ "workOrderId": "WO-028", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-029", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-030", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-031", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-032", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-028", "to": "WO-020", "relation": "hard" }, { "from": "WO-029", "to": "WO-021", "relation": "hard" }, { "from": "WO-030", "to": "WO-022", "relation": "hard" }, { "from": "WO-031", "to": "WO-023", "relation": "hard" }, { "from": "WO-032", "to": "WO-024", "relation": "hard" }] }
+{ "id": "WS-002", "track": "separate", "members": [{ "workOrderId": "WO-028", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-029", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-030", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-031", "repositoryId": "dotln-angular" }, { "workOrderId": "WO-032", "repositoryId": "dotln-angular" }], "edges": [{ "from": "WO-028", "to": "WO-020", "relation": "hard" }, { "from": "WO-029", "to": "WO-021", "relation": "hard" }, { "from": "WO-030", "to": "WO-022", "relation": "hard" }, { "from": "WO-031", "to": "WO-023", "relation": "hard" }, { "from": "WO-032", "to": "WO-024", "relation": "hard" }, { "from": "WO-031", "to": "WO-039", "relation": "hard" }] }
 <!-- dotln-workstream:end -->

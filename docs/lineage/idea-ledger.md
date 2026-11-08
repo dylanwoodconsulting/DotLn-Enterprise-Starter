@@ -4,6 +4,18 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-08 — planning pass: starter v0.120.1 taken on the operator's word, core's answers of 2026-11-07 read against the records, WO-034 and WO-023 retired as closed, the second and third standards passes filed on the operator's rule and the next four orders re-based on WO-023's merge (operator dispatch of 2026-11-07)
+
+Dispatch: a `planning:` request for a standard pass with the latest
+upstream, carrying core's answer block of 2026-11-07 to this fork's two
+blocks of 2026-11-06, followed by a bare `planning:` line and the merge of
+update #68, captured verbatim in ignored intake
+(`docs/intake/notes/planning-2026-11-07.md`). The record is
+[the planning document](../planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md);
+this heading registers the pass for the plan tooling. The pass filed two
+orders (WO-039, WO-040) and amended six; no idea enters the ledger, because
+the pass was not an ideation dispatch.
+
 ## 2026-11-06 — planning pass: starter v0.119.0 merged on the operator's word, six of the seven register rows core's WO-257 answers settled and the record-links row kept deferred, the records that waited on it brought current and the plan gate's grown subject re-judged (operator dispatch of 2026-11-06, the upstream merge)
 
 Dispatch: a `planning:` request for the upstream merge, the operator's

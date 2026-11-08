@@ -449,8 +449,7 @@ schema is this order's shared-infrastructure change (WS-002 rule 7),
 bounded to the family enum; a research batch that lands after it writes v2
 records with no other change. The `grid` family makes
 the pathfinding chapter's 76 rows drawable for the research track (WS-002
-rule 6), which cuts a batch after this order merges. WO-037 (shooting and
-bullets) depends on this order's geometry. The scene's known outcome is
+rule 6), which cuts a batch after this order merges. WO-037 (shooting and bullets) depends on this order's geometry. The two gaps WO-034's verifier boarded in the wall study (WO-034-D013, `FUP-4e24208e45d27a1d`) are this order's, since it takes the study's avoidance from the engine: the study's moments listed in step order whatever input the reader chooses, the straight-ahead run's moment labels and steps pinned in its spec, and the clearance comparison shown where the reader can see the two traces part. The scene's known outcome is
 regenerated here with its reason in the pull request. This order activates
 only on a launchpad whose starter carries core WO-221's `--draft` form; the
 draft pull request and its workflow runs are a final-review obligation read

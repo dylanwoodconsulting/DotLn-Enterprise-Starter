@@ -347,8 +347,7 @@ each.
   WO-024 creates, each model is a language-free simulation, a presentation
   taking a `StudyTranslate` and an entry of a few lines, with nested keys,
   named placeholders and no function split to fit the 80-line ceiling
-  (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch and
-  WO-028's own twenty set), and the authors' and critics' briefs name those
+  (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set and WO-039's reshaped enterprise batch sets for an executable model; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those
   rules; a changed record shape is a new schema version, never an edit.
   `Target release classification: minor` and `Target release notes:
   reviewed` are set under WO-012's declared policy.

@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ d7d842dc4fdbde03099695933a448d9632fa4335
+**Repository:** dotln-angular @ f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/eip/`,
@@ -340,13 +340,7 @@ each.
   `apps/dotln/public/i18n/studyEip/en.json`, each model is a language-free
   simulation, a presentation taking a `StudyTranslate` and an entry of a few
   lines, with nested keys, named placeholders and no function split to fit
-  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-028's own
-  twenty and WO-034's reshaped batch set), and the authors' and critics'
-  briefs name those rules; a changed record shape is a new schema version,
-  never an edit. The base is WO-027's merge (#15), set by the 2026-11-06
-  pass; a batch that lands before WO-034 is judged by its tightened corpus
-  test when WO-034 integrates `main`, and WO-034 rewords this work's
-  count-led stream messages. `Target release classification: minor` and
+  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those rules; a changed record shape is a new schema version, never an edit. The base is WO-023's merge (#17), set by the 2026-11-08 pass; WO-034's tightened corpus test and its rewording of this work's count-led stream messages are in the base, and WO-040, the standards pass that reads this work's modules, may land before or after this batch, which integrates the target's `main` in either case. `Target release classification: minor` and
   `Target release notes: reviewed` are set under WO-012's declared policy.
 - A study's "see it in the machinery view" link remains the candidate after
   WO-016 merges (`FUP-4fde2cb5fc229dc2`), not this order's. The remaining
