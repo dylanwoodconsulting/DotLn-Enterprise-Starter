@@ -59,3 +59,23 @@ denied none. The reviewer launched no worker, against a cap of 40.
 The reviewer read the draft pull request back from the forge with `gh pr view`, one GraphQL query
 and `gh run list`, read-only. The target publication and the records publication are recorded
 below once they have run.
+
+### The target publication
+
+After `final-review-result pass`, the launchpad records committed (`62c22c9`) and `target-records`
+filed the order, the decisions and the two reports in the target as `36bb77a` (the launchpad's
+records removals and relinked evidence committed as `c6547df`), the reviewer ran the publish helper
+plainly from the launchpad root, the spelling the profile's publish route admits for a registered
+target:
+
+```sh
+node scripts/worktree.mjs publish WO-039 --target-worktree --branch refactor/enterprise-pattern-presentations --title ":recycle: Reshape the enterprise pattern studies into the example to copy" --body-file docs/final-reviews/WO-039/TARGET-PR.md
+```
+
+Hook decision: admitted without an advisory. Host decision: executed, exit 0, with no permission
+prompt. The helper printed that it pushed `refactor/enterprise-pattern-presentations` at
+`36bb77a62e75866b38e150061a44a6ade62b510b` over the draft `8968a30bdb2e1dc41a062522343f1ad41e1716ca`
+and marked pull request #18 on `github.com/DylanBWood/DotLn-Angular` ready. The published head
+carries the three reviewed commits and the records commit; [preview-pr.json](preview-pr.json)
+records the read-back. No session merged the pull request, pushed `main`, published a release or
+changed a setting.
