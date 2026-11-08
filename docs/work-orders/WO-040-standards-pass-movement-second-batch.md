@@ -215,11 +215,8 @@ modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
    `git fetch origin`, `git merge-base --is-ancestor
    f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3 origin/main` exits 0 (a `main`
    that does not contain the pin stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
-2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `f99580f`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), and the crawl's record counts are the inventory's.
-3. `flow.ts`'s `frameOf` with a frame description; the shared
-   description-object types the second batch needs added beside WO-034's
-   under `studies/`. Check: `npx nx test tools` exits 0 over the flow and
-   movement specs.
+2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states, adapt the audit to list every function of the `shared` group (`flow.ts`, `states.ts` and their neighbours) with its file, name and parameter count, since the copied audit lists a function only when it belongs to the first batch, takes eight or more parameters or runs to 70 lines (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `f99580f`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), and the crawl's record counts are the inventory's.
+3. `flow.ts`'s `frameOf` with a frame description; the shared description-object types the second batch needs added beside WO-034's under `studies/`; the audit's control: the adapted audit run over a scratch copy of `flow.ts` whose `frameOf` takes one parameter more than the candidate's reports that count, recorded in the evidence README. Check: `npx nx test tools` exits 0 over the flow and movement specs; the control's count is the candidate's plus one.
 4. Second-batch presentations one to ten reshaped under the Design, their
    flat model keys nested and the two numbered placeholders named, the
    catalog and the testing copy migrated. Check: `npx nx test tools` and
@@ -286,10 +283,7 @@ each.
    as one), zero numbered placeholders and zero flat model keys in
    `studyAifg/en.json`, lists each movement function at 70 counted lines or
    more beside the executor's recorded judgment that it does one job and
-   reads whole (the evidence README carries the judgments), and shows
-   `flow.ts`'s `frameOf` at four parameters or fewer;
-   `shape-audit-before.json` from the integrated base records the Observed
-   gap's counts.
+   reads whole (the evidence README carries the judgments), and lists `flow.ts`'s `frameOf` in the `shared` group's function list at four parameters or fewer, the adapted audit's control (step 3) having reported one more on the scratch copy; `shape-audit-before.json` from the integrated base records the Observed gap's counts and lists `frameOf` at nine.
 3. Every other output is unchanged: `docs/evidence/WO-040/dom-diff.json`,
    produced by the evidence directory's adapted crawl and comparator over every frame of the movement and stream studies the inventory names at the integrated base and at the candidate, records zero differing text nodes outside the nineteen state sentences the evidence
    README lists with their text before and after; every movement and stream

@@ -8,8 +8,7 @@ Insert this instance's dated sessions below, newest first.
 
 Dispatch: a `planning:` request for a standard pass with the latest
 upstream, carrying core's answer block of 2026-11-07 to this fork's two
-blocks of 2026-11-06, followed by a bare `planning:` line and the merge of
-update #68, captured verbatim in ignored intake
+blocks of 2026-11-06, followed by the bare dispatch prefix sent again and the operator's word that update #68 was merged, captured in ignored intake
 (`docs/intake/notes/planning-2026-11-07.md`). The record is
 [the planning document](../planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md);
 this heading registers the pass for the plan tooling. The pass filed two
