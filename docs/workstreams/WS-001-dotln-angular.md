@@ -781,7 +781,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-022 the messaging studies | twenty patterns with flows stepping messages through channels | merged; DotLn-Angular #13, `DotLn Angular v0.9.0` |
 | WO-027 the workspace says and checks what is so | nothing on screen; CI's board count that counts a marker wherever a defect sits, a `check:scripts` that fails on a missing or stale row, a title workflow that leaves a gitmoji-and-subject title as written, reference documents whose command lists match the gate | merged; DotLn-Angular #15, `DotLn Angular v0.10.1` |
 | WO-034 standards pass I | the first movement batch's code read as the example, the wall study explaining its brief clearance correction, the guards tightened | final-reviewed; DotLn-Angular #16; [evidence](../evidence/WO-034/README.md) |
-| WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | final-reviewed; [evidence](../evidence/WO-023/README.md) |
+| WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | final-reviewed; DotLn-Angular #17; [evidence](../evidence/WO-023/README.md) |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
 | WO-035 every string on screen through the message system | nothing changed on screen; the catalog's mined text arriving through the message system, a missing message a visible failure | filed |
 | WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state, the search stepped in the A* study | filed |
@@ -845,7 +845,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-020 | merged   | DotLn-Angular #11, `DotLn Angular v0.7.0`, its records #45; [evidence](../evidence/WO-020/README.md) |
 | WO-021 | merged   | DotLn-Angular #12, `DotLn Angular v0.8.0`, its records #48; [evidence](../evidence/WO-021/README.md) |
 | WO-022 | merged | DotLn-Angular #13, `DotLn Angular v0.9.0`, its records #50; [evidence](../evidence/WO-022/README.md) |
-| WO-023 | final-reviewed | [evidence](../evidence/WO-023/README.md) |
+| WO-023 | final-reviewed | DotLn-Angular #17; [evidence](../evidence/WO-023/README.md) |
 | WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
 | WO-027 | merged   | DotLn-Angular #15, `DotLn Angular v0.10.1`, its records #61; [evidence](../evidence/WO-027/README.md) |
 | WO-034 | final-reviewed | DotLn-Angular #16; [evidence](../evidence/WO-034/README.md) |
