@@ -515,8 +515,10 @@ From DotLn-Enterprise-Starter's 2026-11-08 planning pass (its second that day), 
 
 Model and effort: Fable 5.1 at `max`, operator-selected (the session's
 `/model` line). Usage: 96,616 tokens at the role's resolution (22:07:35Z: 4
-input, 72,024 cached, 23,503 cache-write, 1,085 output); TBD-FINAL-USAGE,
-source the transcript counter, scope dispatch; dispatch standing TBD-STANDING
+input, 72,024 cached, 23,503 cache-write, 1,085 output); 21,281,622 total
+tokens after the receipt (23:10:22Z: 1,526 input, 20,608,613 cached,
+492,400 cache-write, 179,083 output; reasoning and cost unavailable),
+source the transcript counter, scope dispatch; dispatch standing 1 h 3 min
 of an unset bound at that reading.
 Subagents: budget 40 (`subagentCap`); the plan stated before the first
 spawn: three Codex review workers through `npm run worker -- review --host
@@ -524,7 +526,11 @@ codex --subject planning` (the criteria adversary with `--capture`, the
 design improver, the consistency reviewer), one recheck round only if a
 blocking finding is repaired, and one background `dotln-worker` refuter
 through the direct route, each launched once: four to six uses, no
-descendant; the merge watcher, a shell loop over `gh pr view`, was not counted by the hook this time (D7). Spent: TBD-SPENT.
+descendant; the merge watcher, a shell loop over `gh pr view`, was not counted by the hook this time (D7). Spent: six by the pass's count (§Validation): the dry run, the three
+reviews, the refuter and its re-task; the hook's line reads launched 1,
+re-tasked 1. The three reviews ran 0 h 4 min, 0 h 5 min and 0 h 13 min
+(1,345,555, 1,836,896 and 4,655,894 tokens), the refuter 0 h 4 min
+(110,120 tokens), the re-task 7 s.
 Wall-clock of the pass's commands: the preview 328 ms; the update's four
 gates 0 h 2 min; `update --finish` `node scripts/launchpad.mjs update --finish` on clean `main` with the same flags, since this checkout ran v0.120.1's launchpad whose refusal applies under a journaled dispatch: fetched `origin`, fast-forwarded `main` to `711f185`, emitted 43 surfaces, bootstrapped (one preparation step); 2 s (22:33:04Z to 22:33:06Z)-TIME; the link check over the
 three records seconds; the document check 0 h 1 min a run, three runs on
@@ -579,8 +585,61 @@ drift, two the hash claim); fixed 4; recorded 0.
 | Consistency F3 (the ledger entry's digest) | Fixed: the registration heading cites the capture's SHA-256; the lineage index regenerated. |
 | Consistency F4 (WO-040's interim qualifier) | Fixed: the carry-in names v0.122.0's refusal of an uncommitted source in place of the route pending core's WO-259. |
 
-**Independent refutation.** TBD-REFUTATION
+**Independent refutation.** [Receipt 025](../refutations/2026-11-08-planning-d7624753c8d8f51f-025.md)
+is the fresh judgment through the direct route: one background Claude
+`dotln-worker` (claude-opus-5-5 at xhigh by its generated definition, no
+model override; its statement names the host's context as claude-opus-5-5
+and the effort unknown) with no inherited conversation, reading the
+canonical prompt of `npm run plan -- refute` compiled at `97918f5` and saved
+in the session scratch, with a durable copy in the ignored local control
+lane (`docs/control/local/planning/refute-prompt-2026-11-08-second.json`,
+not in intake, for D7's reason), and nothing else (its statement names the
+one file, its two reads, and that it ran no command and made no write):
+aligned-with-findings for the plan and for WO-040, the one order the scope
+judged (the four other amended orders and the rest of the horizon carry
+their verdicts from receipts 023 and 024 by hash: thirteen carried), zero
+holds, eight known issues with reopening observations, 0 h 4 min from the
+worker's launch to its hand-back (110,120 tokens and 3 tool uses by the
+host's usage line). The receipt helper refused the first statement for
+naming the prompt file by its private absolute path; the same worker
+returned the statement with the kit's `<tmp>/` placeholder (one re-task, 7 s,
+1 tool use) and the judgment was not rerolled; the receipt's own
+dispatch-to-file figure (394,841 ms, 0 h 7 min) measures from the prompt's
+compilation. The receipt records no carried disposition. The eight known
+issues are NoOps for this pass (kind NoOp; reason: none is an observed
+failure and each names its reopening observation; evidence: the receipt's
+findings; reevaluation: each finding's `reopenWhen`; usefulWhen: that
+observation showing a repair would improve the stated outcome); WO-040's
+roles read them before it runs: criterion 3's equal visual baselines and
+criterion 6's nineteen reworded sentences hold together only if no e2e
+baseline frames a flow study's text equivalent, so the executor reads the
+baseline set at the integrated base first; criterion 6's first option is
+met only by a message that leads with a word and carries the node's name as
+a named placeholder, never by joining the name to a fragment in code; a
+parameter typed for one function alone is a parameter bag the audit would
+miss, so every description type is the study's example description, a
+frame or a translator; functions of exactly five parameters are criterion
+2's work the Cost line's count of 39 leaves out; a `left` stream verdict is
+checked against the after-audit's rows for `studies/rxjs` and
+`studies/eip`; the narrow-screen query reads `matchMedia` only through the
+injected `DOCUMENT` and falls back to the wide sizes when the document has
+no `defaultView`; `grep -l motionPoints` tells an import from a local
+definition only once the three presentations are opened; and the declined
+parameter-count lint stays declined for WO-028-D060's reason, with a fourth
+standards pass or a later batch failing the audit as the reopening. The
+receipt's plan check printed the two path advisories receipt 024 printed
+(WO-040 naming WO-034's evidence files, which the executor copies under its
+own directory) and the two standing criteria advisories.
 
-**Worker uses.** TBD-USES
+**Worker uses.** By the pass's count: the review dry run (spelled without
+`--silent`, inside a compound shell line), three Codex review launches, the
+refuter and its one re-task: six of forty, no descendant; the merge watcher,
+a shell loop over `gh pr view`, was not counted. The hook's own line reads
+launched 1 (claude 1), re-tasked 1, remaining 38: the three Codex launches
+and the dry run ran inside compound shell lines (a timestamp written before
+the helper), which the hook's literal match does not count, so the hook's
+figure is a lower bound here and the pass's count is the record.
 
-**Document gate.** TBD-GATE
+**Document gate.** `npm run test:docs` at the tree with the receipt and this
+closing edit is named in the handoff with its result; the kit verifies
+1,113 files at `13e8d47e`.
