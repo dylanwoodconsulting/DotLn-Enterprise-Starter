@@ -58,7 +58,8 @@ test("bounded role wording preserves prior savings and records reviewed startup 
     fs.readFileSync(join(sourceRoot, "docs/control/budgets.json"), "utf8"),
   );
   // The role oracles minted since the preceding integrated oracle, newest
-  // first: the closeout sentences naming the closeout selection, the
+  // first: the paraphrase and worker no-print rules, the closeout sentences
+  // naming the closeout selection, the
   // planner's no-update sentence, the planner's capture command naming its host, the worker
   // options, the whole-change recheck and the consistency
   // table, the planner's publish helper, the question's pathways and the
@@ -71,6 +72,7 @@ test("bounded role wording preserves prior savings and records reviewed startup 
   // at the next one's measurement; test-process-debt.mjs walks every
   // recorded parent link of every oracle and checks each recorded hash.
   const chain = [
+    "wo259-role-baseline.json",
     "wo243-role-baseline.json",
     "wo257-role-baseline.json",
     "wo255-repair-role-baseline.json",
@@ -232,7 +234,21 @@ test("bounded role wording preserves prior savings and records reviewed startup 
       const earlier = chain[1].startupCost.profiles.router;
       assert.equal(current.beforeBytes, earlier?.bytes ?? null);
       assert.equal(current.growthBytes, earlier ? bytes - earlier.bytes : null);
-      assert.equal(current.ceiling, budgets.limits.coldStartBytes.router);
+      // The oracle keeps the ceiling it measured against; a ceiling raised
+      // since is the standing route's dated acceptance of the measured bytes
+      // plus one 4,096-byte step (WO-258 step 13).
+      const ceiling = budgets.limits.coldStartBytes.router;
+      if (current.ceiling !== ceiling)
+        assert.ok(
+          budgets.acceptances.some(
+            (entry) =>
+              entry.metric === "coldStartBytes.router" &&
+              !entry.scope &&
+              entry.ceiling === ceiling &&
+              ceiling === bytes + 4096,
+          ),
+          "router: a raised ceiling is the measured bytes plus 4,096, accepted",
+        );
       boardedBreach(role, bytes, budgets.limits.coldStartBytes.router);
       continue;
     }

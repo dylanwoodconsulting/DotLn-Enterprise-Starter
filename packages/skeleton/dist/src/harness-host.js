@@ -821,13 +821,25 @@ function recordDispatch(root, input, control, intent, role, tools, session, boun
             return {
                 refusal: `DOTLN_HARNESS_REFUSED: dispatch ${dispatch.action} failed: ${output.slice(0, 600) || run.error?.message || "lifecycle unavailable"}`,
             };
-        if (dispatch.action === "release-close" && control.workOrder)
+        if (dispatch.action === "release-close" && control.workOrder) {
             session.releaseCloseDispatch = {
                 workOrder: control.workOrder,
                 recordedAt: new Date().toISOString(),
             };
+            // Main may still select an earlier closed order while the order the
+            // operator merged has not reached the checkout: the phrase also waits
+            // as pending, so that order's close records its own dispatch after its
+            // fast-forward (WO-258).
+            if (git(root, ["branch", "--show-current"], true).trim() === "main")
+                session.pendingReleaseClose = {
+                    recordedAt: new Date().toISOString(),
+                    reason: "records-may-not-be-in-checkout",
+                };
+            else
+                delete session.pendingReleaseClose;
+        }
         return {
-            ...briefingDelivery(`Dispatch recorded by the harness: npm run resume -- ${dispatch.action}. Never repeat it.`, `DotLn: recorded npm run resume -- ${dispatch.action} for ${order} (${role})`, output),
+            ...briefingDelivery(`Dispatch recorded by the harness: npm run resume -- ${dispatch.action}. Never repeat it.${dispatch.action === "release-close" && session.pendingReleaseClose ? ` If the order you merged is not ${order}, its records have not reached this checkout yet: update main first (git pull --ff-only) or run that order's helper, whose fast-forward records its dispatch.` : ""}`, `DotLn: recorded npm run resume -- ${dispatch.action} for ${order} (${role})`, output),
             control: harnessControl(root),
         };
     }
@@ -853,6 +865,27 @@ function recordDispatch(root, input, control, intent, role, tools, session, boun
             control,
         };
     }
+    // The phrase typed in main before the merge reached the checkout: main
+    // holds none of the merged order's records until a fast-forward, so the
+    // phrase is journaled as pending with its role resolved, and the close's
+    // helper records the dispatch once its fast-forward brings them. The hook
+    // never reaches the network to judge the remote.
+    if (dispatch.action === "release-close" &&
+        git(root, ["branch", "--show-current"], true).trim() === "main") {
+        const reason = "records-not-in-checkout";
+        record(root, input, {
+            dispatch: { action: dispatch.action, recorded: false, pending: reason },
+        });
+        session.pendingReleaseClose = {
+            recordedAt: new Date().toISOString(),
+            reason,
+        };
+        return {
+            context: `Dispatch release-close is pending: this main checkout's status does not hold the merged order's records (phase ${control.phase}; legal actions: ${legal.join(", ") || "none"}). Update main first (git pull --ff-only), then run the merged order's reviewed helper, node scripts/release.mjs close WO-NNN --publish (or --dry-run when a prerequisite is in doubt); the helper's fast-forward brings the records and records this dispatch, which keys its admission. Never repeat the phrase.`,
+            receipt: `DotLn: resume: release close is pending until main holds the merged order's records (${role}); update main or run the close, which records it`,
+            control,
+        };
+    }
     return {
         refusal: `DOTLN_HARNESS_REFUSED: ${intent} is not a legal dispatch in phase ${control.phase}; legal actions: ${legal.join(", ") || "none"}`,
     };
@@ -873,8 +906,12 @@ const record = (root, input, value) => {
         ...value,
     }) + "\n", { mode: 0o600 });
 };
-/** An operator message with no control prefix that ends in a question mark. */
+/** An operator message with no control prefix that ends in a question mark;
+ * the host's notification and a worker's hand-back are never the operator's
+ * question, whatever their last character. */
 const unprefixedQuestion = (prompt) => {
+    if (agentHandback(prompt) || terminalTaskNotification(prompt))
+        return false;
     const message = operatorMessageClass(prompt);
     return message.prefix === null && message.class === "question";
 };
@@ -922,12 +959,55 @@ function terminalTaskNotification(prompt) {
         identity.length > 0 &&
         identity.every((value) => value.length <= 256 && !/[\s<>\p{Cc}]/u.test(value)));
 }
+/**
+ * A background worker's final report as Claude Code hands it back: each
+ * block opens with an `agent-message` element naming the worker in its `from`
+ * attribute, then the host's frame line under the `[Subagent hand-back]`
+ * label, then the report with every line indented by the host, then the
+ * closing tag. Several hand-backs may arrive in one prompt. The host queues
+ * this in the same prompt mode as the operator's own queued messages, so the
+ * envelope decides; a line typed at column zero inside it would break the
+ * shape, so nothing written inside a report can pass for the frame.
+ */
+function agentHandback(prompt) {
+    if (typeof prompt !== "string")
+        return false;
+    const lines = prompt.replace(/\r\n/gu, "\n").trim().split("\n");
+    let at = 0;
+    let blocks = 0;
+    while (at < lines.length) {
+        if (!/^<agent-message from="[^"<>\s]{1,256}">$/u.test(lines[at]) ||
+            !lines[at + 1]?.startsWith("[Subagent hand-back]"))
+            return false;
+        at += 2;
+        while (at < lines.length && lines[at] !== "</agent-message>") {
+            if (lines[at].trim() && !/^[ \t]/u.test(lines[at]))
+                return false;
+            at++;
+        }
+        if (at >= lines.length)
+            return false;
+        blocks++;
+        at++;
+        while (at < lines.length && !lines[at].trim())
+            at++;
+    }
+    return blocks > 0;
+}
 function promptRoute(input) {
-    // UserPromptSubmit has no documented route field. The latest native message
-    // with the same bytes establishes authorship ahead of envelope inference.
-    // A bounded terminal notification can arrive before its transcript row;
-    // other prompts without transcript evidence remain unattributed. No
-    // transcript text leaves here.
+    // UserPromptSubmit has no documented route field. A worker's hand-back is
+    // the host's by its envelope whatever the transcript says, because the host
+    // queues it as a prompt. Otherwise the latest native message with the same
+    // bytes establishes authorship ahead of envelope inference. A bounded
+    // terminal notification can arrive before its transcript row; other
+    // prompts without transcript evidence remain unattributed. No transcript
+    // text leaves here.
+    if (agentHandback(input.prompt))
+        return {
+            route: "mid-turn",
+            routeSource: "host-agent-handback-envelope",
+            attribution: "host",
+        };
     const queued = (mode) => mode === "task-notification" ? "host-task-notification" : "operator";
     try {
         const row = input.transcript_path
@@ -1002,11 +1082,14 @@ export function recordOperatorMessage(root, input, source = harnessInputHarness(
     record(root, input, {
         typedEvent: "OperatorMessageObserved",
         ...observationContext(session),
-        // The host's own notification is journaled under its own source, which
-        // the intervention count leaves out.
+        // The host's own notification and a worker's hand-back are journaled
+        // under their own sources, which the intervention count leaves out and
+        // a recorded rule cannot cite.
         source: route.attribution === "host-task-notification"
             ? "host-task-notification"
-            : source,
+            : route.routeSource === "host-agent-handback-envelope"
+                ? "host-agent-handback"
+                : source,
         ...route,
         ...classified,
         digest: textDigest(input.prompt),
@@ -1089,13 +1172,25 @@ function releaseCloseAdmission(root, input, session) {
     const missing = (fact) => ({
         advisory: `Release-close admission withheld: ${fact}; host permissions decide.`,
     });
-    if (!dispatch || !/^WO-\d{3}$/.test(dispatch.workOrder))
+    // A pending dispatch with none recorded is the operator's phrase typed while
+    // main lacked the merged order's records: the helper it admits fast-forwards
+    // main, judges the order at origin's main and records the dispatch itself.
+    // A recorded dispatch keeps admission to its own order (WO-178): the hook
+    // cannot tell the merged order from another without the network, so another
+    // order's helper goes to host permissions, and its close still records that
+    // order's dispatch from the pending phrase after its fast-forward
+    // (WO-258-D028).
+    const pending = session.pendingReleaseClose && !dispatch ? requested : undefined;
+    if (!pending && (!dispatch || !/^WO-\d{3}$/.test(dispatch.workOrder)))
         return missing("recorded release-close dispatch missing");
-    if (dispatch.workOrder !== requested)
-        return missing("recorded release-close dispatch names a different order");
+    if (!pending && dispatch.workOrder !== requested)
+        return missing(session.pendingReleaseClose
+            ? `recorded release-close dispatch names ${dispatch.workOrder}, not ${requested}; if ${requested} is the order you merged, its close records that dispatch from the pending phrase after its fast-forward`
+            : "recorded release-close dispatch names a different order");
     if (session.correction)
         return missing("typed correction freezes destructive effects");
-    const helper = `${prefix}${dispatch.workOrder}`;
+    const order = pending ?? dispatch.workOrder;
+    const helper = `${prefix}${order}`;
     let exact = command === `${helper} --publish` || command === `${helper} --dry-run`;
     // Material paths are one canonical single-quoted shell word, no expansions,
     // operators or extra flags. The helper itself validates the disposition.
@@ -1143,6 +1238,16 @@ function releaseCloseAdmission(root, input, session) {
             (typeof toolCwd !== "string" ||
                 realpathSync(resolve(root, toolCwd)) !== realpathSync(root)))
             return missing("tool cwd is not the main checkout root");
+        if (pending)
+            return {
+                response: {
+                    hookSpecificOutput: {
+                        hookEventName: "PreToolUse",
+                        permissionDecision: "allow",
+                        permissionDecisionReason: `DotLn's first admission: exact release-close helper; pending release-close dispatch (the phrase was typed in main while its status lacked the merged order's records), which the helper records for ${pending} after its fast-forward; cwd is main. Host deny and ask rules still apply.`,
+                    },
+                },
+            };
         const control = harnessControl(root);
         if (control.workOrder !== dispatch.workOrder ||
             !control.legalNextActions?.includes("release-close"))
@@ -1203,7 +1308,7 @@ function plainShellWords(command, limit = Infinity) {
 }
 /** Diagnose a recognizable helper without interpreting or admitting its shell.
  * Only this advisory strips prefixes; the permission parsers never do. */
-function registeredTargetNearMiss(root, input) {
+function registeredTargetNearMiss(root, input, session) {
     if (input.tool_name !== "Bash" ||
         typeof input.tool_input?.command !== "string")
         return null;
@@ -1234,6 +1339,17 @@ function registeredTargetNearMiss(root, input) {
                 : null;
     if (!syntax)
         return null;
+    // A hidden release-close helper of the dispatched order is told the
+    // shell-operator class and both exact spellings, as releaseCloseAdmission
+    // tells a visible one (WO-226-D021).
+    const dispatched = session?.releaseCloseDispatch?.workOrder;
+    if (script === join(root, "scripts/release.mjs") && dispatched) {
+        const exact = `${shellWord(process.execPath)} ${shellWord(join(root, "scripts/release.mjs"))} close ${dispatched}`;
+        return {
+            journal: { kind: "near-miss", syntax },
+            advisory: `Release-close admission withheld: byte-exact helper spelling missing (${syntax === "prefix" && !/&&|;/u.test(command) ? "extra or non-canonical words or whitespace before the helper" : "shell operator or redirect"}); expected ${exact} --publish OR ${exact} --dry-run; host permissions decide.`,
+        };
+    }
     return {
         journal: { kind: "near-miss", syntax },
         advisory: `Registered-target admission not judged: shell syntax (${syntax}) hides the helper; run the plain spelling; host permissions decide.`,
@@ -4475,9 +4591,18 @@ function planFirstWriteResponse(config, input, root, actor) {
     const session = actor ?? readJson(statePath(root, input), initialSession(), true);
     if (session.role !== "executor")
         return null;
+    let elected;
     try {
-        if (!planFirstElected(root))
-            return null;
+        elected = planFirstElected(root);
+    }
+    catch (error) {
+        // The lifecycle's reader refused the election: say why, in its words,
+        // rather than read a malformed value as off.
+        return protocolRefusal(config.event, `DOTLN_PLAN_FIRST_REFUSED: the plan-first election cannot be read: ${(error instanceof Error ? error.message : String(error)).replace(/[\u0000-\u001f\u007f]+/g, " ")}`);
+    }
+    if (!elected)
+        return null;
+    try {
         const known = knownWriteDestinations(input, root, config.tools, {
             directory: input.cwd,
         });
@@ -5087,8 +5212,10 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                 "resume: final review": "FinalReviewCompleted",
             };
             if (!auxiliary || !session.role || role.name === "router") {
-                if (role.name !== "release-close")
+                if (role.name !== "release-close") {
                     delete session.releaseCloseDispatch;
+                    delete session.pendingReleaseClose;
+                }
                 if (!["resume: status", "resume: times"].includes(intent))
                     bindDispatchBound(root, session, role.name, intent, control.workOrder);
                 session.role = role.name;
@@ -5490,7 +5617,7 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
         }
         if (scopeResult)
             return protocolAdvisory(scopeResult.reason);
-        const nearMiss = registeredTargetNearMiss(root, input);
+        const nearMiss = registeredTargetNearMiss(root, input, session);
         if (nearMiss) {
             record(root, input, {
                 registeredTargetAdmission: nearMiss.journal,
@@ -5505,7 +5632,7 @@ async function evaluateExistingHarnessHook(config, input, root, boundary, outsid
                 return protocolAdvisory(close.advisory);
             }
             record(root, input, {
-                releaseCloseAdmission: session.releaseCloseDispatch.workOrder,
+                releaseCloseAdmission: session.releaseCloseDispatch?.workOrder ?? "pending",
             });
             return close.response;
         }

@@ -594,8 +594,9 @@ external-effect authority. A passing final reviewer may commit the reviewed
 state, push only its work-order branch, and open the mergeable PR; it may never
 merge it. For a registered-target order the reviewer commits the reviewed
 target change on its `wo-NNN` branch before recording the passing result,
-records the order's records in the target's documentation root as one
-records-only commit after it, and may push that commit to one conventional
+commits the instance records on the order branch, then records the order's
+records in the target's documentation root as one records-only commit after
+it, and may push that commit to one conventional
 branch on the target's origin and open its pull request with `worktree publish
 WO-NNN --target-worktree` under an admitted operator grant, spelled
 `node scripts/worktree.mjs publish WO-NNN --target-worktree …` from the
@@ -1804,8 +1805,16 @@ captureDigest}` with an optional `class`, and the plan check reads that
    order's retained lane under `docs/control/local/retained/WO-NNN/harness/`
    in this checkout or main's (WO-257), and refuses a rule with no row, naming
    the places read, one from the host's
-   task notification, one from a message the hook classed a question, a
+   task notification, one from a background worker's hand-back, one from a
+   message the hook classed a question, a
    `class` the row contradicts and a digest that is not the message's. The
+   prompt hook journals a hand-back, which the host queues in the same prompt
+   mode as the operator's own messages, by its envelope (an `agent-message`
+   element naming the worker, the host's frame line, the report indented by
+   the host): its row carries source `host-agent-handback` and attribution
+   `host`, and `plan failures` counts it apart from the interventions, as it
+   counts the host's task notification
+   ([WO-259-D008](../evidence/WO-259/decisions.md#wo-259-d008)). The
    operator reads every new rule in one place and strikes one by removing its
    entry
    ([WO-254](../evidence/WO-254/decisions.md#wo-254-d010--a-rule-is-written-once-in-the-open-the-rules-recorded-block)).
@@ -1872,7 +1881,13 @@ sequence and then the open members of each `track: separate` workstream, in
 the workstream's member order, so those members are judged and inside
 `amend-order`'s horizon; a closed member and an order of a workstream
 without that track are not added (WO-257, the fork's items of 2026-11-04
-and 2026-11-05).
+and 2026-11-05). `plan check` builds the subject it compares with a receipt
+under that receipt's own rule: a receipt filed before the separate-track
+projection judged the sequence alone, so a member filed since waits for the
+next receipt rather than failing the comparison ([decision](../evidence/WO-258/decisions.md#wo-258-d016)).
+The sequence holds 0 to 100 orders: once the last order has closed, a pass
+may let it leave and file none, and the refuter's prompt names the empty
+sequence as its subject ([decision](../evidence/WO-258/decisions.md#wo-258-d015)).
 
 After drafting, commit the planning subject locally and use this background
 worker workflow for independent refutation. External review through
@@ -2532,10 +2547,28 @@ and retention, including null policies. An independent cache keeps its freshness
 protocol and independent coordination keeps its owning protocol.
 
 Final review publishes the reviewed work-order branch and PR; the operator
-retains merge authority. After merge, `resume: release close` authorizes the
+retains merge authority. After merge, update main first (`git pull --ff-only`
+in the main checkout); `resume: release close` then authorizes the
 exact helper command printed by `resume release-close` in main or `worktree publish`.
 Run main's helper with main as the working directory; retries use the same
-updated main after the subject is removed.
+updated main after the subject is removed. A phrase typed in main before the
+merge reaches it is journaled as a pending release-close dispatch with the
+role resolved, since main holds none of the merged order's records yet: the
+first admission admits the merged order's exact helper, and the helper, dry
+run included, fast-forwards main and records the dispatch through `npm run
+resume -- release-close --work-order WO-NNN` from the session's pending row,
+which then keys every later admission; nothing is retyped
+([decision](../evidence/WO-258/decisions.md#wo-258-d007)). When main's status
+still selects an earlier closed order, the phrase records that order's
+dispatch and also stays pending. Admission stays with the recorded order, so
+the merged order's helper goes to host permissions. Its close then records
+the merged order's dispatch the same way. The publishing close of the
+recorded order consumes the pending phrase, so a later helper needs a new
+phrase ([decision](../evidence/WO-258/decisions.md#wo-258-d028)).
+
+For a matching dispatched order whose helper is hidden behind a pipe, a
+redirect or a prefix, the advisory names the same mismatch class and both
+expected spellings ([decision](../evidence/WO-258/decisions.md#wo-258-d008)).
 
 Run the printed `--publish` helper once, exactly as printed, with no redirect,
 prefix, `cd` or pipe. `--dry-run` is optional when a prerequisite such as egress
@@ -2959,7 +2992,13 @@ origin metadata and may build missing preview runtime in owned scratch, using
 existing dependencies. It runs no suite or installation. Host egress and
 approval remain host controls; the authorized session uses that permission flow.
 
-`worktree publish` validates the committed review row against the branch's code
+`worktree publish` refuses unless the order's committed control record shows a
+passing final review, naming the phase it read, as the target forms do
+([WO-259-D010](../evidence/WO-259/decisions.md#wo-259-d010)); screens the lines
+the branch adds with the local-terms list before any push, refusing a match by
+file, line and mode and advising when no list is registered
+([WO-259-D009](../evidence/WO-259/decisions.md#wo-259-d009)); validates the
+committed review row against the branch's code
 identity and adds its machine-readable record to the PR body. Existing DCO,
 publication, license and source-only controls remain. `npm run release -- notes
 vX.Y.Z` and `npm run release -- list` inspect local annotated records without
@@ -3114,14 +3153,23 @@ repository registration produces a named briefing diagnostic. Target-order produ
 claims resolve only to these rows, with the latest covering row for the current
 command definitions deciding;
 the launchpad document gate still judges its documents. Passing final review
-records `targetGate` at the clean reviewed commit. `npm run resume --
+records `targetGate` at the clean reviewed commit. The reviewer then commits
+the instance records (the order's records and evidence) on the order branch,
+and `npm run resume --
 target-records` copies the order and moves decisions and every filed report
 into that root as one records-only commit, each filed record ending with one
 provenance line naming the launchpad by its release display name, the
-launchpad tree at filing (the commit kept in the pending operation, so a
-retried filing writes the same bytes) and the record's path there, against
-which its relative links resolve (WO-257; the display name is screened as
-its own surface, and the path and commit are the kit's frame), and recording
+launchpad commit at filing (the commit kept in the pending operation, so a
+retried filing writes the same bytes) and the record's path there: its
+relative links resolve at that commit on the launchpad, whose order branch
+history the launchpad records publish pushes (WO-257; the display name is
+screened as its own surface, and the path and commit are the kit's frame).
+The first filing refuses, naming the records commit, while a source, or a file
+a source links at the literal path a reader at that commit follows, differs
+from the launchpad's HEAD
+([WO-259-D012](../evidence/WO-259/decisions.md#wo-259-d012),
+[WO-259-D016](../evidence/WO-259/decisions.md#wo-259-d016)). The filing
+then removes the moved sources, which the reviewer commits, and records
 the filed paths and hashes in
 `TargetRecordsCommitted`. Metadata, follow-up indexes and status resolve moved
 records through the recorded repository, commit, root, path and hash, reading
@@ -3167,7 +3215,40 @@ decisions, the pass's document, a verification or a receipt (§Operator-opened
 planning pass, item 7, which also names the kinds, the reader entry points,
 the read census and the red tags). The final reviewer judges a changed
 standing document's diff: a replacement passes, and a dated account added
-under a standing heading returns to repair. A document that moves keeps its
+under a standing heading returns to repair. No operator message is saved
+verbatim in a committed artifact (operator direction, 2026-11-07, ignored
+capture SHA-256
+`123eb18018301f41fb4b107f0fb0ad53eb40eb38b13c75a906f588dc913c6cd6`): a
+committed document, record or source file paraphrases the operator and
+cites the ignored intake capture by its digest; a quotation is written only
+where the operator asks in the session for that message to be saved,
+recorded as an `operatorQuote` naming the capture's digest and the
+request's, or where a clone or fork has turned the rule off in its
+configuration. Every role and every worker carries the rule, and
+`npm run test:docs` enforces it on what a branch adds against its merge base
+with `main`, so a record written before keeps its bytes: the verbatim screen
+compares each line a branch adds, or joins by deleting what stood between, to
+Markdown under a document root or at the repository root, or to source under
+`scripts/` and `packages/*/src/`, with
+every text capture under this checkout's ignored intake root, and a run of
+twelve consecutive words both hold fails naming the file, the line and the
+capture's digest, never the words; a run the repository already held at the
+merge base is its own text, which a capture may quote, and a checkout with no
+capture prints `verbatim screen: no captures` and passes. A changed file the
+screen cannot read, and an intake root it cannot list, fail naming the path; a
+directory or a capture below the intake root that its owner closed is private
+material, which never fails the check, so it is named in an advisory and the
+status line reads `no readable captures` when nothing could be read
+([WO-259-D020](../evidence/WO-259/decisions.md#wo-259-d020)). A current record's
+operator-attributed words without a capture citation fail where the branch
+adds or changes them, stay an advisory elsewhere, and the historical baseline
+keeps its note. The exception is typed: `operatorQuote` carries
+`captureSha256` and `requestedIn`, the digest of the capture holding the
+operator's request to save that message, which a record the branch adds must
+name and the screen exempts for that capture alone; an instance that elects
+`features.verbatim-operator-words` turns the rule off, and both checks then
+advise instead of failing
+([WO-259-D006](../evidence/WO-259/decisions.md#wo-259-d006)). A document that moves keeps its
 bytes, and [`docs/control/document-moves.json`](../control/document-moves.json)
 names where it went. Every reader of a reference gives it one meaning: the
 link check, the entry points, the reader bindings, the red tags, the read
@@ -3447,7 +3528,13 @@ codex|claude [--model opus|fable|sol|astra] [--order WO-NNN [--target
 <repository-id>] | --subject planning [--capture <file>]...] [--since <tree>]
 [--round N] [--recheck <report>]... [--dry-run]` launches one review worker
 with the canonical brief: the generated `dotln-worker` definition with its
-probe rule, the reviewer brief this section and the role text state (all three
+probe rule, its rule that what a worker returns paraphrases the operator, and
+its rules that a worker never reads or prints the contents of
+`docs/control/local/` (journals, ledgers, the terms list, the reviews lane
+beyond the report it was given) and never prints a commit header or an author
+line, which every role's text and both hosts' worker definitions carry
+([WO-259-D003](../evidence/WO-259/decisions.md#wo-259-d003)), the reviewer
+brief this section and the role text state (all three
 for `combined`), the round's admission rule, the order's text (or, with
 `--subject planning` on a `planning/` branch, the branch's changed planning
 documents and orders), the diff stat between the base and the working tree
@@ -3937,7 +4024,11 @@ and generated evidence, including fixtures, manifests and installed guidance.
   cannot restart it. Claude's prompt hook reads native task notices directly
   when the transcript has not yet flushed them. Bounded terminal notice
   envelopes also journal as host messages and are excluded from operator
-  intervention counts. Exact transcript authorship takes precedence; unmatched
+  intervention counts. A background worker's hand-back journals as the
+  host's by its envelope whatever the transcript says, because the host
+  queues it in the operator's prompt mode
+  ([WO-259-D008](../evidence/WO-259/decisions.md#wo-259-d008)). Otherwise exact
+  transcript authorship takes precedence; unmatched
   prompts and queue-operation enqueues without a command mode remain
   unattributed. It uses the prompt boundary's time until an earlier transcript
   timestamp is observed, which can shorten the recorded terminal elapsed time.
@@ -5159,6 +5250,20 @@ Report the host's readback or that it reports none; a root's own selection
 does not decide the worker's. A script that regenerates a dated record keeps the
 model that record names and says so beside it; the attestation records what
 ran.
+
+**Hosts are elections.** A host's surfaces are emitted only where the
+instance runs it: `features.host-codex` and `features.host-copilot` are off by
+default, and an undeclared row is inferred on from the instance's own
+committed record, an attestation whose harness names the host in its control
+log (`resume.jsonl` or an order segment) or an observed version in
+`docs/discovery/environment.json`; the ignored session journals are never
+read, so a clone and its origin infer alike. Claude's profile is always in the
+bundle; the Codex profile (`.codex/`, `.agents/skills/` and the
+`dotln-worker-astra` agent it contributes) and the Copilot profile join it
+when their rows are on, and the manifest's `profiles` and residue name only
+those. This repository's record shows all three hosts, so its bundle is
+unchanged; a fresh export is Claude-only
+([decision](../evidence/WO-258/decisions.md#wo-258-d003)).
 
 **Codex CLI 0.166.0 and the driven close (WO-247, read 2026-11-01).** Under
 the default `drive.sandbox: host` election a Codex phase runs under automatic
