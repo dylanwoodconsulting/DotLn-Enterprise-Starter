@@ -15,12 +15,13 @@ This branch files the instance records of WO-023, the twenty concept studies of 
 - The target's declared review gate (install, lint, type check, unit tests, format, build, browser and visual tests) passed at the reviewed tree `f2f4b640…` with no tracked-byte mutation, as row `target-gate:520f26b2-4af3-41bf-acea-571d1d377f7b`; the verifier's review gate passed at the verified tree, which is the second of the three commits. A fresh production build keeps the initial bundle at 406,523 bytes. On pull request 17's head, CI passed its `checks` and `visual` jobs and the title workflow left the gitmoji title as written.
 - Nine criteria are met. Criterion 8 is waived on the operator's words during verification, because the operator had moved the `states` family's design rounds to a dedicated A/B testing pass (D008, D018); the line below names the command that undoes the waiver before the merge if those words did not ask for it.
 - The final review repaired sixteen sentences in seven studies that contradicted their own run or the app's code, and two documentation passages (D019), then ran the target review gate again on the repaired tree.
-- Launchpad: `npm run test:docs` passed after the review's last record edit, and criterion 10's non-deleting probe passes over the new declaration.
+- Launchpad: `npm run test:docs` passed after the review's last record edit, and criterion 10's non-deleting probe passes over the new declaration. Because the write-back changes the launchpad's code identity, the launchpad's complete review gate ran on the bytes the final review judged (7 of 7) and is bound to that review as its product gate by a correction at control ordinal 9.
 
 ## Limits and follow-ups
 
 - The `states` family's rounds, the register against a state machine, wait for a dedicated A/B testing pass (`FUP-02c1ebe8146fe2f1`); until it decides, the register ships.
 - Boarded for later passes: the presentations' lookups and helpers (D016), token symbols as translatable text (D012), the narrow headings' size decision and its tests (D017), Foreign Key Mapping's read limit (D019), and the profile's naming of a target order's publication bodies (D020).
+- For the next planning pass: a target order's final-review pass asks for no launchpad product gate, yet its records publish refuses one whose write-back changed launchpad code until a complete launchpad run is bound with `correct --set productGate`. This review ran and bound one; an order that writes launchpad configuration could run that gate before its pass instead.
 - After both merges, the operator fast-forwards `main` and dispatches `resume: release close` there, which closes the target worktree with the no-release outcome for the launchpad and cuts the target's minor release with the reviewed notes.
 
 <!-- dotln-criterion-records:start -->
