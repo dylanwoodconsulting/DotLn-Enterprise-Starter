@@ -54,8 +54,7 @@ Planner-synthesized. Opaque identifier, not a priority.
 **Depends on:** WO-034 merged (hard: the reshape rule, the shared
 formatter, the description-object shape, the tightened corpus test and the
 crawl this order is held to; merged as DotLn-Angular #16, released as
-`DotLn Angular v0.10.2`); WO-028 merged (hard: the twenty presentations it
-reshapes; merged as DotLn-Angular #14, released as `DotLn Angular v0.10.0`).
+`DotLn Angular v0.10.2`); WO-028 merged (hard: the twenty presentations it reshapes; merged as DotLn-Angular #14, released as `DotLn Angular v0.10.0`); WO-039 merged (hard: its one loader rewrites the flow specs this order also edits, and `catalog.md` §The models can say the enterprise batch follows the shape only once WO-039 has merged; the refuter's finding on criterion 7, the 2026-11-08 pass).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -69,6 +68,11 @@ reshapes; merged as DotLn-Angular #14, released as `DotLn Angular v0.10.0`).
     "workOrderId": "WO-028",
     "relation": "hard",
     "reason": "the second movement batch's twenty presentation modules this order reshapes"
+  },
+  {
+    "workOrderId": "WO-039",
+    "relation": "hard",
+    "reason": "its one executable-study loader rewrites the flow specs this order also edits, and the catalog document can say the enterprise batch follows the shape only once it has merged"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -212,9 +216,7 @@ modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-040: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor
-   f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3 origin/main` exits 0 (a `main`
-   that does not contain the pin stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
+   `git fetch origin`, `git merge-base --is-ancestor f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3 origin/main` exits 0 and WO-039's merge is an ancestor of `origin/main` (a `main` without either stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
 2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states, adapt the audit to list every function of the `shared` group (`flow.ts`, `states.ts` and their neighbours) with its file, name and parameter count, since the copied audit lists a function only when it belongs to the first batch, takes eight or more parameters or runs to 70 lines (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `f99580f`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), and the crawl's record counts are the inventory's.
 3. `flow.ts`'s `frameOf` with a frame description; the shared description-object types the second batch needs added beside WO-034's under `studies/`; the audit's control: the adapted audit run over a scratch copy of `flow.ts` whose `frameOf` takes one parameter more than the candidate's reports that count, recorded in the evidence README. Check: `npx nx test tools` exits 0 over the flow and movement specs; the control's count is the candidate's plus one.
 4. Second-batch presentations one to ten reshaped under the Design, their
