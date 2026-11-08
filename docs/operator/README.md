@@ -304,7 +304,9 @@ an audience beyond the operator (2026-11-05, journal row
   journaled `planning:` or `ideation:` dispatch unless `--operator-request
   --capture <ignored intake file> --capture-hash sha256:<digest>` names the
   operator's in-session words, which the session captures before it
-  publishes); a
+  publishes; the kit's `features.auto-update-upstream` election, which
+  would admit both under a journaled dispatch without that capture, is not
+  elected here, the second 2026-11-08 pass, D3); a
   repair a release's Read before upgrading names is made on the update branch
   so it merges green; where the plan gate binds a closed order's bytes,
   `amend-order --withdraw` is used with the reason recorded and the original

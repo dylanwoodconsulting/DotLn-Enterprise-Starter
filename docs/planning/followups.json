@@ -7301,6 +7301,14 @@
           "reopenWhen": "The first record filed under the commit-first route names a commit whose link destinations resolve on the launchpad's public repository (settle), or does not (ask core again), or a starter carries core WO-259.",
           "targets": [],
           "at": "2026-11-08T02:03:08.638Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "The second 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-122-0-wo-039-retired-record-links-settled-2026-11-08.md) D6: WO-039's three records, filed after the reviewer committed them under the profile's commit-first route, name launchpad commit 62c22c96685902ea42e4a65e0d7c53b3fd850af0, which the GitHub API finds; every relative link destination of VER-001 (21 distinct) and FINAL-001 (17 distinct) resolves on the launchpad's public repository at that commit through the contents API, and decisions.md carries no relative link. Starter v0.122.0 (core WO-259) makes the route the kit's: target-records refuses an uncommitted source and the footer names the commit at which the links resolve.",
+          "reopenWhen": "A filed record names a launchpad commit that GitHub does not find, or a relative link of a filed record does not resolve at the commit its footer names.",
+          "targets": [],
+          "at": "2026-11-08T22:39:10.110Z"
         }
       ]
     },

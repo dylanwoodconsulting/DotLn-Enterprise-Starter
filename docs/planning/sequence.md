@@ -6,8 +6,6 @@ Two entries between blank lines are a lane pair; the entries after the last
 pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
-- WO-039 — Standards pass II: the enterprise pattern studies' code as the example
-
 - WO-024 — Concept studies V: levels, loops and teams
 - WO-040 — Standards pass III: the second movement batch's code and the first batch's residue
 

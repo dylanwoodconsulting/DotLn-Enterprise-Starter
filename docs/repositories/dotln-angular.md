@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3`, WO-023's merge (#17), 2026-11-08 |
-| Latest target release | `DotLn Angular v0.11.0`, published 2026-11-08 from that merge |
+| Last reviewed target source | `eb9d227483e30164105da077f50673789d1e5c9f`, WO-039's merge (#18), 2026-11-08 |
+| Latest target release | `DotLn Angular v0.11.1`, published 2026-11-08 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -422,17 +422,21 @@ The route, draft at verified, is:
    the operator and an automated reviewer.
 2. Final review collects the pull request's threads into the order's
    `preview-pr.json` and gives each a route.
-3. After `final-review-result pass`, the reviewer commits the order's records (the
-   decisions, the evidence directory and the two reports) on the order branch, then
-   `npm run resume -- target-records` moves the order's decisions and reports into
-   the target's `docs/dotln/` as one records-only commit. Since starter v0.119.0
-   every filed record ends with a footer naming the launchpad commit at filing;
-   committing first makes that commit hold the records and the evidence their
-   relative links reach, and the records pull request pushes its history, so a
-   reader of the two public repositories can follow a filed record's links. This is
-   core's route of 2026-11-07 until its WO-259 makes `target-records` refuse an
-   uncommitted source; WO-034-D016 records the footer that named a commit without
-   them. The records body is `docs/final-reviews/WO-NNN/PR.md`, which carries any
+3. After `final-review-result pass`, the reviewer records the pass, commits the
+   order's records (the decisions, the evidence directory and the two reports) on
+   the order branch, then runs `npm run resume -- target-records`, which moves the
+   order's decisions and reports into the target's `docs/dotln/` as one
+   records-only commit. Since starter v0.122.0 the filing refuses a source, or a
+   file a source links, that is uncommitted at the launchpad's `HEAD`, and every
+   filed record ends with a footer naming the launchpad commit at which its
+   relative links resolve; the records pull request pushes that commit's history,
+   so a reader of the two public repositories can follow a filed record's links.
+   WO-039's records were the first filed with the records committed first: their
+   footer names `62c22c9` and every link destination resolves there on GitHub (the
+   second 2026-11-08 pass, D6); WO-034-D016 records the earlier footer that named
+   a commit without them. The launchpad publish form of the order branch refuses
+   until the passing final review is in the committed control record (starter
+   v0.122.0). The records body is `docs/final-reviews/WO-NNN/PR.md`, which carries any
    criterion-records block the pass's stored-body check reads, and the target body
    sits beside it as `TARGET-PR.md`, carrying no launchpad identifier
    (WO-023-D020).
@@ -647,6 +651,7 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.10.1` | WO-027 | #15 | `d7d842dc4fdbde03099695933a448d9632fa4335` | 2026-11-06T19:44:24Z |
 | `DotLn Angular v0.10.2` | WO-034 | #16 | `9637f73539e387b46f65855db78f3c4b5285e561` | 2026-11-07T05:10:15Z |
 | `DotLn Angular v0.11.0` | WO-023 | #17 | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` | 2026-11-08T00:51:05Z |
+| `DotLn Angular v0.11.1` | WO-039 | #18 | `eb9d227483e30164105da077f50673789d1e5c9f` | 2026-11-08T21:12:53Z |
 
 | Area | Order |
 | --- | --- |
@@ -663,6 +668,7 @@ here) and in Git. Earlier versions of this profile are in
 | The `flow` family and the messaging studies | WO-022 |
 | The shared description-object helpers and number formatter the study presentations share, and the study guards | WO-034 |
 | The `states` family, the enterprise pattern studies and their executable models | WO-023 |
+| The enterprise presentations' compiler-checked lookup tables, the `states` builder's inferred transition, the one model-study loader, the chart axes and the narrow register's heading rule | WO-039 |
 
 ### Recovery context
 

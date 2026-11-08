@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3
+**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/poeaa/`
@@ -50,7 +50,7 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-023 merged (hard: the `states` family, the executable-model
 rule, the embodiment rule, the PoEAA study and model directories and the
 settled look this batch reuses; WO-020's record, check, composite, route
-and fan-out procedure come with it; merged as DotLn-Angular #17 on 2026-11-08, released as `DotLn Angular v0.11.0`); WO-039 merged (hard: the standards pass that reads the enterprise batch's code, so this batch's authors copy the reshaped shape, WS-002 rule 6). The base is WO-023's merge, set by the 2026-11-08 pass; step 1 integrates the target's current `main` in any case.
+and fan-out procedure come with it; merged as DotLn-Angular #17 on 2026-11-08, released as `DotLn Angular v0.11.0`); WO-039 merged (hard: the standards pass that reads the enterprise batch's code, so this batch's authors copy the reshaped shape, WS-002 rule 6; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`). The base is WO-039's merge, set by the second 2026-11-08 pass; step 1 integrates the target's current `main` in any case.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
@@ -111,7 +111,13 @@ the patterns WO-023 will name. Re-read on 2026-11-08 at `f99580f` by the
 2026-11-08 pass: WO-023 merged with the twenty its order named (no
 substitution), the `states` family and the embodiment rule; the catalog's
 data files are unchanged since `55b59c9`, so the 435 unstudied rows and the
-candidate list hold; WO-039 reshapes the batch before this order runs.
+candidate list hold. Re-read again at `eb9d227` by the second 2026-11-08
+pass: WO-039 merged (#18), reshaping the sixteen presentations onto
+compiler-checked lookup tables, `matchKind`, `listOf` and `booleanParameter`,
+teaching the `states` builder to infer a move's transition and giving the
+tools test kit one model-study loader; the catalog's data files are still
+unchanged since `55b59c9`, so the counts hold and the shape this batch
+copies is the reshaped one.
 
 **Design:**
 
@@ -200,7 +206,7 @@ for the models (axis: an in-memory model shows the mechanism and the gate
 needs no service); the concepts chosen by the planner's taste (axis: the
 rule is checkable against the data).
 
-Live-run surfaces at the base: the catalog with WO-023's twenty enterprise studies, the `states` family and the addressable readings.
+Live-run surfaces at the base: the catalog with WO-023's twenty enterprise studies as WO-039 reshaped them, the `states` family with its inferred transitions, the one model-study loader in the tools test kit and the addressable readings.
 
 **Deliverables:** the twenty records with their models and specs where
 executable; the summary rows; the coverage row and the paragraph;
@@ -211,7 +217,7 @@ link check), `walkthrough.md` and its screenshots.
 
 1. Base guard read with WO-014-D001, for WO-031: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
-   origin/main` exits 0 and WO-039's merge is an ancestor of `origin/main` (a `main` without either stops for a planning pass); the target worktree
+   origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree
    then fast-forwards to the target's `main`, and that integrated commit is
    the baseline of every later comparison; then the route guard and
    activation as WO-005 step 1; read the harness usage; record the subagent
@@ -329,12 +335,12 @@ each.
 
 **Known issues and carry-ins:**
 
-- **Waits for WO-039.** WO-023 merged on 2026-11-08 (#17) with the twenty
-  its order named, so this order's list stands and the 2026-11-08 pass set
-  the base to its merge; this order activates only after WO-039, the
-  standards pass over the enterprise batch, has merged into the target's
-  `main` (step 1 refuses otherwise), so its authors copy the reshaped batch
-  (WS-002 rule 6).
+- **WO-039 merged.** WO-023 merged on 2026-11-08 (#17) with the twenty
+  its order named, so this order's list stands, and WO-039, the standards
+  pass over the enterprise batch, merged the same day (#18, `DotLn Angular
+  v0.11.1`), so the second 2026-11-08 pass set the base to that merge and
+  this order can activate: its authors copy the reshaped batch (WS-002
+  rule 6), and step 1 reads the pin.
 - **The operator's touchpoints** (WS-002 rule 4): `drive: WO-031 --host
   codex` from the launchpad's main checkout; the merge of the target's pull
   request and of the launchpad's records pull request when the drive stops
