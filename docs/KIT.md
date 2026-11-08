@@ -84,14 +84,20 @@ runtime produces the same bytes; `check` detects drift against both.
 ## First steps
 
 This kit runs on Node 24.15 or later in the 24 line, or on Node 26:
-`engines.node` in `package.json` reads `^24.15.0 || ^26.0.0`. `node
+`engines.node` in `package.json` reads `^24.15.0 || ^26.0.0`. It needs Git
+2.40 or later: `engines.git` reads `>=2.40.0`, because the gate classifies
+generated sources with `git check-attr --source`, which Git 2.40 introduced,
+and the publication fixtures use `GIT_CONFIG_GLOBAL` (Git 2.32). `node
 scripts/harness.mjs check`, `harness evidence` and every `npm test` selection
-refuse another runtime, naming the range and the version they read; in a
-selection the `host` task then runs first and nothing else runs. `node
-scripts/bootstrap.mjs` is unaffected, and a target gate runs the target's own
-declared checks without judging Node. These checks read only
-`^major.minor.patch` alternatives, so an edited `package.json` that an update
-left with another form of range is refused by name until it reads in this form.
+refuse another Node or an older Git, naming the declaration and the version
+they read; in a selection the `host` task then runs first and nothing else
+runs. `node scripts/bootstrap.mjs` is unaffected, and a target gate runs the
+target's own declared checks without judging Node. These checks read only
+`^major.minor.patch` alternatives for Node and the one `>=major.minor.patch`
+form for Git, so an edited `package.json` that an update left with another
+form is refused by name until it reads in this form (see
+[What runs here, and what does not](#what-runs-here-and-what-does-not), which
+cites the floor's decision).
 The kit exports no `.node-version`, so an instance that wants a version manager
 to select a runtime pins its own.
 
@@ -145,7 +151,10 @@ operator sandbox settings.
    records checkpoints as Git refs and needs at least one commit. An export
    made inside another repository's work tree is an embedded repository there.
    If `docs/lineage/README.md` is absent, as in a fork of a starter exported
-   by an older release even after a starter refresh, run
+   by an older release and not refreshed since v0.121.0 (whose refresh adds
+   every export seed a starter lacks, the lineage index and
+   `dotln.config.json` among them; see
+   [Kit files and instance files](#kit-files-and-instance-files)), run
    `node scripts/lineage.mjs index` and commit the generated index with the
    fork's setup commit, before its first `npm run test:docs`.
 2. `npm ci` (or `npm ci --offline` with a warm cache): installs the pinned
@@ -170,10 +179,21 @@ operator sandbox settings.
    are markers, so a term holding a colon stays a term, and a marker with no
    term after it refuses naming the line. A present list with no terms is
    `present` with a count of zero and refuses nothing; an absent list is
-   `unavailable` and refuses publication. `npm run terms -- check <paths>`
+   `unavailable` and refuses publication. WO-001's checklist item 4 registers
+   this list and checks the files that order writes; its criterion 3 records
+   the printed status and a match, where one occurred, fixed before filing
+   (see [Kit files and instance files](#kit-files-and-instance-files) for the
+   pre-drafted order). `npm run terms -- check <paths>`
    prints `local-terms list: present` or `unavailable`, and in committed text
    refuses a match of either mode by file, line and mode without printing the
-   term. Target publication also needs the instance's own
+   term. `npm run test:docs` runs the same screen as its `terms` task over the
+   lines a branch adds against its merge base with `main` (on `main`, what the
+   last merge brought in), advising `local-terms list: unavailable` where no
+   list is registered, and the publish helpers for a planning branch, a kit
+   update and an order branch screen the lines their branch adds the same way
+   before the first push; a malformed list refuses naming its line, never a
+   term (see [Document quality](#document-quality)). Target publication also
+   needs the instance's own
    `docs/control/outward-vocabulary.json`, whose `reviewTerms` (an array of
    words, possibly empty; the older `terms` key is read as the same list for
    one kit release, with an advisory) are review items too, and an
@@ -214,7 +234,13 @@ operator sandbox settings.
    The session form is `node scripts/worktree.mjs publish
    WO-NNN --target-worktree --branch <type>/<slug> --title <title> --body-file
    <committed-reviewed-body-path> [--confirm-terms sha256:<digest>]` from the
-   launchpad root. The hook withholds
+   launchpad root. Before `npm run resume -- target-records` files the order's
+   records into the target, the reviewer commits the instance records (the
+   order's records and evidence) on the order branch: each filed record's
+   footer names that launchpad commit, at which its relative links resolve once
+   the records branch is published, and the filing refuses while a source or a
+   file it links is uncommitted (see
+   [Releases in this instance](#releases-in-this-instance)). The hook withholds
    the `npm run worktree -- publish` form, naming the admitted node spelling.
    Its opt-in `--draft` form at `verified`
    pushes the target's working tree under a draft pull request that the final
@@ -417,8 +443,32 @@ section accepts named booleans or an election with your own reason:
 ```
 
 An absent section keeps the existing defaults: Tinkerer economy on,
-plan-first, private-destination and desktop-control off. Plan-first adds an
-operator review of the proposed change before implementation. A misspelled
+plan-first, private-destination, desktop-control, auto-update-upstream and
+verbatim-operator-words off, and each host other than Claude off unless this
+instance's record shows it.
+Plan-first adds an operator review of the proposed change before
+implementation.
+
+Host support is an election with inference. `host-codex` and `host-copilot`
+are off unless elected, or unless this instance's own committed record shows
+the host: an attestation in its committed control log (`docs/control/resume.jsonl`
+or an order segment under `docs/control/orders/`) whose harness is `codex-cli`
+or `copilot-cli`, or an observed version of that harness in
+`docs/discovery/environment.json`. Claude's surfaces are always emitted; an
+elected or inferred host adds its own (`.codex/` and `.agents/skills/`) and its
+profile in the harness manifest. The table names the source, `elected` or
+`inferred:` with the record's rows, and `--json` adds the attestation counts.
+An election of `false` beside a record that shows the host is respected, and
+the table says what the record shows; a host this instance used only in
+sessions it never attested is elected by hand. The starter's record shows no
+other host, so a clone starts Claude-only
+([decision](evidence/WO-258/decisions.md#wo-258-d003)). `auto-update-upstream` is this instance's
+standing opt-out of the rule that no planning or entropy pass takes a newer
+starter release unasked (§Taking upstream updates,
+[decision](evidence/WO-258/decisions.md#wo-258-d005)), and
+`verbatim-operator-words` its opt-out of the rule that committed text
+paraphrases the operator (§Document quality,
+[decision](evidence/WO-259/decisions.md#wo-259-d005)). A misspelled
 name refuses with the valid names and `npm run features -- list`. Existing keys such as
 `kit.applyInstanceActions`, `release.*`, `build.*`, `drive.sandbox` and the
 budget keys stay where they are; putting their inventory ids in `features`
@@ -443,7 +493,9 @@ advisory, not a refusal of another order's gate.
 
 After changing an emitted election, run `node scripts/harness.mjs emit`
 and `node scripts/harness.mjs check`. Turning Tinkerer economy off removes
-its executor support. The old overlay `equip`/`unequip` choice for it was
+its executor support; turning a host off removes the surfaces the previous
+manifest installed for it and the directories that leaves empty, and keeps
+any other file there ([decision](evidence/WO-258/decisions.md#wo-258-d004)). The old overlay `equip`/`unequip` choice for it was
 accepted with a migration advisory through kit release v0.118.0 and is
 refused since v0.119.0: an overlay that names `tinkerer-economy` refuses the
 emit, the feature table and the elections read until the entry is removed
@@ -474,9 +526,12 @@ standing rule from the operator's words into a standing document, this
 instance's operator record included, names the rule there with the
 document, the section, the message's journal reference and its capture
 digest. `npm run plan -- check` refuses a rule whose message the session
-journal lacks, one from the host's task notification, one from a message
-journaled as a question, a class the journal contradicts and a digest that is
-not the message's; the operator strikes a rule by removing its entry.
+journal lacks, one from the host's task notification, one from a background
+worker's hand-back (journaled under the host's source `host-agent-handback`,
+never as the operator's), one from a message journaled as a question, a class
+the journal contradicts and a digest that is not the message's; the operator
+strikes a rule by removing its entry
+([decision](evidence/WO-259/decisions.md#wo-259-d008)).
 
 No planning or entropy pass takes a newer starter release or merges upstream;
 only the operator's words in that session do. `node scripts/launchpad.mjs
@@ -486,6 +541,10 @@ refutation dispatch, naming the operator's in-session request as the route; `--o
 <ignored intake file> --capture-hash sha256:<digest>` records that request,
 with its hash in the session journal and, for a from-core update, in the
 sibling receipt. A session with no journaled dispatch is admitted as before.
+An instance that elects `features.auto-update-upstream` lets its passes take
+an update unasked: the hold admits the command, and the session journal's
+admission row names the election instead of a capture
+([decision](evidence/WO-258/decisions.md#wo-258-d005)).
 
 - `npm run plan -- followups` pages the register; `--export <file>` exports it;
   `--apply <batch.json>` applies dispositions against the revision read.
@@ -501,7 +560,11 @@ sibling receipt. A session with no journaled dispatch is admitted as before.
   `npm run plan -- refute` prints its canonical prompt from this instance's
   sequence and orders. `npm run plan -- receipt <result.json> --statement
   <statement.txt>` validates and commits the returned judgment;
-  `npm run plan -- check` checks the receipt and continuing subject.
+  `npm run plan -- check` checks the receipt and continuing subject, and
+  `--timing` adds where its seconds go by step. A sequence may hold no order:
+  once the last order has closed, a pass may let it leave and file none, and
+  the refuter's prompt then names the empty sequence as its subject
+  ([decision](evidence/WO-258/decisions.md#wo-258-d015)).
 - `npm run entropy -- subject` names the next review action. Live review and
   refutation belong to the operator's instance; the export fixture exercises
   only `review --transport fake` and its receipt, never a live model. A filed
@@ -638,7 +701,10 @@ the name affects future releases, not older tags or Releases.
 The seeded WO-001 carries `v0.1.0`; `npm run release -- prepare --local`
 assigns later versions above this instance's own tags. A target order's
 launchpad records branch records no release and carries links to the records
-committed in the target. If it carries a release block, its claim stays at
+committed in the target. Each record filed into the target ends with a footer
+naming the launchpad commit, made before the filing, at which its relative
+links resolve once that branch is published
+([decision](evidence/WO-259/decisions.md#wo-259-d012)). If it carries a release block, its claim stays at
 least as new as the latest release. It needs no release-notes file; `release prepare
 --local` reports no release and changes no files for that target order.
 
@@ -743,8 +809,10 @@ spawned `dotln-worker` that starts a test-runner gate is refused with
 After the first steps above, `npm test`, `npm run test:docs` and
 `npm test -- --review` run inside this instance without package source. Each
 selection first runs the six structural checks: formatting, configuration,
-registrations, declarations, generated artifacts and the host's Node runtime
-and memory pressure.
+registrations, declarations, generated artifacts and the host's Node and Git
+runtime and memory pressure; a Node outside `engines.node` or a Git below
+`engines.git` makes the host check run first and nothing else
+([decision](evidence/WO-258/decisions.md#wo-258-d009)).
 The generated check includes the runtime manifest, active pinned snapshot
 and harness bundle;
 `npm run sync` repairs stale derived artifacts. Then `kit-verify` runs instead
@@ -787,7 +855,7 @@ gate, since the integrate helper's affected list is no duty of its own.
 The observed selections in a fresh fixture instance are:
 
 - `npm test`: `format`, `configuration-root`, `registrations`, `declarations`, `generated`, `host`, `kit-verify`.
-- `npm run test:docs`: `format`, `configuration-root`, `registrations`, `declarations`, `generated`, `host`, `kit-verify`, `license-surfaces`, `docs-check`, `harness-context`, `plan-refutation-current`, `plan`, `reader-profiles`, `entropy`.
+- `npm run test:docs`: `format`, `configuration-root`, `registrations`, `declarations`, `generated`, `host`, `kit-verify`, `license-surfaces`, `docs-check`, `terms`, `harness-context`, `plan-refutation-current`, `plan`, `reader-profiles`, `entropy`.
 - `npm test -- --review`: `format`, `configuration-root`, `registrations`, `declarations`, `generated`, `host`, `kit-verify`.
 
 These checks run fresh: the active snapshot and coordination records can
@@ -1012,8 +1080,9 @@ under `corpus/`, and the three mutation self-test modules under
 `corpus/mutation/`,
 `.prettierignore`, `.prettierrc.json`, the build-free modules under
 `packages/*/src/*.mjs`, the harness
-bundle under `.claude/`, `.agents/` and `.codex/` (`.claude/harness-manifest.json`
-among them), `package.json`, `package-lock.json`, `dotln.config.example.json`,
+bundle under `.claude/` (`.claude/harness-manifest.json` among them), and
+under `.agents/` and `.codex/` for a host the destination elects or its
+record shows (§Features), `package.json`, `package-lock.json`, `dotln.config.example.json`,
 `UPSTREAM.md`, the license files, `docs/product/07-execution-guide.md`,
 `docs/product/operator-reference.md`, `docs/product/08-publication-compiler.md`, `docs/PLAYBOOK.md`, this guide
 (`docs/KIT.md`) and
@@ -1046,7 +1115,14 @@ README is generated rather than seeded: `docs/work-orders/` gets the index at
 the first lifecycle transition (`activate`). The export seeds the lineage
 index at `docs/lineage/README.md`; `node scripts/lineage.mjs index`
 regenerates it after ledger edits and generates it for an older export, in
-step 1 or on the update branch, and bootstrap never writes it.
+step 1 or on the update branch, and bootstrap never writes it. The starter
+refresh writes every seed the export writes that the starter lacks, at the
+export's bytes and the lineage index rendered from the starter's own ledger,
+and never overwrites a present one; it removes a seed the kit retired
+(`docs/control/doc-ceilings.json`) while its bytes are the kit's rendering
+and keeps a customized one, naming why in `keptSeeds`; its summary names
+`seeds added:` and `seeds removed:`. The template seeds keep their own rules
+below ([decision](evidence/WO-258/decisions.md#wo-258-d012)).
 
 The optional committed `contributions.operatorAuthor` is one public
 `Name <email>` author identity exempt from contributor sign-off. Omission gives
@@ -1061,7 +1137,11 @@ instance cuts, `docs/evidence/`, `docs/verifications/` and
 cut them. The first planning pass is this instance's own: `npm run plan --
 start <slug>` cuts its orders from its own sequence; the pre-drafted WO-001
 is the only order the kit seeds, and no order of core's ever arrives in an
-update. §Planning in this instance names the commands a planning pass runs
+update. WO-001 establishes what this machine and its coding harnesses
+support: it registers the local-terms list and checks the three files it
+writes, its criterion 3 records the printed status and any match fixed
+before filing, and it runs the review ladder every order runs
+([decision](evidence/WO-258/decisions.md#wo-258-d011)). §Planning in this instance names the commands a planning pass runs
 here and the seeds it reads.
 
 ## Taking upstream updates
@@ -1135,7 +1215,12 @@ instance): under a journaled `planning:` or `ideation:` dispatch or a pending
 entropy dispatch, `update --finish`
 and `update --publish` refuse unless the operator's in-session request is
 recorded with `--operator-request --capture <ignored intake file>
---capture-hash sha256:<digest>`. It previews the revision with that revision's own launchpad, run from a
+--capture-hash sha256:<digest>`, or unless the instance elects
+`features.auto-update-upstream`, its standing opt-out of that rule
+([decision](evidence/WO-258/decisions.md#wo-258-d005)). The starter is Claude-only: an instance whose
+record shows Codex or Copilot sees that host's surfaces as `remove` rows in
+the preview and in the merge, and the re-emit on the update branch writes
+them back ([decision](evidence/WO-258/decisions.md#wo-258-d004)). It previews the revision with that revision's own launchpad, run from a
 temporary detached worktree under the ignored `.runtime/` directory. The
 instance's launchpad knows only the kit paths of its export and refuses a
 manifest naming a later one; the incoming launchpad knows every path it
@@ -1527,7 +1612,34 @@ instance's session journals over the last five releases (a lower bound: Codex
 reads are unobserved); a standing document nobody reaches and nobody read is
 red-tagged by `plan start`, and the next planning pass removes it or folds it
 into another with a recorded disposition. Nothing removes a document by itself,
-and size never decides.
+and size never decides. No operator message is saved verbatim in a committed
+artifact: a session paraphrases the operator in committed text and cites
+the ignored intake capture by its SHA-256, and a quotation is written only
+where the operator asks for that message to be saved, as a typed
+`operatorQuote` naming the capture's digest and the request's, or where
+this instance turns the rule off in its configuration (operator direction,
+2026-11-07). Every role and worker carries the rule, and `npm run test:docs`
+holds a branch to it against its merge base with `main`, so a record written
+before keeps its bytes. Its verbatim screen compares each line the branch adds,
+or joins by a deletion, to Markdown or to source under `scripts/` and
+`packages/*/src/` with every
+text capture under this checkout's ignored intake root, and a run of twelve
+consecutive words both hold fails by file, line and the capture's digest,
+never the words; a run the repository already held is its own text, and a
+checkout with no capture prints `verbatim screen: no captures`. A record the
+branch adds that attributes words to the operator without a capture
+citation fails too, while one written before stays an advisory. An
+`operatorQuote` the branch adds carries `captureSha256` and `requestedIn`
+(the digest of the capture of the operator's request to save it), and the
+screen admits that capture's words inside it. Electing
+`features.verbatim-operator-words` turns the rule off: both checks then
+advise instead of failing
+([decision](evidence/WO-259/decisions.md#wo-259-d006)).
+
+The same gate's `terms` task screens the lines a branch adds with the private
+local-terms list, failing by file, line and mode without printing the term,
+and the publish helpers screen a branch's committed change the same way before
+their first push ([decision](evidence/WO-259/decisions.md#wo-259-d009)).
 
 Artifacts follow their declared contract and check, never the preceding
 instance's shape. Writing guidance identifies the contract, meaning the document sections
