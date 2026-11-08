@@ -2,9 +2,9 @@
 
 2026-11-08. The final review's own evidence for WO-039. The subject is the target worktree's
 tree `aa01296dfa364e9285fd1967283a9cee4cfa4e17` on branch `wo-039`, the tree
-[VER-001](../../../verifications/WO-039/VER-001.md) verified; the review made no source change
-and committed that tree as three commits. The [report](../../../final-reviews/WO-039/FINAL-001.md)
-judges the eight criteria; [decisions D019](../decisions.md#wo-039-d019) records the acceptance,
+[VER-001](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/verifications/WO-039/VER-001.md) verified; the review made no source change
+and committed that tree as three commits. The [report](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/final-reviews/WO-039/FINAL-001.md)
+judges the eight criteria; [decisions D019](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/evidence/WO-039/decisions.md#wo-039-d019) records the acceptance,
 the series and the dispositions.
 
 ## Identity

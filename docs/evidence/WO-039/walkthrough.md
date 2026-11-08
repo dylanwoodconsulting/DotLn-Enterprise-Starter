@@ -1,7 +1,7 @@
 # WO-039 verifier walkthrough
 
 2026-11-08, 19:10–19:11 UTC. The verifier's own reading and observations are in
-[VER-001's Walkthrough](../../verifications/WO-039/VER-001.md#walkthrough).
+[VER-001's Walkthrough](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/verifications/WO-039/VER-001.md#walkthrough).
 [The selection](verify-001/reading-selection.json) records the three randomly chosen modules.
 [The browser record](walkthrough/walkthrough.json) contains all ninety stepped frames,
 their accessible descriptions, headings, inputs and screenshot paths.

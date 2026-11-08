@@ -18,7 +18,7 @@ target's working tree `aa01296dfa364e9285fd1967283a9cee4cfa4e17`, which is the t
 ladder's second round read and both target gates ran on. Both registered mains were unchanged at
 the last integration check, so nothing was integrated: the launchpad's is
 `7a8dcff2909b7b2384407d1656286b0119badb97` and the target's is
-`f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3`. The decisions are [decisions.md](decisions.md),
+`f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3`. The decisions are [decisions.md](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/evidence/WO-039/decisions.md),
 WO-039-D001 to D018; the evidence index is [README.md](README.md).
 
 ## Acceptance criteria

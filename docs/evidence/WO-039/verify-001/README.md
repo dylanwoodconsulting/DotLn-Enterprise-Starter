@@ -3,7 +3,7 @@
 2026-11-08. The subject is the target's working tree
 `aa01296dfa364e9285fd1967283a9cee4cfa4e17`, based on
 `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3`. The verifier changed no target source.
-The [report](../../../verifications/WO-039/VER-001.md) judges the eight criteria.
+The [report](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/verifications/WO-039/VER-001.md) judges the eight criteria.
 
 ## Executed probes
 

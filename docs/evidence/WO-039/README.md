@@ -11,7 +11,7 @@ which `origin/main` still was when this record was last checked, and the launchp
 `7a8dcff2909b7b2384407d1656286b0119badb97`. The candidate is the target worktree's tree on branch
 `wo-039`, uncommitted until final review. The executor ran Claude Code `2.1.319` with
 `claude-opus-5-5` at effort `max`, read from `CLAUDE_EFFORT`. The decisions are in
-[decisions.md](decisions.md), WO-039-D001 to D018. The target's records step moves them to the
+[decisions.md](https://github.com/DylanBWood/DotLn-Angular/blob/36bb77a62e75866b38e150061a44a6ade62b510b/docs/dotln/evidence/WO-039/decisions.md), WO-039-D001 to D018. The target's records step moves them to the
 target's `docs/dotln/evidence/WO-039/decisions.md`, where `catalog.md` links D011.
 
 ## Where each criterion's evidence is
