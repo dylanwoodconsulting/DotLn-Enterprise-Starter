@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3
+**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds twenty records under `libs/shared/catalog/src/studies/rxjs/`,
@@ -47,7 +47,7 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 **Depends on:** WO-021 merged (hard: the `marbles` family, the marble
 contract and spec helper, the executable rule and the RxJS study directory
 this batch reuses; WO-020's record, check, composite, route and fan-out
-procedure come with it). The base above is WO-023's merge (#17), released as `DotLn Angular v0.11.0`, set by the 2026-11-08 pass; step 1 integrates the target's current `main`.
+procedure come with it). The base above is WO-039's merge (#18), released as `DotLn Angular v0.11.1`, set by the second 2026-11-08 pass (the first set WO-023's merge, #17, `DotLn Angular v0.11.0`); step 1 integrates the target's current `main`.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
@@ -183,7 +183,7 @@ remaining core operators (axis: WO-021's reason stands, the patterns' rows
 relate to the operators); the concepts chosen by the planner's taste (axis:
 the rule is checkable against the data).
 
-Live-run surfaces at the base: the catalog with a hundred studies in the message system, the five landed families, the forty movement studies (the first batch reshaped by WO-034), the twenty enterprise studies with the `states` register, the RxJS study directory and the addressable readings.
+Live-run surfaces at the base: the catalog with a hundred studies in the message system, the five landed families, the forty movement studies (the first batch reshaped by WO-034), the twenty enterprise studies with the `states` register as WO-039 reshaped them, the one model-study loader `loadModelStudy(id, family)` in the tools test kit, which the RxJS localization spec imports, the RxJS study directory and the addressable readings.
 
 **Deliverables:** the twenty records and executable modules with marble
 specs; the summary rows; the coverage row; `docs/evidence/WO-029/` with

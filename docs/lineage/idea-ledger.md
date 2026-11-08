@@ -4,6 +4,16 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-08 — planning pass: starter v0.122.0 taken on the operator's word, WO-039 retired as closed, the five orders that can activate next re-based on its merge and the record-links row settled on the GitHub check (operator dispatch of 2026-11-08, the second that day)
+
+Dispatch: a `planning:` request for a standard pass with the latest
+upstream, one typed line, captured in ignored intake
+(`docs/intake/notes/planning-2026-11-08.md`). The record is
+[the planning document](../planning/passes/standard-pass-v0-122-0-wo-039-retired-record-links-settled-2026-11-08.md);
+this heading registers the pass for the plan tooling. The pass filed no
+order and amended five; no idea enters the ledger, because the pass was not
+an ideation dispatch.
+
 ## 2026-11-08 — planning pass: starter v0.120.1 taken on the operator's word, core's answers of 2026-11-07 read against the records, WO-034 and WO-023 retired as closed, the second and third standards passes filed on the operator's rule and the next four orders re-based on WO-023's merge (operator dispatch of 2026-11-07)
 
 Dispatch: a `planning:` request for a standard pass with the latest

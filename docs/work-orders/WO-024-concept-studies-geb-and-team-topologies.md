@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3
+**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -43,7 +43,7 @@ Planner-synthesized by the 2026-10-30 second planning pass
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
-the study guards every batch now writes to; its merge brought the four study batches and the shared migration, which the base above includes); WO-039 merged (hard: the reshaped enterprise batch its four executable models copy, so the shapes WO-023-D016 deferred are not copied into the `relations` batch; the 2026-11-08 pass, D3).
+the study guards every batch now writes to; its merge brought the four study batches and the shared migration, which the base above includes); WO-039 merged (hard: the reshaped enterprise batch its four executable models copy, so the shapes WO-023-D016 deferred are not copied into the `relations` batch; the 2026-11-08 pass, D3; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`). The base above is that merge, set by the second 2026-11-08 pass.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -205,7 +205,7 @@ screenshots, and the design record.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-024: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 and WO-039's merge is an ancestor of `origin/main` (a `main` without either stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
 2. The `relations` family with stories `StudyRelations` and a spec that
    renders a three-level stack with a loop to its text equivalent. Check:
    `npx nx test tools` exits 0; `npm run lint:components` exits 0.
@@ -321,7 +321,7 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The 2026-11-08 pass sets the base to WO-023's merge (#17), released as `DotLn Angular v0.11.0`, which brought the `states` family, the enterprise batch and WO-034's reshaped first batch (the 2026-11-06 pass set it to WO-027's merge; the 2026-11-05 pass carried the migrated record and code shape into the Design); this order activates after WO-039, the second standards pass, has merged (its hard edge; step 1 refuses otherwise), so its executable models copy a reshaped enterprise batch. Step 1 still integrates the target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The second 2026-11-08 pass sets the base to WO-039's merge (#18), released as `DotLn Angular v0.11.1`, which brought the reshaped enterprise batch (lookup tables keyed by the study's id union, `matchKind`, `listOf`, `booleanParameter`, the comparison runs in the run description), the `states` builder's inferred transition, `TimelineModel<Axis>` and the one model-study loader `loadModelStudy(id, family)` in the tools test kit; the first 2026-11-08 pass had set it to WO-023's merge (#17, `DotLn Angular v0.11.0`), which brought the `states` family, the enterprise batch and WO-034's reshaped first batch (the 2026-11-06 pass set it to WO-027's merge; the 2026-11-05 pass carried the migrated record and code shape into the Design). WO-039's merge is the hard edge step 1 reads through the pin, so this order's executable models copy the reshaped batch. Step 1 still integrates the target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that must carry a module and binds each spec to it,
