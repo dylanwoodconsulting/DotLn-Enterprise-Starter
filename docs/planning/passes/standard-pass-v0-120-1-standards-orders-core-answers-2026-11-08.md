@@ -620,7 +620,64 @@ route that makes the next filed record's links resolve.
 
 ## Validation
 
-This section is completed after the three independent reviews and the
-refutation, which the plan in §Process cost names; the capture's final
-digest, the reviews' counts and findings, the receipt and the document gate
-are recorded here before the pull request is opened.
+The dispatch capture's final digest is
+`164636610bf089e595a6a9fc79a7a40189f9d58be1c329b4d66a1b798d429601`: the
+file grew three times after the update publish read it, with the merge
+word, with the operator's four messages numbered as items for the criteria
+review, and with the sentence naming the three dispositions the helper
+admits; every digest the records name is the file as it stood when that
+record read it.
+
+**Independent order reviews.** The operator record's three reviews ran as
+Codex workers (`gpt-6.1-sol` at `max`, pinned on the command line, no
+readback) through `npm run worker -- review --kind <kind> --host codex
+--subject planning` under the lane
+`planning-2026-11-08-standard-pass-v0-120-1-standards-orders-core-answers`
+(keyed by the branch), round 1, over the change since `8271979` at tree
+`d2aec345` (the first committed subject); the brief measured 315,765
+characters by the helper's dry run, under the 400,000-character ceiling,
+one batch of eleven inlined documents (the pass document, the sequence,
+the work-order index, the six amended orders and the two new ones) with
+the brief directing each worker at the whole branch diff, so the operator
+record, the profile, the workstreams, the ledger and the register were in
+every worker's reach and in their files read. The three were launched
+together at 02:10:29Z. The design improver: 0 h 7 min, 2,047,154 tokens, 3
+findings (0 blocking, 1 should-fix, 2 notes). The consistency reviewer: 0 h
+11 min, 5,855,621 tokens, 3 findings (0 blocking, 3 should-fix), with its
+`Traced consumers` table of eighteen rows, every generated page and
+contract hash confirmed current and the six amended orders' acceptance
+contracts unchanged by hash. The criteria adversary, launched with the
+dispatch capture through `--capture`, was refused once by the helper (0 h 8
+min; its `## Items` table used a disposition outside the three the helper
+admits; its four findings are unobserved, since the helper writes nothing
+for a refused report); the capture was given the sentence naming the three
+dispositions and the worker relaunched over the same tree: 0 h 7 min,
+3,318,369 tokens, 4 findings (1 blocking, 3 should-fix), its `## Items`
+table answering the four items (two acted on, two reviewed; the helper's
+advisory that the table names no row for an item 5 is core's nested
+numbering inside item 2). All by the codex-result-envelope, the effective
+effort unknown; each report records the checkout unchanged across its
+episode. Because one finding was blocking, the criteria adversary ran a
+recheck round over the repaired tree `06c7fac2` (`--round 2 --recheck`):
+0 h 7 min, 3,922,193 tokens, three of the four round-1 findings held and
+the fourth not held (one surface still quoted a message), with 2 new
+should-fix findings and none blocking; both were repaired and no third
+round ran, every repair being record or order text under product 07's
+ladder, and the refuter judged the repaired text. Self-review: found 12
+(11 distinct; the consistency reviewer's F1 and the criteria adversary's
+F2 are one finding); fixed 10; recorded 1.
+
+| Finding | Disposition |
+| --- | --- |
+| Design F1 (WO-024's edge on WO-039) | Fixed: the edge is hard, step 1's guard refuses a `main` without WO-039's merge, and the known issues say so; WS-001's table and block follow (D3). |
+| Design F2 (WO-040's reading inventory) | Fixed: step 2 records the movement and stream modules at the integrated base in `inventory.json`; the Design and criterion 7 read that inventory, and a later research batch adds modules this order does not read. |
+| Design F3 (a maintained source for the audit and crawl) | Recorded: both orders name each copied script's source path, launchpad commit and invocation in their evidence; a maintained tool in the target is a NoOp with its reopening condition (§NoOps). |
+| Consistency F1 and criteria F2 (the copied crawl and comparator) | Fixed: both orders adapt the crawl (inventory, family controls, record counts, viewports: WO-039 at 1440 and 360) and the comparator (the inventory, the permitted differences) before the baselines, with a control that an unrelated text change fails; the historical WO-034 copies stay. |
+| Consistency F2 (WO-029's and WO-030's base sentences) | Fixed: the dependency paragraphs name WO-023's merge and the live-run paragraphs the hundred studies and five families. |
+| Consistency F3 (the workstream block's edge direction) | Fixed: WS-001's new edges run prerequisite to dependent as the block's others do; WO-040's edge on WO-028, a WS-002 member, lives in the order's block and the prose table, as WO-034's does, and the table says why. |
+| Criteria F1 (the committed tree) | Fixed: both use criteria read the candidate in the target worktree. |
+| Criteria F3 (baselines against a concurrent sibling) | Fixed: unchanged output is defined against the latest integrated `main`, the before-crawl is recaptured after an integration and a sibling's regenerated baselines are recorded as the sibling's. |
+| Criteria F4 and recheck F1 (quoted messages) | Fixed: the pass document and the ledger paraphrase the operator's four messages and cite the capture's digests. |
+| Recheck F2 (the audit and `frameOf`) | Fixed: WO-040's adapted audit lists the `shared` group's functions with their parameter counts, with a control on a scratch copy; criterion 2 reads it there. |
+
+**Independent refutation.** Recorded below once the receipt is filed.
