@@ -598,8 +598,11 @@ From DotLn-Enterprise-Starter's 2026-11-08 planning pass, docs/planning/passes/s
 
 Model and effort: Fable 5.1 at `max`, operator-selected (the session's
 `/model` line). Usage: 97,786 tokens at the role's resolution (01:25:57Z:
-4 input, 44,273 cached, 52,608 cache-write, 901 output), source the
-transcript counter, scope dispatch; the exit reading is in §Validation.
+4 input, 44,273 cached, 52,608 cache-write, 901 output); 29,650,572 total
+tokens after the receipt (02:48:36Z: 1,782 input, 28,724,936 cached,
+657,397 cache-write, 266,457 output; reasoning and cost unavailable),
+source the transcript counter, scope dispatch; dispatch standing 1 h 23
+min of an unset bound at that reading.
 Subagents: budget 40 (`subagentCap`); the plan stated before the first
 spawn: three Codex review workers through `npm run worker -- review --host
 codex --subject planning` (the criteria adversary with `--capture`, the
@@ -607,7 +610,12 @@ design improver, the consistency reviewer), one recheck round only if a
 blocking finding is repaired, and one background `dotln-worker` refuter
 through the direct route, each launched once: four to six uses, no
 descendant; the merge watcher already counted by the hook as one
-unattributed use (D7). The spend is in §Validation.
+unattributed use (D7). Spent: eight by the pass's count (§Validation): the
+plan's four, plus the criteria adversary's refused first launch, its
+recheck round after the one blocking finding, the dry run and the watcher.
+The three reviews ran 0 h 7 min, 0 h 11 min and 0 h 7 min (2,047,154,
+5,855,621 and 3,318,369 tokens), the refused launch 0 h 8 min, the recheck
+0 h 7 min (3,922,193 tokens), the refuter 0 h 8 min (141,777 tokens).
 Wall-clock of the pass's commands: the preview 325 ms; the update's four
 gates 0 h 1 min; `update --finish` seconds; the shape audit over the
 target seconds after the TypeScript install; the register batch, the
@@ -680,4 +688,72 @@ F2 are one finding); fixed 10; recorded 1.
 | Criteria F4 and recheck F1 (quoted messages) | Fixed: the pass document and the ledger paraphrase the operator's four messages and cite the capture's digests. |
 | Recheck F2 (the audit and `frameOf`) | Fixed: WO-040's adapted audit lists the `shared` group's functions with their parameter counts, with a control on a scratch copy; criterion 2 reads it there. |
 
-**Independent refutation.** Recorded below once the receipt is filed.
+**Independent refutation.** [Receipt 024](../refutations/2026-11-08-planning-0e37c7212bc3296d-024.md)
+is the fresh judgment through the direct route: one background Claude
+`dotln-worker` (claude-opus-5-5 at xhigh by its generated definition, no
+model override, effective readback unknown) with no inherited conversation,
+reading the canonical prompt of `npm run plan -- refute` saved in ignored
+intake (`docs/intake/refute-prompt-2026-11-08.json`) and nothing else (its
+statement names the one file, its two reads and that it ran no command and
+made no write): aligned-with-findings for the plan and for the two orders
+the scope judged, WO-039 and WO-040 (the six amended orders and the rest of
+the horizon carry their verdicts from receipts 022 and 023 by hash:
+thirteen carried), zero holds, fourteen known issues with reopening
+observations (six on WO-039, eight on WO-040), 0 h 8 min from the worker's
+launch to its hand-back (141,777 tokens and 3 tool uses by the host's
+usage line). The prompt was compiled at `1f156ed`; after the hand-back one
+of the worker's findings, WO-040's unstated dependency on WO-039, was
+answered with a hard edge in WO-040's dependency line and block and WS-001's
+table and block, which lie outside the compiled subject, and the receipt
+helper then refused the stale direct record; the prompt recompiled at
+`0e0d37c` (`docs/intake/refute-prompt-2026-11-08-b.json`) is byte-identical
+to the judged one in every field but the base commit, so the receipt binds
+the same subject (`sha256:0d3fd937…`) at `0e0d37c`, and its own
+dispatch-to-file figure (8 s) measures from that recompilation. The receipt
+records no carried disposition. The fourteen known issues are NoOps for
+this pass (kind NoOp; reason: none is an observed failure and each names
+its reopening observation; evidence: the receipt's findings; reevaluation:
+each finding's `reopenWhen`; usefulWhen: that observation showing a repair
+would improve the stated outcome); the ones the two orders' roles read
+before they run are named here. WO-039: criterion 2's grep is a proxy, so
+a table typed wider than the study's id union or a lookup with a fallback
+would pass it and the executor keys every table to the union; Foreign Key
+Mapping's read limit is not an input the served study exposes, so the
+repair at limits one to three must leave `dom-diff.json` clean, and a
+differing frame there reopens criterion 3; the one loader rewrites the
+flow specs under `studies/eip/`, which the Cost line does not name and
+WO-040 also edits (WO-040 now waits for WO-039 by a hard edge); the
+extracted `statesProblems` needs a case that feeds a violating drawing and
+asserts the report, or the guard can fail silently; the removal balance is
+unmeasured in lines. WO-040: the Objective's sentence and criterion 6's
+rule that no message begins with a placeholder are met together only by a
+message that leads with a word and carries a plural form, never by joining
+the node name in code; `grep -l motionPoints` may already list the three
+presentations at the base, so the check is that each imports the one
+projection; the drawing's query and size through the injected document
+need a stated fallback when the document has no view; the stream verdicts
+are checked against the audit after (no `rxjs` or `eip` function over four
+parameters and no numbered placeholder for a module marked left); the 39
+counts functions of six or more and criterion 2 asks for none over four, so
+functions of exactly five are work the estimate leaves out; the executor's
+reading is about 1 MB and a compaction is the cost to watch; and the stream
+reading serves WO-029 and WO-030, which the Objective should have named.
+The receipt's plan check printed three path advisories, WO-039 and WO-040
+naming WO-034's evidence files (`shape-audit.mjs`,
+`ver-001/time-placeholders.mjs`), which carry launchpad identifiers a draft
+publish body must not name (the executor copies them under its own
+evidence directory, as WO-034's step 2 did under the same advisory last
+pass), and the two standing criteria advisories.
+
+**Worker uses.** By the pass's count: the merge watcher (a shell loop the
+hook counted as an unattributed use), the review dry run (spelled with
+`--silent`, which the hook's literal match did not count), five Codex
+review launches (the criteria adversary refused once and relaunched, the
+design improver, the consistency reviewer, the criteria recheck) and the
+refuter: eight of forty, no re-task, no descendant. The hook's own line
+reads launched 7 (claude 1, codex 5, unattributed 1), re-tasked 0,
+remaining 33.
+
+**Document gate.** `npm run test:docs` at the tree with the receipt and
+this closing edit is named in the handoff with its result; the kit verifies
+1,121 files at `26971a9f`.
