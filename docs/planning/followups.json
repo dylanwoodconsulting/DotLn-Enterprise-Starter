@@ -7293,6 +7293,14 @@
           "reopenWhen": "WO-034's decisions record the footer's commit reachable on the launchpad's public repository with the destinations present (which settles the row), core answers with a published snapshot or a route, or the kit's record filing or checkpoint publication changes.",
           "targets": [],
           "at": "2026-11-06T21:48:21.920Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D2: core's answer of 2026-11-07 files the fix in its WO-259 step 9 (target-records refuses a source not committed at the launchpad's HEAD, so the footer's commit holds every record and the evidence its links reach, and the records publish pushes that history; a checkpoint pushed as a ref is declined). Until then the fork's final reviewer commits the records before target-records (the dotln-angular profile's publish route, step 3), and the next pass checks the first record filed under that route on GitHub, the confirmation core cannot run; WO-034-D016 recorded the footer that named a commit without the destinations.",
+          "reopenWhen": "The first record filed under the commit-first route names a commit whose link destinations resolve on the launchpad's public repository (settle), or does not (ask core again), or a starter carries core WO-259.",
+          "targets": [],
+          "at": "2026-11-08T02:03:08.638Z"
         }
       ]
     },
@@ -7333,7 +7341,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-040 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: the eleven time-carrying placeholders are renamed for what they hold in WO-040's step 6 and judged by criterion 4 through the evidence directory's time-placeholders.mjs (eleven at f99580f).",
+          "reopenWhen": "WO-040's verification finds a placeholder named for a count that carries a time, or WO-040 is withdrawn.",
+          "targets": [
+            "WO-040"
+          ],
+          "at": "2026-11-08T02:03:08.578Z"
+        }
+      ]
     },
     {
       "id": "FUP-4a627aac788f8295",
@@ -7348,7 +7367,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-040 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: the three formation presentations build their bounds points through motionPoints with the zone-extent projection named once (step 6, criterion 4).",
+          "reopenWhen": "WO-040's verification finds the projection rebuilt inline, or WO-040 is withdrawn.",
+          "targets": [
+            "WO-040"
+          ],
+          "at": "2026-11-08T02:03:08.593Z"
+        }
+      ]
     },
     {
       "id": "FUP-4e24208e45d27a1d",
@@ -7363,7 +7393,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-036 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: WO-036 takes the wall study's avoidance from the engine and its known issues and carry-ins now name the two gaps (the moments in step order whatever the input, the straight-ahead run's labels and steps pinned in the spec, the clearance comparison shown where the traces part).",
+          "reopenWhen": "WO-036's verification finds the moments out of step order or the two traces unreadable, or WO-036 is withdrawn.",
+          "targets": [
+            "WO-036"
+          ],
+          "at": "2026-11-08T02:03:08.622Z"
+        }
+      ]
     },
     {
       "id": "FUP-fedaf34d00c578f1",
@@ -7378,7 +7419,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-040 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3, both halves: the nineteen flow state labels reworded under one recorded choice (step 8, criterion 6), and the movement items, the drawing's narrow-screen query through the injected document with the font sizes from one place, the nine names.<id> keys and the four trims through createNumberFormat (steps 6 and 7, criteria 4 and 5).",
+          "reopenWhen": "WO-040's verification finds a label still composing as a second label or a movement item undone, or WO-040 is withdrawn.",
+          "targets": [
+            "WO-040"
+          ],
+          "at": "2026-11-08T02:03:08.608Z"
+        }
+      ]
     },
     {
       "id": "FUP-02c1ebe8146fe2f1",
@@ -7425,6 +7477,16 @@
           "reopenWhen": "The next coding-standards pass over the study drawing families, or the first shipped language other than English: decide whether token symbols are translatable and change every family together.",
           "targets": [],
           "at": "2026-11-07T20:41:08.177Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-039 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: WO-039's Design decides that token letters stay symbols across the three drawing families (the marble letters are the TestScheduler's syntax; the flow and states tokens are machine identifiers with the translated name beside them, G3) and step 8 writes the rule into catalog-rules.md (criterion 7); the executor who finds a family where it fails records why instead of translating one family alone.",
+          "reopenWhen": "A second language ships whose readers cannot read the Latin tokens, WO-039's executor records a family where the rule fails, or WO-039 is withdrawn.",
+          "targets": [
+            "WO-039"
+          ],
+          "at": "2026-11-08T02:03:08.563Z"
         }
       ]
     },
@@ -7449,6 +7511,16 @@
           "reopenWhen": "The next coding-standards pass over the enterprise pattern batch (libs/features/tools/src/lib/studies/poeaa/), or a later batch that copies one of the deferred shapes: apply the lookup tables, listOf, boolean flags, move inference, state unions, comparison runs, loader merge, timeline naming and spec separation the decision lists.",
           "targets": [],
           "at": "2026-11-07T21:35:41.244Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-039 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: the fifteen presentations' lookup tables, listOf, the boolean helper, the inferred transition and the ambiguity refusal, the state unions, the comparison runs in the run description, Gateway's shared rule, record-set's helper, the one loader, TimelineModel's names and the specs off the register drawing are WO-039's Design, steps 3 to 5 and criteria 2 and 4.",
+          "reopenWhen": "WO-039's verification finds one of the listed shapes still in a presentation, or WO-039 is withdrawn.",
+          "targets": [
+            "WO-039"
+          ],
+          "at": "2026-11-08T02:03:08.533Z"
         }
       ]
     },
@@ -7481,6 +7553,16 @@
           "reopenWhen": "The next coding-standards pass over the study drawing families, or the dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1), whichever runs first: apply the remaining items.",
           "targets": [],
           "at": "2026-11-08T00:13:22.225Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-039 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: the narrow register's decision (break, abbreviate or a floor size), the scale test, the empty-label guard, the states rule in a function of its own, moveSentence's listOf and Gateway's note measured with real glyphs are WO-039's Design, steps 3 and 7 and criteria 6 and 7; where the dedicated A/B testing pass (FUP-02c1ebe8146fe2f1) has redrawn the register first, its pick governs and WO-039 records.",
+          "reopenWhen": "WO-039's verification finds an item undone, the A/B testing pass reverses the heading decision, or WO-039 is withdrawn.",
+          "targets": [
+            "WO-039"
+          ],
+          "at": "2026-11-08T02:03:08.548Z"
         }
       ]
     },
@@ -7497,7 +7579,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-039 by the 2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D3: the order's Design names the one logic repair (Foreign Key Mapping's simulation stops on its read limit only when the next key needs a read), step 6 builds it with a spec at limits of one to three and a control on the base's simulation, and criterion 5 judges it.",
+          "reopenWhen": "WO-039's verification finds the limit still counting reads, or WO-039 is withdrawn.",
+          "targets": [
+            "WO-039"
+          ],
+          "at": "2026-11-08T02:03:08.517Z"
+        }
+      ]
     },
     {
       "id": "FUP-18c53da8259f9980",
@@ -7512,7 +7605,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-08 planning pass (docs/planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md) D5: the dotln-angular profile's publish route (step 3) names a target order's publication bodies: the records body docs/final-reviews/WO-NNN/PR.md, carrying any criterion-records block the pass's stored-body check reads, and the target body TARGET-PR.md beside it, carrying no launchpad identifier.",
+          "reopenWhen": "The kit names a target order's stored body differently, or a final review with a waived or defective criterion fails the stored-body check with the profile's names.",
+          "targets": [],
+          "at": "2026-11-08T02:03:08.502Z"
+        }
+      ]
     }
   ]
 }

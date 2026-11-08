@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `d7d842dc4fdbde03099695933a448d9632fa4335`, WO-027's merge (#15), 2026-11-06 |
-| Latest target release | `DotLn Angular v0.10.1`, published 2026-11-06 from that merge |
+| Last reviewed target source | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3`, WO-023's merge (#17), 2026-11-08 |
+| Latest target release | `DotLn Angular v0.11.0`, published 2026-11-08 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -421,9 +421,20 @@ The route, draft at verified, is:
    the operator and an automated reviewer.
 2. Final review collects the pull request's threads into the order's
    `preview-pr.json` and gives each a route.
-3. After `final-review-result pass`, `npm run resume -- target-records` moves the
-   order's decisions and reports into the target's `docs/dotln/` as one records-only
-   commit.
+3. After `final-review-result pass`, the reviewer commits the order's records (the
+   decisions, the evidence directory and the two reports) on the order branch, then
+   `npm run resume -- target-records` moves the order's decisions and reports into
+   the target's `docs/dotln/` as one records-only commit. Since starter v0.119.0
+   every filed record ends with a footer naming the launchpad commit at filing;
+   committing first makes that commit hold the records and the evidence their
+   relative links reach, and the records pull request pushes its history, so a
+   reader of the two public repositories can follow a filed record's links. This is
+   core's route of 2026-11-07 until its WO-259 makes `target-records` refuse an
+   uncommitted source; WO-034-D016 records the footer that named a commit without
+   them. The records body is `docs/final-reviews/WO-NNN/PR.md`, which carries any
+   criterion-records block the pass's stored-body check reads, and the target body
+   sits beside it as `TARGET-PR.md`, carrying no launchpad identifier
+   (WO-023-D020).
 4. The publish helper of step 1, without `--draft`, then reuses the branch and the
    pull request and marks it ready. The launchpad's own records go up in their own
    pull request.
@@ -633,6 +644,8 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.9.0` | WO-022 | #13 | `55b59c9133056c1d6471274a9676a7d5649196ac` | 2026-11-01T19:43:12Z |
 | `DotLn Angular v0.10.0` | WO-028 | #14 | `48c7f8e6916692bca833c4985e2cf95978ab2c06` | 2026-11-05T15:09:43Z |
 | `DotLn Angular v0.10.1` | WO-027 | #15 | `d7d842dc4fdbde03099695933a448d9632fa4335` | 2026-11-06T19:44:24Z |
+| `DotLn Angular v0.10.2` | WO-034 | #16 | `9637f73539e387b46f65855db78f3c4b5285e561` | 2026-11-07T05:10:15Z |
+| `DotLn Angular v0.11.0` | WO-023 | #17 | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` | 2026-11-08T00:51:05Z |
 
 | Area | Order |
 | --- | --- |
@@ -647,6 +660,8 @@ here) and in Git. Earlier versions of this profile are in
 | The study record, the `motion` and `timeline` families and the movement studies | WO-020 |
 | The `marbles` family and the RxJS studies | WO-021 |
 | The `flow` family and the messaging studies | WO-022 |
+| The shared description-object helpers and number formatter the study presentations share, and the study guards | WO-034 |
+| The `states` family, the enterprise pattern studies and their executable models | WO-023 |
 
 ### Recovery context
 

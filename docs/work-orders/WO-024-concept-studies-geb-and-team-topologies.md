@@ -5,7 +5,7 @@
 **Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ d7d842dc4fdbde03099695933a448d9632fa4335
+**Repository:** dotln-angular @ f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -43,8 +43,7 @@ Planner-synthesized by the 2026-10-30 second planning pass
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
-the study guards every batch now writes to; its merge brought the four
-study batches and the shared migration, which the base above includes).
+the study guards every batch now writes to; its merge brought the four study batches and the shared migration, which the base above includes); WO-039 merged (hard: the reshaped enterprise batch its four executable models copy, so the shapes WO-023-D016 deferred are not copied into the `relations` batch; the 2026-11-08 pass, D3).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -58,6 +57,11 @@ study batches and the shared migration, which the base above includes).
     "workOrderId": "WO-028",
     "relation": "hard",
     "reason": "the concept-study-v1 record, the work message catalogs, the simulation, presentation and entry split and the study guards every batch now writes to"
+  },
+  {
+    "workOrderId": "WO-039",
+    "relation": "hard",
+    "reason": "the reshaped enterprise batch whose executable-model shape this batch's four models copy, so the shapes WO-023-D016 deferred are not copied into the relations batch"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -171,8 +175,7 @@ them to the books' vocabulary; no `relations` family exists.
   arithmetic and comparisons are parameterized messages with nested keys and
   named placeholders; a presentation function takes a frame, a description
   object or a translator and at most four parameters, and no function is
-  split to fit the 80-line ceiling: the shape is WO-034's reshaped batch and
-  WO-028's own twenty, never the first batch's as it stood before WO-034.
+  split to fit the 80-line ceiling: the shape is WO-034's reshaped first batch and, for an executable model, the enterprise batch as WO-039 leaves it, never the first batch's as it stood before WO-034 and never WO-028's twenty, which WO-040 reshapes (rule 30).
   The authors' and critics' briefs name rules 9, 23 and 30 and G3, and the
   critics inspect message coverage and the mechanism/presentation split
   independently of any earlier worked example (WO-028-D042; rule 30).
@@ -202,13 +205,7 @@ screenshots, and the design record.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-024: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
-   origin/main` exits 0 (a `main` that does not contain the pin stops for a
-   planning pass); the target worktree then fast-forwards to the target's
-   `main`, and that integrated commit is the baseline of every later
-   comparison; then the route guard and activation as WO-005 step 1; read
-   the harness usage and record the subagent remainder; record the
-   publishing decision as WO-020 did.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 and WO-039's merge is an ancestor of `origin/main` (a `main` without either stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
 2. The `relations` family with stories `StudyRelations` and a spec that
    renders a three-level stack with a loop to its text equivalent. Check:
    `npx nx test tools` exits 0; `npm run lint:components` exits 0.
@@ -324,28 +321,19 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The 2026-11-06 pass sets the base to WO-027's
-merge (#15), released as v0.10.1, which changed no file under apps/ or libs/
-(the 2026-11-05 pass set it to WO-028's merge and carried the migrated
-record and code shape into the Design); this order runs after WO-034, the first standards
-pass, so its authors copy a reshaped batch. Step 1 still integrates the
-target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The 2026-11-08 pass sets the base to WO-023's merge (#17), released as `DotLn Angular v0.11.0`, which brought the `states` family, the enterprise batch and WO-034's reshaped first batch (the 2026-11-06 pass set it to WO-027's merge; the 2026-11-05 pass carried the migrated record and code shape into the Design); this order activates after WO-039, the second standards pass, has merged (its hard edge; step 1 refuses otherwise), so its executable models copy a reshaped enterprise batch. Step 1 still integrates the target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021, WO-022 and WO-028 change. This order and WO-023 are a lane pair: disjoint
-surfaces, no edge, the second to publish integrates the target's `main` and
-rewrites `studies-summary.json` before its publish; the operator may run them
-one at a time. The remaining GEB and Team Topologies rows, the AI for Games
+WO-021, WO-022 and WO-028 change. WO-023, this order's pair partner, merged first; this order now pairs with WO-040, the third standards pass (disjoint surfaces: WO-040 edits the movement and stream studies, their messages and the motion drawing, and the two share only `catalog.md`), the second to publish integrating the target's `main` and rewriting `studies-summary.json` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
 pathfinding and decision-making chapters, the RxJS patterns and the remaining
 EIP and PoEAA patterns are the next batches' candidates (the filing pass's
 C3), cut when the operator drains this queue. This order activates only on a
 launchpad whose starter carries core WO-221's `--draft` form; the draft pull
-request and its workflow runs are a final-review obligation read from
-`docs/evidence/WO-024/preview-pr.json`, never a criterion. `Target release
+request and its workflow runs are a final-review obligation read from `docs/evidence/WO-024/preview-pr.json`, never a criterion. Before `target-records`, the final reviewer commits the order's records on the order branch so the launchpad commit the filed records' footer names holds them (the profile's publish route, step 3). `Target release
 classification: minor` and `Target release notes: reviewed` are set under
 WO-012's declared policy.
 
