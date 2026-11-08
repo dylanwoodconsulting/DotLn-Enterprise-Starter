@@ -1,0 +1,21 @@
+{
+  "changedFrame": {
+    "slug": "identity-map",
+    "viewport": 1440,
+    "step": 0,
+    "node": 0
+  },
+  "original": "Authored study · Claude dotln-worker author-02 · 2026-11-07",
+  "command": "node compare-dom.mjs <base crawl> <base crawl with one node changed> <diff>",
+  "exitCode": 1,
+  "summary": {
+    "beforeFrames": 238,
+    "afterFrames": 238,
+    "differingFrames": 1,
+    "allowedFrames": 0,
+    "unexpectedFrames": 1,
+    "missing": 0,
+    "added": 0
+  },
+  "refused": true
+}

@@ -1,0 +1,89 @@
+{
+  "width": 360,
+  "captured": [
+    {
+      "build": "base",
+      "slug": "service-layer",
+      "id": "poeaa:226",
+      "step": 0,
+      "file": "service-layer-step0-base.png"
+    },
+    {
+      "build": "base",
+      "slug": "service-layer",
+      "id": "poeaa:226",
+      "step": 3,
+      "file": "service-layer-step3-base.png"
+    },
+    {
+      "build": "base",
+      "slug": "data-transfer-object",
+      "id": "poeaa:363",
+      "step": 0,
+      "file": "data-transfer-object-step0-base.png"
+    },
+    {
+      "build": "base",
+      "slug": "data-transfer-object",
+      "id": "poeaa:363",
+      "step": 4,
+      "file": "data-transfer-object-step4-base.png"
+    },
+    {
+      "build": "base",
+      "slug": "record-set",
+      "id": "poeaa:452",
+      "step": 0,
+      "file": "record-set-step0-base.png"
+    },
+    {
+      "build": "base",
+      "slug": "record-set",
+      "id": "poeaa:452",
+      "step": 4,
+      "file": "record-set-step4-base.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "service-layer",
+      "id": "poeaa:226",
+      "step": 0,
+      "file": "service-layer-step0-candidate.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "service-layer",
+      "id": "poeaa:226",
+      "step": 3,
+      "file": "service-layer-step3-candidate.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "data-transfer-object",
+      "id": "poeaa:363",
+      "step": 0,
+      "file": "data-transfer-object-step0-candidate.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "data-transfer-object",
+      "id": "poeaa:363",
+      "step": 4,
+      "file": "data-transfer-object-step4-candidate.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "record-set",
+      "id": "poeaa:452",
+      "step": 0,
+      "file": "record-set-step0-candidate.png"
+    },
+    {
+      "build": "candidate",
+      "slug": "record-set",
+      "id": "poeaa:452",
+      "step": 4,
+      "file": "record-set-step4-candidate.png"
+    }
+  ]
+}

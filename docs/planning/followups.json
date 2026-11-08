@@ -7487,6 +7487,14 @@
             "WO-039"
           ],
           "at": "2026-11-08T02:03:08.563Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by WO-039-D012: token letters stay symbols in all three drawing families, shown through tools.study.symbol with the translated name beside them, and catalog-rules.md states the rule; no family fails it; verified by VER-001 criterion 7 and accepted by FINAL-001 (WO-039-D019).",
+          "reopenWhen": "A second language ships whose readers cannot read a Latin letter beside a translated name, or a family’s token stops having a translated name beside it.",
+          "targets": [],
+          "at": "2026-11-08T20:18:52.661Z"
         }
       ]
     },
@@ -7521,6 +7529,14 @@
             "WO-039"
           ],
           "at": "2026-11-08T02:03:08.533Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by WO-039: the fifteen presentations read names, tokens and per-kind choices from tables keyed by their id unions (WO-039-D003), lists join through listOf and on/off inputs are booleans (D005, D008), the builder infers a move’s transition and refuses an ambiguous one (D004), registerOf and placeOf return their state unions and comparison runs travel in the run description with Gateway’s rule shared and record-set’s helper gone (D008), the two loaders are one (D007), TimelineModel’s x values are named (D006) and the model specs read the frames, never the drawing (D009); verified by VER-001 criteria 2 and 4 and accepted by FINAL-001 (WO-039-D019).",
+          "reopenWhen": "A later batch copies one of the listed shapes, or the next standards pass over the enterprise batch finds one of them back in a presentation.",
+          "targets": [],
+          "at": "2026-11-08T20:18:52.604Z"
         }
       ]
     },
@@ -7563,6 +7579,14 @@
             "WO-039"
           ],
           "at": "2026-11-08T02:03:08.548Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by WO-039: the narrow register’s headings keep two thirds of their size and break a longer name below it (WO-039-D011), the component spec asserts that the template applies each column’s scale, columnsOf draws no heading for a label with no words, the states rule lives in statesProblems (D013), moveSentence joins through listOf (D004) and Gateway’s narrow note is measured with real glyphs (D011); verified by VER-001 criteria 6 and 7 and accepted by FINAL-001 (WO-039-D019). The reading critic’s remaining items went to the A/B testing pass (FUP-5af094bffcaf27ef).",
+          "reopenWhen": "The A/B testing pass reverses the heading decision, or a state’s name of a new batch breaks into more than two parts at 360 pixels.",
+          "targets": [],
+          "at": "2026-11-08T20:18:52.625Z"
         }
       ]
     },
@@ -7589,6 +7613,14 @@
             "WO-039"
           ],
           "at": "2026-11-08T02:03:08.517Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "Settled by WO-039-D010: Foreign Key Mapping’s loader stops on its read limit only before a key that needs a read; its spec pins every limit from one to six, and the control carrying the base’s simulation fails at a limit of three (docs/evidence/WO-039/fkm-control/results.json); verified by VER-001 criterion 5 and accepted by FINAL-001 (WO-039-D019).",
+          "reopenWhen": "A later order makes the read limit an input, or the loader learns to follow keys breadth first.",
+          "targets": [],
+          "at": "2026-11-08T20:18:52.642Z"
         }
       ]
     },
@@ -7613,6 +7645,108 @@
           "reopenWhen": "The kit names a target order's stored body differently, or a final review with a waived or defective criterion fails the stored-body check with the profile's names.",
           "targets": [],
           "at": "2026-11-08T02:03:08.502Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-5af094bffcaf27ef",
+      "key": "decision:docs/evidence/WO-039/decisions.md#wo-039-d011",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "6d3ea3dfd9ee52bbcf8a096ca8440dd2a288bf870d38b47d09e9ea6202418a93",
+          "ref": "docs/evidence/WO-039/decisions.md#wo-039-d011",
+          "title": "WO-039-D011: The dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1) also judges the narrow register's headings: a dictionary break such as Un- and changed for Record…",
+          "summary": "{ \"id\": \"WO-039-D011\", \"date\": \"2026-11-08\", \"dispatch\": \"resume: next; step 7, the narrow register\", \"decision\": \"Decide the narrow register's headings, WO-023-D017's follow-up, as a floor size with a break below it. A state's name is drawn at the largest size at which its widest line fits its column, up to the stylesheet's size, but never below two thirds of it; a word that would need to be smaller breaks across lines with a hyphen into the fewest parts that fit at two thirds, the longer part first (breakWord in drawn-text.ts), and its lines are drawn at the size at which they then fit. A name with no words draws no heading at the full size. The wide register is unchanged, every name there",
+          "missing": false
+        },
+        {
+          "hash": "59722193b8e9d7ec3132b373936cffd9ac52417146eb1e4ad55901b11b6b62d8",
+          "ref": "docs/evidence/WO-039/decisions.md#wo-039-d011",
+          "title": "WO-039-D011: The dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1) also judges the narrow register's headings: a dictionary break such as Un- and changed for Record…",
+          "summary": "{ \"id\": \"WO-039-D011\", \"date\": \"2026-11-08\", \"dispatch\": \"resume: next; step 7, the narrow register\", \"decision\": \"Decide the narrow register's headings, WO-023-D017's follow-up, as a floor size with a break below it. A state's name is drawn at the largest size at which its widest line fits its column, up to the stylesheet's size, but never below two thirds of it; a word that would need to be smaller breaks across lines with a hyphen into the fewest parts that fit at two thirds, the longer part first (breakWord in drawn-text.ts), and its lines are drawn at the size at which they then fit. A name with no words draws no heading at the full size. The wide register is unchanged, every name there",
+          "missing": false
+        },
+        {
+          "hash": "82e40c6e248b018206e5e4c00fc7b31b46a351eba497ecbe2be6899cc086130e",
+          "ref": "docs/evidence/WO-039/decisions.md#wo-039-d011",
+          "title": "WO-039-D011: The dedicated A/B testing pass that redraws the states family (FUP-02c1ebe8146fe2f1) also judges the narrow register's headings: a dictionary break such as Un- and changed for Record…",
+          "summary": "{ \"id\": \"WO-039-D011\", \"date\": \"2026-11-08\", \"dispatch\": \"resume: next; step 7, the narrow register\", \"decision\": \"Decide the narrow register's headings, WO-023-D017's follow-up, as a floor size with a break below it. A state's name is drawn at the largest size at which its widest line fits its column, up to the stylesheet's size, but never below two thirds of it; a word that would need to be smaller breaks across lines with a hyphen into the fewest parts that fit at two thirds, the longer part first (breakWord in drawn-text.ts), and its lines are drawn at the size at which they then fit. A name with no words draws no heading at the full size. The wide register is unchanged, every name there",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-039-D011 decided the narrow register's headings as WO-039's interim rule (a floor of two thirds with a hyphenated break below it), and its reading critic (WO-039-D015) left a dictionary break, one size per header, foot-aligned headings, scaled line spacing and a glyph-measured fit to the dedicated A/B testing pass that redraws the states family, which WS-001 rule 25 owns and FUP-02c1ebe8146fe2f1 holds deferred.",
+          "reopenWhen": "The dedicated A/B testing pass that redraws the states family runs (FUP-02c1ebe8146fe2f1), or a state's name of a new batch breaks into more than two parts at 360 pixels.",
+          "targets": [],
+          "at": "2026-11-08T17:34:24.523Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-039-D011 decided the narrow register's headings as WO-039's interim rule (a floor of two thirds with a hyphenated break below it) and now names its 25 permitted frames at 360 by step; its reading critic (WO-039-D015) left a dictionary break, one size per header, foot-aligned headings, scaled line spacing and a glyph-measured fit to the dedicated A/B testing pass that redraws the states family, which WS-001 rule 25 owns and FUP-02c1ebe8146fe2f1 holds deferred.",
+          "reopenWhen": "The dedicated A/B testing pass that redraws the states family runs (FUP-02c1ebe8146fe2f1), or a state's name of a new batch breaks into more than two parts at 360 pixels.",
+          "targets": [],
+          "at": "2026-11-08T18:25:06.615Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "deferred",
+          "reason": "WO-039-D011 decided the narrow register's headings as WO-039's interim rule (a floor of two thirds with a hyphenated break below it) and names its 25 permitted frames at 360 by step; its reading critic (WO-039-D015) left a dictionary break, one size per header, foot-aligned headings, scaled line spacing and a glyph-measured fit to the dedicated A/B testing pass that redraws the states family, which WS-001 rule 25 owns and FUP-02c1ebe8146fe2f1 holds deferred.",
+          "reopenWhen": "The dedicated A/B testing pass that redraws the states family runs (FUP-02c1ebe8146fe2f1), or a state's name of a new batch breaks into more than two parts at 360 pixels.",
+          "targets": [],
+          "at": "2026-11-08T18:58:39.916Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-11889720fb205fb0",
+      "key": "decision:docs/evidence/WO-039/decisions.md#wo-039-d016",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "414c3081a651636e491f33e5c8cc6b067bfe666c8c69c932cef2bab931c3b2da",
+          "ref": "docs/evidence/WO-039/decisions.md#wo-039-d016",
+          "title": "WO-039-D016: The next standards pass over the enterprise batch or the states family types a states shape by the study's own state, object and transition unions, through a generic StatesShape or a…",
+          "summary": "{ \"id\": \"WO-039-D016\", \"date\": \"2026-11-08\", \"dispatch\": \"resume: next; the review ladder, round 1\", \"decision\": \"Dispose round 1 of the review ladder: three fresh reviewers, criteria, design and consistency, over the reviewed tree f0afed010052727b7d0177f1441b142f86c722a4, nineteen findings. Fifteen are fixed. The study view's comparison was still typed over seconds, which all three reviewers found, and the chart's axis was a conditional over key-mapped x values, through which the compiler could not relate one axis to another; the axes are now read from a table (D006). Foreign Key Mapping wrote its read rule twice, and its read-limit spec told the two arms apart at one limit only (D010). Gat",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-039-D016 recorded round 1's design finding that a states shape is not typed by the study's own state, object and transition unions; typing it reaches the shared builder and all sixteen enterprise presentations, beyond WO-039's Design, and the builder already refuses such a shape when the example builds, so it waits for the next standards pass over the enterprise batch or the states family under WS-001 rule 31.",
+          "reopenWhen": "The next standards pass over the enterprise batch or the states family is planned, or a study's shape names a state, object or transition its simulation does not have and only the example's build catches it.",
+          "targets": [],
+          "at": "2026-11-08T18:25:06.633Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-b730246e24e0c264",
+      "key": "decision:docs/evidence/WO-039/decisions.md#wo-039-d017",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "52781f79c269c50aef1ad20af0e78b505c7b0b9fe3bc95f529cd5294bfdb74db",
+          "ref": "docs/evidence/WO-039/decisions.md#wo-039-d017",
+          "title": "WO-039-D017: The next standards pass over the enterprise batch: Service Layer's objectNote reads each draft's tab from saveCalls, or from one table that saveCalls and the note share, instead of its…",
+          "summary": "{ \"id\": \"WO-039-D017\", \"date\": \"2026-11-08\", \"dispatch\": \"resume: next; the review ladder, round 2\", \"decision\": \"End the review ladder at round 2. Each round-1 reviewer, given its report, rechecked its fixes over the reviewed tree aa01296dfa364e9285fd1967283a9cee4cfa4e17 and then reviewed the whole change against the base again. The rechecks hold every fix D016 names, and find not held only what D016 recorded without a change. The decisions link waits for the records step, the hyphenation for the A/B pass, the shape typing for the next standards pass, and the shared namesOf and a chart axis tag were rejected. The design recheck adds that a stepped timeline would label a chart over steps as ",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-039-D017 recorded round 2's design note that Service Layer's objectNote picks each draft's tab with a ternary repeating saveCalls' assignment; it stood so at WO-039's base, breaks no acceptance criterion and no behaviour main had, so the review ladder recorded it for the next standards pass over the enterprise batch under WS-001 rule 31 instead of fixing it.",
+          "reopenWhen": "The next standards pass over the enterprise batch is planned, or Service Layer's saveCalls changes which tab saves a draft.",
+          "targets": [],
+          "at": "2026-11-08T18:36:00.410Z"
         }
       ]
     }

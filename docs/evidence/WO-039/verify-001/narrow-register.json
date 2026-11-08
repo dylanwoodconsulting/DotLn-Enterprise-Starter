@@ -1,0 +1,991 @@
+{
+  "measuredAt": "2026-11-08T19:16:38.514Z",
+  "width": 360,
+  "errors": [],
+  "studies": [
+    {
+      "id": "poeaa:226",
+      "slug": "service-layer",
+      "steps": 10,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Draft",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Acce-",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "pted",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Stored",
+          "sizeUnits": 9.77,
+          "sizePixels": 9.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Annou-",
+          "sizeUnits": 9.77,
+          "sizePixels": 9.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "nced",
+          "sizeUnits": 9.77,
+          "sizePixels": 9.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Refu-",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "sed",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 9.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 27.57,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 0,
+        "text": "an export in tab",
+        "overflow": 0,
+        "room": 27.57,
+        "estimatedRoom": 10.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:240",
+      "slug": "data-mapper",
+      "steps": 7,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Row",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "only",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Mapped",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0.15
+        },
+        {
+          "text": "Edited",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Unmapped",
+          "sizeUnits": 9.48,
+          "sizePixels": 8.97,
+          "columnWidth": 50,
+          "overflow": 0.17
+        }
+      ],
+      "smallestHeadingPixels": 8.97,
+      "headingOverflow": 0.17,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 21.5,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 5,
+        "text": "renamed; its row",
+        "overflow": 0,
+        "room": 21.5,
+        "estimatedRoom": 10.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:246",
+      "slug": "unit-of-work",
+      "steps": 6,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Clean",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "New",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Dirty",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Removed",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 10.25,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 21.3,
+      "leastEstimatedNoteRoom": 17,
+      "widestNote": {
+        "step": 3,
+        "text": "renamed 2 times",
+        "overflow": 0,
+        "room": 21.3,
+        "estimatedRoom": 17
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:254",
+      "slug": "identity-map",
+      "steps": 8,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 121.60000000000001,
+      "headings": [
+        {
+          "text": "Store",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 67.47,
+          "overflow": 0
+        },
+        {
+          "text": "only",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 67.47,
+          "overflow": 0
+        },
+        {
+          "text": "Mapped",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 67.47,
+          "overflow": 0
+        },
+        {
+          "text": "Two",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 67.47,
+          "overflow": 0
+        },
+        {
+          "text": "copies",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 67.47,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 21,
+      "leastEstimatedNoteRoom": 8,
+      "widestNote": {
+        "step": 7,
+        "text": "held as checked",
+        "overflow": 0,
+        "room": 21,
+        "estimatedRoom": 14.6
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:260",
+      "slug": "lazy-load",
+      "steps": 6,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Marker",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Loading",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Loaded",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 10.64,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 4,
+        "text": "read from memory",
+        "overflow": 0,
+        "room": 10.64,
+        "estimatedRoom": 10.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:268",
+      "slug": "identity-field",
+      "steps": 6,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "No key",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Own key",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Shared",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "key",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 32.54,
+      "leastEstimatedNoteRoom": 17,
+      "widestNote": {
+        "step": 1,
+        "text": "no key yet; not",
+        "overflow": 0,
+        "room": 32.54,
+        "estimatedRoom": 17
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:278",
+      "slug": "foreign-key-mapping",
+      "steps": 8,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Row",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "only",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Resolving",
+          "sizeUnits": 11.62,
+          "sizePixels": 10.99,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Resolved",
+          "sizeUnits": 13.07,
+          "sizePixels": 12.36,
+          "columnWidth": 66.67,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 10.99,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 22.54,
+      "leastEstimatedNoteRoom": 17,
+      "widestNote": {
+        "step": 0,
+        "text": "keys poeaa:246,",
+        "overflow": 0,
+        "room": 22.54,
+        "estimatedRoom": 17
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:357",
+      "slug": "remote-facade",
+      "steps": 7,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 95.2,
+      "headings": [
+        {
+          "text": "In its",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        },
+        {
+          "text": "source",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        },
+        {
+          "text": "In the",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        },
+        {
+          "text": "response",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        },
+        {
+          "text": "On the",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        },
+        {
+          "text": "page",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 76.27,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 10.07,
+      "leastEstimatedNoteRoom": 8,
+      "widestNote": {
+        "step": 6,
+        "text": "6 rows drawn",
+        "overflow": 0,
+        "room": 10.07,
+        "estimatedRoom": 8
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:363",
+      "slug": "data-transfer-object",
+      "steps": 6,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Domain",
+          "sizeUnits": 9.77,
+          "sizePixels": 9.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "object",
+          "sizeUnits": 9.77,
+          "sizePixels": 9.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "In",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "the",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "DTO",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Enco-",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "ded",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Page",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "view",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "Refu-",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        },
+        {
+          "text": "sed",
+          "sizeUnits": 11.72,
+          "sizePixels": 11.08,
+          "columnWidth": 40,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 9.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 21.96,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 4,
+        "text": "inside 334 bytes",
+        "overflow": 0,
+        "room": 21.96,
+        "estimatedRoom": 10.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:370",
+      "slug": "optimistic-offline-lock",
+      "steps": 6,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Editing",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Saved",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        },
+        {
+          "text": "Refused",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 66.67,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 20.66,
+      "leastEstimatedNoteRoom": 17,
+      "widestNote": {
+        "step": 3,
+        "text": "changes refused",
+        "overflow": 0,
+        "room": 20.66,
+        "estimatedRoom": 17
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:377",
+      "slug": "pessimistic-offline-lock",
+      "steps": 5,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Waiting",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Holds",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "lock",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Saved",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Expired",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 10.25,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 17.68,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 1,
+        "text": "turned away; Tab",
+        "overflow": 0,
+        "room": 17.68,
+        "estimatedRoom": 10.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:408",
+      "slug": "gateway",
+      "steps": 9,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Board",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "store",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Gateway",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "front",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Gateway",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "back",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "HTTP",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "API",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 10.25,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 10.07,
+      "leastEstimatedNoteRoom": -9.4,
+      "widestNote": {
+        "step": 3,
+        "text": "/api/uifa-board-v1;",
+        "overflow": 0,
+        "room": 10.07,
+        "estimatedRoom": -9.4
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:421",
+      "slug": "registry",
+      "steps": 5,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 117.92000000000002,
+      "headings": [
+        {
+          "text": "Not",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        },
+        {
+          "text": "asked",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        },
+        {
+          "text": "New",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        },
+        {
+          "text": "loader",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        },
+        {
+          "text": "Shared",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        },
+        {
+          "text": "loader",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 68.69,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 24.69,
+      "leastEstimatedNoteRoom": 10.92,
+      "widestNote": {
+        "step": 2,
+        "text": "shares loader 1",
+        "overflow": 0,
+        "room": 24.69,
+        "estimatedRoom": 10.92
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:443",
+      "slug": "plugin",
+      "steps": 7,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 102.24000000000001,
+      "headings": [
+        {
+          "text": "Unbound",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 73.92,
+          "overflow": 0
+        },
+        {
+          "text": "Canvas",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 73.92,
+          "overflow": 0
+        },
+        {
+          "text": "painter",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 73.92,
+          "overflow": 0
+        },
+        {
+          "text": "Null",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 73.92,
+          "overflow": 0
+        },
+        {
+          "text": "painter",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 73.92,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 13.24,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 20.43,
+      "leastEstimatedNoteRoom": 8.44,
+      "widestNote": {
+        "step": 2,
+        "text": "bound to null",
+        "overflow": 0,
+        "room": 20.43,
+        "estimatedRoom": 8.44
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:448",
+      "slug": "service-stub",
+      "steps": 10,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "To",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "run",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Stub",
+          "sizeUnits": 9.48,
+          "sizePixels": 8.97,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "answered",
+          "sizeUnits": 9.48,
+          "sizePixels": 8.97,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Passed",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Failed",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 8.97,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 18.77,
+      "leastEstimatedNoteRoom": 10.4,
+      "widestNote": {
+        "step": 0,
+        "text": "expects an HTTP",
+        "overflow": 0,
+        "room": 18.77,
+        "estimatedRoom": 17
+      },
+      "transitionOverflow": 0
+    },
+    {
+      "id": "poeaa:452",
+      "slug": "record-set",
+      "steps": 9,
+      "pixelsPerUnit": 0.9455,
+      "nameColumn": 124,
+      "headings": [
+        {
+          "text": "Uncha-",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "nged",
+          "sizeUnits": 12.64,
+          "sizePixels": 11.95,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Modified",
+          "sizeUnits": 9.48,
+          "sizePixels": 8.97,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Added",
+          "sizeUnits": 14,
+          "sizePixels": 13.24,
+          "columnWidth": 50,
+          "overflow": 0
+        },
+        {
+          "text": "Deleted",
+          "sizeUnits": 10.84,
+          "sizePixels": 10.25,
+          "columnWidth": 50,
+          "overflow": 0
+        }
+      ],
+      "smallestHeadingPixels": 8.97,
+      "headingOverflow": 0,
+      "nameOverflow": 0,
+      "noteOverflow": 0,
+      "noteRoom": 34.46,
+      "leastEstimatedNoteRoom": 23.6,
+      "widestNote": {
+        "step": 1,
+        "text": "note changed;",
+        "overflow": 0,
+        "room": 34.46,
+        "estimatedRoom": 30.2
+      },
+      "transitionOverflow": 0
+    }
+  ]
+}

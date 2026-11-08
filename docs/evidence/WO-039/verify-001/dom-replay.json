@@ -1,0 +1,118 @@
+{
+  "comparedAt": "2026-11-08T19:16:01.490Z",
+  "sources": [
+    {
+      "name": "dom-after.json.gz",
+      "bytes": 3156783,
+      "sha256": "a46501fa4c74d4627184f55ab8b4e814684e6d6765624d8f50d2196f1ecfd791",
+      "capturedAt": "2026-11-08T18:19:29.665Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    },
+    {
+      "name": "dom-candidate.json",
+      "bytes": 3156783,
+      "sha256": "fb26c049eb68cc5429023e937d07458e5404548ab214ff57a90a9b21c737ee11",
+      "capturedAt": "2026-11-08T19:14:25.088Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    }
+  ],
+  "permittedFrames": {
+    "viewport": 360,
+    "slugs": [
+      "service-layer",
+      "data-transfer-object",
+      "record-set"
+    ]
+  },
+  "missing": [],
+  "added": [],
+  "differingFrames": 0,
+  "allowedFrames": 0,
+  "unexpectedFrames": 0,
+  "headingChanges": [
+    {
+      "slug": "service-layer",
+      "before": [
+        "Draft",
+        "Acce-",
+        "pted",
+        "Stored",
+        "Annou-",
+        "nced",
+        "Refu-",
+        "sed"
+      ],
+      "after": [
+        "Draft",
+        "Acce-",
+        "pted",
+        "Stored",
+        "Annou-",
+        "nced",
+        "Refu-",
+        "sed"
+      ]
+    },
+    {
+      "slug": "data-transfer-object",
+      "before": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Enco-",
+        "ded",
+        "Page",
+        "view",
+        "Refu-",
+        "sed"
+      ],
+      "after": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Enco-",
+        "ded",
+        "Page",
+        "view",
+        "Refu-",
+        "sed"
+      ]
+    },
+    {
+      "slug": "record-set",
+      "before": [
+        "Uncha-",
+        "nged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ],
+      "after": [
+        "Uncha-",
+        "nged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ]
+    }
+  ],
+  "differences": []
+}

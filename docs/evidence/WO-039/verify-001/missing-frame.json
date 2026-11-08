@@ -1,0 +1,108 @@
+{
+  "comparedAt": "2026-11-08T19:16:01.827Z",
+  "sources": [
+    {
+      "name": "dom-before.json.gz",
+      "bytes": 3156426,
+      "sha256": "6c518ac10cdc4ffd37d6dff091e1f896a7850babe1be0d16238e43e113e10194",
+      "capturedAt": "2026-11-08T16:15:08.407Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    },
+    {
+      "name": "missing-frame.json",
+      "bytes": 3142595,
+      "sha256": "43ff01ae24264ea283b16ff219739e00531531458c9cbc4cabbe60c7e4606e25",
+      "capturedAt": "2026-11-08T16:15:08.407Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    }
+  ],
+  "permittedFrames": {
+    "viewport": 360,
+    "slugs": [
+      "service-layer",
+      "data-transfer-object",
+      "record-set"
+    ]
+  },
+  "missing": [
+    "record-set/360/8"
+  ],
+  "added": [],
+  "differingFrames": 0,
+  "allowedFrames": 0,
+  "unexpectedFrames": 0,
+  "headingChanges": [
+    {
+      "slug": "service-layer",
+      "before": [
+        "Draft",
+        "Accepted",
+        "Stored",
+        "Announced",
+        "Refused"
+      ],
+      "after": [
+        "Draft",
+        "Accepted",
+        "Stored",
+        "Announced",
+        "Refused"
+      ]
+    },
+    {
+      "slug": "data-transfer-object",
+      "before": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Encoded",
+        "Page",
+        "view",
+        "Refused"
+      ],
+      "after": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Encoded",
+        "Page",
+        "view",
+        "Refused"
+      ]
+    },
+    {
+      "slug": "record-set",
+      "before": [
+        "Unchanged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ],
+      "after": [
+        "Unchanged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ]
+    }
+  ],
+  "differences": []
+}

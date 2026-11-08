@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-039",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 18,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/18",
+  "baseBranch": "main",
+  "headBranch": "refactor/enterprise-pattern-presentations",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-039 --target-worktree --draft --branch refactor/enterprise-pattern-presentations --title \"refactor: reshape the enterprise pattern studies into the example to copy\" --body-file docs/evidence/WO-039/DRAFT-PR.md",
+      "session": "the verifying Codex CLI session, after verification-result pass (VerificationCompleted for VER-001 at 2026-11-08T19:32:24.332Z)",
+      "source": "docs/evidence/WO-039/verify-001/host-qualification.json, where the verifying session recorded the invocation and the host's decision; the final review read the pull request back from the forge (gh pr view, one GraphQL query for reviews, comments, review threads and title events, and gh run list)"
+    },
+    "headSha": "8968a30bdb2e1dc41a062522343f1ad41e1716ca",
+    "parent": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+    "tree": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+    "titleAsPublished": "refactor: reshape the enterprise pattern studies into the example to copy",
+    "body": "docs/evidence/WO-039/DRAFT-PR.md",
+    "verification": {
+      "id": "VER-001",
+      "path": "docs/verifications/WO-039/VER-001.md",
+      "verdict": "pass",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17"
+    },
+    "targetGate": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947 (review selection) at the same tree, recorded 2026-11-08T19:19:08.129Z by the verifier, after the executor's target-gate:dc474eef-8a2d-489a-85a8-33be0687f7b5 at 2026-11-08T18:54:33.145Z"
+  },
+  "finalReview": {
+    "observedAt": "2026-11-08T20:17:00Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "8968a30bdb2e1dc41a062522343f1ad41e1716ca",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "titleEvents": [
+      {
+        "at": "2026-11-08T19:33:04Z",
+        "actor": "github-actions",
+        "previousTitle": "refactor: reshape the enterprise pattern studies into the example to copy",
+        "currentTitle": ":recycle: refactor: reshape the enterprise pattern studies into the example to copy"
+      }
+    ],
+    "workflowRuns": [
+      {
+        "workflow": "CI",
+        "runId": 42515589911,
+        "event": "pull_request",
+        "headSha": "8968a30bdb2e1dc41a062522343f1ad41e1716ca",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "checks",
+            "conclusion": "success",
+            "startedAt": "2026-11-08T19:32:54Z",
+            "completedAt": "2026-11-08T19:41:56Z"
+          },
+          {
+            "name": "visual",
+            "conclusion": "success",
+            "startedAt": "2026-11-08T19:32:56Z",
+            "completedAt": "2026-11-08T19:36:53Z"
+          }
+        ]
+      },
+      {
+        "workflow": "Pull request title",
+        "runId": 42515589930,
+        "event": "pull_request",
+        "headSha": "8968a30bdb2e1dc41a062522343f1ad41e1716ca",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "title",
+            "conclusion": "success",
+            "startedAt": "2026-11-08T19:32:54Z",
+            "completedAt": "2026-11-08T19:33:07Z"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "item": "The title workflow decorated the draft's conventional title with its type's gitmoji, leaving a conventional type in the title.",
+        "route": "fixed at the final publish",
+        "disposition": "WS-001 rule 20 and the operator's preference ask for a gitmoji and a subject with no conventional type; the final publish sets such a title, which the workflow leaves as written (WO-039-D019)."
+      },
+      {
+        "item": "CI's checks and visual jobs and the title job on the draft head.",
+        "route": "none needed",
+        "disposition": "All three passed on the tree the reviewed commits end at; the published head's runs follow the final publish."
+      }
+    ],
+    "notes": [
+      "The draft head's tree is the tree VER-001 verified and both review gate rows record, and the three reviewed commits end at the same tree, so the draft's runs judged the reviewed bytes.",
+      "The pull request had no review, comment or review thread to route."
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "comparedAt": "2026-11-08T19:16:01.693Z",
+  "sources": [
+    {
+      "name": "dom-before.json.gz",
+      "bytes": 3156426,
+      "sha256": "6c518ac10cdc4ffd37d6dff091e1f896a7850babe1be0d16238e43e113e10194",
+      "capturedAt": "2026-11-08T16:15:08.407Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    },
+    {
+      "name": "body-inside-heading-exemption.json",
+      "bytes": 3156442,
+      "sha256": "9ea755c211907cff23daacd4647246bde76bbcc59c1313d3ca27afcbff8e7909",
+      "capturedAt": "2026-11-08T16:15:08.407Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    }
+  ],
+  "permittedFrames": {
+    "viewport": 360,
+    "slugs": [
+      "service-layer",
+      "data-transfer-object",
+      "record-set"
+    ]
+  },
+  "missing": [],
+  "added": [],
+  "differingFrames": 1,
+  "allowedFrames": 0,
+  "unexpectedFrames": 1,
+  "headingChanges": [
+    {
+      "slug": "service-layer",
+      "before": [
+        "Draft",
+        "Accepted",
+        "Stored",
+        "Announced",
+        "Refused"
+      ],
+      "after": [
+        "Draft",
+        "Accepted",
+        "Stored",
+        "Announced",
+        "Refused"
+      ]
+    },
+    {
+      "slug": "data-transfer-object",
+      "before": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Encoded",
+        "Page",
+        "view",
+        "Refused"
+      ],
+      "after": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Encoded",
+        "Page",
+        "view",
+        "Refused"
+      ]
+    },
+    {
+      "slug": "record-set",
+      "before": [
+        "Unchanged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ],
+      "after": [
+        "Unchanged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ]
+    }
+  ],
+  "differences": [
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 3,
+      "allowed": false,
+      "nodes": {
+        "removed": [
+          {
+            "index": 0,
+            "text": "Authored study · Claude dotln-worker author-09 · 2026-11-07"
+          }
+        ],
+        "added": [
+          {
+            "index": 0,
+            "text": "Authored study · Claude dotln-worker author-09 · 2026-11-07 verifier control"
+          }
+        ]
+      }
+    }
+  ]
+}

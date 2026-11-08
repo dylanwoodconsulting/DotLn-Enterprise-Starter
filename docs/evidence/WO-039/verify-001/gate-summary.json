@@ -1,0 +1,147 @@
+{
+  "capturedAt": "2026-11-08T19:19:38.427Z",
+  "currentTree": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+  "gate": {
+    "checkId": "target:dotln-angular",
+    "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+    "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+    "selection": "review",
+    "names": [
+      "install",
+      "lint",
+      "typecheck",
+      "test",
+      "format",
+      "build",
+      "e2e",
+      "visual"
+    ],
+    "exitCode": 0,
+    "executed": true,
+    "recordedAt": "2026-11-08T19:19:08.129Z",
+    "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947",
+    "durationMs": 130504
+  },
+  "commands": [
+    {
+      "checkId": "target:dotln-angular:install",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "install"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:17:33.258Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:install",
+      "durationMs": 37848,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:lint",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "lint"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:26.918Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:lint",
+      "durationMs": 53326,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:typecheck",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:28.240Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:typecheck",
+      "durationMs": 1042,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:test",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "test"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:29.944Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:test",
+      "durationMs": 1418,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:format",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "format"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:32.264Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:format",
+      "durationMs": 2028,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:build",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "build"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:33.604Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:build",
+      "durationMs": 1040,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:e2e",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "e2e"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:18:34.870Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:e2e",
+      "durationMs": 971,
+      "baseCheckoutWriteCount": 0
+    },
+    {
+      "checkId": "target:dotln-angular:visual",
+      "treeHash": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+      "commit": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+      "selection": "review",
+      "names": [
+        "visual"
+      ],
+      "exitCode": 0,
+      "executed": true,
+      "recordedAt": "2026-11-08T19:19:07.987Z",
+      "evidenceRef": "target-gate:d766a76f-2e45-494d-9f8a-56a3e0bd2947:visual",
+      "durationMs": 32831,
+      "baseCheckoutWriteCount": 0
+    }
+  ]
+}

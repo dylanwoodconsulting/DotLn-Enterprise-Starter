@@ -1,0 +1,232 @@
+
+ RUN  v5.0.5 <scratch copy>/libs/features/tools
+
+ ❯ |tools| src/lib/studies/poeaa/foreign-key-mapping.model.spec.ts (9 tests | 1 failed | 8 skipped) 9ms
+   ↓ runs the example the record names, from the record’s own parameters
+   ↓ keeps each relation as the key of the row it names, on the referring row
+   ↓ registers an object before following its keys, so a key back to it finds it without a read
+   ↓ reads each row once through the identity map, and every reference to a row is the same object
+   × stops at its read limit only when the next key still to resolve needs a read 8ms
+   ↓ goes round the cycle without an identity map, building copies, until the limit stops it
+   ↓ draws each row in its place and names every place in the text equivalent
+   ↓ draws the run without an identity map stopping with every row still resolving
+   ↓ charts rows read with and without the identity map, and names the moments in order
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 skipped (9)
+   Start at  14:01:37
+   Duration  659ms (environment 43%, import 30%, setup 19%, worker 5%, transform 2%, tests 1%)
+
+
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |tools| src/lib/studies/poeaa/foreign-key-mapping.model.spec.ts > stops at its read limit only when the next key still to resolve needs a read
+AssertionError: limit 3: expected [ { …(2) }, …(4) ] to deeply equal [ { …(2) }, …(7) ]
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -151,13 +151,11 @@[39m
+[2m            ],[22m
+[2m            "row": "identityMap",[22m
+[2m          },[22m
+[2m          {[22m
+[2m            "copy": 1,[22m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-           ],[39m
+[31m+           "references": [],[39m
+[2m            "row": "unitOfWork",[22m
+[2m          },[22m
+[2m        ],[22m
+[2m        "pending": [[22m
+[2m          {[22m
+[33m@@ -167,173 +165,16 @@[39m
+[2m          {[22m
+[2m            "next": 1,[22m
+[2m            "object": 1,[22m
+[2m          },[22m
+[2m          {[22m
+[32m-           "next": 1,[39m
+[31m+           "next": 0,[39m
+[2m            "object": 2,[22m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       "reads": 3,[39m
+[32m-     },[39m
+[32m-     "operation": {[39m
+[32m-       "from": "unitOfWork",[39m
+[32m-       "how": "found",[39m
+[32m-       "key": 254,[39m
+[32m-       "kind": "follow",[39m
+[32m-       "resolved": [],[39m
+[32m-       "to": "identityMap",[39m
+[32m-     },[39m
+[32m-   },[39m
+[32m-   {[39m
+[32m-     "loader": {[39m
+[32m-       "identityMap": {[39m
+[32m-         "dataMapper": 0,[39m
+[32m-         "identityMap": 1,[39m
+[32m-         "unitOfWork": 2,[39m
+[32m-       },[39m
+[32m-       "objects": [[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-           ],[39m
+[32m-           "row": "dataMapper",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             2,[39m
+[32m-           ],[39m
+[32m-           "row": "identityMap",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-             0,[39m
+[32m-           ],[39m
+[32m-           "row": "unitOfWork",[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       "pending": [[39m
+[32m-         {[39m
+[32m-           "next": 1,[39m
+[32m-           "object": 0,[39m
+[2m          },[22m
+[32m-         {[39m
+[32m-           "next": 1,[39m
+[32m-           "object": 1,[39m
+[32m-         },[39m
+[2m        ],[22m
+[2m        "reads": 3,[22m
+[2m      },[22m
+[2m      "operation": {[22m
+[32m-       "from": "unitOfWork",[39m
+[32m-       "how": "found",[39m
+[32m-       "key": 240,[39m
+[32m-       "kind": "follow",[39m
+[32m-       "resolved": [[39m
+[32m-         "unitOfWork",[39m
+[32m-       ],[39m
+[32m-       "to": "dataMapper",[39m
+[32m-     },[39m
+[32m-   },[39m
+[32m-   {[39m
+[32m-     "loader": {[39m
+[32m-       "identityMap": {[39m
+[32m-         "dataMapper": 0,[39m
+[32m-         "identityMap": 1,[39m
+[32m-         "unitOfWork": 2,[39m
+[32m-       },[39m
+[32m-       "objects": [[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-           ],[39m
+[32m-           "row": "dataMapper",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             2,[39m
+[32m-             0,[39m
+[32m-           ],[39m
+[32m-           "row": "identityMap",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-             0,[39m
+[32m-           ],[39m
+[32m-           "row": "unitOfWork",[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       "pending": [[39m
+[32m-         {[39m
+[32m-           "next": 1,[39m
+[32m-           "object": 0,[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       "reads": 3,[39m
+[32m-     },[39m
+[32m-     "operation": {[39m
+[32m-       "from": "identityMap",[39m
+[32m-       "how": "found",[39m
+[32m-       "key": 240,[39m
+[32m-       "kind": "follow",[39m
+[32m-       "resolved": [[39m
+[32m-         "identityMap",[39m
+[32m-       ],[39m
+[32m-       "to": "dataMapper",[39m
+[32m-     },[39m
+[32m-   },[39m
+[32m-   {[39m
+[32m-     "loader": {[39m
+[32m-       "identityMap": {[39m
+[32m-         "dataMapper": 0,[39m
+[32m-         "identityMap": 1,[39m
+[32m-         "unitOfWork": 2,[39m
+[32m-       },[39m
+[32m-       "objects": [[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-             2,[39m
+[32m-           ],[39m
+[32m-           "row": "dataMapper",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             2,[39m
+[32m-             0,[39m
+[32m-           ],[39m
+[32m-           "row": "identityMap",[39m
+[32m-         },[39m
+[32m-         {[39m
+[32m-           "copy": 1,[39m
+[32m-           "references": [[39m
+[32m-             1,[39m
+[32m-             0,[39m
+[32m-           ],[39m
+[32m-           "row": "unitOfWork",[39m
+[32m-         },[39m
+[32m-       ],[39m
+[32m-       "pending": [],[39m
+[32m-       "reads": 3,[39m
+[32m-     },[39m
+[32m-     "operation": {[39m
+[32m-       "from": "dataMapper",[39m
+[32m-       "how": "found",[39m
+[32m-       "key": 246,[39m
+[32m-       "kind": "follow",[39m
+[32m-       "resolved": [[39m
+[32m-         "dataMapper",[39m
+[32m-       ],[39m
+[32m-       "to": "unitOfWork",[39m
+[31m+       "kind": "stopped",[39m
+[2m      },[22m
+[2m    },[22m
+[2m  ][22m
+
+ ❯ src/lib/studies/poeaa/foreign-key-mapping.model.spec.ts:98:76
+     96|             { operation: { kind: 'stopped' }, loader: whole[past - 1].…
+     97|           ];
+     98|     expect(foreignKeyRun({ ...example, readLimit }), `limit ${readLimi…
+       |                                                                            ^
+     99|   }
+    100| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
