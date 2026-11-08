@@ -1,0 +1,1025 @@
+{
+  "comparedAt": "2026-11-08T19:16:01.415Z",
+  "sources": [
+    {
+      "name": "dom-before.json.gz",
+      "bytes": 3156426,
+      "sha256": "6c518ac10cdc4ffd37d6dff091e1f896a7850babe1be0d16238e43e113e10194",
+      "capturedAt": "2026-11-08T16:15:08.407Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    },
+    {
+      "name": "dom-candidate.json",
+      "bytes": 3156783,
+      "sha256": "fb26c049eb68cc5429023e937d07458e5404548ab214ff57a90a9b21c737ee11",
+      "capturedAt": "2026-11-08T19:14:25.088Z",
+      "studies": 20,
+      "statesStudies": 16,
+      "viewports": [
+        1440,
+        360
+      ],
+      "frames": 238,
+      "errors": []
+    }
+  ],
+  "permittedFrames": {
+    "viewport": 360,
+    "slugs": [
+      "service-layer",
+      "data-transfer-object",
+      "record-set"
+    ]
+  },
+  "missing": [],
+  "added": [],
+  "differingFrames": 25,
+  "allowedFrames": 25,
+  "unexpectedFrames": 0,
+  "headingChanges": [
+    {
+      "slug": "service-layer",
+      "before": [
+        "Draft",
+        "Accepted",
+        "Stored",
+        "Announced",
+        "Refused"
+      ],
+      "after": [
+        "Draft",
+        "Acce-",
+        "pted",
+        "Stored",
+        "Annou-",
+        "nced",
+        "Refu-",
+        "sed"
+      ]
+    },
+    {
+      "slug": "data-transfer-object",
+      "before": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Encoded",
+        "Page",
+        "view",
+        "Refused"
+      ],
+      "after": [
+        "Domain",
+        "object",
+        "In",
+        "the",
+        "DTO",
+        "Enco-",
+        "ded",
+        "Page",
+        "view",
+        "Refu-",
+        "sed"
+      ]
+    },
+    {
+      "slug": "record-set",
+      "before": [
+        "Unchanged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ],
+      "after": [
+        "Uncha-",
+        "nged",
+        "Modified",
+        "Added",
+        "Deleted"
+      ]
+    }
+  ],
+  "differences": [
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 0,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 1,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 2,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 3,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 4,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 5,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 6,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 7,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 8,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "service-layer",
+      "viewport": 360,
+      "step": 9,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 7,
+            "text": "Accepted"
+          },
+          {
+            "index": 9,
+            "text": "Announced"
+          },
+          {
+            "index": 10,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 7,
+            "text": "Acce-"
+          },
+          {
+            "index": 8,
+            "text": "pted"
+          },
+          {
+            "index": 10,
+            "text": "Annou-"
+          },
+          {
+            "index": 11,
+            "text": "nced"
+          },
+          {
+            "index": 12,
+            "text": "Refu-"
+          },
+          {
+            "index": 13,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 0,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 1,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 2,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 3,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 4,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "data-transfer-object",
+      "viewport": 360,
+      "step": 5,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 11,
+            "text": "Encoded"
+          },
+          {
+            "index": 14,
+            "text": "Refused"
+          }
+        ],
+        "added": [
+          {
+            "index": 11,
+            "text": "Enco-"
+          },
+          {
+            "index": 12,
+            "text": "ded"
+          },
+          {
+            "index": 15,
+            "text": "Refu-"
+          },
+          {
+            "index": 16,
+            "text": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 0,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 1,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 2,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 3,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 4,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 5,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 6,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 7,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "record-set",
+      "viewport": 360,
+      "step": 8,
+      "allowed": true,
+      "nodes": {
+        "removed": [
+          {
+            "index": 6,
+            "text": "Unchanged"
+          }
+        ],
+        "added": [
+          {
+            "index": 6,
+            "text": "Uncha-"
+          },
+          {
+            "index": 7,
+            "text": "nged"
+          }
+        ]
+      }
+    }
+  ]
+}

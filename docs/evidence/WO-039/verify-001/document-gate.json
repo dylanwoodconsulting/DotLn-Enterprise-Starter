@@ -1,0 +1,13 @@
+{
+  "checkId": "npm run test:docs",
+  "treeHash": "a4ab04f5af0b439a05659f89995403753ee36e88",
+  "exitCode": 0,
+  "executed": true,
+  "recordedAt": "2026-11-08T19:32:13.560Z",
+  "evidenceRef": "host-gate:92442bff8d5f04edd661d6fbd5c0c90934808b886a5fdcf681f2bdef5a446be4:npm run test:docs",
+  "durationMs": 598337,
+  "passed": 14,
+  "failed": 0,
+  "waiting": "0 h 9 min behind another checkout",
+  "total": "0 h 10 min"
+}

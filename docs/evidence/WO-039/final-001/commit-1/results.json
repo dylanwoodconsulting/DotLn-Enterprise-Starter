@@ -1,0 +1,49 @@
+{
+  "commit": "cb82e00",
+  "tree": "e81441cd67ea91b2930a237b8c0c16196c59b44e",
+  "probes": [
+    {
+      "probe": "tools-types-1",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "libs/features/tools/tsconfig.lib.json",
+        "--noEmit",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "log": "tools-types-1.log"
+    },
+    {
+      "probe": "tools-types-2",
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "libs/features/tools/tsconfig.spec.json",
+        "--noEmit",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 0,
+      "log": "tools-types-2.log"
+    },
+    {
+      "probe": "states-specs",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/composites/study-visuals/drawn-text.spec.ts",
+        "src/lib/composites/study-visuals/states/states-register.spec.ts",
+        "src/lib/composites/study-visuals/states/states.spec.ts"
+      ],
+      "exitCode": 0,
+      "log": "states-specs.log"
+    }
+  ]
+}

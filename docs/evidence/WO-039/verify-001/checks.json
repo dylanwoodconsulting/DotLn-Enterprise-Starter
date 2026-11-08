@@ -1,0 +1,146 @@
+{
+  "capturedAt": "2026-11-08T19:16:02.175Z",
+  "records": [
+    {
+      "name": "fresh shape audit",
+      "script": "shape-audit.mjs",
+      "expected": 0,
+      "exitCode": 0,
+      "summary": "poeaa: 48 files, 937 functions, 0 over four positional parameters, 1 of 70 or more counted lines (poeaa/pessimistic-offline-lock.presentation.ts shapeOf 71); 1763 catalog strings, 0 numbered placeholders"
+    },
+    {
+      "name": "fresh capture versus base",
+      "script": "compare-dom.mjs",
+      "expected": 0,
+      "exitCode": 0,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":25,\"allowedFrames\":25,\"unexpectedFrames\":0,\"missing\":0,\"added\":0}"
+    },
+    {
+      "name": "fresh capture versus executor candidate",
+      "script": "compare-dom.mjs",
+      "expected": 0,
+      "exitCode": 0,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":0,\"allowedFrames\":0,\"unexpectedFrames\":0,\"missing\":0,\"added\":0}"
+    },
+    {
+      "name": "declared comparator control",
+      "script": "comparator-control.mjs",
+      "expected": 0,
+      "exitCode": 0,
+      "summary": "{\"exitCode\":1,\"refused\":true}"
+    },
+    {
+      "name": "body-inside-heading-exemption",
+      "script": "compare-dom.mjs",
+      "expected": 1,
+      "exitCode": 1,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":1,\"allowedFrames\":0,\"unexpectedFrames\":1,\"missing\":0,\"added\":0}"
+    },
+    {
+      "name": "aria-inside-heading-exemption",
+      "script": "compare-dom.mjs",
+      "expected": 1,
+      "exitCode": 1,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":1,\"allowedFrames\":0,\"unexpectedFrames\":1,\"missing\":0,\"added\":0}"
+    },
+    {
+      "name": "missing-frame",
+      "script": "compare-dom.mjs",
+      "expected": 1,
+      "exitCode": 1,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":0,\"allowedFrames\":0,\"unexpectedFrames\":0,\"missing\":1,\"added\":0}"
+    },
+    {
+      "name": "browser-error",
+      "script": "compare-dom.mjs",
+      "expected": 1,
+      "exitCode": 1,
+      "summary": "{\"beforeFrames\":238,\"afterFrames\":238,\"differingFrames\":0,\"allowedFrames\":0,\"unexpectedFrames\":0,\"missing\":0,\"added\":0}"
+    }
+  ],
+  "inventory": {
+    "studies": 20,
+    "states": 16,
+    "frames": 238,
+    "uniqueFrames": 238,
+    "continuousSteps": true
+  },
+  "flowLoaderMigration": {
+    "specs": 20,
+    "nonMechanical": []
+  },
+  "switches": [
+    {
+      "file": "data-mapper.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "data-transfer-object.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "foreign-key-mapping.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "gateway.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "identity-field.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "identity-map.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "lazy-load.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "optimistic-offline-lock.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "pessimistic-offline-lock.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "plugin.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "record-set.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "registry.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "remote-facade.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "service-layer.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "service-stub.presentation.ts",
+      "count": 0
+    },
+    {
+      "file": "unit-of-work.presentation.ts",
+      "count": 0
+    }
+  ],
+  "baselineChanges": [],
+  "addedSuppressions": [],
+  "capture": {
+    "expandedSha256": "fb26c049eb68cc5429023e937d07458e5404548ab214ff57a90a9b21c737ee11",
+    "expandedBytes": 3156783,
+    "storedBytes": 183968,
+    "losslessRoundTrip": true
+  }
+}

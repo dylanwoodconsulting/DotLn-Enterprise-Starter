@@ -1,0 +1,16 @@
+{
+  "failures": [
+    {
+      "probe": "walkthrough.mjs",
+      "startedAt": "2026-11-08T19:10:47Z",
+      "cause": "The probe read the slider synchronously immediately after a click, before Angular rendered the new value.",
+      "disposition": "Changed the probe to await Playwright's toHaveValue assertion. The rerun passed all ten study/viewport sessions. No implementation edit."
+    },
+    {
+      "probe": "run-boundaries.mjs",
+      "startedAt": "2026-11-08T19:15:08.692Z",
+      "cause": "Array.map passed its index and array to path.resolve; the probe launcher threw before it copied or ran a test.",
+      "disposition": "Wrapped resolve in a single-argument callback. No implementation edit."
+    }
+  ]
+}

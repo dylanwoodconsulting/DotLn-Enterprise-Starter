@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-11-08T19:15:27.742Z",
+  "command": [
+    "node",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "libs/features/tools/vite.config.mts",
+    "src/lib/studies/wo039-verifier.spec.ts"
+  ],
+  "exitCode": 0,
+  "passed": true
+}

@@ -793,7 +793,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-027 the workspace says and checks what is so | nothing on screen; CI's board count that counts a marker wherever a defect sits, a `check:scripts` that fails on a missing or stale row, a title workflow that leaves a gitmoji-and-subject title as written, reference documents whose command lists match the gate | merged; DotLn-Angular #15, `DotLn Angular v0.10.1` |
 | WO-034 standards pass I | the first movement batch's code read as the example, the wall study explaining its brief clearance correction, the guards tightened | merged; DotLn-Angular #16, `DotLn Angular v0.10.2` |
 | WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | merged; DotLn-Angular #17, `DotLn Angular v0.11.0` |
-| WO-039 standards pass II | nothing new on screen; the enterprise batch's code read as the example an executable-model batch copies, Foreign Key Mapping's limit counting what it should, the narrow register's headings as decided | filed |
+| WO-039 standards pass II | nothing new on screen but the narrow register's state headings, which keep two thirds of their size at 360 and break a longer name across two lines; the enterprise batch's code read as the example an executable-model batch copies, Foreign Key Mapping's limit counting what it should | final-reviewed; DotLn-Angular #18; [evidence](../evidence/WO-039/README.md) |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed |
 | WO-040 standards pass III | nothing new on screen but nineteen flow state sentences that read as English; both movement batches reading as one example | filed |
 | WO-035 every string on screen through the message system | nothing changed on screen; the catalog's mined text arriving through the message system, a missing message a visible failure | filed |
@@ -866,7 +866,7 @@ minutes, 227.0 waiting minutes, a span of 1,110.3 minutes.
 | WO-036 | filed    | [the order](../work-orders/WO-036-scene-walls-and-ways.md) |
 | WO-037 | filed    | [the order](../work-orders/WO-037-scene-shooting-and-bullets.md) |
 | WO-038 | filed    | [the order](../work-orders/WO-038-reading-at-full-size.md) |
-| WO-039 | filed    | [the order](../work-orders/WO-039-standards-pass-enterprise-presentations.md) |
+| WO-039 | final-reviewed | DotLn-Angular #18; [evidence](../evidence/WO-039/README.md) |
 | WO-040 | filed    | [the order](../work-orders/WO-040-standards-pass-movement-second-batch.md) |
 
 <!-- dotln-workstream:start -->

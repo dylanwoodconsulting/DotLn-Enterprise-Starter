@@ -1,0 +1,27 @@
+{
+  "capturedAt": "2026-11-08T19:10:41.026Z",
+  "method": "crypto.randomInt, sampling without replacement from sorted sixteen-file inventory",
+  "population": [
+    "data-mapper.presentation.ts",
+    "data-transfer-object.presentation.ts",
+    "foreign-key-mapping.presentation.ts",
+    "gateway.presentation.ts",
+    "identity-field.presentation.ts",
+    "identity-map.presentation.ts",
+    "lazy-load.presentation.ts",
+    "optimistic-offline-lock.presentation.ts",
+    "pessimistic-offline-lock.presentation.ts",
+    "plugin.presentation.ts",
+    "record-set.presentation.ts",
+    "registry.presentation.ts",
+    "remote-facade.presentation.ts",
+    "service-layer.presentation.ts",
+    "service-stub.presentation.ts",
+    "unit-of-work.presentation.ts"
+  ],
+  "selected": [
+    "libs/features/tools/src/lib/studies/poeaa/remote-facade.presentation.ts",
+    "libs/features/tools/src/lib/studies/poeaa/foreign-key-mapping.presentation.ts",
+    "libs/features/tools/src/lib/studies/poeaa/data-mapper.presentation.ts"
+  ]
+}

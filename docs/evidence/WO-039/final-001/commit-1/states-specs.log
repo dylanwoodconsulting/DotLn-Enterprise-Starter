@@ -1,0 +1,15 @@
+
+ RUN  v5.0.5 <export>/libs/features/tools
+
+ ✓ |tools| src/lib/composites/study-visuals/states/states-register.spec.ts (5 tests) 6ms
+ ✓ |tools| src/lib/composites/study-visuals/drawn-text.spec.ts (3 tests) 8ms
+ ✓ |tools| src/lib/composites/study-visuals/states/states.spec.ts (4 tests) 218ms
+
+ Test Files  3 passed (3)
+      Tests  12 passed (12)
+   Start at  15:15:54
+   Duration  1.42s (environment 38%, import 23%, worker 16%, setup 13%, tests 9%, transform 2%)
+
+
+The `nxViteTsPaths` plugin from `@nx/vite/plugins/nx-tsconfig-paths.plugin` is deprecated and will be removed in Nx v24. Replace it with `tsconfigPaths()` from the `vite-tsconfig-paths` package. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.
+The `nxCopyAssetsPlugin` plugin from `@nx/vite/plugins/nx-copy-assets.plugin` is deprecated and will be removed in Nx v24. Use Vite's native `publicDir` option or the `vite-plugin-static-copy` package instead. See https://nx.dev/docs/technologies/build-tools/vite/guides/configure-vite for details.

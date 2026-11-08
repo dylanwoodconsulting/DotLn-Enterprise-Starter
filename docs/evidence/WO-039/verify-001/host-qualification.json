@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-08",
+  "role": "verifier",
+  "harness": "codex-cli",
+  "harnessVersion": "0.167.0",
+  "authority": "docs/repositories/dotln-angular.md#publish-a-change, draft at verified",
+  "command": "node scripts/worktree.mjs publish WO-039 --target-worktree --draft --branch refactor/enterprise-pattern-presentations --title \"refactor: reshape the enterprise pattern studies into the example to copy\" --body-file docs/evidence/WO-039/DRAFT-PR.md",
+  "hookDecision": "No host tool-call hook is observed under Codex; the registered publication helper admitted the draft after VerificationCompleted pass.",
+  "hostDecision": "Executed successfully, exit 0; no permission prompt or automatic approval rejection.",
+  "repository": "DylanBWood/DotLn-Angular",
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/18",
+  "number": 18,
+  "draft": true,
+  "state": "open",
+  "merged": false,
+  "branch": "refactor/enterprise-pattern-presentations",
+  "head": "8968a30bdb2e1dc41a062522343f1ad41e1716ca",
+  "tree": "aa01296dfa364e9285fd1967283a9cee4cfa4e17",
+  "base": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+  "headAndIndexUnchanged": true,
+  "readback": "GitHub get_pr_info confirmed the open draft, base, head, body and 105 changed paths. Local git rev-parse confirmed the published commit's tree equals the verified tree."
+}

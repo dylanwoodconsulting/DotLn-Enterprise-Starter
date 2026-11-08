@@ -1,0 +1,38 @@
+{
+  "commit": "c32ebd8",
+  "tree": "fe5d85e4d99ea6e539a7f63642bb05c4cf7dfbe0",
+  "probes": [
+    {
+      "probe": "tooling-tests",
+      "command": [
+        "node",
+        "--test",
+        "tools/board-boundary.test.mjs",
+        "tools/board-count.test.mjs",
+        "tools/board-fixtures.test.mjs",
+        "tools/bundle.test.mjs",
+        "tools/catalog-join.test.mjs",
+        "tools/catalog.test.mjs",
+        "tools/check-script-reference.test.mjs",
+        "tools/event-hygiene.test.mjs",
+        "tools/foundation-checks.test.mjs",
+        "tools/i18n-copies.test.mjs",
+        "tools/pr-title.test.mjs",
+        "tools/scene-fixtures.test.mjs",
+        "tools/studies.test.mjs",
+        "tools/study-messages.test.mjs"
+      ],
+      "exitCode": 0,
+      "log": "tooling-tests.log"
+    },
+    {
+      "probe": "studies-check",
+      "command": [
+        "node",
+        "tools/scripts/catalog/check-studies.mjs"
+      ],
+      "exitCode": 0,
+      "log": "studies-check.log"
+    }
+  ]
+}

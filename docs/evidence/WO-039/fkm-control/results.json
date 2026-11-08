@@ -1,0 +1,44 @@
+{
+  "base": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3",
+  "test": "stops at its read limit only when the next key still to resolve needs a read",
+  "arms": [
+    {
+      "name": "candidate",
+      "simulation": "libs/features/tools/src/lib/studies/poeaa/foreign-key-mapping.simulation.ts",
+      "simulationSha256": "6d0029456438a78fc91ddcf294594df41434188389ec613894d68172a9e44923",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/studies/poeaa/foreign-key-mapping.model.spec.ts",
+        "-t",
+        "stops at its read limit only when the next key still to resolve needs a read"
+      ],
+      "exitCode": 0,
+      "testFailed": false,
+      "met": true,
+      "log": "candidate.log"
+    },
+    {
+      "name": "control",
+      "simulation": "f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3:libs/features/tools/src/lib/studies/poeaa/foreign-key-mapping.simulation.ts",
+      "simulationSha256": "be970357ef973aceb53b23879d9ed1906f6c36eaa45c74e36368f23638ac13ee",
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "libs/features/tools/vite.config.mts",
+        "src/lib/studies/poeaa/foreign-key-mapping.model.spec.ts",
+        "-t",
+        "stops at its read limit only when the next key still to resolve needs a read"
+      ],
+      "exitCode": 1,
+      "testFailed": true,
+      "met": true,
+      "log": "control.log"
+    }
+  ]
+}
