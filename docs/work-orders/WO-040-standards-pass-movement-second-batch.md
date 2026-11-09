@@ -1,4 +1,4 @@
-# WO-040 — Standards pass III: the second movement batch's twenty presentations reshaped to the rule the first batch now follows, the first batch's boarded residue cleared, the stream batches read under the rules and their nineteen state labels reworded, with every other output unchanged
+# WO-040 — Standards pass III: the second movement batch's twenty presentations reshaped to the rule the first batch now follows, the first batch's boarded residue cleared, the shared flow builder's frame taken as a description and nineteen flow state labels reworded, with every other output unchanged
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
@@ -9,11 +9,17 @@
 **Target release classification:** patch
 **Target release notes:** reviewed
 **Cost:** edits the twenty `*.presentation.ts` modules of the second movement
-batch (WO-028's) under `libs/features/tools/src/lib/studies/movement/` with
+batch (WO-028's) under `libs/features/tools/src/lib/studies/movement/` and
+the one function over the rule in its simulations
+(`blending-versus-arbitration.simulation.ts`'s `calculateCombinationStep`,
+five positional parameters), with
 their specs and the messages they read in `apps/dotln/public/i18n/studyAifg/en.json`
 (the 21 flat model keys nested, the two numbered placeholders named), the
-shared `flow.ts` builder's `frameOf` (nine positional parameters, read by
-every flow study), the first batch's residue WO-034's verifier and final
+four shared builder functions over four positional parameters, read by
+every flow or marble study (`libs/features/tools/src/lib/studies/flow.ts`'s
+`frameOf` at nine, line 185, `studyOf` at five, line 247, and `marbleFrames`
+at five, line 356, and `studies/rxjs/marbles.ts`'s `eventsOf` at five, line
+136), the first batch's residue WO-034's verifier and final
 reviewer boarded (the eleven time-carrying placeholders in nine
 presentations and the testing copy, the inline `motionPoints` rebuilds in
 `formation-pattern-interface`, `group-movement` and
@@ -22,26 +28,38 @@ nine `names.*` keys), the shared motion drawing
 `composites/study-visuals/motion/motion.ts` with `_tones.scss` (the
 narrow-screen query through the injected document, the font sizes from one
 place), the nineteen flow state labels in `apps/dotln/public/i18n/studyEip/en.json`
-with the specs that pin their composed text, and the RxJS and messaging modules under `studies/rxjs/` and `studies/eip/` present at the integrated base (the forty studies' modules at `eb9d227`, their specs importing WO-039's one loader), read under the rules and changed only where a rule fails; `catalog.md` §The models; about 50 source
-files; no new page, family, route, composite or dependency. Removes the 39
-loose parameter lists of six or more, the two `valueN` placeholders, the 21
-flat model keys and the three inline projections. Wall-clock: about 4 h 0
-min to 6 h 0 min of executor work plus the fixed cycle (WO-034's reshape of
-the first batch, with its guards, drawing and wall study, ran 1 h 45 min from
-activation to handoff against 17 functions over the rule; this batch has
-39); unknown until run. Context bytes: the second batch's sixty source files
-(11,894 lines, about 480 KB) and their messages, the first batch's named
-files, the stream modules (about 300 KB), `flow.ts`, the drawing,
-`catalog-rules.md`, `catalog.md` §The models, WO-034's evidence
+with the specs that pin their composed text; `catalog.md` §The models; the
+standards-pass sentence of `docs/ai-reference/catalog-rules.md`; about 50 source
+files; no new page, family, route, composite or dependency. Removes the
+second batch's 104 functions over four positional parameters (65 at five, 22
+at six, 16 at seven, one at eight; 103 of them in the twenty
+presentations), the four builder functions' loose parameter lists, the two `valueN` placeholders, the 21 flat model keys and
+the three inline projections. Wall-clock: an estimate of about 4 h 0 min to
+6 h 0 min of executor work plus the fixed cycle: WO-034's reshape of the
+first batch, with its guards, drawing and wall study, ran 1 h 45 min from
+activation to handoff against 92 first-batch presentation functions over
+four positional parameters (its `shape-audit-before.json`, 17 of them at
+eight or more), and WO-039 read the enterprise batch in 2 h 57 min from
+dispatch to handoff; this order reshapes 104 functions and adds the first
+batch's residue, the drawing, the nineteen messages and two crawls of the
+movement and stream studies; unknown until run. Context bytes: the second
+batch's sixty source files (11,834 lines, 411,866 bytes by `wc`) and their
+messages (about 260 KB of `studyAifg/en.json`), the first batch's twelve
+named presentations (about 220 KB), the nineteen state messages of
+`studyEip/en.json` with the specs that pin their composed text, `flow.ts`,
+`rxjs/marbles.ts`,
+the drawing, `catalog-rules.md`, `catalog.md` §The models, WO-034's evidence
 (`shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `README.md`,
 `ver-001/time-placeholders.mjs`), WO-034's decisions D011, D012 and D015 in
 the target's `docs/dotln/`, this order; about 1 MB for the executor. Commands
-added: none. Tokens: unknown until run. Steps: 11. Re-mints: none.
+added: none. Tokens: unknown until run. Steps: 12. Re-mints: none.
 Refutations paid: this pass's receipt.
 **Nomination provenance:** WS-001 rule 31 (the operator's direction of
 2026-11-05, journal row 2026-11-05T15:26:03Z, SHA-256
 `4d21fba1ced2decdbfa1a96d947c802d4090948955eb7e30130780eac3c5c532`; ignored
-capture `docs/intake/notes/planning-2026-11-05.md`); WO-034's known issues
+capture `docs/intake/notes/planning-2026-11-05.md`; the
+[2026-11-09 pass](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+restated the rule's cadence as a planning judgment, D3); WO-034's known issues
 and non-goals, which leave the second movement batch and the stream batches
 to the next standards pass; WO-034's verifier's and final reviewer's
 boardings (WO-034-D011, D012 and D015, in the target's
@@ -50,7 +68,18 @@ boardings (WO-034-D011, D012 and D015, in the target's
 allocated by the
 [2026-11-07 pass](../planning/passes/standard-pass-v0-120-1-standards-orders-core-answers-2026-11-08.md),
 D3); the shape audit's measures at `f99580f` (the Observed gap).
-Planner-synthesized. Opaque identifier, not a priority.
+Planner-synthesized. Opaque identifier, not a priority. Amended by the
+2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+D5): the Cost line, the Observed gap and the wall-clock estimate count the
+second batch's functions over four positional parameters, not only those at
+six or more; the stream part narrowed to the four builder functions over
+four positional parameters (`frameOf`, `studyOf`, `marbleFrames`,
+`eventsOf`) and the nineteen state messages, the per-module verdict read of
+the forty RxJS and messaging modules dropped with its criterion clause and
+named as a rejected alternative; a shared `motion` builder named as a
+rejected alternative; a step that rewords `catalog-rules.md`'s
+standards-pass sentence to WS-001 rule 31 as it now reads; and the pair
+WO-036 in place of WO-024.
 **Depends on:** WO-034 merged (hard: the reshape rule, the shared
 formatter, the description-object shape, the tightened corpus test and the
 crawl this order is held to; merged as DotLn-Angular #16, released as
@@ -100,20 +129,17 @@ motion drawing reads its narrow-screen query through the injected document
 and takes its font sizes from the place the stylesheet declares them; a
 number is trimmed by the shared formatter. They open Control bus's study and
 its flow text equivalent reads as English ("Work queue holds 1 record")
-where it read "Work queue: Records: 1". They open any RxJS or messaging
-module and find in the evidence README the verdict the executor recorded for
-it: reshaped where a rule failed, left where none did. Nothing else on
+where it read "Work queue: Records: 1". Nothing else on
 screen has moved: the same frames, the same words, the same numbers. What
-the operator learns is that both movement batches now read as one example
-and the stream batches have been read under the same rules; what they
-decide is whether the next Movement research batch is cut.
+the operator learns is that both movement batches now read as one example;
+what they decide is whether the next Movement research batch is cut.
 
 **Observed gap (dated 2026-11-07 at `f99580f`):** measured with WO-034's
 `shape-audit.mjs` over `libs/features/tools/src/lib/studies/` at the
 target's `main` (run from the launchpad with the target's TypeScript 6.0.3
 installed in session scratch): the second movement batch has 60 source
 files and 730 functions, of which 39 take six or more positional parameters
-and one takes eight (`projectile-trajectory.presentation.ts`'s `motionOf`,
+(22 six, 16 seven) and one takes eight (`projectile-trajectory.presentation.ts`'s `motionOf`,
 line 340), eleven sit at 70 counted lines or more (`corner-trap`'s
 `frameDrawing` at 77, `the-firing-solution`'s `workedStep` at 77,
 `outOfRange` at 73 and `frameDrawing` at 72, `iterative-targeting`'s,
@@ -124,10 +150,14 @@ line 340), eleven sit at 70 counted lines or more (`corner-trap`'s
 flat model keys and two numbered placeholders
 (`movement-in-the-third-dimension`), while the first batch stands at zero
 functions over four parameters with 23 at 70 or more carrying WO-034's
-judgments; the shared `flow.ts` builder's `frameOf` takes nine positional
-parameters; the stream batches meet the measures (`eip` 96 functions, most
-3 parameters, longest 39 lines; `rxjs` 123 functions, most 5, longest 53;
-no numbered placeholders). The first batch's residue WO-034 boarded stands
+judgments; the forty stream study modules meet the measures, and the
+stream code's residue is four builder functions: `flow.ts`'s `frameOf`
+takes nine positional parameters, its `studyOf` and `marbleFrames` take
+five, and `rxjs/marbles.ts`'s `eventsOf` takes five (the audit's `eip`
+group, 96 functions, most 3 parameters, longest 39 lines, is the twenty
+messaging modules; its `rxjs` group, 123 functions, most 5, longest 53,
+includes the marble builder, whose `eventsOf` is the five and whose
+`marbleModel` the 53; no numbered placeholders). The first batch's residue WO-034 boarded stands
 at `f99580f`: `docs/evidence/WO-034/ver-001/time-placeholders.mjs` prints
 the eleven time-carrying placeholders in nine presentations (D011);
 `motionPoints` is imported by one of the twenty first-batch presentations
@@ -149,7 +179,22 @@ Re-read on 2026-11-08 at `eb9d227` (WO-039's merge) by the second
 catalog and no catalog data file, so every count above stands; the twenty
 messaging specs and the RxJS localization spec changed only their loader
 import, to `loadModelStudy(id, 'flow')`, and step 2's inventory lists the
-modules as they stand at the integrated base.
+modules as they stand at the integrated base. Re-read on 2026-11-09 at
+`eb9d227` by the 2026-11-09 pass with a parser over the same sources
+(Prettier's bundled TypeScript parser from the launchpad, counting each
+function's parameters as the audit does, a destructured object as one; it
+reproduces every count above): the audit's six-or-more count leaves out 65
+functions of the second batch at exactly five positional parameters, 64 in
+the twenty presentations and one in a simulation
+(`blending-versus-arbitration.simulation.ts`'s `calculateCombinationStep`,
+line 98), so 104 functions of the batch are over the four-parameter rule
+criterion 2 holds, 103 of them in the presentations, and step 2's adapted
+audit records the exact figure; the first batch has none over four in any
+of its sixty files; and the forty RxJS and messaging study modules (every
+module under `studies/rxjs/` and `studies/eip/` other than the specs, the
+marble builder `rxjs/marbles.ts` and the helper `rxjs/marble-testing.ts`) hold 163
+functions taking at most three positional parameters, the longest 39
+counted lines.
 
 **Design:**
 
@@ -160,8 +205,21 @@ modules as they stand at the integrated base.
   interfaces for parameters and returns, the shared formatter, messages
   nested by study and part with placeholders named for what they hold, a
   function as long as its job with no split made for the 80-line ceiling.
+  The rule covers every function of the batch over four positional
+  parameters, those at five included, and the one in a simulation
+  (`calculateCombinationStep`) takes a description of its step as the
+  presentations' functions do, its outputs unchanged.
   `flow.ts`'s `frameOf` takes a frame description in place of nine
   positional values, the flow specs holding every flow's frames unchanged.
+- **The builders' residue.** The same rule brings the four shared builder
+  functions over four positional parameters to four or fewer: `flow.ts`'s
+  `frameOf` (nine), `studyOf` (five) and `marbleFrames` (five), and
+  `rxjs/marbles.ts`'s `eventsOf` (five), each taking a description of what
+  it reads, the flow and marble specs holding every flow's and every marble
+  diagram's frames unchanged. This is the measured residue rule 31 asks a
+  pass to act on, and it shows a builder-fed family holding its residue in
+  one place: four functions in two builders where the forty studies they
+  draw carry none.
 - **The first batch's residue.** The eleven placeholders renamed for what
   they hold (`seconds`, `duration`, `turnSeconds` and the like) in the
   catalog, the presentation calls and the testing copy; the three formation
@@ -182,20 +240,26 @@ modules as they stand at the integrated base.
   recorded in the decisions, the English only in `studyEip/en.json`, the
   specs that pin the composed text updated with the before and after listed
   in the evidence README. These are the only rendered words that change.
-- **The stream modules, read.** Every module under `studies/rxjs/` and `studies/eip/` present at the integrated base, listed by path in the inventory step 2 records, is read under the rules with its verdict recorded in the evidence README, reshaped where a rule fails and left where none does; the measures already hold, so a change needs a named rule. A research batch that lands after the inventory (WO-029 or WO-030) adds modules this order does not read, since that batch's own critics and reviews read them against the same rules; the integration reruns their specs and nothing more, so the research queue does not change this order's workload.
+  With the four builder functions, they are the whole of this order's
+  stream work: the forty RxJS and messaging study modules are left as they
+  stand.
 - **Every output unchanged.** WO-034's production crawl and comparator (`crawl.mjs`, `open-study-details.mjs`, `compare-dom.mjs`), copied into this order's evidence and adapted as this order's own scripts, the historical WO-034 copies and their pins left as they are: the crawl enumerates the inventory's movement studies (both batches, through the Time slider) and stream studies (through the marbles and flow step controls, a flow's marble diagram included where its example runs) and pins their counts to the inventory's, capturing at 1440 as WO-034's did, since no admitted change here depends on the width; the comparator permits differences only in the nineteen state sentences, listed by study and frame. It runs at the integrated base and at the candidate; the two text-node sequences are equal outside those sentences; a control run of the comparator over the base crawl and a copy of it with one unrelated text node changed exits non-zero, so the comparator is shown to refuse a difference it does not permit; every movement and stream model spec keeps its
   assertions; the marble specs and the flow specs stay green; the label
   sweep stays at zero cut and zero overprinted frames at the five sizes;
   the catalog's visual baselines are unchanged.
 - **The measure.** `shape-audit.mjs` before and after: both movement
-  batches at zero functions over four positional parameters and zero
+  batches, the `shared` group and `rxjs/marbles.ts` at zero functions over
+  four positional parameters, both movement batches at zero
   numbered placeholders, zero flat model keys in `studyAifg/en.json`, each
   function at 70 counted lines or more carrying the executor's judgment, no
   parameter-count lint and no lower ceiling (WO-028-D060's reason).
 - **Documents.** `catalog.md` §The models says both movement batches and
   the enterprise batch follow the shape and names the standards pass as the
-  pass that reads each landed batch; `catalog-rules.md` is unchanged unless
-  a stream verdict needs a rule, recorded in the decisions.
+  pass that reads a landed batch whose presentation is hand-written per
+  study (a batch that lands as data through a family builder owes none,
+  the 2026-11-09 pass, D3); `catalog-rules.md`'s standards-pass sentence
+  (lines 154 to 155 at `eb9d227`) is reworded to WS-001 rule 31 as the
+  launchpad now states it (step 10).
 
 Rejected: a parameter-count lint rule or a lower line ceiling (axis:
 D060's reason; the standards pass is the reader); folding the reshape into
@@ -203,8 +267,19 @@ the next Movement research batch (axis: the operator's direction of
 2026-11-05, a dedicated pass and never an afterthought inside a batch);
 reading the enterprise batch here (axis: WO-039 takes it first, so WO-024's
 executable models copy a reshaped example without waiting for this reshape);
-reshaping the stream modules on the measures alone (axis: they meet the
-measures, and a change needs a rule that fails); leaving the nineteen labels
+reading each of the forty RxJS and messaging study modules under the rules
+with a verdict recorded per module (axis: what the pass reads; the order's
+own measures hold for them, 163 functions at no more than three positional
+parameters and none longer than 39 counted lines, with no numbered
+placeholder in `studyRxjs/en.json` or `studyEip/en.json`, and the before
+and after audits' `eip` and `rxjs` rows record the two groups; a change needs
+a rule that fails, and a read with nothing to change costs the order about
+250 KB of reading); a shared builder for the `motion` family, so that
+each movement study became data passed to one builder as the stream studies
+are (axis: where the presentation lives; it would rewrite forty presentation
+modules for a family with no further batch filed, where this order is a
+reshape with every output unchanged; it reopens when another movement batch
+is cut); leaving the nineteen labels
 to a stream standards pass of their own (axis: one cycle for one subsystem,
 and the rewording is the only stream change a rule asks for today).
 
@@ -213,24 +288,25 @@ forty movement studies in the `motion` and `timeline` families; the forty
 stream studies in `marbles` and `flow`.
 
 **Deliverables:** the twenty reshaped second-batch presentations and the
-reshaped `frameOf`; the first batch's residue cleared; the drawing's query
-and sizes; the nineteen reworded labels with their specs; the stream
-modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
+four reshaped builder functions; the first batch's residue cleared; the drawing's query
+and sizes; the nineteen reworded labels with their specs;
+`docs/evidence/WO-040/` with `shape-audit-before.json`,
 `shape-audit-after.json`, `dom-diff.json`, `label-sweep.json`,
-`walkthrough.md` and the verifier's reading; the document.
+`walkthrough.md` and the verifier's reading; the two documents.
 
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-040: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
-2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states, adapt the audit to list every function of the `shared` group (`flow.ts`, `states.ts` and their neighbours) with its file, name and parameter count, since the copied audit lists a function only when it belongs to the first batch, takes eight or more parameters or runs to 70 lines (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `eb9d227`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), and the crawl's record counts are the inventory's.
-3. `flow.ts`'s `frameOf` with a frame description; the shared description-object types the second batch needs added beside WO-034's under `studies/`; the audit's control: the adapted audit run over a scratch copy of `flow.ts` whose `frameOf` takes one parameter more than the candidate's reports that count, recorded in the evidence README. Check: `npx nx test tools` exits 0 over the flow and movement specs; the control's count is the candidate's plus one.
+2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states, adapt the audit to list every function of the `shared` group (`flow.ts`, `states.ts` and their neighbours) and of the marble builder `rxjs/marbles.ts` with its file, name and parameter count, and every function of either movement batch over four positional parameters with its file, name and count, since the copied audit lists a function only when it belongs to the first batch, takes eight or more parameters or runs to 70 lines and counts the second batch's parameters only at six or more (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `eb9d227`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), the audit lists the second batch's functions over four positional parameters and the evidence README states their number (104 by the Observed gap's parser), the audit lists `frameOf` at nine and `studyOf`, `marbleFrames` and `eventsOf` at five, and the crawl's record counts are the inventory's.
+3. `libs/features/tools/src/lib/studies/flow.ts`'s `frameOf` with a frame description and its `studyOf` and `marbleFrames`, and `libs/features/tools/src/lib/studies/rxjs/marbles.ts`'s `eventsOf`, each with a description of what it reads and four positional parameters or fewer; the shared description-object types the second batch needs added beside WO-034's under `studies/`; the audit's control: the adapted audit run over a scratch copy of `flow.ts` whose `frameOf` takes one parameter more than the candidate's reports that count, recorded in the evidence README. Check: `npx nx test tools` exits 0 over the flow, marble and movement specs; the adapted audit lists no function of the `shared` group or of `rxjs/marbles.ts` over four positional parameters; the control's count is the candidate's plus one.
 4. Second-batch presentations one to ten reshaped under the Design, their
    flat model keys nested and the two numbered placeholders named, the
    catalog and the testing copy migrated. Check: `npx nx test tools` and
    `npm run i18n:check` exit 0; the crawl over those ten studies equals
    `dom-before.json` for their frames.
-5. Presentations eleven to twenty likewise. Check: as step 4; the audit
+5. Presentations eleven to twenty likewise, and `blending-versus-arbitration.simulation.ts`'s
+   `calculateCombinationStep`. Check: as step 4; the audit
    after prints 0 functions of the second batch over four positional
    parameters, 0 numbered placeholders and 0 flat model keys, and lists each
    function at 70 lines or more beside its judgment.
@@ -246,16 +322,25 @@ modules' verdict table; `docs/evidence/WO-040/` with `shape-audit-before.json`,
    libs/features/tools/src/lib/composites/study-visuals/motion/motion.ts`
    prints 0; WO-034's label sweep reads zero cut and zero overprinted
    frames at 360, 768, 1440, about 2080×1460 and 3840×1620.
-8. The nineteen state labels reworded under the one choice, their specs
-   updated, the before and after listed; the RxJS and messaging modules read
-   with a verdict per file in the evidence README, reshaped where a rule
-   fails. Check: `npx nx test tools` exits 0; the README lists every module
-   of `studies/rxjs/` and `studies/eip/` with its verdict.
+8. The nineteen state labels in `apps/dotln/public/i18n/studyEip/en.json`
+   reworded under the one choice, their specs updated, the before and after
+   listed in the evidence README. Check: `npx nx test tools` exits 0.
 9. The adapted crawl after over the inventory's studies into `dom-after.json` and the diff into `dom-diff.json`; the comparator's control (the base crawl against a copy of it with one unrelated text node changed) recorded with its exit code. Check: zero differing text nodes outside the nineteen sentences step 8 lists; the control exits non-zero.
-10. `catalog.md` §The models; dependency check as WO-015 step 15;
+10. The write-back of the standards-pass rule to the target's
+    `docs/ai-reference/catalog-rules.md`: the sentence at lines 154 to 155
+    that says a dedicated standards pass reads each landed batch and the
+    code added since the preceding pass is reworded to WS-001 rule 31 as
+    the launchpad now states it: a standards pass is filed where landed code
+    has measured residue, and a batch landed as data through a family
+    builder owes none of its own (the phrase `measured residue` kept on one
+    line). Check: `grep -c "reads each landed batch"
+    docs/ai-reference/catalog-rules.md` prints 0 (1 at `eb9d227`), and
+    `grep -c "measured residue" docs/ai-reference/catalog-rules.md` prints
+    at least 1 (0 at `eb9d227`).
+11. `catalog.md` §The models; dependency check as WO-015 step 15;
     `npm run check:bundle`; gate plain and review. Check: passing rows, no
     tracked-byte mutation.
-11. Launchpad write-back (WS-001's delivery states), then the publish,
+12. Launchpad write-back (WS-001's delivery states), then the publish,
     review and records steps as WO-007 steps 15 to 17, with the branch
     `refactor/movement-second-batch-presentations`, the title `refactor:
     reshape the second movement batch's presentations and clear the first
@@ -275,8 +360,7 @@ each.
 
 1. **Use (WS-001 rule 24, the code as the surface).** The verifier performs the Objective's reading on the candidate in the target worktree: three second-batch
    presentation modules chosen at random (the command and its output
-   recorded) and one RxJS or messaging module chosen the same way, read top
-   to bottom with the README's verdict beside it, and Control bus's study
+   recorded), read top to bottom, and Control bus's study
    and one second-batch movement study opened in the served production
    build at the operator's sizes (rule 29) and stepped. The VER report
    carries a `## Walkthrough` section with the dated steps and the frames
@@ -291,7 +375,7 @@ each.
    as one), zero numbered placeholders and zero flat model keys in
    `studyAifg/en.json`, lists each movement function at 70 counted lines or
    more beside the executor's recorded judgment that it does one job and
-   reads whole (the evidence README carries the judgments), and lists `flow.ts`'s `frameOf` in the `shared` group's function list at four parameters or fewer, the adapted audit's control (step 3) having reported one more on the scratch copy; `shape-audit-before.json` from the integrated base records the Observed gap's counts and lists `frameOf` at nine.
+   reads whole (the evidence README carries the judgments), and lists zero functions over four positional parameters in the `shared` group's function list and in `rxjs/marbles.ts`'s, `flow.ts`'s `frameOf`, `studyOf` and `marbleFrames` and `rxjs/marbles.ts`'s `eventsOf` among them at four parameters or fewer, the adapted audit's control (step 3) having reported one more on the scratch copy; `shape-audit-before.json` from the integrated base records the Observed gap's counts and lists `frameOf` at nine and `studyOf`, `marbleFrames` and `eventsOf` at five.
 3. Every other output is unchanged: `docs/evidence/WO-040/dom-diff.json`,
    produced by the evidence directory's adapted crawl and comparator over every frame of the movement and stream studies the inventory names at the integrated base and at the candidate, records zero differing text nodes outside the nineteen state sentences the evidence
    README lists with their text before and after; every movement and stream
@@ -321,7 +405,7 @@ each.
    choice the decisions file records; `control-bus.spec.ts` and the other
    specs that pin composed text pass with the new text; and no model message
    in `studyRxjs/en.json` or `studyEip/en.json` begins with a placeholder.
-7. `docs/evidence/WO-040/README.md` lists every module under `libs/features/tools/src/lib/studies/rxjs/` and `studies/eip/` present at the integrated base (the inventory step 2 records) with the executor's verdict (reshaped or left) and, for a reshaped module, the rule that failed; `docs/dev-reference/architecture/catalog.md` §The models
+7. `docs/dev-reference/architecture/catalog.md` §The models
    says both movement batches and the enterprise batch follow the shape
    (`grep -c "both movement batches" docs/dev-reference/architecture/catalog.md`
    is at least 1).
@@ -338,16 +422,18 @@ audits, the two placeholder reports, `dom-diff.json`, `label-sweep.json`,
 **Known issues and carry-ins:** The second 2026-11-08 pass sets the base to WO-039's merge (#18, `DotLn Angular v0.11.1`), the hard edge the refuter asked for, now merged: the flow specs this order edits import the one loader. This is the third standards pass under
 WS-001 rule 31; WO-039 reads the enterprise batch and the `states` family
 on disjoint surfaces and runs first in the sequence, so WO-024's executable
-models copy a reshaped example; this order and WO-024 are a lane pair
-(disjoint surfaces: WO-024 adds `studies/geb/`, `studies/tt/` and the
-`relations` family; the two share `catalog.md`, which the second publisher
-integrates), and the operator may run them one at a time. A research batch
+models copy a reshaped example; this order and WO-036 are a lane pair
+(disjoint surfaces: WO-036, the scene's walls and ways, touches nothing
+under `libs/features/tools`, where every code change of this order lies;
+the second to publish integrates the target's `main` before its publish),
+and the operator may run them one at a time. A research batch
 that lands first (WO-029 or WO-030) adds keys to `studyRxjs/en.json` or
 `studyEip/en.json` beside the nineteen this order rewords; this order integrates the target's `main` before its handoff and again before its final publish, reruns the stream specs, recaptures the before-crawl at the new base and records the sibling's regenerated catalog baselines as the sibling's. The next Movement research batch
 may be cut now that WO-034 has merged (WS-002 rule 6) and copies this
 order's example once it merges; the stream works' next batches after
-WO-029 and WO-030 are cut after this order merges, since it is the
-standards pass that read their code. Before `target-records`, the final
+WO-029 and WO-030 land as data through `marbleModel` and `flowModel`, so
+under the rule as the 2026-11-09 pass restated it (D3) they owe no
+standards pass and do not wait for this order. Before `target-records`, the final
 reviewer commits the order's records on the order branch so the launchpad
 commit the filed records' footer names holds them (the profile's publish
 route, step 3; since starter v0.122.0 the filing refuses a source that is
@@ -361,15 +447,18 @@ classification: patch` and `Target release notes: reviewed` are set under
 WO-012's declared policy.
 
 **Non-goals:** a parameter-count lint or a lower line ceiling; the
-enterprise batch and the `states` family (WO-039); reshaping a stream
-module that fails no rule; translating token letters; new studies, pages,
+enterprise batch and the `states` family (WO-039); reading or reshaping
+the forty RxJS and messaging study modules; a shared builder for the
+`motion` family; translating token letters; new studies, pages,
 families or rounds; the mined catalog text (WO-035); per-model catalog
-loading; the wall study's moment order and comparison chart (WO-036's
-carry-in).
+loading; the wall study's moment order and comparison chart (WO-034-D013,
+register row `FUP-4e24208e45d27a1d`: both change what the study shows, and
+this order changes no output beyond the nineteen state sentences).
 
 **Operator-review assumptions:** the operator reads the diff as the example
 they mean (they read the code of an order before it is called
 final-reviewed), accepts the reading criterion as a code-only order's
 acceptance by use with two studies as its screens, accepts the one
-rewording choice for the nineteen labels, and accepts that a stream module
-that fails no rule is left as written with its verdict recorded.
+rewording choice for the nineteen labels, and accepts the audit's measures
+as the reading of the forty RxJS and messaging study modules, which this
+order leaves as written.

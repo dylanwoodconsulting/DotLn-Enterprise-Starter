@@ -79,13 +79,23 @@ their decisions hold the history.
    than twenty drawable rows left (ten in a paired order) gets a smaller
    final batch, its author count scaled to pairs of rows and recorded in the
    order; a work whose drawable rows are exhausted leaves the track until a
-   road order lands the family its remaining rows need; a work's next batch
-   is cut only after a standards pass boarded against that work's code has
-   merged (WS-001 rule 31; WO-034, merged on 2026-11-07, gated the next Movement batch, WO-039 gates WO-031 and WO-040 gates the stream works' batches after WO-029 and WO-030); and the
+   road order lands the family its remaining rows need; a work whose
+   family's presentation is hand-written per study (`motion`, `states`) has
+   its next batch cut only after the standards pass filed against that
+   work's landed code has merged, so that the batch copies a reshaped
+   example (WO-034, merged on 2026-11-07, gated the next Movement batch;
+   WO-039, merged on 2026-11-08, gated WO-031), while a work whose studies
+   are data passed to a family builder (`marbles`, `flow`, and `relations`
+   and `grid` as WO-024 and WO-041 build them) owes no pass before its next
+   batch, the builder being the one place its shape lives; and the
    pathfinding chapter's 76 rows join AI for Games' drawable rows once
-   WO-036 lands the `grid` family. (The operator record §What the operator
-   wants, Depth in batches; the 2026-11-04 pass, D6; the 2026-11-05 pass,
-   D3 and D5.)
+   WO-041 lands the `grid` family. The gate is a planning judgment under
+   WS-001 rule 31, never the operator's direction, and a pass that finds a
+   builder-fed module failing a rule reopens it. (The operator record §What
+   the operator wants, Depth in batches; the 2026-11-04 pass, D6; the
+   2026-11-05 pass, D3 and D5; the
+   [2026-11-09 pass](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md),
+   D3.)
 7. **The records.** WS-001's house rules bind a research order's records as
    they bind a batch's (rules 7, 8, 15, 17, 23, 24 and 26; the target's
    `catalog-rules.md` and `catalog.md` §Studies): a study is in its author's
@@ -109,12 +119,12 @@ their decisions hold the history.
 | WO-029 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the second 2026-11-08 pass; step 1 integrates the target's `main`) | twenty more RxJS operators and creation functions, each with an executable marble example drawn by `marbles` |
 | WO-030 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the second 2026-11-08 pass; step 1 integrates the target's `main`) | twenty more messaging patterns from Enterprise Integration Patterns, each a `flow` |
 | WO-031 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, the standards pass over its work's code, set by the second 2026-11-08 pass; step 1 integrates the target's `main`) | twenty more enterprise application patterns, drawn by `states` with executable models |
-| WO-032 | dotln-angular | provisional at `55b59c9133056c1d6471274a9676a7d5649196ac`; the pass after WO-024 merges may set it | ten more Gödel, Escher, Bach and ten more Team Topologies concepts, drawn by `relations` |
+| WO-032 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass; it activates after WO-024 merges, and step 1 integrates the target's `main`) | ten more Gödel, Escher, Bach and ten more Team Topologies concepts, each data passed to the `relations` builder |
 
 ## Dependency and compatibility plan
 
 WO-028, which depended on WO-020, is closed; WO-029 depends on WO-021 and
-WO-030 on WO-022, both merged, and WO-031 on WO-023, merged on 2026-11-08 as DotLn-Angular #17, and on WO-039, the standards pass that reads the enterprise batch's code (rule 6), merged the same day as DotLn-Angular #18 and released as `DotLn Angular v0.11.1`: the three can run now, in any order or beside one another, WO-031's base that merge; WO-032 depends on WO-024 and activates after the `relations` family has merged, the pass after that merge setting its base. Every member shares `studies-summary.json` and the
+WO-030 on WO-022, both merged, and WO-031 on WO-023, merged on 2026-11-08 as DotLn-Angular #17, and on WO-039, the standards pass that reads the enterprise batch's code (rule 6), merged the same day as DotLn-Angular #18 and released as `DotLn Angular v0.11.1`: the three can run now, in any order or beside one another, WO-031's base that merge; WO-032 depends on WO-024 and activates after the `relations` family has merged; its batch lands as data through that family's builder and waits for no standards pass (rule 6). Every member shares `studies-summary.json` and the
 coverage table in `catalog.md` §Studies with every other batch, so a batch whose target `main` has moved since its base integrates `main` before its handoff and again before its final publish (core WO-233's rule), regenerating `studies-summary.json`, reconciling the work's record chunk and the shared `study-models.ts` registry, and rerunning `studies:check`, `test:tooling`, the affected suites and the e2e count case, and a pull request that stops merging cleanly after a sibling's merge returns to `resume: fix` to integrate it. The members hold no edge among themselves; each depends only on the road order that landed its family and, for WO-031, on the standards pass that read that family's batch, and WS-001's members owe this track nothing. The edges in the block below run
 from the member to the order it depends on, because the kit admits an edge
 only from a member (`scripts/lib/work-order-workstream.mjs`, the edge

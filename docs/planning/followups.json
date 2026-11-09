@@ -2587,6 +2587,14 @@
           "reopenWhen": "WO-018 merges and the operator names the next public source, or a stopgap copy limits a toy.",
           "targets": [],
           "at": "2026-10-24T05:40:28.126Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D8: its condition, the copies limiting a toy, was met in planning: WO-042 can mark or move beats for two of eight idea kinds and WO-017 cannot price what a wait buys. A store over the same public records would not lift either limit, because the platform's own rows name no mechanism, no rung and no outcome of a wait; the ask goes to core (the pass's Requests to core, item 3).",
+          "reopenWhen": "The platform's records carry the mechanisms a session ran with, or the operator names the next public source after WO-043.",
+          "targets": [],
+          "at": "2026-11-09T23:21:08.887Z"
         }
       ]
     },
@@ -2787,6 +2795,14 @@
           "reopenWhen": "The operator says they will run two worktrees at once; the pass before the pair then assigns the shared shell files to one member and marks the pair in the sequence.",
           "targets": [],
           "at": "2026-10-24T22:07:55.019Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D2: moot. WO-014 closed on 2026-10-26, and the sequence now pairs each road order with side work, WO-016 with WO-041.",
+          "reopenWhen": "None; a pairing of WO-016 is the sequence's to state.",
+          "targets": [],
+          "at": "2026-11-09T23:21:08.902Z"
         }
       ]
     },
@@ -2884,6 +2900,14 @@
           "reopenWhen": "The operator names the fourth result; WO-017's fold is then amended by the pass that hears it, or by an execution amendment if WO-017 is active.",
           "targets": [],
           "at": "2026-10-24T22:07:55.034Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D8: read while amending WO-017. The six-field copies record no reading time, report size, direction or presence, and the replay replays every duration and verdict as recorded, so every figure improves as the twin's waits shrink and no fourth figure a zero-patience variant pays can be derived from them. WO-017 now shows the floor and states the limit; the fourth result needs a record of what a wait buys.",
+          "reopenWhen": "The operator names what an early dispatch costs them, or a record that carries rework attributable to an early dispatch exists (the twin's later lanes over many orders, or the platform recording it).",
+          "targets": [],
+          "at": "2026-11-09T23:21:08.856Z"
         }
       ]
     },
@@ -3850,6 +3874,14 @@
           "reopenWhen": "A batch executor reports needing the controls, the pass before WO-018 activates, or the operator asks sooner.",
           "targets": [],
           "at": "2026-11-03T16:55:14.447Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D10: read against WO-044, which lists the studied concepts by work and chapter and changes no search control, ranking or matching. The explicit controls stay a candidate.",
+          "reopenWhen": "WO-044 has merged and a reader still cannot narrow a search by work, kind or studied state without typing, or the operator asks.",
+          "targets": [],
+          "at": "2026-11-09T23:21:08.872Z"
         }
       ]
     },
@@ -4547,6 +4579,14 @@
           "reopenWhen": "The planning pass before WO-016 activates, or the operator activates WO-016 before a pass runs.",
           "targets": [],
           "at": "2026-11-01T01:57:26.327Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D11: the amendments are made. Every open order names eb9d227; WO-016, WO-008, WO-017 and WO-018 were re-read against the target and amended (D4, D8, D9). Receipt 012's known issues that still apply are written into WO-016 (what the scrub does not look for), WO-017 (no identity provider in production; variants only grow) and WO-043 (the fan-out's stop has no partial acceptance); its others are answered by the amendments (the commit pattern beside the scrub, the twin's check without a base commit, walkthroughs proved by named files) or by D2 (WO-008's place). Receipt 014's item (d) is written into WO-008 and (f) into WO-017. WO-018's remaining catalog carry-in, the search controls of WO-019-D017, stays the deferred candidate FUP-0fb531a975308a81.",
+          "reopenWhen": "An amended road order is found stale against the target before it activates, or a walkthrough shows a known issue the order does not name.",
+          "targets": [],
+          "at": "2026-11-09T23:21:08.793Z"
         }
       ]
     },
@@ -5336,6 +5376,16 @@
           "reopenWhen": "The pass before WO-016 activation, WO-016 activation itself, or an earlier order needs those document paths.",
           "targets": [],
           "at": "2026-11-03T16:55:14.406Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-016 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D8: the order's documents step carries the places WO-026-D012 lists for the /machinery placeholder, with the e2e spec and visual baseline a page change breaks.",
+          "reopenWhen": "WO-016's final review finds a listed document still describing the placeholder, or WO-016 is withdrawn.",
+          "targets": [
+            "WO-016"
+          ],
+          "at": "2026-11-09T23:21:08.809Z"
         }
       ]
     },
@@ -7411,6 +7461,16 @@
             "WO-036"
           ],
           "at": "2026-11-08T02:03:08.622Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Re-allocated from WO-036 to WO-041 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D6: the split leaves WO-036 no file under the Tools feature, and WO-041 takes the wall study's two gaps (the moments in step order whatever the input, the clearance comparison shown where the traces part) with the study made to show the avoidance the scene runs.",
+          "reopenWhen": "WO-041's verification finds the moments out of step order or the two traces unreadable, or WO-041 is withdrawn.",
+          "targets": [
+            "WO-041"
+          ],
+          "at": "2026-11-09T23:21:08.918Z"
         }
       ]
     },
@@ -7461,6 +7521,16 @@
           "reopenWhen": "A planning pass files or sequences a dedicated A/B testing pass (rule-25 design comparisons, not a rule-31 standards pass): allocate this item to it, and that pass runs the states family's rounds from round 1's pair until the operator says done.",
           "targets": [],
           "at": "2026-11-07T19:42:59.286Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-038 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D7: WO-038 is the first dedicated A/B testing pass and its stream (b) runs WO-023-D008's deferred rounds for the states family, from round 1's pair rendered again at the integrated base.",
+          "reopenWhen": "The operator wants the states rounds apart from the reading's, or WO-038 is withdrawn.",
+          "targets": [
+            "WO-038"
+          ],
+          "at": "2026-11-09T23:21:08.825Z"
         }
       ]
     },
@@ -7707,6 +7777,16 @@
           "reopenWhen": "The dedicated A/B testing pass that redraws the states family runs (FUP-02c1ebe8146fe2f1), or a state's name of a new batch breaks into more than two parts at 360 pixels.",
           "targets": [],
           "at": "2026-11-08T18:58:39.916Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "allocated",
+          "reason": "Allocated to WO-038 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D7: its stream (c) judges the narrow register's headings, the interim rule against a dictionary break, with the later variables WO-039-D011 and D015 name.",
+          "reopenWhen": "Stream (b)'s pick removes the register table (the stream then closes with it), or WO-038 is withdrawn.",
+          "targets": [
+            "WO-038"
+          ],
+          "at": "2026-11-09T23:21:08.840Z"
         }
       ]
     },

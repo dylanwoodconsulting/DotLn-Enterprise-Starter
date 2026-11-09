@@ -45,7 +45,11 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by
+the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+D5): the authors' brief, the reading critic and criterion 4 carry the
+wording rule for a flow node's state message, and the known issue names
+what WO-040 now changes in this work.
 **Depends on:** WO-022 merged (hard: the `flow` family and its two builders,
 the analogy rule and the messaging study directory this batch reuses; the
 `marbles` family and WO-020's record, check, composite, route and fan-out
@@ -156,7 +160,9 @@ fan-out procedure exist and are idle between batches.
 - **The fan-out as the track's workers** (WS-002 rule 3). Ten authors with
   two rows each, one factual critic who opens every reference, runs each
   module's spec and checks that every analogy to the platform is marked as
-  one, one reading critic who reads as the operator would: twelve launches
+  one, one reading critic who reads as the operator would and judges each
+  flow state message by the wording rule the authors' brief carries (step
+  2): twelve launches
   against `subagentCap` 20, under the
   [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
   declared before any worker starts; under Codex each is a `spawn_agent`
@@ -207,7 +213,13 @@ link check), `walkthrough.md` and its screenshots.
    Check: the decisions carry them.
 2. The authors' brief into `fan-out.md` from WO-022's brief, with the
    work's index, the twenty rows with their hooks, the two flow builders,
-   the analogy rule, the authoring date and the launch form of this host;
+   the analogy rule, the wording rule for a flow node's state message (it
+   composes with its node name as an English sentence, "Work queue holds 1
+   record", and never as a second label, "Work queue: Records: 1": the
+   defect WO-034-D015 in the target's
+   `docs/dotln/evidence/WO-034/decisions.md` records in nineteen messages
+   of WO-022's batch, which WO-040 rewords), the authoring date and the
+   launch form of this host;
    dispatch the ten authors; merge the twenty drafts into the work's record
    chunk and register each model in `study-models.ts`. Check: `npx nx test
    tools` exits 0 over the executable modules' specs and the flow specs.
@@ -285,8 +297,13 @@ each.
    every reference and implementation URL has its observed link-check
    status, no candidate record cites a URL recorded unreachable or a
    reference the factual critic marked unsupported, and the review record
-   lists each study's platform analogy as checked. Worker accounting remains
-   the profile's process duty.
+   lists each study's platform analogy as checked and each state message
+   the twenty studies' flows give a node (their `states` keys in
+   `apps/dotln/public/i18n/studyEip/en.json`) with the reading critic's
+   judgment that it composes with its node name as an English sentence and
+   never as a second label, a message judged a label having been reworded
+   before the record was set `checked`. Worker accounting remains the
+   profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
    board spec's threshold and no horizontal overflow at 360, 768 and 1440;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
@@ -337,7 +354,7 @@ each.
   `apps/dotln/public/i18n/studyEip/en.json`, each model is a language-free
   simulation, a presentation taking a `StudyTranslate` and an entry of a few
   lines, with nested keys, named placeholders and no function split to fit
-  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those rules; a changed record shape is a new schema version, never an edit. The base is the Repository line's pin, WO-039's merge, set by the second 2026-11-08 pass (the first 2026-11-08 pass had set WO-023's merge); WO-034's tightened corpus test, its rewording of this work's count-led stream messages and WO-039's one model-study loader are in the base, and WO-040, the standards pass that reads this work's modules, may land before or after this batch, which integrates the target's `main` in either case. `Target release classification: minor` and
+  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those rules; a changed record shape is a new schema version, never an edit. The base is the Repository line's pin, WO-039's merge, set by the second 2026-11-08 pass (the first 2026-11-08 pass had set WO-023's merge); WO-034's tightened corpus test, its rewording of this work's count-led stream messages and WO-039's one model-study loader are in the base, and WO-040, the standards pass that gives `flow.ts`'s `frameOf` a frame description and rewords nineteen of this work's flow state messages, may land before or after this batch, which integrates the target's `main` in either case. `Target release classification: minor` and
   `Target release notes: reviewed` are set under WO-012's declared policy.
 - A study's "see it in the machinery view" link remains the candidate after
   WO-016 merges (`FUP-4fde2cb5fc229dc2`), not this order's. The remaining

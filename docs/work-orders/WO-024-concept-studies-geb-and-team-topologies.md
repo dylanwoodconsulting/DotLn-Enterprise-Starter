@@ -2,27 +2,51 @@
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
-**Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
+**Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
 **Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
-`libs/shared/catalog/src/studies/tt/` (ten records), the `relations` family
-under `libs/features/tools/src/lib/composites/study-visuals/relations/`, the
-executable TypeScript models and specs the records name under
-`libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, two coverage
-rows and one rule, about 35 source files plus twenty data records; adds no
-runtime dependency. Removes nothing. Wall-clock: about 6 h 0 min to 10 h 0 min of
+`libs/shared/catalog/src/studies/tt/` (ten records); the `relations`
+builder `relationsModel` in `libs/features/tools/src/lib/studies/relations.ts`
+with its spec, and, under `libs/features/tools/src/lib/`, the family's
+model type in `studies/study-model.ts` (`StudyModel` and `ticksOf`), its
+view in `types.ts` (`StudyDrawingView`), its branch in
+`mappers/study-mapper.ts` and its case in the study composite
+(`composites/study/study.ts`, `study.html`); the family's composite under
+`libs/features/tools/src/lib/composites/study-visuals/relations/`; under
+`libs/features/tools/src/lib/studies/geb/` and `studies/tt/`, one data
+module with its spec for each drawn study without a mechanism and, for the
+four executable studies, a simulation and an entry with its spec; the
+wiring a new work needs: the scopes `geb: 'studyGeb'` and `tt: 'studyTt'`
+in `scopes` of `studies/study-record.ts`, the message catalogs
+`apps/dotln/public/i18n/studyGeb/en.json` and `studyTt/en.json` with the
+family's shared narration in `studyCommon/en.json` and its words under
+`tools` in `apps/dotln/public/i18n/en.json`, the testing copies
+`libs/features/tools/testing/src/lib/study-en.json` and `tools-en.json`
+that `tools/i18n-copies.test.mjs` holds equal to the app's catalogs, the
+work chunks `libs/shared/catalog/src/studies/geb.ts` and `tt.ts` with their
+`studyChunks` entries in `libs/shared/catalog/src/lib/catalog-loader.ts`,
+each drawn study's model entry in `studies/study-models.ts`, the batch's
+membership test in `tools/studies.test.mjs`, twenty rows in
+`studies-summary.json`, the e2e counts in `apps/dotln-e2e/src/catalog.spec.ts`
+and the catalog's visual baselines (`catalog.visual.spec.ts`,
+`visual-baselines/darwin/catalog-{360,768,1440}.png`) regenerated; two
+coverage rows and the `relations` rule; about 80 source files plus twenty
+data records; adds no runtime dependency. Removes nothing. Wall-clock: about 6 h 0 min to 10 h 0 min of
 executor work, of which the fan-out runs in parallel, plus the fixed cycle;
 unknown until run. Context bytes: the study record, check, families and
 rules as the target's `main` leaves them at activation (WO-020's, with
 WO-021's, WO-022's and WO-028's changes: the `concept-study-v1` record whose
 authored text fields are message keys in the work's lazy catalog, the model
 split into simulation, presentation and entry, and the study text and size
-guards), `catalog.md` §Studies, the twenty catalog rows with their
-hooks, this order, about 180 KB for the executor; each author reads two rows,
+guards), the builders `relationsModel` follows (`studies/flow.ts`,
+`studies/states.ts`, `studies/rxjs/marbles.ts`) with one messaging study
+and one enterprise model and their specs, `catalog.md` §Studies, the
+twenty catalog rows with their hooks, this order, about 250 KB for the
+executor; each author reads two rows,
 the contract and the public references it cites. Commands added: none.
 Tokens: unknown until run. Worker totals, the session total, stop
 comparison and use count are recorded in `fan-out.md` and decisions under the
@@ -40,6 +64,15 @@ register row `FUP-5f1cdfde5e860902` allocated to WO-020 to WO-024.
 Planner-synthesized by the 2026-10-30 second planning pass
 ([planning document](../planning/passes/concept-batches-and-quality-passes-2026-10-30.md)
 §Orders filed and amended, D4 and D5). Opaque identifier, not a priority.
+Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+D5): the `relations` family built builder-first, each study data passed
+to `relationsModel` with no presentation module of its own, and the module
+that models each drawing without a mechanism named; the wiring a new work
+needs in the Cost line and the plan; criterion 7's grep given a control
+against the integrated base; the round criterion admitting rule 25's
+deferral route; the Observed gap re-dated at `eb9d227`; the pair WO-008 in
+place of WO-040, with criterion 6 reading the integrated `main`; and the
+executor's effort written `xhigh`.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
@@ -100,16 +133,29 @@ is the vocabulary for the levels the platform's mechanisms live on and the
 modes its five roles work in; what they decide is which loop or mode to make
 visible in the machinery view or a toy next.
 
-**Observed gap (dated 2026-10-30):** at `6268de9` the catalog carries 573
-GEB rows (9 typed) and 637 Team Topologies rows (2 typed), most carrying
-DotLn hooks, none studied; the Tipping Point taxonomy (WS-001 §Design) and
+**Observed gap (dated 2026-11-09 at `eb9d227`):** the catalog carries 573
+GEB rows (9 typed) and 637 Team Topologies rows (2 typed), 295 and 263 of
+them carrying DotLn hooks, none studied (the catalog data is unchanged since
+`6268de9`); the Tipping Point taxonomy (WS-001 §Design) and
 the five UIFA roles are the app's own levels and teams and no page connects
-them to the books' vocabulary; no `relations` family exists.
+them to the books' vocabulary; `relations` is named in `visualFamilies`
+(`libs/shared/models/src/lib/concept-study.ts`) and has no builder, model
+type or composite, and neither work has a study directory, a work chunk, a
+`studyChunks` entry, a scope in `study-record.ts` or a message catalog. The
+landed families divide by where a study's presentation lives. The forty
+`marbles` and `flow` studies are each one module of 52 to 385 lines under
+`studies/rxjs/` or `studies/eip/` whose example `marbleModel` or `flowModel`
+builds, and no standards pass has reshaped one: WO-034 and WO-039 changed
+only their specs, their messages and the shared marble-testing helper, and
+WO-040's stream work is four functions of the two builders (`flow.ts` and
+`rxjs/marbles.ts`) and nineteen state messages. The forty `motion` studies and the sixteen drawn
+`states` studies each carry a hand-written `*.presentation.ts`, and every
+batch of them has needed a standards pass (WO-034, WO-039 and WO-040).
 
 **Design:**
 
 - **The `relations` family** (`composites/study-visuals/relations/`): a small
-  concept map laid out by the model (a stack of levels, a cycle through
+  concept map laid out by the builder (a stack of levels, a cycle through
   levels, a graph of teams and systems, two graphs with a mapping between
   them), with the stepped node or edge raised and named in the text
   equivalent; reduced motion steps without transition. First rendered pair
@@ -117,11 +163,35 @@ them to the books' vocabulary; no `relations` family exists.
   to the bottom; B, a ring with the levels as stations and the loop as the
   ring itself; one variable, the geometry of a loop through levels; both at
   about 2080 by 1460 and 360 (rules 25 and 29); the rounds continue until
-  the operator says done.
+  the operator says done, or the operator delays them to a dedicated A/B
+  testing pass (rule 25), in which case the first pair is recorded without a
+  pick, A ships and the rounds are carried as a follow-up.
+- **Builder-first** (`relationsModel` in
+  `libs/features/tools/src/lib/studies/relations.ts`, beside `flow.ts` and
+  `states.ts`): each of the twenty studies is data, its nodes, relations,
+  steps and notes as message keys, passed to one `relationsModel` builder
+  that owns the whole presentation (the layout, the raised node or edge, the
+  text equivalent, the moments, the legend and the caption, its shared
+  narration in `studyCommon/`), as `marbleModel` and `flowModel` do; the
+  builder refuses a node, relation, step or moment the example lacks, as
+  `flowModel` does, so a spec fails at once. No presentation module is
+  written per study. Each of the sixteen studies without a mechanism to run
+  that carries a drawing names as `visual.model` its one module,
+  `studies/geb/<slug>.ts` or `studies/tt/<slug>.ts`, which exports the
+  example as data and `model` built by `relationsModel`, with a spec beside
+  it that loads its record through `loadModelStudy(id, 'relations')`, as
+  `studies/eip/control-bus.ts` exports a `FlowExample` that `flowModel`
+  builds.
 - **Executable arm where it exists**: a study with a mechanism to run carries
   `executable: { kind: 'typescript', module }` naming its model entry
-  (`<slug>.model.ts` composing `<slug>.simulation.ts` and
-  `<slug>.presentation.ts`) with a spec: a Gödel
+  (`<slug>.model.ts`, which composes a language-free `<slug>.simulation.ts`
+  with the study's data through `relationsModel`), the enterprise batch's
+  shape as WO-039 leaves it with the builder in place of a hand-written
+  presentation: the simulation's run is what the builder reads, as an
+  enterprise simulation's snapshots are what `statesModel` reads and infers
+  each move from, and the spec beside the entry loads its record through
+  `loadModelStudy(id, 'relations')`, the tools test kit's one loader, and
+  drives the mechanism through the study's example. The four: a Gödel
   numbering of a toy alphabet (encode and decode), a decision procedure over
   a toy rule system authored for the study (not the book's puzzle, in the
   author's words), a chunking of an event list into levels, a Conway mapping
@@ -171,18 +241,29 @@ them to the books' vocabulary; no `relations` family exists.
   30 and 31): each record is `concept-study-v1`, every authored on-screen
   field a message key in the new scopes
   `apps/dotln/public/i18n/studyGeb/en.json` and `studyTt/en.json` with
-  shared narration in `studyCommon/`; each model's labels, notes, worked
+  shared narration in `studyCommon/`; the builder's labels, notes, worked
   arithmetic and comparisons are parameterized messages with nested keys and
-  named placeholders; a presentation function takes a frame, a description
-  object or a translator and at most four parameters, and no function is
-  split to fit the 80-line ceiling: the shape is WO-034's reshaped first batch and, for an executable model, the enterprise batch as WO-039 leaves it, never the first batch's as it stood before WO-034 and never WO-028's twenty, which WO-040 reshapes (rule 30).
-  The authors' and critics' briefs name rules 9, 23 and 30 and G3, and the
-  critics inspect message coverage and the mechanism/presentation split
+  named placeholders; a function of the builder or of a simulation takes a
+  frame, a description object or a translator and at most four parameters,
+  and no function is split to fit the 80-line ceiling: the shape is WO-034's reshaped first batch and, for an executable model's simulation and entry, the enterprise batch as WO-039 leaves it, never the first batch's as it stood before WO-034 and never WO-028's twenty, which WO-040 reshapes (rule 30).
+  The authors' and critics' briefs name rules 9, 23 and 30 and G3 and the
+  builder-first shape, and the
+  critics inspect message coverage, the mechanism/presentation split and
+  that each study is data passed to `relationsModel`
   independently of any earlier worked example (WO-028-D042; rule 30).
-- **Documents:** `catalog.md` §Studies gains the two coverage rows and the
-  `relations` family; `catalog-rules.md` gains the rule that a study of an
-  idea without a mechanism keeps its executable and visual fields absent with
-  the reason recorded, rather than filled; WS-001's §Design gains, by the
+- **Documents:** `catalog.md` §Studies gains the two coverage rows, §The
+  models and §The families the `relations` builder and family, and the
+  record's list of work catalogs gains `studyGeb/` and `studyTt/`;
+  `catalog-rules.md` gains the `relations` rule beside the flow and states
+  rules: a study drawn by `relations` is data passed to `relationsModel`,
+  with no presentation module of its own; a study with a mechanism to run
+  composes its language-free simulation with the builder; and an idea
+  without a mechanism keeps `executable` absent, and `visual` where no
+  drawing explains it better than the words, with the reason in the
+  batch's decisions, so the document's absent-material rule (a
+  representation an idea does not need stays absent) holds in the family
+  as it does in the flow and states rules; its list of work catalogs gains
+  the two scopes; WS-001's §Design gains, by the
   launchpad write-back, one sentence linking the taxonomy to the Levels of
   description and Team Topologies studies.
 
@@ -191,13 +272,22 @@ together describe the platform's levels and its roles, and the operator's
 hundred is served by both appearing now); a formal-system interpreter as a
 sub-app (axis: a toy of that size is a later member the operator picks from
 the shelf, WO-018's route); drawings for every concept (axis:
-`concept-study.md` keeps missing material missing).
+`concept-study.md` keeps missing material missing); a hand-written
+presentation module per study, as the `motion` and `states` batches have
+(axis: where the presentation lives; the Observed gap's measure: no
+standards pass has reshaped a `marbles` or `flow` study, each data that its
+family's builder draws, while every `motion` and `states` batch, each with a
+presentation per study, has needed one; with one builder, this batch and
+WO-032's land as data).
 
-Live-run surfaces at the base: the catalog with WO-020's studies and the
+Live-run surfaces at the base: the catalog with a hundred studies in the
+`motion` and `timeline`, `marbles`, `flow` and `states` families and the
 addressable readings.
 
-**Deliverables:** the twenty records with their models and specs where
-executable; the `relations` family with its stories and specs; the coverage
+**Deliverables:** the twenty records with their data modules and, where
+executable, their simulations and entries, each module with its spec; the
+`relations` builder with its spec and the family with its stories and
+specs; the work wiring the Cost line names; the coverage
 rows, the rule and the sentence; `docs/evidence/WO-024/` with the fan-out
 record, the review record, the link check, the walkthrough and its
 screenshots, and the design record.
@@ -205,18 +295,45 @@ screenshots, and the design record.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-024: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
-2. The `relations` family with stories `StudyRelations` and a spec that
-   renders a three-level stack with a loop to its text equivalent. Check:
-   `npx nx test tools` exits 0; `npm run lint:components` exits 0.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit, recorded in the decisions file, is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
+2. The builder `relationsModel` in
+   `libs/features/tools/src/lib/studies/relations.ts` with
+   `relations.spec.ts` (a three-level stack with a loop built from data,
+   and the refusal of a node, relation, step or moment the example lacks);
+   the family's model type beside `flow` and `states` in
+   `studies/study-model.ts` with its case in `ticksOf`, its view in
+   `types.ts`, its branch in `mappers/study-mapper.ts` and its case in
+   `composites/study/study.ts` and `study.html`; the `relations` family
+   under `composites/study-visuals/relations/` with stories
+   `StudyRelations` and a spec that renders that stack to its text
+   equivalent; the family's words under `tools` in
+   `apps/dotln/public/i18n/en.json` with the testing copy
+   `libs/features/tools/testing/src/lib/tools-en.json`, and its shared
+   narration under `relations` in `apps/dotln/public/i18n/studyCommon/en.json`.
+   Check: `npx nx test tools` exits 0; `npm run lint:components` exits 0;
+   `npm run test:tooling` exits 0 over `tools/i18n-copies.test.mjs`.
 3. The first rendered pair (A stack with a returning arrow, B ring) at
-   about 2080 by 1460 and 360; the rounds; the rejected implementation removed with its record.
+   about 2080 by 1460 and 360; the rounds until the operator ends them, the
+   rejected implementation removed with its record, or, where the operator
+   delays them to a dedicated A/B testing pass (rule 25), the first pair
+   recorded without a pick and A shipped.
    Check: `grep -c "Round" docs/evidence/WO-024/design/comparisons.md` is at
    least 1.
 4. Record the stop figure and the launch/re-task budget in `fan-out.md` as the
-   profile directs. The authors' brief with the absent-material rule goes there;
-   dispatch the ten authors; merge the twenty drafts. Check: `npx nx test
-   tools` exits 0 over the models' specs.
+   profile directs. The authors' brief with the absent-material rule and the
+   builder-first shape (each study's data passed to `relationsModel`, no
+   presentation module per study) goes there;
+   dispatch the ten authors; merge the twenty drafts into the work chunks
+   `libs/shared/catalog/src/studies/geb.ts` and `tt.ts`, each with its
+   entry in `studyChunks` in `libs/shared/catalog/src/lib/catalog-loader.ts`;
+   add `geb: 'studyGeb'` and `tt: 'studyTt'` to `scopes` in
+   `libs/features/tools/src/lib/studies/study-record.ts`; put the twenty
+   records' messages in `apps/dotln/public/i18n/studyGeb/en.json` and
+   `studyTt/en.json` with the testing copy
+   `libs/features/tools/testing/src/lib/study-en.json`; register each model
+   in `studies/study-models.ts`; and add the batch's membership test to
+   `tools/studies.test.mjs`. Check: `npx nx test tools` exits 0 over the
+   models' specs and `study-models.spec.ts`; `npm run test:tooling` exits 0.
 5. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile; set `checked`. Check: `npm run studies:check` exits 0 over
    `studies/geb/` and `studies/tt/`.
@@ -227,11 +344,21 @@ screenshots, and the design record.
    reduced motion with the text equivalent naming the level; Strange loop's
    drawing returns to its start; the three interaction-mode studies open from
    the contents; Conway's law links to the Reverse Conway manoeuvre; axe; no
-   overflow at 360, 768 and 1440. Check: `npx nx e2e dotln-e2e` exits 0.
+   overflow at 360, 768 and 1440; the two works' studied counts read from
+   `studies-summary.json` as the other works' are; the catalog's visual
+   baselines (`apps/dotln-e2e/src/catalog.visual.spec.ts`,
+   `visual-baselines/darwin/catalog-{360,768,1440}.png`) regenerated for
+   the two shelves' counts and the change recorded in
+   `docs/evidence/WO-024/README.md`. Check: `npx nx e2e dotln-e2e` exits 0.
 8. The walkthrough as WO-020 step 11, under `docs/evidence/WO-024/`. Check:
    the files exist.
-9. Documents: the coverage rows, the family and the rule. Check:
-   `grep -c "absent" docs/ai-reference/catalog-rules.md` is at least 1.
+9. Documents: the coverage rows, the builder and the family in
+   `docs/dev-reference/architecture/catalog.md`, the `relations` rule in
+   `docs/ai-reference/catalog-rules.md`, and the two scopes in both
+   documents' lists of work catalogs. Check: `git show <the integrated
+   base>:docs/ai-reference/catalog-rules.md | grep -c "relationsModel"`
+   prints 0, recorded in the decisions file, and `grep -c "relationsModel"
+   docs/ai-reference/catalog-rules.md` prints at least 1.
 10. Dependency check as WO-015 step 15; `npm run check:bundle`. Check: prints
     nothing; the chunk sizes recorded.
 11. Gate plain and review. Check: passing rows, no tracked-byte mutation.
@@ -277,12 +404,18 @@ each.
 3. The four records whose mechanism the Design names (Gödel numbering,
    Decision procedure, Chunking and Conway's law (1968)) carry `executable`
    naming a model entry under `libs/features/tools/src/lib/studies/geb/` or
-   `studies/tt/` that composes its simulation and presentation modules, with
-   a spec beside it that imports that module and runs the study's example,
-   asserting its expected result; a recorded substitution
+   `studies/tt/` that composes its simulation module with `relationsModel`,
+   with a spec beside it that loads its record through
+   `loadModelStudy(id, 'relations')`, imports that module and runs the
+   study's example, asserting its expected result; a recorded substitution
    that replaces one of the four brings in a record with a mechanism to run,
    which carries its module and spec the same way, and the decisions file
    names it; every other record with `executable` does the same; every
+   other record with a drawing names as `visual.model` one module under
+   either directory that builds its drawing through `relationsModel`, with a
+   spec beside it; no presentation module is written per study
+   (`ls libs/features/tools/src/lib/studies/geb libs/features/tools/src/lib/studies/tt | grep -c "presentation"`
+   prints 0); every
    record with `executable: null` carries its reason in the decisions file
    (the file names each, and names none of the four or a replacement of
    one); every record with `visual: null` carries its reason there too (the
@@ -301,16 +434,24 @@ each.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the `relations` family and the records in lazy
    chunks, `npm run check:bundle` passes with the chunk sizes recorded, and
-   `package.json`'s `dependencies` keys equal the base's.
+   `package.json`'s `dependencies` keys equal the latest integrated
+   `main`'s.
 7. `docs/dev-reference/architecture/catalog.md` §Studies lists Gödel, Escher,
    Bach and Team Topologies with ten studied each, and
-   `docs/ai-reference/catalog-rules.md` states the absent-material rule
-   (`grep -c "absent" docs/ai-reference/catalog-rules.md` is at least 1).
+   `docs/ai-reference/catalog-rules.md` states the `relations` rule:
+   `grep -c "relationsModel" docs/ai-reference/catalog-rules.md` prints at
+   least 1, where the same count over the integrated base's file
+   (`git show <the integrated base>:docs/ai-reference/catalog-rules.md`, the
+   commit step 1 records) prints 0.
 8. `docs/evidence/WO-024/design/comparisons.md` records the first pair (A
-   stack, B ring), each rendered at about 2080 by 1460 and 360, and every
-   later round with its pick, and the decisions file
-   records the operator's word that ended the rounds; the decisions file
-   names the removed candidate's files and `ls` on each prints nothing.
+   stack, B ring), each rendered at about 2080 by 1460 and 360, and either
+   every later round with its pick, the decisions file recording the
+   operator's word that ended the rounds and naming the removed candidate's
+   files, `ls` on each printing nothing; or, where the operator delayed the
+   rounds to a dedicated A/B testing pass (WS-001 rule 25), the first pair
+   without a pick, the decisions file recording the operator's word that
+   delayed them and the follow-up that carries them, with A the drawing the
+   family ships.
 9. `node scripts/target-gate.mjs WO-024 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
@@ -328,7 +469,7 @@ the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021, WO-022 and WO-028 change. WO-023, this order's pair partner, merged first; this order now pairs with WO-040, the third standards pass (disjoint surfaces: WO-040 edits the movement and stream studies, their messages and the motion drawing, and the two share only `catalog.md`), the second to publish integrating the target's `main` and rewriting `studies-summary.json` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
+WO-021, WO-022 and WO-028 change. WO-023, this order's first pair partner, merged first; this order now pairs with WO-008, authentication (disjoint surfaces: WO-008 adds `libs/shared/auth`, its routes and pages and the mocked identity provider and touches no file under `libs/features/tools`, `libs/shared/catalog` or the study catalogs; it adds an OpenID Connect client library to `package.json`'s `dependencies`, which criterion 6 therefore reads at the latest integrated `main`, and the app catalog `apps/dotln/public/i18n/en.json`, where this order's family adds its words under `tools`, is the one file both may edit), the second to publish integrating the target's `main` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
 pathfinding and decision-making chapters, the RxJS patterns and the remaining
 EIP and PoEAA patterns are the next batches' candidates (the filing pass's
 C3), cut when the operator drains this queue. This order activates only on a
@@ -343,6 +484,7 @@ the remaining rows; the general search controls (WO-018); the machinery view.
 **Operator-review assumptions:** the operator accepts the in-degree selection
 with the recorded substitution and the twenty concepts it names, accepts
 situations drawn from the platform's public records and the app's structure
-as analogies, judges the first pair and ends the rounds in their own words,
-and reads the one draft pull request before final review, which the final
+as analogies, judges the first pair and ends the rounds in their own words
+or delays them to a dedicated A/B testing pass, accepts one builder that
+draws every study from its data, and reads the one draft pull request before final review, which the final
 publish reuses.
