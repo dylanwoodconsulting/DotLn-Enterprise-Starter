@@ -177,10 +177,13 @@ either checkout (the profile, §What close deletes, retains or refuses).
   is the idea's and the card shows it as theirs. A mark says the input
   existed when the beat ran, never that the agent used it or what it would
   have done without it, and the caption says so. On WO-221, narrowing the
-  verifier's knowledge away from `@verification-reports` marks beats 8 and
-  14 and not 4; the reviewer's, beats 10 and 16; narrowing the repairer
-  (the executor's entry) away from `@failure-report` marks beats 6 and 12;
-  a wait on the verifier's beat-4 hand-back moves beats 4 to 16 and leaves
+  knowledge of the verifier that handed back at beat 8 away from
+  `@verification-reports` marks beat 8 and leaves beat 14, which a second
+  application to the verifier of beat 14 marks; applied to the verifier of
+  beat 4 it marks nothing, no earlier report existing. The reviewers of
+  beats 10 and 16 and, away from `@failure-report`, the repairers of beats
+  6 and 12 (the executor's entry) behave the same way, one fill at a time.
+  A wait on the verifier's beat-4 hand-back moves beats 4 to 16 and leaves
   1 to 3. Applied ideas fold in the order applied, per order; removing one
   recomputes from the copy.
 - **The apply fold** (`libs/shared/records/src/lib/apply-ideas.ts`, pure):
@@ -188,8 +191,9 @@ either checkout (the profile, §What close deletes, retains or refuses).
   ideas over a copy of the strip and of the role copy per fill (an agent is
   one fill of a slot, the `order`, `slot` and `ordinal` an `AppliedIdea`
   names, so an idea applied to one verifier redraws that fill's card and
-  marks or moves only the beats that fill produced, never another fill of
-  the same slot; the repairer's copy is seeded from the executor's entry), with the input table above
+  marks only the beat that fill produced, never another fill of the same
+  slot, while an added wait delays that fill's hand-back and with it every
+  later beat of the order, whoever produced them; the repairer's copy is seeded from the executor's entry), with the input table above
   as a fixed map from an input to the row types and verdicts that produce it,
   and returns the redrawn view, the ghosts, the marks, the moves and one
   caption key per applied idea. It never mutates the copy. A drop is refused
@@ -245,9 +249,11 @@ either checkout (the profile, §What close deletes, retains or refuses).
   `machinery-idea-drop-v0` object with 400, never logs a body, and appends
   one JSON line per accepted drop to `ideas-YYYY-MM-DD.jsonl` (the UTC date)
   in the directory, creating it. It refuses to start when the directory lies
-  outside the Git root of the checkout it runs from, the checkout is in no
-  Git repository, the directory is not ignored (`git check-ignore -q <dir>`
-  exits nonzero) or it lies under `docs/control/`, so an idea never lands in
+  outside both the checkout it runs from and that repository's primary
+  checkout, when it runs from a directory in no Git repository, when the
+  directory is not ignored in the checkout that holds it (`git -C <that
+  checkout> check-ignore -q <dir>` exits nonzero) or when it lies under
+  `docs/control/`, so an idea never lands in
   a tracked path, a control directory, another repository or the launchpad.
   `.gitignore` gains `/docs/intake/`.
 - **Where the settings live.** The sink is a Node process, so none of its
@@ -453,11 +459,14 @@ target gate plain and review once each.
    fails this criterion, and one at another size is a boarded follow-up
    (rule 29).
 2. `npx nx test records` exits 0 with `apply-ideas` specs asserting each row
-   of the Design's table on the copies: on WO-221, narrowing the verifier
-   away from `@verification-reports` marks beats 8 and 14 and not 4, the
-   reviewer's marks 10 and 16, and the repairer's away from `@failure-report`
-   marks 6 and 12, while narrowing away from `@work-order` marks none and
-   its caption names the input; a wait on an agent's hand-back moves that
+   of the Design's table on the copies: on WO-221, narrowing the verifier of
+   beat 8 away from `@verification-reports` marks beat 8 and leaves beat 14
+   unmarked, a second application to the verifier of beat 14 marks it too,
+   and the same narrowing applied to the verifier of beat 4 marks nothing;
+   the reviewers of beats 10 and 16 and, away from `@failure-report`, the
+   repairers of beats 6 and 12 behave the same way, one fill at a time,
+   while narrowing away from `@work-order` marks none and its caption names
+   the input; a wait on an agent's hand-back moves that
    beat and every later beat by the wait and no earlier beat, and the
    working total by the same; each of the six card-only kinds leaves every
    beat's position and marks as the fold gave them and returns the caption
@@ -490,8 +499,11 @@ target gate plain and review once each.
    the loopback address and port is refused with 403; the preflight from
    the allowed origin is answered with the allow headers and from another
    origin refused; the sink refuses to start on a directory that is not
-   ignored, that lies outside the Git root of the checkout it runs from, that
-   lies under `docs/control/`, or from a directory in no Git repository; and
+   ignored, that lies in another repository or outside both the launching
+   checkout and its repository's primary checkout, that lies under
+   `docs/control/`, or from a directory in no Git repository; started with
+   no `--dir` from a temporary linked worktree it starts, and an accepted
+   post appends to `docs/intake/ideas/` in the primary checkout; and
    neither its standard output nor its standard error carries a marker
    string placed in a posted body.
 6. The sink's settings are not browser configuration: `git diff --exit-code
@@ -519,8 +531,9 @@ target gate plain and review once each.
 9. `npx nx e2e dotln-e2e` exits 0 and includes: an idea created in the form
    and applied to the verifier redraws its card with the ghost, the band and
    a caption; a wait idea moves the beat after its target right and leaves
-   the earlier beats in place; a knowledge idea marks the eighth and
-   fourteenth beats and not the fourth; a card-only idea leaves every beat
+   the earlier beats in place; a knowledge idea applied to the verifier of the eighth beat marks that
+   beat and neither the fourth nor the fourteenth, and applied again to the
+   verifier of the fourteenth marks that one too; a card-only idea leaves every beat
    where it was and its caption says why; a refused drop is visible on its
    row with its reason; the shelf and the applied ideas are present after a
    reload; no request leaves the page for the sink in the `mocked` build;

@@ -650,3 +650,41 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 
 ## Validation
 
+### The three reviews
+
+The criteria adversary, the design improver and the consistency reviewer ran
+over the committed subject as Codex workers (`gpt-6.1-sol` at `max`, through
+`npm run worker -- review --host codex --subject planning`). The brief
+measured 724,791 bytes against the helper's 400,000 ceiling, so each review
+ran as two batches of whole documents. The reports are in the ignored
+reviews lane, `docs/control/local/reviews/planning-2026-11-09-standard-pass-v0-122-1-open-orders-rejudged/`,
+as `round-1-design.md`, `round-1-consistency.md` and `round-1-criteria.md`.
+
+`self-review: found 26; fixed 25; recorded 1`
+
+| Review | Tree | Time | Findings | What changed |
+| --- | --- | --- | --- | --- |
+| design | `03df57c6` | 0 h 19 min | 7, none blocking, six distinct | WO-042: the sink writes the operator's ideas to the primary checkout and a live run removes only the directory it made, where the order had declared the journal disposable and deleted the intake directory; an idea applies to one fill of a slot. WO-036: the unit and the goal attach to the graph by the clearance test, with a no-route reason. WO-043: a new work's shelf title is a message, where WO-035 moves the titles. WO-035: the studied page WO-044 lands is in the migration |
+| consistency | `03df57c6` | 0 h 27 min | 11, one blocking, eight distinct and one shared with design | WO-017 and WO-016 (blocking): the recorded order's figures are asserted from its own stamps, since the waiting total is 226.93295 minutes and the floor 883.39820, not the 227.0 and 883.3 that sums of rounded gaps gave, and four gaps differ from their one-decimal forms by more than the one second the criteria allowed (reproduced by this pass from the platform's record at the pin). WO-017: after a reload the walkthrough signs in again. WO-045: the message check that refuses any record but version 1, the work chunk and the membership test are in its steps. WO-044: the unknown-work case keeps what was chosen. The register row for the inspector's link follows it to WO-045; the profile names WO-043 for the fan-outs. Recorded, not fixed here: the kit keys a receipt sentence on the number WO-041, which this pass answered by renumbering and put to core (§Requests to core, item 7) |
+| criteria | `29af3bab`, after the fixes above | 0 h 24 min | 8, one blocking, six distinct | Two came from this pass's own fixes to WO-042: the sink's containment rule now admits the primary checkout it defaults to, and the criteria follow the per-fill rule (blocking: a wait still moves every later beat, a narrowing marks one fill's beat). WO-043: each maxim the checkpoint carries is held equal to its map row's, so a reading cannot show an altered sentence. WO-035: WO-044 is a hard dependency. WS-001: the delivery contract names WO-042 to WO-045 and no WO-041 |
+
+The criteria review ran three times. Given the dispatch capture, as the
+operator's rule asks, the helper requires an `## Items` table from each
+batch and refuses the round when one lacks it: the first run's first batch
+was refused after 0 h 15 min with five findings returned, and the second
+run's second batch after its first had been accepted, 0 h 28 min in all,
+with four returned. Nothing was written either time and the returned text
+is kept nowhere. The third run was given no capture and is the report
+above. The dispatch's items are therefore answered here by the planner and
+not by the reviewer, which is a departure from that rule and is reported to
+core (§Requests to core, item 8):
+
+| Item of the dispatch | Where the pass acted on it |
+| --- | --- |
+| a standard planning pass | this document; the register, the NoOps and the sequence |
+| the latest upstream | #73, starter v0.122.1 (§Readings; D1) |
+| core's answers | §Core's answers; §Requests to core, items 1 and 2 |
+| review every existing order; change, split, combine or add | §How the open orders were read; D4 to D11; §Orders filed and amended |
+| the plan came from an earlier model; momentum is no reason | the reading of where each choice came from (§How the open orders were read); D2 and D3 |
+| no change is a valid result | weighed and declined with its evidence (§NoOps, first row); WO-029 and WO-031 unchanged |
+

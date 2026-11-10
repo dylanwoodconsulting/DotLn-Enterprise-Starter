@@ -73,10 +73,10 @@ extends to the mined rows). WO-023 merged (reference-only: it removed the
 `tool-v0` reader from `catalog-loader.ts` and added the `studyPoeaa`
 scope). WO-024 (reference-only, sequenced ahead: it adds the `studyGeb` and
 `studyTt` scopes with their `titles` maps and edits `catalog-loader.ts`'s
-study chunks). WO-044 (reference-only, sequenced ahead: it adds a list of
-studied concepts, links from the Tools home into each work, studied counts
-on chapter rows and marks on nearby links, on the screens this order routes
-through the translator).
+study chunks). WO-044 (hard: it lands `/tools/studied` and its `StudiedFacade`, which
+steps 5 and 10 route through the translator, with the links from the Tools
+home into each work, the studied counts on chapter rows and the marks on
+nearby links).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -98,8 +98,8 @@ through the translator).
   },
   {
     "workOrderId": "WO-044",
-    "relation": "reference-only",
-    "reason": "sequenced ahead: it changes the Tools home, the contents and the study's nearby links that this order routes through the translator"
+    "relation": "hard",
+    "reason": "it lands the studied page and its StudiedFacade, which steps 5 and 10 route through the translator, and changes the Tools home, the contents and the study's nearby links"
   }
 ]
 <!-- dotln-dependencies:end -->

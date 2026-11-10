@@ -205,7 +205,10 @@ adding a work or a visible field to it takes, is unknown until it merges.
   against the text and returns the rows that misstate it, which the mapper
   rewrites. A tooling test in `tools/catalog.test.mjs` asserts that every
   `maxim` of a repository map occurs verbatim, whitespace aside, in the
-  text committed beside it, so an edited maxim fails. This is the
+  text committed beside it, so an edited maxim fails, and that every `maxim`
+  the checkpoint `tools-artofwar.json` carries equals the maxim of the map
+  row its id names, so the sentence a reading shows is the one the text
+  holds. This is the
   first map the app owns: a work mined in public into the app's own store,
   the direction the operator gave. The batch is `artofwar`, its rows
   `aow:<line>`.
@@ -519,9 +522,11 @@ target gate plain and review once each.
    `tools-artofwar.json` (`tool-v2`) present and the map's SHA-256 and row
    count equal to the checkpoint's; the summary's `artofwar` entry lists
    the text's thirteen chapters; `npm run test:tooling` exits 0 with the
-   test that finds every `maxim` verbatim in
-   `libs/shared/catalog/src/maps/art-of-war-giles-1910.txt` and refuses a
-   scratch copy with one maxim altered; and `docs/evidence/WO-043/README.md`
+   test that finds every `maxim` of the map verbatim in
+   `libs/shared/catalog/src/maps/art-of-war-giles-1910.txt`, holds every
+   maxim of `tools-artofwar.json` equal to its map row's, and refuses both
+   a scratch map with one maxim altered and a scratch checkpoint with one
+   maxim altered beside the unchanged map; and `docs/evidence/WO-043/README.md`
    records the text's source, URL, retrieval date and SHA-256, equal to
    `shasum -a 256` over that file, and the critic's sampled rows with their
    disposition.
