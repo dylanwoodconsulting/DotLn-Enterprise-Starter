@@ -436,7 +436,10 @@ slots, select-then-apply, no generated cards, ideas saved to ignored intake.
   `ReplayStore` (SignalStore) loads the selected order's core snapshot with
   WO-007's call state and holds the applied ideas and the shelf with
   WO-007's `withPersistedState({ key: 'machinery.replay', select, restore })`
-  under `dotln-angular.machinery.replay`; it imports no `records`, which a
+  under `dotln-angular.machinery.replay`, a stored value that does not
+  parse moved to `dotln-angular.machinery.replay.unreadable` before
+  anything is written, so a later save cannot overwrite the operator's
+  ideas, and the shelf saying so; it imports no `records`, which a
   `type:data-access` library may not, and the facade composes it with
   `RecordsStore`; the strip itself derives from the copy and never
   persists. WO-046's `MachineryFacade`, `CoreSnapshotStore` and
@@ -799,7 +802,10 @@ target gate plain and review once each.
    that post failing asserts the dropped idea is applied and persisted and
    one `errorEvents.httpFailed` dispatched, a spec seeding
    `dotln-angular.machinery.replay` with a value that does not parse asserts
-   the shelf renders empty and the strip renders; and
+   the shelf renders empty with a line saying a saved state could not be
+   read, the strip renders, the unreadable value is kept under
+   `dotln-angular.machinery.replay.unreadable` and a later save leaves it
+   there; and
    `grep -rlE "from 'node:|from \"node:|require\(" libs/shared/records/src libs/shared/replay/src libs/features/machinery/src libs/features/machinery-data-access/src --include='*.ts' | grep -v spec`
    prints nothing.
 7. `npx nx e2e dotln-e2e` exits 0 and includes, in

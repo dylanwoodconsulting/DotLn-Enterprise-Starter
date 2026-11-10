@@ -27,10 +27,11 @@ first line says, and is read as evidence, never as direction. A second
 message at 22:27Z said the update pull request was merged.
 
 After the first handoff, at 01:36Z on 2026-11-10, the operator sent six
-messages between 02:12Z and 02:37Z that correct the pass, and a seventh at
-04:12Z after the second handoff. Their own words are in a second capture,
+messages between 02:12Z and 02:37Z that correct the pass, a seventh at
+04:12Z after the second handoff, and five between 05:03Z and 05:23Z while
+the third round ran. Their own words are in a second capture,
 `docs/intake/notes/planning-2026-11-09-answers.md`, SHA-256
-`bb9e6bee3a7f80ceedbea4b67e98388b364224420af5f66801be786abbf85f12`;
+`b5d82e90c974026f5774c99c8f60d8feb37c180039820887567b985dbe760842`;
 the first of the six quoted the session's own five items, and that whole
 message is kept in the ignored local planning lane as
 `operator-answers-whole-2026-11-09.md`, by D1's rule. One of the six is a
@@ -145,9 +146,9 @@ moved, and is the only writer of this repository.
 
 | Order | Change | Decision |
 | --- | --- | --- |
-| WO-036 walls and ways | narrowed to scene navigation; takes the scene's one boarded defect; leads the road | D6, D16 |
+| WO-036 walls and ways | narrowed to scene navigation; takes the scene's one boarded defect; leads the road | D6, D16, D18 |
 | WO-037 shooting and bullets | amended: what a knockout does to a formation; older trials stay readable | D6 |
-| WO-008 authentication and permissions | amended and made executable at `eb9d227` | D4 |
+| WO-008 authentication and permissions | amended and made executable at `eb9d227` | D4, D18 |
 | WO-024 concept studies V | amended: the `relations` family builder-first, the wiring a new work needs, a control on one criterion, the verifier's research read and the operator's display sizes; pairs with WO-036 | D5, D18 |
 | WO-040 standards pass III | amended: the measured scope, the stream part narrowed to four builder functions and nineteen messages; pairs with WO-037 | D5 |
 | WO-029 research, streams | amended: the verifier's research read, the operator's display sizes, the search controls' pointer | D18 |
@@ -155,7 +156,7 @@ moved, and is the only writer of this repository.
 | WO-031 research, enterprise patterns | amended as WO-029 | D18 |
 | WO-032 research, levels and teams | amended: base, and no standards pass before it; as WO-029 | D5, D18 |
 | WO-035 every string through the message system | amended: the mechanism, the field list, one title resolver, the fail-closed path | D7, D15 |
-| WO-017 the digital twin's first lane | rewritten to the twin's purpose: within a recorded stage, whether it would have made the operator's interventions | D14 |
+| WO-017 the digital twin's first lane | rewritten to the twin's purpose: within a recorded stage, whether it would have made the operator's interventions | D14, D18 |
 | WO-018 the toy shelf | narrowed to the shelf of the run's nineteen toys | D9 |
 | WO-016 the replay of a recorded order | amended as one order, subject and design kept: beside WO-046's view at `/machinery/replay`, each agent's machinery from core as it stood when the order ran, the filed text's defects fixed | D12, D17 |
 | WO-038 the reading at full size | removed: an order the operator did not ask for | D13 |
@@ -471,6 +472,17 @@ stand until a later pass amends the order each names. The operator's
 seventh message refused both: one pass does what one pass can, and nothing
 on an unmerged branch is fixed. D17 and D18 are the answer.
 
+While the third round ran the operator asked why the document check and
+the third review took as long as they did; the measured answers are in
+§Process cost. The planner then proposed two things for core's block: that
+a later review round read only the diff, and the document check's figures.
+The operator refused both. A recheck reads the whole change, which is
+their direction of 2026-11-03 and the point of core's WO-255, already in
+the operator record; and core's WO-261 already takes the session files out
+of what the screen reads. Neither is in §Requests to core, the item on the
+check's time that stood there is removed, and the operator record now says
+the block carries only what core has not already answered or filed.
+
 ### D12. The machinery view is a view into what core has; the replay is a separate, later order
 
 The operator: the machinery view is a view into what DotLn core currently
@@ -676,6 +688,15 @@ third round).
 | WO-045 and WO-043 each adding a schema version with none retired (receipt 026) | answered, no amendment: the target's own rule changes a shipped record's shape by a new version and never by an edit (`catalog.md` §The record) |
 | WO-043 leaving twenty-five designed toys and one built (receipt 027) | answered, no amendment: an order that builds a toy takes the operator's pick from the shelf, and the shelf is WO-018's to land |
 | WO-008 judged by every receipt and not yet run (receipt 026) | answered: it is the third road order of the sequence (D2) |
+| WO-017 adding a menu item without saying who sees it or regenerating the baselines that show the menu (receipt 028) | amended: the Twin item renders for a session holding `twin:read` and for no other; criterion 6 holds both cases and the visual run, a baseline regenerated only where its session shows the item |
+| WO-016 losing the operator's ideas when a stored value fails to parse and the next save overwrites it (receipt 028) | amended: the unreadable value is moved to its own key before anything is written, a later save leaves it there, and the shelf says a saved state could not be read |
+| WO-008 with no criterion holding its four pages to the message system (receipt 028) | amended: criterion 9 names `npm run i18n:check` among the gate's commands and what it holds |
+| WO-036's hashes of the earlier known outcome against its two new steering changes (receipt 028) | amended: the fixture's one tool is `steer.blend` (checked at `eb9d227`) and the engine's `avoid` is unchanged, so criterion 2 says why its hashes hold, criterion 3 holds the repair to priority steering alone, and the Cost line names the repair |
+| WO-017 accepting on a synthetic stage with the real stage only reported (receipt 028) | amended in one clause: a real stage the page refuses fails the criterion. The rest is answered: nothing of a real stage may enter the evidence (the second review's finding) |
+| WO-017's stage directory served by any build configuration not named (receipt 028) | answered, no amendment: the local configurations must serve it, a new configuration is a reviewed change to `project.json`, and criterion 2 names the two that publish |
+| WO-046 and WO-016 judging the snapshots' reproduction from the executor's run when no core clone is reachable (receipt 028) | answered, no amendment: a criterion that needs a clone or the network carries a fallback by the kit's criteria screen, and the verifier records it untested |
+| WO-043's provenance criterion passing on the workers' statements where the journal reads `unobserved` (receipt 028) | answered, no amendment: the launchpad cannot observe a Codex worker's reads, the brief forbids the read, and the order records `unobserved` and claims no observation |
+| WO-043 with no mechanical guard on a passage of a source in copyright inside a definition or note (receipt 028) | answered, no amendment: a check would need the source's text in the repository, which the repository may not hold; the designers' confirmations and the verifier's sample are the guard |
 
 Rejected: recording these for the next pass (the operator refused it, and
 seven of the amendments are a few sentences each).
@@ -1007,6 +1028,16 @@ What the operator sees after each order lands:
       "recordedAt": "2026-11-10T04:12:34.326Z"
     },
     "captureDigest": "sha256:9acd06f09b68b19e8af161046c0179a911ba11e5c9d9aecfbc927e7bb59b5414"
+  },
+  {
+    "rule": "The prompt for core carries only what core has not already answered or filed; an item that one of core's own orders already fixes is not sent back.",
+    "document": "docs/operator/README.md",
+    "section": "Updates, the lifecycle and records",
+    "message": {
+      "sessionKey": "172b0e3a92c4b7039c5a12a3abcc1c59f021ebbb509c3b38993c2f31b266b8f4",
+      "recordedAt": "2026-11-10T05:21:21.227Z"
+    },
+    "captureDigest": "sha256:714dd28517335fdb433e4c575af7e15547486be01d658c806c9ac49301baf4e2"
   }
 ]
 ```
@@ -1044,11 +1075,9 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 
 7. Observation and ask on the criteria review of a planning subject that is split into batches: with --capture, each batch's report must carry the Items table, and a batch that lacks it refuses the whole round with nothing written. Here the brief measured 724,791 bytes against the 400,000 ceiling, two batches. Run one: batch 1 refused after 0 h 15 min with five findings returned. Run two: batch 1 accepted, batch 2 refused after 0 h 11 min with four findings returned, 0 h 28 min in all. Three Codex launches and 0 h 43 min produced no report, and the returned text is kept nowhere (the worker-output directory holds only its owner record). The fork then ran the review without the capture and answered the dispatch's items in its own document, which is not what the operator's rule asks. Asks: keep a refused report's returned text and findings in the reviews lane marked refused; let the Items table be owed once per round, not per batch; and accept a format repair from the same worker, as the refuter's result admits.
 
-8. Observation on the document check's time: on the planning subject (23 changed files against 260 captures) the docs-check task of test:docs, which holds the verbatim screen, ran 0 h 8 min; on the update branch the whole of test:docs had run in 0 h 1 min. Nothing asked beyond noting it for the screen's cost line.
+8. Observation and asks on removing a filed order that never activated. The operator's corrections after this pass's first handoff removed one, WO-038, filed on 2026-11-05. npm run resume -- withdraw refuses it as an unknown work order, since it has no event, and npm run work-orders -- index --check refuses an open order outside the sequence, so the route left was deleting the file. npm run plan -- followups --apply then refused the batch that re-disposed the register row allocated to that order, with "allocation target WO-038 has no filed work order": the register is judged as it stands before the batch is applied. The fork applied the batch with a one-line stand-in file present and removed it, as it had earlier the same day when it renumbered a new order. Asks: a planning route that withdraws a never-activated order with a recorded reason, and a batch judged on the register it produces.
 
-9. Observation and asks on removing a filed order that never activated. The operator's corrections after this pass's first handoff removed one, WO-038, filed on 2026-11-05. npm run resume -- withdraw refuses it as an unknown work order, since it has no event, and npm run work-orders -- index --check refuses an open order outside the sequence, so the route left was deleting the file. npm run plan -- followups --apply then refused the batch that re-disposed the register row allocated to that order, with "allocation target WO-038 has no filed work order": the register is judged as it stands before the batch is applied. The fork applied the batch with a one-line stand-in file present and removed it, as it had earlier the same day when it renumbered a new order. Asks: a planning route that withdraws a never-activated order with a recorded reason, and a batch judged on the register it produces.
-
-10. Observation and ask on what a pass does with a refuter's known issues. The receipt design records a known issue with a reopening observation, and the planner's role text has the receipt freeze the judged text, so this pass's second handoff listed nineteen known issues as standing until a later pass amends the order each names, though most were a few sentences' work or already answered by the orders' own text. The operator refused that: a pass settles what it can and nothing on an unmerged branch is fixed. The fork amended them and ran the review and the refutation a third time. Ask: have the planner's role text say that a known issue the pass can settle is amended before the handoff and re-judged in pass scope, and that only an issue no text can settle is recorded with its reopening observation.
+9. Observation and ask on what a pass does with a refuter's known issues. The receipt design records a known issue with a reopening observation, and the planner's role text has the receipt freeze the judged text, so this pass's second handoff listed nineteen known issues as standing until a later pass amends the order each names, though most were a few sentences' work or already answered by the orders' own text. The operator refused that: a pass settles what it can and nothing on an unmerged branch is fixed. The fork amended them and ran the review and the refutation a third time. Ask: have the planner's role text say that a known issue the pass can settle is amended before the handoff and re-judged in pass scope, and that only an issue no text can settle is recorded with its reopening observation.
 ```
 
 ## Process cost
@@ -1072,6 +1101,9 @@ effective model and effort unknown), and the three reviews Codex
 | The corrections' drafting | two drafting workers and their re-tasks between 02:15Z and 02:45Z; tokens unknown (the notifications' figures were not kept across the session's context compaction) | the session journal's hand-back rows |
 | The second round's review | 0 h 37 min, 15,678,478 tokens, two batches | the report's header |
 | The second refutation | 0 h 12 min, 182,960 tokens | the host's task notification |
+| The amended WO-016's draft | one drafting worker, 0 h 27 min, 419,137 tokens | the host's task notification |
+| The third round's review | 0 h 21 min, 10,819,871 tokens, two batches, a brief of 636,581 characters for 2,142 changed lines in fifteen documents, each given whole | the report's header; `git diff --numstat` against the second round's tree |
+| The third refutation | 0 h 12 min, 179,945 tokens | the host's task notification |
 | The document gate | 0 h 14 min for the run on the first receipt's commit, 0 h 13 min of it the document check; 0 h 8 min for the check on the first subject; 0 h 11 min for the check alone on the corrected subject, which found three failures | the gate logs; the bounded probe's result line |
 | This session's tokens | 199,503,498 at 03:54Z (838 input, 197,770,293 cached input, 1,190,507 cache-write, 541,860 output), of which 109,559,364 by 01:20Z; cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
 | Workers | 28 launches and 8 re-tasks of a cap of 40 (Claude 14, Codex 8, unattributed 6); 26 and 3 at the first close | the same readback |
@@ -1090,8 +1122,16 @@ Three smaller costs were avoidable. The two refused criteria runs spent 0 h 43 m
 and three launches for nothing kept (§Requests to core, item 7). The eight
 drafting workers re-read what the four research workers had read, because
 the role text admits a re-task only as a recheck (item 5). And the document
-check ran three times at eight to thirteen minutes on a subject this size
-(item 8). One cost is carried forward and not measured: the amended orders
+check ran at eight to thirteen minutes each time on this subject, against
+one minute for the whole gate on the update branch. Measured on the third
+round's subject, the verbatim screen alone takes 13 min 15 s and the rest
+of the check seconds. Of the 127,652 twelve-word runs on the branch's
+changed lines, 9,606 also occur under the ignored intake, 8,893 of them in
+two directories of review reports and refutation prompts that earlier
+sessions wrote there and that quote the orders' own text; for each such
+run the screen proves that the repository held it at the base with one
+search of the whole base tree, 7,976 searches here. Core's WO-261 already
+leaves session files out of the captures, so nothing is asked of core. One cost is carried forward and not measured: the amended orders
 are longer than the ones they replace (WO-008 from 31,511 to 54,533 bytes), which an executor pays in context at activation.
 
 Compared with the alternative the operator named, a pass that changed
@@ -1119,8 +1159,8 @@ fell into.
 
 ## Validation
 
-The pass was validated twice: before its first handoff, and again after
-the operator's corrections changed the subject.
+The pass was validated three times: before its first handoff, after the
+operator's corrections, and after the amendments of D17 and D18.
 
 ### The first round's three reviews
 
@@ -1253,6 +1293,23 @@ the refuter recorded, and D18 says what this pass did about each:
 | WO-024 | no verifier read of the research for quality, where WO-043 and WO-045 carry one | a later read finds a WO-024 study wrong or unsupported in content |
 | WO-008 | the static storage check reads the files `git status` lists and passes on an empty list if the candidate is committed first | a verification records an empty list while the order's diff changes files there |
 
+### The third round
+
+After D17 and D18 one combined review ran over what had changed since the
+tree the second round read (`npm run worker -- review --kind combined
+--host codex --subject planning --round 3 --since 4fbf4295`), on tree
+`b9c88576`: two Codex workers, 0 h 21 min, no finding. The report is
+`round-3-combined.md` in the same lane. It is the last review of this pass:
+the guide ends a ladder at its third round.
+
+One fresh background `dotln-worker` then judged the subject at `b48528b`.
+Receipt
+[`2026-11-10-planning-80685a5e0fbc1a46-028`](../refutations/2026-11-10-planning-80685a5e0fbc1a46-028.md):
+**aligned-with-findings**, no hold, scope pass, eleven orders and the
+sequence judged, 0 h 12 min, nine known issues. D18's last nine rows say
+what this pass did about each: five are amended in the order they name and
+four are answered with the reason no text can settle them.
+
 ### The gates
 
 - On the update branch: `harness check`, `launchpad verify`, `npm test` and
@@ -1279,6 +1336,8 @@ the refuter recorded, and D18 says what this pass did about each:
 - The plan check on the second receipt's commit `15b76a9` passed with the
   seventeen recorded rules read against the session journal and the same
   four path advisories.
+- On the third round's subject the document check run alone passed with
+  no failure and no shared run.
 - The `npm run test:docs` run on this section's own commit follows it and
   is reported in the pull request's body and the handoff, since a section
   cannot record the gate that judges it.

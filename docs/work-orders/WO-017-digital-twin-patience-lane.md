@@ -147,7 +147,9 @@ leaves no result or failure row; gate results sit apart without an order.
   row).
 - **Feature** (`libs/features/twin`, `type:feature`; `BasePaths.Twin` in the
   Machinery menu group; `twin:read` granted to the mocked default user,
-  withheld from `denied`): `twin-page` over `TwinFacade`; `stage-lanes`
+  withheld from `denied`; the Twin item renders for a session that holds
+  `twin:read` and is absent for any other, the visitor who has not signed
+  in included): `twin-page` over `TwinFacade`; `stage-lanes`
   (inline SVG by place, never by clock: events above, the variant's band,
   the twin's marks and their ghost, the operator's marks; translated
   sentences as the text equivalent), `stage-picker`, `variant-picker`,
@@ -217,7 +219,7 @@ menu item; the bundle case; two documents; `docs/evidence/WO-017/`.
 12. e2e `apps/dotln-e2e/src/twin.spec.ts`; the executor's walkthrough on the
     synthetic stage at the five sizes; an exported stage is opened where one
     exists and nothing of it is recorded. Check: `npx nx
-    e2e dotln-e2e`; the files exist.
+    e2e dotln-e2e` and `npx nx e2e-visual dotln-e2e`; the files exist.
 13. Documents and pointers; dependency check as WO-015 step 15; gate plain
     and review. Check: passing rows, no tracked-byte mutation.
 14. Launchpad write-back to `docs/repositories/dotln-angular.md` §Find the
@@ -229,7 +231,8 @@ menu item; the bundle case; two documents; `docs/evidence/WO-017/`.
 `npx nx run-many -t lint test build`, `npm run typecheck:e2e`,
 `npm run lint:components`, `npm run check:templates`, `npm run i18n:check`,
 `npm run test:tooling`, `npm run check:scripts`, `npm run check:bundle`,
-`npx nx e2e dotln-e2e`; in the launchpad order worktree `npm run test:docs`;
+`npx nx e2e dotln-e2e`, `npx nx e2e-visual dotln-e2e`; in the launchpad
+order worktree `npm run test:docs`;
 then the target gate plain and review once each.
 
 **Acceptance criteria (all required)**
@@ -274,7 +277,11 @@ then the target gate plain and review once each.
    operator mark's bounding box stays; the export dialog's TypeScript; stage
    and variant kept across a reload and its sign-in; the keyboard path over
    every flip; axe at the board spec's threshold; no horizontal overflow at
-   360, 768, 1440, about 2080 by 1460 and 3840 by 1620.
+   360, 768, 1440, about 2080 by 1460 and 3840 by 1620; the Twin menu item
+   present for the default user and absent for the `denied` user and before
+   sign-in; and `npx nx e2e-visual dotln-e2e` exits 0, a whole-page baseline
+   regenerated only where its session shows the item and named in the pull
+   request with its reason.
 7. `npm run i18n:check` and `npm run check:templates` exit 0, and
    `twin-labels.ts` maps every member of the family, parameter, kind and
    class unions through `translateSignal` in tables typed by them.
@@ -303,7 +310,8 @@ then the target gate plain and review once each.
     stage exported from the journals enters the evidence, the report or a
     commit: where the operator has exported one on the machine, the verifier
     also performs the session on it, and the report says only that it did
-    and whether the page read the stage.
+    and whether the page read the stage; a stage the page refuses fails the
+    criterion.
 11. `node scripts/target-gate.mjs WO-017 --review` records a passing row for
     every declared command with no tracked-byte mutation, and
     `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate.

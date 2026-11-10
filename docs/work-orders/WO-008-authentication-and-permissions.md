@@ -657,7 +657,10 @@ review once each.
    each step. The criterion is met only when every step completed and that
    statement is present.
 9. `node scripts/target-gate.mjs WO-008 --review` records a passing row for
-   every declared command with no tracked-byte mutation, and
+   every declared command with no tracked-byte mutation, `npm run
+   i18n:check` among them, which holds every string of the login, denied
+   and account pages and of the mock's own pages to a message in the
+   translation files (rule 9), and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate.
 
 **Evidence gate:** the gate rows, the recorded command outputs, `docs/evidence/WO-008/README.md` (naming the `kid` and the marker), `design/` with `comparisons.md` and the first pair's renders, `docs/evidence/WO-008/walkthrough.md` with its screenshots, and `docs/evidence/WO-008/host-qualification.md`.

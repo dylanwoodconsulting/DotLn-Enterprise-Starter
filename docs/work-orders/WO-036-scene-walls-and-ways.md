@@ -41,7 +41,8 @@ and `scene-labels.ts` through messages in `apps/dotln/public/i18n/en.json` and
 the two testing copies; adds to the scene feature the field tools in the
 transport, the geometry list in the text layer, the rail group `ways`, the
 inspector's route views and the no-route notice, the canvas painter's
-geometry, path and frontier layers; `stored-scene.ts` reading a trial saved
+geometry, path and frontier layers; the settling repair of priority
+steering in `steering.ts` (WO-015-D010); `stored-scene.ts` reading a trial saved
 before a metric existed; `walls-known-outcome.json` listed in
 `tools/scripts/check-scene-fixtures.mjs`, and the known outcome regenerated;
 e2e cases and the scene's regenerated visual baselines; the documents
@@ -575,7 +576,9 @@ plain and review once each.
    heuristics; a unit the geometry stops on its path replans within the
    spec's ticks; and the `hashes` of `trial-known-outcome.json` equal those
    at the latest integrated `main`, so a run with no field step moves as it
-   did.
+   did: that fixture's one tool is `steer.blend`, the engine's `avoid` is
+   unchanged, and criterion 3's two changes act only where priority
+   steering or an avoidance step is placed.
 3. `steering.spec.ts` covers exact head-on, initial overlap, an ordinary
    offset crossing and a replay of each, asserting that the pair's
    separation grows from the first frame after the policy fires, that no
@@ -584,7 +587,8 @@ plain and review once each.
    Arrive come to rest, and that a settled crowd re-targeted nearby reaches
    its new objective no later than a plain Arrive from the same positions,
    both cases failing at the integrated base with both arms' exit codes
-   recorded in the evidence README (WO-015-D010);
+   recorded in the evidence README (WO-015-D010), the repair changing
+   priority steering alone, so criterion 2's hashes hold;
    `npx nx test tools` exits 0, and `git diff --quiet <latest integrated
    main> -- libs/features/tools/src/lib/studies` exits 0, so the Collision
    avoidance study and its spec are as they were.

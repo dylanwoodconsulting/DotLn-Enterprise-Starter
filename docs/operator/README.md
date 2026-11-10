@@ -342,7 +342,10 @@ an audience beyond the operator (2026-11-05, journal row
   `08208fab730f8c1311ff8fc53c635d0e7092499f6fc61b647e72c1a1d00d09c3`). Ideas
   for core that come out of the app go as GitHub issues on
   `DylanBWood/DotLn`; the paste stays the route for this fork's requests until
-  core's WO-193 lands (2026-10-24).
+  core's WO-193 lands (2026-10-24). The prompt carries only what core has
+  not already answered or filed: an item that one of core's own orders
+  already fixes is not sent back (2026-11-09, journal row
+  2026-11-10T05:21:21Z, digest `714dd285…`).
 - **Lifecycle steps the operator runs themselves:** `npm run worktree -- start
   WO-NNN <order path>` from `main`; a session in that worktree for
   `resume: next`, `resume: verify` and `resume: final review`; the merge; and
