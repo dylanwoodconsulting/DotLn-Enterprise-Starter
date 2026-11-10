@@ -357,10 +357,10 @@ sixteen tools.
   next pair; content and usability before polish; the rounds continue until
   the operator says the process is done, the rejected implementation leaves
   the code when its round is decided, and the decisions file records each
-  round. If the operator delays the rounds to a dedicated A/B testing pass,
+  round. If the operator delays the rounds,
   the order records the first pair without a pick, ships A, removes B's
   implementation with its screenshots and record kept, and carries the
-  rounds as the follow-up that pass takes (rule 25). The rule of cool (rule
+  rounds as a follow-up, this order's own criterion run later as exactly that (rule 25). The rule of cool (rule
   28) applies to this scene order in both directions.
 - **Fixtures and determinism.** `walls-known-outcome.json`: branch A a
   squad given A* and an objective beyond walls and obstacles drawn at tick
@@ -450,9 +450,15 @@ and its screenshots; the documents.
    unit the geometry stops on its path to a replan.
 7. `steering.ts`: wall avoidance and the head-on policy as its own
    function, `avoid` untouched, the simulation's avoidance term calling the
-   policy. Check: `steering.spec.ts` covers exact head-on with opposite
-   headings, initial overlap, an ordinary offset and a replay of each,
-   asserting physical separation; `npx nx test scene-engine` and
+   policy; and, with the steering open, WO-015-D010's follow-up in
+   `steering.ts` and `simulation.ts`: a crowd under priority steering comes
+   fully to rest and a settled crowd sent somewhere near starts promptly
+   (D010 names two candidates, a speed limit from the clearance ahead or
+   the unit's own steering blending under separation; the choice is
+   recorded in the decisions file). Check: `steering.spec.ts` covers exact
+   head-on with opposite headings, initial overlap, an ordinary offset and
+   a replay of each, asserting physical separation, and the specs of
+   criterion 3 for the crowd at rest and the re-targeted crowd; `npx nx test scene-engine` and
    `npx nx test tools` exit 0; `git diff --quiet <latest integrated main> --
    libs/features/tools/src/lib/studies` exits 0.
 8. `libs/shared/catalog/src/data/tools-aifg-a.json` (the seven rows typed),
@@ -573,7 +579,12 @@ plain and review once each.
 3. `steering.spec.ts` covers exact head-on, initial overlap, an ordinary
    offset crossing and a replay of each, asserting that the pair's
    separation grows from the first frame after the policy fires, that no
-   later frame overlaps and that the sides are the same across runs;
+   later frame overlaps and that the sides are the same across runs; the
+   engine's specs assert that twelve units under priority steering with
+   Arrive come to rest, and that a settled crowd re-targeted nearby reaches
+   its new objective no later than a plain Arrive from the same positions,
+   both cases failing at the integrated base with both arms' exit codes
+   recorded in the evidence README (WO-015-D010);
    `npx nx test tools` exits 0, and `git diff --quiet <latest integrated
    main> -- libs/features/tools/src/lib/studies` exits 0, so the Collision
    avoidance study and its spec are as they were.
@@ -604,8 +615,7 @@ plain and review once each.
 8. `docs/evidence/WO-036/design/comparisons.md` records the first pair (A
    transport, B Field tab) and either every later round with its pick and
    the operator's word that ended the rounds in the decisions file, or the
-   pair without a pick and the operator's word that delayed the rounds to a
-   dedicated A/B testing pass with A shipped (rule 25); in either case the
+   pair without a pick and the operator's word that delayed the rounds with A shipped (rule 25); in either case the
    decisions file names the removed implementation's files and `ls` on each
    prints nothing.
 9. `npx nx build dotln --configuration=production` exits 0 within the
@@ -620,7 +630,7 @@ plain and review once each.
 `design/`, `walkthrough.md` and its screenshots, and
 `docs/evidence/WO-036/host-qualification.md`.
 
-**Known issues and carry-ins:** The danger, visibility, exposure and cover
+**Known issues and carry-ins:** This order takes the scene's one boarded defect, WO-015-D010's follow-up (register row `FUP-e9b95694a5de071e`): a crowd under priority steering keeps a faint shimmer and a settled crowd crawls when sent somewhere near; step 7 repairs it and criterion 3 judges it. The danger, visibility, exposure and cover
 layers of `path.cost` are uniform until an influence-map order lands one (a
 candidate in the filing pass's NoOps); the inspector says so, and two of
 the five cost rows (`aifg-b:48`, `aifg-b:50`) weigh only those layers. The
@@ -629,7 +639,9 @@ inspector's study link and the two avoidance studies' carry-ins
 (WO-034-D013, `FUP-4e24208e45d27a1d`, and the Collision avoidance
 comparison as the policy's regression) are WO-045's, which depends on this
 order's `pathfinding.ts` and `graph.ts`. This order is the road entry of a
-lane pair whose side entry is WO-040: the two share no target file. The
+lane pair whose side entry is WO-024, the concept-study batch, which adds
+its family's words to the same `tools-en.json` copy, so the second to
+publish integrates the target's `main`; WO-040 follows in the next pair. The
 files this order edits under `libs/features/tools` are `reading-mapper.ts`
 and `testing/src/lib/tools-en.json`, which the enum's growth forces and
 WO-040 does not edit; the movement studies, `studyAifg/en.json`,

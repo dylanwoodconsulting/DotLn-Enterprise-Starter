@@ -1,33 +1,25 @@
-# WO-016 — The machinery view: one recorded order's beats across the page, the agent that filled each role slot with its hand-back card and a refilled slot's earlier occupant as a ghost, and an agent's card reading what it was obliged to do, what it ran with and what it waited on, over scrubbed six-field copies of the platform's WO-221 and WO-226 records and the shared records library
+# WO-016 — The machinery view: one recorded order's agents in their role slots over scrubbed, field-reduced copies of the platform's WO-221 and WO-226 segments, each agent's active gems, supports and prose sections readable, a mechanism change the operator drops on an agent redrawing the example use case with the before as a ghost, the operator's own ideas persisted in the browser and saved to ignored intake through a local sink, and the shared records and replay libraries
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
-**Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
+**Effort:** executor xhigh+; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ bc9133e932a00d33c15bc5289d683b8078f51ee4
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `machinery.ts` to `libs/shared/models`, `libs/shared/records`
-(reader, fold, loader and store, the committed copies and their schemas,
-the testing kit), the `machinery` feature's page, strip, slots, hand-back
-and agent cards, facade and layout, `libs/features/machinery-data-access`
-(the page's store), the reducer `tools/scripts/reduce-platform-records.mjs`
-and the copy check `tools/scripts/check-record-copies.mjs` with their tooling
-test and `scripts.md` rows, the lazy message scope of the role obligations,
-`apps/dotln-e2e/src/machinery.spec.ts`, two documents and the edits
-WO-026-D012 names; about 50 source files (the planner's estimate); adds no
-runtime dependency. Removes the arriving page WO-013 shipped for
-`/machinery`, its story, its spec and its deep-link e2e test, and
-regenerates the three `machinery-*.png` baselines. Wall-clock: about 5 to 8
-hours of executor work plus the design rounds and the fixed cycle; unknown
-until run. Context bytes: WS-001 §The app and its sub-apps, rules 9, 15,
-22 to 26 and 29, design A §1 and §1.6 read at the run's folder, the
-precedents named in the Cites line, this order, about
-200 KB for the executor; the platform's sources at the pin (about 125 KB)
-are read by the reducer, not into context. Commands added in the target:
-none (`check:fixtures` gains the copy check; the reducer is a helper run by
-hand). Tokens: unknown until run. Steps: 18. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-016-D001, which the next planning pass's refutation judges), and the 2026-11-09 pass's receipt.
+(reader, folds, fixture pack, kit), `libs/shared/replay` (the virtual-time
+clock), the `machinery` feature's page, strip, slots, cards, shelf, editor,
+facade and store, `libs/features/machinery-data-access`, the segment reducer
+and the record fixture check, the idea sink process, three fixtures, two
+documents, about 75 source files; adds no runtime dependency. Removes the
+arriving page WO-013 shipped for `/machinery`. Wall-clock: about 8 to 12
+hours of executor work plus the fixed cycle; unknown until run. Context
+bytes: WS-001 §The app and its sub-apps, design A §1 and §1.6, the UI
+vision §4 and V7 read at the run's folder, the fork's role skill stamps,
+this order, about 190 KB. Commands added in the target: `npm run idea-sink`.
+Tokens: unknown until run. Steps: 17. Re-mints: none. Refutations paid: five (receipts 008 to 012, on the texts before the 2026-11-01 second pass's authorized amendment, WO-016-D001, which the next planning pass's refutation judges).
 **Nomination provenance:** the operator's decisions of 2026-10-24 (ignored
 intake capture `docs/intake/notes/planning-2026-10-24.md`, SHA-256
 `63b25fa11cbd648d224067c98d712b23e79734f35979cc8c9922566cc85e044c`, entry 9):
@@ -55,9 +47,9 @@ priority. Amended by the 2026-10-24 second pass ([planning document](../planning
 records types' name, the caption rule, the base clause and receipt 008's known
 issues. Amended by the 2026-10-25 pass ([planning document](../planning/passes/standard-pass-v0-99-0-2026-10-25.md)
 §6 D4): receipt 009's known issues (the `actor` composite and its scrub, the
-repairer slot, the sink's directory rule and a drop while the sink is down). Amended by the 2026-10-26 pass ([planning document](../planning/passes/acceptance-by-use-2026-10-26.md) §6 D9): rule 24's acceptance-by-use criterion (criterion 10) and the walkthrough, the design brief of rule 25, and receipt 010's items: the sink checks `Origin` and `Host` (its item (a)), its default directory is DotLn-Angular's own ignored tree and never the launchpad's intake (b), criterion 3 reads the counts the executor recorded and names no starter's figures (c), `machinery.md` carries the rule per idea kind (d), a stored value that fails to parse is covered by a spec (e), the fixtures' `actor` values are the observed labels (f), the row counts are asserted by a spec rather than a line grep (g), and the copies' sources are the platform's public repositories (h). Amended by the 2026-10-28 pass ([planning document](../planning/passes/standard-pass-v0-100-0-2026-10-28.md) §6 D4 and D6): the design comparison reads as the operator corrected it in WO-019 (the two layouts are the first pair of an ongoing process the operator ends), and receipt 011's items are written in: the sink refuses a directory outside the Git root of the checkout it runs from (its item (a)), the verifier recounts the stamp ids independently (b), a planner, refuter or release-close actor is an `unknown`-slot beat naming the role (c), and the reducer's scrub fails a run of 32 or more hexadecimal characters and a UUID shape (d). Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D8): split in two, this order keeping the types, the records library over the copies and the page of one recorded order's beats, slots, hand-backs, ghosts and agent cards, while the idea shelf, select-then-apply, the redraw, their persistence and the local idea sink moved to WO-042 and the replay clock to WO-017; the base set to `eb9d227`; the copies made production data loaded as lazy chunks; the platform commit pinned with its fallback and the source digests; the role copy read from the platform at that commit, six roles; the agent card made prose; the recount criterion replaced by a reproduction; the WO-026-D012 places, the e2e, Storybook and visual carry-ins; the rule 25 pair at the operator's sizes with the deferral route and the rule 29 walkthrough sizes.
+repairer slot, the sink's directory rule and a drop while the sink is down). Amended by the 2026-10-26 pass ([planning document](../planning/passes/acceptance-by-use-2026-10-26.md) §6 D9): rule 24's acceptance-by-use criterion (criterion 10) and the walkthrough, the design brief of rule 25, and receipt 010's items: the sink checks `Origin` and `Host` (its item (a)), its default directory is DotLn-Angular's own ignored tree and never the launchpad's intake (b), criterion 3 reads the counts the executor recorded and names no starter's figures (c), `machinery.md` carries the rule per idea kind (d), a stored value that fails to parse is covered by a spec (e), the fixtures' `actor` values are the observed labels (f), the row counts are asserted by a spec rather than a line grep (g), and the copies' sources are the platform's public repositories (h). Amended by the 2026-10-28 pass ([planning document](../planning/passes/standard-pass-v0-100-0-2026-10-28.md) §6 D4 and D6): the design comparison reads as the operator corrected it in WO-019 (the two layouts are the first pair of an ongoing process the operator ends), and receipt 011's items are written in: the sink refuses a directory outside the Git root of the checkout it runs from (its item (a)), the verifier recounts the stamp ids independently (b), a planner, refuter or release-close actor is an `unknown`-slot beat naming the role (c), and the reducer's scrub fails a run of 32 or more hexadecimal characters and a UUID shape (d).
 **Depends on:** WO-013 merged (hard: the `/machinery` route and the Machinery
-menu group; merged as DotLn-Angular #6, which the base contains).
+menu group; the base above is provisional: since starter v0.96.1 (core WO-230) the target publish describes the change from the merge base of the subject and the target's `main` and names the activation base beside it, so activation on this base publishes right; the planning pass that runs after WO-015, the member before this one in the sequence, merges may set it to that merge commit, and none is required to (the 2026-10-24 second pass, D4)).
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -65,114 +57,60 @@ menu group; merged as DotLn-Angular #6, which the base contains).
   {
     "workOrderId": "WO-013",
     "relation": "hard",
-    "reason": "the machinery route and menu group this order fills; merged, and the base eb9d227 contains it"
+    "reason": "the machinery route and menu group this order fills; the base line is provisional and publishes right under starter v0.96.1's merge-base publish"
   }
 ]
 <!-- dotln-dependencies:end -->
 
 **Cites (read these sections):** `docs/workstreams/WS-001-dotln-angular.md`
-(house rules 3, 5, 8, 9, 12, 15, 18, 19, 22 to 26 and 29; §The app and its
-sub-apps, G1 to G6, §Design direction, operating rules I1 to I3);
-`docs/repositories/dotln-angular.md` (§Run the app and its checks);
-`docs/operator/README.md` (§How the operator directs a session: design
-comparisons); the target's `docs/ai-reference/*`,
-`libs/shared/catalog/src/lib/catalog-loader.ts` (the lazy-chunk loading of
-committed data), `tools/scripts/scrub-board-fixture.mjs` and
-`check-board-fixtures.mjs` (the scrub and check this order's copy check
-follows), `eslint.config.mjs` (the `type:data-access` constraint),
-`docs/dotln/evidence/WO-026/decisions.md` (WO-026-D012) at the base; the
-platform's public `docs/control/orders/WO-221.jsonl` and `WO-226.jsonl`,
-`.claude/skills/dotln-*/SKILL.md`, `.claude/agents/dotln-worker.md` and
-`scripts/lib/off-ramps.mjs` (`recordingSession`) at
-`49d8c4c364dc5986e8c76b4ac27a0110c380206f`; design A at the sections named
-above and `dotln-angular-forward.md` §2.0 (the UI vision's §4 and V7 are
-WO-042's).
+(house rules 3, 5, 8, 10, 12, 15, 18; §The app and its sub-apps, operating
+rules I1 to I3); `docs/repositories/dotln-angular.md`;
+`docs/operator/README.md`; this launchpad's `.claude/skills/dotln-*/SKILL.md`
+first lines (the Origin stamps, at the starter the launchpad carries at activation) and `CLAUDE.md` §Start here
+(the one-line role obligations); the target's `docs/ai-reference/*` and
+`tools/scripts/scrub-board-fixture.mjs` at the base; the platform's public
+`docs/control/orders/WO-221.jsonl` and `WO-226.jsonl` at the commit the
+reducer records; design A and the UI vision at the sections named above.
 
-**Objective:** (the operator's session, WS-001 rule 24) the operator opens
-`/machinery` and sees one recorded order, WO-221, as a strip of beats left
-to right in recorded time, the distance between beats proportional to the
-minutes between rows, each gap's minutes beside it and the strip's source
-named; above it the four role slots (executor, verifier, repairer,
-reviewer) and the operator as a figure at the edge. They step the anchor
-along the beats with the keyboard or by pressing a beat and watch the slots
-fill: each slot shows the agent that made the next hand-back, labelled by
-harness, model and effort, with a hand-back card reading pass, fail or no
-verdict, and a refilled slot keeps its earlier occupant as a ghost. They
-open an agent and read its card: what it was obliged to do, the mechanisms,
-inputs and prose sections its role file names (with the card saying the
-record does not carry what this agent itself ran with), and what it waited
-on, the request that dispatched it and the minutes since the previous
-hand-back while nobody dispatched. They switch to WO-226 and compare. What
-the operator learns is where the order's time went, which agents handed
-back what, and where the long gaps sit; what they decide is which agent's
-mechanisms they want to try changing first (WO-042 lets them try). Nothing
-leaves the browser but the page's own state in browser storage.
+**Objective:** at `/machinery` the operator sees one recorded order (WO-221,
+switchable to WO-226) as a strip of beats left to right in recorded time,
+the distance between beats proportional to the minutes between rows; above
+it the four role slots (executor, verifier, repairer, reviewer) and the
+operator as a figure at the edge; stepping the anchor fills a slot with the
+agent that made the next row, labelled by harness, model and effort, with a
+hand-back card reading pass, fail or no verdict; a refilled slot keeps the
+earlier occupant as a ghost; opening an agent shows its declared obligation,
+the mechanisms it runs with (the role's active gems and supports by id and
+its prose sections by key, from the launchpad's own role files at the
+starter version named) and what it waited on; a shelf holds the operator's
+own ideas, each a titled mechanism change (remove or add a gem or support,
+narrow the knowledge to listed inputs, set the rung, add a wait with its
+cause, replace a prose section with the operator's own words); selecting an
+idea then an agent redraws that agent's card and the use case's beats under
+the idea's caption with the before as a ghost and a band saying presentation
+only, nothing written (the caption names what the change shows in the use
+case and says so when the beats are unchanged); a refused drop stays visible
+with its reason; the
+operator's ideas and applied state persist in browser storage and, when the
+local sink runs, every dropped idea is also appended to the repository's
+ignored intake; nothing else leaves the browser.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** `/machinery` renders
-WO-013's arriving page
-(`libs/features/machinery/src/lib/containers/machinery-arriving-page/`), an
-empty state whose message names the order that replaces it and a link back
-to the board; the app has no record reader, fold or copy of a control
-segment (`git grep` finds no `ImplementationReady` or `control-event-lite`
-outside `docs/dotln`), and `libs/shared/records` and
-`libs/features/machinery-data-access` do not exist. The platform's public
-segments at `49d8c4c364dc5986e8c76b4ac27a0110c380206f` (2026-10-23;
-`git diff` to the platform's `main` at `06c1ddc1a` is empty for both files),
-re-derived by this pass: WO-221 has 16 rows, 8 of them operator rows (the
-activation, three verification requests, two repair requests, two
-final-review requests, none carrying an actor), hand-backs at rows 2
-(implementation, no verdict), 4 (verification, fail), 6 (repair), 8
-(verification, pass), 10 (final review, fail), 12 (repair, `subagents`
-mode), 14 (verification, pass) and 16 (final review, pass), seven gaps after
-a hand-back of 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and 5.9 minutes, a span of
-1,110.3 minutes, hand-backs by three models on two harnesses; WO-226 has 6
-rows, 3 operator rows, hand-backs at rows 2, 4 (pass) and 6 (pass), no
-repair, two gaps after a hand-back of 316.0 and 31.7 minutes and a span of
-580.2 minutes. No row of either segment carries an `ordinal` (the platform
-numbers a row by its line, `index + 1` in `scripts/lib/control.mjs` at the
-pin) or a `recordingSession`, so `actor.role` is absent from every row of
-both copies. The platform's role files at the pin are six role skills
-(executor, planner, refuter, release-close, reviewer, verifier; the router
-arrived later and the launchpad carries seven at starter v0.122.1), whose
-Origin stamps carry 19 ids for the executor and 13 for each other role, and
-the worker type with 6; each skill's `description` line states its
-obligation, its `Read:` lines name its inputs, and it carries no Markdown
-headings (its prose is numbered steps and single lines). The SHA-256 of the
-inputs at the pin: `WO-221.jsonl`
-`3fc912a0353145d51532d602af051eead4ce23f7f8bacd425a7fc99e0daef700`,
-`WO-226.jsonl`
-`80ee59928e50f061e47e6a278d370e36abd91c0073fb0c9063e17fca4221b726`,
-`dotln-executor/SKILL.md`
-`343e85e63ea1be3a1c8a8eb1ebf4b6b321af340630ef60c55dacda347b5c8252`,
-`dotln-planner/SKILL.md`
-`7f61afac312419fd9da367f45e64d0c33c39d691d20a4857ea12f4c00b5d98f7`,
-`dotln-refuter/SKILL.md`
-`1bb6162e0a616b5abb5c0c28ba595e40b14e2665a868f9368efedd5210d0058c`,
-`dotln-release-close/SKILL.md`
-`9b963151ec36593c6d1ab4d23aaed2fc4e389b0e6d74dc37580a1c05ad136432`,
-`dotln-reviewer/SKILL.md`
-`19d1333401d1e93e58df283813bca4434796fb1ed85e3c71906908f960d68566`,
-`dotln-verifier/SKILL.md`
-`f4aa1a2be5fe0f80350447f2bf6c6b8292ea45879df933c4f1c9fbdb6bb78f98`,
-`.claude/agents/dotln-worker.md`
-`0fe2f73e073b63950542d57ef7dca667afe89e86b501df378ad69cc50ffe915b`. At the
-target: production excludes the mock worker and the fixtures (the profile,
-§Run the app and its checks), and the catalog's committed data reaches
-production as lazy chunks (`catalog-loader.ts`); a `type:data-access`
-library may import only `layer:shared-data-access`, events, models, core
-and util (`eslint.config.mjs`), so a feature's data-access library cannot
-import another data-access library such as `records`; `DotLnRole` in
-`libs/shared/models/src/lib/toolbox.ts` already names the eight roles;
-`check:fixtures` chains the board, scene, catalog and study checks;
-`check:scripts` requires a `scripts.md` row for each npm script and each
-`.mjs` file directly under `tools/scripts`; `check-foundation-types.mjs`
-lists each library it compiles by name. The arriving page is asserted by
-`apps/dotln-e2e/src/sub-apps.spec.ts` (its deep-link, axe and viewport loop
-over `machinery`, and the keyboard test's `/machinery` heading),
-`sub-apps.visual.spec.ts` (the empty state and the baselines
-`machinery-360.png`, `machinery-768.png`, `machinery-1440.png`) and
-`storybook.spec.ts` (`machinery-arriving-page--default`), and described by
-the five documents WO-026-D012 names.
+**Observed gap (dated 2026-10-24; restated by the pass that sets the base):**
+`/machinery` renders WO-013's arriving page; the app has no record reader,
+fold, replay clock or fixture pack beyond the board's; no copy of a control
+segment exists in the target. The platform's public segments at core
+`49d8c4c3`: WO-221 has 16 rows, 8 of them operator rows (the activation,
+three verification requests, two repair requests, two final-review
+requests, none carrying an actor), seven gaps after a hand-back of 87.8,
+109.9, 1.7, 1.4, 2.1, 18.2 and 5.9 minutes (the 87.8-minute gap followed
+the implementation hand-back, which carries no verdict; the 109.9-minute gap
+followed the first verification's fail), a span of 1,110.3 minutes, hand-backs
+by three models on two harnesses; WO-226 has 6 rows, 3 operator rows and two
+gaps of 316.0 and 31.7 minutes (re-derived by the 2026-10-24 planning pass,
+§4). The launchpad's role files at starter v0.94.0 stamp the executor skill
+with 19 mechanism ids and each of the other five role skills with 13, and the
+worker type with 6. The operator has decided: slots, select-then-apply, no
+generated cards, ideas saved to ignored intake.
 
 **Design:**
 
@@ -182,504 +120,344 @@ the five documents WO-026-D012 names.
   nothing else, the operator's field list (`actor` is one composite object
   with exactly those keys, declared in the schema with
   `additionalProperties: false`; a slot label reads its three values as
-  they are, and the reader never splits or derives them). `role` is
-  `Exclude<DotLnRole, 'repairer'>`, reusing the existing union (rule 13):
-  the six role skills the platform carried when it recorded these rows
-  (executor, verifier, reviewer, planner, refuter, release-close) and
-  `operator`. The copies are of rows recorded between 2026-10-18 and
-  2026-10-22, before the router existed, so a row of the copies can carry no
-  other role; `repairer` is a slot, never a recorded role. `role` is kept
-  from `recordingSession.role` where a row records one, and absent where the
-  row records none or records the kit's `unobserved` sentinel, which
-  `recordingSession` in `scripts/lib/off-ramps.mjs` writes when no harness
-  session was observed. `SlotId` (`executor`, `verifier`, `repairer`,
-  `reviewer`); `Beat` (the row, its offset in minutes, its slot or `unknown`
-  with the role it names, the colony flag); `Episode` (a request or the
-  activation and the hand-back that follows); `SlotFill` (the agent that
-  filled a slot at a beat); `OrderStrip` (beats, episodes, the fills of each
-  slot, totals of waiting minutes, after a hand-back until the next request,
-  and working minutes, from a request to its hand-back, and omissions; named
-  a strip, not a scene, so that "scene" stays the scene engine's and the
-  catalog's word); `RoleMechanisms { role, mechanisms: string[], reads:
-  string[], proseSections: string[], obligationKey, source: { repository,
-  commit, file, sha256 } }`.
+  they are, and the reader never splits or derives them; `role` is one of
+  `executor`, `verifier`, `reviewer`, `planner`, `refuter`,
+  `release-close` and `operator`, kept from the role the platform's row
+  records for its session, `recordingSession.role` in the kit's segment
+  schema at v0.105.0, and absent where the row records none or records the
+  kit's `unobserved` sentinel, which `recordingSession` in
+  `scripts/lib/off-ramps.mjs` writes when no harness session was observed); `SlotId` (`executor`, `verifier`,
+  `repairer`, `reviewer`); `Beat`, `Episode`, `OrderStrip` (beats,
+  episodes, anchor, totals of operator and worker minutes, omissions; named a
+  strip, not a scene, so that "scene" stays the scene engine's and the
+  catalog's word);
+  `MechanismChange` (`removeGem(id)`, `addGem(id)`, `removeSupport(id)`,
+  `addSupport(id)`, `narrowKnowledge(inputs)`, `setRung(n)`, `addWait(minutes,
+  cause)`, `replaceProse(sectionKey, text)`); `IdeaCard { id, title, by:
+  'operator', change: MechanismChange, appliesTo: SlotId[], caption,
+  createdAt, status: 'draft' | 'applied' | 'did-not-stick', claims:
+  'presentation-only' }`; `RoleMechanisms { role, gems: string[], supports:
+  string[], proseSections: string[], source: { file, starter } }`.
 - **Records** (`libs/shared/records`, `scope:shared`, `type:data-access`,
-  `@dotln-angular/records` and `/testing`). The copies are production data,
-  not test fixtures: `src/data/segments/order-221.json`,
-  `src/data/segments/order-226.json` and `src/data/role-mechanisms.json`,
-  each loaded as its own lazy chunk through `import()` the way
-  `catalog-loader.ts` loads the catalog, so the production build, which
-  excludes MSW and its fixtures, renders them and nothing fetches them over
-  HTTP; the schemas `src/schema/control-event-lite-v0.schema.json` and
-  `role-mechanisms-v0.schema.json`. `records-reader.ts` (a copy's rows to
-  `ControlEventLite[]`, tolerant of an unknown `type`, which becomes an
-  `unknown` beat and is never dropped); `order-fold.ts` (rows to
+  `@dotln-angular/records` and `/testing`): `scene-reader.ts` (a fixture's
+  rows to `ControlEventLite[]`, tolerant of an unknown `type`, which becomes
+  an `unknown` beat and is never dropped); `concert-fold.ts` (rows to
   `OrderStrip`: the slot for a row is a fixed table by `type`, the
   implementation hand-back to the executor, a verification completion to the
-  verifier, a repair completion to the repairer, a final-review completion to
-  the reviewer, every request and the activation to the operator, else
+  verifier, a repair completion to the repairer, a final-review completion
+  to the reviewer, every request and the activation to the operator, else
   `unknown`, and a row whose `actor.role` is `planner`, `refuter` or
   `release-close` is an `unknown`-slot beat that names the role, never
   dropped (the slot table reads `type` and the role reads `actor.role`, so
   two rows whose other actor labels match are told apart); gaps from
-  `recordedAt` differences; every hand-back after a slot's first makes the
-  slot's previous occupant a ghost, because each hand-back ends that agent's
-  turn and the record carries no session identity to say two turns were one
-  agent; a `mode: 'subagents'` actor flagged as a colony of unknown size;
-  what each agent waited on, the request that dispatched it and the minutes
-  from the previous hand-back to that request); `records-loader.ts` and
-  `RecordsStore` (the loaded copies with WO-007's call state and the load
-  trinity in a `recordsEvents` group of `@dotln-angular/events`'
-  data-access tier, so WO-017 reads the same store); the `/testing` entry
-  point's `provideRecordsTestKit()` and synthetic rows (an unknown `type`,
-  and rows whose `actor.role` is `planner`, `refuter` or `release-close`).
-  The two segment files are named by the platform order's number alone,
-  never `WO-NNN`, because the target's outward lint refuses a launchpad
-  identifier in any path the pull request's Change table lists (core's answer
-  of 2026-10-24, item 1); the platform id stays inside each file as
-  `source.order`.
-- **The reducer** (`tools/scripts/reduce-platform-records.mjs --platform
-  <git directory> --commit <sha> [--out <directory>]`, a helper run by
-  hand): reads each input with `git -C <platform> show <commit>:<path>`,
-  never checking anything out, and prints each input's SHA-256. From each
-  segment it keeps exactly the fields of `ControlEventLite`, numbers
-  `ordinal` from 1 by line, maps `recordingSession.role` to `actor.role`
-  under the rule above, refuses any other role value, and writes `{ schema:
-  'control-event-lite-v0', source: { repository: 'DylanBWood/DotLn', commit,
-  order, sha256 }, rows }`. From each role skill and the worker type it
-  writes a `RoleMechanisms` entry: the Origin stamp's `ids` in stamp order,
-  the targets of its `Read:` lines, its section keys (`step-<n>` for a
-  numbered step and `line-<n>` for each other non-empty line by position,
-  the bare `Rules:` marker excepted; the rule is recorded in the file), and
-  the key of its obligation, whose text, the skill's `description` line, it
-  writes to the lazy message scope `apps/dotln/public/i18n/machineryRoles/en.json`
-  (rule 9: a record field reaches the screen as a message, as the study
-  scopes do); `role-mechanisms.json` maps the four slots to roles, the
-  repairer to the executor's entry, because the repairer is the executor role
-  at `resume: fix` (the executor skill's `description` at the pin). It runs
-  the scrub over every value in `rows`: each `actor` value must read as a
-  harness, model or effort label, or for `actor.role` as one of the role
-  names the type lists, and a row value carrying `@`, a path separator, an
-  absolute path (the board scrub's rule, imported from
-  `scrub-board-fixture.mjs`), a dotted hostname, a run of 32 or more
-  hexadecimal characters or a UUID shape fails. Over the role copy, whose
-  `Read:` targets are repository-relative paths and `@` selectors by
-  design, an absolute path, a run of 32 or more hexadecimal characters or a
-  UUID shape fails. The `source` blocks are the reducer's own output from
-  its arguments, validated by the schemas' patterns (a 40-character commit,
-  a 64-character digest) and outside the scrub, which would otherwise refuse
-  the commit they must name. It formats each file with the workspace's
-  Prettier and its configuration before writing, so `nx format:check`
-  passes on the bytes it wrote, prints PASS or FAIL without values, and
-  with `--out` writes the same four files under that directory, so a second
-  run reproduces the committed bytes. The
-  copies carry the `actor` values the platform's rows recorded (harness,
-  model and effort as observed labels, never a pin). The platform is a
-  public repository (`DylanBWood/DotLn` on GitHub); on this machine a clone
-  sits beside the launchpad.
-- **The copy check** (`tools/scripts/check-record-copies.mjs`, in
-  `check:fixtures`): Ajv 2020 over the two segment copies and the role copy
-  against their schemas with `additionalProperties: false`, the
-  reducer's scrub over the same values, and every `obligationKey` present
-  in the `machineryRoles` scope; PASS or FAIL without values.
-- **The page's store** (`libs/features/machinery-data-access`,
-  `scope:dotln`, `type:data-access`): `MachineryStore` holds the selected
-  order, the anchor and the opened agent, and persists the selected order and
-  the anchor with WO-007's `withPersistedState({ key: 'machinery' })` under
-  `dotln-angular.machinery` (I1); the strip derives from the copy and never
-  persists. It imports no `records` (the `type:data-access` constraint);
-  the feature's facade composes the two. Events in a `machineryPageEvents`
-  group of the `ui` tier.
-- **Feature** (`libs/features/machinery`, replacing the arriving page):
-  `machinery-page` (container) over `MachineryFacade` (`vm = computed(() =>
-  toView(fold(copy), roleMechanisms, anchor))`); composites `beat-strip`
-  (beats as buttons with pressed state; gaps as inline SVG widths with a
-  floor so a one-minute gap stays visible; a text equivalent per gap; the
-  strip's source, the platform repository and the pin, named under it, G6),
-  `slot-row` (four slots and the operator figure; ghosts as reduced-opacity
-  figures with an earlier-occupant line), `hand-back-card` (pass, fail or no
-  verdict), `agent-card` (below); mappers `beat-label` (a `type` to its
-  message), `phase-glyph` (native emoji with a text equivalent, G5),
-  `gap-scale`; a layout. Order switch WO-221 and WO-226. The anchor steps
-  with the keyboard and by pressing a beat; an agent opens from its slot or
-  its ghost. Every string on screen is a message (rule 9): beat types, slot
-  and role names, the caption and the gap and total figures are keys under
-  `machinery.*` in `apps/dotln/public/i18n/en.json`; the obligations come
-  from the `machineryRoles` scope; harness, model and effort labels,
-  mechanism ids, input targets and section keys are machine identifiers
-  shown inside message frames (G3). The menu keeps its Machinery link and
-  label; the testing translations equal the app catalog's `machinery` block,
-  asserted beside the tools and scene blocks in `tools/i18n-copies.test.mjs`.
-- **The agent card** is prose and structured reading in the catalog's
-  measure, never a key-value list or a definition-list grid (WS-001 rule 24,
-  G6 and §Design direction): a badge of harness, model and effort, and the
-  colony flag where the actor ran subagents; a sentence of what it was
-  obliged to do (the obligation message); what it ran with, as its role
-  file reads at the pin, its mechanisms as a readable list of names, its
-  inputs as a list of names and its prose sections by key, under the
-  caption that the record does not carry what this agent itself ran with
-  and the role file is the platform's at the pin, a day after WO-226's last
-  row; and what it waited on, the request that dispatched it and the minutes
-  since the previous hand-back, labelled nobody dispatched. The repairer's
-  card says the repairer runs the executor role at `resume: fix`.
-- **Design brief** (WS-001 rule 25): the strip is a timeline instrument
-  across the page's width, the gaps drawn as distance with their minutes
-  beside them, the beats as glyphs in one phase palette; the four slots as
-  figures above it in the one role palette the scene and the catalog share, a
-  ghost at reduced opacity; the agent card as prose in the catalog's measure
-  as above; nothing animated at rest. The comparison is the operator's eye
-  doctor test: the first pair is the slots above a horizontal strip (A)
-  against the slots beside a vertical one (B), one independent variable, the
-  strip's axis; both built and rendered at about 2080 by 1460 and at 360
-  during execution and read at 3840 by 1620 (rules 25 and 29), presented as
-  A then B with the round named in the question and both captions; the
-  operator's preference makes the next pair, content and usability before
-  cosmetic polish, until the operator says the process is done, and a
-  preferred candidate alone is not acceptance; the decisions file records
-  each round's pair and pick, the rejected implementation leaves the code
-  when its round is decided (its screenshots and an implementation record
-  under `docs/evidence/WO-016/design/` are the history), and a decided
-  choice is not relitigated for this order. The operator may delay the
-  rounds to the dedicated A/B testing pass: the order then records the first
-  pair without a pick, ships A, and carries the rounds as a follow-up that
-  the planning pass filing the A/B testing pass allocates.
+  `recordedAt` differences; a refilled slot's earlier
+  occupant kept as a ghost; a `mode: 'subagents'` actor flagged as a colony
+  of unknown size); `apply-ideas.ts` (a pure fold of mechanism changes over a
+  copy of the scene and the role mechanisms; a change whose `appliesTo`
+  excludes the target is refused with the reason); the fixture pack under
+  `/testing` (`segments/order-221.json`, `segments/order-226.json`,
+  `role-mechanisms.json`) and `provideRecordsTestKit()`. The two segment
+  files are named by the platform order's number alone, never `WO-NNN`,
+  because the target's outward lint refuses a launchpad identifier in any
+  path the pull request's Change table lists (core's answer of 2026-10-24,
+  item 1; the 2026-10-24 second pass verified the names against the lint);
+  the platform id stays inside each file as `source.order`.
+- **Replay** (`libs/shared/replay`, `scope:shared`, `type:util`): `replayOn(events,
+  scheduler, zero)` emitting each event at its `recordedAt` offset on an
+  injected scheduler; `ReplayClock` (position, speed, `jumpTo`) over RxJS
+  virtual time with a resolution parameter (one frame per recorded second by
+  default); `toAsciiMarble`; `frames`. Takes a generic `{ recordedAt }` shape so
+  it imports no models. WO-017 reuses it.
+- **Fixtures.** `tools/scripts/reduce-control-segment.mjs <segment.jsonl>
+  <out.json> --commit <sha>` keeps exactly the fields of `ControlEventLite`,
+  writes `{ schema: 'control-event-lite-v0', source: { repository:
+  'DylanBWood/DotLn', commit, order }, rows }`, runs `assertScrubbed` over
+  every string, each `actor` value included, which must read as a harness,
+  model or effort label, or for `actor.role` as one of the role names the
+  type lists (a value carrying `@`, a path separator, a dotted hostname, a run of 32 or more hexadecimal characters or a UUID shape fails), and prints PASS or FAIL without values; the committed fixtures carry the `actor` values the platform's rows recorded (harness, model and effort as observed labels, never a pin); run by hand against the platform's public repository at a recorded commit, as the board fixture was captured; the platform's control segments and its role files are public repositories, so the copies' sources are public, and the fixture's `source` block names the repository.
+  `tools/scripts/check-record-fixtures.mjs` (Ajv against
+  `control-event-lite-v0.schema.json` with `additionalProperties: false`,
+  plus `assertScrubbed`) wired into `check:fixtures`.
+  `role-mechanisms.json` lists, per role, the ids the launchpad's role skill
+  stamps carry and the prose section keys of each skill, with the file name
+  and the starter version as its source; the repairer slot has no skill of
+  its own, because the repairer is the executor role at `resume: fix`, so
+  the file maps `repairer` to the executor's entry and the agent card says
+  so; copied as data by the executor from
+  the launchpad kit files at activation, which records the starter and the
+  per-role counts it read in the decisions file (at starter v0.96.1 the
+  executor stamp carries 19 ids and each other role 13; a later starter may
+  differ, and the order never hard-codes them).
+- **Feature** (`libs/features/machinery`, replacing the arriving page, with
+  `libs/features/machinery-data-access`): `machinery-page` (container) over
+  `MachineryFacade` (`vm = computed(() => applyIdeas(fold(segment),
+  roleMechanisms, applied))`); composites `beat-strip` (beats as buttons with
+  pressed state; gaps as inline SVG widths with a floor so a one-minute gap
+  stays visible; a text equivalent per gap), `slot-row` (four slots and the
+  operator figure; ghosts as reduced-opacity figures with an earlier-occupant
+  line), `agent-card` (harness, model and effort badge; declared obligation;
+  mechanisms as a key-value list of gems, supports and prose sections;
+  waiting on), `idea-shelf` (the operator's cards; the new-idea form with a
+  title, a change kind from a menu, its parameters and the target roles; no
+  generated cards), `use-case-caption` (what the applied change shows in the
+  use case: `addWait` moves the beats after its target by its minutes; every
+  other change redraws the agent's card and the caption says the beats are
+  unchanged), `sandbox-band`; mappers `declared-line`,
+  `phase-glyph` (native emoji with a text equivalent), `gap-scale`; a layout.
+  `MachineryStore` (SignalStore) holds the applied ideas and the shelf with
+  WO-007's `withPersistedState({ key: 'machinery', select })` under
+  `dotln-angular.machinery`; the strip itself derives from the fixture and
+  never persists. Order switch WO-221 and WO-226. Select-then-apply with the
+  keyboard: pick a card, then a slot or an agent; no drag.
+- **The idea sink** (`tools/idea-sink/idea-sink.mjs`, `npm run idea-sink`): a
+  local Node process on `127.0.0.1` at `DOTLN_IDEA_SINK_PORT` (default 4310)
+  that accepts `POST /ideas` only when the request's `Origin` header is the development origin and its `Host` is the loopback address and port (any other origin or host is refused with 403), refuses a body over 16 KB, never logs a body, and appends one JSON line per idea to
+  `DOTLN_INTAKE_SINK_DIR` (default `docs/intake/ideas/` in the DotLn-Angular checkout the sink runs from, never the launchpad's intake, which this order adds to `.gitignore` with a `.gitkeep`), creating
+  `ideas-YYYY-MM-DD.jsonl`; the sink refuses to start when the resolved
+  directory lies outside the Git root of the checkout the sink runs from,
+  lies in no Git repository, or is not ignored by the one that contains it
+  (`git check-ignore -q <dir>` exits nonzero), so an idea never lands in a
+  tracked path, a control directory, another repository or the launchpad; both variables documented in `.env.example`, values
+  never committed. The app posts a dropped idea when
+  `environment.ideaSinkUrl` is a string (development:
+  `http://127.0.0.1:4310/ideas`; production: `null`); the drop is applied
+  and persisted in browser storage first, then posted, and a failed post
+  (the sink set but down) is one toast through WO-007's error store, so
+  nothing is lost and nothing blocks. The operator
+  runs the sink beside `nx serve` from their own checkout, so the ideas land
+  in that checkout's ignored intake and are not lost in a browser.
+- **Design brief** (WS-001 rule 25): the strip is a timeline instrument across the page's width, the gaps drawn as distance with their minutes beside them, the beats as glyphs in one phase palette; the four slots as figures above it in the one role palette the scene and the catalog share, a ghost at reduced opacity; the agent card as prose in the catalog's measure (what it was obliged to do, what it ran with, what it waited on) with the mechanisms as a readable list of names, never a definition-list grid; the idea shelf as rows; the sandbox band as text; nothing animated at rest. The comparison runs as the operator's eye doctor test (WS-001 rule 25 as revised on 2026-10-28): the first pair is the slots above a horizontal strip against the slots beside a vertical one, built and rendered at 1440 and 360 during execution, presented as A then B with the round named in the question and both captions, one independent variable per pair; the operator's preference makes the next pair, content and usability before cosmetic polish, until the operator says the process is done, and a preferred candidate alone is not acceptance; the decisions file records each round's pair and pick, the rejected implementation leaves the code when its round is decided (its screenshots and an implementation record under `docs/evidence/WO-016/design/` are the history), and a decided choice is not relitigated for this order.
 - **Documents:** `docs/dev-reference/architecture/machinery.md` (the records
-  library and its store, the copies, the reducer and its field list, the
-  slot table, the ghost rule, the role copy's source and its section rule,
-  what the view claims and does not) and `docs/ai-reference/machinery-rules.md`
-  (copies carry the six fields and no path; the fold decides nothing and
-  derives slots from the type table; an unknown type renders as unknown,
-  never dropped; the copies are production data loaded as lazy chunks;
-  nothing writes a control record), with pointers from
-  `docs/dev-reference/README.md`'s table and `docs/ai-reference/README.md`;
-  the places WO-026-D012 names, which describe the placeholder: `README.md`'s
-  menu table, `docs/dev-reference/README.md`'s first paragraph,
-  `docs/dev-reference/architecture/sub-apps.md`'s opening, its table and its
-  sentence that `libs/features/machinery` is the smallest form,
-  `docs/dev-reference/workspace/storybook.md`'s visual list and
-  `libs/features/machinery/README.md`; the generated READMEs of the two new
-  libraries and their testing entry points replaced as rule 19 directs.
+  and replay libraries, the fold's slot table, the fixture reducer and its
+  field list, the idea sink, the rule per idea kind (only `addWait` moves the beats; every other kind redraws the card and the caption says the beats are unchanged), what the view claims and does not) and `docs/ai-reference/machinery-rules.md` (fixtures carry the six fields and
+  no path; the fold decides nothing and derives slots from the type table;
+  an unknown type renders as unknown, never dropped; a drop changes a copy
+  and claims presentation only; no generated cards; nothing writes a control
+  record).
 
 Rejected: reading the platform's resident over its loopback (axis: the
 operator's decision that the app is not wired to core; the stopgap is a
-scrubbed copy, the store comes later); serving the copies through MSW as the
-board's fixture is served (axis: production excludes the mock worker and its
-fixtures, so the production page would render nothing; the catalog's lazy
-chunks are the committed-data route that reaches production); reading the
-role mechanisms from the launchpad's role files at activation (axis: what the
-recorded agents ran with; the platform's files at the copies' own commit are
-the nearest record of that, while the launchpad's are the fork's at a later
-starter and carry a role, the router, that did not exist when the rows were
-recorded); a ghost only where a refill changes the actor's labels (axis: the
-record carries no session identity, so two hand-backs with the same labels
-are still two turns); renaming the menu link to Agents (axis: every visual
-baseline that shows the menu would change for a label); episodes as the unit
+scrubbed copy, the store comes later); generated idea cards from records
+(axis: the operator's decision; the ideas are theirs); drag and drop now
+(axis: select-then-apply first); the launchpad's intake as the sink's
+default (axis: the app's process writes inside its own repository; the
+operator points the sink elsewhere by one variable); episodes as the unit
 instead of slots (axis: the operator's words, separate agents in their role
 slots today; the episode view is a later toggle).
 
 Live-run surfaces at the base: WO-006's served production build and
-Storybook; WO-007's MSW worker (the board's); WO-013's menu and the arriving
-page at `/machinery`; WO-014 and WO-019's catalog; WO-015's scene; each
-exists at the base and was run by the order that landed it. The platform's
-public repository at the pin, on GitHub and in the clone beside the
-launchpad.
+Storybook; WO-007's MSW worker; WO-013's menu; WO-014's catalog; WO-015's
+scene.
 
-**Deliverables:** the types; the records library with its copies, schemas,
-store and kit; the reducer, the copy check and their tooling test; the
-machinery feature and its data-access library; the e2e, Storybook and
-visual changes; the two documents and the WO-026-D012 edits;
+**Deliverables:** the types; the records and replay libraries with kits; the
+reducer and the check; the three fixtures; the machinery feature and its
+data-access library; the idea sink and its tooling test; the two documents;
 `docs/evidence/WO-016/`.
 
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-016: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor
-   eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (a `main`
-   that does not contain the pin stops for a planning pass); the target
-   worktree then fast-forwards to the target's `main`, and that integrated
-   commit is the baseline of every later comparison; then the route guard
-   and activation as WO-005 step 1. Check: the decisions carry the integrated
-   commit.
-2. Generate `libs/shared/records` (`scope:shared,type:data-access`) and
-   `libs/features/machinery-data-access` (`scope:dotln,type:data-access`),
-   each with a testing entry point, appending the commands to
-   `docs/dev-reference/workspace/generator-log.md`; add `shared/records` and
-   `features/machinery-data-access` to the list in
-   `tools/scripts/check-foundation-types.mjs`. Check: `npx nx show projects`
-   lists `records` and `machinery-data-access`; `npm run
-   typecheck:foundations` exits 0.
-3. `libs/shared/models/src/lib/machinery.ts` with the Design's types,
-   exported through `public_api.ts`; the two schemas under
-   `libs/shared/records/src/schema/`. Check: `npm run check:shared-types`
-   exits 0; `npx nx test models` exits 0.
-4. `tools/scripts/reduce-platform-records.mjs` and `tools/record-copies.test.mjs`:
-   a tooling test, over small synthetic inputs in a temporary Git
-   repository, that the reducer keeps exactly the six fields, numbers
-   ordinals from 1, keeps `recordingSession.role` as `actor.role`, leaves it
-   absent for `unobserved` and for a row with none, refuses any other role,
-   refuses an absolute path, a run of 32 or more hexadecimal characters and a
-   UUID shape in a row value while writing the commit in `source`, extracts
-   stamp ids, `Read:` targets and section keys from a sample skill, writes the
-   obligation to the scope catalog, and prints no input value on failure.
-   Check: `npm run test:tooling` exits 0.
-5. The copies: the platform is the clone beside the launchpad's main
-   checkout (on this machine `../DotLn` from the launchpad root) when `git
-   -C <clone> cat-file -e
-   49d8c4c364dc5986e8c76b4ac27a0110c380206f^{commit}` exits 0; otherwise
-   `git clone --filter=blob:none https://github.com/DylanBWood/DotLn` into
-   the session scratch; if neither is reachable, stop and record the blocker
-   in the decisions, because a copy is never invented. Run `node
-   tools/scripts/reduce-platform-records.mjs --platform <that path> --commit
-   49d8c4c364dc5986e8c76b4ac27a0110c380206f`, which writes
-   `libs/shared/records/src/data/segments/order-221.json`, `order-226.json`,
-   `libs/shared/records/src/data/role-mechanisms.json` and
-   `apps/dotln/public/i18n/machineryRoles/en.json`; record in the decisions
-   the platform path used, the command and the digests it printed. Check: the
-   printed digests equal the nine in the Observed gap and the run prints PASS.
-6. `tools/scripts/check-record-copies.mjs`, appended to `check:fixtures` in
-   `package.json`. Check: `npm run check:fixtures` exits 0.
-7. `docs/dev-reference/workspace/scripts.md`: a Helpers row for
-   `tools/scripts/reduce-platform-records.mjs` and the `check:fixtures` row
-   naming `check-record-copies.mjs` (rule 26). Check: `npm run check:scripts`
-   exits 0.
-8. `libs/shared/records/src/lib/`: `records-reader.ts`, `order-fold.ts`,
-   `records-loader.ts` and `RecordsStore` with its `recordsEvents` group in
-   `libs/shared/events`, and the testing kit, with the specs of criterion 4.
-   Check: `npx nx test records` exits 0; `npm run lint:hygiene` exits 0.
-9. `libs/features/machinery-data-access/src/lib/machinery-store.ts` with
-   `machineryPageEvents` and its testing kit (rule 5). Check: `npx nx test
-   machinery-data-access` exits 0 with the persisted-state specs of
-   criterion 6; `npm run check:kits` exits 0.
-10. The feature: replace `machineryRoutes`' arriving page with
-    `machinery-page`, the facade, the composites, mappers and layout of the
-    Design and both first-pair layouts; `machinery.*` keys in
-    `apps/dotln/public/i18n/en.json` and the testing translations; stories
-    `RecordedWO221`, `RecordedWO226`, `UnknownEventType`, `RepairerCard` and
-    one per layout candidate while its round is open; remove the arriving
-    page's directory. Check: `npx nx test machinery` exits 0;
-    `npm run lint:components`, `npm run i18n:check` and `npm run
-    check:templates` exit 0.
-11. The first pair (A slots above a horizontal strip, B slots beside a
-    vertical one) rendered at about 2080 by 1460 and 360 and read at 3840 by
-    1620; the rounds, or the operator's deferral to the A/B testing pass; the
-    rejected implementation removed with its record. Check: `grep -c "Round"
-    docs/evidence/WO-016/design/comparisons.md` is at least 1.
-12. e2e: `apps/dotln-e2e/src/machinery.spec.ts` with criterion 7's cases;
-    in `sub-apps.spec.ts` the `machinery` loop's deep-link test removed and
-    its axe and viewport tests moved into `machinery.spec.ts`, and the
-    keyboard test's `/machinery` heading assertion reading the page's heading;
-    `sub-apps.visual.spec.ts` waiting for the strip instead of the empty state,
-    with the three `machinery-*.png` baselines regenerated and the reason named
-    in the pull request; `storybook.spec.ts`'s arriving story replaced by the
-    new stories. Check: `npx nx e2e dotln-e2e` and `npx nx e2e-visual
-    dotln-e2e` exit 0; `npm run typecheck:e2e` exits 0.
-13. Production: `npx nx build dotln --configuration=production`, then
-    `grep -rl "control-event-lite-v0" dist/apps/dotln/browser`; `npm run
-    check:bundle`. Check: the build exits 0, the grep prints at least one
-    file, `check:bundle` passes.
-14. The walkthrough: the executor performs the Objective's session in the
-    served production build, saves one screenshot per step at 360, 768, 1440,
-    about 2080 by 1460 and 3840 by 1620 under
-    `docs/evidence/WO-016/walkthrough/` and writes
-    `docs/evidence/WO-016/walkthrough.md` with the dated steps and what each
-    agent card read. Check: the files exist.
-15. Documents: `docs/dev-reference/architecture/machinery.md`,
-    `docs/ai-reference/machinery-rules.md`, their pointers, the WO-026-D012
-    places and the four library READMEs, as the Design lists. Check: `grep -n
-    -i placeholder README.md docs/dev-reference/README.md
-    docs/dev-reference/architecture/sub-apps.md
-    docs/dev-reference/workspace/storybook.md
-    libs/features/machinery/README.md` prints nothing.
-16. Dependency check as WO-015 step 15. Check: prints nothing.
-17. Gate plain and review. Check: passing rows, no tracked-byte mutation.
-18. Launchpad write-back: `docs/repositories/dotln-angular.md` §Find the
-    implementation gains a subsection for the machinery view (the records
-    library and its copies, the reducer, the fold and the page); WS-001
-    §Delivery states and §What has landed and what lies ahead are updated by
-    the final review. Check: `npm run test:docs`. Then the publish, review and
-    records steps as WO-007 steps 15 to 17, with the branch
-    `feat/machinery-view`, the title `feat: add the machinery view over
-    recorded orders`, `docs/evidence/WO-016/` and
-    `docs/final-reviews/WO-016/`.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin>
+   origin/main` exits 0 (a `main` that does not contain the pin stops for a
+   planning pass); the target worktree then fast-forwards to the target's
+   `main`, and that integrated commit is the baseline of every later
+   comparison; then the route guard and activation as WO-005 step 1.
+2. Generate `libs/shared/records` (`scope:shared,type:data-access`),
+   `libs/shared/replay` (`scope:shared,type:util`) and
+   `libs/features/machinery-data-access` (`scope:dotln,type:data-access`)
+   with logged commands and testing entry points. Check: `npx nx show
+   projects` lists the three.
+3. `machinery.ts` types; `control-event-lite-v0.schema.json`;
+   `reduce-control-segment.mjs`; `check-record-fixtures.mjs` wired into
+   `check:fixtures`; a tooling test that the reducer drops every field
+   outside the list, keeps `recordingSession.role` as `actor.role`, leaves
+   `actor.role` absent for the kit's `unobserved` sentinel, refuses any
+   other role outside the named set and refuses an absolute path. Check:
+   `npm run test:tooling` exits 0.
+4. Produce `segments/order-221.json` and `segments/order-226.json` from the
+   platform's public segments at a recorded commit; record the commit and
+   the row counts (16 and 6) in the decisions file. Check: `npm run
+   check:fixtures` exits 0.
+5. `role-mechanisms.json` from the launchpad's six role skill stamps and
+   the worker type at the starter the launchpad carries at activation (ids and
+   section keys only), with the file name and starter version per role; the
+   executor records the starter and the per-role counts read in the decisions
+   file and sets the spec's expected counts from them. Check: a spec asserts
+   each role's count in the file equals the expected count the executor set.
+6. `scene-reader.ts`, `concert-fold.ts`, `apply-ideas.ts` with specs: the
+   WO-221 fold yields 16 beats, 8 operator beats and the seven gaps of the
+   planning document's table within one second; the WO-226 fold yields 6
+   beats and gaps of 316.0 and 31.7 minutes; an unknown type yields an
+   `unknown` beat; the refilled verifier slot keeps a ghost; a refused idea
+   returns its reason and leaves the scene unchanged. Check: `npx nx test
+   records` exits 0.
+7. `replay`: `replayOn`, `ReplayClock`, `toAsciiMarble`, `frames`; a marble
+   spec reproduces the WO-221 rows at their frames. Check: `npx nx test
+   replay` exits 0.
+8. `MachineryStore` with `withPersistedState` under `dotln-angular.machinery`.
+   Check: the persisted-state spec over a fake storage asserts the key prefix
+   and no other write.
+9. Composites, mappers, layout, container, facade; stories `RecordedWO221`,
+   `RecordedWO226`, `UnknownEventType`, `IdeaApplied`, and one story per
+   layout candidate while its round is open. Check: `npx nx test
+   machinery` exits 0; `npm run lint:components` exits 0.
+10. The idea shelf's new-idea form, select-then-apply, the ghost, the band,
+    the caption, the refusal. Check: a facade spec applies `narrowKnowledge`
+    to the verifier at beat 4 and the card's mechanism count falls while the
+    ghost keeps the before and the caption says the beats are unchanged; a
+    second spec applies `addWait` and the beats after the target move by its
+    minutes.
+11. The idea sink process, `npm run idea-sink`, `.env.example` lines,
+    `.gitignore` entry for `docs/intake/`, `environment.ideaSinkUrl`
+    (development string, production `null`), the post on drop with the
+    toast on failure. Check: a tooling test starts the sink on an ephemeral
+    port with a temporary ignored directory, posts one idea and asserts one JSON line appended; a second post over 16 KB is refused; a post whose `Origin` is not the development origin or whose `Host` is not the loopback is refused; a third test
+    starts it on a tracked directory of a temporary repository and asserts
+    the refusal, and a fourth starts it on an ignored directory outside the
+    checkout's Git root and asserts the refusal; a facade spec with the post failing asserts the idea is
+    applied and present in the fake storage.
+12. Replace the arriving page in `machineryRoutes`; `machinery.*` i18n keys;
+    the Machinery menu group lists Board and Agents. Check: `npm run
+    i18n:check` exits 0; `npx nx build dotln --configuration=production`
+    exits 0 and `grep -rl "127.0.0.1" dist/apps/dotln/browser` prints
+    nothing.
+13. e2e `apps/dotln-e2e/src/machinery.spec.ts`: sixteen beat buttons, four
+    role slots and the operator figure; stepping to the second beat fills the executor slot; the
+    verifier slot shows a ghost after beat 8; an idea created in the form,
+    applied to the verifier, redraws the card with the ghost and the band; a
+    refused drop stays visible with its reason; the idea survives a reload;
+    the keyboard path across beats and the shelf; axe at the board spec's threshold; no horizontal overflow at 360, 768 and 1440; then the walkthrough: the executor performs the Objective's session in the served production build, saves one screenshot per step at 360, 768 and 1440 under `docs/evidence/WO-016/walkthrough/` and writes `docs/evidence/WO-016/walkthrough.md` with the dated steps and what the caption said at each drop. Check: `npx nx e2e dotln-e2e` exits 0 and the walkthrough files exist.
+14. Documents: `machinery.md`, `machinery-rules.md`, pointers,
+    `conventions.md`. Check: files exist.
+15. Dependency check as WO-015 step 15. Check: prints nothing.
+16. Gate plain and review. Check: passing rows, no tracked-byte mutation.
+17. Launchpad write-back: `docs/repositories/dotln-angular.md` Demonstrated
+    architecture gains the records fold, the replay clock and the machinery
+    container; WS-001's delivery states updated by the final review. Check:
+    `npm run test:docs`. Then the publish, review and records steps as WO-007
+    steps 15 to 17, with the branch `feat/machinery-view`, the title `feat:
+    add the machinery view over recorded orders`, `docs/evidence/WO-016/`
+    and `docs/final-reviews/WO-016/`.
 
 **Preflight:** in the target worktree `npx nx format:check`,
 `npx nx run-many -t lint test build`, `npm run lint:fixtures`,
 `npm run lint:components`, `npm run lint:hygiene`, `npm run check:fixtures`,
-`npm run check:scripts`, `npm run test:tooling`, `npm run i18n:check`,
-`npm run typecheck:e2e`, `npm run check:bundle`, `npx nx e2e dotln-e2e`,
-`npx nx e2e-visual dotln-e2e`; in the launchpad order worktree
-`npm run test:docs`; then the target gate plain and review once each.
+`npm run catalog:check`, `npm run test:tooling`, `npm run i18n:check`,
+`npx nx e2e dotln-e2e`; in the launchpad order worktree `npm run test:docs`;
+then the target gate plain and review once each.
 
 **Acceptance criteria (all required)**
 
-1. **Use (WS-001 rule 24).** The verifier performs the Objective's session
-   in the served production build: open `/machinery` on WO-221; step the
-   anchor to the second beat and read the executor's card; step past the
-   eighth and find the verifier's ghost; open the verifier and read its
-   obligation, its mechanisms and inputs and what it waited on; open the
-   repairer and read why it carries the executor's role; read a fail and a
-   no-verdict hand-back card; switch to WO-226. The VER report carries a
-   `## Walkthrough` section with the dated steps and names the screenshots
-   at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under
-   `docs/evidence/WO-016/walkthrough/`, and states in the verifier's own
-   words where WO-221's time went and what the verifier's card said it waited
-   on, as read from the page alone. Met only when every step completed and
-   that statement is present; a UI issue at about 2080 by 1460 or 3840 by
-   1620 fails this criterion, and one at another size is a boarded follow-up
-   (rule 29).
-2. `npm run check:fixtures` exits 0 over
-   `libs/shared/records/src/data/segments/order-221.json`, `order-226.json`
-   and `role-mechanisms.json` (the schemas with `additionalProperties: false`
-   over the fields `ordinal`, `type`, `recordedAt`, `workOrderId`, `actor`,
-   `verdict`, the scrub over every row and role value, every obligation key
-   present in the `machineryRoles` scope); `npm run test:tooling` exits 0 with
-   the reducer's tests of step 4, among them that a row value carrying a run
-   of 32 or more hexadecimal characters or a UUID shape fails the scrub, that
-   an `actor.role` outside executor, verifier, reviewer, planner, refuter,
-   release-close and operator is refused and that `unobserved` leaves it
-   absent; and `ls libs/shared/records/src/data/segments | grep -ciE '^wo-'`
+1. `libs/shared/records/testing/src/fixtures/segments/order-221.json` and
+   `order-226.json` validate against `control-event-lite-v0.schema.json` with
+   `additionalProperties: false` over the fields `ordinal`, `type`,
+   `recordedAt`, `workOrderId`, `actor`, `verdict`, carry a `source.commit`
+   and no absolute path (`npm run check:fixtures` exits 0), a spec asserts `order-221.json` carries 16 rows and `order-226.json` 6, the reducer's tooling test proves a value carrying a run of 32 or more hexadecimal characters or a UUID shape fails the scrub, and `ls libs/shared/records/testing/src/fixtures/segments | grep -ciE '^wo-'`
    prints 0.
-3. The copies reproduce: run against the platform at
-   `49d8c4c364dc5986e8c76b4ac27a0110c380206f`, `node
-   tools/scripts/reduce-platform-records.mjs --platform <path> --commit
-   49d8c4c364dc5986e8c76b4ac27a0110c380206f --out <scratch>` prints the nine
-   input digests the Observed gap names and PASS, and `cmp` exits 0 between
-   each of its four outputs and the committed file. The verifier runs it
-   against the platform clone beside the launchpad or a fresh clone from
-   `https://github.com/DylanBWood/DotLn`; where neither is reachable at
-   verification, the verifier records the reproduction untested with the
-   reason and judges this criterion from the executor's recorded run in the
-   decisions file (the path, the command, the printed digests).
-4. `npx nx test records` exits 0 with specs asserting: the fold reproduces,
-   from each copy, the rows, operator rows, hand-backs with their verdicts,
-   gaps after a hand-back and span that the spec computes from the copy's own
-   `recordedAt` stamps, each within one second (the Observed gap gives their
-   one-decimal display forms, which differ from the stamps by up to three
-   seconds); the slot table maps each recorded `type` to its
-   slot and an unknown `type` yields an `unknown` beat; two synthetic rows of
-   one `type` whose harness, model, effort and mode match, one with
-   `actor.role` `planner` and one with none, fold to an `unknown`-slot beat
-   naming the planner and to the type's slot respectively, and a `refuter`
-   row and a `release-close` row each yield an `unknown`-slot beat naming its
-   role; at the anchor on WO-221's eighth beat the verifier slot holds that
-   beat's agent and one ghost, the fourth beat's, and at the fourteenth two
-   ghosts; the twelfth beat's actor is flagged a colony; and each agent's
-   waited-on names the request before its hand-back and the minutes from the
-   previous hand-back.
-5. `role-mechanisms.json` has an entry for each of the executor, planner,
-   refuter, release-close, reviewer and verifier skills and one for
-   `.claude/agents/dotln-worker.md`, each naming its file, the pin and the
-   file's SHA-256 (equal to the Observed gap's), its stamp ids in stamp
-   order, its `Read:` targets and its section keys; the repairer slot
-   reads the executor's entry and a spec asserts the repairer's card states
-   that the repairer runs the executor role at `resume: fix`; a spec asserts
-   the agent card renders the obligation through the `machineryRoles` scope;
-   and `grep -rnE "dotln-key-value-list|<dl" libs/features/machinery/src`
-   prints nothing.
+2. `npx nx test records` exits 0 with specs asserting: the WO-221 fold has 8
+   operator beats and the seven gaps 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and
+   5.9 minutes within one second each, the first following a hand-back with
+   no verdict; the WO-226 fold has gaps of 316.0 and 31.7 minutes; an
+   unknown `type` yields an `unknown` beat; two rows of one `type` whose
+   harness, model, effort and mode match, one with `actor.role` `planner`
+   and one with none, fold to an `unknown`-slot beat naming the planner and
+   to the type's slot respectively, and a `refuter` row and a
+   `release-close` row each yield an `unknown`-slot beat naming its role;
+   the verifier slot carries one
+   ghost after its refill; and `applyIdeas` refuses a card whose `appliesTo`
+   excludes the target with a reason while the scene stays unchanged.
+3. `role-mechanisms.json` lists, for the executor, planner, refuter,
+   release-close, reviewer and verifier, the ids each role's Origin stamp
+   carries at the starter the launchpad carried at activation, each role
+   naming its source file and that starter version (a spec asserts each role's count against the counts the executor recorded in the decisions file from the files read at activation; no starter's figures are written here, because they change with the starter; and the verifier recounts the ids in each role's Origin stamp independently and records the recount beside the spec's in the VER report),
+   the `repairer` slot reads the executor's entry and its card states that
+   the repairer runs the executor role at `resume: fix` (a spec asserts the
+   card's text), and
+   `grep -c "/Users/" libs/shared/records/testing/src/fixtures/role-mechanisms.json`
+   prints 0.
+4. `grep -rl "generated" libs/features/machinery/src/testing/fixtures`
+   prints nothing and the shelf's fixture of ideas is empty at first render
+   (a spec asserts zero cards before the operator creates one).
+5. The tooling test for the idea sink passes (`npm run test:tooling` exits
+   0): one post appends one JSON line to a temporary ignored directory, a
+   body over 16 KB is refused, a request whose `Origin` is not the development origin or whose `Host` is not the loopback is refused, and the sink refuses to start on a directory that is not Git-ignored or that lies outside the Git root of the checkout it runs from;
+   `environment.prod.ts` sets `ideaSinkUrl` to `null` and
+   `grep -rl "127.0.0.1" dist/apps/dotln/browser` prints nothing after
+   `npx nx build dotln --configuration=production`.
 6. The persisted-state spec asserts every key written starts with
    `dotln-angular.machinery` and no other storage, cookie or network write
-   occurs; a spec seeding `dotln-angular.machinery` with a value that does
-   not parse asserts the page opens WO-221 at its first beat; and
-   `grep -rlE "from 'node:|from \"node:|require\(" libs/shared/records/src libs/features/machinery/src libs/features/machinery-data-access/src --include='*.ts' | grep -v spec`
+   occurs except the sink post when `ideaSinkUrl` is set, a spec with that post failing asserts the dropped idea is applied and persisted, a spec seeding `dotln-angular.machinery` with a value that does not parse asserts the shelf renders empty and the strip renders; and
+   `grep -rlE "from 'node:|from \"node:|require\(" libs/shared/records/src libs/shared/replay/src libs/features/machinery/src libs/features/machinery-data-access/src --include='*.ts' | grep -v spec`
    prints nothing.
-7. `npx nx e2e dotln-e2e` exits 0 and includes: a beat button for every row
-   of the copy (sixteen on WO-221, six on WO-226), four role slots and the
-   operator figure on `/machinery`; the executor slot filled at the second
-   beat; a ghost in the verifier slot after the eighth; the verifier's card
-   with its obligation, mechanisms and waited-on; the keyboard path across the
-   beats, the slots and the order switch; the menu's four links with
-   Machinery unchanged; axe at the board spec's threshold; no horizontal
-   overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620; and
-   `npx nx e2e-visual dotln-e2e` exits 0 with the regenerated `machinery-*.png`
-   baselines named in the pull request.
-8. `npx nx build dotln --configuration=production` exits 0 within the
-   declared budgets, `grep -rl "control-event-lite-v0"
-   dist/apps/dotln/browser` then prints at least one file, `npm run
-   check:bundle` passes, and `package.json`'s `dependencies` keys equal the
-   integrated base's.
-9. `docs/dev-reference/architecture/machinery.md` and
-   `docs/ai-reference/machinery-rules.md` exist and are linked from
-   `docs/dev-reference/README.md` and `docs/ai-reference/README.md`; `grep -n
-   -i placeholder` over the five files WO-026-D012 names prints nothing; and
-   `npm run check:scripts` exits 0 with the reducer's and the copy check's
-   rows.
-10. `docs/evidence/WO-016/design/comparisons.md` records the first pair (A
-    slots above a horizontal strip, B slots beside a vertical one) rendered at
-    about 2080 by 1460 and 360, and either every later round with its pick and
-    the operator's word that ended the rounds, with the decisions file naming
-    the removed candidate's files and `ls` on each printing nothing, or the
-    operator's deferral of the rounds to the dedicated A/B testing pass, the
-    first pair without a pick, A shipped and the follow-up recorded in the
-    decisions file (rule 25).
-11. `node scripts/target-gate.mjs WO-016 --review` records a passing row for
-    every declared command with no tracked-byte mutation, and
-    `npm run test:docs` passes in the launchpad order worktree; the Preflight
-    line ran before the first full gate.
+7. `npx nx e2e dotln-e2e` exits 0 and includes: sixteen beat buttons, four
+   role slots and the operator figure on `/machinery`; the executor slot filled at the second beat;
+   a ghost in the verifier slot after the eighth; an idea created, applied
+   and redrawn with the ghost, the presentation-only band and a caption
+   naming what changed; a refused drop
+   visible with its reason; the idea present after a reload; the keyboard
+   path across the beats and the shelf; axe at the board spec's threshold;
+   no horizontal overflow at 360, 768 and 1440.
+8. `docs/dev-reference/architecture/machinery.md` and
+   `docs/ai-reference/machinery-rules.md` exist and the rules file states
+   that the fold decides nothing and that no card is generated from records
+   (`grep -c "generated" docs/ai-reference/machinery-rules.md` is at least 1);
+   `package.json`'s `dependencies` keys equal the base's.
+9. `node scripts/target-gate.mjs WO-016 --review` records a passing row for
+   every declared command with no tracked-byte mutation, and
+   `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate.
+10. **Use (WS-001 rule 24).** The verifier performs the Objective's session in the served production build: open `/machinery` on WO-221; step the anchor to the second beat and read the executor's card; step past the eighth and find the verifier's ghost; open an agent and read its obligation, its mechanisms and what it waited on; create an idea in the shelf, apply it to the verifier and read the caption and the band; apply a refused drop and read its reason; reload and find the idea; switch to WO-226. The VER report carries a `## Walkthrough` section with the dated steps and names the screenshots at 360, 768 and 1440 under `docs/evidence/WO-016/walkthrough/` (`ls docs/evidence/WO-016/walkthrough | wc -l` prints at least 12), and states in the verifier's own words what the applied idea changed in the use case. The criterion is met only when every step completed and that statement is present.
 
-**Evidence gate:** the gate rows, the recorded command outputs, `docs/evidence/WO-016/README.md`, `design/`, `docs/evidence/WO-016/walkthrough.md` and its screenshots, and `docs/evidence/WO-016/host-qualification.md`.
+**Evidence gate:** the gate rows, the recorded command outputs, `docs/evidence/WO-016/README.md`, `docs/evidence/WO-016/walkthrough.md` and its screenshots, and `docs/evidence/WO-016/host-qualification.md`.
 
-**Known issues and carry-ins:** Carried from planning receipt 012 (2026-10-28), a known issue that still applies: the scrub refuses absolute paths, long hexadecimal runs and UUID shapes and does not look for an e-mail address, a host name or an account name, and the kept fields include `actor`; the executor reads the two copies for all three before committing them and records the reading in the decisions file, and any such value found stops the copy for a planning pass. The base is `eb9d227`, WO-039's merge on the
-target's `main`, set by the 2026-11-09 pass; the earlier pin, `bc9133e`, was
-the empty initial commit, so a comparison with the base's files had nothing
-to compare with; every such comparison here reads the integrated base step 1
-records. The copies are a stopgap the operator named: when the mining store
-exists (candidate C1), the copies become a route behind the same loader or
-are deleted. The strip's axis is time, never cost, and a gap includes idle
-time; the view labels a long gap as nobody dispatched, never as the operator
-idle, because the record has no presence, which is why the totals are
-waiting and working minutes and not operator and worker minutes. The role
-copy is the platform's role files at the copies' commit, a day after
-WO-226's last row and up to five days after WO-221's first; the rows do not
-record which role file each agent ran under, and the card says so. The
-Origin stamp names each mechanism without saying whether it is a gem or a
-support, so the card lists mechanisms by id and makes no such split. No row
-of either copy carries `actor.role`, so the role enum and the
-`unknown`-slot beats are exercised by synthetic rows in the testing entry
-point. WO-026-D012's carry-in (the five documents that describe the
-placeholder) is step 15, with `sub-apps.md`'s smallest-form sentence, which
-becomes false with this order. Starter v0.96.1's plan gate no longer advises
-on this order's own launchpad record paths (core's answer of 2026-10-24, item
-1); they stay as the kit names them and the publish command's body file must
-not name them. From receipt 008, carried in by the 2026-10-24 second pass:
-the records types are `OrderStrip`, not `ConcertScene`; its concern that a
-starter's stamp counts change under the order is moot now that the role copy
-is read at a fixed platform commit, whose counts the Observed gap records.
-From
-receipt 009, carried in by the 2026-10-25 pass: `actor` is one composite the
-schema declares and the reducer's scrub screens each of its values (the
-types, the reducer, criterion 2); the repairer slot reads the executor's
-entry and its card says why, and the e2e counts four role slots and the
-operator figure (criteria 5 and 7). From receipt 011, carried in by the
-2026-10-28 pass: a planner, refuter or release-close actor is an
-`unknown`-slot beat naming the role (criterion 4); the scrub fails a run of 32
-or more hexadecimal characters and a UUID shape (criterion 2); the verifier's
-independent recount of the stamp ids is now the reproduction of criterion 3,
-which checks every copied value rather than a count; the layout is chosen
-through the rounds of rule 25. From the 2026-11-01 pass's criteria adversary
-(its R4), carried in by the 2026-11-01 second pass: `actor` keeps the row's
-recorded session role as an enum, and the types, the reducer, step 4 and
-criterion 2 change together. The same pass replaced the inherited exact-tip
-base guard of step 1 with an ancestor check and the fast-forward (its R1).
-Receipt 008's caption rule, receipt 009's and 010's sink items, receipt 010's
-item (e) for the ideas' stored value and receipt 011's item (a) moved with the
-idea shelf and the sink to WO-042; the replay clock moved to WO-017, which
-reads this order's copies and `RecordsStore`. This order activates only on a
-launchpad whose starter carries core WO-221's `--draft` form; the draft pull
-request and its workflow runs are a final-review obligation read from
+**Known issues and carry-ins:** The base line is provisional and publishes right under starter v0.96.1 (the merge-base publish of core WO-230; WO-013's fix dispatch is its first use in this fork); a pass may set it to the predecessor's merge commit. The copies are a stopgap the operator named: when the
+mining store exists (candidate C1), the fixture pack becomes a route behind
+the same facade or is deleted. The strip's axis is time, never cost, and a
+gap includes idle time; the view labels a long gap as nobody dispatched,
+never as the operator idle, because the record has no presence. The prose
+sections are listed by key; replacing one applies the operator's own words
+to the copy and never to a kit file. Starter v0.96.1's plan gate no longer advises on this order's own launchpad record paths (core's answer of 2026-10-24, item 1); they stay as the kit names them and the publish command's body file must not name them. From receipt 008
+(the 2026-10-24 pass's refutation), carried into this text by the 2026-10-24
+second pass: only `addWait` moves the use case's beats and the caption says
+so for every other change (the Objective, the `use-case-caption` composite
+and step 10); criterion 3 reads the role stamps at activation instead of
+hard-coding a starter and its counts; and the records types are `OrderStrip`,
+not `ConcertScene`, so that "scene" is not overloaded across the fold, the
+scene engine and the catalog. From receipt 009 (the second 2026-10-24 pass's
+refutation), carried into this text by the 2026-10-25 pass: `actor` is one
+composite the schema declares and the reducer's scrub screens each of its
+values (the types, the reducer, criterion 1); the repairer slot reads the
+executor's entry and its card says why, and the e2e counts four role slots
+and the operator figure (the fixtures, step 13, criteria 3 and 7); the sink
+refuses a directory that is not Git-ignored, and a drop while the sink is
+down is applied and persisted before the post (the sink, step 11, criteria
+5 and 6). From receipt 011 (the 2026-10-26 pass's refutation), carried
+into this text by the 2026-10-28 pass: the sink refuses a directory outside
+the Git root of the checkout it runs from (the sink, step 11, criterion 5);
+the verifier recounts the stamp ids independently (criterion 3); a planner,
+refuter or release-close actor is an `unknown`-slot beat naming the role
+(the fold, criterion 2); the scrub fails a run of 32 or more hexadecimal
+characters and a UUID shape (the reducer, criterion 1); the layout is chosen
+through the rounds of rule 25 as revised on 2026-10-28. From the 2026-11-01
+pass's criteria adversary (its R4), carried into this text by the
+2026-11-01 second pass: the reduced `actor` dropped any role, so the fold
+could not name a planner, refuter or release-close row; `actor` now keeps
+the row's recorded session role as an enum, and the types, the reducer,
+step 3 and criterion 2 change together. The same pass replaced the
+inherited exact-tip base guard of step 1 with an ancestor check and the
+fast-forward (that pass's adversary R1). This order activates only on a launchpad whose
+starter carries core WO-221's `--draft` form; the draft pull request and its
+workflow runs are a final-review obligation read from
 `docs/evidence/WO-016/preview-pr.json`, never a criterion. `Target release
 classification: minor` and `Target release notes: reviewed` were set by the
 2026-10-24 pass under WO-012's declared policy.
 
-**Non-goals:** a live connection to any resident or to core; the operator's
-idea shelf, select-then-apply, the redraw of a change and the local idea sink
-(WO-042); the replay clock, which is WO-017's, its only consumer; drag;
-agents in concert beyond one order's slots (the fleet, the blackboard room and
-the flow instruments of the run are later members, candidate C5); any write
-outside browser storage; a token axis; a gem or support classification the
-stamp does not carry.
+**Non-goals:** a live connection to any resident or to core; drag; generated
+idea cards; agents in concert beyond one order's slots (the fleet, the
+blackboard room and the flow instruments of the run are later members,
+candidate C5); the digital twin's lane (WO-017); any write outside browser
+storage and the local sink; a token axis.
 
 **Operator-review assumptions:** the operator accepts the six-field copy as
-the stopgap and the platform's role files at the copies' commit as what the
-card reads, judges the first pair at their sizes and ends the rounds in their
-own words or defers them to the A/B testing pass, and reads the one draft pull
-request before final review, which the final publish reuses.
+the stopgap, runs the idea sink beside the dev server from their own
+checkout when they want ideas saved, and reads the one draft pull request
+before final review, which the final publish reuses.

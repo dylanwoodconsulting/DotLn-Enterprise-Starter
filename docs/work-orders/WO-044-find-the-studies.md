@@ -166,10 +166,8 @@ written in full):
   usefulness before cosmetic polish; the rounds continue until the operator
   says the process is done, and the decisions file records each round's
   pair and pick; the rejected implementation leaves the code when its round
-  is decided. The operator may delay the rounds to a dedicated A/B testing
-  pass: the order then records its first pair without a pick, ships A and
-  carries the rounds as a boarded follow-up for the planning pass that files
-  that pass (rule 25). The home's links, the contents' counts and the nearby
+  is decided. The operator may delay the rounds: the order then records its first pair without a pick, ships A and
+  carries the rounds as a boarded follow-up, this order's own criterion run later as exactly that (rule 25). The home's links, the contents' counts and the nearby
   mark use the settled styles of the surfaces they join and run no pair;
   WO-019's decided rounds are not relitigated.
 - **The studied page.** `/tools/studied` (`ChildPaths.Studied` in `core`,
@@ -461,11 +459,10 @@ screenshots; the documents.
    each rendered at about 2080 by 1460 and 360 with 3840 by 1620 beside,
    and then either every later round with its pick, the decisions file
    recording the operator's word that ended the rounds; or the operator's
-   direction to delay the rounds to a dedicated A/B testing pass, captured
+   direction to delay the rounds, captured
    in ignored intake and cited by digest in the decisions file, the first
    pair recorded without a pick, candidate A shipped and the rounds boarded
-   in the decisions file for the planning pass that files that A/B testing
-   pass. On either route the decisions file names each removed candidate's
+   in the decisions file as this order's own criterion, run later as exactly that. On either route the decisions file names each removed candidate's
    files and `ls` on each prints nothing.
 10. **Baselines.** `npx nx e2e-visual dotln-e2e` exits 0 with baselines of
     `/tools/studied` at 360, 768 and 1440, and every baseline under
@@ -506,16 +503,11 @@ from the summary the integrated base carries. WO-035, sequenced after this
 order, routes the mined titles through the translator; the studied list
 and the home's work links are two more places those titles render, and
 step 22 names them in `catalog.md` §Reading and studying for its executor.
-WO-038 edits the catalog page's layout, the study composite's sizing and
-`catalog.visual.spec.ts`, and WO-018 adds `ChildPaths.Toys` and a Tools
-home item; the later of each pair to land integrates the target's `main`
-and regenerates the baselines the other moved. WO-037, beside this order
-in the sequence, works in the scene and types five AI for Games rows in
-`tools-aifg-a.json`; this order reads those rows' ids and places, not their
-types, and the two otherwise meet at most in different blocks of
-`apps/dotln/public/i18n/en.json` (rule 9 puts its new scene strings in the
-scene block) and in different sections of the profile; the later to
-publish integrates the target's `main`. The rounds need the
+WO-018 adds `ChildPaths.Toys` and a Tools home item; the later of the two
+to land integrates the target's `main` and regenerates the baselines the
+other moved. WO-037, sequenced ahead of this
+order, types five AI for Games rows in `tools-aifg-a.json`; this order
+reads those rows' ids and places, not their types. The rounds need the
 operator; their only other route is the operator's direction to delay
 them (rule 25). This order activates only on a launchpad whose starter
 carries core WO-221's `--draft` form; the draft pull request and its
@@ -532,11 +524,10 @@ matching, and the explicit search controls of `FUP-0fb531a975308a81`,
 results and facets without a query among them; the mined titles'
 translation (WO-035); marks on the reading's related links, the reading
 history and the home's last-reading link; the work as part of the
-address; the shell's menu; the reading's and the shelf's look (WO-038).
+address; the shell's menu; the reading's and the shelf's look.
 
 **Operator-review assumptions:** the operator judges the first pair at the
-centre window and ends the rounds in their own words, or delays them to a
-dedicated A/B testing pass; accepts that the studied page loads the
+centre window and ends the rounds in their own words, or delays them; accepts that the studied page loads the
 catalog's rows as the catalog page does while the home still loads none;
 accepts that the list's titles stay mined text until WO-035; and reads the
 one draft pull request before final review, which the final publish

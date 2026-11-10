@@ -163,8 +163,7 @@ batch of them has needed a standards pass (WO-034, WO-039 and WO-040).
   to the bottom; B, a ring with the levels as stations and the loop as the
   ring itself; one variable, the geometry of a loop through levels; both at
   about 2080 by 1460 and 360 (rules 25 and 29); the rounds continue until
-  the operator says done, or the operator delays them to a dedicated A/B
-  testing pass (rule 25), in which case the first pair is recorded without a
+  the operator says done, or the operator delays them (rule 25), in which case the first pair is recorded without a
   pick, A ships and the rounds are carried as a follow-up.
 - **Builder-first** (`relationsModel` in
   `libs/features/tools/src/lib/studies/relations.ts`, beside `flow.ts` and
@@ -315,7 +314,7 @@ screenshots, and the design record.
 3. The first rendered pair (A stack with a returning arrow, B ring) at
    about 2080 by 1460 and 360; the rounds until the operator ends them, the
    rejected implementation removed with its record, or, where the operator
-   delays them to a dedicated A/B testing pass (rule 25), the first pair
+   delays them (rule 25), the first pair
    recorded without a pick and A shipped.
    Check: `grep -c "Round" docs/evidence/WO-024/design/comparisons.md` is at
    least 1.
@@ -448,7 +447,7 @@ each.
    every later round with its pick, the decisions file recording the
    operator's word that ended the rounds and naming the removed candidate's
    files, `ls` on each printing nothing; or, where the operator delayed the
-   rounds to a dedicated A/B testing pass (WS-001 rule 25), the first pair
+   rounds (WS-001 rule 25), the first pair
    without a pick, the decisions file recording the operator's word that
    delayed them and the follow-up that carries them, with A the drawing the
    family ships.
@@ -469,7 +468,7 @@ the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021, WO-022 and WO-028 change. WO-023, this order's first pair partner, merged first; this order now pairs with WO-008, authentication (disjoint surfaces: WO-008 adds `libs/shared/auth`, its routes and pages and the mocked identity provider and touches no file under `libs/features/tools`, `libs/shared/catalog` or the study catalogs; it adds an OpenID Connect client library to `package.json`'s `dependencies`, which criterion 6 therefore reads at the latest integrated `main`, and the app catalog `apps/dotln/public/i18n/en.json`, where this order's family adds its words under `tools`, is the one file both may edit), the second to publish integrating the target's `main` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
+WO-021, WO-022 and WO-028 change. WO-023, this order's first pair partner, merged first; this order now pairs with WO-036, the scene's walls and ways (WO-036 works in `libs/shared/scene-engine` and `libs/features/scene` and edits under `libs/features/tools` only `reading-mapper.ts` and the `tools-en.json` testing copy; that copy and the app catalog `apps/dotln/public/i18n/en.json`, where this order's family adds its words under `tools`, are the files both may edit; criterion 6 reads `package.json`'s `dependencies` at the latest integrated `main`, since WO-008, sequenced after, adds a library), the second to publish integrating the target's `main` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
 pathfinding and decision-making chapters, the RxJS patterns and the remaining
 EIP and PoEAA patterns are the next batches' candidates (the filing pass's
 C3), cut when the operator drains this queue. This order activates only on a
@@ -485,6 +484,6 @@ the remaining rows; the general search controls (WO-018); the machinery view.
 with the recorded substitution and the twenty concepts it names, accepts
 situations drawn from the platform's public records and the app's structure
 as analogies, judges the first pair and ends the rounds in their own words
-or delays them to a dedicated A/B testing pass, accepts one builder that
+or delays them, accepts one builder that
 draws every study from its data, and reads the one draft pull request before final review, which the final
 publish reuses.

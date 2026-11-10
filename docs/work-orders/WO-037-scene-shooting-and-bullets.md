@@ -232,10 +232,9 @@ value above zero for a parameter the engine would divide by here.
   about 2080 by 1460 and at 360, read at 3840 by 1620; A then B with the
   round named; the rounds continue until the operator says the process is
   done; the rejected implementation leaves the code when its round is
-  decided. If the operator delays the rounds to a dedicated A/B testing
-  pass, the order records the first pair without a pick, ships A, removes
+  decided. If the operator delays the rounds, the order records the first pair without a pick, ships A, removes
   B's implementation with its screenshots and record kept, and carries the
-  rounds as the follow-up that pass takes (rule 25). The rule of cool (rule
+  rounds as a follow-up, this order's own criterion run later as exactly that (rule 25). The rule of cool (rule
   28) applies in both directions.
 - **Fixtures and determinism.** `range-known-outcome.json`, a known outcome
   (`scene-known-outcome-v0`) over `scene-twenty.json`: branch A three
@@ -443,7 +442,7 @@ once each.
    spark and counts, B the hit ring) and either every later round with its
    pick and the operator's word that ended the rounds in the decisions
    file, or the pair without a pick and the operator's word that delayed
-   the rounds to a dedicated A/B testing pass with A shipped (rule 25); in
+   the rounds with A shipped (rule 25); in
    either case the decisions file names the removed implementation's files
    and `ls` on each prints nothing.
 9. `npx nx build dotln --configuration=production` exits 0 within the

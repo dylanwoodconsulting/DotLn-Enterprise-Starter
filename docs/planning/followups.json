@@ -2595,6 +2595,14 @@
           "reopenWhen": "The platform's records carry the mechanisms a session ran with, or the operator names the next public source after WO-043.",
           "targets": [],
           "at": "2026-11-09T23:21:08.887Z"
+        },
+        {
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D12, correcting the reason this pass first recorded: the mechanisms are DotLn core's own and the app reads them from core's definitions, so no limit of the records stands behind this row. The store and the app's API stay a later member on their own condition.",
+          "reopenWhen": "The operator names the next public source after WO-043, or the committed copies limit a toy.",
+          "targets": [],
+          "sourceRevision": 1,
+          "at": "2026-11-10T02:20:03.012Z"
         }
       ]
     },
@@ -2803,6 +2811,14 @@
           "reopenWhen": "None; a pairing of WO-016 is the sequence's to state.",
           "targets": [],
           "at": "2026-11-09T23:21:08.902Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D2: moot. WO-014 closed on 2026-10-26, so the pair this candidate proposed cannot form; WO-016 runs alone, late in the sequence.",
+          "reopenWhen": "None; a pairing of WO-016 is the sequence to state.",
+          "targets": [],
+          "at": "2026-11-10T02:53:29.366Z"
         }
       ]
     },
@@ -2908,6 +2924,22 @@
           "reopenWhen": "The operator names what an early dispatch costs them, or a record that carries rework attributable to an early dispatch exists (the twin's later lanes over many orders, or the platform recording it).",
           "targets": [],
           "at": "2026-11-09T23:21:08.856Z"
+        },
+        {
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D14, correcting the reason this pass first recorded: the three figures price a patience policy for one recorded order, and a figure that tells a faithful twin from a trivial one needs a record of what a wait buys. The pass put that to the operator as a question and withdrew it; it is the planning's to solve.",
+          "reopenWhen": "A record carries what a wait buys (the twin's later lanes over several orders), or the pass before WO-017 activates proposes the figure.",
+          "targets": [],
+          "sourceRevision": 1,
+          "at": "2026-11-10T02:20:03.027Z"
+        },
+        {
+          "status": "declined",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D14: moot. The operator restated on 2026-11-09 that the twin exists to show whether it would have made the same interventions as they would have within a stage; WO-017 is rewritten to that and carries no result figures for a fourth one to join.",
+          "reopenWhen": "None; a later lane that prices a policy would be a new candidate.",
+          "targets": [],
+          "sourceRevision": 1,
+          "at": "2026-11-10T02:44:48.880Z"
         }
       ]
     },
@@ -4587,6 +4619,14 @@
           "reopenWhen": "An amended road order is found stale against the target before it activates, or a walkthrough shows a known issue the order does not name.",
           "targets": [],
           "at": "2026-11-09T23:21:08.793Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D11 and D8, replacing the settled disposition this pass first recorded: the amendments are made for WO-008, WO-017 and WO-018, each of which now names eb9d227 and was re-read against the target (D4, D14, D9). WO-016 is the later replay order and is left byte for byte as filed (D12), so its base and the staleness found in it wait for the pass before it activates, which amends the order with the operator. Receipt 014 item (d) is written into WO-008.",
+          "reopenWhen": "The pass before WO-016 activates, or an amended road order is found stale against the target before it activates.",
+          "targets": [],
+          "at": "2026-11-10T02:53:29.350Z"
         }
       ]
     },
@@ -4656,6 +4696,16 @@
           "reopenWhen": "A later scene order takes up priority steering, or the operator's play shows the shimmer or a false arrival under priority.",
           "targets": [],
           "at": "2026-10-30T17:29:59.964Z"
+        },
+        {
+          "sourceRevision": 4,
+          "status": "allocated",
+          "reason": "Allocated to WO-036 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D16: the operator said on 2026-11-09 that the scene is the part of the app they like and that they had hoped for more improvements to it; WO-036 is the next scene order, it opens the steering, and it takes WO-015-D010's follow-up in step 7 with criterion 3 judging it.",
+          "reopenWhen": "WO-036's verification finds a crowd under priority steering still not at rest or a re-targeted crowd slower than a plain Arrive, or WO-036 is withdrawn.",
+          "targets": [
+            "WO-036"
+          ],
+          "at": "2026-11-10T02:39:34.018Z"
         }
       ]
     },
@@ -5396,6 +5446,16 @@
             "WO-016"
           ],
           "at": "2026-11-09T23:21:08.809Z"
+        },
+        {
+          "status": "allocated",
+          "reason": "Re-allocated from WO-016 to WO-046 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D12: WO-046 is the order that replaces the /machinery arriving page, with the view of what core has, and its documents step carries the places WO-026-D012 lists; WO-016 is the later replay order and keeps its text as filed.",
+          "reopenWhen": "WO-046's final review finds a listed document still describing the placeholder, or WO-046 is withdrawn.",
+          "targets": [
+            "WO-046"
+          ],
+          "sourceRevision": 1,
+          "at": "2026-11-10T02:44:48.896Z"
         }
       ]
     },
@@ -6770,6 +6830,14 @@
             "WO-038"
           ],
           "at": "2026-11-05T16:10:30.686Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D13: the operator said on 2026-11-09 that no order to change a page for size was ever asked; their direction on display sizes concerned the viewports at which screenshots and end-to-end runs are taken, which the open orders already carry beside the others (WS-001 rule 29). WO-038, the order this row was allocated to on 2026-11-05, was never activated and is removed by this pass; its text stays in history at 0461bed.",
+          "reopenWhen": "The operator asks for the reading or its drawing to be laid out for their display sizes.",
+          "targets": [],
+          "at": "2026-11-10T02:53:29.335Z"
         }
       ]
     },
@@ -7551,6 +7619,22 @@
             "WO-038"
           ],
           "at": "2026-11-09T23:21:08.825Z"
+        },
+        {
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D13, replacing its D7 allocation to WO-038: the operator restated on 2026-11-09 that the delayed rounds are WO-023's own criterion, deferred for want of time, and are run as exactly that with nothing combined. WO-038 is the reading at full size again and carries none of them.",
+          "reopenWhen": "The operator has the time for WO-023's rounds and says so.",
+          "targets": [],
+          "sourceRevision": 1,
+          "at": "2026-11-10T02:20:02.983Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D13, replacing the allocation this pass first recorded: the operator restated on 2026-11-09 that the delayed rounds are a criterion of WO-023 itself, put off for lack of time, and are run as exactly that with nothing combined into them. No order of this pass carries them.",
+          "reopenWhen": "The operator has the time for the rounds WO-023 owes and says so.",
+          "targets": [],
+          "at": "2026-11-10T02:53:29.381Z"
         }
       ]
     },
@@ -7807,6 +7891,14 @@
             "WO-038"
           ],
           "at": "2026-11-09T23:21:08.840Z"
+        },
+        {
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D13, replacing its D7 allocation to WO-038: the narrow register's headings are judged when WO-023's delayed rounds run and the register table stays; they are not combined into another order.",
+          "reopenWhen": "WO-023's delayed rounds have run and kept the register table.",
+          "targets": [],
+          "sourceRevision": 3,
+          "at": "2026-11-10T02:20:02.998Z"
         }
       ]
     },

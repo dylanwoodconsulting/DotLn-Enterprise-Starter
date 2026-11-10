@@ -624,9 +624,8 @@ work still in copyright carries the mapper's definition and no passage, an
 ordinary publishing matter the order that maps it decides, not a
 clean-room one. WO-014-D014's reopening condition, a work added, is met
 here: its two items already hold at `eb9d227`, and the agreement spec
-covers what still bites (criterion 8). WO-038 changes the reading's layout;
-the maxim takes the reading's form at the integrated base, and the later
-of the two to publish integrates the target's `main`. Starter v0.96.1's plan
+covers what still bites (criterion 8). The maxim takes the reading's form
+at the integrated base. Starter v0.96.1's plan
 gate no longer advises on this order's own launchpad record paths; they
 stay as the kit names them and the publish command's body file must not
 name them. This order activates only on a launchpad whose starter carries
@@ -639,7 +638,7 @@ classification: minor` and `Target release notes: reviewed` are set by the
 **Non-goals:** building any of the six toys; the commander scene; mining
 Gladwell book by book or any further work; a live agent; the graduation
 route's issue export (candidate C4); the toy shelf's form (WO-018's
-rounds); the reading's layout (WO-038); the mining store and the app's API
+rounds); the reading's layout; the mining store and the app's API
 (candidate C1).
 
 **Operator-review assumptions:** the operator accepts the Giles translation

@@ -422,9 +422,10 @@ audits, the two placeholder reports, `dom-diff.json`, `label-sweep.json`,
 **Known issues and carry-ins:** The second 2026-11-08 pass sets the base to WO-039's merge (#18, `DotLn Angular v0.11.1`), the hard edge the refuter asked for, now merged: the flow specs this order edits import the one loader. This is the third standards pass under
 WS-001 rule 31; WO-039 reads the enterprise batch and the `states` family
 on disjoint surfaces and runs first in the sequence, so WO-024's executable
-models copy a reshaped example; this order and WO-036 are a lane pair
-(disjoint surfaces: WO-036, the scene's walls and ways, touches nothing
-under `libs/features/tools`, where every code change of this order lies;
+models copy a reshaped example; this order and WO-037 are a lane pair
+(disjoint surfaces: WO-037, the scene's shooting and bullets, edits under
+`libs/features/tools` only `reading-mapper.ts` and its `tools-en.json`
+copy, which this order does not touch;
 the second to publish integrates the target's `main` before its publish),
 and the operator may run them one at a time. A research batch
 that lands first (WO-029 or WO-030) adds keys to `studyRxjs/en.json` or

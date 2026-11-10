@@ -381,7 +381,7 @@ design comparisons and their outcome are in the launchpad's
 [`docs/evidence/WO-021/design/`](../evidence/WO-021/design/),
 [`docs/evidence/WO-022/design/`](../evidence/WO-022/design/) and
 [`docs/evidence/WO-023/design/`](../evidence/WO-023/design/comparisons.md), whose first round
-waits for a dedicated A/B testing pass. Menu behavior and its
+the operator delayed; it stays that order's own criterion (WS-001 rule 25). Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 

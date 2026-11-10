@@ -81,8 +81,9 @@ WO-019's (c); the three meanings of "store" are named (d). Amended by the
 the order is cut to the toy shelf, and The Art of War's map, the six new
 toys with their tools, both worker fan-outs and their carry-ins move to
 WO-043; the base is `eb9d227` in place of a commit with an empty tree; the
-edge on WO-017 becomes reference-only, the patience lane linking to the
-twin's route only where the base has it; the toys' text goes through the
+edge on WO-017 is gone, since the twin's order as rewritten by this pass
+(D14) builds no toy of the run and The patience lane is a designed toy
+like the others; the toys' text goes through the
 message system (rule 9); the toys live beside `studies/` because the
 catalog check refuses any other file in `data/`; the run's tool references
 are resolved into a recorded list beside the run's values, and the page
@@ -94,11 +95,8 @@ priority.
 **Depends on:** WO-014 merged (hard: the `Tool` schema and the catalog the
 toys' tools resolve against); WO-019 merged (hard: the reading a toy's tools
 link into, the Tools home and the catalog check as it leaves them; the
-reading's address `/tools/catalog/<id>` landed with WO-020, merged as well);
-WO-017 reference-only (non-blocking: the patience
-lane's status links to the twin's route only where the integrated base
-carries it; step 1 reads `BasePaths` at activation, and nothing here waits
-for a later order).
+reading's address `/tools/catalog/<id>` landed with WO-020, merged as well).
+Nothing here waits for a later order.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -112,11 +110,6 @@ for a later order).
     "workOrderId": "WO-019",
     "relation": "hard",
     "reason": "the reading the toys' tools link into, the Tools home and the catalog check as it leaves them"
-  },
-  {
-    "workOrderId": "WO-017",
-    "relation": "reference-only",
-    "reason": "the patience lane links to the twin's route only where the integrated base carries it; the shelf depends on no later order"
   }
 ]
 <!-- dotln-dependencies:end -->
@@ -150,7 +143,7 @@ the tools it needs: each tool the catalog has is a link into its reading,
 and a tool the run named that the catalog lacks reads as the run wrote it,
 marked as not in the catalog; its status says built and links to the
 scene. They open The patience lane and read the same; its status says
-designed, with no link, until the twin's route exists. They filter the
+designed, with no link. They filter the
 shelf to one source and then to designed toys, and decide which to build
 next; the toy page says how to say so (a GitHub issue on the platform's
 repository, the graduation route). What the operator learns is what every
@@ -232,10 +225,8 @@ many of them the catalog has.
   catalog" (`tools.toys.notInCatalog`) and no link. The run's values are
   never rewritten, so parity holds whatever resolves.
 - **Status and routes.** The Twenty is `built` with `route` `BasePaths.Scene`.
-  The patience lane is `built` with the twin's route only when the
-  integrated base's `BasePaths` carries it (WO-017 merged); otherwise it is
-  `designed` with a null route and its page shows no route link. Every other
-  run toy is `designed`. Step 1 records which held.
+  Every other run toy, The patience lane among them, is `designed` with a
+  null route, and a designed toy's page shows no route link.
 - **Loading and state** (rules 8, 10, 16). `CatalogLoader` gains `toys()`,
   one lazy chunk (`../toys/toys.json`) cached as the summary is.
   `ToysStore`, in `libs/shared/catalog/src/lib/toys-store.ts` and provided
@@ -281,11 +272,9 @@ many of them the catalog has.
   preferred candidate alone is not acceptance; the rejected implementation
   leaves the code when its round is decided, its screenshots and an
   implementation record under `docs/evidence/WO-018/design/` the history;
-  nothing is relitigated for this order. The operator may delay the rounds
-  to a dedicated A/B testing pass: the order then records the first pair
+  nothing is relitigated for this order. The operator may delay the rounds: the order then records the first pair
   without a pick, ships A, keeps B's implementation record and screenshots
-  under `design/`, and carries the rounds as a follow-up that the planning
-  pass filing that A/B testing pass allocates to it. A comparison session
+  under `design/`, and carries the rounds as a follow-up, this order's own criterion run later as exactly that (rule 25). A comparison session
   runs under the kit's dispatch bound, with rule 25's route when the
   operator says the session runs as long as it needs.
 - **The run's files and their fallback** (rule 23). `toys.jsonl` is read at
@@ -327,8 +316,8 @@ refusal of a stray file protects the catalog's inventory); rewriting the
 run's tool references to catalog ids (axis: parity with the run; the
 resolution sits beside the run's values); toy text kept as data outside the
 message system (axis: rule 9, whose exemption is the mined catalog rows'
-alone); linking the patience lane to `/twin` ahead of the route (axis: a
-link to a route the base lacks, and a dependence on a later order); The Art
+alone); marking The patience lane built by the twin's route (axis: the
+twin's order as rewritten on 2026-11-09 builds no toy of the run); The Art
 of War, the six new toys and both fan-outs in this order (axis: one outcome
 per order; WO-043 carries them on this shelf).
 
@@ -388,8 +377,8 @@ record, `walkthrough.md` and its screenshots.
    README records how many resolved and how many did not. Check:
    `npm run toys:check` exits 0, and the resolution file has one entry per
    entry of every run toy's `tools`.
-6. Status and routes: The Twenty `built` with `BasePaths.Scene`, the
-   patience lane by step 1's reading, every other run toy `designed`; a
+6. Status and routes: The Twenty `built` with `BasePaths.Scene`, every
+   other run toy `designed`, The patience lane among them; a
    spec in `libs/shared/catalog` asserts that every built toy's `route` is
    a `BasePaths` value, The Twenty's is `BasePaths.Scene`, and a toy with a
    null route is not built. Check: `npx nx test catalog` exits 0.
@@ -515,9 +504,8 @@ once each.
    link, and a `this-app` toy after the run's toys in its own group under
    its source.
 5. **Status and routes.** The Twenty is `built` with `route`
-   `BasePaths.Scene`; The patience lane is `built` with the twin's route
-   when the integrated base's `BasePaths` carries it and otherwise
-   `designed` with a null route, as the decisions record step 1's reading;
+   `BasePaths.Scene`; every other run toy, The patience lane among them,
+   is `designed` with a null route;
    step 6's spec passes, so every built toy's route is a `BasePaths` value
    and no toy with a null route shows a route link.
 6. **Every toy string through the message system (rule 9).**
@@ -535,7 +523,7 @@ once each.
    360, and then either every later round with its pair and pick, the
    decisions file recording the operator's word that ended the rounds and
    naming the removed candidate's files, `ls` on each printing nothing; or
-   the operator's word delaying the rounds to a dedicated A/B testing pass,
+   the operator's word delaying the rounds,
    with the first pair recorded without a pick, candidate A shipped, B's
    implementation record and screenshots under `design/`, and the rounds
    recorded in the decisions as a follow-up.
@@ -598,6 +586,6 @@ route's issue export (candidate C4); the catalog's search controls
 **Operator-review assumptions:** the operator accepts the run's toy rows as
 the shelf's records, carried in full with their text as messages, and a
 tool the catalog lacks shown as the run wrote it; judges the first pair and
-ends the rounds in their own words or delays them to an A/B testing pass;
+ends the rounds in their own words or delays them;
 and reads the one draft pull request before final review, which the final
 publish reuses.

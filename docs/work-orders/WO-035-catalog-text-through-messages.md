@@ -515,8 +515,8 @@ filing refuses a source that is uncommitted at the launchpad's `HEAD`).
 reviewed` are set under WO-012's declared policy.
 
 **Non-goals:** a second language or a way to choose one; translating the
-data files; rendering `analog.clause`; changing the reading's layout
-(WO-038); the studies' authored messages (WO-028's); rewording the typed
+data files; rendering `analog.clause`; changing the reading's layout;
+the studies' authored messages (WO-028's); rewording the typed
 rows' observables; the mining store and the app's API (candidate C1).
 
 **Operator-review assumptions:** the operator accepts the rows as the one

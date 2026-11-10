@@ -14,8 +14,9 @@ serves two outcomes at once: the operator's reference Angular workspace, which a
 colleague should recognize as the way the operator builds Angular, and the
 operator's sandbox app, one app with sub-apps behind a menu: a scene for
 authoring game AI from a toolbox mined from the works the operator reads, a
-view of DotLn's machinery where a change to an agent's mechanisms shows what
-changes in an example use case, the operator's own digital twin, and side
+view of what DotLn core currently has, a later replay of a recorded work
+order that shows its agents with their machinery and what a change to that
+machinery would have changed, the operator's own digital twin, and side
 utilities. Every new idea lives there first as a toy the operator plays with
 before promoting the ones that work, for the five UIFA roles, people and
 software actors alike. The app is not wired to DotLn core: its data comes from

@@ -50,9 +50,9 @@ the repairs of receipt 001's known issues.
 **Depends on:** WO-007 merged (hard: the event tiers, interceptors, stores and
 MSW this order extends; merged on 2026-10-24 as DotLn-Angular #5, `2ab4f28`,
 released as `DotLn Angular v0.2.0`). No other order is required: this order
-runs first of the road orders, in the first lane beside WO-024, whose
-surface (`libs/features/tools`, its study catalogs and `catalog.spec.ts`)
-this order does not touch. Amended by the 2026-10-21
+follows the two scene orders in the sequence, in the first lane beside
+WO-045, whose surface (`libs/features/tools`, the study catalogs and the
+scene inspector's link to a study) this order does not touch. Amended by the 2026-10-21
 UI planning pass ([planning document](../planning/passes/ui-planning-2026-10-21.md)
 §6 D1 and D4): the release header, the node-spelled draft publish and the
 board's path enum. Amended by the 2026-10-23 standard pass
@@ -331,7 +331,7 @@ first gated sub-app when it lands.
   when its round is decided (its screenshots and an implementation record
   under `docs/evidence/WO-008/design/` are the history), and a decided
   choice is not relitigated for this order. The operator may instead delay
-  the rounds to a dedicated A/B testing pass (rule 25): the order then
+  the rounds (rule 25): the order then
   records the first pair without a pick, ships candidate A and carries the
   rounds as a follow-up its decisions name.
 - Failure matrix, each a unit spec and, where the UI changes, an e2e test:
@@ -629,8 +629,7 @@ review once each.
    names), and either every later round with its pick, the decisions file
    recording the operator's word that ended the rounds and naming the
    removed candidate's files, `ls` on each printing nothing; or the
-   decisions file recording the operator's direction that delays the rounds
-   to a dedicated A/B testing pass, the pair standing without a pick, the
+   decisions file recording the operator's direction that delays the rounds, the pair standing without a pick, the
    shipped pages being candidate A, and the decisions file naming the
    follow-up that carries the rounds.
 8. **Use (WS-001 rule 24).** The verifier performs the Objective's session
@@ -665,7 +664,7 @@ review once each.
 
 **Evidence gate:** the gate rows, the recorded command outputs, `docs/evidence/WO-008/README.md` (naming the `kid` and the marker), `design/` with `comparisons.md` and the first pair's renders, `docs/evidence/WO-008/walkthrough.md` with its screenshots, and `docs/evidence/WO-008/host-qualification.md`.
 
-**Known issues and carry-ins:** Carried from the 2026-10-30 pass's reading of planning receipt 014, its item (d): when the mocked provider errors the public sub-apps stay reachable, because their routes carry an empty permission list and need no session (criterion 4's unchanged e2e specs and criterion 5's `auth` at `null` show it); reopened if the failure matrix shows an ungated sub-app unreachable. Planning receipts 012 and 015 each recorded this order's place behind the sub-app orders and the batches as a known issue against the purpose's critical path; the 2026-11-09 pass answers it by running this order first (D2). The base is `eb9d227`, WO-039's merge; step 1's ancestor check and fast-forward admit a later `main`, such as WO-024's merge from the lane beside this order. From the 2026-11-01 pass's criteria adversary (its R1) and the 2026-11-01 second pass's own reading, carried into this text by that second pass: step 1's base guard is an ancestor check and the fast-forward, because the inherited exact-tip guard stops an order whose pin is behind `main`; and criterion 1 reads its file list from the working tree, now with `git status --porcelain`, which names no revision, because `HEAD` is the base until the final review commits, so the earlier `merge-base..HEAD` list was empty at verification and its grep checked nothing. Starter v0.94.0 (update #23 of 2026-10-24) carries
+**Known issues and carry-ins:** Carried from the 2026-10-30 pass's reading of planning receipt 014, its item (d): when the mocked provider errors the public sub-apps stay reachable, because their routes carry an empty permission list and need no session (criterion 4's unchanged e2e specs and criterion 5's `auth` at `null` show it); reopened if the failure matrix shows an ungated sub-app unreachable. Planning receipts 012 and 015 each recorded this order's place behind the sub-app orders and the batches as a known issue against the purpose's critical path; the 2026-11-09 pass answers it by moving this order ahead of everything but the scene orders (D2 and D16). The base is `eb9d227`, WO-039's merge; step 1's ancestor check and fast-forward admit a later `main`, such as the scene orders' merges or WO-045's from the lane beside this order. From the 2026-11-01 pass's criteria adversary (its R1) and the 2026-11-01 second pass's own reading, carried into this text by that second pass: step 1's base guard is an ancestor check and the fast-forward, because the inherited exact-tip guard stops an order whose pin is behind `main`; and criterion 1 reads its file list from the working tree, now with `git status --porcelain`, which names no revision, because `HEAD` is the base until the final review commits, so the earlier `merge-base..HEAD` list was empty at verification and its grep checked nothing. Starter v0.94.0 (update #23 of 2026-10-24) carries
 core's fix for the plan gate's moved-record reader, so criterion 9's
 `npm run test:docs` clause is judged as written and no waiver is carried.
 Starter v0.96.1's plan gate no longer advises on this order's own launchpad record paths (core's answer of 2026-10-24, item 1); they stay as the kit names them and the publish command's body file must not name them. From receipt 008 (the 2026-10-24 pass's refutation), carried
@@ -741,7 +740,6 @@ baselines stay as they are.
 **Operator-review assumptions:** the operator accepts an established OpenID
 Connect client library behind the port rather than hand-rolled flows,
 accepts the account page as prose, judges the first pair across the three
-pages and ends the rounds in their own words or delays them to the A/B
-testing pass (rule 25), accepts that a reload ends the session while the
+pages and ends the rounds in their own words or delays them (rule 25), accepts that a reload ends the session while the
 provider is the in-page mock, and reads the one draft pull request before
 final review, which the final publish reuses.

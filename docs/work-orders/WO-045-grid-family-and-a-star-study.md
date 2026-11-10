@@ -253,10 +253,9 @@ its height. The two avoidance studies' presentation modules and model specs,
   the next pair; the rounds continue until the operator says the process is
   done, the rejected implementation leaves the code when its round is
   decided, and the decisions file records each round. If the operator
-  delays the rounds to a dedicated A/B testing pass, the order records the
+  delays the rounds, the order records the
   first pair without a pick, ships A, removes B's implementation with its
-  screenshots and record kept, and carries the rounds as the follow-up that
-  pass takes (rule 25).
+  screenshots and record kept, and carries the rounds as a follow-up, this order's own criterion run later as exactly that (rule 25).
 
 Rejected: a hand-written `a-star.presentation.ts` beside a simulation, as
 each movement study is written (axis: where a family's shape lives; one
@@ -469,7 +468,7 @@ once each.
     numbers in cells, B tone alone) and either every later round with its
     pick and the operator's word that ended the rounds in the decisions
     file, or the pair without a pick and the operator's word that delayed
-    the rounds to a dedicated A/B testing pass with A shipped (rule 25); in
+    the rounds with A shipped (rule 25); in
     either case the decisions file names the removed implementation's files
     and `ls` on each prints nothing.
 11. `npx nx build dotln --configuration=production` exits 0 within the
