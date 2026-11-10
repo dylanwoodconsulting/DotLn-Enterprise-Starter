@@ -141,7 +141,7 @@ writer of this repository.
 | WO-037 shooting and bullets | amended: what a knockout does to a formation; older trials stay readable | D6 |
 | WO-038 A/B testing pass I | retitled and widened to the delayed rounds; its checks repaired | D7 |
 | WO-040 standards pass III | amended: the measured scope, the stream part narrowed to four builder functions and nineteen messages; pairs with WO-036 | D5 |
-| WO-041 the grid family and the A* study | filed, from WO-036 | D6 |
+| WO-045 the grid family and the A* study | filed, from WO-036 | D6 |
 | WO-042 the machinery view's ideas and the idea sink | filed, from WO-016 | D8 |
 | WO-043 the Art of War map pass | filed, from WO-018 | D9 |
 | WO-044 find the studies | filed | D10 |
@@ -317,12 +317,15 @@ reads a metric added later as an empty series instead of being dropped, the
 rule WO-037 follows. The tile graph stays a background row and its cell
 size is a field setting.
 
-WO-041 is filed for the Tools side: the `grid` family, built builder-first
+WO-045 is filed for the Tools side: the `grid` family, built builder-first
 over the engine's own search (D3), the study record's version step that
 admits the family, the A* study, the scene inspector's link to a tool's
 study, and the two avoidance studies shown doing what the scene now runs,
 which takes the wall study's boarded gaps (§Register). It depends on
-WO-036 and on WO-040, which reshapes the two studies it edits.
+WO-036 and on WO-040, which reshapes the two studies it edits. It takes the
+id WO-045 and no order here is numbered WO-041: the kit's receipt renderer
+writes a sentence about one of core's own orders into any receipt whose
+subject holds that number (§Requests to core, item 7).
 
 WO-037 stays whole behind WO-036. Its knockout step expected the formation
 to reassign, which the engine's formation module does not do; the order now
@@ -386,14 +389,14 @@ browser's preflight, without which no idea would have arrived. The replay
 clock moves to WO-017, its only consumer.
 
 Reading the platform's rows for WO-042 and WO-017 found one limit under
-both. No field of WO-221's twenty-two rows names a mechanism, a rung, or
-what a wait bought. So of the eight kinds of idea, one moves the recorded
+both. None of the twenty-two fields of WO-221's sixteen rows names a
+mechanism, a rung, or what a wait bought. So of the eight kinds of idea, one moves the recorded
 beats (an added wait), one marks the beats where a removed input existed,
 and six change the agent's card alone; WO-042 says so in a table, kind by
 kind, and its captions say when the beats are unchanged. And the twin's
 replay replays every duration and verdict as recorded, so each figure
 improves as the twin's waits shrink and a variant with no patience closes
-at the floor: WO-017 now shows that floor, 883.3 minutes, and states that
+at the floor: WO-017 now shows that floor, 883.4 minutes, and states that
 its figures price a patience policy for this order and cannot tell a
 faithful twin from a trivial one. Its three variants were two in this
 replay (a debounce and an audit of a single hand-back are both a fixed
@@ -475,10 +478,12 @@ ordinary amendment.
 ## Register
 
 The register was synced before the dispositions (no public source had
-changed its rows) and one batch of nine applied at revision `a86f0111…`,
-leaving it at `4c7bd9c2…`; the batch is kept in the ignored local lane as
-`docs/control/local/planning/followups-apply-2026-11-09.json`. Thirty-seven
-rows stay pending, all deferred.
+changed its rows) and two batches applied, nine rows at revision
+`a86f0111…` and, after the reviews, two more, leaving it at `f4a9f920…`;
+the batches are kept in the ignored local lane as
+`docs/control/local/planning/followups-apply-2026-11-09.json` and
+`followups-apply-2026-11-09-b.json`. Thirty-seven rows stay pending, all
+deferred.
 
 | Row | Disposition and evidence | Reopening condition |
 | --- | --- | --- |
@@ -486,11 +491,12 @@ rows stay pending, all deferred.
 | `FUP-35187266d29e00dc` (WO-026-D012, the documents that describe the `/machinery` placeholder) | **allocated** to WO-016, whose documents step carries them | WO-016's final review finds one still describing the placeholder |
 | `FUP-02c1ebe8146fe2f1` (WO-023-D008, the `states` family's delayed rounds) | **allocated** to WO-038, stream (b) | the operator wants those rounds apart from the reading's |
 | `FUP-5af094bffcaf27ef` (WO-039-D011, the narrow register's headings) | **allocated** to WO-038, stream (c) | stream (b)'s pick removes the register table |
-| `FUP-4e24208e45d27a1d` (WO-034-D013, the wall study's two gaps) | **allocated** to WO-041, moved from WO-036, which the split leaves no file under the Tools feature | WO-041's verification finds the moments out of order or the traces unreadable |
+| `FUP-4e24208e45d27a1d` (WO-034-D013, the wall study's two gaps) | **allocated** to WO-045, moved from WO-036, which the split leaves no file under the Tools feature | WO-045's verification finds the moments out of order or the traces unreadable |
+| `FUP-592e538095eaead9` (a link from the scene's inspector to a tool's study) | **allocated** to WO-045, moved from WO-036 with the link (the consistency review's finding) | WO-045's verification finds a rail tool with a study and no link |
 | `FUP-4ddf0151d707734a` (the twin's fourth result) | **deferred**, with its reason replaced: the copies carry nothing that says what a wait bought, so no figure a zero-patience variant pays can be derived (D8) | the operator names what an early dispatch costs, or a record carries it |
 | `FUP-400988852956edcf` (the mining store and the app's API) | **deferred** — its condition, the copies limiting a toy, was met in planning, and a store over the same records would not lift the limit; the ask goes to core (D8) | the platform's records carry the mechanisms a session ran with, or the operator names the next public source after WO-043 |
 | `FUP-0fb531a975308a81` (explicit catalog search controls) | **deferred** — read against WO-044, which changes no search control (D10) | WO-044 has merged and a search still cannot be narrowed without typing |
-| `FUP-3372acd8d62e8cc7` (a lane pair of WO-014 and WO-016) | **declined** — moot since WO-014 closed on 2026-10-26; WO-016 pairs with WO-041 | none |
+| `FUP-3372acd8d62e8cc7` (a lane pair of WO-014 and WO-016) | **declined** — moot since WO-014 closed on 2026-10-26; WO-016 pairs with WO-045 | none |
 
 Rows read and left as they stand: `FUP-11889720fb205fb0` and
 `FUP-b730246e24e0c264` (the enterprise batch's residue, measured and
@@ -545,7 +551,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 ## Sequence
 
 The sequence runs in pairs, a road order first and side work beside it
-(D2): WO-008 with WO-024; WO-036 with WO-040; WO-016 with WO-041; WO-037
+(D2): WO-008 with WO-024; WO-036 with WO-040; WO-016 with WO-045; WO-037
 with WO-044; WO-042 with WO-035; then WO-038, WO-017, WO-018 and WO-043 one
 at a time. No pair holds an edge between its members, every hard edge runs
 forward, and the second publisher of a pair integrates the target's `main`.
@@ -561,7 +567,7 @@ What the operator sees after each order lands:
 | WO-036 | walls and obstacles they draw on the field; a squad routing around them and replanning; a no-route state they can read; head-on pairs parting |
 | WO-040 | nothing new but nineteen flow state sentences that read as English |
 | WO-016 | at `/machinery`, one recorded order's beats, the agent in each role slot, the hand-back cards and an agent's card |
-| WO-041 | the A* study stepping its search cell by cell, with the heuristic off and on; a link from a rail tool to its study; the two avoidance studies showing what the scene runs |
+| WO-045 | the A* study stepping its search cell by cell, with the heuristic off and on; a link from a rail tool to its study; the two avoidance studies showing what the scene runs |
 | WO-037 | units firing at a target, bullets stopped by walls, a moving target led and hit, a knockout that re-lays the formation |
 | WO-044 | every studied concept on one page by work and chapter; each work a link on the Tools home; studied counts in the contents; a mark on a nearby link that leads to another study |
 | WO-042 | their own ideas on a shelf; an idea applied to an agent, with the before as a ghost and the beats marked where the record supports it |
@@ -589,10 +595,8 @@ What the operator sees after each order lands:
 - The operator record is unchanged: no direction of today's is standing
   (§Rules recorded), and the record's item on standards passes already
   reads as the direction was given. The repository profile is unchanged:
-  the target has not moved. The profile's §Run content workers still names
-  WO-018 for the two fan-outs that are now WO-043's; WO-043's write-back
-  step corrects it when the order lands, and the sentence is not wrong
-  until then about which run file holds the designs.
+  the target has not moved, except that its §Run content workers names
+  WO-043 where it named WO-018 for the two fan-outs (D9).
 - Owed in the target, carried by orders: `catalog-rules.md`'s sentence on
   standards passes (WO-040's step); the documents that describe the
   `/machinery` placeholder (WO-016's step).
@@ -627,13 +631,19 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 
 2. Your item 6, the data you asked for. WO-039's close record reads publication.outcome not-attempted, cleanup.outcome clean, cleanup.branch.outcome deleted and targetCleanup.outcome removed, with dryRun false. npm run release -- list does not name WO-039: the latest launchpad release, v0.3.5, names WO-026, WO-020, WO-021, WO-022, WO-028 and WO-033, and WO-027, WO-034, WO-023 and WO-039 have closed since without a launchpad release. scripts/lib/drive-route.mjs sets the released fact from a release-list match or from a close whose publication.outcome is no-release, and sets merged from the branch's ancestry or from that same no-release close, so a target order whose close records not-attempted has neither and reads awaiting-merge with its branch deleted and its target removed. resume status still prints that for WO-039 today.
 
-3. Observation from the app, for your idea intake: the platform's public records cannot yet answer the machinery view's question. The fork read the twenty-two control rows of core's WO-221 at core commit 49d8c4c3 while amending its machinery and twin orders. No row names the mechanisms a session ran with (its gems or supports), a rung, or what a wait before a dispatch bought. So the app can show a consequence in the recorded use case for two of eight kinds of mechanism change (an added wait moves beats; narrowed knowledge marks the beats whose input is gone) and can only redraw the agent's card for the other six, and its twin lane can price what a wait costs and not what it buys. A session's attestation naming its active mechanisms, and a dispatch recording what it waited on and why, would make both answerable from the record. Nothing asked beyond routing it.
+3. Observation from the app, for your idea intake: the platform's public records cannot yet answer the machinery view's question. The fork read the sixteen control rows of core's WO-221 at core commit 49d8c4c3 while amending its machinery and twin orders. None of their twenty-two fields names the mechanisms a session ran with (its gems or supports), a rung, or what a wait before a dispatch bought. So the app can show a consequence in the recorded use case for two of eight kinds of mechanism change (an added wait moves beats; narrowed knowledge marks the beats whose input is gone) and can only redraw the agent's card for the other six, and its twin lane can price what a wait costs and not what it buys. A session's attestation naming its active mechanisms, and a dispatch recording what it waited on and why, would make both answerable from the record. Nothing asked beyond routing it.
 
 4. Starter v0.122.1 is taken (#73) on the operator's word in the dispatch. Preview 59 replaced, 4 added, 0 removed, 1 refused, no instance action; the merge clean; harness emit 43 surfaces; harness check, launchpad verify and npm test green and test:docs green on its second run (item 1). The by-hand check your item 2 keeps as this fork's duty until WO-261 found no file outside the manifest changed by both sides. The one refused row is .claude/harness-manifest.json, which this fork emits with its inferred Codex surfaces; launchpad verify reports it as the one kit file differing from the manifest, and the same file will read refused at every update. Observation: a generated surface the instance re-emits could be listed as re-emitted instead of refused.
 
 5. Observation on the dispatch standing: at this session's first usage readback, ten seconds after its dispatch, harness usage printed a planner standing started 2026-11-08T01:25:43Z with 44 h 51 min elapsed and two complete runs, for a session that began on 2026-11-09 at 22:16Z. The bound is unset here, so nothing was refused; a set bound would have read exhausted at entry. The standing seems to carry an earlier planning dispatch of the same host key.
 
 6. Observation on the planner's role text and process cost: the role admits a re-task only to recheck what a worker found. This pass's four research workers each held an order's findings; drafting the amendments from those findings meant eight fresh workers that re-read the same files. Ask: say whether a re-task that writes only to session scratch, with the parent the sole repository writer, is a recheck.
+
+7. Ask: the kit's runtime compares against core's own order numbers, and an instance's orders reach them. scripts/lib/plan-receipts.mjs line 157 writes a sentence about a self-referential instrument into any receipt whose subject holds WO-041; this fork numbered a new order WO-041 today and renumbered it WO-045 before its receipt. scripts/release.mjs lines 1501 and 1578 switch the release-note contract on at a passed final review of WO-024, and this fork's WO-024, a concept-study batch, is open and sequenced next, so its final review will flip the launchpad's release notes out of the legacy form. scripts/resume.mjs line 829 exempts WO-019, scripts/lib/plan-continuation.mjs line 529 names WO-126, packages/skeleton/dist/src/evidence-editions.mjs names WO-011, and scripts/lib/plan-dependency-migration.mjs line 48 names WO-043, guarded there by a criterion's text. Ask: key each on core's repository or on the recorded event it stands for, and say whether the WO-024 switch needs anything of this fork before that order closes.
+
+8. Observation and ask on the criteria review of a planning subject that is split into batches: with --capture, each batch's report must carry the Items table, and a batch that lacks it refuses the whole round with nothing written. Here the brief measured 724,791 bytes against the 400,000 ceiling, two batches. Run one: batch 1 refused after 0 h 15 min with five findings returned. Run two: batch 1 accepted, batch 2 refused after 0 h 11 min with four findings returned, 0 h 28 min in all. Three Codex launches and 0 h 43 min produced no report, and the returned text is kept nowhere (the worker-output directory holds only its owner record). The fork then ran the review without the capture and answered the dispatch's items in its own document, which is not what the operator's rule asks. Asks: keep a refused report's returned text and findings in the reviews lane marked refused; let the Items table be owed once per round, not per batch; and accept a format repair from the same worker, as the refuter's result admits.
+
+9. Observation on the document check's time: on the planning subject (23 changed files against 260 captures) the docs-check task of test:docs, which holds the verbatim screen, ran 0 h 8 min; on the update branch the whole of test:docs had run in 0 h 1 min. Nothing asked beyond noting it for the screen's cost line.
 ```
 
 ## Process cost

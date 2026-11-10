@@ -82,7 +82,7 @@ split in two; the `grid` family, the study record's version step, the A*
 study and its critics, the inspector's study link (`FUP-592e538095eaead9`),
 the NoOp's reopening and the two avoidance studies' carry-ins (WO-034-D013,
 and the Collision avoidance comparison as the head-on policy's regression)
-moved to WO-041, so that this order edits no file WO-040 edits; the head-on
+moved to WO-045, so that this order edits no file WO-040 edits; the head-on
 policy sits in a steering function of its own so that `avoid` and the study
 that calls it are unchanged here; the Tile graph stays a background scene
 element and cell size is a field setting; geometry is carried by steps, so
@@ -252,10 +252,16 @@ sixteen tools.
   traversable, so no route cuts a corner; smoothing keeps a shortcut only
   when its swept segment passes the same test; and the simulation's stop at
   geometry and the avoidance rays use that test too, so a route the search
-  returns is one the body can walk. A search starts from the traversable
-  cell nearest the unit. `graph.ts` also builds the same graph from a plain
+  returns is one the body can walk. A search attaches both ends to the
+  graph by the same test: it starts from the nearest traversable cell whose
+  centre the swept unit can reach from where it stands and ends at the
+  nearest such cell to the goal, and when no cell passes for an end it
+  returns no route with the reason (`unreachable-start` or
+  `unreachable-goal`), which the no-route state shows, so a replan never
+  returns to a cell the body cannot enter; the graph's spec covers a unit
+  that a thin wall separates from its nearest free cell. `graph.ts` also builds the same graph from a plain
   grid of blocked cells and cell costs, so a study can search a grid it
-  describes (WO-041).
+  describes (WO-045).
 - **The cost functions.** `path.cost` multiplies the travel cost by its
   travel weight (`travel-cost`, `distance-weight`,
   `terrain-cost-multiplier`) and adds its layer weights (`danger-cost`,
@@ -270,7 +276,7 @@ sixteen tools.
 - **The search.** A* with a pluggable heuristic (`zero`, `manhattan`,
   `euclidean`, `octile`), Dijkstra as the zero heuristic, path retrieval by
   back-tracking, line-of-sight smoothing; the search's open and closed sets
-  per expansion kept for the painter's frontier layer and for WO-041's
+  per expansion kept for the painter's frontier layer and for WO-045's
   `grid` family. Integer-friendly arithmetic and the engine's own `sine` and
   `cosine`, never native `Math.sin` or `Math.cos`, so the known outcome
   reproduces on every machine (scene rules).
@@ -302,7 +308,7 @@ sixteen tools.
   runs `avoid` and adds the side only where `avoid` is silent for that
   reason, and the simulation's avoidance term calls it; `avoid` is
   unchanged, so the Collision avoidance study, which calls `avoid` and pins
-  its zero, renders at this order's candidate as at the base, and WO-041
+  its zero, renders at this order's candidate as at the base, and WO-045
   makes its comparison the policy's regression. The regressions in
   `steering.spec.ts` cover exact head-on with opposite headings, initial
   overlap, ordinary offset crossings and a replay of each, every one
@@ -388,7 +394,7 @@ study demonstrates the engine); the `grid` family and the A* study in this
 order (axis: they live in `libs/features/tools`, which rule 15 keeps apart
 from the engine and the scene feature, they share only the pathfinding
 module with this order, and the two outcomes together were estimated at
-more than the largest cycle closed in this workspace; WO-041 takes them).
+more than the largest cycle closed in this workspace; WO-045 takes them).
 
 Live-run surfaces at the base: the scene with sixteen rail tools, the
 trial compare and a saved composition; the catalog's readings of the rows
@@ -621,7 +627,7 @@ the five cost rows (`aifg-b:48`, `aifg-b:50`) weigh only those layers. The
 `grid` family, the study record's version step, the A* study, the
 inspector's study link and the two avoidance studies' carry-ins
 (WO-034-D013, `FUP-4e24208e45d27a1d`, and the Collision avoidance
-comparison as the policy's regression) are WO-041's, which depends on this
+comparison as the policy's regression) are WO-045's, which depends on this
 order's `pathfinding.ts` and `graph.ts`. This order is the road entry of a
 lane pair whose side entry is WO-040: the two share no target file. The
 files this order edits under `libs/features/tools` are `reading-mapper.ts`
@@ -645,7 +651,7 @@ release notes: reviewed` are set under WO-012's declared policy.
 **Non-goals:** a navigation mesh, polygon obstacles or hierarchical
 pathfinding; a 4-connected graph; influence maps and the danger layer;
 shooting and bullets (WO-037); the `grid` family, any study, the study
-record's schema and the inspector's study link (WO-041); a change to
+record's schema and the inspector's study link (WO-045); a change to
 `avoid` or to any study module; Babylon.js (candidate C2).
 
 **Operator-review assumptions:** the operator accepts segments and discs

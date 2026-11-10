@@ -167,7 +167,7 @@ either checkout (the profile, §What close deletes, retains or refuses).
   | `addGem(id)` | the id joins the list, marked as the operator's | unchanged; the same caption | nothing: card-only |
   | `removeSupport(id)` | as `removeGem`, the operator's word being support | unchanged; the same caption | nothing: card-only |
   | `addSupport(id)` | as `addGem` | unchanged; the same caption | nothing: card-only |
-  | `narrowKnowledge(inputs)` | the inputs list keeps only the listed inputs, the removed ones as the ghost | marks each beat of the agent's slot at which a removed input existed by the record: `@failure-report` at a hand-back whose latest earlier verdict is `fail`; `@verification-reports` at a hand-back after an earlier verification completion; `@final-review` at a hand-back after an earlier final-review completion; an input the record does not produce (`@work-order`, `@citations`, `@subject-files`, `package.json`, a document section) marks nothing, and the caption names it as present at every beat and not told apart by the record | `type` and `verdict` of the rows before each beat |
+  | `narrowKnowledge(inputs)` | the inputs list keeps only the listed inputs, the removed ones as the ghost | marks each beat of that agent's own fill at which a removed input existed by the record: `@failure-report` at a hand-back whose latest earlier verdict is `fail`; `@verification-reports` at a hand-back after an earlier verification completion; `@final-review` at a hand-back after an earlier final-review completion; an input the record does not produce (`@work-order`, `@citations`, `@subject-files`, `package.json`, a document section) marks nothing, and the caption names it as present at every beat and not told apart by the record | `type` and `verdict` of the rows before each beat |
   | `setRung(id, rung)` | the id shows the rung the idea sets, beside the copy's "rung not recorded" | unchanged; the caption says no row records a rung | nothing: card-only |
   | `addWait(minutes, cause)` | what it waited on gains the operator's cause and minutes | the agent's hand-back and every later beat move right by the minutes, their recorded positions ghosted; earlier beats and gaps unchanged; the working total grows by the minutes | `recordedAt` |
   | `replaceProse(sectionKey, text)` | the section shows the operator's words under its key, the key's before as the ghost | unchanged; the caption says no row carries prose | nothing: card-only |
@@ -185,8 +185,11 @@ either checkout (the profile, §What close deletes, retains or refuses).
   recomputes from the copy.
 - **The apply fold** (`libs/shared/records/src/lib/apply-ideas.ts`, pure):
   `applyIdeas(strip, roleMechanisms, applied, ideas)` folds the applied
-  ideas over a copy of the strip and of the role copy per slot (the
-  repairer's seeded from the executor's entry), with the input table above
+  ideas over a copy of the strip and of the role copy per fill (an agent is
+  one fill of a slot, the `order`, `slot` and `ordinal` an `AppliedIdea`
+  names, so an idea applied to one verifier redraws that fill's card and
+  marks or moves only the beats that fill produced, never another fill of
+  the same slot; the repairer's copy is seeded from the executor's entry), with the input table above
   as a fixed map from an input to the row types and verdicts that produce it,
   and returns the redrawn view, the ghosts, the marks, the moves and one
   caption key per applied idea. It never mutates the copy. A drop is refused
@@ -227,7 +230,10 @@ either checkout (the profile, §What close deletes, retains or refuses).
   helper): a local Node process listening on `127.0.0.1`. Its settings are
   command-line flags and nothing else: `--port` (default 4310; 0 picks a
   free port, which it prints), `--dir` (default `docs/intake/ideas` in the
-  checkout it runs from) and `--origin` (default `http://localhost:4200`).
+  repository's primary checkout, the owner of the common Git directory, so a
+  sink started in an order worktree still writes the operator's ideas where
+  a close leaves them; a tooling test starts it from a temporary linked
+  worktree and reads the directory it chose) and `--origin` (default `http://localhost:4200`).
   It accepts `POST /ideas` only when the request's `Origin` is the allowed
   origin and its `Host` is `127.0.0.1:<port>`; it answers the CORS preflight
   `OPTIONS /ideas` from that origin alone, allowing `POST` and
@@ -264,10 +270,13 @@ either checkout (the profile, §What close deletes, retains or refuses).
   `docs/intake` to `classes.angular-nx-monorepo.disposable` in
   `dotln.config.json` (as WO-023 added `**/node_modules`): under the
   registration's `judge-only` base policy the operator's ideas in the base
-  checkout are retained rather than refusing a close, and an order
-  worktree's are deleted. The executor's and the verifier's live sink runs
-  also remove the intake file they made after recording it, and record the
-  removal, as the profile asks for generated local environment files.
+  checkout are retained rather than refusing a close. An order worktree
+  holds none of the operator's ideas, because the sink's default directory
+  is the primary checkout's; the executor's and the verifier's live sink
+  runs pass `--dir docs/intake/sink-run`, a directory the run owns, remove
+  that directory alone after recording it and record the removal, as the
+  profile asks for generated local environment files, and touch nothing
+  else under `docs/intake/`.
 - **Design brief** (WS-001 rule 25, for the region this order adds under
   §Design direction): the shelf as rows of the operator's own titles, each
   with its kind in words and its status; the caption as a sentence under the
@@ -382,14 +391,15 @@ sections; the launchpad's disposable entry; `docs/evidence/WO-042/`.
     `grep -rl "127.0.0.1:4310" dist/apps/dotln/browser`; `npm run
     check:bundle`. Check: the build exits 0, the grep prints nothing,
     `check:bundle` passes.
-13. The live sink run: from the target worktree, `npm run idea-sink` and
-    `npx nx serve dotln` side by side; apply one idea; record in
-    `docs/evidence/WO-042/sink-run.md` the line appended to
-    `docs/intake/ideas/ideas-<UTC date>.jsonl` (its `idea.id` and `schema`)
-    and `git status --porcelain --ignored docs/intake` before removal; stop
-    the sink, apply a second idea and record that it stayed applied and one
-    notice showed; remove `docs/intake/` and record the removal. Check: the
-    evidence file exists and `ls docs/intake` fails.
+13. The live sink run: from the target worktree, `npm run idea-sink --
+    --dir docs/intake/sink-run` and `npx nx serve dotln` side by side; apply
+    one idea; record in `docs/evidence/WO-042/sink-run.md` the line appended
+    to `docs/intake/sink-run/ideas-<UTC date>.jsonl` (its `idea.id` and
+    `schema`) and `git status --porcelain --ignored docs/intake/sink-run`
+    before removal; stop the sink, apply a second idea and record that it
+    stayed applied and one notice showed; remove `docs/intake/sink-run/`,
+    the directory this run made, and record the removal. Check: the
+    evidence file exists and `ls docs/intake/sink-run` fails.
 14. The walkthrough: the executor performs the Objective's session in the
     served production build, saves one screenshot per step at 360, 768, 1440,
     about 2080 by 1460 and 3840 by 1620 under
@@ -494,12 +504,14 @@ target gate plain and review once each.
 7. In the target worktree, `git check-ignore -q
    docs/intake/ideas/ideas-2026-01-01.jsonl` exits 0.
 8. The live sink run: the verifier, from the target worktree, runs `npm run
-   idea-sink` beside `npx nx serve dotln`, applies an idea, reads one new
-   line in `docs/intake/ideas/ideas-<UTC date>.jsonl` that parses as
+   idea-sink -- --dir docs/intake/sink-run` beside `npx nx serve dotln`,
+   applies an idea, reads one new line in
+   `docs/intake/sink-run/ideas-<UTC date>.jsonl` that parses as
    `machinery-idea-drop-v0` and names that idea, and finds `git status
    --porcelain` printing nothing for `docs/intake/`; then stops the sink,
    applies another idea, sees one notice and finds the idea applied after a
-   reload; then removes `docs/intake/` and records the removal. Where the
+   reload; then removes `docs/intake/sink-run/`, the directory the run made
+   and nothing else under `docs/intake/`, and records the removal. Where the
    verifier's host cannot run the development server or bind the loopback
    port, the verifier records the run untested with the reason and judges
    this criterion from criterion 5's tests and the executor's

@@ -159,7 +159,7 @@ concern.
 
 ### Run content workers
 
-WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-018 applies
+WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-043 applies
 the same admission and accounting rules to its map and toy-design fan-outs.
 Before the first worker starts, record the token stop in the activation
 decisions and `fan-out.md`:
@@ -189,7 +189,7 @@ represented as money without a money counter.
 
 The subagent cap is separate: every launch, continuation message, resumed
 worker and kit launch consumes a use under the current kit. The declared initial
-fan-out consumes twelve uses in each of WO-018, WO-023 and WO-024; reserve the
+fan-out consumes twelve uses in each of WO-043, WO-023 and WO-024; reserve the
 execution's independent review ladder before allocating author re-tasks. The parent can apply a
 critic's bounded corrections itself and records who changed what; mark a record
 reviewed only after its order's required critic judgments cover its current

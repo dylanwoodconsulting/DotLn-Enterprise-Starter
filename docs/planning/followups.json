@@ -4822,6 +4822,16 @@
             "WO-036"
           ],
           "at": "2026-11-05T16:10:30.841Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Re-allocated from WO-036 to WO-045 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D6: the split moves the scene inspector's link to a tool's study out of WO-036, and WO-045's criteria deliver it (the consistency review's finding).",
+          "reopenWhen": "WO-045's verification finds a rail tool with a study and no link to it, or WO-045 is withdrawn.",
+          "targets": [
+            "WO-045"
+          ],
+          "at": "2026-11-10T00:27:03.695Z"
         }
       ]
     },
@@ -7471,6 +7481,16 @@
             "WO-041"
           ],
           "at": "2026-11-09T23:21:08.918Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "Allocated to WO-045 by the 2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D6: the order the split files for the Tools side was first numbered WO-041 and is WO-045, since the kit's receipt renderer keys a sentence about a core order on the other number. WO-045 takes the wall study's two gaps (the moments in step order whatever the input, the clearance comparison shown where the traces part) with the study made to show the avoidance the scene runs.",
+          "reopenWhen": "WO-045's verification finds the moments out of step order or the two traces unreadable, or WO-045 is withdrawn.",
+          "targets": [
+            "WO-045"
+          ],
+          "at": "2026-11-10T00:27:03.680Z"
         }
       ]
     },

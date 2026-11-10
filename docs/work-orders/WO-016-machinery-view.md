@@ -552,8 +552,10 @@ visual changes; the two documents and the WO-026-D012 edits;
    decisions file (the path, the command, the printed digests).
 4. `npx nx test records` exits 0 with specs asserting: the fold reproduces,
    from each copy, the rows, operator rows, hand-backs with their verdicts,
-   gaps after a hand-back and span this order's Observed gap records, each
-   gap within one second; the slot table maps each recorded `type` to its
+   gaps after a hand-back and span that the spec computes from the copy's own
+   `recordedAt` stamps, each within one second (the Observed gap gives their
+   one-decimal display forms, which differ from the stamps by up to three
+   seconds); the slot table maps each recorded `type` to its
    slot and an unknown `type` yields an `unknown` beat; two synthetic rows of
    one `type` whose harness, model, effort and mode match, one with
    `actor.role` `planner` and one with none, fold to an `unknown`-slot beat

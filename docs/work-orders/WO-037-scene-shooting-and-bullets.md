@@ -77,7 +77,7 @@ followed for the four new metrics; the frame hash folding in the bullets;
 the fixture written as a known outcome now that geometry is carried by
 steps; `check-catalog.mjs`'s list of scene kinds, the catalog summary, the
 transform labels and the visual command and baselines named; the
-inspector's study links left to WO-041; the criteria rewritten so no count
+inspector's study links left to WO-045; the criteria rewritten so no count
 is a subject and the round criterion admits rule 25's deferral; the base
 and the Cost re-estimated.
 **Depends on:** WO-036 merged (hard: the geometry bullets stop at, the
@@ -187,7 +187,7 @@ value above zero for a parameter the engine would divide by here.
   straight-bullet intercept or the drag-aware lead the scene needs. The
   studies keep their mechanisms and records unchanged, and nothing is
   claimed to be shared that is not. Each of the three has a study, so the
-  inspector's study line WO-041 adds links it where WO-041 has landed; this
+  inspector's study line WO-045 adds links it where WO-045 has landed; this
   order adds no link of its own.
 - **Hits, knockout and the formation re-forming.** A hit increments the
   unit's `hits`; at `knockout-hits` the unit's activity becomes `down`: it
@@ -464,7 +464,7 @@ the road entry of its lane pair, beside a Tools-side order; the one file it
 edits under `libs/features/tools` is `reading-mapper.ts` (with the
 `tools-en.json` copy), which the enum's growth forces, and if the order
 beside it edits the same mapper the second publisher integrates the
-target's `main`. The inspector's link to the three studies is WO-041's.
+target's `main`. The inspector's link to the three studies is WO-045's.
 Sides, cover, ammunition and a lobbed arc are later toys the operator picks
 after playing. The scene's known outcome is regenerated here with its
 reason in the pull request. This order activates only on a launchpad whose
@@ -478,7 +478,7 @@ WO-012's declared policy.
 
 **Non-goals:** sides or teams; ammunition; a lobbed trajectory drawn in
 height; cover and line of sight beyond the wall stop; a study of its own
-(the three studies exist); a link from the inspector to a study (WO-041);
+(the three studies exist); a link from the inspector to a study (WO-045);
 Babylon.js (candidate C2).
 
 **Operator-review assumptions:** the operator accepts straight bullets with

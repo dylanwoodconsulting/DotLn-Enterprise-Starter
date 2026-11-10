@@ -336,7 +336,12 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
    production configuration as under development; `message-catalog.spec.ts`
    covers both. Check: `npx nx test i18n` exits 0.
 5. `libs/features/tools/src/lib/facades/tools.facade.ts`, `ToolsFacade`:
-   registers each loaded work; builds the shelf, contents, reading, search
+   registers each loaded work through a registration and title resolver it
+   shares with `StudiedFacade` (`facades/studied.facade.ts`, the
+   `/tools/studied` page WO-044 lands, which registers the works it loads
+   and builds its list from translated titles, so a direct visit renders no
+   raw row text and a missing title reaches that page's failure state with
+   Try again); builds the shelf, contents, reading, search
    results, history, studied list and facets from translated strings; the
    study's nearby and next titles read the row's title message; a missing
    message reaches the catalog page's failure alert or the study's failure
@@ -370,8 +375,9 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
    Check: `npx nx test scene` exits 0 and `git diff --exit-code --
    libs/features/scene/src/testing/fixtures/trial-known-outcome.json` exits
    0.
-10. The prefix specs: `catalog-page.spec.ts`, a new `tools-home.spec.ts`
-    beside `tools-home.ts`, and `scene-page.spec.ts` gain the test language
+10. The prefix specs: `catalog-page.spec.ts`, `studied-page.spec.ts`
+    beside WO-044's page, a new `tools-home.spec.ts` beside `tools-home.ts`,
+    and `scene-page.spec.ts` gain the test language
     of the Design, built in the spec from `en.json`, the study catalogs and
     the derived catalog messages; the cases of criteria 2, 4 (the row
     message) and 5. Check: `npx nx test tools` and `npx nx test scene` exit

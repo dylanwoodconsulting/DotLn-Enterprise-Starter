@@ -1,4 +1,4 @@
-# WO-041 — The grid family and the A* study: the pathfinding chapter made drawable by a `grid` family that builds a study's frames from its data in one builder over the engine's own search, the study record's version step that admits it, A* stepped across a grid, the scene inspector's link to a tool's study, and the two avoidance studies made to demonstrate the avoidance the scene now runs
+# WO-045 — The grid family and the A* study: the pathfinding chapter made drawable by a `grid` family that builds a study's frames from its data in one builder over the engine's own search, the study record's version step that admits it, A* stepped across a grid, the scene inspector's link to a tool's study, and the two avoidance studies made to demonstrate the avoidance the scene now runs
 
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes).
@@ -216,7 +216,7 @@ its height. The two avoidance studies' presentation modules and model specs,
   `studyAifg/en.json`. Authored by the executor under the record contract
   and criticized by the factual and reading critics under the profile (two
   launches, WS-002 rule 3's procedure for one study), their findings
-  disposed in `docs/evidence/WO-041/review.md`; `checked` with two reviewers.
+  disposed in `docs/evidence/WO-045/review.md`; `checked` with two reviewers.
   The study lets the research track draw the pathfinding chapter's 76 rows
   (WS-002 rule 6).
 - **The two avoidance studies demonstrate the engine.** Collision avoidance
@@ -283,12 +283,12 @@ as WO-040 leaves them.
 drawing, specs and stories; the v2 schema and its readers; the A* study's
 record, module, spec, messages and summary row; the two avoidance studies'
 changes; the inspector's study line; the regenerated scene baselines;
-`docs/evidence/WO-041/` with the design record, `review.md`, the link check,
+`docs/evidence/WO-045/` with the design record, `review.md`, the link check,
 `walkthrough.md` and its screenshots; the documents.
 
 **Execution plan:**
 
-1. Base guard read with WO-014-D001, for WO-041: in the target clone, after
+1. Base guard read with WO-014-D001, for WO-045: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor <WO-036's merge commit>
    origin/main` and `git merge-base --is-ancestor <WO-040's merge commit>
    origin/main` each exit 0 (the pass after both merge sets the pin; a
@@ -301,9 +301,13 @@ changes; the inspector's study line; the regenerated scene baselines;
 2. `libs/shared/catalog/src/schema/concept-study-v2.schema.json`, with
    `visualFamilies` and `ConceptStudy` in `libs/shared/models/src/lib/concept-study.ts`,
    `libs/shared/catalog/src/lib/catalog-loader.ts`,
-   `tools/scripts/catalog/check-studies.mjs` and the record builder in
+   `tools/scripts/catalog/check-studies.mjs`,
+   `tools/scripts/catalog/check-study-messages.mjs` (it refuses every schema
+   but `concept-study-v1` today, and `i18n:check` runs it first) and the
+   record builder in
    `libs/shared/catalog/testing/src/lib/catalog-test-kits.ts` accepting v1
-   and v2. Check: `npm run studies:check` exits 0; on a scratch copy of the
+   and v2, the message check validating a v2 record's messages as it does a
+   v1 record's. Check: `npm run studies:check` exits 0; on a scratch copy of the
    studies directory a v1 record naming `grid` is refused and the same
    record as v2 admitted (recorded with both exit codes); `npx nx test
    catalog`, `npx nx test models` and `npm run test:tooling` exit 0.
@@ -318,17 +322,22 @@ changes; the inspector's study line; the regenerated scene baselines;
 5. The first rendered pair (A numbers in cells, B tone alone) at about 2080
    by 1460 and 360, read at 3840 by 1620; the rounds, or their deferral as
    the Design states; the rejected or unpicked implementation removed with
-   its record. Check: `docs/evidence/WO-041/design/comparisons.md` exists
+   its record. Check: `docs/evidence/WO-045/design/comparisons.md` exists
    and names the pair.
 6. The A* study: `studies/pathfinding/a-star.ts` and `a-star.spec.ts`, its
    entry in `study-models.ts`, the record
-   `libs/shared/catalog/src/studies/aifg/a-star.json` as v2, its messages in
+   `libs/shared/catalog/src/studies/aifg/a-star.json` as v2, exported from
+   the work chunk `libs/shared/catalog/src/studies/aifg.ts` (the studies
+   check refuses a directory and a chunk that disagree), with
+   `tools/studies.test.mjs`'s membership assertion for AI for Games kept
+   per batch for the two movement batches and given its own for this
+   study, its messages in
    `apps/dotln/public/i18n/studyAifg/en.json` and `study-en.json`, and its
    summary row through `npm run studies:check -- --write-summary`. Check:
-   `npm run studies:check`, `npm run i18n:check` and `npx nx test tools`
-   exit 0.
+   `npm run studies:check`, `npm run i18n:check`, `npm run test:tooling`
+   and `npx nx test tools` exit 0.
 7. The two critics dispatched under the profile, their findings disposed in
-   `docs/evidence/WO-041/review.md`, `npm run studies:links` run over the
+   `docs/evidence/WO-045/review.md`, `npm run studies:links` run over the
    record and its output recorded, the record `checked` with two reviewers.
    Check: `npm run studies:check` exits 0.
 8. `studies/movement/collision-avoidance.simulation.ts`,
@@ -359,7 +368,7 @@ changes; the inspector's study line; the regenerated scene baselines;
     `npx nx e2e-visual dotln-e2e -- --update-snapshots=all`, each image read
     at reading size before it is accepted. Check: `npx nx e2e dotln-e2e`
     and `npx nx e2e-visual dotln-e2e` exit 0.
-12. The walkthrough as WO-020 step 11, under `docs/evidence/WO-041/`, with
+12. The walkthrough as WO-020 step 11, under `docs/evidence/WO-045/`, with
     screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620.
     Check: the files exist.
 13. Documents: `catalog.md` §The record (v1 and v2, which names `grid`) and
@@ -376,8 +385,8 @@ changes; the inspector's study line; the regenerated scene baselines;
     are drawable, and rule 7, that a record is v1 or v2), then the publish,
     review and records steps as WO-007 steps 15 to 17, with the branch
     `feat/grid-family-a-star`, the title `feat: add the grid study family
-    and the A* study`, `docs/evidence/WO-041/` and
-    `docs/final-reviews/WO-041/`; the final reviewer commits the order's
+    and the A* study`, `docs/evidence/WO-045/` and
+    `docs/final-reviews/WO-045/`; the final reviewer commits the order's
     records on the order branch before `npm run resume -- target-records`
     (the profile's publish route, step 3). Check: `npm run test:docs` in
     the launchpad order worktree.
@@ -400,7 +409,7 @@ once each.
    straight-ahead delivery, step its moments and read its clearance
    comparison. The VER report carries a `## Walkthrough` section with the
    dated steps and screenshots at 360, 768, 1440, about 2080 by 1460 and
-   3840 by 1620 under `docs/evidence/WO-041/walkthrough/`, and states in the
+   3840 by 1620 under `docs/evidence/WO-045/walkthrough/`, and states in the
    verifier's own words how A* chose its next cell, what the zero heuristic
    changed, what the head-on comparison showed and where the wall study's
    two clearance traces part, as read from the page alone. Met only when
@@ -428,7 +437,7 @@ once each.
    libs/shared/catalog/src/schema/concept-study-v1.schema.json` exits 0; and
    `npx nx test catalog` passes with the loader serving the A* record.
 5. The A* record is `checked` with two reviewers named, and
-   `docs/evidence/WO-041/review.md` records both critics' findings with a
+   `docs/evidence/WO-045/review.md` records both critics' findings with a
    disposition for each and the link check's status for every reference and
    implementation the record cites; `npm run i18n:check` exits 0 and the
    corpus test passes over the A* module.
@@ -456,7 +465,7 @@ once each.
    2080 by 1460 and 3840 by 1620; `npx nx e2e-visual dotln-e2e` exits 0, and
    the evidence README lists each regenerated baseline with what changed in
    it.
-10. `docs/evidence/WO-041/design/comparisons.md` records the first pair (A
+10. `docs/evidence/WO-045/design/comparisons.md` records the first pair (A
     numbers in cells, B tone alone) and either every later round with its
     pick and the operator's word that ended the rounds in the decisions
     file, or the pair without a pick and the operator's word that delayed
@@ -467,14 +476,14 @@ once each.
     declared budgets, `npm run check:bundle` passes with the `grid` family
     and the A* study in lazy chunks, and `package.json`'s `dependencies`
     keys equal the integrated base's.
-12. `node scripts/target-gate.mjs WO-041 --review` records a passing row for
+12. `node scripts/target-gate.mjs WO-045 --review` records a passing row for
     every declared command with no tracked-byte mutation, and
     `npm run test:docs` passes in the launchpad order worktree; the
     Preflight line ran before the first full gate.
 
-**Evidence gate:** the gate rows, `docs/evidence/WO-041/README.md`,
+**Evidence gate:** the gate rows, `docs/evidence/WO-045/README.md`,
 `design/`, `review.md`, `walkthrough.md` and its screenshots, and
-`docs/evidence/WO-041/host-qualification.md`.
+`docs/evidence/WO-045/host-qualification.md`.
 
 **Known issues and carry-ins:** The base is provisional, WO-039's merge;
 the pass after WO-036 and WO-040 merge sets it to the later of their merge
@@ -492,7 +501,7 @@ frames may move where the engine's function differs from the study's own
 by rounding or by its ray; the study's text follows its frames. This order
 activates only on a launchpad whose starter carries core WO-221's `--draft`
 form; the draft pull request and its workflow runs are a final-review
-obligation read from `docs/evidence/WO-041/preview-pr.json`, never a
+obligation read from `docs/evidence/WO-045/preview-pr.json`, never a
 criterion. Before `target-records`, the final reviewer commits the order's
 records on the order branch (the profile's publish route, step 3).
 `Target release classification: minor` and `Target release notes:

@@ -278,7 +278,9 @@ adding a work or a visible field to it takes, is unknown until it merges.
   order's exception travels to this order.
 - **Seven works in the catalog's tables.** Each new work enters every table
   the catalog's §Reproducible source join lists: its batch, its loader
-  chunk, its shelf title and scene type in `reading.ts` (`units-on-terrain`
+  chunk, its shelf title as a message in the root catalog, where WO-035
+  moves the work titles (`apps/dotln/public/i18n/en.json` and its testing
+  copy), its scene type in `reading.ts` (`units-on-terrain`
   for The Art of War, the field its commander toy would play on; each
   source's from its toy), its `works` entry seeded in
   `catalog-summary.json`, and a `--dotln-work-<slug>` token in both token
@@ -472,7 +474,8 @@ the reading; the e2e cases and the refreshed baselines; the documents;
     and review. Check: passing rows, no tracked-byte mutation.
 16. Launchpad write-back: `docs/repositories/dotln-angular.md` §Find the
     implementation, §Catalog and concept studies (the inventory sentence,
-    the maps directory, `tool-v2`, the `--batch` join); WS-001's delivery
+    the maps directory, `tool-v2`, the `--batch` join) and §Run content
+    workers, read against what the two fan-outs used; WS-001's delivery
     states updated by the final review. Check: `npm run test:docs`. Then
     the publish, review and records steps as WO-007 steps 15 to 17, with
     the branch `feat/art-of-war-and-new-toys`, the title `feat: map The Art
@@ -589,7 +592,7 @@ target gate plain and review once each.
 `docs/evidence/WO-043/walkthrough.md` and its screenshots, and
 `docs/evidence/WO-043/host-qualification.md`.
 
-**Known issues and carry-ins:** Carried from planning receipt 012 (2026-10-28), a known issue that still applies: the fan-out's stop has no degraded acceptance path, because the criteria require every chapter and all six toys, so a stop refuses the order instead of shipping part of the mining; a stop is recorded in the decisions file with what was mapped and returns to a planning pass. The base is DotLn-Angular's `main` at
+**Known issues and carry-ins:** WO-035, a hard dependency, moves the work titles out of `reading.ts` into the root message catalog; wherever this text names a shelf title, the executor adds it as a message beside the others at the integrated base, and `reading.ts` keeps the scene types. Carried from planning receipt 012 (2026-10-28), a known issue that still applies: the fan-out's stop has no degraded acceptance path, because the criteria require every chapter and all six toys, so a stop refuses the order instead of shipping part of the mining; a stop is recorded in the decisions file with what was mapped and returns to a planning pass. The base is DotLn-Angular's `main` at
 `eb9d227` (WO-039's merge); WO-018 and WO-035 merge before this order
 activates, and step 1 fast-forwards to `main` as it finds it. From receipts
 008 and 009, kept: the map lives in its own directory, and the committed

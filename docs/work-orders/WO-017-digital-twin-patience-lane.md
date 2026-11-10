@@ -105,7 +105,7 @@ house's marble diagrams are read; the recorded lane beneath, carrying the
 operator's eight dispatches as reference marks; and the result cell, prose
 that reads what the order would have cost under the twin: its virtual close,
 its waiting minutes and its early fires, each beside the recorded 1,110.3
-minutes, 227.0 minutes and none, and the floor, the 883.3 minutes the record
+minutes, 226.9 minutes and none, and the floor, the 883.4 minutes the record
 gives its phases from request to hand-back, under which no patience closes
 this order. They pick each variant from a picker that lists every variant
 ever written with its version and lineage (the patience table and an hourly
@@ -118,7 +118,9 @@ at the floor with nothing waited, which the floor sentence reads as the limit
 of these figures: they price a patience policy for this order and cannot say
 which policy is the operator's. They keep a flip by exporting its TypeScript
 file, manifest row and registry line, because the RxJS that describes the
-operator is the RxJS that runs; reload and find the variant and flips they
+operator is the RxJS that runs; reload, sign in again (a reload ends the
+session while the mock runs in the page, WO-008) and come back to `/twin`
+by the page kept for after the sign-in, and find the variant and flips they
 left; and switch to WO-226. They learn what each patience would have cost
 this order and decide whether a flip is worth keeping as a new variant. No
 agreement figure against the recorded lane is computed or shown.
@@ -136,8 +138,9 @@ requests, two final-review requests), seven gaps after a hand-back of 87.8
 (after the implementation hand-back, no verdict), 109.9 (after the first
 verification's fail), 1.7 (after a repair), 1.4 (after a verification pass),
 2.1 (after the first final review's fail), 18.2 (after a repair) and 5.9
-(after a verification pass) minutes, 227.0 waiting minutes in all, a span of
-1,110.3 minutes, so 883.3 minutes from request to hand-back; the worker
+(after a verification pass) minutes, 226.9 waiting minutes in all (226.93295 by the stamps; the seven gaps are
+shown to one decimal and their rounded forms sum to 227.0), a span of
+1,110.3 minutes, so 883.4 minutes from request to hand-back; the worker
 durations from each request to its completion are in the same rows. RxJS is
 7.8.2 in the base's `package-lock.json`. In its published sources
 `VirtualTimeScheduler`, exported from `rxjs`, defaults `maxFrames` to
@@ -502,13 +505,18 @@ then the target gate plain and review once each.
 **Acceptance criteria (all required)**
 
 1. `npx nx test twin` exits 0 with a spec that folds WO-016's WO-221 copy
-   under the recorded dispatches and asserts 8 operator rows, the seven gaps
-   after a hand-back of 87.8, 109.9, 1.7, 1.4, 2.1, 18.2 and 5.9 minutes,
-   227.0 waiting minutes, a close at 1,110.3 minutes and a floor of 883.3
-   minutes, each within one virtual second, with the first gap's hand-back
-   carrying no verdict; that the patience table with every duration flipped
+   under the recorded dispatches and asserts 8 operator rows, and that the
+   seven gaps after a hand-back, the waiting minutes, the close and the
+   floor each equal, within one virtual second, the value the spec computes
+   from the copy's own `recordedAt` stamps (a gap is the operator row's
+   stamp less the stamp of the hand-back before it; the waiting minutes
+   their sum; the close the last stamp less the first; the floor the close
+   less the waiting minutes), whose one-decimal display forms are 87.8,
+   109.9, 1.7, 1.4, 2.1, 18.2 and 5.9, then 226.9, 1,110.3 and 883.4
+   minutes, with the first gap's hand-back carrying no verdict; that the patience table with every duration flipped
    to zero closes at the floor with zero waiting minutes and zero early
-   fires; and that WO-226's copy folds to its gaps of 316.0 and 31.7 minutes.
+   fires; and that WO-226's copy folds to gaps equal to its own stamps
+   within one virtual second, shown as 316.0 and 31.7 minutes.
 2. `npx nx test twin-model` and `npx nx test replay` exit 0 with specs
    asserting that waiting minutes and early fires are counted from each
    hand-back's replayed completion (the replayed dispatch plus the phase's
@@ -552,7 +560,8 @@ then the target gate plain and review once each.
    a flip redrawing the twin lane while every recorded mark's bounding box is
    unchanged; every duration flipped to zero bringing the virtual close to
    the floor; the export dialog showing the TypeScript and the manifest row;
-   the chosen variant present after a reload; the keyboard path over every
+   the chosen variant present after a reload and the sign-in it requires,
+   no token having been kept at rest; the keyboard path over every
    flip; axe at the board spec's threshold; no horizontal overflow at 360,
    768, 1440, about 2080 by 1460 and 3840 by 1620.
 9. `npm run i18n:check` and `npm run check:templates` exit 0 with the twin's
@@ -593,7 +602,9 @@ then the target gate plain and review once each.
     why the locked entries are locked; flip one parameter and watch the twin
     lane and the figures change while the recorded lane stays; flip every
     duration to zero and read the close at the floor; export the kept flip
-    and read the TypeScript and its manifest row; reload and find the chosen
+    and read the TypeScript and its manifest row; reload, sign in again and
+    return to `/twin` through the page kept for after the sign-in, and find
+    the chosen
     variant; switch to WO-226. The VER report carries a `## Walkthrough`
     section with the dated steps and names, for every step, its screenshot
     at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under
@@ -631,7 +642,7 @@ until a copy carries a size. Starter v0.96.1's plan gate no longer advises on th
 What results can say. From receipt 008 (the 2026-10-24 pass's refutation),
 carried into this text by the 2026-10-24 second pass: judged by results
 alone, a variant with every patience duration at zero yields the best of the
-three figures (a virtual close of about 883.3 minutes, zero waiting minutes,
+three figures (a virtual close of about 883.4 minutes, zero waiting minutes,
 zero early fires) while modelling no one, because the fold replays the
 recorded worker durations after each dispatch and a patience table never
 fires before a hand-back exists; receipt 009 and the 2026-11-01 reviews kept

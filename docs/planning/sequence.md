@@ -13,7 +13,7 @@ pair run one at a time.
 - WO-040 — Standards pass III: the second movement batch's code and the first batch's residue
 
 - WO-016 — The machinery view: one recorded order's agents in their slots
-- WO-041 — The grid family and the A* study
+- WO-045 — The grid family and the A* study
 
 - WO-037 — Shooting and bullets in the scene
 - WO-044 — Find the studies

@@ -86,10 +86,10 @@ their decisions hold the history.
    example (WO-034, merged on 2026-11-07, gated the next Movement batch;
    WO-039, merged on 2026-11-08, gated WO-031), while a work whose studies
    are data passed to a family builder (`marbles`, `flow`, and `relations`
-   and `grid` as WO-024 and WO-041 build them) owes no pass before its next
+   and `grid` as WO-024 and WO-045 build them) owes no pass before its next
    batch, the builder being the one place its shape lives; and the
    pathfinding chapter's 76 rows join AI for Games' drawable rows once
-   WO-041 lands the `grid` family. The gate is a planning judgment under
+   WO-045 lands the `grid` family. The gate is a planning judgment under
    WS-001 rule 31, never the operator's direction, and a pass that finds a
    builder-fed module failing a rule reopens it. (The operator record §What
    the operator wants, Depth in batches; the 2026-11-04 pass, D6; the

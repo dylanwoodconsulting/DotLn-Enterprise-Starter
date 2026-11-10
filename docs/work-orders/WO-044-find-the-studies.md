@@ -419,8 +419,9 @@ screenshots; the documents.
    `/tools/catalog` with AI for Games chosen on the shelf (`aria-current`),
    its contents shown and its studied concepts listed in the reading area;
    that the browser's Back then returns to `/tools`; that
-   `/tools/catalog?work=` with a slug the catalog does not have opens the
-   catalog with no work chosen; and that `/tools` still requests no work's
+   `/tools/catalog?work=` with a slug the catalog does not have changes
+   nothing: opened with empty storage it shows no work chosen, and opened
+   after AI for Games was chosen it keeps that choice; and that `/tools` still requests no work's
    chunk (the existing `tools-aifg` assertion holds).
 5. **Studied counts in the contents.** `reading.spec.ts` asserts that
    `contentsFor` with a studied set gives each chapter and section the
