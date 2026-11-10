@@ -648,6 +648,51 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 
 ## Process cost
 
+Model and effort: Fable 5.2 at `xhigh` (`CLAUDE_EFFORT`), Claude Code
+2.1.321, the operator's selection; no host readback of the effective model
+beyond the session's own. The research, drafting and refutation workers were
+`dotln-worker` (the generated definition pins `claude-opus-5-5` at `xhigh`;
+effective model and effort unknown), and the three reviews Codex
+`gpt-6.1-sol` at `max`, pinned on the command line.
+
+| Measure | Value | Source |
+| --- | --- | --- |
+| Wall clock, dispatch to this section | 3 h 5 min (22:16Z to 01:21Z) | the prompt hook's stamp; `date -u` |
+| The update | 0 h 11 min from the dispatch to the finish on `main`, 0 h 5 min of it the pull request waiting for the operator's merge | the gate logs; `gh pr view 73` |
+| The research | four workers, 0 h 11 min wall clock, 1,079,405 tokens | the host's task notifications |
+| The drafting | eight workers and one re-task, 0 h 31 min wall clock, 3,126,755 tokens | the host's task notifications |
+| The reviews | 1 h 10 min wall clock from the first launch to the last report; design 0 h 19 min and 9,066,765 tokens, consistency 0 h 27 min and 17,732,483, the admitted criteria run 0 h 24 min and 12,447,300; the two refused criteria runs 0 h 43 min, tokens unknown, no report written | the reports' headers; the helper's lines |
+| The refutation | 0 h 13 min dispatch to file, 207,909 tokens | the receipt; the host's task notification |
+| The document gate | 0 h 14 min for the run on the receipt's commit, 0 h 13 min of it the document check; 0 h 8 min for the check on the first subject | the gate logs |
+| This session's tokens | 109,559,364 at 01:20Z (498 input, 108,574,472 cached input, 690,390 cache-write, 294,004 output); cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
+| Workers | 26 launches and 3 re-tasks of a cap of 40 (Claude 13, Codex 7, unattributed 6) | the same readback |
+
+Three costs were avoidable. The two refused criteria runs spent 0 h 43 min
+and three launches for nothing kept (§Requests to core, item 8). The eight
+drafting workers re-read what the four research workers had read, because
+the role text admits a re-task only as a recheck (item 6). And the document
+check ran three times at eight to thirteen minutes on a subject this size
+(item 9). One cost is carried forward and not measured: the amended orders
+are longer than the ones they replace (WO-008 from 31,511 to 54,533 bytes), which an executor pays in context at activation.
+
+Compared with the alternative the operator named, a pass that changed
+nothing: it would have skipped the research, the drafting and most of the
+reviews, which is most of these three hours, and it would have left the
+first road order unable to run as written and the sequence opening with
+side work. Whether the three hours bought what D2 to D11 claim
+is observable only when the orders run: WO-008's and WO-024's first
+verifications are the first evidence, and a first verification that fails on
+a defect of the kind this pass set out to remove reopens the method.
+
+Goal alignment at handoff: the aim stated at entry was met as stated. The
+update was taken first, core's answers are recorded against their items,
+and every open order was judged from the repositories and the recorded
+directions, with what changed and what did not written down. The traps
+weighed before the material choices were seeking the wrong goal (more
+process in place of an app the operator uses: D2 puts a road order in every
+pair), fixes that fail (a standards pass per batch: D3), and shifting the
+burden (amendments left for a later pass: D11).
+
 ## Validation
 
 ### The three reviews
@@ -688,3 +733,50 @@ core (§Requests to core, item 8):
 | the plan came from an earlier model; momentum is no reason | the reading of where each choice came from (§How the open orders were read); D2 and D3 |
 | no change is a valid result | weighed and declined with its evidence (§NoOps, first row); WO-029 and WO-031 unchanged |
 
+### The refutation
+
+One fresh background `dotln-worker`, given the canonical prompt of
+`npm run plan -- refute` and the guide's goal rules and nothing else, judged
+the integrated subject at `9931600`. Receipt
+[`2026-11-10-planning-b11409ceeeacb21f-026`](../refutations/2026-11-10-planning-b11409ceeeacb21f-026.md):
+**aligned-with-findings**, no hold, scope pass, fifteen orders and the
+sequence judged and three unchanged verdicts carried, 0 h 13 min from
+dispatch to file. Its statement says the subject marks the vision, the
+roles document and the capability table unavailable, which this instance
+does not have, so the judgment rests on the goal rules and the purpose, and
+that every cost row of the horizon has no metrics, the orders not having
+run. It recorded twelve known issues, ten distinct. The receipt freezes the
+orders' text, so each stands here with its reopening observation until a
+later pass amends the order it names:
+
+| Order | Known issue | Reopens when |
+| --- | --- | --- |
+| WO-008 | every planning receipt has judged it and it has not run | a later pass's refutation judges it again unactivated with no new evidence |
+| WO-024, WO-030, WO-038 | their non-goals send the catalog's search controls to WO-018, which is now the toy shelf; no order carries them (`FUP-0fb531a975308a81`) | a role relies on WO-018 for them, or the next pass's sequence still names no order for them |
+| WO-040 | four builder functions read by every stream study are in scope while the forty study modules are a non-goal | the candidate's diff touches one of the forty modules or grows well past its file estimate |
+| WO-040 | the shape rule is restored by an audit after a batch lands and no lint keeps it; the new batches carry no audit criterion | the audit over a batch landed after it lists a function over the rule |
+| WO-045 (and WO-043) | each adds a schema version beside the old ones to admit one family or field, with none retired | a later order adds another version, or three are accepted with no retirement |
+| WO-035 | a reading that renders today becomes a failure page when a derived message is missing; no fallback to the row's text | a surface that rendered at the base shows the failure state at the candidate or after a later work lands |
+| WO-038 | ten orders may defer their rounds and this is the only pass filed to take them, with three streams already named | a deferral is recorded that no filed order carries, or a pass must rebuild a removed candidate |
+| WO-018 | the patience lane's link leads to a gated route the production build cannot open | the served production build lands on the unavailable or denied page from that link |
+| WO-043 | every data order adds client-bundled data while the app's own store and API stay a candidate | the pass that files the store finds the bundled loaders must be reshaped |
+| WO-030 | its walkthrough names 360, 768 and 1440 and not the operator's two sizes | a UI issue shows at either full size in its twenty studies |
+
+### The gates
+
+- On the update branch: `harness check`, `launchpad verify`, `npm test` and
+  `npm run test:docs`, the last on its second run (§Readings; D1).
+- On this branch: `npm run work-orders -- index --check` passes with no
+  criteria advisory; the changed documents pass Prettier. The first
+  `npm run test:docs` over the subject failed four lines of the verbatim
+  screen in two places, both false matches and both reworded: this
+  document's sentence naming the local file's path and digest beside the
+  capture's own marker, and a Cost-line phrase of WO-042 that an earlier
+  session's file under intake happens to hold.
+- `npm run test:docs` on the receipt's commit `5526cc7`: 15 passed, 0
+  failed, 0 h 14 min. The plan check printed four advisories, each an order
+  naming a file whose path carries a launchpad identifier (WO-030, WO-035
+  and WO-040 twice), the kind earlier passes carry.
+- The run on this section's own commit follows it and is reported in the
+  pull request's body and the handoff, since a section cannot record the
+  gate that judges it.
