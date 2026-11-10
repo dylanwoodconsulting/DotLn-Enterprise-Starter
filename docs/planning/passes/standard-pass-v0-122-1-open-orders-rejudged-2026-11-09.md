@@ -383,6 +383,11 @@ names the scaffold commit as its base and carries the staleness the
 research found (the list is in the reviews' and workers' records of this
 pass, not applied); the pass before it activates makes those amendments
 with the operator, as an amendment of their order and never a redesign.
+One of them is written here because it makes a criterion unmeetable as
+filed: criterion 2 holds seven gaps within one second of one-decimal
+minute figures, and at core `49d8c4c3` five of the seven differ from those
+figures by 1.5 to 2.8 seconds (both rounds' reviews reproduced it); the
+amendment derives the expectations from the record's own stamps.
 The index prints one criteria advisory for it, a size figure in its
 criterion 5, which stands with the text.
 
@@ -471,10 +476,10 @@ recorded).
 The operator: the machinery view is a view into what DotLn core currently
 has, so they can improve core and find gaps; it shows what exists, in what
 capacity, in what organization and with what relations, and nothing more.
-And, separately: a later order replays a recorded work order, showing the
-agents and how they interacted given their machinery at the time, and then
-how a change in that machinery would have changed the order or their
-decisions; that is planned work they have gone over many times.
+And, separately: a later order replays a recorded work order, showing its
+agents, how they worked with one another with the machinery each had then,
+and what a change to that machinery would have changed in the order or in
+their decisions; that is planned work they have gone over many times.
 
 The plan had one order for both under the first name. WO-016, filed on
 2026-10-24 as the machinery view, is the replay; no order showed what core
@@ -546,7 +551,8 @@ them, each read as matched, missed or extra by its place among the events
 and never by the clock. Variants stay code and are never deleted. The
 stage's events exist only in this launchpad's private journals, so a tool
 in the target exports one stage to a directory Git ignores, nothing private
-is committed, and everything committed uses a synthetic stage. The stream
+is committed, and everything committed uses a synthetic stage, the
+walkthrough's screenshots included (the second review's finding). The stream
 carries what the journal carries (steps, effects, results, denials, stops,
 the class of an operator message) and never text, which the order states as
 its limit. Its edge on WO-016 is gone, and WO-018 no longer marks the run's
@@ -985,7 +991,10 @@ burden (amendments left for a later pass: D11).
 
 ## Validation
 
-### The three reviews
+The pass was validated twice: before its first handoff, and again after
+the operator's corrections changed the subject.
+
+### The first round's three reviews
 
 The criteria adversary, the design improver and the consistency reviewer ran
 over the committed subject as Codex workers (`gpt-6.1-sol` at `max`, through
@@ -995,7 +1004,11 @@ ran as two batches of whole documents. The reports are in the ignored
 reviews lane, `docs/control/local/reviews/planning-2026-11-09-standard-pass-v0-122-1-open-orders-rejudged/`,
 as `round-1-design.md`, `round-1-consistency.md` and `round-1-criteria.md`.
 
-`self-review: found 26; fixed 25; recorded 1`
+`self-review: found 30; fixed 28; recorded 2`
+
+The first round found 26, fixed 25 and recorded 1; the second found 4,
+fixed 3 and recorded 1. Findings of the first round on WO-042, WO-038 and
+WO-016 concern texts the corrections removed or restored.
 
 | Review | Tree | Time | Findings | What changed |
 | --- | --- | --- | --- | --- |
@@ -1023,7 +1036,38 @@ core (§Requests to core, item 7):
 | the plan came from an earlier model; momentum is no reason | the reading of where each choice came from (§How the open orders were read); D2 and D3 |
 | no change is a valid result | weighed and declined with its evidence (§NoOps, first row); WO-029 and WO-031 unchanged |
 
-### The refutation
+### The second round's review
+
+After the corrections one combined review (criteria, design and
+consistency in one brief) ran over what had changed since the tree the
+first round's last review read, as two Codex workers (`gpt-6.1-sol` at
+`max`; `npm run worker -- review --kind combined --host codex --subject
+planning --round 2 --since 29af3bab`), on tree `4fbf4295`: 0 h 37 min, four
+findings, three blocking. The report is `round-2-combined.md` in the same
+lane. One combined round and not three reviews, because the session had six
+worker uses left of forty and each review of this subject takes two.
+
+| Finding | Order | What changed |
+| --- | --- | --- |
+| blocking | WO-017 | Its use criterion asked for screenshots of a stage exported from the private journals under the evidence directory, which the target publish commits. The walkthrough and its screenshots now use the synthetic stage; a real stage is read on the operator's machine and nothing of it is recorded |
+| blocking | WO-017 | The twin's place among the events was counted by timestamp, so a denial, the operator's intervention and the next step sharing one millisecond gave a false miss and a false extra. The place is now the count of events delivered when the variant emits, ties in journal order, with that case in criterion 3 |
+| blocking | WO-046 | The rule for a mechanism carried only as role text asked that no lower surface name it, and a registration file names every unit: `process-cost` would have read absent on a host whose skills carry it (checked by this pass against core's manifest at the pin). Text is now read from any rung-7 or rung-8 surface of the host, with two assertions in criterion 4 |
+| note | WO-016 | The restored text holds a criterion no candidate can meet; recorded for its amendment (D8) and not applied |
+
+The review was given no capture, for the reason the first round records
+(§Requests to core, item 7). The planner's own account of the operator's
+six messages, by journal row:
+
+| Message | Where the pass acted on it |
+| --- | --- |
+| 02:12Z, the answers to the five items | D13 (a delayed round), D15 (text), the WoW tooling app's line in the operator record; the twin and the machinery view as the later messages restated them |
+| 02:15Z, the demand about text | D15 and D7; the operator record's item |
+| 02:23Z, the twin, the view into core and what the size direction was for | D14 and WO-017; D12 and WO-046; D13, rule 29 and the removal of WO-038 |
+| 02:27Z, the replay is separate, planned work | D8 and D12; WO-016 byte for byte the text on `main` |
+| 02:30Z, act on the corrections (a question by the hook's class) | answered by acting on them; no rule recorded |
+| 02:37Z, the scene | D16; the sequence; WO-036's step 7 and criterion 3 |
+
+### The first refutation
 
 One fresh background `dotln-worker`, given the canonical prompt of
 `npm run plan -- refute` and the guide's goal rules and nothing else, judged
@@ -1051,6 +1095,10 @@ later pass amends the order it names:
 | WO-018 | the patience lane's link leads to a gated route the production build cannot open | the served production build lands on the unavailable or denied page from that link |
 | WO-043 | every data order adds client-bundled data while the app's own store and API stay a candidate | the pass that files the store finds the bundled loaders must be reshaped |
 | WO-030 | its walkthrough names 360, 768 and 1440 and not the operator's two sizes | a UI issue shows at either full size in its twenty studies |
+
+Receipt 026 judged the subject before the corrections. Its two issues on
+WO-038 fell with that order, and its issue on WO-018's link is answered:
+the toy is shown as designed, with no link (D14). The others stand.
 
 ### The gates
 

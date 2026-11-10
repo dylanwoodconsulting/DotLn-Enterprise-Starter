@@ -120,10 +120,13 @@ leaves no result or failure row; gate results sit apart without an order.
   numbered in order; gap `g` lies after agent event `g − 1` and before `g`.
   `stageStream(stage, scheduler)` emits each agent event at its `at` on an
   injected `VirtualTimeScheduler` from `rxjs`, flushed synchronously in specs
-  and on the page. An operator intervention's gap is the count of agent
-  events before it; a twin intervention's gap is the count of agent events
-  whose `at` is at or before its emission, so one emitted with an event falls
-  after it. In each gap the two sides pair in order: a paired operator
+  and on the page. Events that share an `at` are delivered in journal order, each
+  as its own scheduled action. An operator intervention's gap is the count
+  of agent events before it; a twin intervention's gap is the count of agent
+  events the stream has delivered when the variant emits it, so a variant
+  that answers an event at once falls directly after that event and before
+  the next, whatever their `at`, and a timer that runs out at an event's
+  `at` falls after that event. In each gap the two sides pair in order: a paired operator
   intervention is matched, an unpaired one missed, an unpaired twin one
   extra. The class is shown and does not decide a match. Shifting every `at`
   by one constant changes no result.
@@ -163,8 +166,7 @@ leaves no result or failure row; gate results sit apart without an order.
   read at 3840 by 1620; A then B with the round named; rounds until the
   operator ends them, each recorded, the rejected implementation removed
   with its record under `docs/evidence/WO-017/design/`. The operator may
-  delay the rounds: the first pair is
-  recorded without a pick and A ships.
+  delay the rounds: the first pair is recorded without a pick and A ships.
 - **Documents:** `docs/dev-reference/architecture/twin.md` (the stage, the
   journal fields, the exporter, the rule, the variants) and
   `docs/ai-reference/twin-rules.md` (a variant is never deleted; a manifest
@@ -213,7 +215,8 @@ menu item; the bundle case; two documents; `docs/evidence/WO-017/`.
 10. `check-bundle.mjs` and its case. Check: `npm run check:bundle`.
 11. The first pair and the rounds, or their delay. Check: `comparisons.md`.
 12. e2e `apps/dotln-e2e/src/twin.spec.ts`; the executor's walkthrough on the
-    synthetic stage and on an exported one at the five sizes. Check: `npx nx
+    synthetic stage at the five sizes; an exported stage is opened where one
+    exists and nothing of it is recorded. Check: `npx nx
     e2e dotln-e2e`; the files exist.
 13. Documents and pointers; dependency check as WO-015 step 15; gate plain
     and review. Check: passing rows, no tracked-byte mutation.
@@ -244,8 +247,10 @@ then the target gate plain and review once each.
    `dist/apps/dotln/browser`.
 3. `npx nx test twin-model` exits 0 with specs on the synthetic stage
    asserting every gap, match, miss and extra the Design's rule gives; a
-   twin intervention emitted with an agent event falling after it; equal
-   results with every `at` shifted by one constant; a result of gaps,
+   twin intervention emitted with an agent event falling after it; a stage
+   whose denial, operator intervention and next step share one `at`, on
+   which the denial variant's intervention falls in the operator's gap and
+   is matched; equal results with every `at` shifted by one constant; a result of gaps,
    classes and verdicts with no time field; each variant's interventions at
    its defaults; a flip moving the twin's interventions and not the
    operator's; a stream carrying no intervention row; and the registry spec,
@@ -283,20 +288,22 @@ then the target gate plain and review once each.
    lanes, B one), each rendered at about 2080 by 1460 and 360, then either
    every round with its pick, the operator's word that ended them and the
    rejected candidate's files, which `ls` does not find; or the operator's
-   delay of the rounds with its capture
-   digest, the pair unpicked and A shipped. With neither by handoff, the
+   delay of the rounds with its capture digest, the pair unpicked and A
+   shipped. With neither by handoff, the
    executor records the open round and does not hand off.
 10. **Use (WS-001 rules 24 and 29).** The verifier performs the Objective's
-    session in the served `mocked` build on a stage the operator exported on
-    their machine: sign in, open Twin, pick the stage, read its events and
+    session in the served `mocked` build on the synthetic stage: sign in, open Twin, pick the stage, read its events and
     marks, pick each variant, flip a parameter, export the flip, reload, sign
     in and return. The VER report's `## Walkthrough` carries the dated steps
     and a screenshot per step at 360, 768, 1440, about 2080 by 1460 and 3840
     by 1620 under `docs/evidence/WO-017/walkthrough/`, and says in the
     verifier's words which interventions a variant matched and missed and
     what the flip changed. A UI issue at either full size fails it; one at
-    another size is a boarded follow-up. With no exported stage on the
-    machine the verifier records that and the criterion is not met.
+    another size is a boarded follow-up. No screenshot, row or figure of a
+    stage exported from the journals enters the evidence, the report or a
+    commit: where the operator has exported one on the machine, the verifier
+    also performs the session on it, and the report says only that it did
+    and whether the page read the stage.
 11. `node scripts/target-gate.mjs WO-017 --review` records a passing row for
     every declared command with no tracked-byte mutation, and
     `npm run test:docs` passes in the launchpad order worktree; the Preflight line ran before the first full gate.
@@ -314,7 +321,9 @@ lane (candidate C6). The stage continues as the operator steered it, so a
 twin's extra intervention changes nothing after it. A phase spread across
 sessions exports as several stages, and one session that ran a phase twice
 as one; a closed order's journals last as long as its retained lane. The operator runs the export; no session reads
-`docs/control/local/` (CLAUDE.md §Secrets). Production has no identity
+`docs/control/local/` (CLAUDE.md §Secrets). A real stage is read on the
+operator's machine alone: the evidence, the screenshots and the reports
+show the synthetic stage. Production has no identity
 provider (WO-008), so the walkthrough runs on the `mocked` build. Receipts
 008 to 012 judged the patience lane; their items on the gated route, the
 signed-in e2e, the `mocked` build and an unparseable stored value carry

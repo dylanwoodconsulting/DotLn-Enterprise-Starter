@@ -303,6 +303,13 @@
       "reason": "missing file",
       "count": 1,
       "note": "WO-023's decisions.md moved into DotLn-Angular's docs/dotln/evidence/WO-023/ by target-records (TargetRecordsCommitted at records commit a98d59c7c641a6bb50de2165b1694a4a954f9835, 2026-11-08); WO-033's reviewed pull-request body keeps its original link to WO-023-D005; declared by WO-023's final review."
+    },
+    {
+      "file": "docs/planning/passes/standard-pass-v0-117-0-scene-reminders-2026-11-05.md",
+      "href": "../../work-orders/WO-038-reading-at-full-size.md",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-038 was filed by the 2026-11-05 planning pass and removed, never activated, by the 2026-11-09 planning pass on the operator's correction (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md D13); the 2026-11-05 planning document keeps its link to the order as it was filed, whose text is in history at 0461bed."
     }
   ],
   "homePaths": {

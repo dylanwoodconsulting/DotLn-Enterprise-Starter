@@ -117,8 +117,11 @@ only `layer:shared-data-access`, events, models, core and util.
   is `enforced` or `advised` when a hook in that host's `files` names it in
   `policy.mechanisms` below rung 7 with `hard` or `advisory`, or is the
   commit-message hook or a `permission`-kind hook naming it in its origin, on
-  an event the profile reports available; `text` when only rung-7 or rung-8
-  surfaces name it; else `absent`; the host's residue item beside it. Role
+  an event the profile reports available; otherwise `text` when a rung-7 or
+  rung-8 surface among that host's `files` names it, whatever lower-rung
+  surface also lists it in its origin (a registration file lists every unit
+  and implements none, and a hook may carry a unit it does not enforce);
+  else `absent`; the host's residue item beside it. Role
   ids are roles, served by the hooks whose origins name them. *Relations*:
   role to mechanisms, mechanism to roles and surfaces, surface to what it
   implements (origin less role ids) and the roles it serves, mechanisms
@@ -142,8 +145,8 @@ only `layer:shared-data-access`, events, models, core and util.
   and 360, read at 3840 by 1620; A then B with the round named; the
   operator's preference makes the next pair until they end it; rounds and
   the rejected implementation's record under `docs/evidence/WO-046/design/`.
-  If the operator delays the rounds, the pair is
-  recorded unpicked and A ships.
+  If the operator delays the rounds, the pair is recorded unpicked and A
+  ships.
 - **Documents:** `docs/dev-reference/architecture/machinery.md` and
   `docs/ai-reference/machinery-rules.md`, linked from both READMEs; the
   WO-026-D012 places: `README.md`'s menu table, the developer README's first
@@ -239,7 +242,10 @@ target gate plain and review once each.
    snapshot: `concurrent-work-requires-worktrees` enforced on Claude and
    Copilot by its `PreToolUse` hook and text-only on Codex with core's
    residue reason; `verify-app-before-done` advised at `Stop`;
-   `process-cost` enforced on no host; every residue item among the gaps;
+   `process-cost` `text` on every host and enforced on none, its rung-2
+   registration notwithstanding; `anti-oscillation`, which `finish.mjs` also
+   names, read by that hook's `policy.mechanisms` entry and `absent` on no
+   host whose skills carry it; every residue item among the gaps;
    `finish.mjs` related to each unit its configuration names; a role's
    mechanisms equal to its stamp's ids; a stored selection that does not
    parse opening the first level.

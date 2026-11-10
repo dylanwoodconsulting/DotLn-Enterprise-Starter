@@ -652,10 +652,10 @@ core's record of the same decisions is
   exists, in what capacity, in what organization and with what relations,
   so that the operator can improve core and find gaps, no more and no less
   (the operator's restatement of 2026-11-09, journal row 2026-11-10T02:23:06Z, digest `db38861f…`; WO-046).
-- A separate, later order replays a recorded work order: it shows the
-  agents and how they interacted given their machinery at the time, and
-  then how a change in that machinery would have changed the order or
-  their decisions (the operator's restatement of 2026-11-09, journal row 2026-11-10T02:27:22Z, digest `b5aa37ca…`; WO-016). Its purpose: tune the
+- A separate, later order replays a recorded work order: it shows its
+  agents, how they worked with one another with the machinery each had
+  then, and what a change to that machinery would have changed in the
+  order or in their decisions (the operator's restatement of 2026-11-09, journal row 2026-11-10T02:27:22Z, digest `b5aa37ca…`; WO-016). Its purpose: tune the
   mechanisms until they run without the operator, then see agents working
   in concert.
 - Workers are metaphors; today they are separate agents in their role slots.
