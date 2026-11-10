@@ -387,7 +387,11 @@ One of them is written here because it makes a criterion unmeetable as
 filed: criterion 2 holds seven gaps within one second of one-decimal
 minute figures, and at core `49d8c4c3` five of the seven differ from those
 figures by 1.5 to 2.8 seconds (both rounds' reviews reproduced it); the
-amendment derives the expectations from the record's own stamps.
+amendment derives the expectations from the record's own stamps. A second
+is the second refuter's: WO-016's text adds a library and removes a page
+that WO-046, ahead of it, will already have added and removed, and both
+name `/machinery`; the amendment says where the replay sits beside the
+view (§Validation, the second refutation).
 The index prints one criteria advisory for it, a size figure in its
 criterion 5, which stands with the text.
 
@@ -953,17 +957,31 @@ effective model and effort unknown), and the three reviews Codex
 
 | Measure | Value | Source |
 | --- | --- | --- |
-| Wall clock, dispatch to this section | 3 h 5 min (22:16Z to 01:21Z) | the prompt hook's stamp; `date -u` |
+| Wall clock, dispatch to the first close | 3 h 5 min (22:16Z to 01:21Z); the first handoff at 01:36Z | the prompt hook's stamp; `date -u` |
+| Wall clock, the corrections | 1 h 45 min from the operator's first answer to this section (02:12Z to 03:57Z) | the session journal's rows; `date -u` |
 | The update | 0 h 11 min from the dispatch to the finish on `main`, 0 h 5 min of it the pull request waiting for the operator's merge | the gate logs; `gh pr view 73` |
 | The research | four workers, 0 h 11 min wall clock, 1,079,405 tokens | the host's task notifications |
 | The drafting | eight workers and one re-task, 0 h 31 min wall clock, 3,126,755 tokens | the host's task notifications |
-| The reviews | 1 h 10 min wall clock from the first launch to the last report; design 0 h 19 min and 9,066,765 tokens, consistency 0 h 27 min and 17,732,483, the admitted criteria run 0 h 24 min and 12,447,300; the two refused criteria runs 0 h 43 min, tokens unknown, no report written | the reports' headers; the helper's lines |
-| The refutation | 0 h 13 min dispatch to file, 207,909 tokens | the receipt; the host's task notification |
-| The document gate | 0 h 14 min for the run on the receipt's commit, 0 h 13 min of it the document check; 0 h 8 min for the check on the first subject | the gate logs |
-| This session's tokens | 109,559,364 at 01:20Z (498 input, 108,574,472 cached input, 690,390 cache-write, 294,004 output); cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
-| Workers | 26 launches and 3 re-tasks of a cap of 40 (Claude 13, Codex 7, unattributed 6) | the same readback |
+| The first round's reviews | 1 h 10 min wall clock from the first launch to the last report; design 0 h 19 min and 9,066,765 tokens, consistency 0 h 27 min and 17,732,483, the admitted criteria run 0 h 24 min and 12,447,300; the two refused criteria runs 0 h 43 min, tokens unknown, no report written | the reports' headers; the helper's lines |
+| The first refutation | 0 h 13 min dispatch to file, 207,909 tokens | the receipt; the host's task notification |
+| The corrections' drafting | two drafting workers and their re-tasks between 02:15Z and 02:45Z; tokens unknown (the notifications' figures were not kept across the session's context compaction) | the session journal's hand-back rows |
+| The second round's review | 0 h 37 min, 15,678,478 tokens, two batches | the report's header |
+| The second refutation | 0 h 12 min, 182,960 tokens | the host's task notification |
+| The document gate | 0 h 14 min for the run on the first receipt's commit, 0 h 13 min of it the document check; 0 h 8 min for the check on the first subject; 0 h 11 min for the check alone on the corrected subject, which found three failures | the gate logs; the bounded probe's result line |
+| This session's tokens | 199,503,498 at 03:54Z (838 input, 197,770,293 cached input, 1,190,507 cache-write, 541,860 output), of which 109,559,364 by 01:20Z; cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
+| Workers | 28 launches and 8 re-tasks of a cap of 40 (Claude 14, Codex 8, unattributed 6); 26 and 3 at the first close | the same readback |
 
-Three costs were avoidable. The two refused criteria runs spent 0 h 43 min
+The largest avoidable cost is the pass's own. The first handoff carried
+three orders built on misreadings: the twin as the waits between stages,
+the machinery view as the replay of an order, and a size order turned into
+an A/B pass. Correcting them took six of the operator's messages, 1 h 45
+min and about 90 million of this session's tokens. The misread sentences
+were in the records the pass read, two of them since 2026-10-24, and the
+pass tightened orders against those sentences without first stating, in
+the operator's terms, what each order is for; when it did put questions,
+none was one the operator owed an answer to.
+
+Three smaller costs were avoidable. The two refused criteria runs spent 0 h 43 min
 and three launches for nothing kept (§Requests to core, item 7). The eight
 drafting workers re-read what the four research workers had read, because
 the role text admits a re-task only as a recheck (item 5). And the document
@@ -973,21 +991,26 @@ are longer than the ones they replace (WO-008 from 31,511 to 54,533 bytes), whic
 
 Compared with the alternative the operator named, a pass that changed
 nothing: it would have skipped the research, the drafting and most of the
-reviews, which is most of these three hours, and it would have left the
-first road order unable to run as written and the sequence opening with
-side work. Whether the three hours bought what D2 to D11 claim
-is observable only when the orders run: WO-008's and WO-024's first
-verifications are the first evidence, and a first verification that fails on
-a defect of the kind this pass set out to remove reopens the method.
+reviews, and asked nothing of the operator, and it would have left the
+twin's order modelling waits, no order for the view into core, the scene
+behind a batch and a migration, and several orders unable to run as
+written. Whether the work bought what D2 to D16 claim is observable only
+when the orders run: WO-036's and WO-024's first verifications are the
+first evidence, and a first verification that fails on a defect of the kind
+this pass set out to remove reopens the method.
 
-Goal alignment at handoff: the aim stated at entry was met as stated. The
-update was taken first, core's answers are recorded against their items,
-and every open order was judged from the repositories and the recorded
-directions, with what changed and what did not written down. The traps
-weighed before the material choices were seeking the wrong goal (more
-process in place of an app the operator uses: D2 puts a road order in every
-pair), fixes that fail (a standards pass per batch: D3), and shifting the
-burden (amendments left for a later pass: D11).
+Goal alignment at handoff: the aim stated at entry was met only after the
+operator's corrections. The update was taken first and core's answers are
+recorded against their items. Every open order was judged from the
+repositories and the recorded directions, and that is where the first
+handoff failed: three recorded directions were themselves misreadings, and
+the pass carried the momentum the dispatch had asked it to catch. The
+traps weighed before the material choices were seeking the wrong goal
+(more process in place of an app the operator uses: D2 puts a road order in
+every pair, and D16 the scene first), fixes that fail (a standards pass per
+batch: D3), and shifting the burden (amendments left for a later pass:
+D11); shifting the burden to the operator is the one the first handoff
+fell into.
 
 ## Validation
 
@@ -1100,6 +1123,32 @@ Receipt 026 judged the subject before the corrections. Its two issues on
 WO-038 fell with that order, and its issue on WO-018's link is answered:
 the toy is shown as designed, with no link (D14). The others stand.
 
+### The second refutation
+
+One fresh background `dotln-worker`, given the canonical prompt of
+`npm run plan -- refute` at `1596ba1` and the shared goal card and nothing
+else, judged the corrected subject. Receipt
+[`2026-11-10-planning-45eed5a22f3e4388-027`](../refutations/2026-11-10-planning-45eed5a22f3e4388-027.md):
+**aligned-with-findings**, no hold, scope pass, twelve orders and the
+sequence judged and the unchanged verdicts carried, 0 h 12 min. Its
+statement repeats the first's limits: the vision, the roles document and
+the capability table are unavailable in this instance, and no cost row has
+metrics. It recorded ten known issues, nine distinct. The receipt freezes
+the orders' text, so each stands here with its reopening observation until
+a later pass amends the order it names:
+
+| Order | Known issue | Reopens when |
+| --- | --- | --- |
+| WO-046 and WO-016 | both add `libs/features/machinery-data-access`, remove the arriving page and put their page at `/machinery`; WO-016 is left as filed (D8), so its text does not yet say how the replay sits beside the view | WO-046 merges and WO-016 is activated or judged with its Cost line and its `/machinery` criteria unchanged; the amendment before it activates is where this is settled |
+| WO-043 | its schema's optional `maxim` field is open to the six batches drawn from other sources, some in copyright, and no check refuses verbatim text there; flagged under the Clean Room floor for the operator's judgment, not decided | a row from a source in copyright carries a maxim or a passage of the source, or the pass before WO-043 activates has not closed the field to those batches |
+| WO-043 | after it the shelf holds twenty-five designed toys and one built, and no order builds a toy | the pass after WO-043 merges files no order that builds a designed toy |
+| WO-017 | only the production build is shown to leave out exported stages; the mocked build serves them on the operator's machine by design | a non-production build's output that holds a stage file is published or shared |
+| WO-035 | a missing derived message replaces a reading with a failure page, with no fall back to the row's own text (carried from receipt 026) | a reading that rendered at the base shows the failure in the served production build |
+| WO-035 | the registration's time and memory are recorded and compared with nothing | the recorded figures make a first render measurably slower or memory grow with each work opened |
+| WO-036 | the five cost tools can pass criterion 5 while changing nothing visible, on a field with no cost layer | a spec or the walkthrough shows a cost step leaving the route, its length and the replans unchanged |
+| WO-024 | no verifier read of the research for quality, where WO-043 and WO-045 carry one | a later read finds a WO-024 study wrong or unsupported in content |
+| WO-008 | the static storage check reads the files `git status` lists and passes on an empty list if the candidate is committed first | a verification records an empty list while the order's diff changes files there |
+
 ### The gates
 
 - On the update branch: `harness check`, `launchpad verify`, `npm test` and
@@ -1115,6 +1164,17 @@ the toy is shown as designed, with no link (D14). The others stand.
   failed, 0 h 14 min. The plan check printed four advisories, each an order
   naming a file whose path carries a launchpad identifier (WO-030, WO-035
   and WO-040 twice), the kind earlier passes carry.
-- The run on this section's own commit follows it and is reported in the
-  pull request's body and the handoff, since a section cannot record the
-  gate that judges it.
+- On the corrected subject, the document check run alone before the second
+  review's fixes failed three lines: two sentences of this pass that shared
+  a twelve-word run with the second capture, in D12 and in WS-001, both
+  reworded; and the 2026-11-05 pass's link to WO-038's file, which is
+  declared a historical link in `docs/control/doc-baseline.json` with its
+  reason, as an earlier renamed order's is. `npm run work-orders -- index
+  --check` passes with one criteria advisory, a size figure in WO-016's
+  criterion 5, which stands with that order's text (D8).
+- The plan check on the second receipt's commit `15b76a9` passed with the
+  seventeen recorded rules read against the session journal and the same
+  four path advisories.
+- The `npm run test:docs` run on this section's own commit follows it and
+  is reported in the pull request's body and the handoff, since a section
+  cannot record the gate that judges it.
