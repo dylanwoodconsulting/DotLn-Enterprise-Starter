@@ -1156,8 +1156,11 @@ bodies, register batches; 84 entries) were moved out of `docs/intake/`
 into the ignored local lane, `docs/control/local/intake-session-2026-11-10/`,
 where the screen does not read them; the operator's own captures stay
 under `docs/intake/notes/`. The branch's matched runs fell from 9,606 to
-17. The 2026-11-01 pass's record and receipt 023 name two of the moved
-directories by their old paths. One cost is carried forward and not measured: the amended orders
+17 and the gate from 0 h 13 min to 0 h 1 min. Committed records name many
+of the moved files by their old paths, so each of the 84 has a link at its
+old path; the screen reads regular files and directories and does not
+follow a link, and every such path a committed document names resolves as
+it did before the move. One cost is carried forward and not measured: the amended orders
 are longer than the ones they replace (WO-008 from 31,511 to 54,533 bytes), which an executor pays in context at activation.
 
 Compared with the alternative the operator named, a pass that changed
