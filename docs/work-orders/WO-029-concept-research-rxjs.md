@@ -43,7 +43,7 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-021 merged (hard: the `marbles` family, the marble
 contract and spec helper, the executable rule and the RxJS study directory
 this batch reuses; WO-020's record, check, composite, route and fan-out
@@ -62,7 +62,7 @@ procedure come with it). The base above is WO-039's merge (#18), released as `Do
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26); `docs/repositories/dotln-angular.md` (§Run content
+7, 8, 15, 17, 23, 24, 26, 27, 29); `docs/repositories/dotln-angular.md` (§Run content
 workers, §Catalog and concept studies); `docs/product/concept-study.md`;
 `docs/control/budgets.json` (`subagentCap`); the target's `catalog.md`
 §Studies and `catalog-rules.md` as the target's `main` leaves them at
@@ -215,8 +215,7 @@ its screenshots.
 5. e2e `apps/dotln-e2e/src/catalog.spec.ts`: RxJS shows forty studied on the
    shelf and in the contents; debounceTime's study steps its marbles under
    reduced motion with each emission named; throttleTime opens from the
-   contents; the auditTime link opens its reading; axe; no overflow at 360,
-   768 and 1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   contents; the auditTime link opens its reading; axe; no overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-029/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-029/`. Check:
@@ -248,12 +247,11 @@ each.
    the studied count; open debounceTime and step its marbles, expand the
    pseudocode, the executable pipeline and the limits; open throttleTime;
    open withLatestFrom and zip; open fromEvent. The VER report carries a
-   `## Walkthrough` section with the dated steps and the screenshots at 360,
-   768 and 1440 under `docs/evidence/WO-029/walkthrough/`
+   `## Walkthrough` section with the dated steps and the screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under `docs/evidence/WO-029/walkthrough/`
    (`ls docs/evidence/WO-029/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words which value a debounce keeps and which
    a throttle keeps, what withLatestFrom samples, and when zip stalls, as
-   read from the studies alone. Met only when every step completed and that
+   read from the studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that
    statement is present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/rxjs/`
    with exactly the forty ids of WO-021's twenty and this order's twenty (or
@@ -279,7 +277,7 @@ each.
    there with the critic's confirmation of the search. Worker accounting
    remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -334,7 +332,7 @@ each.
 
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 the five set-aside rows and the RxJS patterns; refactoring the app's own
-pipelines toward an operator; the catalog's search controls (WO-018).
+pipelines toward an operator; the catalog's search controls (carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule, the five rows it sets aside and the twenty it names, with the Design's

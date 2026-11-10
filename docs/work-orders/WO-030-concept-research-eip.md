@@ -45,7 +45,11 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by
+the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+D5): the authors' brief, the reading critic and criterion 4 carry the
+wording rule for a flow node's state message, and the known issue names
+what WO-040 now changes in this work. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-022 merged (hard: the `flow` family and its two builders,
 the analogy rule and the messaging study directory this batch reuses; the
 `marbles` family and WO-020's record, check, composite, route and fan-out
@@ -64,7 +68,7 @@ procedure come with it). The base above is WO-039's merge (#18), released as `Do
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26; §The app and its sub-apps);
+7, 8, 15, 17, 23, 24, 26, 27, 29; §The app and its sub-apps);
 `docs/repositories/dotln-angular.md` (§Run content workers, §Catalog and
 concept studies); `docs/product/concept-study.md`; `docs/control/budgets.json`
 (`subagentCap`); the target's `catalog.md` §Studies, `catalog-rules.md` (the
@@ -156,7 +160,9 @@ fan-out procedure exist and are idle between batches.
 - **The fan-out as the track's workers** (WS-002 rule 3). Ten authors with
   two rows each, one factual critic who opens every reference, runs each
   module's spec and checks that every analogy to the platform is marked as
-  one, one reading critic who reads as the operator would: twelve launches
+  one, one reading critic who reads as the operator would and judges each
+  flow state message by the wording rule the authors' brief carries (step
+  2): twelve launches
   against `subagentCap` 20, under the
   [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
   declared before any worker starts; under Codex each is a `spawn_agent`
@@ -207,7 +213,13 @@ link check), `walkthrough.md` and its screenshots.
    Check: the decisions carry them.
 2. The authors' brief into `fan-out.md` from WO-022's brief, with the
    work's index, the twenty rows with their hooks, the two flow builders,
-   the analogy rule, the authoring date and the launch form of this host;
+   the analogy rule, the wording rule for a flow node's state message (it
+   composes with its node name as an English sentence, "Work queue holds 1
+   record", and never as a second label, "Work queue: Records: 1": the
+   defect WO-034-D015 in the target's
+   `docs/dotln/evidence/WO-034/decisions.md` records in nineteen messages
+   of WO-022's batch, which WO-040 rewords), the authoring date and the
+   launch form of this host;
    dispatch the ten authors; merge the twenty drafts into the work's record
    chunk and register each model in `study-models.ts`. Check: `npx nx test
    tools` exits 0 over the executable modules' specs and the flow specs.
@@ -220,8 +232,7 @@ link check), `walkthrough.md` and its screenshots.
    shows forty studied on the shelf and in the contents; Message Filter's
    study steps its flow under reduced motion with the text equivalent naming
    the dropped message; Scatter-Gather opens from the contents; the
-   Selective Consumer link opens its reading; axe; no overflow at 360, 768
-   and 1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   Selective Consumer link opens its reading; axe; no overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-030/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-030/`. Check:
@@ -256,12 +267,12 @@ each.
    limits; open Scatter-Gather; open Point-to-Point Channel and
    Publish-Subscribe Channel; open Idempotent Receiver. The VER report
    carries a `## Walkthrough` section with the dated steps and the
-   screenshots at 360, 768 and 1440 under `docs/evidence/WO-030/walkthrough/`
+   screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under `docs/evidence/WO-030/walkthrough/`
    (`ls docs/evidence/WO-030/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what a filter cannot tell a sender,
    how scatter-gather completes, how the two channel patterns deliver
    differently, and what an idempotent receiver remembers, as read from the
-   studies alone. Met only when every step completed and that statement is
+   studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that statement is
    present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/eip/`
    with exactly the forty ids of WO-022's twenty and this order's twenty (or
@@ -285,10 +296,15 @@ each.
    every reference and implementation URL has its observed link-check
    status, no candidate record cites a URL recorded unreachable or a
    reference the factual critic marked unsupported, and the review record
-   lists each study's platform analogy as checked. Worker accounting remains
-   the profile's process duty.
+   lists each study's platform analogy as checked and each state message
+   the twenty studies' flows give a node (their `states` keys in
+   `apps/dotln/public/i18n/studyEip/en.json`) with the reading critic's
+   judgment that it composes with its node name as an English sentence and
+   never as a second label, a message judged a label having been reworded
+   before the record was set `checked`. Worker accounting remains the
+   profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -337,7 +353,7 @@ each.
   `apps/dotln/public/i18n/studyEip/en.json`, each model is a language-free
   simulation, a presentation taking a `StudyTranslate` and an entry of a few
   lines, with nested keys, named placeholders and no function split to fit
-  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those rules; a changed record shape is a new schema version, never an edit. The base is the Repository line's pin, WO-039's merge, set by the second 2026-11-08 pass (the first 2026-11-08 pass had set WO-023's merge); WO-034's tightened corpus test, its rewording of this work's count-led stream messages and WO-039's one model-study loader are in the base, and WO-040, the standards pass that reads this work's modules, may land before or after this batch, which integrates the target's `main` in either case. `Target release classification: minor` and
+  the 80-line ceiling (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those rules; a changed record shape is a new schema version, never an edit. The base is the Repository line's pin, WO-039's merge, set by the second 2026-11-08 pass (the first 2026-11-08 pass had set WO-023's merge); WO-034's tightened corpus test, its rewording of this work's count-led stream messages and WO-039's one model-study loader are in the base, and WO-040, the standards pass that gives `flow.ts`'s `frameOf` a frame description and rewords nineteen of this work's flow state messages, may land before or after this batch, which integrates the target's `main` in either case. `Target release classification: minor` and
   `Target release notes: reviewed` are set under WO-012's declared policy.
 - A study's "see it in the machinery view" link remains the candidate after
   WO-016 merges (`FUP-4fde2cb5fc229dc2`), not this order's. The remaining
@@ -346,7 +362,7 @@ each.
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 the two integration styles; the machinery view or any runtime channel in the
 app; typing further EIP rows for the `channels` scene; the catalog's search
-controls (WO-018).
+controls (carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule, the two rows it sets aside and the twenty it names, with the Design's

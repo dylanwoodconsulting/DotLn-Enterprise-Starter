@@ -4,6 +4,22 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-09 — planning pass: starter v0.122.1 taken on the operator's word, core's answers of 2026-11-08 read against the records, every open order re-judged and the result corrected by the operator, the scene leading the sequence, thirteen orders amended, four filed and one removed (operator dispatch of 2026-11-09)
+
+Dispatch: a `planning:` request for a standard pass with the latest
+upstream, core's pasted answers and a review of every existing order,
+captured in ignored intake (`docs/intake/notes/planning-2026-11-09.md`,
+SHA-256 `646233c3dce8d049caefa3c0590b88beaf9f0a187dc7bfdce4c298d095179bfa`,
+the operator's words; core's block is kept in the ignored local lane), with
+the operator's corrections after its two handoffs in a second capture
+(`docs/intake/notes/planning-2026-11-09-answers.md`, SHA-256
+`bb9e6bee3a7f80ceedbea4b67e98388b364224420af5f66801be786abbf85f12`). The
+record is
+[the planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md);
+this heading registers the pass for the plan tooling. The pass filed four
+orders, amended thirteen and removed one; no idea enters the ledger, because the pass was
+not an ideation dispatch.
+
 ## 2026-11-08 — planning pass: starter v0.122.0 taken on the operator's word, WO-039 retired as closed, the five orders that can activate next re-based on its merge and the record-links row settled on the GitHub check (operator dispatch of 2026-11-08, the second that day)
 
 Dispatch: a `planning:` request for a standard pass with the latest

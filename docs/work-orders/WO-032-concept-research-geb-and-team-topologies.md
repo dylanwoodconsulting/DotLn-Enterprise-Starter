@@ -9,7 +9,7 @@ admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ 55b59c9133056c1d6471274a9676a7d5649196ac
+**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds ten records under `libs/shared/catalog/src/studies/geb/` and
@@ -44,14 +44,27 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority.
-**Depends on:** WO-024 merged (hard: the `relations` family, the
-absent-material rule, the two study and model directories and the settled
-look this batch reuses; WO-022's analogy rule and WO-020's record, check,
-composite, route and fan-out procedure come with it). The base above is
-provisional at WO-022's merge; the pass after WO-024 merges may set it to
-WO-024's merge, and step 1 integrates the target's current `main` in any
-case.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by
+the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
+D5): the base set to WO-039's merge, and the dependency and the known
+issues say that this batch, which lands as data through `relationsModel`,
+owes no standards pass over WO-024's batch before it runs (D3), and the
+record-shape issue drops the per-study presentation. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
+**Depends on:** WO-024 merged (hard: the `relations` family and its
+`relationsModel` builder, which WO-024 builds builder-first so that each
+study is data the builder draws and no study has a presentation module of
+its own (the 2026-11-09 pass, D5), the absent-material rule, the two study
+and model directories, the two message scopes and the settled look this
+batch reuses; WO-022's analogy rule and WO-020's record, check, composite,
+route and fan-out procedure come with it). No standards pass stands between
+WO-024's merge and this batch: under the rule on standards passes as the
+2026-11-09 pass restated it (D3; WS-001 rule 31 with WS-002 rule 6's gate on
+a work's next batch), a batch that lands as data through a family builder
+owes no standards pass of its own, and this batch's twenty studies are data
+passed to `relationsModel`. The base above is WO-039's merge (#18, released
+as `DotLn Angular v0.11.1`), set by the 2026-11-09 pass; the pass after
+WO-024 merges may set it to WO-024's merge, and step 1 integrates the
+target's current `main` in any case.
 **Workstream:** WS-002
 
 <!-- dotln-dependencies:start -->
@@ -59,14 +72,14 @@ case.
   {
     "workOrderId": "WO-024",
     "relation": "hard",
-    "reason": "the relations family, the absent-material rule, the two study and model directories and the settled look this batch reuses, with the analogy rule and WO-020's record, check, composite, route and fan-out procedure"
+    "reason": "the relations family and its relationsModel builder, the absent-material rule, the two study and model directories, the two message scopes and the settled look this batch reuses, with the analogy rule and WO-020's record, check, composite, route and fan-out procedure"
   }
 ]
 <!-- dotln-dependencies:end -->
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26; §Design: the Tipping Point taxonomy);
+7, 8, 15, 17, 23, 24, 26, 27, 29; §Design: the Tipping Point taxonomy);
 `docs/repositories/dotln-angular.md` (§Run content workers, §Catalog and
 concept studies); `docs/product/concept-study.md`; `docs/control/budgets.json`
 (`subagentCap`); the target's `catalog.md` §Studies and `catalog-rules.md`
@@ -220,8 +233,7 @@ with `fan-out.md`, `review.md`, `README.md` (the link check),
    Recursion's study steps its levels under reduced motion with the text
    equivalent naming the level; BlooP opens from the contents and the FlooP
    link opens its reading; Exactly one owning team per part of the system
-   opens from the Team Topologies contents; axe; no overflow at 360, 768 and
-   1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   opens from the Team Topologies contents; axe; no overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-032/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-032/`. Check:
@@ -258,12 +270,11 @@ each.
    owning team per part of the system, Three core team interaction modes
    and Communication paths restrict the solution search space. The VER
    report carries a `## Walkthrough` section with the dated steps and the
-   screenshots at 360, 768 and 1440 under `docs/evidence/WO-032/walkthrough/`
+   screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under `docs/evidence/WO-032/walkthrough/`
    (`ls docs/evidence/WO-032/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what ends a recursion, why BlooP
    always finishes and FlooP may not, and what Conway's law implies for the
-   paths between teams, as read from the studies alone. Met only when every
-   step completed and that statement is present.
+   paths between teams, as read from the studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that statement is present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/geb/`
    and `libs/shared/catalog/src/studies/tt/` with exactly the twenty ids per
    work of WO-024's ten (or its recorded substitution) and this order's ten
@@ -291,7 +302,7 @@ each.
    characterizes the operator or quotes either book. Worker accounting
    remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -314,12 +325,23 @@ each.
 
 **Known issues and carry-ins:**
 
-- **Waits for WO-024.** This order activates only after WO-024 has merged
-  into the target's `main` (step 1 refuses otherwise); the pass after that
-  merge may set the base to WO-024's merge and adjust the lists if WO-024's
-  further substitutions took one of these twenty (then the first of the
-  Design's next rows for that work takes its place, recorded in the
-  decisions).
+- **Waits for WO-024, and for no standards pass.** This order activates
+  only after WO-024 has merged into the target's `main` (step 1 refuses
+  otherwise); the pass after that merge may set the base to WO-024's merge
+  and adjust the lists if WO-024's further substitutions took one of these
+  twenty (then the first of the Design's next rows for that work takes its
+  place, recorded in the decisions). WO-024 builds the `relations` family
+  builder-first (the 2026-11-09 pass, D5): each study is data passed to
+  `relationsModel`, which owns the presentation, as `marbleModel` and
+  `flowModel` do for the stream works, whose batches have needed no
+  standards pass over their study modules. Under the rule on standards
+  passes as that pass restated it (D3), a batch that lands as data through a
+  family builder owes no pass of its own, so no standards pass over
+  WO-024's batch gates this one. A pass is filed where
+  hand-written code has measured residue: should the pass after WO-024
+  merges measure residue in that order's hand-written code (`relationsModel`
+  or the four executable models' simulations), it files that standards pass
+  and says whether this order waits for it.
 - **The operator's touchpoints** (WS-002 rule 4): `drive: WO-032 --host
   codex` from the launchpad's main checkout; the merge of the target's pull
   request and of the launchpad's records pull request when the drive stops
@@ -344,8 +366,10 @@ each.
 - The record's shape is `concept-study-v1` (WS-002 rule 7): every authored
   on-screen field is a message key in the works' catalogs
   `apps/dotln/public/i18n/studyGeb/en.json` and `studyTt/en.json`, which
-  WO-024 creates, each model is a language-free simulation, a presentation
-  taking a `StudyTranslate` and an entry of a few lines, with nested keys,
+  WO-024 creates, each study is data passed to `relationsModel`, with no
+  presentation module of its own, and a study with a mechanism to run
+  composes a language-free simulation with that builder in an entry of a
+  few lines, with nested keys,
   named placeholders and no function split to fit the 80-line ceiling
   (WS-001 rules 9, 30 and 31; the shape WO-034's reshaped batch set and WO-039's reshaped enterprise batch sets for an executable model; WO-028's twenty are WO-040's to reshape and no precedent, rule 30), and the authors' and critics' briefs name those
   rules; a changed record shape is a new schema version, never an edit.
@@ -356,7 +380,7 @@ each.
 
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 a formal-system interpreter as a sub-app; the remaining rows of either work;
-the catalog's search controls (WO-018).
+the catalog's search controls (carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule and the twenty rows it names, with the Design's next rows as the one

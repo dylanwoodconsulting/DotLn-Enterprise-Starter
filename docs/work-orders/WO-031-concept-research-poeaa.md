@@ -46,7 +46,7 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-023 merged (hard: the `states` family, the executable-model
 rule, the embodiment rule, the PoEAA study and model directories and the
 settled look this batch reuses; WO-020's record, check, composite, route
@@ -70,7 +70,7 @@ and fan-out procedure come with it; merged as DotLn-Angular #17 on 2026-11-08, r
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26); `docs/repositories/dotln-angular.md` (§Run content
+7, 8, 15, 17, 23, 24, 26, 27, 29); `docs/repositories/dotln-angular.md` (§Run content
 workers, §Catalog and concept studies); `docs/product/concept-study.md`;
 `docs/control/budgets.json` (`subagentCap`); the target's `catalog.md`
 §Studies, `catalog-rules.md` (the embodiment rule WO-023 adds),
@@ -238,7 +238,7 @@ link check), `walkthrough.md` and its screenshots.
    the shelf and in the contents; Repository's study steps its states under
    reduced motion with the text equivalent naming the stage; Value Object
    opens from the contents; the Money link opens its reading; axe; no
-   overflow at 360, 768 and 1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-031/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-031/`. Check:
@@ -275,11 +275,11 @@ each.
    model and the limits; open Value Object and Money; open Coarse-Grained
    Lock beside Optimistic Offline Lock; open Client Session State and Server
    Session State. The VER report carries a `## Walkthrough` section with the
-   dated steps and the screenshots at 360, 768 and 1440 under
+   dated steps and the screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under
    `docs/evidence/WO-031/walkthrough/` (`ls docs/evidence/WO-031/walkthrough
    | wc -l` prints at least 15), and states in the verifier's own words what
    a repository hides, why money is not a number, and what a coarse-grained
-   lock gives up, as read from the studies alone. Met only when every step
+   lock gives up, as read from the studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step
    completed and that statement is present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/poeaa/`
    with exactly the forty ids of WO-023's twenty (or its recorded
@@ -310,7 +310,7 @@ each.
    not embody the pattern there with the critic's confirmation. Worker
    accounting remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -384,7 +384,7 @@ each.
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 refactoring the app's stores or data access toward a pattern; a database or
 API dependency; the remaining patterns; the catalog's search controls
-(WO-018).
+(carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule and the twenty rows it names, with the Design's next rows as the one

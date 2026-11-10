@@ -159,7 +159,7 @@ concern.
 
 ### Run content workers
 
-WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-018 applies
+WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-043 applies
 the same admission and accounting rules to its map and toy-design fan-outs.
 Before the first worker starts, record the token stop in the activation
 decisions and `fan-out.md`:
@@ -189,7 +189,7 @@ represented as money without a money counter.
 
 The subagent cap is separate: every launch, continuation message, resumed
 worker and kit launch consumes a use under the current kit. The declared initial
-fan-out consumes twelve uses in each of WO-018, WO-023 and WO-024; reserve the
+fan-out consumes twelve uses in each of WO-043, WO-023 and WO-024; reserve the
 execution's independent review ladder before allocating author re-tasks. The parent can apply a
 critic's bounded corrections itself and records who changed what; mark a record
 reviewed only after its order's required critic judgments cover its current
@@ -381,7 +381,7 @@ design comparisons and their outcome are in the launchpad's
 [`docs/evidence/WO-021/design/`](../evidence/WO-021/design/),
 [`docs/evidence/WO-022/design/`](../evidence/WO-022/design/) and
 [`docs/evidence/WO-023/design/`](../evidence/WO-023/design/comparisons.md), whose first round
-waits for a dedicated A/B testing pass. Menu behavior and its
+the operator delayed; it stays that order's own criterion (WS-001 rule 25). Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 

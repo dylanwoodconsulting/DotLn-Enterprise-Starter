@@ -85,14 +85,22 @@ an audience beyond the operator (2026-11-05, journal row
   are about 2080 by 1460, the centre browser window where the operator
   mostly opens the UI (2026-11-04, capture
   `cc1746dc2f88f599e55de07d589955a63aeff8cf31f409babf87492a14e53898`;
-  WO-028-D021). The operator may delay an order's rounds and have them run
-  in a dedicated A/B testing pass, distinct from the standards passes: the
-  order records its first pair without a pick, ships its first-named
-  candidate meanwhile, and carries the rounds as a follow-up the planning
-  pass that files the A/B testing pass allocates to it (2026-11-07, in WO-023's execution, journal row
+  WO-028-D021). Design comparisons come in every order that
+  changes the UI. The operator may delay an order's rounds when they have
+  no time for them: the order records its first pair without a pick, ships
+  its first-named candidate meanwhile and carries the rounds as a
+  follow-up, and the delayed rounds are that order's own criterion, run
+  later as exactly that, no more and no less; nothing else is combined
+  with them (2026-11-07, in WO-023's execution, journal row
   2026-11-07T19:37:43Z, digest `30fc5e7a…`; the executor's capture
   `8bf3461a1ae5324956ec7f45fc12f4753977998ddf5f59cbf678c526042efc68`;
-  WO-023-D008; WS-001 rule 25).
+  WO-023-D008; restated 2026-11-09, journal row 2026-11-10T02:12:55Z,
+  digest `2e85ed3e…`; WS-001 rule 25).
+- **One pass, not two:** a planning pass settles in itself everything it is
+  able to settle. It leaves no amendment, repair or decision for a later pass
+  that it could make now, and it treats nothing on an unmerged branch as
+  fixed, its own earlier commits, receipts and decisions included
+  (2026-11-09, journal row 2026-11-10T04:12:34Z, digest `9acd06f0…`).
 - **No separation:** the session is an extension of the operator and they of
   it; acting as if there were a separation is acting in discord (2026-10-17,
   capture `4f14c6c0…`).
@@ -130,7 +138,10 @@ an audience beyond the operator (2026-11-05, journal row
   WO-028-D039): there is a hard rule that all of the text is in
   translations; a string the operator can see on screen is user-facing,
   record fields and generated narration included (WS-001 rule 9, G3; the
-  catalog's mined text is WO-035's).
+  catalog's mined text is WO-035's). The demand, as the operator restated
+  it: the text had been hard-coded in the TypeScript files, and it is never
+  to be hard-coded (2026-11-09, journal row 2026-11-10T02:15:04Z, digest
+  `cae8d2dc…`).
 - **Coding standards as a dedicated pass that occurs often** (2026-11-05,
   journal row 2026-11-05T15:26:03Z, digest `4d21fba1…`): the operator agrees
   with WO-028's final review that a refactoring pass needs to occur; getting
@@ -154,7 +165,11 @@ an audience beyond the operator (2026-11-05, journal row
   WO-028-D020): the operator uses an ultrawide 4K display at 3840 by 1620
   and mostly opens the UI in a centre window of about 2080 by 1460; a UI
   issue at either size can fail an order, and issues at other resolutions
-  are boarded follow-ups (WS-001 rule 29).
+  are boarded follow-ups (WS-001 rule 29). The direction's purpose, as the operator restated
+  it: screenshots and end-to-end runs had been taken at viewports they do
+  not use, which made those of little use though not worth removing; it
+  asks for the viewports they use and never for an order that re-lays a
+  page for size (2026-11-09, journal row 2026-11-10T02:23:06Z, digest `db38861f…`).
 - **Above the records, with the data in reach:** the UI exists for the operator's
   flow and knowledge; a page works at a higher level than its raw records, with any
   or all of the data available when wanted (2026-10-21, capture `7149ef88…`).
@@ -327,7 +342,10 @@ an audience beyond the operator (2026-11-05, journal row
   `08208fab730f8c1311ff8fc53c635d0e7092499f6fc61b647e72c1a1d00d09c3`). Ideas
   for core that come out of the app go as GitHub issues on
   `DylanBWood/DotLn`; the paste stays the route for this fork's requests until
-  core's WO-193 lands (2026-10-24).
+  core's WO-193 lands (2026-10-24). The prompt carries only what core has
+  not already answered or filed: an item that one of core's own orders
+  already fixes is not sent back (2026-11-09, journal row
+  2026-11-10T05:21:21Z, digest `714dd285…`).
 - **Lifecycle steps the operator runs themselves:** `npm run worktree -- start
   WO-NNN <order path>` from `main`; a session in that worktree for
   `resume: next`, `resume: verify` and `resume: final review`; the merge; and
@@ -390,18 +408,32 @@ an audience beyond the operator (2026-11-05, journal row
   promoting it, for the five UIFA roles, people and software actors alike; it
   informs DotLn through GitHub issues and writes no control record; it is not
   wired to core, its data comes from public mining into its own store through
-  its own API; the machinery view shows an agent, a change dropped on it and
-  what changes in the example use case; workers are metaphors; select-then-
+  its own API; the machinery view is a view into what DotLn core currently
+  has, what exists, in what capacity, in what organization and with what
+  relations, so that the operator can improve core and find gaps, no more
+  and no less (restated 2026-11-09, journal row 2026-11-10T02:23:06Z, digest `db38861f…`); a
+  separate, later order replays a recorded work order to show its agents
+  and how they interacted given their machinery at the time, and then how
+  a change in that machinery would have changed the order or their
+  decisions (2026-11-09, journal row 2026-11-10T02:27:22Z, digest `b5aa37ca…`; WO-016); workers are metaphors; select-then-
   apply first, drag later; the ideas the operator drops are theirs and are
   also saved to ignored intake; the soldier scene is its own sub-app, 2D first;
   the repository's name is not literal; Babylon.js comes later behind a
   renderer seam and manim may live in the monorepo later (2026-10-24, capture
   `63b25fa1…`; WS-001 §The app and its sub-apps carries the list).
+- **The scene:** as the app stands, the scene is the one part of it the
+  operator likes, and they want more improvements to it (2026-11-09, journal
+  row 2026-11-10T02:37:58Z, digest `4a4715d6…`; the sequence opens with the
+  scene's orders).
+- **The WoW tooling app** is the operator's to plan, when they choose; a
+  planning pass neither files it nor raises it (2026-11-09, journal row
+  2026-11-10T02:12:55Z, digest `2e85ed3e…`).
 - **The operator's model:** a personality-fidelity digital twin lives in the app
   first, with variations and old versions kept, nothing held back from it,
-  judged by results only and never by agreement with the operator's recorded
-  actions, the RxJS that describes the operator being the RxJS that runs
-  (2026-10-24; WO-017).
+  the RxJS that describes the operator being the RxJS that runs
+  (2026-10-24; WO-017). Its purpose is to show whether it would have made
+  the same interventions as the operator would have within a stage; when a
+  stage runs makes no difference to it (restated 2026-11-09, journal row 2026-11-10T02:23:06Z, digest `db38861f…`).
 - **The operator's own research runs** in the platform are unofficial derived
   research with no authority: the platform's planning pass consumes a run
   first, and this fork reads only the files the operator names, at their
