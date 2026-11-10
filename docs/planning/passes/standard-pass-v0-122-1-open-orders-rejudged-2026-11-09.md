@@ -28,10 +28,11 @@ message at 22:27Z said the update pull request was merged.
 
 After the first handoff, at 01:36Z on 2026-11-10, the operator sent six
 messages between 02:12Z and 02:37Z that correct the pass, a seventh at
-04:12Z after the second handoff, and five between 05:03Z and 05:23Z while
-the third round ran. Their own words are in a second capture,
+04:12Z after the second handoff, five between 05:03Z and 05:23Z while
+the third round ran, and ten between 05:32Z and 05:37Z after the third
+refutation. Their own words are in a second capture,
 `docs/intake/notes/planning-2026-11-09-answers.md`, SHA-256
-`b5d82e90c974026f5774c99c8f60d8feb37c180039820887567b985dbe760842`;
+`69dbb34f19a4bb4c689800070ccd5049b4269fef7b0db1fb0e9f322cf7ce1c05`;
 the first of the six quoted the session's own five items, and that whole
 message is kept in the ignored local planning lane as
 `operator-answers-whole-2026-11-09.md`, by D1's rule. One of the six is a
@@ -483,6 +484,17 @@ of what the screen reads. Neither is in §Requests to core, the item on the
 check's time that stood there is removed, and the operator record now says
 the block carries only what core has not already answered or filed.
 
+After the third refutation the planner amended four orders for five of its
+findings and then met the kit's rule of one judgment per pass: the amended
+text no longer matched the receipt, a further refutation was refused, and
+the kit's record of a repair binds a hold, of which the receipt has none.
+The amendments are bound the way the 2026-11-01 pass bound its own, by a
+decision in each order's record citing the operator's direction and `plan
+amend-order` (§Validation). The planner also started a fourth review that
+nothing required and, when the operator asked what was happening, stopped
+it instead of answering; the operator had asked a question and not for a
+stop. No reviewer or refuter has read those five amendments.
+
 ### D12. The machinery view is a view into what core has; the replay is a separate, later order
 
 The operator: the machinery view is a view into what DotLn core currently
@@ -840,6 +852,8 @@ What the operator sees after each order lands:
 - Owed in the target, carried by orders: `catalog-rules.md`'s sentence on
   standards passes (WO-040's step); the documents that describe the
   `/machinery` placeholder (WO-046's step).
+- Four decision records, in `docs/evidence/` for WO-016, WO-017, WO-008 and
+  WO-036, and their four rows in the planning log (§Validation).
 - `docs/control/doc-baseline.json`: one declared historical link, from the
   2026-11-05 pass's record to the removed WO-038's file (D13).
 
@@ -1077,7 +1091,7 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 
 8. Observation and asks on removing a filed order that never activated. The operator's corrections after this pass's first handoff removed one, WO-038, filed on 2026-11-05. npm run resume -- withdraw refuses it as an unknown work order, since it has no event, and npm run work-orders -- index --check refuses an open order outside the sequence, so the route left was deleting the file. npm run plan -- followups --apply then refused the batch that re-disposed the register row allocated to that order, with "allocation target WO-038 has no filed work order": the register is judged as it stands before the batch is applied. The fork applied the batch with a one-line stand-in file present and removed it, as it had earlier the same day when it renumbered a new order. Asks: a planning route that withdraws a never-activated order with a recorded reason, and a batch judged on the register it produces.
 
-9. Observation and ask on what a pass does with a refuter's known issues. The receipt design records a known issue with a reopening observation, and the planner's role text has the receipt freeze the judged text, so this pass's second handoff listed nineteen known issues as standing until a later pass amends the order each names, though most were a few sentences' work or already answered by the orders' own text. The operator refused that: a pass settles what it can and nothing on an unmerged branch is fixed. The fork amended them and ran the review and the refutation a third time. Ask: have the planner's role text say that a known issue the pass can settle is amended before the handoff and re-judged in pass scope, and that only an issue no text can settle is recorded with its reopening observation.
+9. Observation and ask: a repair of a refuter's known issue has no record the plan check accepts. The operator's direction here is that a pass settles what it can, so after receipt 2026-11-10-planning-80685a5e0fbc1a46-028 (aligned-with-findings, no hold, nine known issues) the fork amended four orders for five of the issues. npm run plan -- check then failed with "changed Cost declaration has no text-bound disposition"; npm run plan -- refute refused with "one judgment per pass; dispositions settle repairs, and another judgment requires changed observed evidence"; and npm run plan -- dispose takes a hold id, which scripts/lib/plan-receipts.mjs lines 125 to 129 derive from the result's holdReasons alone, so a receipt with no hold offers nothing to dispose. The fork bound the four orders with a decision each and npm run plan -- amend-order, as its 2026-11-01 pass had. Ask: let a known issue be disposed by its criterion as a hold is, so a repair made in the same pass is bound without an operator-authorization record.
 ```
 
 ## Process cost
@@ -1092,7 +1106,7 @@ effective model and effort unknown), and the three reviews Codex
 | Measure | Value | Source |
 | --- | --- | --- |
 | Wall clock, dispatch to the first close | 3 h 5 min (22:16Z to 01:21Z); the first handoff at 01:36Z | the prompt hook's stamp; `date -u` |
-| Wall clock, the corrections | 1 h 45 min from the operator's first answer to this section (02:12Z to 03:57Z) | the session journal's rows; `date -u` |
+| Wall clock, the corrections | 3 h 26 min from the operator's first answer to this section (02:12Z to 05:38Z): 1 h 57 min to the second handoff and 1 h 29 min after it | the session journal's rows; `date -u` |
 | The update | 0 h 11 min from the dispatch to the finish on `main`, 0 h 5 min of it the pull request waiting for the operator's merge | the gate logs; `gh pr view 73` |
 | The research | four workers, 0 h 11 min wall clock, 1,079,405 tokens | the host's task notifications |
 | The drafting | eight workers and one re-task, 0 h 31 min wall clock, 3,126,755 tokens | the host's task notifications |
@@ -1104,15 +1118,19 @@ effective model and effort unknown), and the three reviews Codex
 | The amended WO-016's draft | one drafting worker, 0 h 27 min, 419,137 tokens | the host's task notification |
 | The third round's review | 0 h 21 min, 10,819,871 tokens, two batches, a brief of 636,581 characters for 2,142 changed lines in fifteen documents, each given whole | the report's header; `git diff --numstat` against the second round's tree |
 | The third refutation | 0 h 12 min, 179,945 tokens | the host's task notification |
+| A fourth review, not required | started by the planner and stopped after 0 h 1 min; no report; tokens unknown | the session journal's task row |
 | The document gate | 0 h 14 min for the run on the first receipt's commit, 0 h 13 min of it the document check; 0 h 8 min for the check on the first subject; 0 h 11 min for the check alone on the corrected subject, which found three failures | the gate logs; the bounded probe's result line |
-| This session's tokens | 199,503,498 at 03:54Z (838 input, 197,770,293 cached input, 1,190,507 cache-write, 541,860 output), of which 109,559,364 by 01:20Z; cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
-| Workers | 28 launches and 8 re-tasks of a cap of 40 (Claude 14, Codex 8, unattributed 6); 26 and 3 at the first close | the same readback |
+| This session's tokens | 258,817,902 at 05:37Z (1,086 input, 256,543,090 cached input, 1,551,176 cache-write, 722,550 output), of which 109,559,364 by 01:20Z and 199,503,498 by 03:54Z; cost unknown, the counter is unavailable | `node scripts/harness.mjs usage 12cbf517-74f9-4370-bebe-e7888d83f3fc`, source the transcript's message usage, scope dispatch |
+| Workers | 32 launches and 8 re-tasks, the cap of 40 reached (Claude 16, Codex 10, unattributed 6); 26 and 3 at the first close; the last launch was the fourth review | the same readback |
 
 The largest avoidable cost is the pass's own. The first handoff carried
 three orders built on misreadings: the twin as the waits between stages,
 the machinery view as the replay of an order, and a size order turned into
 an A/B pass. Correcting them took six of the operator's messages, 1 h 45
-min and about 90 million of this session's tokens. The misread sentences
+min and about 90 million of this session's tokens. The second handoff then
+left for a later pass what this one could settle, which the operator had
+already ruled out and the 2026-11-01 pass had already been corrected for;
+settling it took another 1 h 29 min and about 59 million tokens. The misread sentences
 were in the records the pass read, two of them since 2026-10-24, and the
 pass tightened orders against those sentences without first stating, in
 the operator's terms, what each order is for; when it did put questions,
@@ -1309,6 +1327,18 @@ Receipt
 sequence judged, 0 h 12 min, nine known issues. D18's last nine rows say
 what this pass did about each: five are amended in the order they name and
 four are answered with the reason no text can settle them.
+
+Those five amendments, in WO-016, WO-017 (two), WO-008 and WO-036, were
+made after the judgment. The kit admits one judgment per pass and records
+a repair only against a hold, and receipt 028 has no hold, so each amended
+order is bound to the receipt by a recorded decision and `npm run plan --
+amend-order`: WO-016-D003, WO-017-D003, WO-008-D003 and WO-036-D001, each
+citing the operator's direction of 2026-11-09 and bounded to the defect
+the receipt recorded. `npm run plan -- check` then passes, reading the
+four as authorized amendments. No reviewer or refuter has read the five;
+the next planning pass's refutation judges them. A fourth review, which
+neither the operator nor the guide's ladder asked for, was started by the
+planner and stopped after one minute; it produced no report.
 
 ### The gates
 
