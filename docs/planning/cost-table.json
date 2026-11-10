@@ -1,98 +1,93 @@
 {
   "schemaVersion": 1,
-  "subjectSourceHash": "sha256:340e8615b8b5c875d597dd3276e07303817a4d1f786df1fbdd0044f2c79b4ab9",
+  "subjectSourceHash": "sha256:21ff4decea84520525bbeac91bcd27a041d8526618ca445f3073e343aa8068ba",
   "acceptances": [],
-  "observedAt": "2026-11-10T00:53:30.994Z",
-  "subjectRevision": "998051588eec61128e9b0619b68c2c01f6dc0988",
+  "observedAt": "2026-11-10T03:00:44.065Z",
+  "subjectRevision": "51b5fb17bcc711370a25997b125b0e547361f891",
   "rows": [
     {
-      "workOrder": "WO-008",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "workOrder": "WO-036",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-024",
-      "observedAt": "2026-11-10T00:53:30.994Z",
-      "metrics": null
-    },
-    {
-      "workOrder": "WO-036",
-      "observedAt": "2026-11-10T00:53:30.994Z",
-      "metrics": null
-    },
-    {
-      "workOrder": "WO-040",
-      "observedAt": "2026-11-10T00:53:30.994Z",
-      "metrics": null
-    },
-    {
-      "workOrder": "WO-016",
-      "observedAt": "2026-11-10T00:53:30.994Z",
-      "metrics": null
-    },
-    {
-      "workOrder": "WO-045",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-037",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-040",
+      "observedAt": "2026-11-10T03:00:44.065Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-008",
+      "observedAt": "2026-11-10T03:00:44.065Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-045",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-044",
-      "observedAt": "2026-11-10T00:53:30.994Z",
-      "metrics": null
-    },
-    {
-      "workOrder": "WO-042",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-035",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
-      "workOrder": "WO-038",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "workOrder": "WO-046",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-017",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
+      "metrics": null
+    },
+    {
+      "workOrder": "WO-016",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-018",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-043",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-029",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-030",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-031",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     },
     {
       "workOrder": "WO-032",
-      "observedAt": "2026-11-10T00:53:30.994Z",
+      "observedAt": "2026-11-10T03:00:44.065Z",
       "metrics": null
     }
   ],
@@ -640,9 +635,9 @@
       "reopenCandidate": false,
       "planningCaptures": [
         {
-          "pass": "planning-b11409ceeeacb21f",
+          "pass": "planning-45eed5a22f3e4388",
           "date": "2026-11-09",
-          "captures": 1
+          "captures": 2
         },
         {
           "pass": "planning-d7624753c8d8f51f",
