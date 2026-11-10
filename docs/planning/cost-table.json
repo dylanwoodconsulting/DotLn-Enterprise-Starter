@@ -1,93 +1,93 @@
 {
   "schemaVersion": 1,
-  "subjectSourceHash": "sha256:1f746cb072441f0090f38f506c80eba8fba148e9a543ca9327fe4934484e3ded",
+  "subjectSourceHash": "sha256:f198a5951803eb822b3f917946df908098db785909024ae419560f7ab7350010",
   "acceptances": [],
-  "observedAt": "2026-11-10T03:56:02.133Z",
-  "subjectRevision": "15b76a924cd957f9403f8a7294839ba4f3e30faf",
+  "observedAt": "2026-11-10T04:49:25.071Z",
+  "subjectRevision": "e7e7598e7cdec9b62aaca2d9b573279865590100",
   "rows": [
     {
       "workOrder": "WO-036",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-024",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-037",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-040",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-008",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-045",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-044",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-035",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-046",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-017",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-016",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-018",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-043",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-029",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-030",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-031",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     },
     {
       "workOrder": "WO-032",
-      "observedAt": "2026-11-10T03:56:02.133Z",
+      "observedAt": "2026-11-10T04:49:25.071Z",
       "metrics": null
     }
   ],
@@ -635,7 +635,7 @@
       "reopenCandidate": false,
       "planningCaptures": [
         {
-          "pass": "planning-45eed5a22f3e4388",
+          "pass": "planning-80685a5e0fbc1a46",
           "date": "2026-11-09",
           "captures": 2
         },
