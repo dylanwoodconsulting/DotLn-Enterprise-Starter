@@ -599,7 +599,12 @@ plain and review once each.
    in `interpretedKinds` (the facade spec compares the offered ids with
    `sceneTools('aifg')` filtered by `isRunnable`), the path kinds in `ways`
    and the two avoidance rows in `avoid`; the facade spec's
-   every-tool-at-defaults case passes with every parameter read;
+   every-tool-at-defaults case passes with every parameter read; an engine
+   spec on the known field shows a travel-weight `path.cost` step above one
+   raising the search's expansions over the same search without it while the
+   route's cells stay the same, and the two rows that weigh only the uniform
+   layers (`aifg-b:48`, `aifg-b:50`) leaving route, length and expansions
+   unchanged, with the inspector's preview row saying which it is in words;
    `interpretedKinds` equals `sceneTransformKinds`; `npm run catalog:check`
    and `npx nx test catalog` pass with the seven typed rows and the
    rewritten summary; and `aifg-a:247` still reads `status: background`

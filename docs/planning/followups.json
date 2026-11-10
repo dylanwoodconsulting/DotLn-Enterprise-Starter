@@ -1817,6 +1817,14 @@
           "reopenWhen": "WO-016 merges and the operator asks for the view, or the mining store carries the sequence.",
           "targets": [],
           "at": "2026-11-03T16:55:14.467Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D12: the machinery view this candidate waits behind is WO-046, the view of what core has; WO-016 is the replay of a recorded order. The candidate itself is unchanged: 2026-11-03 Entropy Reducer pass (docs/planning/entropy-reducer-2026-11-03.md): WO-016 has not merged and the operator has not asked for a work view in this pass. The app-own-data boundary remains unchanged.",
+          "reopenWhen": "WO-046 merges and the operator asks for the view, or the mining store carries the sequence.",
+          "targets": [],
+          "at": "2026-11-10T04:47:10.191Z"
         }
       ]
     },
@@ -2531,6 +2539,14 @@
           "reopenWhen": "WO-016 merges and the operator wants one home for the view of DotLn's machinery.",
           "targets": [],
           "at": "2026-10-24T05:40:28.159Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D12: the machinery view this candidate waits behind is WO-046, the view of what core has. The candidate itself is unchanged: Candidate C8 of the 2026-10-24 planning document (docs/planning/mining-run-orders-2026-10-24.md): moving the actor board under the machinery sub-app's routes; WO-013 keeps the board at its route and lists it in the Machinery group.",
+          "reopenWhen": "WO-046 merges and the operator wants one home for the view of DotLn's machinery.",
+          "targets": [],
+          "at": "2026-11-10T04:47:10.210Z"
         }
       ]
     },
@@ -4627,6 +4643,14 @@
           "reopenWhen": "The pass before WO-016 activates, or an amended road order is found stale against the target before it activates.",
           "targets": [],
           "at": "2026-11-10T02:53:29.350Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-09 planning pass (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D17 and D11: the amendments are made. WO-008, WO-017 and WO-018 name eb9d227 and were re-read against the target (D4, D14, D9), and WO-016 is amended in the same pass as one order, the replay of a recorded order beside WO-046's view: its base, its criterion on the gaps asserted from the rows' own stamps, its copies as production data, its sink's defects, and each agent's machinery read from core at the last commit before the recorded order began. The operator directed on 2026-11-09 that a pass settles what it can and leaves nothing it could amend for a later one.",
+          "reopenWhen": "An amended road order is found stale against the target before it activates.",
+          "targets": [],
+          "at": "2026-11-10T04:47:10.170Z"
         }
       ]
     },

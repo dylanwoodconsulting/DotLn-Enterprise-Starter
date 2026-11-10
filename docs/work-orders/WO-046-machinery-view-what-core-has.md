@@ -101,15 +101,17 @@ only `layer:shared-data-access`, events, models, core and util.
 
 - **Snapshot** (`libs/features/machinery-data-access/src/data/core-snapshot.json`,
   schema `core-snapshot-v0`, `additionalProperties: false`): the fields above
-  as `source` (repository, commit, tag, inputs with SHA-256), `versions`,
+  as `source` (repository, commit, the tag where one is given, inputs with
+  SHA-256), `versions`,
   `loadout`, `hosts`, `roles`, `mechanisms` (kind as core declares it, else
   `undeclared`; statement from the `id:` line, the paired `Name:` line or
   the role's `description`, else none), `surfaces` (a hook's event, `kind`,
   `policy.mechanisms`), `residue` and the refusals; no runtime hashes or
   code. Loaded as a lazy chunk by `import()`, as the catalog is.
 - **Miner** (`tools/scripts/core-snapshot.mjs`, a helper): `--core <git dir>
-  --commit <sha> --tag <name> [--out <file>]` reads by `git show`, never
-  checking out; prints input digests and PASS or FAIL without values;
+  --commit <sha> [--tag <name>] [--out <file>]` reads by `git show`, never
+  checking out, and reads an input directory the commit lacks as empty
+  (core's older commits have no `.codex/agents/`); prints input digests and PASS or FAIL without values;
   refuses an absolute path or an e-mail shape; formats with the workspace's
   Prettier so a rerun reproduces the bytes. `--check`, in `check:fixtures`,
   validates the schema and that every id a role or surface names exists.
@@ -230,7 +232,8 @@ target gate plain and review once each.
    elsewhere it is a boarded follow-up (rule 29).
 2. `npm run check:fixtures` exits 0 with the snapshot check; `npm run
    test:tooling` exits 0 with tests that the miner reads by `git show`,
-   refuses an absolute path and an e-mail shape, prints no value on failure,
+   refuses an absolute path and an e-mail shape, reads an absent input
+   directory as empty, prints no value on failure,
    and that `--check` refuses a dangling id.
 3. `node tools/scripts/core-snapshot.mjs --core <path> --commit
    06c1ddc1a887032f066c58d7893d1bf39738bdca --tag v0.122.1 --out <scratch>`
@@ -279,12 +282,14 @@ target gate plain and review once each.
 **Evidence gate:** the gate rows, `docs/evidence/WO-046/README.md`,
 `design/`, `walkthrough.md` and its screenshots, `host-qualification.md`.
 
-**Known issues and carry-ins:** WO-016 was written to replace the same
-arriving page with a replay of a recorded order and names the same
-`machinery-data-access` library, documents and e2e spec; the planning pass
-before WO-016 activates places its replay beside this view and reconciles
-those names; this order's storage key, `machinery.core`, stays clear of
-WO-016's. Under rule 9 this order makes every string it adds a message
+**Known issues and carry-ins:** WO-016, sequenced after this order, adds
+the replay of a recorded order as a second route of this feature,
+`/machinery/replay`, with its own container, facade and store beside this
+order's. It extends `machinery-data-access`, the two documents and the
+Machinery menu group, adds its own e2e spec, and runs this order's miner at
+the commits of the recorded orders, which is why the miner takes any commit
+and an optional tag. This order's storage key, `machinery.core`, stays
+clear of WO-016's `machinery.replay`. Under rule 9 this order makes every string it adds a message
 and puts core's mined statements through the message system by WO-035's
 registration; if WO-035 has not landed at activation, the statements
 render as data and the executor boards the registration with its

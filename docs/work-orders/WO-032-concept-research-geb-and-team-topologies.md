@@ -49,7 +49,7 @@ the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122
 D5): the base set to WO-039's merge, and the dependency and the known
 issues say that this batch, which lands as data through `relationsModel`,
 owes no standards pass over WO-024's batch before it runs (D3), and the
-record-shape issue drops the per-study presentation.
+record-shape issue drops the per-study presentation. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-024 merged (hard: the `relations` family and its
 `relationsModel` builder, which WO-024 builds builder-first so that each
 study is data the builder draws and no study has a presentation module of
@@ -79,7 +79,7 @@ target's current `main` in any case.
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26; §Design: the Tipping Point taxonomy);
+7, 8, 15, 17, 23, 24, 26, 27, 29; §Design: the Tipping Point taxonomy);
 `docs/repositories/dotln-angular.md` (§Run content workers, §Catalog and
 concept studies); `docs/product/concept-study.md`; `docs/control/budgets.json`
 (`subagentCap`); the target's `catalog.md` §Studies and `catalog-rules.md`
@@ -233,8 +233,7 @@ with `fan-out.md`, `review.md`, `README.md` (the link check),
    Recursion's study steps its levels under reduced motion with the text
    equivalent naming the level; BlooP opens from the contents and the FlooP
    link opens its reading; Exactly one owning team per part of the system
-   opens from the Team Topologies contents; axe; no overflow at 360, 768 and
-   1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   opens from the Team Topologies contents; axe; no overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-032/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-032/`. Check:
@@ -271,12 +270,11 @@ each.
    owning team per part of the system, Three core team interaction modes
    and Communication paths restrict the solution search space. The VER
    report carries a `## Walkthrough` section with the dated steps and the
-   screenshots at 360, 768 and 1440 under `docs/evidence/WO-032/walkthrough/`
+   screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under `docs/evidence/WO-032/walkthrough/`
    (`ls docs/evidence/WO-032/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what ends a recursion, why BlooP
    always finishes and FlooP may not, and what Conway's law implies for the
-   paths between teams, as read from the studies alone. Met only when every
-   step completed and that statement is present.
+   paths between teams, as read from the studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that statement is present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/geb/`
    and `libs/shared/catalog/src/studies/tt/` with exactly the twenty ids per
    work of WO-024's ten (or its recorded substitution) and this order's ten
@@ -304,7 +302,7 @@ each.
    characterizes the operator or quotes either book. Worker accounting
    remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -382,7 +380,7 @@ each.
 
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 a formal-system interpreter as a sub-app; the remaining rows of either work;
-the catalog's search controls (WO-018).
+the catalog's search controls (carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule and the twenty rows it names, with the Design's next rows as the one

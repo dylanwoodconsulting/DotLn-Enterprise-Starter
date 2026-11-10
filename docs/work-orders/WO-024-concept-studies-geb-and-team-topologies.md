@@ -72,7 +72,7 @@ needs in the Cost line and the plan; criterion 7's grep given a control
 against the integrated base; the round criterion admitting rule 25's
 deferral route; the Observed gap re-dated at `eb9d227`; the pair WO-008 in
 place of WO-040, with criterion 6 reading the integrated `main`; and the
-executor's effort written `xhigh`.
+executor's effort written `xhigh`. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
@@ -100,7 +100,7 @@ the study guards every batch now writes to; its merge brought the four study bat
 <!-- dotln-dependencies:end -->
 
 **Cites (read these sections):** `docs/workstreams/WS-001-dotln-angular.md`
-(house rules 23, 24, 25, 26; §Design: the Tipping Point taxonomy, §The app
+(house rules 23, 24, 25, 26, 27, 29; §Design: the Tipping Point taxonomy, §The app
 and its sub-apps, §Design direction); `docs/repositories/dotln-angular.md`;
 `docs/product/concept-study.md`; `docs/control/budgets.json` (`subagentCap`);
 the target's `catalog.md` §Studies and `catalog-rules.md` as the target's
@@ -343,7 +343,7 @@ screenshots, and the design record.
    reduced motion with the text equivalent naming the level; Strange loop's
    drawing returns to its start; the three interaction-mode studies open from
    the contents; Conway's law links to the Reverse Conway manoeuvre; axe; no
-   overflow at 360, 768 and 1440; the two works' studied counts read from
+   overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620; the two works' studied counts read from
    `studies-summary.json` as the other works' are; the catalog's visual
    baselines (`apps/dotln-e2e/src/catalog.visual.spec.ts`,
    `visual-baselines/darwin/catalog-{360,768,1440}.png`) regenerated for
@@ -385,13 +385,12 @@ each.
    it round; open Isomorphism and Gödel numbering and read the encoder's spec
    note; choose Team Topologies; open the three interaction modes; open
    Conway's law and follow the Reverse Conway link. The VER report carries a
-   `## Walkthrough` section with the dated steps and the screenshots at 360,
-   768, 1440 and the operator's sizes (rule 29) under
+   `## Walkthrough` section with the dated steps and the screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 (rule 29) under
    `docs/evidence/WO-024/walkthrough/`
    (`ls docs/evidence/WO-024/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what a level of description is, what
    makes a loop strange, and when collaboration mode should end, as read from
-   the studies alone. Met only when every step completed and that statement
+   the studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that statement
    is present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/geb/`
    and `studies/tt/` with exactly the twenty ids this order names (or one
@@ -429,7 +428,7 @@ each.
    of either book is quoted and no sentence characterizes the operator.
    Worker accounting remains the profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 7 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440.
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620.
 6. `npx nx build dotln --configuration=production` exits 0 within the
    declared budgets with the `relations` family and the records in lazy
    chunks, `npm run check:bundle` passes with the chunk sizes recorded, and
@@ -478,7 +477,7 @@ classification: minor` and `Target release notes: reviewed` are set under
 WO-012's declared policy.
 
 **Non-goals:** a formal-system or team-topology sub-app or toy; studies of
-the remaining rows; the general search controls (WO-018); the machinery view.
+the remaining rows; the general search controls (carried by no order; register row `FUP-0fb531a975308a81`); the machinery view.
 
 **Operator-review assumptions:** the operator accepts the in-degree selection
 with the recorded substitution and the twenty concepts it names, accepts

@@ -49,7 +49,7 @@ that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md)
 D5): the authors' brief, the reading critic and criterion 4 carry the
 wording rule for a flow node's state message, and the known issue names
-what WO-040 now changes in this work.
+what WO-040 now changes in this work. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
 **Depends on:** WO-022 merged (hard: the `flow` family and its two builders,
 the analogy rule and the messaging study directory this batch reuses; the
 `marbles` family and WO-020's record, check, composite, route and fan-out
@@ -68,7 +68,7 @@ procedure come with it). The base above is WO-039's merge (#18), released as `Do
 
 **Cites (read these sections):** `docs/workstreams/WS-002-concept-research.md`
 (the track's rules); `docs/workstreams/WS-001-dotln-angular.md` (house rules
-7, 8, 15, 17, 23, 24, 26; §The app and its sub-apps);
+7, 8, 15, 17, 23, 24, 26, 27, 29; §The app and its sub-apps);
 `docs/repositories/dotln-angular.md` (§Run content workers, §Catalog and
 concept studies); `docs/product/concept-study.md`; `docs/control/budgets.json`
 (`subagentCap`); the target's `catalog.md` §Studies, `catalog-rules.md` (the
@@ -232,8 +232,7 @@ link check), `walkthrough.md` and its screenshots.
    shows forty studied on the shelf and in the contents; Message Filter's
    study steps its flow under reduced motion with the text equivalent naming
    the dropped message; Scatter-Gather opens from the contents; the
-   Selective Consumer link opens its reading; axe; no overflow at 360, 768
-   and 1440. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
+   Selective Consumer link opens its reading; axe; no overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620. Check: `npx nx e2e dotln-e2e` exits 0; `npm run test:tooling` exits 0 over
    the updated `tools/studies.test.mjs`; the regenerated baselines are
    recorded in `docs/evidence/WO-030/README.md`.
 6. The walkthrough as WO-020 step 11, under `docs/evidence/WO-030/`. Check:
@@ -268,12 +267,12 @@ each.
    limits; open Scatter-Gather; open Point-to-Point Channel and
    Publish-Subscribe Channel; open Idempotent Receiver. The VER report
    carries a `## Walkthrough` section with the dated steps and the
-   screenshots at 360, 768 and 1440 under `docs/evidence/WO-030/walkthrough/`
+   screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under `docs/evidence/WO-030/walkthrough/`
    (`ls docs/evidence/WO-030/walkthrough | wc -l` prints at least 15), and
    states in the verifier's own words what a filter cannot tell a sender,
    how scatter-gather completes, how the two channel patterns deliver
    differently, and what an idempotent receiver remembers, as read from the
-   studies alone. Met only when every step completed and that statement is
+   studies alone. The verifier also reads the research for quality (rule 27): a random sample of at least five of the twenty new records with their messages, drawn by a command the VER report records, each read whole and judged for quality and content; the report names the sample and the judgment, and a pattern of low quality fails the order. A UI issue at about 2080 by 1460 or 3840 by 1620 fails here (rule 29). Met only when every step completed and that statement is
    present.
 2. `npm run studies:check` exits 0 over `libs/shared/catalog/src/studies/eip/`
    with exactly the forty ids of WO-022's twenty and this order's twenty (or
@@ -305,7 +304,7 @@ each.
    before the record was set `checked`. Worker accounting remains the
    profile's process duty.
 5. `npx nx e2e dotln-e2e` exits 0 and includes the step 5 cases, axe at the
-   board spec's threshold and no horizontal overflow at 360, 768 and 1440;
+   board spec's threshold and no horizontal overflow at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620;
    `npm run test:tooling` exits 0 with `tools/studies.test.mjs` holding the
    first batch's membership check and this batch's; and the regenerated
    visual baselines match the integrated shelf.
@@ -363,7 +362,7 @@ each.
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 the two integration styles; the machinery view or any runtime channel in the
 app; typing further EIP rows for the `channels` scene; the catalog's search
-controls (WO-018).
+controls (carried by no order; register row `FUP-0fb531a975308a81`).
 
 **Operator-review assumptions:** the operator accepts the track's selection
 rule, the two rows it sets aside and the twenty it names, with the Design's

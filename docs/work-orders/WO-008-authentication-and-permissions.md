@@ -550,12 +550,10 @@ review once each.
 **Acceptance criteria (all required)**
 
 1. `grep -rlE "localStorage|sessionStorage" libs/shared/auth/src --include='*.ts' | grep -v spec`
-   prints nothing, and the same grep over each file under `apps/dotln/src`
-   and `libs/dotln` that
-   `git status --porcelain --untracked-files=all -- apps/dotln/src libs/dotln`
-   lists in the target worktree prints nothing (the candidate stays
-   uncommitted there until the final review's publish, so that list is this
-   order's own added and changed files); `grep -rc "console.log" libs/shared/auth/src --include='*.ts' | grep -v ":0"`
+   prints nothing, and
+   `grep -rlE "localStorage|sessionStorage" apps/dotln/src libs/dotln --include='*.ts' | grep -v spec`
+   prints nothing (it prints nothing at `eb9d227`, so a file it names is
+   this order's, whether or not the candidate is committed); `grep -rc "console.log" libs/shared/auth/src --include='*.ts' | grep -v ":0"`
    prints nothing; and an e2e step after the sign-in, and again after a
    reload, reads every key of `localStorage` and `sessionStorage`, every
    object store of every IndexedDB database, every Cache Storage entry and

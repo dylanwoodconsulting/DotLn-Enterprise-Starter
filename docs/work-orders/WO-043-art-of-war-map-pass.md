@@ -221,7 +221,12 @@ adding a work or a visible field to it takes, is unknown until it merges.
   `maxim?` and `CatalogCheckpoint` the version; the loader and
   `check-catalog.mjs` accept both, checking each checkpoint against the
   version it declares; the eight existing checkpoints stay `tool-v1`,
-  byte for byte; the join keeps each checkpoint's version.
+  byte for byte; the join keeps each checkpoint's version. A `maxim` is
+  admitted on a tool of the `artofwar` batch alone, the one batch whose
+  source is in the public domain: `check-catalog.mjs` refuses a `maxim` on
+  any other checkpoint, the six toy sources' included, since four of them
+  are works in copyright, and the tooling test proves the refusal with a
+  toy-source checkpoint given one.
 - **Typing and joining.** One classifier with WO-014's brief (the
   launchpad's `docs/evidence/WO-014/fan-out.md` §Classifier brief) over the
   map's rows writes `tools-artofwar.json`; `node
@@ -254,7 +259,9 @@ adding a work or a visible field to it takes, is unknown until it merges.
   five tools for its source as a public-work batch, `tools-<source>.json`:
   `provenance: 'public-work'` with `map: null` (the pairing WO-014's schema
   declares, outside the mapped-rows count), five faces, a definition in its
-  own words from the work, a place, and a verification note naming the
+  own words from the work and never a sentence of it (the designer's return
+  confirms that no definition, hook or note carries a passage of the
+  source, and `fan-out.md` records each confirmation), a place, and a verification note naming the
   work and the chapter or named concept, its kind read from the note by the
   existing rule. The batch table declares the six as public-work batches
   with no map files and the label `designer-<source>`, which a row's
@@ -552,7 +559,11 @@ target gate plain and review once each.
    type, a question, metrics and tool ids the catalog has; and each
    source's `tools-<source>.json` passes `npm run catalog:check` as a
    public-work batch whose rows carry `map: null`, a definition, a place and
-   a verification note naming the work and its chapter or named concept.
+   a verification note naming the work and its chapter or named concept,
+   and no `maxim`: `npm run test:tooling` exits 0 with the control in which
+   a toy-source checkpoint given a `maxim` fails `check-catalog.mjs`, and
+   `fan-out.md` holds each of the six designers' confirmation that nothing
+   it returned carries a passage of its source.
 6. **Provenance excludes quarantined material.** `cat
    docs/evidence/WO-043/README.md` shows each map and toy worker's label and
    one-line statement that no quarantine file was read, beside the

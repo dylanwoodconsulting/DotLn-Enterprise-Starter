@@ -96,6 +96,11 @@ an audience beyond the operator (2026-11-05, journal row
   `8bf3461a1ae5324956ec7f45fc12f4753977998ddf5f59cbf678c526042efc68`;
   WO-023-D008; restated 2026-11-09, journal row 2026-11-10T02:12:55Z,
   digest `2e85ed3e…`; WS-001 rule 25).
+- **One pass, not two:** a planning pass settles in itself everything it is
+  able to settle. It leaves no amendment, repair or decision for a later pass
+  that it could make now, and it treats nothing on an unmerged branch as
+  fixed, its own earlier commits, receipts and decisions included
+  (2026-11-09, journal row 2026-11-10T04:12:34Z, digest `9acd06f0…`).
 - **No separation:** the session is an extension of the operator and they of
   it; acting as if there were a separation is acting in discord (2026-10-17,
   capture `4f14c6c0…`).

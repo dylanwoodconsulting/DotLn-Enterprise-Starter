@@ -243,8 +243,8 @@ then the target gate plain and review once each.
    check-ignore -q apps/dotln/public/twin-stages/x.json` and `npm run
    check:scripts` exit 0.
 2. With a file in `apps/dotln/public/twin-stages/`, `npx nx build dotln
-   --configuration=production` leaves no `twin-stages` under
-   `dist/apps/dotln/browser`.
+   --configuration=production` and `--configuration=configured` each leave
+   no `twin-stages` under `dist/apps/dotln/browser`.
 3. `npx nx test twin-model` exits 0 with specs on the synthetic stage
    asserting every gap, match, miss and extra the Design's rule gives; a
    twin intervention emitted with an agent event falling after it; a stage
@@ -323,7 +323,10 @@ sessions exports as several stages, and one session that ran a phase twice
 as one; a closed order's journals last as long as its retained lane. The operator runs the export; no session reads
 `docs/control/local/` (CLAUDE.md §Secrets). A real stage is read on the
 operator's machine alone: the evidence, the screenshots and the reports
-show the synthetic stage. Production has no identity
+show the synthetic stage. The `mocked`, `local` and `development` builds
+serve the ignored stage directory on that machine, which is how the page
+reads a stage; the repository publishes no build output (no workflow
+uploads or deploys one at `eb9d227`). Production has no identity
 provider (WO-008), so the walkthrough runs on the `mocked` build. Receipts
 008 to 012 judged the patience lane; their items on the gated route, the
 signed-in e2e, the `mocked` build and an unparseable stored value carry

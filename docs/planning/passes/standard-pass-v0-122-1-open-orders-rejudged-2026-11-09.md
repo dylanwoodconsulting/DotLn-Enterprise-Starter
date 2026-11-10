@@ -27,14 +27,17 @@ first line says, and is read as evidence, never as direction. A second
 message at 22:27Z said the update pull request was merged.
 
 After the first handoff, at 01:36Z on 2026-11-10, the operator sent six
-messages between 02:12Z and 02:37Z that correct the pass. Their own words
-are in a second capture, `docs/intake/notes/planning-2026-11-09-answers.md`,
-SHA-256 `4e67c37d95ce583e9ab6bea8161d0d703bb67fc7bfd67a707cdc9dd02b6e0eb5`;
+messages between 02:12Z and 02:37Z that correct the pass, and a seventh at
+04:12Z after the second handoff. Their own words are in a second capture,
+`docs/intake/notes/planning-2026-11-09-answers.md`, SHA-256
+`bb9e6bee3a7f80ceedbea4b67e98388b364224420af5f66801be786abbf85f12`;
 the first of the six quoted the session's own five items, and that whole
 message is kept in the ignored local planning lane as
 `operator-answers-whole-2026-11-09.md`, by D1's rule. One of the six is a
-question by the hook's class and records no rule. The pass acts on all of
-them: D12 to D16 paraphrase each and say what it replaced, and §Rules
+question by the hook's class and records no rule; the seventh quotes one
+sentence of the session's second handoff, which the capture leaves out.
+The pass acts on all of them: D12 to D18 paraphrase each and say what it
+replaced, and §Rules
 recorded names the journal row of each direction written into a standing
 document.
 
@@ -131,9 +134,8 @@ checks.
 
 ## Orders filed and amended
 
-Four orders are filed, ten amended, one removed and one left exactly as
-filed; WO-029 and WO-031 were read and are unchanged. The table is the
-state after the operator's corrections (D12 to D16); what the first handoff
+Four orders are filed, thirteen amended and one removed. The table is the
+state after the operator's corrections (D12 to D18); what the first handoff
 held and withdrew is in §Decisions. Each amended order carries one sentence
 naming this pass and its decision. Drafting workers (`dotln-worker`) wrote
 the proposed texts into the session's scratchpad from the planner's
@@ -146,16 +148,18 @@ moved, and is the only writer of this repository.
 | WO-036 walls and ways | narrowed to scene navigation; takes the scene's one boarded defect; leads the road | D6, D16 |
 | WO-037 shooting and bullets | amended: what a knockout does to a formation; older trials stay readable | D6 |
 | WO-008 authentication and permissions | amended and made executable at `eb9d227` | D4 |
-| WO-024 concept studies V | amended: the `relations` family builder-first, the wiring a new work needs, a control on one criterion; pairs with WO-036 | D5 |
+| WO-024 concept studies V | amended: the `relations` family builder-first, the wiring a new work needs, a control on one criterion, the verifier's research read and the operator's display sizes; pairs with WO-036 | D5, D18 |
 | WO-040 standards pass III | amended: the measured scope, the stream part narrowed to four builder functions and nineteen messages; pairs with WO-037 | D5 |
-| WO-030 research, messaging | amended: the wording rule for a flow state in the authors' brief | D5 |
-| WO-032 research, levels and teams | amended: base, and no standards pass before it | D5 |
+| WO-029 research, streams | amended: the verifier's research read, the operator's display sizes, the search controls' pointer | D18 |
+| WO-030 research, messaging | amended: the wording rule for a flow state in the authors' brief; as WO-029 | D5, D18 |
+| WO-031 research, enterprise patterns | amended as WO-029 | D18 |
+| WO-032 research, levels and teams | amended: base, and no standards pass before it; as WO-029 | D5, D18 |
 | WO-035 every string through the message system | amended: the mechanism, the field list, one title resolver, the fail-closed path | D7, D15 |
 | WO-017 the digital twin's first lane | rewritten to the twin's purpose: within a recorded stage, whether it would have made the operator's interventions | D14 |
 | WO-018 the toy shelf | narrowed to the shelf of the run's nineteen toys | D9 |
-| WO-016 the replay of a recorded order | left byte for byte as filed; a later order | D12 |
+| WO-016 the replay of a recorded order | amended as one order, subject and design kept: beside WO-046's view at `/machinery/replay`, each agent's machinery from core as it stood when the order ran, the filed text's defects fixed | D12, D17 |
 | WO-038 the reading at full size | removed: an order the operator did not ask for | D13 |
-| WO-043 the Art of War map pass | filed, from WO-018 | D9 |
+| WO-043 the Art of War map pass | filed, from WO-018; a verbatim sentence admitted from the public-domain text alone | D9, D18 |
 | WO-044 find the studies | filed | D10 |
 | WO-045 the grid family and the A* study | filed, from WO-036 | D6 |
 | WO-046 the machinery view: what core has | filed | D12 |
@@ -370,30 +374,16 @@ and no way to choose one, which the app does not have (`availableLangs` is
 English alone). Rejected: the committed generated catalogs. Reopen: the
 operator wants the mined English in translation files as well.
 
-### D8. WO-016 stays as filed
+### D8. WO-016 is one order and is not split
 
 The first handoff split WO-016 in two (its page of beats and agent cards,
-and a new WO-042 for the ideas dropped on agents and the idea sink) and
-amended both against the target. The operator's answers withdrew that
-(D12): WO-016 is their planned later order, the replay of a recorded work
-order, and this pass does not edit it. The file is byte for byte the text
-on `main`, WO-042 is deleted before any merge, and WO-016 keeps its place
-in the sequence behind the machinery view and the twin. Its text still
-names the scaffold commit as its base and carries the staleness the
-research found (the list is in the reviews' and workers' records of this
-pass, not applied); the pass before it activates makes those amendments
-with the operator, as an amendment of their order and never a redesign.
-One of them is written here because it makes a criterion unmeetable as
-filed: criterion 2 holds seven gaps within one second of one-decimal
-minute figures, and at core `49d8c4c3` five of the seven differ from those
-figures by 1.5 to 2.8 seconds (both rounds' reviews reproduced it); the
-amendment derives the expectations from the record's own stamps. A second
-is the second refuter's: WO-016's text adds a library and removes a page
-that WO-046, ahead of it, will already have added and removed, and both
-name `/machinery`; the amendment says where the replay sits beside the
-view (§Validation, the second refutation).
-The index prints one criteria advisory for it, a size figure in its
-criterion 5, which stands with the text.
+and a new WO-042 for the ideas dropped on agents and the idea sink). The
+operator's answers withdrew that (D12): WO-016 is their planned later
+order, the replay of a recorded work order. WO-042 is deleted before any
+merge. The second handoff then restored WO-016 byte for byte and left its
+amendment for the pass before it activates; the operator refused that as
+well (D18), and D17 amends it here, as one order, its subject and design
+kept.
 
 ### D9. WO-018 is split into the toy shelf and the Art of War map pass
 
@@ -440,9 +430,8 @@ nobody can see). Reopen: none; the order is the response.
 
 Four orders named the scaffold commit `bc9133e`, an empty tree, as their
 base, on the rule that the pass before each activates sets it; WO-035 to
-WO-037 sat four merges behind and WO-032 five. Every order this pass
-amended or filed now names `eb9d227`; WO-016 alone keeps the scaffold
-commit, because its text is left as filed (D8). The target publish still
+WO-037 sat four merges behind and WO-032 five. Every open order now names
+`eb9d227`. The target publish still
 describes a change from the merge base, so a base that ages is harmless,
 and an empty one is not: a criterion that compared with the base compared
 with nothing.
@@ -450,7 +439,7 @@ with nothing.
 The same rule had the road orders' amendments wait for the pass before
 WO-016 activates, and the register carried them as a deferred row from
 2026-10-30 while the order they waited on moved back. This pass made them
-for WO-008, WO-017 and WO-018 (D4, D14, D9); WO-016's wait with its text.
+for WO-008, WO-017, WO-018 and WO-016 (D4, D14, D9, D17).
 Rejected: keeping every amendment for the pass before each order activates
 (the saving is one re-read if the workspace moves; the cost was orders that
 could not have run on the day the operator chose them). Reopen: an amended
@@ -474,6 +463,13 @@ pass had been asked to catch the earlier plans' momentum and carried it
 instead on these: the corrections are the operator's, in their words, and
 they replace sentences the records had held since 2026-10-24 (§Rules
 recorded).
+
+The second handoff, at 04:09Z, pushed those corrections and left two
+things open on purpose: WO-016 beside WO-046, to be settled by an
+amendment before WO-016 activates, and the refuters' known issues, to
+stand until a later pass amends the order each names. The operator's
+seventh message refused both: one pass does what one pass can, and nothing
+on an unmerged branch is fixed. D17 and D18 are the answer.
 
 ### D12. The machinery view is a view into what core has; the replay is a separate, later order
 
@@ -531,10 +527,9 @@ direction was for. The two register rows for the delayed rounds return to
 deferred against WO-023, with nothing combined, and the row a 2026-11-05
 allocation had given WO-038 is declined (§Register). Nine open orders said
 that a delayed round goes to a separate pass that takes it; each now says
-what rule 25 says, that the round stays the order's own criterion. The orders of this pass
-already take their walkthrough screenshots and their end-to-end overflow
-checks at the operator's two viewports beside the others, which is the
-direction as given. Rejected: keeping WO-038 last in the sequence (an order
+what rule 25 says, that the round stays the order's own criterion. The open orders take their walkthrough screenshots and their end-to-end
+overflow checks at the operator's two viewports beside the others, which
+is the direction as given; five study orders did not until D18. Rejected: keeping WO-038 last in the sequence (an order
 nobody asked for, in a plan the operator reads). Reopen: the operator asks
 for the reading's layout at their sizes.
 
@@ -592,15 +587,110 @@ operator's word, and the run's remaining scene toys after the shelf.
 Rejected: a third scene order invented by the pass (no direction names its
 subject). Reopen: the operator names the next scene improvement.
 
+### D17. WO-016 is amended in this pass, as one order, beside WO-046
+
+WO-016 keeps its subject and its design: one recorded order as a strip of
+beats, the four role slots and the operator's figure, the hand-back cards,
+a refilled slot's ghost, an agent's card, the operator's own ideas as
+mechanism changes dropped on an agent with the before as a ghost, the
+presentation-only band, a refused drop kept visible, the idea sink, and the
+records and replay libraries. It is not split. What changes is what it
+needed in order to run after WO-046 and what the filed text had wrong:
+
+- **Beside the view.** The replay is a second route of the machinery
+  feature, `/machinery/replay`, with a Replay item in the Machinery menu
+  group; `/machinery` stays WO-046's. It extends the two machinery
+  libraries and WO-046's two documents under its own names (`replay-page`,
+  `ReplayFacade`, `ReplayStore`, the storage key `machinery.replay`, its
+  own e2e spec) and takes WO-046 as a hard edge. This answers the second
+  refuter's finding on both orders.
+- **The machinery at the time.** The filed text read each agent's
+  mechanisms from a file hand-copied from this launchpad's role skills on
+  the day WO-016 activates, which is the fork's machinery at a later
+  starter. The operator's direction is the machinery each agent had when
+  the order ran. Core's `main` at the last commit before each recorded
+  order's first row (`8bbdcbff` for WO-221, `55699291` for WO-226; core
+  took no commit while either ran) publishes the files WO-046's miner
+  reads, in the shape they have at its pin (checked by this pass: three
+  host profiles, 33 installed surfaces, six role skills). So the miner
+  writes one snapshot per recorded order and the agent's card reads its
+  role there, with core's own statement for each mechanism. Criterion 3
+  becomes the snapshots' reproduction and a verifier's read of the stamps
+  at both commits. The miner's tag becomes optional and it reads an input
+  directory a commit lacks as empty, both written into WO-046.
+- **What the snapshots say about the idea kinds.** At both commits no
+  role's stamp carries a gem: core declares one active mechanic,
+  `clean-room`, and no role carries it; the executor carries eight supports
+  and every other role two. So removing a gem is refused with that reason
+  and adding one shows `clean-room`. One kind's signature changes: the
+  filed `setRung(n)` named no mechanism, and a rung on core's hierarchy
+  ranks a mechanism, so it is `setRung(id, n)`.
+- **Defects of the filed text**, each fixed as this pass's first round had
+  verified against the target: the base, an empty tree; the gaps held
+  within one second of rounded figures, now asserted from the rows' own
+  stamps; the copies under a testing entry point that the production build
+  excludes, now production data loaded lazily; a scrub that refused the
+  commit and the repository it must write; rows that carry no ordinal,
+  which the reducer now numbers; the sink's settings as environment
+  variables the workspace refuses, now flags; the sink's missing answer to
+  the browser's preflight and its missing refusal of a control directory;
+  a criterion that read a directory no step creates; and the conventions
+  of rules 9, 24, 25 and 29.
+
+Rejected: leaving the amendment for the pass before WO-016 activates (the
+second handoff's choice, which the operator refused: D18); splitting the
+order (the first handoff's choice: D8); keeping the launchpad's role stamps
+as the source (two models of one thing in one feature, and not the
+machinery at the time); a top-level route with a feature library of its
+own (that library may not import the one that holds the snapshots: rule
+15). Reopen: the operator wants the replay's page somewhere else, or a
+reading of gem and support other than core's own.
+
+### D18. Nothing this pass can settle is left for another
+
+The operator, after the second handoff: a planning pass settles in itself
+everything it is able to settle, and nothing on a branch that has not
+merged is fixed. The second handoff had recorded the two refutations' known
+issues as standing until a later pass amends the order each names, and had
+left WO-016 beside WO-046 for an amendment before WO-016 activates. That
+is two passes for the work of one, and it is undone here: every item is
+amended now, or is answered with the reason no text can settle it. The
+reviews and the refutation then ran again on the result (§Validation, the
+third round).
+
+| Item, and where it was recorded | What this pass did |
+| --- | --- |
+| WO-016 and WO-046 both adding one library, removing one page and claiming `/machinery` (receipt 027) | amended: D17 |
+| WO-016's base, its unmeetable criterion on the gaps, its fixtures outside the production build (the two reviews; D8 as it stood) | amended: D17 |
+| WO-043's field for a verbatim sentence open to batches from sources in copyright (receipt 027) | amended: `check-catalog.mjs` admits a `maxim` on the Art of War batch alone, a control proves the refusal, and each of the six designers confirms that nothing it returns carries a passage of its source |
+| WO-024 without a verifier's read of the research (receipt 027) | amended, and in WO-029 to WO-032 as well, which the refuter did not judge and which lacked it too: rule 27's random sample, its command and the judgment are in each use criterion |
+| WO-030's walkthrough without the operator's two display sizes (receipt 026) | amended in all five study orders: the walkthrough's screenshots and the end-to-end overflow check run at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620, and a UI issue at either full size fails (rule 29). D13 had claimed every order of this pass already did so; five did not |
+| WO-024, WO-030 and three more naming WO-018 for the catalog's search controls (receipt 026) | amended in the five: no order carries them, and the register row is named |
+| WO-036's cost tools passing while changing nothing visible (receipt 027) | amended: criterion 5 holds a spec in which a travel weight raises the search's expansions with the route unchanged, and the two rows that weigh only the uniform layers are shown changing nothing, the inspector saying which in words |
+| WO-008's storage check passing on an empty list once the candidate is committed (receipt 027) | amended: the check reads the two shell directories whole, which hold no storage call at `eb9d227` |
+| WO-017's exported stages in a build that is not production (receipt 027) | amended: criterion 2 holds both published configurations; the order says the local configurations serve the ignored directory on the operator's machine, which is how the page reads a stage, and that no workflow publishes a build |
+| WO-035 replacing a reading with a failure page on a missing message (receipts 026 and 027) | answered, no amendment: its criterion 3 already holds every listed field of every row of every bundled work to a derived key, so in the shipped language a derived message cannot be missing; failing closed is WO-028-D054's recorded decision for what remains |
+| WO-035's registration time and memory compared with nothing (receipt 027) | answered, no amendment: the kit's criteria screen refuses a duration or a size as a criterion's subject; step 12 records the figures |
+| WO-040 reshaping four builder functions while forty study modules are a non-goal (receipt 026) | answered, no amendment: the four are private to `flow.ts` and `rxjs/marbles.ts` at `eb9d227` (no other module calls them), so the reshape touches no study module |
+| WO-040 with no lint keeping the shape rule (receipt 026) | answered, no amendment: the order rejects a parameter-count lint on WO-028-D060's recorded reason, and new families are built builder-first (D3) |
+| WO-045 and WO-043 each adding a schema version with none retired (receipt 026) | answered, no amendment: the target's own rule changes a shipped record's shape by a new version and never by an edit (`catalog.md` §The record) |
+| WO-043 leaving twenty-five designed toys and one built (receipt 027) | answered, no amendment: an order that builds a toy takes the operator's pick from the shelf, and the shelf is WO-018's to land |
+| WO-008 judged by every receipt and not yet run (receipt 026) | answered: it is the third road order of the sequence (D2) |
+
+Rejected: recording these for the next pass (the operator refused it, and
+seven of the amendments are a few sentences each).
+Reopen: none; a later pass that finds one of these unsettled reads this
+table first.
+
 ## Register
 
 The register was synced before the dispositions (no public source had
-changed its rows) and six batches applied: two before the first handoff and
-four after the operator's corrections, which also restate three reasons the
-first two had recorded. The batches are kept in the ignored local lane as
+changed its rows) and seven batches applied: two before the first handoff, four
+after the operator's corrections, which also restate three reasons the
+first two had recorded, and one after the second handoff. The batches are kept in the ignored local lane as
 `docs/control/local/planning/followups-apply-2026-11-09.json` and its
-siblings `-b` to `-f`. The register stands at revision `25817295…` with
-thirty-eight rows pending, all deferred. The table gives each row's
+siblings `-b` to `-g`. The register stands at revision `da0db232…` with
+thirty-seven rows pending, all deferred. The table gives each row's
 disposition as it stands; a row this pass disposed more than once keeps its
 earlier dispositions in the register's own history.
 
@@ -610,7 +700,7 @@ earlier dispositions in the register's own history.
 | `FUP-4e24208e45d27a1d` (WO-034-D013, the wall study's two gaps) | **allocated** to WO-045, moved from WO-036, which the split leaves no file under the Tools feature (D6) | WO-045's verification finds the moments out of order or the traces unreadable |
 | `FUP-592e538095eaead9` (a link from the scene's inspector to a tool's study) | **allocated** to WO-045, moved from WO-036 with the link (the consistency review's finding) | WO-045's verification finds a rail tool with a study and no link |
 | `FUP-35187266d29e00dc` (WO-026-D012, the documents that describe the `/machinery` placeholder) | **allocated** to WO-046, the order that replaces the placeholder, whose documents step carries them (D12) | WO-046's final review finds one still describing the placeholder |
-| `FUP-2ed0c79e62b53dd7` (the amendments owed to the four road orders since 2026-10-30) | **deferred**, narrowed to what remains: WO-008, WO-017 and WO-018 are amended and name `eb9d227` (D4, D14, D9); WO-016 is left as filed, so its base and its staleness wait (D8, D11) | the pass before WO-016 activates, or an amended road order is found stale before it activates |
+| `FUP-2ed0c79e62b53dd7` (the amendments owed to the four road orders since 2026-10-30) | **settled**: WO-008, WO-017, WO-018 and WO-016 are amended in this pass and name `eb9d227` (D4, D14, D9, D17) | an amended road order is found stale before it activates |
 | `FUP-02c1ebe8146fe2f1` (WO-023-D008, the `states` family's delayed rounds) | **deferred** as what it is, a criterion of WO-023 delayed for want of time, with nothing combined into it (D13) | the operator has the time for those rounds and says so |
 | `FUP-5af094bffcaf27ef` (WO-039-D011, the narrow register's headings) | **deferred**: judged when WO-023's rounds run and the register table stays (D13) | WO-023's rounds have run and kept the register table |
 | `FUP-400988852956edcf` (the mining store and the app's API) | **deferred** on its own condition. The reason the first handoff recorded, a limit of the platform's records, is withdrawn: the mechanisms are core's own and the app reads them from core (D12) | the operator names the next public source after WO-043, or the committed copies limit a toy |
@@ -624,12 +714,13 @@ Rows read and left as they stand: `FUP-11889720fb205fb0` and
 waiting for the pass filed after WO-031's batch lands, D3 and the NoOp on a
 `states` builder); `FUP-1f5953e14b1077b4` and `FUP-70df0fbdafe8c2d6` (the
 work view and the arrival screen, the first pages of a UI to live in, both
-behind the machinery view); `FUP-deccd7ed510d2b77` (the pattern workshop's
+behind the machinery view, the first now naming WO-046 as that view);
+`FUP-deccd7ed510d2b77` (the pattern workshop's
 seeing half, allocated to WO-016 on 2026-10-24, which stands with that
 order's text); `FUP-dfb896b07eb669e5` and `FUP-cc72e6b1…` (the shell's and
 the board's look and loading shift, carried by no order and candidates
 until the operator asks); `FUP-48b1009d…` (the board under the machinery
-routes, its condition left as written); `FUP-29ad2938…` (the twin's later
+routes, its condition now naming WO-046); `FUP-29ad2938…` (the twin's later
 lanes); `FUP-49579a76…` (the run's remaining toys, after the shelf); and
 the kit and close rows of the earlier passes, whose conditions did not
 occur in a window with no order run.
@@ -654,8 +745,7 @@ reevaluation and usefulWhen. No automatic schedule is created by this record.
 
 | Candidate (kind: NoOp) | reason and evidence | reevaluation | usefulWhen |
 | --- | --- | --- | --- |
-| Leaving the sequence and the orders as they stood | The operator named no change as a valid result, and the evidence does not support it: no road order since 2026-10-30, four orders on an empty base, two orders holding several outcomes (WO-036, WO-018), criteria or steps that could not run as written in WO-008, WO-018 and WO-035, and two orders the operator's corrections showed to be the wrong order or the wrong reading (WO-017, WO-038) (§Readings; D2 to D16) | not applicable; the changes are this pass | — |
-| Amending WO-016 | It is the operator's planned later order and is left byte for byte as filed; what the research found stale in it waits for the pass before it activates, made with the operator (D8, D12; `FUP-2ed0c79e62b53dd7`) | the pass before WO-016 activates | The replay is next |
+| Leaving the sequence and the orders as they stood | The operator named no change as a valid result, and the evidence does not support it: no road order since 2026-10-30, four orders on an empty base, two orders holding several outcomes (WO-036, WO-018), criteria or steps that could not run as written in WO-008, WO-018 and WO-035, and two orders the operator's corrections showed to be the wrong order or the wrong reading (WO-017, WO-038) (§Readings; D2 to D18) | not applicable; the changes are this pass | — |
 | A third scene order | The operator wants more improvements to the scene and no direction names the next one after walls and shooting; the pass invents none (D16) | the operator names it | The scene's next improvement has a subject |
 | An order that re-lays the reading for the operator's display sizes | The operator asked for none; their direction concerns the viewports of screenshots and end-to-end runs, which the orders carry (D13) | the operator asks for it | — |
 | An order for WO-023's delayed rounds | They are WO-023's own criterion and need the operator's time, not a new order (D13; `FUP-02c1ebe8146fe2f1`) | the operator has the time and says so | — |
@@ -693,7 +783,7 @@ What the operator sees after each order lands:
 | WO-035 | nothing changed in English; every string arriving through the translator, none hard-coded in the TypeScript, a missing one a visible failure |
 | WO-046 | at `/machinery`, what core has at a named commit: its roles, mechanisms, hosts and installed surfaces by level; a relation followed from a role to a mechanism to the surfaces that carry it; per host, whether a hook enforces a mechanism, advises or only role text carries it; the gaps as three lists |
 | WO-017 | at `/twin`, one recorded stage's events in order, their own interventions marked where they came and a variant's beside them, each matched, missed or extra |
-| WO-016 | the replay of a recorded order, as filed: its agents and how they interacted given their machinery at the time, and what a change in that machinery would have changed |
+| WO-016 | at `/machinery/replay`, one recorded order as a strip of beats with its agents in their role slots, each agent's card showing the machinery it had as core stood when the order ran, and an idea of their own dropped on an agent with the before as a ghost |
 | WO-018 | nineteen toys read in full on a shelf under Tools, their tools followed into the catalog |
 | WO-043 | The Art of War on the catalog's shelf with its maxims; six new toys on the toy shelf |
 | each research order | twenty more studied concepts in its work's landed family |
@@ -713,14 +803,15 @@ What the operator sees after each order lands:
 - WS-002: rule 6's gate (D3); WO-032's row and the dependency sentence.
 - The operator record: the items on design comparisons, on text that is
   never hard-coded, on the display sizes, on the machinery view and the
-  separate replay, on the twin's purpose, on the scene and on the WoW
-  tooling app, each from a journaled message (§Rules recorded).
+  separate replay, on the twin's purpose, on the scene, on the WoW
+  tooling app and on settling in one pass what one pass can, each from a
+  journaled message (§Rules recorded).
 - The purpose: the machinery view's phrase (D12).
 - The repository profile: its §Run content workers names WO-043 where it
   named WO-018 for the two fan-outs (D9), and its note on WO-023's first
   round follows rule 25 as restated; the target has not moved.
-- The ten amended orders, the four filed and the one removed (§Orders filed
-  and amended). In nine open orders the clause on a delayed round no longer
+- The thirteen amended orders, the four filed and the one removed (§Orders
+  filed and amended). In nine open orders the clause on a delayed round no longer
   names a separate pass that takes it (D13).
 - The follow-up register (§Register); the generated work-order index and
   decision index; the idea ledger's registration heading and the lineage
@@ -728,6 +819,8 @@ What the operator sees after each order lands:
 - Owed in the target, carried by orders: `catalog-rules.md`'s sentence on
   standards passes (WO-040's step); the documents that describe the
   `/machinery` placeholder (WO-046's step).
+- `docs/control/doc-baseline.json`: one declared historical link, from the
+  2026-11-05 pass's record to the removed WO-038's file (D13).
 
 ## Rules recorded
 
@@ -904,6 +997,16 @@ What the operator sees after each order lands:
       "recordedAt": "2026-11-10T02:12:55.800Z"
     },
     "captureDigest": "sha256:2e85ed3ea4c02094b44c9c8d44aa3d892bb1574aed41f0e795317438c2b59c44"
+  },
+  {
+    "rule": "A planning pass settles in itself everything it is able to settle: it leaves no amendment, repair or decision for a later pass that it could make now, and treats nothing on an unmerged branch as fixed.",
+    "document": "docs/operator/README.md",
+    "section": "How the operator directs a session",
+    "message": {
+      "sessionKey": "172b0e3a92c4b7039c5a12a3abcc1c59f021ebbb509c3b38993c2f31b266b8f4",
+      "recordedAt": "2026-11-10T04:12:34.326Z"
+    },
+    "captureDigest": "sha256:9acd06f09b68b19e8af161046c0179a911ba11e5c9d9aecfbc927e7bb59b5414"
   }
 ]
 ```
@@ -913,7 +1016,7 @@ What the operator sees after each order lands:
 The dispatch gave no standing rule; rule 31 and WS-002 rule 6 were narrowed
 to the direction the record already holds, and what they add is written as
 planning judgment. The entries above come from the operator's messages
-after the first handoff (D12 to D16): each states a direction in the scope
+after the two handoffs (D12 to D18): each states a direction in the scope
 the operator gave it, and three of them replace sentences the record had
 carried since 2026-10-24 that the operator's own words do not support.
 
@@ -944,6 +1047,8 @@ From DotLn-Enterprise-Starter's planning pass of 2026-11-09, docs/planning/passe
 8. Observation on the document check's time: on the planning subject (23 changed files against 260 captures) the docs-check task of test:docs, which holds the verbatim screen, ran 0 h 8 min; on the update branch the whole of test:docs had run in 0 h 1 min. Nothing asked beyond noting it for the screen's cost line.
 
 9. Observation and asks on removing a filed order that never activated. The operator's corrections after this pass's first handoff removed one, WO-038, filed on 2026-11-05. npm run resume -- withdraw refuses it as an unknown work order, since it has no event, and npm run work-orders -- index --check refuses an open order outside the sequence, so the route left was deleting the file. npm run plan -- followups --apply then refused the batch that re-disposed the register row allocated to that order, with "allocation target WO-038 has no filed work order": the register is judged as it stands before the batch is applied. The fork applied the batch with a one-line stand-in file present and removed it, as it had earlier the same day when it renumbered a new order. Asks: a planning route that withdraws a never-activated order with a recorded reason, and a batch judged on the register it produces.
+
+10. Observation and ask on what a pass does with a refuter's known issues. The receipt design records a known issue with a reopening observation, and the planner's role text has the receipt freeze the judged text, so this pass's second handoff listed nineteen known issues as standing until a later pass amends the order each names, though most were a few sentences' work or already answered by the orders' own text. The operator refused that: a pass settles what it can and nothing on an unmerged branch is fixed. The fork amended them and ran the review and the refutation a third time. Ask: have the planner's role text say that a known issue the pass can settle is amended before the handoff and re-judged in pass scope, and that only an issue no text can settle is recorded with its reopening observation.
 ```
 
 ## Process cost
@@ -1102,9 +1207,8 @@ dispatch to file. Its statement says the subject marks the vision, the
 roles document and the capability table unavailable, which this instance
 does not have, so the judgment rests on the goal rules and the purpose, and
 that every cost row of the horizon has no metrics, the orders not having
-run. It recorded twelve known issues, ten distinct. The receipt freezes the
-orders' text, so each stands here with its reopening observation until a
-later pass amends the order it names:
+run. It recorded twelve known issues, ten distinct; the table keeps what the
+refuter recorded, and D18 says what this pass did about each:
 
 | Order | Known issue | Reopens when |
 | --- | --- | --- |
@@ -1121,7 +1225,8 @@ later pass amends the order it names:
 
 Receipt 026 judged the subject before the corrections. Its two issues on
 WO-038 fell with that order, and its issue on WO-018's link is answered:
-the toy is shown as designed, with no link (D14). The others stand.
+the toy is shown as designed, with no link (D14). The others are settled
+in D18.
 
 ### The second refutation
 
@@ -1133,9 +1238,8 @@ else, judged the corrected subject. Receipt
 sequence judged and the unchanged verdicts carried, 0 h 12 min. Its
 statement repeats the first's limits: the vision, the roles document and
 the capability table are unavailable in this instance, and no cost row has
-metrics. It recorded ten known issues, nine distinct. The receipt freezes
-the orders' text, so each stands here with its reopening observation until
-a later pass amends the order it names:
+metrics. It recorded ten known issues, nine distinct; the table keeps what
+the refuter recorded, and D18 says what this pass did about each:
 
 | Order | Known issue | Reopens when |
 | --- | --- | --- |

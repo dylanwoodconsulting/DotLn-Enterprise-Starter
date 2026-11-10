@@ -23,7 +23,7 @@ pair run one at a time.
 
 - WO-017 — The digital twin: would it have stepped in where the operator did
 
-- WO-016 — The machinery view
+- WO-016 — The replay of a recorded order
 
 - WO-018 — The toy shelf
 
