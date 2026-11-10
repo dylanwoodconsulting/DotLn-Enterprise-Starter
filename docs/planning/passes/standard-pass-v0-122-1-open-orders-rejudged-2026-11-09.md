@@ -29,10 +29,10 @@ message at 22:27Z said the update pull request was merged.
 After the first handoff, at 01:36Z on 2026-11-10, the operator sent six
 messages between 02:12Z and 02:37Z that correct the pass, a seventh at
 04:12Z after the second handoff, five between 05:03Z and 05:23Z while
-the third round ran, and ten between 05:32Z and 05:37Z after the third
-refutation. Their own words are in a second capture,
+the third round ran, and sixteen between 05:32Z and 05:39Z after the
+third refutation. Their own words are in a second capture,
 `docs/intake/notes/planning-2026-11-09-answers.md`, SHA-256
-`69dbb34f19a4bb4c689800070ccd5049b4269fef7b0db1fb0e9f322cf7ce1c05`;
+`e880d44a0999f4e8e90611346a37e04c9c40ad29e6568680970b9f3ba36107c2`;
 the first of the six quoted the session's own five items, and that whole
 message is kept in the ignored local planning lane as
 `operator-answers-whole-2026-11-09.md`, by D1's rule. One of the six is a
@@ -493,7 +493,7 @@ decision in each order's record citing the operator's direction and `plan
 amend-order` (§Validation). The planner also started a fourth review that
 nothing required and, when the operator asked what was happening, stopped
 it instead of answering; the operator had asked a question and not for a
-stop. No reviewer or refuter has read those five amendments.
+stop, which is the rule the kit carries for an operator's question. No reviewer or refuter has read those five amendments.
 
 ### D12. The machinery view is a view into what core has; the replay is a separate, later order
 
@@ -1149,7 +1149,15 @@ two directories of review reports and refutation prompts that earlier
 sessions wrote there and that quote the orders' own text; for each such
 run the screen proves that the repository held it at the base with one
 search of the whole base tree, 7,976 searches here. Core's WO-261 already
-leaves session files out of the captures, so nothing is asked of core. One cost is carried forward and not measured: the amended orders
+leaves session files out of the captures, so nothing is asked of core. On
+the operator's question whether this was fixed, the session-written files
+(review reports and logs, refutation prompts and results, pull-request
+bodies, register batches; 84 entries) were moved out of `docs/intake/`
+into the ignored local lane, `docs/control/local/intake-session-2026-11-10/`,
+where the screen does not read them; the operator's own captures stay
+under `docs/intake/notes/`. The branch's matched runs fell from 9,606 to
+17. The 2026-11-01 pass's record and receipt 023 name two of the moved
+directories by their old paths. One cost is carried forward and not measured: the amended orders
 are longer than the ones they replace (WO-008 from 31,511 to 54,533 bytes), which an executor pays in context at activation.
 
 Compared with the alternative the operator named, a pass that changed
