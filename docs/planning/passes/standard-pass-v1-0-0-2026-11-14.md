@@ -247,11 +247,12 @@ the operator's, given in core's session on 2026-11-09 and cited by product
 file at its root, each final review and planning pass appends to it, a pass
 writes no block for core in its document, and nothing leaves the instance
 unless the operator carries it. The planner's root says the same, and the
-pass follows it. `FOR-CORE.md` gains three entries, none of which stops the
+pass follows it. `FOR-CORE.md` gains four entries, none of which stops the
 next order: the harness manifest in an update's merge (D2); the re-keyed
-register rows (D4); and a flag that the executor's root names for the run
+register rows (D4); a flag that the executor's root names for the run
 after a failed run and that the target gate refuses, read in the kit's code
-and answered here by a sentence in the profile. The record's item is
+and answered here by a sentence in the profile; and a review report the
+helper refused for the form of its Items table (§Validation). The record's item is
 rewritten to state the kit's route, where the kit says it came from and
 what it replaced. What the item said about reading core's earlier text
 against the current records, about ideas from the app going as issues, and
@@ -500,7 +501,7 @@ untouched, and WO-024's fan-out now names workers the new kit has.
   which an update no longer does by merging.
 - `AI-HARNESS-SECURITY.md`: the two cells that recorded Copilot as reading
   this launchpad's generated registration, now that it is not elected.
-- `FOR-CORE.md`: three entries (D5).
+- `FOR-CORE.md`: four entries (D5).
 - The seven amended orders (§Orders filed and amended).
 - The follow-up register (§Register); the generated work-order index and
   its record of workstream observations; the idea ledger's registration
@@ -530,5 +531,49 @@ no message that gives either.
 
 ## Process cost
 
+PROCESS-COST-PENDING
+
 ## Validation
 
+### The three reviews
+
+The criteria adversary, the design improver and the consistency reviewer
+ran over the committed subject at `63e7038` (tree `c9b8a655`) as Codex
+workers, the instance's `default` for Codex (`gpt-6.1-sol` at `max` as the
+helper launched it; the host printed no readback), through `npm run worker
+-- review --host codex --subject planning`, the three launched together.
+The brief measured 295,141 characters against the helper's ceiling of
+400,000, so each review was one batch: the pass document, the order index
+and the seven amended orders inlined, and the whole branch diff in reach.
+The reports are in the ignored reviews lane,
+`docs/control/local/reviews/planning-2026-11-14-standard-pass-v1-0-0/`, as
+`round-1-design.md`, `round-1-criteria.md` and `round-1-consistency.md`.
+
+`self-review: found 3; fixed 3; recorded 0`
+
+| Review | Time | Tokens | Findings | What changed |
+| --- | --- | --- | --- | --- |
+| design | 0 h 5 min | 1,290,059 | 1, a note | The operator record's rule on reviewing orders before a refutation named the reviewers' model; it names the `default` worker for Codex (D6) |
+| criteria, given the dispatch capture | 0 h 10 min | 2,850,589 | 2, one blocking | Blocking: the two entries this document's §Rules recorded held named the dispatch's journal row for directions the dispatch does not give. The block is empty, and the operator record's two items state the kit's mechanism and the source the kit cites for it (D5). Should-fix: the profile's command for a target-code review lacked its kind and its host; it is runnable as written. The report's Items table answers both parts of the dispatch as acted on |
+| consistency | 0 h 13 min | 6,420,435 | none | Seventeen traced consumers confirmed, among them the register's eleven changes and its totals, the order index's four regenerated Model descriptions, the briefing's reading of the `Rules` heading, the target gate's arguments, the entries for core as the document check reads them, and WO-046's pin, digest, counts and byte inventory read in core's clone |
+
+The ten unchanged orders were not inlined. They stand as the previous
+pass's three review rounds left them, against a target that has not moved,
+and what this pass owed them, a reading of their kit-facing text against
+the new kit, is the third research worker's (§Readings).
+
+### The recheck
+
+The criteria reviewer rechecked the fixed subject at `4a59b6d` (tree
+`559f66e6`), given the capture and its first report: 0 h 9 min, no finding,
+both earlier findings held, and a table answering both parts of the
+dispatch as acted on. The helper refused the report for its form. One
+sentence stands between the report's Items heading and its table, and the
+helper reads only the block directly after that heading, so it took the
+report as having no table. The round records no report; the returned text
+is kept in the lane as `round-2-criteria.refused.md`, and the launch was not
+paid for a second time (the entry is in `FOR-CORE.md`). The reviewer tried
+one bounded probe, which stopped before the test runner started on a host
+error reading the temporary directory, and it claims no test.
+
+VALIDATION-PENDING

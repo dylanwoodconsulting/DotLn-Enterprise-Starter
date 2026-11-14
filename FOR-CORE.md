@@ -102,3 +102,26 @@ Expected: the role text says the flag belongs to the kit's own runner, or
 the target gate takes it and ignores it. Route used: this instance's
 repository profile now says that the target gate takes no other argument
 and that the run after a failed run is the same command.
+
+## 2026-11-14 — planning pass standard-pass-v1-0-0 — the review helper refuses a criteria report whose Items table follows one sentence, as a report with no Items table
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+A criteria recheck of the planning subject, launched through `npm run
+worker -- review` with the dispatch capture, the second round and the first
+round's report to recheck, returned no finding and confirmed both earlier
+fixes after 0 h 9 min. Its report holds an Items section whose table answers
+both parts of the dispatch, with one sentence between the section's heading
+and the table. The helper refused the report as one that has no Items
+table and recorded no report for the round. The table reader takes only the
+block directly after the heading (`tableUnder` in
+`scripts/lib/review-worker.mjs`), so a lead-in sentence reads as no table.
+The refused text was kept in the lane, as this release promises, so the
+judgment was not lost; the round's record was. Expected: the reader takes
+the first table of the section, or the refusal says that text stands
+between the heading and the table; and a report refused for its form can be
+restated by the worker the helper launched, as a session's own worker can.
+Route used: the pass records the round as returned and refused, names the
+kept file, and did not pay for the launch again.
