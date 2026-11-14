@@ -255,12 +255,14 @@ the operator's, given in core's session on 2026-11-09 and cited by product
 file at its root, each final review and planning pass appends to it, a pass
 writes no block for core in its document, and nothing leaves the instance
 unless the operator carries it. The planner's root says the same, and the
-pass follows it. `FOR-CORE.md` gains four entries, none of which stops the
+pass follows it. `FOR-CORE.md` gains five entries, none of which stops the
 next order: the harness manifest in an update's merge (D2); the re-keyed
 register rows (D4); a flag that the executor's root names for the run
 after a failed run and that the target gate refuses, read in the kit's code
-and answered here by a sentence in the profile; and a review report the
-helper refused for the form of its Items table (§Validation). The record's item is
+and answered here by a sentence in the profile; a review report the helper
+refused for the form of its Items table; and a core-only suite that a
+review worker chose for its probe, which fails in an instance and says
+nowhere that it is core's (both §Validation). The record's item is
 rewritten to state the kit's route, where the kit says it came from and
 what it replaced. What the item said about reading core's earlier text
 against the current records, about ideas from the app going as issues, and
@@ -410,7 +412,9 @@ it narrows. By the operator's direction that a pass settles what it can,
 each issue is repaired now or answered with the reason no text settles it.
 A repair is the criterion's text alone, bound to the receipt with `npm run
 plan -- dispose`, which takes a known issue's identifier from this release
-on; the plan check reads the seven as disposed criteria.
+on; the plan check reads the seven as disposed criteria. The repairs came
+after the three reviews, so the pass's third review round read the five
+repaired orders and found nothing (§Validation).
 
 | Order and criterion | Known issue | What this pass did |
 | --- | --- | --- |
@@ -555,7 +559,7 @@ untouched, and WO-024's fan-out now names workers the new kit has.
   which an update no longer does by merging.
 - `AI-HARNESS-SECURITY.md`: the two cells that recorded Copilot as reading
   this launchpad's generated registration, now that it is not elected.
-- `FOR-CORE.md`: four entries (D5).
+- `FOR-CORE.md`: five entries (D5).
 - The seven orders amended before the refutation, and after it the seven
   criteria repaired in five orders (§Orders filed and amended), each repair
   bound to the receipt by a disposition in the planning log,
@@ -605,9 +609,10 @@ them, with no host readback.
 | The three reviews | launched together, the last report 0 h 13 min after the launch; 1,290,059, 2,850,589 and 6,420,435 tokens | the reports' headers |
 | The recheck | 0 h 9 min; tokens unknown, the refused report keeping no header | the helper's line |
 | The refutation | 0 h 13 min from dispatch to file, the judgment 0 h 10 min of it; 148,991 tokens at its first return and 153,610 after the restated statement | the receipt; the host's task notifications |
-| The gates | `npm test` once and `npm run test:docs` twice before this section's commit, 0 h 1 min each; the run on that commit follows it | the gate logs |
-| This session's tokens | 159,344,746 at 21:25Z (582 input, 157,999,950 cached input, 933,478 cache-write, 410,736 output); cost unknown, the counter is unavailable | `node scripts/harness.mjs usage ea774e0b-ba63-49ba-967a-e4e3f0b845fb`, source the transcript's message usage, scope dispatch |
-| Workers | 8 launches and 1 re-task of a cap of 40 (Claude 4, Codex 4) | the same readback |
+| The third round | one combined worker, 0 h 11 min; 4,996,047 tokens; returned 2 h 1 min after the dispatch (21:48Z) | the report's header |
+| The gates | `npm test` once and `npm run test:docs` three times before this section's last commit, 0 h 1 min each; the run on that commit follows it | the gate logs |
+| This session's tokens | 173,561,700 at 21:51Z (718 input, 171,906,117 cached input, 1,180,194 cache-write, 474,671 output); cost unknown, the counter is unavailable | `node scripts/harness.mjs usage ea774e0b-ba63-49ba-967a-e4e3f0b845fb`, source the transcript's message usage, scope dispatch |
+| Workers | 9 launches and 1 re-task of a cap of 40 (Claude 4, Codex 5) | the same readback |
 
 Four costs were avoidable, and three of them were this session's. Its
 brief to the refuter named the prompt by an absolute path and did not ask
@@ -622,6 +627,9 @@ a table (`FOR-CORE.md`). The largest cost is the session's own context,
 nearly all of it cached input: a release of this size has to be read whole
 before a pass can say what it makes wrong, and the two guides alone gained
 1,948 lines and lost 326 (`git diff --stat` across the update's merge).
+The third round was owed and not avoidable once the repairs came after the
+reviews; leaving it out would have saved 0 h 11 min and one launch and left
+seven criteria read by their author alone.
 
 Compared with taking the release and changing nothing else: that pass
 would have skipped the research, the reviews and most of this session. It
@@ -708,6 +716,40 @@ and the result file compared equal before and after. It recorded fourteen
 known issues, and D10 says what the pass did with each: seven repaired in
 their criteria and bound with `npm run plan -- dispose`, seven answered.
 
+### The third round
+
+The seven repairs came after the three reviews, and the operator record's
+rule has every document a pass changes reviewed; the previous pass left
+the amendments it made after its last receipt unread by any reviewer. So
+one combined review, the three briefs in one worker, read what had changed
+since the tree the first round reviewed, through `npm run worker -- review
+--kind combined --host codex --subject planning --round 3 --since
+c9b8a655…`, on tree `61d56a9d` (commit `45dae5c`). It ran as one Codex
+worker, the instance's `default` for Codex (`gpt-6.1-sol` at `max` as the
+helper launched it; the host printed no readback), with a brief of 357,962
+characters under the ceiling, so one batch held the pass document, the
+receipt and the five repaired orders. It was given no capture, since the
+first round's criteria review answered the dispatch. It took 0 h 11 min and
+4,996,047 tokens and found nothing; the report is `round-3-combined.md` in
+the same lane, and it is the pass's last review, since the guide ends a
+ladder at its third round. Its traced consumers include the seven
+dispositions, whose source and repaired criterion hashes it recomputed;
+the receipt's two files, which agree; the cost table's source hash; the
+fixture row WO-036's criterion 2 names and WO-016's counts, read again in
+the two clones; and the fixture manifests and the kit manifest, which name
+none of the fifteen changed files.
+
+Its one probe, a single bounded test of `scripts/test-lineage.mjs` over the
+regenerated lineage index, stopped in its sandbox before the test runner
+started (the temporary-directory error the recheck met, which core's own
+records report for Codex workers), so it claims no test. The planner ran
+the same command, and it fails on an assertion: the file is core's, listed
+by the test runner as core-only and kept out of an instance's gates, and
+the index it expects links two lineage documents this instance does not
+have. The instance's own check, `node scripts/lineage.mjs index --check`,
+passes. Nothing in the file or the brief says so, and the fifth entry in
+`FOR-CORE.md` says that.
+
 ### The gates
 
 - On the update branch: the host report, `harness check`, `lineage index
@@ -727,7 +769,8 @@ scripts/docs-check.mjs` passes with no run shared with a capture. One run
   no preflight advisory.
 - `node scripts/terms.mjs branch`: 29 changed files, no line in refuse mode
   and none in context mode, so no line was read beside an entry (D3).
-- `npm run test:docs` over the working tree before this section's commit:
-  15 passed, 0 failed, 0 h 1 min. The run on this section's own commit
-  follows it and is reported in the pull request's body and the handoff,
-  since a section cannot record the gate that judges it.
+- `npm run test:docs` over the working tree before the repairs were
+  committed, and on their commit `45dae5c`: 15 passed, 0 failed, 0 h 1 min
+  each. The run on this section's last commit follows it and is reported in
+  the pull request's body and the handoff, since a section cannot record the
+  gate that judges it.

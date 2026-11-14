@@ -125,3 +125,27 @@ between the heading and the table; and a report refused for its form can be
 restated by the worker the helper launched, as a session's own worker can.
 Route used: the pass records the round as returned and refused, names the
 kept file, and did not pay for the launch again.
+
+## 2026-11-14 — planning pass standard-pass-v1-0-0 — a core-only suite run alone in an instance fails on an assertion and says nowhere that it is core's
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+A review worker the helper launched chose `scripts/test-lineage.mjs` for
+its one bounded probe of the regenerated lineage index. Its sandbox stopped
+the wrapper before the runner started, so the planner ran the same command:
+`node scripts/harness.mjs bounded -- node --test --test-name-pattern
+'^current index matches independently counted lead statuses and stays
+outside the product gate$' scripts/test-lineage.mjs`. It exited 1 with
+`ERR_ASSERTION` from a `strictEqual` over the index's line of links, which
+the test renders with links to two lineage documents core has and this
+instance does not. The test runner lists the file as `core-only: core idea
+ledger` and keeps it out of an instance's gates, and the instance's own
+check, `node scripts/lineage.mjs index --check`, passes. Nothing in the
+file, its failure or a review brief says the suite cannot pass here, so a
+worker whose sandbox lets the run start would hold a failing test against
+a change that did not cause it. Expected: a core-only suite run in an
+instance skips and gives its reason, or the review brief names the suites
+an instance's gates run. Route used: the pass read the runner's entry for
+the file and records the probe as one that cannot pass in an instance.
