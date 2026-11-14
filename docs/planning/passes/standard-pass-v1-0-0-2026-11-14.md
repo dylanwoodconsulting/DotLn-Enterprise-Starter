@@ -30,7 +30,7 @@ register, and changing only what the evidence says is now wrong.
 | --- | --- | --- |
 | Launchpad | `main` at `52a0ae7` (#74) at the dispatch, clean; one writer, this session; no order worktree; no open issue or pull request; starter v0.122.1; `Launchpad v0.3.5` the latest release | `git status`, `node scripts/harness.mjs writer --show`, `gh pr list` and `gh issue list` with the repository named, `UPSTREAM.md`, `npm run release -- list` |
 | Upstream | one refresh commit past v0.122.1: `cd8ea69`, starter v1.0.0, core WO-276 at core commit `ed66a822`, released 2026-11-14T19:35:50Z, twelve minutes before the dispatch; fetched into `refs/upstream-releases/v1.0.0` with the ref-specific fetch, so the clone keeps its eight tags | `gh release list` on the starter, `git fetch --no-tags upstream refs/tags/v1.0.0:refs/upstream-releases/v1.0.0`, `git tag -l` |
-| The preview | by the incoming launchpad from a detached worktree: 298 kit files replaced, 53 added, 70 removed, 0 refused, 750 unchanged; no instance action; build snapshot `fnv1a64:985cc33820593ad6` to `fnv1a64:1c29526f5e6dd390`. Above the kit rows it lists five instance files both sides changed since the merge base `fffd0cd`, to be kept at this instance's bytes, and it plans the emitted harness manifest as `re-emitted` where the two previous updates read it refused | `node .runtime/upstream-preview/scripts/launchpad.mjs preview --from refs/upstream-releases/v1.0.0` |
+| The preview | by the incoming launchpad from a detached worktree: 298 kit files replaced, 53 added, 70 removed, 0 refused, 750 unchanged; no instance action; build snapshot `fnv1a64:985cc33820593ad6` to `fnv1a64:1c29526f5e6dd390`. Above the kit rows it lists five instance files both sides changed since the merge base `fffd0cd`, to be kept at this instance's bytes, and it plans the emitted harness manifest as `re-emitted` where the previous update's preview read it refused | `node .runtime/upstream-preview/scripts/launchpad.mjs preview --from refs/upstream-releases/v1.0.0` |
 | The update | merge commit `8c7a090`, with conflicts in three of the five instance files and in the generated harness manifest; the five resolved to this instance's bytes (D1); `npm ci`; `harness emit` 37 surfaces on its second run (D2); the lineage index; `npm run sync`, which regenerated the features page, the order index with its two new records and the follow-up register (D4); committed as `93ef205` | `git diff --cached --quiet main -- <path>` for each of the five; the commands on the branch |
 | The checks on the update branch | `node scripts/doctor.mjs` 0 unmet of 10 rows; `harness check` 37 surfaces; `lineage index --check`; `launchpad verify` 1,101 kit files at `ed66a822`, the one surface this instance's emit writes accepted; `work-orders index --check`; `plan check` with 28 receipts and the four amendments of the previous pass read as before; `npm test` 7 passed, 0 h 1 min; `npm run test:docs` 15 passed, 0 h 1 min, with five advisories on operator-attributed words in records filed before this release; `node scripts/terms.mjs branch` 367 changed files, no line in either mode | the logs in the session's scratchpad |
 | Pull request #75 | opened by `node scripts/launchpad.mjs update --publish --from refs/upstream-releases/v1.0.0` with the operator-request flags naming the capture, admitted on the first try; merged by the operator at 20:08:53Z as `b11ad86` | the helper's output; `gh pr view 75` |
@@ -252,19 +252,23 @@ next order: the harness manifest in an update's merge (D2); the re-keyed
 register rows (D4); and a flag that the executor's root names for the run
 after a failed run and that the target gate refuses, read in the kit's code
 and answered here by a sentence in the profile. The record's item is
-rewritten to state the route with that provenance. What it said about
-reading core's earlier text against the current records, about ideas from
-the app going as issues, and about writing only what core has not already
-answered stands.
+rewritten to state the kit's route, where the kit says it came from and
+what it replaced. What the item said about reading core's earlier text
+against the current records, about ideas from the app going as issues, and
+about writing only what core has not already answered stands.
 
-That rewrite puts into the operator record a direction the operator did
-not type in this session. §Rules recorded names it, and the worker rule of
-D6 with it, against the dispatch's journal row, the message that asked for
-the release which carries both, so that the operator reads them in one
-place and strikes either by removing its entry. Rejected: writing a block
-in this document as well (against the role text, and two routes for one
-thing); leaving the record's item as it was (every role reads it at the
-start of a session and would be told of a route the kit no longer has).
+The rewrite states what the kit does; it records no rule as given in this
+session. The journal of this instance holds one message of the operator's
+in this pass, the dispatch, and that message gives neither this direction
+nor the one of D6, so §Rules recorded is empty. The first draft of this
+document named both there against the dispatch's row, and the criteria
+review refused that as provenance the message does not carry (§Validation).
+The operator restates either direction here, or strikes the alignment, by a
+word in a later session. Rejected: writing a block in this document as well
+(against the role text, and two routes for one thing); leaving the record's
+item as it was (every role reads it at the start of a session and would be
+told of a route the kit no longer has); asking the operator to say again
+here what the kit's own documents record them as having said.
 Not entered for core: the generated operator page's sentence that a release
 is never taken in a planning pass, beside a planner's root that admits it on
 the operator's recorded request, since it made nothing hard here and the
@@ -286,7 +290,10 @@ this instance named what the release removed or will outdate:
   by a word of the dispatch line and by the removed definition. Its
   direction of 2026-11-03 stands as given, the default options and the
   stronger ones only when the operator asks; the mechanism is restated as
-  the kit's table.
+  the kit's table. The record's rule on reviewing orders before a
+  refutation named the Codex reviewers' model, where the direction it
+  records asks for Codex workers and names none; it now names the `default`
+  worker for Codex (the design review's finding).
 - WO-043 named the removed definition for its twelve workers, and WO-024
   reached it through WO-020's authoring and critic procedure, which a
   closed order's text keeps. Both now name the `default` worker unless the
@@ -475,8 +482,10 @@ untouched, and WO-024's fan-out now names workers the new kit has.
   and effort, its mechanism restated as the kit's worker table (D6); the item
   on starter updates, with what the publish does from v1.0.0 (the merged
   revision named, the instance's bytes kept, a second starter revision on
-  one branch refused); and the clause that named the fix dispatch among the
-  runners of the three reviews, which v1.0.0 ended.
+  one branch refused); and, in the rule on reviewing orders before a
+  refutation, the clause that named the fix dispatch among the runners of
+  the three reviews, which v1.0.0 ended, and the reviewers' model, now the
+  `default` worker for Codex.
 - `docs/operator/implementation-guidance.md`: the extension contract, which
   the kit guide now holds, and the worker cap's present figure.
 - WS-001: the heading `Rules` (D8), and in rule 25 what the dispatch bound
@@ -494,8 +503,8 @@ untouched, and WO-024's fan-out now names workers the new kit has.
 - `FOR-CORE.md`: three entries (D5).
 - The seven amended orders (§Orders filed and amended).
 - The follow-up register (§Register); the generated work-order index and
-  decision index; the idea ledger's registration heading and the lineage
-  index; the cost table.
+  its record of workstream observations; the idea ledger's registration
+  heading and the lineage index; the cost table.
 
 On the update branch, and so already on `main`: the regenerated harness
 surfaces, features page, order index with its two new records, and the
@@ -503,37 +512,18 @@ register as the new reader collected it.
 
 ## Rules recorded
 
-Two rules enter the operator record in this pass, and neither is a message
-of this session: each is a direction the operator gave in a session of
-core's, which the release carries and the kit's own documents cite (D5,
-D6). The journal row each entry names is the dispatch, the operator's one
-message here, which asked for that release.
+No rule is recorded from this session: the operator's one message was the
+dispatch, which gives no standing direction. Two items of the operator
+record were aligned with the kit this instance now runs, each stating the
+kit's mechanism and the direction of the operator's, given in a session of
+core's, that the kit's own documents cite for it (D5, D6). They are
+alignments and not entries here, since the journal of this instance holds
+no message that gives either.
 
 <!-- dotln-rules-recorded:start -->
 
 ```json
-[
-  {
-    "rule": "What this fork has learned that core should hear is kept in the root FOR-CORE.md, to which each final review and planning pass appends; a pass writes no block for core in its planning document, and nothing leaves the fork unless the operator carries it.",
-    "document": "docs/operator/README.md",
-    "section": "Updates, the lifecycle and records",
-    "message": {
-      "sessionKey": "a3b438aefb34b66cc266ab21a227cb27b9e86b76c787b194d3695cd201e05c87",
-      "recordedAt": "2026-11-14T19:47:37.247Z"
-    },
-    "captureDigest": "sha256:ff9c3db3880e2ab9f4b07b5e909ee48e28a94fe5d1a33f5ed14ce9a836242098"
-  },
-  {
-    "rule": "No worker definition, hook or role text names a model: a worker a session launches is a name in the instance's worker table, default where the operator names none and advanced, each provider's stronger model, only when the operator asks.",
-    "document": "docs/operator/README.md",
-    "section": "Harness",
-    "message": {
-      "sessionKey": "a3b438aefb34b66cc266ab21a227cb27b9e86b76c787b194d3695cd201e05c87",
-      "recordedAt": "2026-11-14T19:47:37.247Z"
-    },
-    "captureDigest": "sha256:ff9c3db3880e2ab9f4b07b5e909ee48e28a94fe5d1a33f5ed14ce9a836242098"
-  }
-]
+[]
 ```
 
 <!-- dotln-rules-recorded:end -->

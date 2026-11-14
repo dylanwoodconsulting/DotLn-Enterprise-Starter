@@ -202,20 +202,23 @@ contents. Keep a manual total for launches the host cannot observe,
 including descendants; do not interpret a smaller observed counter as spare
 capacity. Workers start no test-runner gate.
 
-For target code, `npm run worker -- review --target dotln-angular --order
-WO-NNN` (since starter v0.118.0, core WO-255) binds the order's base and the
-target worktree's tree, keeps the reviewer read-only in that worktree, counts
-the use and files the report in the launchpad's reviews lane. Without
-`--target` the helper binds its diff and tree to the launchpad checkout: use
-that form for launchpad changes; it is not evidence of a target-code review.
-Since starter v1.0.0 a launch that names no worker runs the instance's
-`default`, and `--model <name>` names another worker or model of its table
-(`npm run worker -- list`). A Codex reviewer goes through the same helper
-with `--host codex`, which runs it under a read-only sandbox; a launcher
-written for the occasion is not that qualification. A reviewer launched
-through the host's own worker route in a Claude session is recorded in the
-same lane with `npm run worker -- record`, under the target identity it
-reviewed, and its use is accounted for.
+For target code, the review helper's target mode (since starter v0.118.0,
+core WO-255) is
+`npm run worker -- review --kind criteria --host codex --order WO-NNN --target dotln-angular`,
+launched once for each reviewer of the round the order's ladder asks for:
+`--kind` is `criteria`, `design`, `consistency` or `combined`, and `--host`
+is `codex` or `claude`. It binds the order's base and the target worktree's
+tree, keeps the reviewer read-only in that worktree, counts the use and files
+the report in the launchpad's reviews lane; the Codex route runs under a
+read-only sandbox, and a launcher written for the occasion is not that
+qualification. Without `--target` the helper binds its diff and tree to the
+launchpad checkout: use that form for launchpad changes; it is not evidence
+of a target-code review. Since starter v1.0.0 a launch that names no worker
+runs the instance's `default`, and `--model <name>` names another worker or
+model of its table (`npm run worker -- list`). A reviewer launched through
+the host's own worker route in a Claude session is recorded in the same lane
+with `npm run worker -- record`, under the target identity it reviewed, and
+its use is accounted for.
 
 ## Find the implementation
 

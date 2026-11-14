@@ -339,19 +339,20 @@ an audience beyond the operator (2026-11-05, journal row
   The kit guide is now `docs/KIT.md`, and `docs/launchpad-readme.md` preserves
   the old links ([WO-025-D014](../evidence/WO-025/decisions.md#wo-025-d014);
   2026-10-30, capture `75779a72…`).
-- **Requests to core:** what this fork has learned that core should hear is
-  kept in the root `FOR-CORE.md`: each final review and each planning pass
-  appends its entries there, a pass marks the ones a taken release
-  answered, and no pass writes a block for core in its planning document.
-  Nothing leaves the fork on its own: an entry says whether it stops the
-  fork's next order with no working route here, the fork asks core only for
-  what does, and which entries are paraphrased or sent to a core planning
-  pass is the operator's choice (2026-11-09, given in core's session,
-  capture there SHA-256
-  `9006bd8cbcdabb5647594adb6893150aaff9e5a8ee74260a4e890e9cba3d69ae`;
-  starter v1.0.0, core WO-276, carries it, and it replaces the paste-ready
-  prompt each pass wrote from 2026-10-19 until then,
-  [the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
+- **Requests to core:** since starter v1.0.0 the kit keeps what this fork
+  has learned that core should hear in the root `FOR-CORE.md`: each final
+  review and each planning pass appends its entries there, a pass marks the
+  ones a taken release answered, and no pass writes a block for core in its
+  planning document. Nothing leaves the fork on its own: an entry says
+  whether it stops the fork's next order with no working route here, the
+  fork asks core only for what does, and which entries are paraphrased or
+  sent to a core planning pass is the operator's choice. Core's WO-276
+  carries this route, and product 07 cites it to a direction the operator
+  gave in core's session on 2026-11-09 (capture there SHA-256
+  `9006bd8cbcdabb5647594adb6893150aaff9e5a8ee74260a4e890e9cba3d69ae`); it
+  replaces the paste-ready prompt that each pass wrote here, by the
+  operator's directions of 2026-10-19 and 2026-10-20, until that release
+  ([the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
   D5). What core wrote earlier, a prompt or an answer, is read against the
   current records, not taken as current (2026-10-19 and 2026-10-20, captures
   `01b3d03564fe733b600083183008b4fb46ee3350ae33469cd379121cc262a177` and
@@ -471,17 +472,18 @@ an audience beyond the operator (2026-11-05, journal row
   its harness's default, an Opus model on Claude and Sol on Codex, and the
   stronger Fable and Astra options run only when the operator asks
   (2026-11-03, given in core's session, capture there SHA-256
-  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f`). No
-  worker definition, hook or role text names a model: the options are rows
-  of the instance's worker table, which `npm run worker -- list` prints
-  with the model and effort each runs, `default` for a launch that names
-  none and `advanced` for each provider's stronger model; a session maps
-  the operator's words to one name, `npm run worker -- show <name>` prints
-  that launch, and a refutation receipt records the worker type it prints
-  (2026-11-11, given in core's session, where core's WO-276-D077 records
-  the direction and its captures; starter v1.0.0 carries the table and
-  removed the two per-model worker definitions,
-  [the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
+  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f`).
+  Since starter v1.0.0 the kit holds the options as rows of a worker table,
+  and no worker definition, hook or role text names a model: `npm run
+  worker -- list` prints the table with the model and effort each name
+  runs, `default` for a launch that names none and `advanced` for each
+  provider's stronger model; a session maps the operator's words to one
+  name, `npm run worker -- show <name>` prints that launch, and a
+  refutation receipt records the worker type it prints. Core's WO-276-D077
+  records the table as the operator's direction of 2026-11-11 in core's
+  session, and the release removed the two per-model worker definitions
+  this item named
+  ([the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
   D6).
 - **Target executions** run under Claude Code as well as Codex since 2026-10-26;
   starter v0.101.0's executor-only `target-worktree` grant is what that needs.
@@ -491,7 +493,8 @@ an audience beyond the operator (2026-11-05, journal row
   executor's full review ladder opens with (the criteria adversary, the
   design improver and the consistency reviewer) run over every work order, new and
   existing, and whatever else the pass gives them, as Codex DotLn workers
-  (`gpt-6.1-sol` at max, one `codex exec` per reviewer from a Claude Code
+  (this instance's `default` worker for Codex, one launch of the review helper
+  for each reviewer, from a Claude Code
   session); the pass fixes or records every finding before the refutation
   and names the three reports in its document. A review is never refused or
   narrowed for the subject's size: a brief past a worker's context is split
