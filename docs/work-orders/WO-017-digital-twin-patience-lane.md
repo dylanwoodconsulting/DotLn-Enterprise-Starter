@@ -242,7 +242,10 @@ then the target gate plain and review once each.
    only the Design's keys in journal order; the preceding-row rule; the
    host's notification, a hand-back and the `resume:` dispatch kept out of
    the interventions; a path, digest, receipt, denial reason, advisory and
-   message text, each seeded in the input, absent from the output. `git
+   message text, each seeded in the input, absent from the output; a seeded
+   row of an unrecognized shape counted in the line the command prints for
+   its session file; and a session file whose rows name the order and phase
+   and yield no stage named with a nonzero exit. `git
    check-ignore -q apps/dotln/public/twin-stages/x.json` and `npm run
    check:scripts` exit 0.
 2. With a file in `apps/dotln/public/twin-stages/`, `npx nx build dotln

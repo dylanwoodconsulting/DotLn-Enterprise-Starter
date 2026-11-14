@@ -44,9 +44,11 @@ their decisions hold the history.
    runs each executable, one reading critic who reads as the operator would;
    twelve launches under `subagentCap`, with the
    [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
-   declared before the first launch. Under Codex each worker is a
-   `spawn_agent` with `fork_turns: none` on `gpt-6.1-sol` at `max`; under
-   Claude each is a `dotln-worker`. A worker writes only in its private copy
+   declared before the first launch. Each worker is the instance's `default`
+   worker, launched as `npm run worker -- show default` prints it for the
+   session's host: under Codex a `spawn_agent` with `fork_turns: none` whose
+   brief opens with the printed preamble, under Claude the `dotln-worker`
+   definition. A worker writes only in its private copy
    of the target, spawns nothing and starts no gate; the executor stays the
    one writer of both worktrees, and its three independent reviews run as
    its role root requires. Authors and critics read the current house rules and

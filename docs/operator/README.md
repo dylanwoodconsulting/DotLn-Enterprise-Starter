@@ -321,7 +321,12 @@ an audience beyond the operator (2026-11-05, journal row
   operator's in-session words, which the session captures before it
   publishes; the kit's `features.auto-update-upstream` election, which
   would admit both under a journaled dispatch without that capture, is not
-  elected here, the second 2026-11-08 pass, D3); a
+  elected here, the second 2026-11-08 pass, D3; since starter v1.0.0 the
+  publish names the merged revision with `--from` and judges the update's
+  merge, in which a file this instance and the starter both changed keeps
+  this instance's bytes unless `--take` names it, and it refuses a second
+  starter revision on one branch, so an open update pull request that a
+  newer release overtakes is replaced, the 2026-11-14 pass, D1); a
   repair a release's Read before upgrading names is made on the update branch
   so it merges green; where the plan gate binds a closed order's bytes,
   `amend-order --withdraw` is used with the reason recorded and the original
@@ -334,17 +339,28 @@ an audience beyond the operator (2026-11-05, journal row
   The kit guide is now `docs/KIT.md`, and `docs/launchpad-readme.md` preserves
   the old links ([WO-025-D014](../evidence/WO-025/decisions.md#wo-025-d014);
   2026-10-30, capture `75779a72…`).
-- **Requests to core:** every planning pass ends with a paste-ready prompt for the
-  next DotLn platform planning pass, written in its requests-to-core section
-  and repeated in the handoff; a prompt core wrote earlier is read against the
+- **Requests to core:** since starter v1.0.0 the kit keeps what this fork
+  has learned that core should hear in the root `FOR-CORE.md`: each final
+  review and each planning pass appends its entries there, a pass marks the
+  ones a taken release answered, and no pass writes a block for core in its
+  planning document. Nothing leaves the fork on its own: an entry says
+  whether it stops the fork's next order with no working route here, the
+  fork asks core only for what does, and which entries are paraphrased or
+  sent to a core planning pass is the operator's choice. Core's WO-276
+  carries this route, and product 07 cites it to a direction the operator
+  gave in core's session on 2026-11-09 (capture there SHA-256
+  `9006bd8cbcdabb5647594adb6893150aaff9e5a8ee74260a4e890e9cba3d69ae`); it
+  replaces the paste-ready prompt that each pass wrote here, by the
+  operator's directions of 2026-10-19 and 2026-10-20, until that release
+  ([the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
+  D5). What core wrote earlier, a prompt or an answer, is read against the
   current records, not taken as current (2026-10-19 and 2026-10-20, captures
   `01b3d03564fe733b600083183008b4fb46ee3350ae33469cd379121cc262a177` and
   `08208fab730f8c1311ff8fc53c635d0e7092499f6fc61b647e72c1a1d00d09c3`). Ideas
   for core that come out of the app go as GitHub issues on
-  `DylanBWood/DotLn`; the paste stays the route for this fork's requests until
-  core's WO-193 lands (2026-10-24). The prompt carries only what core has
-  not already answered or filed: an item that one of core's own orders
-  already fixes is not sent back (2026-11-09, journal row
+  `DylanBWood/DotLn` (2026-10-24). What the fork writes for core carries
+  only what core has not already answered or filed: an item that one of
+  core's own orders already fixes is not written (2026-11-09, journal row
   2026-11-10T05:21:21Z, digest `714dd285…`).
 - **Lifecycle steps the operator runs themselves:** `npm run worktree -- start
   WO-NNN <order path>` from `main`; a session in that worktree for
@@ -452,26 +468,33 @@ an audience beyond the operator (2026-11-05, journal row
   [WO-022's process-error record](../evidence/WO-022/verification-process-error.md)
   and WO-022-D029, bound in the target-record receipt).
 - **Models and effort:** Claude Code at the operator's chosen effort; a
-  worker, reviewer, refuter, live episode or probe a session launches has
-  four options, Claude `claude-opus-5-5` at `xhigh`, Claude `claude-fable-5-1`
-  at `xhigh`, Codex `gpt-6.1-sol` at `max` and Codex `gpt-6-astra` at `max`;
-  the first and third are the defaults of their harnesses, and the Fable and
-  Astra options run only when the operator asks (2026-11-03, given in core's
-  session, capture there SHA-256
-  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f`; core's
-  WO-255 adds the kit's selector). A `planning:` or `resume:` dispatch line
-  that names `fable` or `fable 5.1` runs the Claude workers as
-  `dotln-worker-fable` (claude-fable-5-1, xhigh), otherwise `dotln-worker`
-  (claude-opus-5-5, xhigh), and the receipt records the type.
+  worker, reviewer, refuter, live episode or probe a session launches runs
+  its harness's default, an Opus model on Claude and Sol on Codex, and the
+  stronger Fable and Astra options run only when the operator asks
+  (2026-11-03, given in core's session, capture there SHA-256
+  `589662ab8d84e728340b6b22077bf72f4979d1e3a37821a00947b8c12b52326f`).
+  Since starter v1.0.0 the kit holds the options as rows of a worker table,
+  and no worker definition, hook or role text names a model: `npm run
+  worker -- list` prints the table with the model and effort each name
+  runs, `default` for a launch that names none and `advanced` for each
+  provider's stronger model; a session maps the operator's words to one
+  name, `npm run worker -- show <name>` prints that launch, and a
+  refutation receipt records the worker type it prints. Core's WO-276-D077
+  records the table as the operator's direction of 2026-11-11 in core's
+  session, and the release removed the two per-model worker definitions
+  this item named
+  ([the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md),
+  D6).
 - **Target executions** run under Claude Code as well as Codex since 2026-10-26;
   starter v0.101.0's executor-only `target-worktree` grant is what that needs.
 - **A planning pass reviews the orders before it refutes them** (2026-10-31,
   capture `78a4e370f49ff4d8b035873a0eb189c37517f41900d80f1356c3e0e548d221ab`):
-  before the refuter is dispatched, the three independent reviews the
-  executor and the fix dispatch run (the criteria adversary, the design
-  improver and the consistency reviewer) run over every work order, new and
+  before the refuter is dispatched, the three independent reviews an
+  executor's full review ladder opens with (the criteria adversary, the
+  design improver and the consistency reviewer) run over every work order, new and
   existing, and whatever else the pass gives them, as Codex DotLn workers
-  (`gpt-6.1-sol` at max, one `codex exec` per reviewer from a Claude Code
+  (this instance's `default` worker for Codex, one launch of the review helper
+  for each reviewer, from a Claude Code
   session); the pass fixes or records every finding before the refutation
   and names the three reports in its document. A review is never refused or
   narrowed for the subject's size: a brief past a worker's context is split

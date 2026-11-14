@@ -32,11 +32,11 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 
 ### WS-001
 
-- [WO-003] — repository: self; base: 52a0ae768446816da788f3a96c19378609921876; phase: closed; verdict: pass; integration: current; stale: no; observed target: 52a0ae768446816da788f3a96c19378609921876.
+- [WO-003] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
 - [WO-004] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-011] — repository: self; base: 52a0ae768446816da788f3a96c19378609921876; phase: closed; verdict: pass; integration: current; stale: no; observed target: 52a0ae768446816da788f3a96c19378609921876.
+- [WO-011] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
 - [WO-005] — repository: dotln-angular; base: 651d76ff68e9b3a38fe770226deb634bca28b54c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-012] — repository: self; base: 52a0ae768446816da788f3a96c19378609921876; phase: closed; verdict: pass; integration: current; stale: no; observed target: 52a0ae768446816da788f3a96c19378609921876.
+- [WO-012] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
 - [WO-006] — repository: dotln-angular; base: 5102783f5cf575a6b487e75ed9bb0c064d6dbd9c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-007] — repository: dotln-angular; base: 90fa6e8d879cb499107ff79d1051c200d17c1cbc; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-013] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
@@ -47,7 +47,7 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 - [WO-008] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-017] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-018] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-025] — repository: self; base: 52a0ae768446816da788f3a96c19378609921876; phase: closed; verdict: pass; integration: current; stale: no; observed target: 52a0ae768446816da788f3a96c19378609921876.
+- [WO-025] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
 - [WO-026] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-020] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-021] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
@@ -315,7 +315,7 @@ None.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-029 --host codex&#96; (the executor and its workers on &#96;gpt-6.1-sol&#96; at &#96;max&#96;, the harness default); the attended phrases on either host are admitted.
+- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-029 --host codex&#96; (the executor and its workers on the instance's &#96;default&#96; worker for Codex, which &#96;npm run worker -- list&#96; prints); the attended phrases on either host are admitted.
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
 - Authority: [docs/work-orders/WO-029-concept-research-rxjs.md](WO-029-concept-research-rxjs.md)
@@ -332,7 +332,7 @@ None.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-030 --host codex&#96; (the executor and its workers on &#96;gpt-6.1-sol&#96; at &#96;max&#96;, the harness default); the attended phrases on either host are admitted.
+- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-030 --host codex&#96; (the executor and its workers on the instance's &#96;default&#96; worker for Codex, which &#96;npm run worker -- list&#96; prints); the attended phrases on either host are admitted.
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
 - Authority: [docs/work-orders/WO-030-concept-research-eip.md](WO-030-concept-research-eip.md)
@@ -349,7 +349,7 @@ None.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-031 --host codex&#96; (the executor and its workers on &#96;gpt-6.1-sol&#96; at &#96;max&#96;, the harness default); the attended phrases on either host are admitted.
+- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-031 --host codex&#96; (the executor and its workers on the instance's &#96;default&#96; worker for Codex, which &#96;npm run worker -- list&#96; prints); the attended phrases on either host are admitted.
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
 - Authority: [docs/work-orders/WO-031-concept-research-poeaa.md](WO-031-concept-research-poeaa.md)
@@ -366,7 +366,7 @@ None.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-032 --host codex&#96; (the executor and its workers on &#96;gpt-6.1-sol&#96; at &#96;max&#96;, the harness default); the attended phrases on either host are admitted.
+- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes). The research track runs on the operator's spare Codex capacity, so the intended route is &#96;drive: WO-032 --host codex&#96; (the executor and its workers on the instance's &#96;default&#96; worker for Codex, which &#96;npm run worker -- list&#96; prints); the attended phrases on either host are admitted.
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
 - Authority: [docs/work-orders/WO-032-concept-research-geb-and-team-topologies.md](WO-032-concept-research-geb-and-team-topologies.md)

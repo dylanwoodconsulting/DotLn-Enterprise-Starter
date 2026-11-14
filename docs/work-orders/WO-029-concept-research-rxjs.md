@@ -3,9 +3,9 @@
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes). The research track runs on
 the operator's spare Codex capacity, so the intended route is
-`drive: WO-029 --host codex` (the executor and its workers on `gpt-6.1-sol`
-at `max`, the harness default); the attended phrases on either host are
-admitted.
+`drive: WO-029 --host codex` (the executor and its workers on the instance's
+`default` worker for Codex, which `npm run worker -- list` prints); the
+attended phrases on either host are admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
@@ -43,7 +43,7 @@ register rows `FUP-862baf0e83c307d0` and `FUP-85de3e8d18bab62a`, fired by
 that direction and allocated to WO-028 to WO-032. Planner-synthesized by the
 2026-11-04 planning pass
 ([planning document](../planning/passes/standard-pass-v0-115-0-research-track-2026-11-04.md)
-§Orders filed and amended). Opaque identifier, not a priority. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
+§Orders filed and amended). Opaque identifier, not a priority. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them. Amended by the 2026-11-14 pass ([planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md) D6): the workers are named from the instance's worker table, which starter v1.0.0 brought, in place of a model id, and the fan-out no longer states the cap's earlier figure.
 **Depends on:** WO-021 merged (hard: the `marbles` family, the marble
 contract and spec helper, the executable rule and the RxJS study directory
 this batch reuses; WO-020's record, check, composite, route and fan-out
@@ -152,11 +152,12 @@ idle between batches.
 - **The fan-out as the track's workers** (WS-002 rule 3). Ten authors with
   two rows each, one factual critic who opens every reference and runs each
   module's spec, one reading critic who reads as the operator would: twelve
-  launches against `subagentCap` 20, under the
+  launches under `subagentCap`, under the
   [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
-  declared before any worker starts; under Codex each is a `spawn_agent`
-  with `fork_turns: none`, `gpt-6.1-sol` at `max`; under Claude each is a
-  `dotln-worker`. Each worker writes only in its private copy of the target,
+  declared before any worker starts; each is the instance's `default` worker, launched as `npm run worker -- show
+  default` prints it for the session's host (under Codex a `spawn_agent` with
+  `fork_turns: none` whose brief opens with the printed preamble, under Claude
+  the `dotln-worker` definition). Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
 - **The inventory's consumers.** The work's record chunk
   (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports

@@ -11,8 +11,11 @@ credential, hostname or internal service.
 
 The template below is the shape the operator chose on 2026-10-30, which
 [dotln-angular.md](dotln-angular.md) demonstrates. The kit's own template is
-`scripts/kit/repository-profile.template.md`, and a later starter update that
-changes it reaches this file through a Git merge.
+`scripts/kit/repository-profile.template.md`. This page and that template
+have both changed, and since starter v1.0.0 an update keeps this instance's
+bytes for such a file, so a later change to the template, such as v1.0.0's
+area notes beside a profile, is read there and in the kit guide and reaches
+this page only by an edit here.
 
 Activation requires the registration's `profile` path to be a readable regular
 file inside the launchpad. A profile is a standing document: it states the

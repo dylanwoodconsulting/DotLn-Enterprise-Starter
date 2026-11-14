@@ -71,7 +71,7 @@ D9) from WO-018's text as the 2026-10-24, 2026-10-26 and 2026-10-28 passes
 left it: WO-018 keeps the toy shelf, and this order takes The Art of War's
 map, the six new toys and their tools, both worker fan-outs and the
 carry-ins of receipts 008 to 011 about them. Opaque identifier, not a
-priority.
+priority. Amended by the 2026-11-14 pass ([planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md) D6): the fan-out names its workers from the instance's worker table, since starter v1.0.0 removed the second worker definition it named.
 **Depends on:** WO-018 (hard: the toy shelf, the `toy-v0` record with its
 `this-app` branch, the `toys` message scope and `toys:check`, to which this
 order adds six records); WO-035 (hard: the mined text's path to the screen,
@@ -275,8 +275,9 @@ adding a work or a visible field to it takes, is unknown until it merges.
   is recorded as `untyped` with the proposed kind in its reason; the enum
   grows only by a decision (WO-014's rule).
 - **The fan-out.** Together with the map pass (two mappers, one critic, one
-  classifier) the order starts twelve authoring and critic workers, each a
-  `dotln-worker` or `dotln-worker-fable` on the operator's dispatch, whose
+  classifier) the order starts twelve authoring and critic workers, each the
+  instance's `default` worker unless the operator names another, launched as
+  `npm run worker -- show <name>` prints it, whose
   briefs name the house rules (rule 30). Every launch and re-task consumes
   a use; reserve the independent review ladder under `subagentCap` before
   allocating corrections. Declare and check the stop, readings and

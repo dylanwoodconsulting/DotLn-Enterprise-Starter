@@ -588,7 +588,10 @@ review once each.
    `account:read`), guards use it, `NavigationStore` navigates each
    `RouteId` to its own path (WO-007-D019 item (a)), the e2e specs present
    at the base run unchanged without a session
-   (`git status --porcelain --untracked-files=all -- apps/dotln-e2e/src`
+   (`git diff --name-status <step 1's integrated commit> -- apps/dotln-e2e/src`
+   prints only lines whose status is `A`, whether or not the candidate is
+   committed, and
+   `git status --porcelain --untracked-files=all -- apps/dotln-e2e/src`
    lists only added files, each line's status `??` or `A`), and
    `npx nx e2e dotln-e2e` includes: sign in
    through the mocked provider and land on `returnTo` at `/account`;

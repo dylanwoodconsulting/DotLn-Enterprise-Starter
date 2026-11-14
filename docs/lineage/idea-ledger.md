@@ -4,6 +4,20 @@ Statuses: `adopted`, `preserved`, `raw`, `superseded`, `transformed`, `rejected`
 
 Insert this instance's dated sessions below, newest first.
 
+## 2026-11-14 — planning pass: starter v1.0.0 taken on the operator's word, what the release makes wrong in this instance's records corrected, the machinery view pinned to core's v1.0.0, seven orders amended and none filed (operator dispatch of 2026-11-14)
+
+Dispatch: a `planning:` request for a standard pass with the latest
+upstream, one typed line, captured in ignored intake
+(`docs/intake/notes/planning-2026-11-14.md`, SHA-256
+`ff9c3db3880e2ab9f4b07b5e909ee48e28a94fe5d1a33f5ed14ce9a836242098`). The
+record is
+[the planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md);
+this heading registers the pass for the plan tooling. The pass filed no
+order and amended seven before its refutation; after it, it repaired seven
+criteria in five orders, four of them orders the heading does not count,
+and the heading stands as the receipt bound it. No idea enters the ledger,
+because the pass was not an ideation dispatch.
+
 ## 2026-11-09 — planning pass: starter v0.122.1 taken on the operator's word, core's answers of 2026-11-08 read against the records, every open order re-judged and the result corrected by the operator, the scene leading the sequence, thirteen orders amended, four filed and one removed (operator dispatch of 2026-11-09)
 
 Dispatch: a `planning:` request for a standard pass with the latest

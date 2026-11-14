@@ -72,7 +72,7 @@ needs in the Cost line and the plan; criterion 7's grep given a control
 against the integrated base; the round criterion admitting rule 25's
 deferral route; the Observed gap re-dated at `eb9d227`; the pair WO-008 in
 place of WO-040, with criterion 6 reading the integrated `main`; and the
-executor's effort written `xhigh`. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
+executor's effort written `xhigh`. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them. Amended by the 2026-11-14 pass ([planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md) D6): the fan-out names its workers from the instance's worker table, since the second worker definition that WO-020's procedure names left with starter v1.0.0.
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
@@ -230,7 +230,10 @@ batch of them has needed a standards pass (WO-034, WO-039 and WO-040).
   `tt2:90` Platform as a product, `tt3:47` Organizational sensing, `tt1:215`
   Seven-to-nine maximum effective team size. One further recorded
   substitution per work under the rule is admitted as in WO-020.
-- **The fan-out**: WO-020's authoring and critic procedure, with the
+- **The fan-out**: WO-020's authoring and critic procedure, each worker the
+  instance's `default` worker unless the operator names another, launched as
+  `npm run worker -- show <name>` prints it (the second worker definition that
+  procedure names left with starter v1.0.0), with the
   [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
   declared before any worker starts, at most twelve initial author/critic launches (ten authors
   with two concepts each, one factual critic who also checks the analogy rule

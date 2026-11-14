@@ -171,9 +171,9 @@ holds the check and the reason.
 **Stand-ins.** A member that needs something a later member delivers ships the
 smallest honest stand-in and names the replacement in its known issues.
 
-## House rules
+## Rules
 
-Member orders cite these by number. A rule changes through a planning pass or
+These are the house rules, and member orders cite them by number. A rule changes through a planning pass or
 an order's recorded decision, never silently. Rules 9, 20 and 22 to 31
 restate directions the operator record holds; a pass that changes one
 changes the other.
@@ -442,14 +442,18 @@ changes the other.
     stays the token layer the brief is expressed in (G4); a scene may scope
     a second token set to its region. The look is part of what an order
     delivers (planning pass of 2026-10-26, D5). A comparison session runs
-    under the kit's dispatch bound (starter v0.102.0), which counts elapsed
-    wall clock from the executor's dispatch, attended or idle, and resolves
+    under the kit's dispatch bound, which since starter v1.0.0 counts the
+    time the phase worked and not the time since its dispatch (a gap of
+    more than ten minutes in the phase's session journals that begins at a
+    turn's end, such as a wait for the operator's pick, counts for nothing,
+    while a phase under Codex, whose tool calls reach no hook, still reads
+    elapsed time) and resolves
     from this fork's own phase medians (8 h 0 min for every phase at the
     2026-10-30 pass): when the operator says in ordinary language that the
     session runs as long as it needs, the executor captures the words in
     ignored intake and records `npm run resume -- accept-overrun` with
-    `--ceiling unlimited` for both metrics ahead of the stop, as the kit's
-    README describes (the 2026-10-30 pass, D4). The operator may delay an
+    `--ceiling unlimited` for both metrics ahead of the stop, as the kit
+    guide describes (the 2026-10-30 pass, D4). The operator may delay an
     order's rounds when they have no time for them: the order records its
     first pair without a pick, ships its first-named candidate meanwhile
     and carries the rounds as a follow-up, and the delayed rounds are that

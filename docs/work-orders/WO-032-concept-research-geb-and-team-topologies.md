@@ -3,9 +3,9 @@
 **Model:** any capable model; state the model and effort actually run
 (07-execution-guide.md §Model-specific notes). The research track runs on
 the operator's spare Codex capacity, so the intended route is
-`drive: WO-032 --host codex` (the executor and its workers on `gpt-6.1-sol`
-at `max`, the harness default); the attended phrases on either host are
-admitted.
+`drive: WO-032 --host codex` (the executor and its workers on the instance's
+`default` worker for Codex, which `npm run worker -- list` prints); the
+attended phrases on either host are admitted.
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
@@ -49,7 +49,7 @@ the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122
 D5): the base set to WO-039's merge, and the dependency and the known
 issues say that this batch, which lands as data through `relationsModel`,
 owes no standards pass over WO-024's batch before it runs (D3), and the
-record-shape issue drops the per-study presentation. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them.
+record-shape issue drops the per-study presentation. Amended by the 2026-11-09 pass ([planning document](../planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md) D18): the verifier's read of the research for quality (rule 27), the operator's two display sizes in the walkthrough and the end-to-end checks (rule 29), and the search controls' pointer, which named an order that no longer carries them. Amended by the 2026-11-14 pass ([planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md) D6): the workers are named from the instance's worker table, which starter v1.0.0 brought, in place of a model id, and the fan-out no longer states the cap's earlier figure.
 **Depends on:** WO-024 merged (hard: the `relations` family and its
 `relationsModel` builder, which WO-024 builds builder-first so that each
 study is data the builder draws and no study has a presentation module of
@@ -168,11 +168,12 @@ unstudied beyond WO-024's, 185 and 382 of them related to by other rows.
   two rows each, one factual critic who opens every reference, runs each
   model's spec, checks the analogy rule and that no study characterizes the
   operator or quotes the books, one reading critic who reads as the operator
-  would: twelve launches against `subagentCap` 20, under the
+  would: twelve launches under `subagentCap`, under the
   [profile's worker-admission and accounting rules](../repositories/dotln-angular.md#run-content-workers)
-  declared before any worker starts; under Codex each is a `spawn_agent`
-  with `fork_turns: none`, `gpt-6.1-sol` at `max`; under Claude each is a
-  `dotln-worker`. Each worker writes only in its private copy of the target,
+  declared before any worker starts; each is the instance's `default` worker, launched as `npm run worker -- show
+  default` prints it for the session's host (under Codex a `spawn_agent` with
+  `fork_turns: none` whose brief opens with the printed preamble, under Claude
+  the `dotln-worker` definition). Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
 - **The inventory's consumers.** The work's record chunk
   (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
