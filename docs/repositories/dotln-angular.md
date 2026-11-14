@@ -88,7 +88,11 @@ selection, and add `--review` for the review selection. It runs these commands i
 the order's target worktree. The registration prefixes each with
 `env NX_DAEMON=false NX_ISOLATE_PLUGINS=false`, which keeps plugin workers in
 process, and binds it to the non-ignored bytes before and after, so a command that
-changes a tracked file fails the gate.
+changes a tracked file fails the gate. It runs every command of the selection
+whatever failed before it and takes no other argument, so the run after a failed
+run is the same command: the `--keep-going` that the executor's root names since
+starter v1.0.0 belongs to the launchpad's own `npm test` and `npm run test:docs`,
+and this gate refuses it with its usage line.
 
 | Check | Command | Selection | Notes |
 | --- | --- | --- | --- |
@@ -163,8 +167,9 @@ WO-023 and WO-024 reuse WO-020's authoring and critic procedure. WO-043 applies
 the same admission and accounting rules to its map and toy-design fan-outs.
 Before the first worker starts, record the token stop in the activation
 decisions and `fan-out.md`:
-use WO-014's order total from `npm run meta` when available; otherwise use the
-recorded 117,733,609 from WO-020-D004. WO-020-D012 lifted it for WO-020 alone;
+use WO-014's order total, which `npm run meta -- --usage` prints since starter
+v1.0.0, when available; otherwise use the recorded 117,733,609 from WO-020-D004,
+which is the figure that report prints today. WO-020-D012 lifted it for WO-020 alone;
 that exception does not travel to another order. The
 [2026-11-03 planning pass](../planning/passes/entropy-reducer-2026-11-03.md) records this
 clarification from WO-022-D023/D028 and its [fan-out evidence](../evidence/WO-022/fan-out.md#tokens-against-the-stop-figure).
@@ -197,19 +202,20 @@ contents. Keep a manual total for launches the host cannot observe,
 including descendants; do not interpret a smaller observed counter as spare
 capacity. Workers start no test-runner gate.
 
-At starter v0.112.0, the kit's `worker review` helper binds its diff and tree to
-the launchpad checkout. Use it for launchpad changes; it is not evidence of a
-target-code review. For target code, use the host's native fresh DotLn worker
-route with a brief naming the target path, base and candidate, read-only duties,
-and the pinned model and effort. Retain the returned report in the order's
-review evidence with that target identity and account for its use. A Codex CLI
-bridge requested by the operator needs its actual read-only sandbox, usage and
-report retention demonstrated; an old workspace-write launcher is not that
-qualification. Core's WO-255 (fourth in its queue on 2026-11-03) adds the
-target-aware mode to the kit helper, `npm run worker -- review --target <id>
---order WO-NNN`, which binds the target's base and candidate, keeps the
-reviewer read-only in the clone, counts the use and files the report as the
-launchpad's; the native route above stands until a starter carries it.
+For target code, `npm run worker -- review --target dotln-angular --order
+WO-NNN` (since starter v0.118.0, core WO-255) binds the order's base and the
+target worktree's tree, keeps the reviewer read-only in that worktree, counts
+the use and files the report in the launchpad's reviews lane. Without
+`--target` the helper binds its diff and tree to the launchpad checkout: use
+that form for launchpad changes; it is not evidence of a target-code review.
+Since starter v1.0.0 a launch that names no worker runs the instance's
+`default`, and `--model <name>` names another worker or model of its table
+(`npm run worker -- list`). A Codex reviewer goes through the same helper
+with `--host codex`, which runs it under a read-only sandbox; a launcher
+written for the occasion is not that qualification. A reviewer launched
+through the host's own worker route in a Claude session is recorded in the
+same lane with `npm run worker -- record`, under the target identity it
+reviewed, and its use is accounted for.
 
 ## Find the implementation
 
@@ -468,10 +474,12 @@ Launchpad identifiers (`WO-NNN`, `WO-NNN-DNNN`, `FUP-<16 hex>`, `VER-NNN`,
 `FINAL-NNN`, `REVIEW-NNN`, `WS-NNN`) refuse in the branch, the commits, the title
 and the composed body, so an order's commits name their change and not the order.
 The launchpad's `docs/control/outward-vocabulary.json` lists `reviewTerms`, empty,
-so `launchpad`, `gem` and `mask` are ordinary words here. Each private local-terms
-line carries a `refuse:` or `review:` mode, and a review item refuses the publish
-until the reviewer confirms the printed digest with
-`--confirm-terms sha256:<digest>`.
+so `launchpad`, `gem` and `mask` are ordinary words here. Since starter v1.0.0
+the private local-terms list has two classes: an entry under a `refuse:` line,
+or marked `refuse:` itself, refuses the publish, and every other entry is
+context (a `review:` marker reads as `context:`). A context entry, like a
+review word, holds the publish until the reviewer, having read the listed
+lines, confirms the printed digest with `--confirm-terms sha256:<digest>`.
 
 The launchpad's `contributions.operatorAuthor` declares the public author identity
 read from `git log --no-merges -1 --format='%an <%ae>' main`. The launchpad's
@@ -527,9 +535,12 @@ grep -cE '^\*\*Target release classification:\*\*[[:space:]]*(patch|minor|major)
 ```
 
 Counting recognized values alone misses a second header with a malformed value.
-Since starter v0.119.0 (core WO-257) the kit's reader counts every header
-before it reads the value and refuses a valid header beside a malformed
-duplicate, naming both lines, wherever the classification is read; the two
+Since starter v1.0.0 the kit reads an order's header fields from its leading
+header alone, the text before its `**Objective:**`: there it counts every
+declaration before it reads the value and refuses a valid header beside a
+malformed duplicate, naming both lines (since starter v0.119.0, core
+WO-257), and a declaration written below the Objective is not read at all.
+The header therefore stands above the Objective, where the two
 counts stay as the quick read before activation, and
 [WO-012-D008](../evidence/WO-012/decisions.md#wo-012-d008), which boarded the
 kit defect, is settled.

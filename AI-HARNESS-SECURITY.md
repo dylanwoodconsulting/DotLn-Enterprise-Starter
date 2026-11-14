@@ -37,7 +37,7 @@ Roles are read from the control records' attestations.
 | --- | --- | --- | --- | --- |
 | Claude Code | Anthropic | 2.1.314 | every final review, and executors and verifiers alongside Codex | observed: `permissions.defaultMode` `auto` with deny rules in the user and project layers, and the generated hooks. User settings enable the sandbox; the probe finds it not in force. |
 | Codex CLI | OpenAI | 0.166.0 | most executors, and some verifiers | observed: user config `approval_policy = "never"` and `sandbox_mode = "danger-full-access"`. Documented locally: the kit's 0.153.4 probe saw no project hook fire, so role text carries most duties (`CLAUDE.md`); untested at 0.166.0. |
-| Copilot CLI | GitHub | 1.0.94 | none recorded | observed: installed, with no sandbox key in its user settings; its approval mode in a run here is untested. |
+| Copilot CLI | GitHub | 1.0.94 | none recorded; not elected, so the kit emits nothing for it here since starter v1.0.0 (`features.host-copilot`) | observed: installed, with no sandbox key in its user settings; its approval mode in a run here is untested. |
 
 Model names are not additional harnesses; they inherit the permissions of the
 harness that launches them. Browser, web-search, plugin, app, MCP and other
@@ -50,7 +50,7 @@ shell sandbox nor this record governs automatically.
 | --- | --- | --- | --- |
 | Claude Code | `~/.claude/settings.json` | `.claude/settings.json` (generated) | `.claude/settings.local.json` (the main checkout only) |
 | Codex CLI | `~/.codex/config.toml` | `.codex/config.toml`, `.codex/hooks.json` (generated) | `.codex/rules/`, written for an order that opts into literal host rules |
-| Copilot CLI | `~/.copilot/settings.json` | reuses the Claude Code hook registration | none found |
+| Copilot CLI | `~/.copilot/settings.json` | none emitted for it: Copilot is not elected, and the generated hook registration it would read is written in the matcher form observed on Claude Code alone | none found |
 
 Which layer each harness actually loaded, as observed:
 

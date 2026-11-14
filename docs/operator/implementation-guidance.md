@@ -23,7 +23,7 @@ New directions are paraphrased from ignored captures:
 
 | Direction | Apply it in future work | Boundary |
 | --- | --- | --- |
-| Resource limits serve the work | Allocate workers around independent useful tasks, reuse them for targeted corrections, and record actual cost and uncertainty. | The cap of forty was specific to WO-014, and `subagentCap` in `docs/control/budgets.json` is back at twenty. It is not a permanent preference for more workers. |
+| Resource limits serve the work | Allocate workers around independent useful tasks, reuse them for targeted corrections, and record actual cost and uncertainty. | The cap of forty in WO-014 was specific to that order. The instance's `subagentCap` in `docs/control/budgets.json` is forty since the operator's direction of 2026-11-07 (WO-023-D014), until a later decision changes it, and since starter v1.0.0 a cap for one dispatch is recorded with `npm run resume -- accept-overrun subagentCap`. Neither is a preference for more workers than the tasks need. |
 | Preserve semantic honesty | Report shortfalls, unsupported claims and untyped concepts explicitly. Improve evidence or seek a real contract decision when needed. | Never force an example into an executable category to meet a quota. The criterion 3 amendment was explicit authorization, not permission to waive future criteria. |
 | Catch avoidable inefficiency early | Attribute bundle growth, unnecessary loading, rendering work and costly processes while implementing, before verification finds them. | A disclosed warning or a green exit code does not establish efficiency; a raw size alone does not establish user experience. |
 | Calibrate meaningful budgets | Compare equivalent builds and user journeys, remove avoidable cost, and revise a justified budget with evidence and alternatives in the same change. | Routine overrun diagnosis is engineering work. Ask the operator only for a real scope/product tradeoff, not each calibration. Never raise a ceiling merely to silence output. |
@@ -62,9 +62,17 @@ Instance-owned text carries these directions, so they survive core updates
 without editing generated kit code: the orders, WS-001 and the operator record
 (the [2026-10-26 pass](../planning/passes/acceptance-by-use-2026-10-26.md), D4 and D12).
 No supported route adds duty text to a generated role today. An instance owns its
-support switches, its grants file and its `hostRules`, and the extension contract
-is core's deferred candidate 8; the [v0.101.0 pass](../planning/passes/standard-pass-v0-101-0-2026-10-28.md)
-records that answer and `FUP-6855f3bdf797428a` holds this fork's row. Product 08's
+support switches, its grants file and its `hostRules`, and since starter v1.0.0
+the kit guide's §Extending this instance is the extension contract: the
+`extensions/` root that no kit path enters, the committed
+`.claude/settings.instance.json` that the emit merges after the kit's own hooks
+and rules, the `extensions` section of `dotln.config.json`, and standing rules
+in `CLAUDE.md` outside the generated block, which is where this fork's line
+binding every role to the operator record already stands. The
+[v0.101.0 pass](../planning/passes/standard-pass-v0-101-0-2026-10-28.md)
+records core's earlier answer, and
+[the 2026-11-14 pass](../planning/passes/standard-pass-v1-0-0-2026-11-14.md)
+(D4) declines the self order of `FUP-6855f3bdf797428a`. Product 08's
 implementation overlay describes publication composition, a different concern; its
 local-policy promise is not evidence that this runtime behavior is implemented.
 

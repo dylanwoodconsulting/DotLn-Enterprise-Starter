@@ -2915,6 +2915,16 @@
           "reopenWhen": "A later starter update refuses WO-011 or WO-012 again on the Workstream field, or the plan gate refuses a field-only change on a judged order without offering amend-order.",
           "targets": [],
           "at": "2026-10-25T21:03:45.775Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "duplicate",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: starter v1.0.0's Markdown reader reads this candidate's bold title whole, where the earlier line reader ended it at an asterisk inside it, so the source's text now has the key of FUP-8f5ec45689570f70, which carries this row's disposition; this row's source reads missing and its history stays here.",
+          "reopenWhen": "The register's reader derives this row's earlier key from its source again.",
+          "targets": [
+            "FUP-8f5ec45689570f70"
+          ],
+          "at": "2026-11-14T20:39:52.212Z"
         }
       ]
     },
@@ -3811,6 +3821,14 @@
           "reopenWhen": "A starter release carries an instance role-extension contract (core's candidate 8), or a verifier records a use criterion met with no walkthrough; the pass that reads either weighs the self order again.",
           "targets": [],
           "at": "2026-10-28T19:43:05.906Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "declined",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: the reopening condition occurred: starter v1.0.0's kit guide says where an instance's own extensions go (its section on extending this instance), and a standing rule of the instance's is written in CLAUDE.md outside the generated block; no route adds duty text to a generated role. This fork's instruction file already binds every role to the operator record, which carries acceptance by use, and WS-001 rule 24 and each order's use criterion carry it to the verifier. The failure feed and the earlier passes' readings record no verification that met a use criterion without a walkthrough, so a self order would add nothing these carriers lack.",
+          "reopenWhen": "A verifier records a use criterion met with no walkthrough.",
+          "targets": [],
+          "at": "2026-11-14T20:39:52.258Z"
         }
       ]
     },
@@ -4081,6 +4099,14 @@
           "reopenWhen": "An executor records the hook's cost in its decisions or usage readback (WO-015's attended session is the next chance), or a starter release carries core's follow-up on D029.",
           "targets": [],
           "at": "2026-10-30T09:11:01.430Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: the reopening condition occurred: starter v1.0.0 carries core's follow-up on WO-236-D029, which core's WO-276 names as Part Q, the allocation of its own row for the permission hook's cost: a tool call starts only the hooks that judge that tool, and core measured 400 hook processes before and 210 after over a fixed sequence of fifty calls. What one judged outside write costs an executor here after that change is not measured, and the fork owes no order for it.",
+          "reopenWhen": "An executor records the hooks' cost in its decisions or usage readback as a cost of a target order.",
+          "targets": [],
+          "at": "2026-11-14T20:39:52.228Z"
         }
       ]
     },
@@ -4828,6 +4854,16 @@
             "WO-032"
           ],
           "at": "2026-11-04T17:17:28.216Z"
+        },
+        {
+          "sourceRevision": 3,
+          "status": "duplicate",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: starter v1.0.0's Markdown reader reads this candidate's bold title whole, where the earlier line reader ended it at an asterisk inside it, so the source's text now has the key of FUP-2bde48d927709781, which carries this row's disposition; this row's source reads missing and its history stays here.",
+          "reopenWhen": "The register's reader derives this row's earlier key from its source again.",
+          "targets": [
+            "FUP-2bde48d927709781"
+          ],
+          "at": "2026-11-14T20:39:52.181Z"
         }
       ]
     },
@@ -5806,6 +5842,14 @@
           "reopenWhen": "A close prints its removal step's time where a pass can read it, or a finish stalls.",
           "targets": [],
           "at": "2026-11-05T16:10:30.894Z"
+        },
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: the reopening condition occurred: a close's step times are readable through npm run plan -- failures. The eight closes since 2026-11-01 took a median of 16 s in all, and the slowest step among them is the worktree removal at 12 s in WO-023's close of 2026-11-08, against the 58 s to 3 min 28 s this row recorded on 2026-10-31; the update finish of 2026-11-14 fetched, fast-forwarded and bootstrapped without a stall.",
+          "reopenWhen": "A close's worktree-removal step runs past five minutes, or a finish stalls.",
+          "targets": [],
+          "at": "2026-11-14T20:39:52.243Z"
         }
       ]
     },
@@ -5943,6 +5987,16 @@
             "WO-023"
           ],
           "at": "2026-11-03T16:55:14.343Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "duplicate",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: starter v1.0.0's Markdown reader reads this candidate's bold title whole, where the earlier line reader ended it at an asterisk inside it, so the source's text now has the key of FUP-3087b05ec38a34d3, which carries this row's disposition; this row's source reads missing and its history stays here.",
+          "reopenWhen": "The register's reader derives this row's earlier key from its source again.",
+          "targets": [
+            "FUP-3087b05ec38a34d3"
+          ],
+          "at": "2026-11-14T20:39:52.197Z"
         }
       ]
     },
@@ -6655,6 +6709,16 @@
             "WO-027"
           ],
           "at": "2026-11-03T18:57:56.397Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "duplicate",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: starter v1.0.0's Markdown reader reads this candidate's bold title whole, where the earlier line reader ended it at an asterisk inside it, so the source's text now has the key of FUP-800ab3aa46035087, which carries this row's disposition; this row's source reads missing and its history stays here.",
+          "reopenWhen": "The register's reader derives this row's earlier key from its source again.",
+          "targets": [
+            "FUP-800ab3aa46035087"
+          ],
+          "at": "2026-11-14T20:39:52.165Z"
         }
       ]
     },
@@ -8015,7 +8079,22 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: carried from FUP-862baf0e83c307d0, the row that held this candidate until starter v1.0.0's Markdown reader read its bold title whole and gave the same source text this key. That row's disposition stands: the 2026-11-04 pass (D6) cut the next hundred concepts as the research track's first five orders by the most-related rule within what each landed family draws, WO-028 (closed 2026-11-05) and WO-029 to WO-032 (queued); the pathfinding and decision-making chapters wait for a road order that lands a family that draws them.",
+          "reopenWhen": "Fewer than two research orders are queued, or the operator asks for the next cut (WS-002 rule 6).",
+          "targets": [
+            "WO-028",
+            "WO-029",
+            "WO-030",
+            "WO-031",
+            "WO-032"
+          ],
+          "at": "2026-11-14T20:39:52.117Z"
+        }
+      ]
     },
     {
       "id": "FUP-800ab3aa46035087",
@@ -8030,7 +8109,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: carried from FUP-524229f3c08b6be8, the row that held this candidate until starter v1.0.0's Markdown reader read its bold title whole and gave the same source text this key. That row's disposition stands: the 2026-11-03 pass on the DotLn-Angular entropy review accepted ER-F4 as a document inconsistency and allocated it to WO-027, whose step 7 states the feature exception WS-001 rule 4 already gives, with no structural check; WO-027 closed with a passing final review on 2026-11-06.",
+          "reopenWhen": "WO-027's final review is found to have recorded that criterion unmet.",
+          "targets": [
+            "WO-027"
+          ],
+          "at": "2026-11-14T20:39:52.099Z"
+        }
+      ]
     },
     {
       "id": "FUP-3087b05ec38a34d3",
@@ -8045,7 +8135,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: carried from FUP-9a1ea6db27a8f371, the row that held this candidate until starter v1.0.0's Markdown reader read its bold title whole and gave the same source text this key. That row's disposition stands: the 2026-11-03 Entropy Reducer pass found the release trigger fired (core WO-252 in starter v0.112.0) and allocated the collapse of the seventeen nested node_modules declarations to WO-023, step 12 and criterion 10; WO-023 closed with a passing final review on 2026-11-08.",
+          "reopenWhen": "A match probe fails, a later close exposes output outside node_modules, or the kit changes matching semantics.",
+          "targets": [
+            "WO-023"
+          ],
+          "at": "2026-11-14T20:39:52.133Z"
+        }
+      ]
     },
     {
       "id": "FUP-8f5ec45689570f70",
@@ -8060,7 +8161,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "2026-11-14 planning pass (docs/planning/passes/standard-pass-v1-0-0-2026-11-14.md) D4: carried from FUP-d1dadda4ed57029c, the row that held this candidate until starter v1.0.0's Markdown reader read its bold title whole and gave the same source text this key. That row's disposition stands: the 2026-10-25 pass (D2) settled it when core shipped WO-232 in starter v0.98.0: the amendment binding admits one leading Workstream field added later to an order whose filed source lacked it, and the workstream check admits a closed member without the field with one advisory. Starter v1.0.0's index check and plan check pass with WO-011 and WO-012 as they are.",
+          "reopenWhen": "A later starter update refuses WO-011 or WO-012 again on the Workstream field, or the plan gate refuses a field-only change on a judged order without offering amend-order.",
+          "targets": [],
+          "at": "2026-11-14T20:39:52.149Z"
+        }
+      ]
     }
   ]
 }
