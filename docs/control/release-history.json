@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "tags": [
+    {
+      "name": "v0.1.0",
+      "object": "3e93374c56dadf79742b6b8c4678c3be6e2897ff"
+    },
+    {
+      "name": "v0.2.0",
+      "object": "3545e7dd16b6904ec788da23cebda255a0321de7"
+    },
+    {
+      "name": "v0.3.0",
+      "object": "72b5ef9e8eb71e515ce8da6ab0be8cd0ee7bf996"
+    },
+    {
+      "name": "v0.3.1",
+      "object": "1a4dee8cd5c4aa7e1877e7148375227163eac05d"
+    },
+    {
+      "name": "v0.3.2",
+      "object": "3a9e85d82601a50e437586b6b9769ac8ebbb2a9b"
+    },
+    {
+      "name": "v0.3.3",
+      "object": "a4a27b162c4544d6ea929c154467a157f39c9547"
+    },
+    {
+      "name": "v0.3.4",
+      "object": "8b03a2063e2182a4d3f274925b7027106348f644"
+    },
+    {
+      "name": "v0.3.5",
+      "object": "fdb8a84d32780f38256a185ee09a6cab4c412033"
+    }
+  ],
+  "table": null
+}

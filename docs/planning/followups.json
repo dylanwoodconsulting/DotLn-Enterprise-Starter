@@ -2890,6 +2890,13 @@
           "title": "C1 The workstream field against the plan gate: starter v0.96.0's index check requires",
           "summary": "- **C1 The workstream field against the plan gate: starter v0.96.0's index check requires `**Workstream:** WS-NNN` on every member order, and the plan gate refuses that one-line change on a closed order whose bytes an execution amendment binds, so this fork withdrew two amendments to add the field (D1).** Reopen when core answers §11 item 1 (an admitted metadata-field change for closed orders, or an index check that accepts a closed member without the field); then the withdrawals are revisited or left as the record.",
           "missing": false
+        },
+        {
+          "hash": null,
+          "ref": "docs/planning/standard-pass-v0-96-1-2026-10-24.md#candidates-not-filed-with-their-reopening-conditions-section-10",
+          "title": "C1 The workstream field against the plan gate: starter v0.96.0's index check requires",
+          "summary": "- **C1 The workstream field against the plan gate: starter v0.96.0's index check requires `**Workstream:** WS-NNN` on every member order, and the plan gate refuses that one-line change on a closed order whose bytes an execution amendment binds, so this fork withdrew two amendments to add the field (D1).** Reopen when core answers §11 item 1 (an admitted metadata-field change for closed orders, or an index check that accepts a closed member without the field); then the withdrawals are revisited or left as the record.",
+          "missing": true
         }
       ],
       "dispositions": [
@@ -4782,6 +4789,13 @@
           "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
           "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator named a drained queue as the signal (message 1, capture `8e8cdbeb…`). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
           "missing": false
+        },
+        {
+          "hash": null,
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the…",
+          "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator named a drained queue as the signal (message 1, capture `8e8cdbeb…`). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
+          "missing": true
         }
       ],
       "dispositions": [
@@ -5902,6 +5916,13 @@
           "title": "C3 The registration's declaration matching at any depth (",
           "summary": "- **C3 The registration's declaration matching at any depth (`**/node_modules`), or a class default for nested package-manager caches.** Core's: asked as item 3(a) of the block. Reopen when a starter release carries it; the pass that takes it collapses the seventeen entries to one.",
           "missing": false
+        },
+        {
+          "hash": null,
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C3 The registration's declaration matching at any depth (",
+          "summary": "- **C3 The registration's declaration matching at any depth (`**/node_modules`), or a class default for nested package-manager caches.** Core's: asked as item 3(a) of the block. Reopen when a starter release carries it; the pass that takes it collapses the seventeen entries to one.",
+          "missing": true
         }
       ],
       "dispositions": [
@@ -6615,6 +6636,13 @@
           "title": "ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable…",
           "summary": "- **ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable library's index.ts contains only `export * from './public_** Surface `libs/features/*/src/index.ts; conventions rule 4; sub-apps.md`, severity minor, altitude 5, evidence measured. Observed: The board, machinery and scene index.ts files export their routes directly and have no public_api.ts; tools follows rule 4. docs/dev-reference/architecture/sub-apps.md:26-27 presents board's direct export as the exemplar layout. No check enforces either shape. Expected: Standing doctrine settles on one b",
           "missing": false
+        },
+        {
+          "hash": null,
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable…",
+          "summary": "- **ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable library's index.ts contains only `export * from './public_** Surface `libs/features/*/src/index.ts; conventions rule 4; sub-apps.md`, severity minor, altitude 5, evidence measured. Observed: The board, machinery and scene index.ts files export their routes directly and have no public_api.ts; tools follows rule 4. docs/dev-reference/architecture/sub-apps.md:26-27 presents board's direct export as the exemplar layout. No check enforces either shape. Expected: Standing doctrine settles on one b",
+          "missing": true
         }
       ],
       "dispositions": [
@@ -7973,6 +8001,66 @@
           "at": "2026-11-08T18:36:00.410Z"
         }
       ]
+    },
+    {
+      "id": "FUP-2bde48d927709781",
+      "key": "candidate:docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions::87c0871665709f60acaba675e7c10b9ec66ee660c1894e2ad66525316f1d9e37",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "e428aa3d6178030fdf1173ccde07f886fd4ebd7196b892c39ccdc60589ab4012",
+          "ref": "docs/planning/concept-batches-and-quality-passes-2026-10-30.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C2 The next hundred concepts: the AI for Games pathfinding and",
+          "summary": "- **C2 The next hundred concepts: the AI for Games pathfinding and decision-making chapters (A*, finite state machines, behavior trees, decision trees, goal-oriented behavior, rule-based systems), the RxJS patterns and Angular interop rows, the remaining Enterprise Integration and enterprise application patterns, and the remaining GEB and Team Topologies rows, cut by the same rule into five more batches.** Not now: the operator named a drained queue as the signal (message 1, capture `8e8cdbeb…`). Reopen when WO-024 merges or the operator asks for the next cut; the pass that hears it runs the rule over the data at that commit and files the batches.",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-800ab3aa46035087",
+      "key": "candidate:docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03::a1d3b043858f548874f3fa86dae7aeece555e35303d714a5d8ac1387f7473045",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "b697422a744a5ba3b00bae19ac088c26c3417f26be1e2c6f5f49ffab8af95ef6",
+          "ref": "docs/planning/entropy-reviews/REVIEW-002.md#candidates--accepted-entropy-reducer-findings-review-review-002-dotln-angular55b59c9133056c1d6471274a9676a7d5649196ac-recorded-2026-11-03",
+          "title": "ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable…",
+          "summary": "- **ER-F4-barrel-doctrine-split — REVIEW-002 dotln-angular@55b59c9133056c1d6471274a9676a7d5649196ac — Conventions rule 4 (conventions.md:55-58) and docs/ai-reference/foundation-rules.md:31: an importable library's index.ts contains only `export * from './public_** Surface `libs/features/*/src/index.ts; conventions rule 4; sub-apps.md`, severity minor, altitude 5, evidence measured. Observed: The board, machinery and scene index.ts files export their routes directly and have no public_api.ts; tools follows rule 4. docs/dev-reference/architecture/sub-apps.md:26-27 presents board's direct export as the exemplar layout. No check enforces either shape. Expected: Standing doctrine settles on one b",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-3087b05ec38a34d3",
+      "key": "candidate:docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions::c7b1aa4d426660d18d467177e9afe9a5302128b15b7c48ad96375b6e2c3c86e0",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "de3e364272ff9d4b30b42e476d008d686527fc7631658e78966871bddd3bfd90",
+          "ref": "docs/planning/standard-pass-v0-105-0-2026-11-01.md#candidates-not-filed-with-their-reopening-conditions",
+          "title": "C3 The registration's declaration matching at any depth (/node_modules), or a class default for nested package-manager caches.",
+          "summary": "- **C3 The registration's declaration matching at any depth (`**/node_modules`), or a class default for nested package-manager caches.** Core's: asked as item 3(a) of the block. Reopen when a starter release carries it; the pass that takes it collapses the seventeen entries to one.",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-8f5ec45689570f70",
+      "key": "candidate:docs/planning/standard-pass-v0-96-1-2026-10-24.md#candidates-not-filed-with-their-reopening-conditions-section-10::6622375549d3bcdd4361310583bbed369c3e8b48c3f6dfef4888464cd5c35d83",
+      "kind": "candidate",
+      "revisions": [
+        {
+          "hash": "54cc19dfefe48177ba91e6b04b48f51fb774c556e62aa9ee79b0b7543c1ddd80",
+          "ref": "docs/planning/standard-pass-v0-96-1-2026-10-24.md#candidates-not-filed-with-their-reopening-conditions-section-10",
+          "title": "C1 The workstream field against the plan gate: starter v0.96.0's index check requires Workstream: WS-NNN on every member order, and the plan gate refuses that one-line change on a closed order whose…",
+          "summary": "- **C1 The workstream field against the plan gate: starter v0.96.0's index check requires `**Workstream:** WS-NNN` on every member order, and the plan gate refuses that one-line change on a closed order whose bytes an execution amendment binds, so this fork withdrew two amendments to add the field (D1).** Reopen when core answers §11 item 1 (an admitted metadata-field change for closed orders, or an index check that accepts a closed member without the field); then the withdrawals are revisited or left as the record.",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }
