@@ -250,7 +250,8 @@ target gate plain and review once each.
    reachable the verifier records it untested with the reason and judges
    from the executor's recorded run.
 4. `npx nx test machinery-data-access` exits 0 with specs on the committed
-   snapshot: `concurrent-work-requires-worktrees` enforced on Claude and
+   snapshot, each capacity read by the rule the Design's Reading states:
+   `concurrent-work-requires-worktrees` enforced on Claude and
    Copilot by its `PreToolUse` hook and text-only on Codex with core's
    residue reason; `verify-app-before-done` advised at `Stop`;
    `process-cost` `text` on every host and enforced on none, its rung-2

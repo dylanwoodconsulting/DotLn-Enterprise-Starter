@@ -576,9 +576,11 @@ plain and review once each.
    heuristics; a unit the geometry stops on its path replans within the
    spec's ticks; and the `hashes` of `trial-known-outcome.json` equal those
    at the latest integrated `main`, so a run with no field step moves as it
-   did: that fixture's one tool is `steer.blend`, the engine's `avoid` is
-   unchanged, and criterion 3's two changes act only where priority
-   steering or an avoidance step is placed.
+   did: that fixture's one tool is the `steer.blend` row `aifg-a:145`, whose
+   parameters weight separation, cohesion and velocity matching and give the
+   avoidance term none, the engine's `avoid` is unchanged, and criterion 3's
+   two changes act only where priority steering is placed or a step's
+   parameters give the avoidance term a weight or a priority.
 3. `steering.spec.ts` covers exact head-on, initial overlap, an ordinary
    offset crossing and a replay of each, asserting that the pair's
    separation grows from the first frame after the policy fires, that no
@@ -606,7 +608,9 @@ plain and review once each.
    every-tool-at-defaults case passes with every parameter read; an engine
    spec on the known field shows a travel-weight `path.cost` step above one
    raising the search's expansions over the same search without it while the
-   route's cells stay the same, and the two rows that weigh only the uniform
+   route's cells stay the same, the heuristic being the unweighted distance
+   whatever the cost weights (the Design's cost functions), and the two rows
+   that weigh only the uniform
    layers (`aifg-b:48`, `aifg-b:50`) leaving route, length and expansions
    unchanged, with the inspector's preview row saying which it is in words;
    `interpretedKinds` equals `sceneTransformKinds`; `npm run catalog:check`

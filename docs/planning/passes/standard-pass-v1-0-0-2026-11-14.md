@@ -129,17 +129,25 @@ on:
 
 ## Orders filed and amended
 
-No order is filed and none removed. Seven are amended, each with one
-sentence in its provenance naming this pass and its decision. The ten other
-open orders are unchanged and carry their verdicts by hash: WO-036, WO-037,
-WO-040, WO-008, WO-045, WO-044, WO-035, WO-017, WO-016 and WO-018.
+No order is filed and none removed. Seven were amended before the
+refutation, each with one sentence in its provenance naming this pass and
+its decision. After it, seven criteria in five orders gained a clause that
+repairs a known issue of the receipt (D10); those repairs are the criterion
+text alone, which is what the plan check admits beside a filed receipt, so
+they add no provenance sentence and the decision is their record. Six open
+orders are unchanged and carry their verdicts by hash: WO-037, WO-040,
+WO-045, WO-044, WO-035 and WO-018.
 
 | Order | Change | Decision |
 | --- | --- | --- |
-| WO-046 the machinery view | amended: the pin moves from core's v0.122.1 to its v1.0.0, and the statements that depend on it are read again there (the manifest's digest, 36 installed surfaces, the agent definitions, the byte measure, criterion 3's command) | D7 |
+| WO-046 the machinery view | amended: the pin moves from core's v0.122.1 to its v1.0.0, and the statements that depend on it are read again there (the manifest's digest, 36 installed surfaces, the agent definitions, the byte measure, criterion 3's command); criterion 4 names the Design's rule | D7, D10 |
 | WO-024 concept studies V | amended: the fan-out names its workers from the instance's worker table, where it reached a removed worker definition through WO-020's procedure | D6 |
 | WO-043 the Art of War map pass | amended: the fan-out names its workers from the worker table, where it named the removed definition | D6 |
 | WO-029, WO-030, WO-031, WO-032 research | amended: the Model line and the fan-out name the `default` worker in place of a model id, and the fan-out no longer states the cap's earlier figure | D6 |
+| WO-036 walls and ways | criteria 2 and 5: which steps the two steering changes enter, and that the heuristic is the unweighted distance | D10 |
+| WO-008 authentication and permissions | criterion 4: the e2e sources compared with the integrated commit, whether or not the candidate is committed | D10 |
+| WO-017 the digital twin | criterion 1: the exporter counts a row it does not recognize and fails on a session that yields no stage | D10 |
+| WO-016 the replay | criteria 3 and 7: the count of ids each role carries at both commits, and the Replay item's place beside the Twin item | D10 |
 
 ## Decisions
 
@@ -390,6 +398,52 @@ no order's edge changed; and the reasons the previous pass gave for the
 order of the road and of the side lane were read against a window in which
 nothing ran, and still hold.
 
+### D10. The receipt's known issues are settled in this pass
+
+The refuter judged five orders: WO-046, which this pass amended, and
+WO-036, WO-008, WO-017 and WO-016, which the previous pass amended after its
+last receipt. It held nothing and recorded fourteen known issues
+(§Validation). It reads an order's objective, cost, criteria and non-goals
+and not its Design, so several issues name something a Design already
+decides, and those are answered by writing the decision into the criterion
+it narrows. By the operator's direction that a pass settles what it can,
+each issue is repaired now or answered with the reason no text settles it.
+A repair is the criterion's text alone, bound to the receipt with `npm run
+plan -- dispose`, which takes a known issue's identifier from this release
+on; the plan check reads the seven as disposed criteria.
+
+| Order and criterion | Known issue | What this pass did |
+| --- | --- | --- |
+| WO-036, criterion 2 | which `steer.blend` steps the head-on policy and the steering repair enter is not defined, and the earlier known outcome's one tool is of that kind | repaired: the criterion names that fixture's row and its parameters, which give the avoidance term no weight (read in the fixture and the interpreter at `eb9d227`), and says the two changes act only where priority steering is placed or a step's parameters give the avoidance term a weight or a priority |
+| WO-036, criterion 5 | the expansions spec depends on an unstated choice, a heuristic not scaled with the cost weights | repaired: the criterion carries the Design's choice, the unweighted distance, which the inspector's preview row states |
+| WO-036, criterion 3 | the carried steering repair and the stored-trial reading ride an order of nineteen steps | answered, no amendment: the previous pass's D16 put the scene's one boarded defect in the next scene order on the operator's word that the scene leads, and an order of its own for one steering repair would pay the whole cycle for it |
+| WO-008, criterion 4 | the check that the base's e2e specs are unchanged reads `git status`, which shows nothing for a committed edit | repaired: the criterion compares the e2e sources with the integrated commit of step 1, whether or not the candidate is committed, and keeps the status read for untracked additions |
+| WO-008, criterion 6 | no criterion exercises a second provider | answered, no amendment: the order's own known issues have carried this since receipt 009, a later member with a real provider pays for it, and the previous pass's D4 reopens on the operator naming one |
+| WO-046, criterion 4 | the capacities are given by four worked readings with no general rule | repaired: the criterion names the Design's Reading, which states the rule and its precedence and which this pass ran at both pins |
+| WO-046, criterion 7 | a snapshot bundled with the app, against the purpose's own store and API | answered, no amendment: WS-001's rule on the app's data has committed data files stand until the store exists, and the store and its API are the deferred row `FUP-400988852956edcf`. The refuter marked it a question for the operator; the record already holds the answer |
+| WO-017, criterion 2 | a mocked build copies an exported stage into its output | answered, no amendment: the previous pass's D18 answered the same issue from receipt 028; the local configurations serve the ignored directory by design and no workflow publishes a build |
+| WO-017, criterion 1 | the exporter is tested on a synthetic journal alone, and the journal's format is the kit's | repaired: the criterion has the exporter count a row it does not recognize and exit nonzero, naming the file, when a session file's rows name the order and phase and yield no stage |
+| WO-017, criterion 6 | the criterion builds on WO-008's permission model before the operator has accepted it | answered, no amendment: an ordinary edge on an order that runs first; if WO-008's decisions change the model, the pass after it amends this order (the previous pass's D11) |
+| WO-016, criterion 3 | both sides of the equality can be empty | repaired: the criterion names the count each role's entry holds, nineteen ids for the executor and thirteen for each other role, read by this pass in the Origin stamps at both commits |
+| WO-016, criterion 5 | the sink could be started from another checkout and write to that checkout's intake | answered, no amendment: the Design names the directory, `docs/intake/ideas/` of the DotLn-Angular checkout the sink runs from and never the launchpad's, and the order's command runs in the target's workspace; a start by the script's path from another checkout is the constructible case the receipt's observation watches |
+| WO-016, criterion 7 | the Replay item's place against the Twin item WO-017 adds to the same group | repaired: the criterion places Replay directly after Machinery and ahead of the Twin item where WO-017 has landed; the order already regenerates every whole-page baseline |
+| WO-016, criterion 5 | the idea sink rides the replay order | answered, no amendment: the previous pass split the sink out and the operator withdrew the split (D8 there) |
+
+The receipt also lists six known issues that earlier receipts recorded on
+WO-040, WO-035 and WO-043, orders this pass's refuter did not judge; the
+previous pass's D18 answered each, and nothing they rest on has changed.
+
+Rejected: leaving the issues with their reopening observations (the
+operator refused that of the previous pass); removing the receipt and
+having the repaired subject judged again (the disposition is the kit's
+record of a pass repairing what its own refuter named, and it binds the
+judged and the repaired text with no second judgment). The first draft of
+the repairs also added a provenance sentence to each order and a sentence to
+two Designs; the plan check refused those as unbound bytes, and they were
+taken back, so WO-017's criterion 1 now asks for a behavior its Design does
+not describe and WO-016's criterion 7 is more exact than its Design's line.
+Reopen: each row's observation as the receipt records it.
+
 ## Register
 
 The register was current at entry, the update branch's sync having written
@@ -502,7 +556,10 @@ untouched, and WO-024's fan-out now names workers the new kit has.
 - `AI-HARNESS-SECURITY.md`: the two cells that recorded Copilot as reading
   this launchpad's generated registration, now that it is not elected.
 - `FOR-CORE.md`: four entries (D5).
-- The seven amended orders (§Orders filed and amended).
+- The seven orders amended before the refutation, and after it the seven
+  criteria repaired in five orders (§Orders filed and amended), each repair
+  bound to the receipt by a disposition in the planning log,
+  `docs/control/plan-refutations.jsonl` (D10).
 - The follow-up register (§Register); the generated work-order index and
   its record of workstream observations; the idea ledger's registration
   heading and the lineage index; the cost table.
@@ -531,7 +588,62 @@ no message that gives either.
 
 ## Process cost
 
-PROCESS-COST-PENDING
+Model and effort: Fable 5.2 at `max` (`CLAUDE_EFFORT`), Claude Code
+2.1.325, the operator's selection; no host readback of the effective model
+beyond the session's own. The three research workers and the refuter were
+`dotln-worker`, the `default` worker for Claude (the generated definition
+holds `claude-opus-5-5` at `xhigh`; the first research worker reported that
+model as its context, and no effort was read back). The reviews were Codex
+`gpt-6.1-sol` at `max`, the `default` for Codex, as the helper launched
+them, with no host readback.
+
+| Measure | Value | Source |
+| --- | --- | --- |
+| Wall clock, the dispatch to the update's merge | 0 h 21 min (19:47Z to 20:08Z), 0 h 2 min of it the pull request waiting for the operator | the prompt hook's stamp; `gh pr view 75` |
+| Wall clock, the dispatch to the receipt's commit | 1 h 29 min (19:47Z to 21:16Z) | the prompt hook's stamp; the commit's time |
+| The research | three workers together, 0 h 11 min, 0 h 13 min and 0 h 20 min; 266,158, 319,258 and 422,380 tokens | the host's task notifications |
+| The three reviews | launched together, the last report 0 h 13 min after the launch; 1,290,059, 2,850,589 and 6,420,435 tokens | the reports' headers |
+| The recheck | 0 h 9 min; tokens unknown, the refused report keeping no header | the helper's line |
+| The refutation | 0 h 13 min from dispatch to file, the judgment 0 h 10 min of it; 148,991 tokens at its first return and 153,610 after the restated statement | the receipt; the host's task notifications |
+| The gates | `npm test` once and `npm run test:docs` twice before this section's commit, 0 h 1 min each; the run on that commit follows it | the gate logs |
+| This session's tokens | 159,344,746 at 21:25Z (582 input, 157,999,950 cached input, 933,478 cache-write, 410,736 output); cost unknown, the counter is unavailable | `node scripts/harness.mjs usage ea774e0b-ba63-49ba-967a-e4e3f0b845fb`, source the transcript's message usage, scope dispatch |
+| Workers | 8 launches and 1 re-task of a cap of 40 (Claude 4, Codex 4) | the same readback |
+
+Four costs were avoidable, and three of them were this session's. Its
+brief to the refuter named the prompt by an absolute path and did not ask
+for placeholders, so the helper refused the statement and a re-task
+restated it. Its first draft named two rules as recorded from a message
+that does not give them, which the criteria review refused and which the
+contract's own sentence would have told it. Its repairs after the receipt
+first carried sentences outside the criteria, which the plan check refused
+and which were taken back. The fourth is the recheck's lost record, a
+launch of 0 h 9 min whose report the helper refused for one sentence above
+a table (`FOR-CORE.md`). The largest cost is the session's own context,
+nearly all of it cached input: a release of this size has to be read whole
+before a pass can say what it makes wrong, and the two guides alone gained
+1,948 lines and lost 326 (`git diff --stat` across the update's merge).
+
+Compared with taking the release and changing nothing else: that pass
+would have skipped the research, the reviews and most of this session. It
+would have left the next order of the side lane reaching a worker
+definition the kit no longer has, thirteen orders briefed that their
+workstream has no rules, a profile giving executors a review route that
+starter v0.118.0 replaced and no word that the target gate refuses the
+flag the executor's root names, four register rows untriaged, the
+machinery view pinned to a core that has since dropped six of its
+surfaces, and an operator record naming a route and a definition that are
+gone. Whether the amendments bought what the decisions claim is observable
+when the orders run: WO-036's and WO-024's first verifications are the
+first evidence.
+
+Goal alignment at handoff: the aim stated at entry was met. The release
+was taken first and merged by the operator, and the pass on the updated
+`main` changed what the release and the refuter's reading show to be wrong
+and left the sequence and six orders as they were. The traps weighed before
+the material choices were counting the update as the pass, shifting to the
+operator what a session can settle, and a fix that fails (D1, D7). One item
+went to the operator, the private list, which is theirs; nothing else was
+asked of them.
 
 ## Validation
 
@@ -576,4 +688,46 @@ paid for a second time (the entry is in `FOR-CORE.md`). The reviewer tried
 one bounded probe, which stopped before the test runner started on a host
 error reading the temporary directory, and it claims no test.
 
-VALIDATION-PENDING
+### The refutation
+
+One fresh background `dotln-worker`, given the canonical prompt of `npm run
+plan -- refute` compiled at `503b697` and nothing else, judged the subject.
+Receipt
+[`2026-11-14-planning-a933cbe76d03bcad-029`](../refutations/2026-11-14-planning-a933cbe76d03bcad-029.md):
+**aligned-with-findings**, no hold, scope pass, five orders and the
+sequence judged (WO-046, and WO-036, WO-008, WO-017 and WO-016, which the
+previous pass amended after its last receipt) and twelve verdicts carried
+by hash, 0 h 13 min from dispatch to file. Its statement says that it read
+the one prompt file whole and nothing else, ran no Git command and wrote
+nothing in the repository; its hand-back adds that the subject marks the
+vision, the roles document and the capability table unavailable, which
+this instance does not have, so no vision passage could support a hold.
+The helper refused the first statement for an absolute path of the
+session's scratch. The same worker restated the line with a placeholder,
+and the result file compared equal before and after. It recorded fourteen
+known issues, and D10 says what the pass did with each: seven repaired in
+their criteria and bound with `npm run plan -- dispose`, seven answered.
+
+### The gates
+
+- On the update branch: the host report, `harness check`, `lineage index
+--check`, `launchpad verify`, `work-orders index --check`, `plan check`,
+  `npm test` and `npm run test:docs` (§Readings).
+- On this branch: `npm run work-orders -- index --check` passes with no
+  criteria advisory, and the changed documents pass Prettier. `node
+scripts/docs-check.mjs` passes with no run shared with a capture. One run
+  was shared after the reviews' fixes, where a sentence of the operator
+  record that the operator once pasted back had been re-wrapped onto changed
+  lines; the sentence went back to its lines and one word of the new clause
+  changed.
+- `npm run plan -- check` passes on the receipt's commit, and again with
+  the seven repairs, each read as a disposed criterion. Its four advisories
+  are the ones earlier passes carry, an order naming a file whose path
+  holds a launchpad identifier (WO-030, WO-035 and WO-040 twice). It prints
+  no preflight advisory.
+- `node scripts/terms.mjs branch`: 29 changed files, no line in refuse mode
+  and none in context mode, so no line was read beside an entry (D3).
+- `npm run test:docs` over the working tree before this section's commit:
+  15 passed, 0 failed, 0 h 1 min. The run on this section's own commit
+  follows it and is reported in the pull request's body and the handoff,
+  since a section cannot record the gate that judges it.

@@ -13,8 +13,10 @@ upstream, one typed line, captured in ignored intake
 record is
 [the planning document](../planning/passes/standard-pass-v1-0-0-2026-11-14.md);
 this heading registers the pass for the plan tooling. The pass filed no
-order and amended seven; no idea enters the ledger, because the pass was not
-an ideation dispatch.
+order and amended seven before its refutation; after it, it repaired seven
+criteria in five orders, four of them orders the heading does not count,
+and the heading stands as the receipt bound it. No idea enters the ledger,
+because the pass was not an ideation dispatch.
 
 ## 2026-11-09 — planning pass: starter v0.122.1 taken on the operator's word, core's answers of 2026-11-08 read against the records, every open order re-judged and the result corrected by the operator, the scene leading the sequence, thirteen orders amended, four filed and one removed (operator dispatch of 2026-11-09)
 

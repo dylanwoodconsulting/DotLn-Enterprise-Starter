@@ -758,7 +758,8 @@ target gate plain and review once each.
    untested with the reason and judges it from the executor's recorded run
    in the decisions file); `npx nx test machinery-data-access` exits 0 with
    specs on both committed snapshots asserting that each role's entry lists
-   exactly the ids its role carries there, its gems those of kind
+   exactly the ids its role carries there, nineteen for the executor and
+   thirteen for each other role at both commits, its gems those of kind
    `activeMechanicId`, its supports those of kind `promptSupport` or
    `supportFacetId` and every other id under its own kind, with its prose
    sections, and that the repairer slot reads the executor's entry; `npx nx
@@ -816,7 +817,8 @@ target gate plain and review once each.
    presentation-only band and a caption naming what changed; a refused drop
    visible with its reason; the idea present after a reload; the keyboard
    path across the beats and the shelf; the Replay link in the Machinery
-   menu group directly after Machinery and the one link marked current on
+   menu group directly after Machinery, ahead of the Twin item where WO-017
+   has landed, and the one link marked current on
    `/machinery/replay`, while `/machinery` still renders WO-046's page with
    Machinery the one link marked current (WO-046's `machinery.spec.ts`
    unchanged and passing); axe at the board spec's threshold; no horizontal
