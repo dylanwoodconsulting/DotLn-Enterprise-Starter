@@ -1,0 +1,109 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+[
+  {
+    "name": "nothing else",
+    "speedBeforeSeal": 15.158359661463026,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.419595211031954,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Wander",
+    "speedBeforeSeal": 11.149218975870122,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 38.66454889903819,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Flee",
+    "speedBeforeSeal": 15.158359661463026,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.419595211031954,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Flocking",
+    "speedBeforeSeal": 13.150371400005223,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 45.75075726640653,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Collision avoidance",
+    "speedBeforeSeal": 15.990401728643018,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.588668140217685,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Obstacle and wall avoidance",
+    "speedBeforeSeal": 15.158359661463026,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.419595211031954,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Priority steering",
+    "speedBeforeSeal": 15.988098759175601,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.39470740155792,
+    "blockedAfterClear": 0
+  },
+  {
+    "name": "Equilibrium fallback",
+    "speedBeforeSeal": 15.158359661463026,
+    "activities": [
+      "blocked"
+    ],
+    "blockedUnits": 6,
+    "atRest": true,
+    "peakSpeed": 0,
+    "movedInNext120": 0,
+    "movedAfterClear": 56.419595211031954,
+    "blockedAfterClear": 0
+  }
+]
+bounded-result {"name":"bounded-probe","durationMs":184,"slowestCases":[{"name":"bounded-probe","durationMs":184,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":72145952,"peakRssBytes":127713280,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T22:08:10.540Z","finishedAt":"2026-11-15T22:08:10.724Z","exitCode":0,"executed":true}

@@ -1,0 +1,197 @@
+--- a/libs/features/scene/src/lib/containers/scene-page/scene-page.html
++++ b/libs/features/scene/src/lib/containers/scene-page/scene-page.html
+@@ -43,24 +43,55 @@
+   @if (model.notice; as notice) {
+     <scene-notice-mapper notice-slot [notice]="notice" />
+   }
+-  <scene-unit-inspector
+-    inspector-slot
+-    [tool]="model.inspector"
+-    [refusal]="model.refusal"
+-    [formation]="model.formation"
+-    [selectionCount]="model.transport.selected"
+-    [awaitingRun]="model.awaitingRun"
+-    [live]="model.live"
+-    [canNote]="model.transport.canSave"
+-    [note]="model.note"
+-    [noRoute]="model.noRoute"
+-    [showSearch]="model.showSearch"
+-    (noted)="facade.note($event)"
+-    (searchToggled)="facade.toggleSearch()"
+-    (paramChanged)="facade.setParam($event.name, $event.value)"
+-    (paramCommitted)="facade.commitParam()"
+-    (applied)="facade.equip()"
+-  />
++  <ng-template #inspectorView>
++    <scene-unit-inspector
++      [tool]="model.inspector"
++      [refusal]="model.refusal"
++      [formation]="model.formation"
++      [selectionCount]="model.transport.selected"
++      [awaitingRun]="model.awaitingRun"
++      [live]="model.live"
++      [canNote]="model.transport.canSave"
++      [note]="model.note"
++      [noRoute]="model.noRoute"
++      [showSearch]="model.showSearch"
++      (noted)="facade.note($event)"
++      (searchToggled)="facade.toggleSearch()"
++      (paramChanged)="facade.setParam($event.name, $event.value)"
++      (paramCommitted)="facade.commitParam()"
++      (applied)="facade.equip()"
++    />
++  </ng-template>
++  <ng-template #fieldView>
++    <scene-field-tools
++      [field]="model.field"
++      (toolChosen)="facade.setFieldTool($event)"
++      (cleared)="facade.clearField()"
++      (cellSizeChosen)="facade.setCellSize($event)"
++    />
++    <scene-geometry-list
++      [shapes]="model.field.shapes"
++      [open]="true"
++      (edited)="facade.editShape($event.shape, $event.change)"
++      (removed)="facade.removeShape($event)"
++      (wallAdded)="facade.addWall()"
++      (obstacleAdded)="facade.addObstacle()"
++    />
++  </ng-template>
++  @if (fieldTab()) {
++    <dotln-tabs inspector-slot class="side-tabs">
++      <dotln-tab-list
++        [items]="sideTabs()"
++        [label]="'scene.side.label' | t"
++        [selected]="side()"
++        (selectedChange)="side.set($event ?? 'inspector')"
++      />
++      <dotln-tab-panel value="inspector" [content]="inspectorView" />
++      <dotln-tab-panel value="field" [content]="fieldView" />
++    </dotln-tabs>
++  } @else {
++    <ng-container inspector-slot [ngTemplateOutlet]="inspectorView" />
++  }
+   <scene-instrument-strip
+     instruments-slot
+     [instruments]="model.instruments"
+@@ -76,13 +107,9 @@
+     (feelToggled)="facade.toggleFeel()"
+     (labelSetChanged)="facade.setLabelSet($event)"
+   >
+-    <scene-field-tools
+-      transport-tools
+-      [field]="model.field"
+-      (toolChosen)="facade.setFieldTool($event)"
+-      (cleared)="facade.clearField()"
+-      (cellSizeChosen)="facade.setCellSize($event)"
+-    />
++    @if (!fieldTab()) {
++      <ng-container transport-tools [ngTemplateOutlet]="fieldTools" />
++    }
+     @if (model.trial; as trial) {
+       <scene-trial-compare
+         [trial]="trial"
+@@ -108,13 +135,23 @@
+       (toggled)="facade.toggle($event)"
+       (objectivePlaced)="facade.setObjective($event)"
+     />
+-    <scene-geometry-list
+-      [shapes]="model.field.shapes"
+-      [open]="model.textLayerOpen"
+-      (edited)="facade.editShape($event.shape, $event.change)"
+-      (removed)="facade.removeShape($event)"
+-      (wallAdded)="facade.addWall()"
+-      (obstacleAdded)="facade.addObstacle()"
+-    />
++    @if (!fieldTab()) {
++      <scene-geometry-list
++        [shapes]="model.field.shapes"
++        [open]="model.textLayerOpen"
++        (edited)="facade.editShape($event.shape, $event.change)"
++        (removed)="facade.removeShape($event)"
++        (wallAdded)="facade.addWall()"
++        (obstacleAdded)="facade.addObstacle()"
++      />
++    }
+   </div>
++  <ng-template #fieldTools>
++    <scene-field-tools
++      [field]="model.field"
++      (toolChosen)="facade.setFieldTool($event)"
++      (cleared)="facade.clearField()"
++      (cellSizeChosen)="facade.setCellSize($event)"
++    />
++  </ng-template>
+ </scene-layout>
+--- a/libs/features/scene/src/lib/containers/scene-page/scene-page.ts
++++ b/libs/features/scene/src/lib/containers/scene-page/scene-page.ts
+@@ -1,7 +1,11 @@
+-import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
++import { NgTemplateOutlet } from '@angular/common';
++import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
++import { toSignal } from '@angular/core/rxjs-interop';
++import { ActivatedRoute } from '@angular/router';
++import { map } from 'rxjs';
+
+-import { TPipe } from '@dotln-angular/i18n';
+-import { DotlnVisuallyHidden } from '@dotln-angular/ui';
++import { TPipe, translateSignal } from '@dotln-angular/i18n';
++import { DotlnTabList, DotlnTabPanel, DotlnTabs, DotlnVisuallyHidden } from '@dotln-angular/ui';
+
+ import { FieldTools } from '../../composites/field-tools/field-tools';
+ import { GeometryList } from '../../composites/geometry-list/geometry-list';
+@@ -28,6 +32,10 @@
+       flex-direction: column;
+       min-block-size: 0;
+     }
++    .side-tabs {
++      display: grid;
++      gap: var(--dotln-space-3);
++    }
+     .text-layer {
+       display: grid;
+       gap: var(--dotln-space-4);
+@@ -43,10 +51,14 @@
+   },
+   imports: [
+     CoachMapper,
++    DotlnTabList,
++    DotlnTabPanel,
++    DotlnTabs,
+     DotlnVisuallyHidden,
+     FieldTools,
+     GeometryList,
+     InstrumentStrip,
++    NgTemplateOutlet,
+     NoticeMapper,
+     SceneCanvas,
+     SceneLayout,
+@@ -62,6 +74,20 @@
+   protected readonly facade = inject(SceneFacade);
+   protected readonly vm = this.facade.vm;
+
++  // Design comparison, round one: candidate B puts the field tools and the geometry list in a
++  // Field tab beside the inspector. It leaves the code when the round is decided.
++  protected readonly fieldTab = toSignal(
++    inject(ActivatedRoute).queryParamMap.pipe(map((params) => params.get('field') === 'tab')),
++    { initialValue: false },
++  );
++  protected readonly side = signal('inspector');
++  readonly #inspectorTab = translateSignal('scene.side.inspector');
++  readonly #fieldTabLabel = translateSignal('scene.side.field');
++  protected readonly sideTabs = () => [
++    { id: 'inspector', label: this.#inspectorTab() },
++    { id: 'field', label: this.#fieldTabLabel() },
++  ];
++
+   constructor() {
+     // The scene outlives this page so a visit to the catalog keeps it; nothing runs unwatched.
+     inject(DestroyRef).onDestroy(() => this.facade.pause());
+--- a/apps/dotln/public/i18n/en.json
++++ b/apps/dotln/public/i18n/en.json
+@@ scene @@
++    "side": {
++      "label": "Inspector and field",
++      "inspector": "Inspector",
++      "field": "Field"
++    },

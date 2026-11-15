@@ -1,0 +1,359 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+[
+  {
+    "name": "spec twelve",
+    "order": "priority-first",
+    "firstCredit": 270,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.11195713297867921,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 12,
+        "never": 4,
+        "worstLate": 583,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  },
+  {
+    "name": "spec twelve",
+    "order": "arrive-first",
+    "firstCredit": 270,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.11195713297867921,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 12,
+        "never": 4,
+        "worstLate": 583,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  },
+  {
+    "name": "scene west twelve",
+    "order": "priority-first",
+    "firstCredit": 309,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.1712919922829881,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 10,
+        "never": 6,
+        "worstLate": 814,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 5,
+        "never": 11,
+        "worstLate": 1094,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 5,
+        "never": 11,
+        "worstLate": 1757,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  },
+  {
+    "name": "scene first twelve",
+    "order": "arrive-first",
+    "firstCredit": 344,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.1200598932158815,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 13,
+        "never": 3,
+        "worstLate": 1769,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 8,
+        "never": 8,
+        "worstLate": 1492,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 8,
+        "never": 8,
+        "worstLate": 1722,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 2,
+        "never": 14,
+        "worstLate": 1720,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  },
+  {
+    "name": "spec twelve, slow radius 3",
+    "order": "priority-first",
+    "firstCredit": 315,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.24416276857055572,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 14,
+        "never": 2,
+        "worstLate": 1385,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 5,
+        "never": 11,
+        "worstLate": 1758,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  },
+  {
+    "name": "spec twelve, slow radius 1",
+    "order": "priority-first",
+    "firstCredit": 411,
+    "restedAt": null,
+    "restedAfter2400": false,
+    "peakAfter2400": 0.33596231329501225,
+    "rows": [
+      {
+        "far": 1.05,
+        "later": 16,
+        "never": 0,
+        "worstLate": 397,
+        "mostAhead": 0
+      },
+      {
+        "far": 1.5,
+        "later": 11,
+        "never": 5,
+        "worstLate": 1437,
+        "mostAhead": 0
+      },
+      {
+        "far": 2,
+        "later": 8,
+        "never": 8,
+        "worstLate": 1598,
+        "mostAhead": 0
+      },
+      {
+        "far": 3,
+        "later": 1,
+        "never": 15,
+        "worstLate": 1722,
+        "mostAhead": 0
+      },
+      {
+        "far": 5,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 8,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      },
+      {
+        "far": 12,
+        "later": 0,
+        "never": 16,
+        "worstLate": 0,
+        "mostAhead": 0
+      }
+    ]
+  }
+]
+bounded-result {"name":"bounded-probe","durationMs":8711,"slowestCases":[{"name":"bounded-probe","durationMs":8711,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":86041936,"peakRssBytes":139968512,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T22:08:00.391Z","finishedAt":"2026-11-15T22:08:09.102Z","exitCode":0,"executed":true}

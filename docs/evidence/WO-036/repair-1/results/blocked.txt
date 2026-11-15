@@ -1,0 +1,10 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+{"carrying":"nothing else","speedWhenSealed":7.489,"activity":"blocked","displacementSinceSeal":1.744931,"speed":0,"unitAtRest":true,"sceneAtRest":true,"movedInTheNext120Frames":0,"movedIn120FramesAfterClearing":20.267}
+{"carrying":"Velocity matching","speedWhenSealed":7.489,"activity":"blocked","displacementSinceSeal":1.744931,"speed":0,"unitAtRest":true,"sceneAtRest":true,"movedInTheNext120Frames":0,"movedIn120FramesAfterClearing":20.267}
+{"carrying":"Wander","speedWhenSealed":6.783,"activity":"blocked","displacementSinceSeal":1.580198,"speed":0,"unitAtRest":true,"sceneAtRest":true,"movedInTheNext120Frames":0,"movedIn120FramesAfterClearing":14.764}
+{"carrying":"cohesion with a unit that has a way","speedWhenSealed":1.826,"activity":"blocked","displacementSinceSeal":0.423748,"speed":0,"unitAtRest":true,"sceneAtRest":false,"movedInTheNext120Frames":0,"movedIn120FramesAfterClearing":11.21}
+{"carrying":"Equilibrium fallback (seek, then wander)","speedWhenSealed":7.489,"activity":"blocked","displacementSinceSeal":1.744931,"speed":0,"unitAtRest":true,"sceneAtRest":true,"movedInTheNext120Frames":0,"movedIn120FramesAfterClearing":20.245}
+{"order":"path then formation","formations":1,"activities":["stalled","stalled","stalled"],"routesDrawn":0,"pathLength":null,"at":["59.0,20.0","59.0,22.0","59.0,18.0"]}
+{"order":"formation then path","formations":0,"activities":["arrived","arrived","arrived"],"routesDrawn":3,"pathLength":0.50239460947914,"at":["100.3,19.6","100.3,19.6","100.3,19.6"]}
+bounded-result {"name":"bounded-probe","durationMs":126,"slowestCases":[{"name":"bounded-probe","durationMs":126,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":1360280,"peakRssBytes":1802240,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T20:15:59.940Z","finishedAt":"2026-11-15T20:16:00.066Z","exitCode":0,"executed":true}
