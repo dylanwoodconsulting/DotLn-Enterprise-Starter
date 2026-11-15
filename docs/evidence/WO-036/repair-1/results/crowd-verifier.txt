@@ -1,0 +1,10 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+{"offset":{"x":2,"y":0},"centre":{"sent":43,"plain":48},"stopwatch":{"sent":94,"plain":111}}
+{"offset":{"x":-2,"y":0},"centre":{"sent":44,"plain":48},"stopwatch":{"sent":95,"plain":110}}
+{"offset":{"x":0,"y":2},"centre":{"sent":44,"plain":48},"stopwatch":{"sent":95,"plain":110}}
+{"offset":{"x":4,"y":0},"centre":{"sent":66,"plain":79},"stopwatch":{"sent":113,"plain":121}}
+{"offset":{"x":10,"y":6},"centre":{"sent":98,"plain":114},"stopwatch":{"sent":146,"plain":151}}
+{"offset":{"x":0,"y":-12},"centre":{"sent":100,"plain":116},"stopwatch":{"sent":148,"plain":152}}
+{"offset":{"x":-14,"y":0},"centre":{"sent":110,"plain":124},"stopwatch":{"sent":156,"plain":160}}
+bounded-result {"name":"bounded-probe","durationMs":202,"slowestCases":[{"name":"bounded-probe","durationMs":202,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":46468864,"peakRssBytes":103989248,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T20:13:32.371Z","finishedAt":"2026-11-15T20:13:32.573Z","exitCode":0,"executed":true}

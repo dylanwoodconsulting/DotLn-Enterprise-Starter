@@ -4,7 +4,7 @@
 
 ## Proposed order
 
-- [ ] [WO-036] — Walls and ways: obstacles, walls and pathfinding in the scene · **queued** · pair 1
+- [x] [WO-036] — Walls and ways: obstacles, walls and pathfinding in the scene · **final-reviewed** · pair 1
 - [ ] [WO-024] — Concept studies V: levels, loops and teams · **queued** · pair 1
 - [ ] [WO-037] — Shooting and bullets in the scene · **queued** · pair 2
 - [ ] [WO-040] — Standards pass III: the second movement batch's code and the first batch's residue · **queued** · pair 2
@@ -32,11 +32,11 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 
 ### WS-001
 
-- [WO-003] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
+- [WO-003] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
 - [WO-004] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-011] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
+- [WO-011] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
 - [WO-005] — repository: dotln-angular; base: 651d76ff68e9b3a38fe770226deb634bca28b54c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-012] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
+- [WO-012] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
 - [WO-006] — repository: dotln-angular; base: 5102783f5cf575a6b487e75ed9bb0c064d6dbd9c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-007] — repository: dotln-angular; base: 90fa6e8d879cb499107ff79d1051c200d17c1cbc; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-013] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
@@ -47,7 +47,7 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 - [WO-008] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-017] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-018] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-025] — repository: self; base: b11ad86a43b5c284c4c22417fd85c66072f91d88; phase: closed; verdict: pass; integration: current; stale: no; observed target: b11ad86a43b5c284c4c22417fd85c66072f91d88.
+- [WO-025] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
 - [WO-026] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-020] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-021] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
@@ -57,7 +57,7 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 - [WO-027] — repository: dotln-angular; base: 48c7f8e6916692bca833c4985e2cf95978ab2c06; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-034] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-035] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-036] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
+- [WO-036] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: closed; verdict: pass; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-037] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-039] — repository: dotln-angular; base: f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
 - [WO-040] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
@@ -81,23 +81,6 @@ Separate track; outside the proposed serial order.
 None.
 
 ## Open
-
-### WO-036
-
-[WO-036 — Walls and ways: the soldier scene gains walls and obstacles the operator draws on the field, a tile graph those block, A* and Dijkstra with the catalog's heuristics and cost functions as rail tools, path following with replanning when the field changes and a visible no-route state, obstacle and wall avoidance from the engine with a deterministic head-on policy, and geometry saved with the composition and replayed](WO-036-scene-walls-and-ways.md)
-
-- State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
-- Application target: unassigned.
-- Dependencies: typed; dependency-ready.
-- References: WO-015: hard (met) — the pure scene engine, the renderer seam, the rail, the inspector, the text layer, the store and the fixture contract this order extends; WO-035: reference-only (non-blocking) — the inspector's definition and the rail's names read the catalog's messages once WO-035 lands; the later of the two integrates the target's main.
-- Verification: none recorded.
-- Final review: none recorded.
-- Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes).
-- Effort: executor xhigh; verifier xhigh; reviewer xhigh.
-- Track: delivery
-- Authority: [docs/work-orders/WO-036-scene-walls-and-ways.md](WO-036-scene-walls-and-ways.md)
 
 ### WO-024
 
@@ -123,8 +106,8 @@ None.
 - State: draft.
 - Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
 - Application target: unassigned.
-- Dependencies: typed; blocked on WO-036.
-- References: WO-036: hard (unmet) — the walls and obstacles a bullet stops at, the field steps and the older-trial rule, the rail's groups and the inspector's and painter's layers this order extends.
+- Dependencies: typed; dependency-ready.
+- References: WO-036: hard (met) — the walls and obstacles a bullet stops at, the field steps and the older-trial rule, the rail's groups and the inspector's and painter's layers this order extends.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
@@ -174,8 +157,8 @@ None.
 - State: draft.
 - Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
 - Application target: unassigned.
-- Dependencies: typed; blocked on WO-036, WO-040.
-- References: WO-036: hard (unmet) — the engine's pathfinding module and tile graph the grid builder runs, the wall avoidance and head-on policy the two avoidance studies demonstrate, and the scene inspector this order extends; WO-040: hard (unmet) — it reshapes the Collision avoidance and wall studies' presentation modules and specs and edits the AI for Games study messages, files this order edits.
+- Dependencies: typed; blocked on WO-040.
+- References: WO-036: hard (met) — the engine's pathfinding module and tile graph the grid builder runs, the wall avoidance and head-on policy the two avoidance studies demonstrate, and the scene inspector this order extends; WO-040: hard (unmet) — it reshapes the Collision avoidance and wall studies' presentation modules and specs and edits the AI for Games study messages, files this order edits.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.

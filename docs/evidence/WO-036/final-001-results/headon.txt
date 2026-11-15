@@ -1,0 +1,47 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+{
+  "first": {
+    "least": 0.9997197919354177,
+    "touching": 6,
+    "sides": [
+      [
+        40.5675,
+        39.4325
+      ],
+      [
+        40.5873,
+        39.4127
+      ],
+      [
+        40.523,
+        39.477
+      ],
+      [
+        40.493,
+        39.507
+      ],
+      [
+        40.5981,
+        39.4019
+      ],
+      [
+        40.5395,
+        39.4605
+      ]
+    ],
+    "collisions": 0,
+    "end": [
+      {
+        "x": 60.10693041298063,
+        "y": 40.53953432550818
+      },
+      {
+        "x": 59.89306958701937,
+        "y": 39.46046567449182
+      }
+    ]
+  },
+  "sameOnReplay": true
+}
+bounded-result {"name":"bounded-probe","durationMs":86,"slowestCases":[{"name":"bounded-probe","durationMs":86,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":1360280,"peakRssBytes":1802240,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T22:08:10.877Z","finishedAt":"2026-11-15T22:08:10.964Z","exitCode":0,"executed":true}

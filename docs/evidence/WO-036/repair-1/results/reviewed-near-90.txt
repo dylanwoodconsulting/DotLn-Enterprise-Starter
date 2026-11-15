@@ -1,0 +1,63 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+{"count":2,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":2,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":2,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":4,"home":"60,40","rest":true,"compared":4590,"later":4,"worstFrames":1,"where":"1.065:4"}
+{"count":4,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":4,"home":"80,50","rest":true,"compared":4590,"later":4,"worstFrames":1,"where":"1.065:4"}
+{"count":5,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":5,"home":"40,30","rest":true,"compared":4590,"later":3,"worstFrames":1,"where":"1.145:3"}
+{"count":5,"home":"80,50","rest":true,"compared":4590,"later":2,"worstFrames":1,"where":"1.145:2"}
+{"count":6,"home":"60,40","rest":true,"compared":4590,"later":46,"worstFrames":1,"where":"1.045:9 1.085:11 1.125:7 1.185:1 1.205:2 1.385:7 1.405:9"}
+{"count":6,"home":"40,30","rest":true,"compared":4590,"later":59,"worstFrames":1,"where":"1.045:12 1.085:17 1.125:12 1.185:1 1.205:2 1.385:7 1.405:8"}
+{"count":6,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":7,"home":"60,40","rest":true,"compared":4590,"later":51,"worstFrames":1,"where":"1.045:27 1.065:23 1.465:1"}
+{"count":7,"home":"40,30","rest":true,"compared":4590,"later":46,"worstFrames":1,"where":"1.045:24 1.065:21 1.465:1"}
+{"count":7,"home":"80,50","rest":true,"compared":4590,"later":52,"worstFrames":1,"where":"1.045:25 1.065:26 1.465:1"}
+{"count":8,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":8,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":8,"home":"80,50","rest":true,"compared":4590,"later":1,"worstFrames":1,"where":"1.465:1"}
+{"count":9,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":9,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":9,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"80,50","rest":true,"compared":4590,"later":14,"worstFrames":1,"where":"1.105:13 1.165:1"}
+{"count":16,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":16,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":16,"home":"80,50","rest":true,"compared":4590,"later":1,"worstFrames":1,"where":"1.105:1"}
+{"count":18,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":18,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":18,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+bounded-result {"name":"bounded-probe","durationMs":141042,"slowestCases":[{"name":"bounded-probe","durationMs":141042,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":126941368,"peakRssBytes":177733632,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T19:43:31.752Z","finishedAt":"2026-11-15T19:45:52.794Z","exitCode":0,"executed":true}

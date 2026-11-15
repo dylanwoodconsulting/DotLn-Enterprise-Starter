@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "baseCommit": "eb9d227483e30164105da077f50673789d1e5c9f",
+  "targetTree": "d0a6c4e21f2e0e0f22e8cb52165d88b8e526a199",
+  "command": "node docs/evidence/WO-036/ver-001-engine-probe.mjs <target-worktree>",
+  "run": {
+    "name": "bounded-probe",
+    "durationMs": 1405,
+    "slowestCases": [
+      {
+        "name": "bounded-probe",
+        "durationMs": 1405,
+        "exitCode": 0,
+        "granularity": "task"
+      }
+    ],
+    "peakFootprintBytes": 44322656,
+    "peakRssBytes": 101777408,
+    "memoryBudgetBytes": 4294967296,
+    "footprintSource": "proc_pid_rusage.ri_phys_footprint",
+    "droppedOutputBytes": 0,
+    "startedAt": "2026-11-15T18:06:59.212Z",
+    "finishedAt": "2026-11-15T18:07:00.617Z",
+    "exitCode": 0,
+    "executed": true
+  },
+  "observations": [
+    {
+      "probe": "settled-12",
+      "rest": true,
+      "maxSpeed": 0
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": 2,
+        "y": 0
+      },
+      "objective": {
+        "x": 61.98890121327885,
+        "y": 40.0028788167466
+      },
+      "priority": {
+        "centreFrame": 51,
+        "stopwatchFrame": 104
+      },
+      "plain": {
+        "centreFrame": 48,
+        "stopwatchFrame": 111
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": -2,
+        "y": 0
+      },
+      "objective": {
+        "x": 57.98890121327885,
+        "y": 40.0028788167466
+      },
+      "priority": {
+        "centreFrame": 51,
+        "stopwatchFrame": 104
+      },
+      "plain": {
+        "centreFrame": 48,
+        "stopwatchFrame": 111
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": 0,
+        "y": 2
+      },
+      "objective": {
+        "x": 59.98890121327885,
+        "y": 42.0028788167466
+      },
+      "priority": {
+        "centreFrame": 51,
+        "stopwatchFrame": 104
+      },
+      "plain": {
+        "centreFrame": 48,
+        "stopwatchFrame": 111
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": 4,
+        "y": 0
+      },
+      "objective": {
+        "x": 63.98890121327885,
+        "y": 40.0028788167466
+      },
+      "priority": {
+        "centreFrame": 75,
+        "stopwatchFrame": 125
+      },
+      "plain": {
+        "centreFrame": 78,
+        "stopwatchFrame": 120
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": 10,
+        "y": 6
+      },
+      "objective": {
+        "x": 69.98890121327885,
+        "y": 46.0028788167466
+      },
+      "priority": {
+        "centreFrame": 105,
+        "stopwatchFrame": 151
+      },
+      "plain": {
+        "centreFrame": 114,
+        "stopwatchFrame": 150
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": 0,
+        "y": -12
+      },
+      "objective": {
+        "x": 59.98890121327885,
+        "y": 28.002878816746602
+      },
+      "priority": {
+        "centreFrame": 107,
+        "stopwatchFrame": 152
+      },
+      "plain": {
+        "centreFrame": 116,
+        "stopwatchFrame": 151
+      }
+    },
+    {
+      "probe": "near-retarget",
+      "offset": {
+        "x": -14,
+        "y": 0
+      },
+      "objective": {
+        "x": 45.98890121327885,
+        "y": 40.0028788167466
+      },
+      "priority": {
+        "centreFrame": 113,
+        "stopwatchFrame": 158
+      },
+      "plain": {
+        "centreFrame": 125,
+        "stopwatchFrame": 161
+      }
+    },
+    {
+      "probe": "moving-then-sealed",
+      "extra": null,
+      "activity": "blocked",
+      "displacement": 1.7449305532721073,
+      "speed": 0,
+      "rest": true
+    },
+    {
+      "probe": "moving-then-sealed",
+      "extra": "velocity-match-weight",
+      "activity": "blocked",
+      "displacement": 1.7449305532721073,
+      "speed": 0,
+      "rest": true
+    },
+    {
+      "probe": "moving-then-sealed",
+      "extra": "wander-weight",
+      "activity": "blocked",
+      "displacement": 4.8535574609135255,
+      "speed": 2.3944556106097927,
+      "rest": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+{"tuning":"slow-radius=1","rest":true,"compared":108,"later":96,"worstFrames":5}
+{"tuning":"slow-radius=2","rest":true,"compared":108,"later":96,"worstFrames":3}
+{"tuning":"slow-radius=3","rest":true,"compared":108,"later":56,"worstFrames":3}
+{"tuning":"slow-radius=4","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=5","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=7","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=10","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=15","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=25","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"slow-radius=50","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"time-to-target=0.05","rest":true,"compared":108,"later":12,"worstFrames":1}
+{"tuning":"time-to-target=0.1","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"time-to-target=0.15","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"time-to-target=0.5","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"time-to-target=1","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"time-to-target=2","rest":true,"compared":108,"later":19,"worstFrames":4}
+{"tuning":"target-radius=0.5","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"target-radius=2","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"target-radius=4","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"arrive-weight=0.5","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"arrive-weight=2","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"arrive-weight=5","rest":true,"compared":108,"later":12,"worstFrames":1}
+{"tuning":"threshold=2","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"threshold=6","rest":true,"compared":108,"later":0,"worstFrames":0}
+{"tuning":"falloff=1","rest":true,"compared":108,"later":0,"worstFrames":0}
+bounded-result {"name":"bounded-probe","durationMs":4863,"slowestCases":[{"name":"bounded-probe","durationMs":4863,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":84943968,"peakRssBytes":139214848,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T20:15:50.506Z","finishedAt":"2026-11-15T20:15:55.369Z","exitCode":0,"executed":true}

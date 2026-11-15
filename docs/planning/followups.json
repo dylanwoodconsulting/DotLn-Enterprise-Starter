@@ -4763,6 +4763,14 @@
             "WO-036"
           ],
           "at": "2026-11-10T02:39:34.018Z"
+        },
+        {
+          "sourceRevision": 4,
+          "status": "settled",
+          "reason": "WO-036 took it in step 7 and repaired it in priority steering's separation group (WO-036-D020 and D025): at the reviewed commit twelve units under priority steering with Arrive come to rest and a settled crowd sent somewhere near starts at once and reaches it no later than plain Arrive, where the base never rests and never reaches (WO-036-D029, docs/evidence/WO-036/final-001-results/). What remains at steep tunings of Arrive is carried by FUP-74e51991919f0a80 and FUP-daf1ce232223262a.",
+          "reopenWhen": "A crowd of twelve under priority steering with Arrive at the catalog's defaults fails to come to rest, or crawls when a settled crowd is sent somewhere near.",
+          "targets": [],
+          "at": "2026-11-15T22:15:16.525Z"
         }
       ]
     },
@@ -8171,6 +8179,205 @@
           "at": "2026-11-14T20:39:52.149Z"
         }
       ]
+    },
+    {
+      "id": "FUP-49f382b208b36ff7",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d013",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "19505a6264ef7a2c8147e41dcdfca69cc9f10afd505f0e01ee1997c98a7658a7",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d013",
+          "title": "WO-036-D013: WO-045: when the Obstacle and wall avoidance study moves onto the engine's ray cast and the ray cast becomes public, correct the Corner trap study's first mechanism step, which says the…",
+          "summary": "{ \"id\": \"WO-036-D013\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: next; review round 1, three fresh dotln-worker reviewers (criteria, design, consistency) on Claude Opus 5.5 at xhigh over the whole change against eb9d227\", \"decision\": \"Judge round 1's 41 findings, 35 once the six two reviewers shared are joined, and fix 27 before the recheck. Fixed, each on an input a writer produces: the geometry list let ArrowDown or typing give a shape a negative size, a step the store refused, so a reload dropped the composition and its export would not import (open, criterion 4: a live field step now passes isSafeStep, and the list's size fields carry the engine's least value and put back a refused numb",
+          "missing": false
+        },
+        {
+          "hash": "0868bb5a2f3664e1aabd72ec18c32f0722108f3f9c83ab9f60144a8261541d73",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d013",
+          "title": "WO-036-D013: WO-045: the engine keeps castRay and avoidWalls out of its public API, though WO-045's Obstacle and wall avoidance study is planned to import its ray cast and wall avoidance from…",
+          "summary": "{ \"id\": \"WO-036-D013\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: next; review round 1, three fresh dotln-worker reviewers (criteria, design, consistency) on Claude Opus 5.5 at xhigh over the whole change against eb9d227\", \"decision\": \"Judge round 1's 41 findings, 35 once the six two reviewers shared are joined, and fix 25 before the recheck; two more, the evidence README's handoff link and criterion 3's counts, are left for later steps and recorded as pending (meta critic 1 found this decision first counting them as fixed, D014). Fixed, each on an input a writer produces: the geometry list let ArrowDown or typing give a shape a negative size, a step the store refused, so a reload dropped th",
+          "missing": false
+        },
+        {
+          "hash": "f385258e1ed6c3de9f95d549c02311759be5fc7aabaeb629200c0377cc843306",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d013",
+          "title": "WO-036-D013: WO-045: the engine keeps castRay and avoidWalls out of its public API, though WO-045's Obstacle and wall avoidance study is planned to import its ray cast and wall avoidance from…",
+          "summary": "{ \"id\": \"WO-036-D013\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: next; review round 1, three fresh dotln-worker reviewers (criteria, design, consistency) on Claude Opus 5.5 at xhigh over the whole change against eb9d227\", \"decision\": \"Judge round 1's 41 findings, 35 once the six two reviewers shared are joined, and fix 25 before the recheck; two more, the evidence README's handoff link and criterion 3's counts, are left for later steps and recorded as pending (meta critic 1 found this decision first counting them as fixed, D014). Fixed, each on an input a writer produces: the geometry list let ArrowDown or typing give a shape a negative size, a step the store refused, so a reload dropped th",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-99f14d9a4a983b69",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d017",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "44103731977c238901ebf6526ea78d0ec412d92a31ee0a9051184cd719403cd9",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d017",
+          "title": "WO-036-D017: WO-036 repair: close VER-001 F1 by preserving settling and the old fixture while satisfying the nearby no-later comparison, including two-unit re-targets; close F2 by bringing a blocked…",
+          "summary": "{ \"id\": \"WO-036-D017\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: verify; VER-001, Codex CLI 0.169.0, gpt-6-astra, selected effort max from codex-session-readback\", \"decision\": \"Fail verification on two supported inputs in the declared engine surfaces. For criterion 3, keep the existing spec's definition of reaches, the crowd's centroid within one field unit, and include a two-unit objective change in nearby: the criterion gives no lower bound, so D003's observed lag cannot be excluded by selecting only the three longer offsets. The independent twelve-unit probe reaches at frame 51 with priority and 48 with plain Arrive from the same positions for offsets (2,0), (-2,0) and (0,2). For criteri",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "The repair it asked for was made in WO-036 (D020, D021 and D025) and holds: VER-002 and VER-003 reproduced both findings as repaired, and the final review's probes find no near objective reached later at Arrive's defaults and a blocked unit at rest under eight compositions (WO-036-D029).",
+          "reopenWhen": "A two-unit re-target of a settled crowd at Arrive's defaults is reached later than plain Arrive, or a unit that reads blocked is found moving.",
+          "targets": [],
+          "at": "2026-11-15T22:15:16.548Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-8f9650c8e9a5a3b8",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d018",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "1fe19d5cf9a1314fc0053a3beac048762fc1cec3bca4dd2294d17459864acfde",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d018",
+          "title": "WO-036-D018: WO-036 repair closeout: resolve VER-001 F3 by obtaining a passing document gate at the current authored tree. Diagnose the format task's deadline and host runtime using the recorded…",
+          "summary": "{ \"id\": \"WO-036-D018\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: verify; VER-001 closeout checks\", \"decision\": \"Record criterion 10 unmet because the current launchpad document gate has not completed its formatting prerequisite. The first attempt identified formatting in the verifier's new probe and timed out; only that evidence source was formatted. The second attempt had no formatting warning and still timed out, skipping all later suites. A separate complete formatting check with debug logging exits zero, so the remaining observed failure is the bounded gate execution, not a demonstrated formatting defect. Keep the target gate's passing evidence separate. The verifier changes neither the",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "The document gate passed whole at the repair's authored tree with the host quiet (WO-036-D024) and again at the completion of each later verification; nothing in the tree or the gate was changed for it.",
+          "reopenWhen": "The document gate's formatting task times out with no other load on the host.",
+          "targets": [],
+          "at": "2026-11-15T22:15:16.568Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-74e51991919f0a80",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d020",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "940b2c7c65ebf594c22c471dc128d0cbae4c004a32ce164af345bad620018f0d",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d020",
+          "title": "WO-036-D020: Planning: where Arrive's pull is clipped (a slow radius of 4 or less, a time to target of 0.05, a weight of 5), a crowd under priority steering reaches a near objective 1 to 6 frames…",
+          "summary": "{ \"id\": \"WO-036-D020\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: fix; VER-001 F1 (criterion 3), under D017's repair rule\", \"decision\": \"Repair F1 by changing what priority steering's separation group adds to a unit, and nothing else. The rule the repaired code holds: under the claim a unit's own steering acts whole, and everything the group adds to it is equal and opposite between the two units of a pair (neighbourForces in the engine's steering.ts, called from underSeparation in simulation.ts): the separation push between the two, divided by the share of the maximum acceleration that push leaves free, and friction that matches the pair's velocities at 8 per second times that share. What a ",
+          "missing": false
+        },
+        {
+          "hash": "a74c53c309234bad82e681d46f82ba009bbef2a1a21d891a8d33b75d3ab58b6f",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d020",
+          "title": "WO-036-D020: Planning: where Arrive alone asks for a unit's whole acceleration (a slow radius of 3 or less), a crowd under priority steering reaches a near objective 1 to 5 frames after the same…",
+          "summary": "{ \"id\": \"WO-036-D020\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: fix; VER-001 F1 (criterion 3), under D017's repair rule\", \"decision\": \"Repair F1 by changing what priority steering's separation group adds to a unit, and nothing else. The rule the repaired code holds: under the claim a unit's own steering acts whole, and everything the group adds to it is equal and opposite between the two units of a pair (neighbourForces in the engine's steering.ts, called from underSeparation in simulation.ts): the separation push between the two, divided by the share of the maximum acceleration that push leaves free, and friction that matches the pair's velocities at 8 per second times that share. What a ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-bdcc89104aa99bb0",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d022",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "8954721c369254cd64ba504acbd7d70fb532d86bc8ab1425af23ca3003f44d6f",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d022",
+          "title": "WO-036-D022: Planning: a two-level formation's anchor takes no route, so a formation sent beyond a wall walks straight at it and stalls there; an order that routes a formation (the anchor following a…",
+          "summary": "{ \"id\": \"WO-036-D022\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: fix; an adjacent defect met while closing F2's class, taken through the follow-up queue as adjacent-0001\", \"decision\": \"A formation step takes the units it places off their routes: applyTwoLevel and applyFixed in the engine's interpreter.ts clear the path settings and the route of every unit that will follow a slot, as a path tool already takes a unit out of its formation (D008); a fixed formation's leader steers for itself and keeps a route it has. Before this, a unit given a path tool and then a place in a formation steered for its slot while its row read on its path, the path length instrument counted it and it planned agai",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-daf1ce232223262a",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d026",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "48c536e15ef2aae852886fb5d17447305e52f3b07b4dde51910a52b44db66774",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d026",
+          "title": "WO-036-D026: Planning: a correction to the follow-up raised by WO-036-D020 on crowds under a steeply tuned Arrive. The cause that follow-up gives, that a unit keeping its distance has less…",
+          "summary": "{ \"id\": \"WO-036-D026\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: fix; meta critic 3's report, and the correction of D025 that its first point calls for\", \"decision\": \"Accept all six of meta critic 3's points and answer each here. The first withdraws two claims of D025; D025 stands as it was written, since a decision is a dated record, and this decision carries the correction. Launch 3 went out at 20:14:56Z on the instance's astra worker (gpt-6-astra, with effort max as the launch configured it and not read back from the session) and ended 17 minutes later; the launcher reported the operator's Codex configuration and trust table unchanged and the isolated home removed. Its report went to the",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-755d64e8d183ba8a",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d027",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "55f5bce30b0aacda60f49d0741dd7907306bf647a0a1954f1e69eeef411423d2",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d027",
+          "title": "WO-036-D027: WO-036 repair: resolve VER-002 F1 inside priority steering, keeping the supported slow-radius cases active and preserving criterion 2's hashes and criterion 3's studies boundary. This…",
+          "summary": "{ \"id\": \"WO-036-D027\", \"date\": \"2026-11-15\", \"dispatch\": \"The operator requested independent verification of the repaired WO-036 candidate; the ignored intake capture has SHA-256 178bcbd58fc08915589973085820ecdf0c626ff9a7489b401fc033f46f80faae.\", \"decision\": \"File VER-002 as fail on criterion 3. Credit the repaired default-radius comparison and the blocked-Wander stop, both independently reproduced. Keep the supported slow-radius counterexample as an in-order repair, without declaring a criterion defect or implying a waiver. The target implementation remains untouched by this verifier.\", \"evidence\": [ \"docs/evidence/WO-036/ver-002-reproductions.md and its executable probe, run at target tree",
+          "missing": false
+        },
+        {
+          "hash": "8008eb933b7a1835bced97257aa78ef512c19b4411f38e78046926fe5b32f75b",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d027",
+          "title": "WO-036-D027: WO-036 repair: resolve VER-002 F1 inside priority steering, keeping the supported slow-radius cases active and preserving criterion 2's hashes and criterion 3's studies boundary. This…",
+          "summary": "{ \"id\": \"WO-036-D027\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: verify; independently judge the repaired WO-036 candidate. Capture SHA-256 178bcbd58fc08915589973085820ecdf0c626ff9a7489b401fc033f46f80faae.\", \"decision\": \"File VER-002 as fail on criterion 3. Credit the repaired default-radius comparison and the blocked-Wander stop, both independently reproduced. Keep the supported slow-radius counterexample as an in-order repair, without declaring a criterion defect or implying a waiver. The target implementation remains untouched by this verifier.\", \"evidence\": [ \"docs/evidence/WO-036/ver-002-reproductions.md and its executable probe, run at target tree 78254cc323844f197c04f8d1af6ae2020e655",
+          "missing": false
+        },
+        {
+          "hash": "5a687f3e82a3766b30c63922cef9696fd527204f4fe7c46bfc9221ad2f9d6e26",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d027",
+          "title": "WO-036-D027: WO-036 repair: resolve VER-002 F1 inside priority steering, keeping the supported slow-radius cases active and preserving criterion 2's hashes and criterion 3's studies boundary. This…",
+          "summary": "{ \"id\": \"WO-036-D027\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: verify; independently judge the repaired WO-036 candidate. Capture SHA-256 178bcbd58fc08915589973085820ecdf0c626ff9a7489b401fc033f46f80faae.\", \"decision\": \"File VER-002 as fail on criterion 3. Credit the repaired default-radius comparison and the blocked-Wander stop, both independently reproduced. Keep the supported slow-radius counterexample as an in-order repair, without declaring a criterion defect or implying a waiver. The target implementation remains untouched by this verifier.\", \"evidence\": [ \"docs/evidence/WO-036/ver-002-reproductions.md and its executable probe, run at target tree 78254cc323844f197c04f8d1af6ae2020e655",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 3,
+          "status": "duplicate",
+          "reason": "WO-036-D028 withdrew the mandatory in-order repair this row asked for, and the final review judges the steep tunings of Arrive a follow-up outside criterion 3 (WO-036-D029). The observation itself is the one FUP-74e51991919f0a80 already carries to planning.",
+          "reopenWhen": "The operator asks that the comparison with plain Arrive bind other tunings of Arrive in an order's criterion.",
+          "targets": [
+            "FUP-74e51991919f0a80"
+          ],
+          "at": "2026-11-15T22:15:16.588Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-30951011cc6745a0",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d030",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "39c9388cb489c8a56d8fabe536bde0322baff027a0f326cb6905042195197e9e",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d030",
+          "title": "WO-036-D030: Planning: after Restart the soldier scene's inspector reads a path tool's routes as the ones Apply would plan, and while that run plays its route section is empty and Show search shades…",
+          "summary": "{ \"id\": \"WO-036-D030\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: final review; a defect met in the reviewer's session on the page and not fixed\", \"decision\": \"Board, and do not fix here, how the inspector reads routes after Restart. Restart puts the applied tool down, as it does for every tool at the base, so although the replayed composition has the squad on its routes again, the inspector heads its route section 'The routes Apply would plan' and reads a preview; and because a preview is hidden while the run plays, the section goes empty and Show search shades nothing until the run is paused or the tool is applied again. With the tool live, which is the Objective's own order of steps, the ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-91fba006916ff8c6",
+      "key": "decision:docs/evidence/WO-036/decisions.md#wo-036-d031",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "569a518aaecd0b808e8d8f6696ff4c33756b4304f4b5c831c4cb2f68a51824df",
+          "ref": "docs/evidence/WO-036/decisions.md#wo-036-d031",
+          "title": "WO-036-D031: Planning: a crowd of twelve under priority steering with Arrive is first credited with arriving 2 to 31 percent later than before the settling repair (354 frames against 270 for the…",
+          "summary": "{ \"id\": \"WO-036-D031\", \"date\": \"2026-11-15\", \"dispatch\": \"resume: final review; a cost of the priority-steering repair measured against the base\", \"decision\": \"Record, and leave to the operator's play, that a crowd under priority steering is first credited with arriving later than at the base. The order directs the repair and criterion 3 judges it by rest and by a settled crowd's near re-target, both of which the base failed; no criterion and no promise of main's fixes the first credit, and the base earned its earlier credit from a crowd that never stopped moving. D003 measured this cost for the first execution's rule; these are the figures for the rule that ships.\", \"evidence\": [ \"docs/evid",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

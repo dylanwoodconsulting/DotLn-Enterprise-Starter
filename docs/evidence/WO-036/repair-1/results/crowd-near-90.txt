@@ -1,0 +1,63 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+{"count":2,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":2,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":2,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":3,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":4,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":4,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":4,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":5,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":5,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":5,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":6,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":6,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":6,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":7,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":7,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":7,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":8,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":8,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":8,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":9,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":9,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":9,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":10,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":11,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":12,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":13,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":14,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":15,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":16,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":16,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":16,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":18,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":18,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":18,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":20,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+bounded-result {"name":"bounded-probe","durationMs":137624,"slowestCases":[{"name":"bounded-probe","durationMs":137624,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":126531768,"peakRssBytes":177324032,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T20:13:32.728Z","finishedAt":"2026-11-15T20:15:50.352Z","exitCode":0,"executed":true}

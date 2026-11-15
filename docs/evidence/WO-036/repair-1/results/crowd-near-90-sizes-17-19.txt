@@ -1,0 +1,11 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+PROGRESS [bounded-probe] running task: bounded-probe (reports no cases); last report: waiting for the next case report
+{"count":17,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":17,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":17,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":19,"home":"60,40","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":19,"home":"40,30","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+{"count":19,"home":"80,50","rest":true,"compared":4590,"later":0,"worstFrames":0,"where":""}
+bounded-result {"name":"bounded-probe","durationMs":36691,"slowestCases":[{"name":"bounded-probe","durationMs":36691,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":122501592,"peakRssBytes":173047808,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T20:47:20.329Z","finishedAt":"2026-11-15T20:47:57.020Z","exitCode":0,"executed":true}

@@ -1,0 +1,4 @@
+bounded-start {"budgetBytes":4294967296,"physicalBytes":51539607552,"deadlineMs":900000}
+PROGRESS [bounded-probe] started
+{"cases":144,"unrested":1,"unarrived":0,"touchingFrames":54,"unrestedCases":"20/3/0.05/6/1"}
+bounded-result {"name":"bounded-probe","durationMs":2562,"slowestCases":[{"name":"bounded-probe","durationMs":2562,"exitCode":0,"granularity":"task"}],"peakFootprintBytes":91022432,"peakRssBytes":145408000,"memoryBudgetBytes":4294967296,"footprintSource":"proc_pid_rusage.ri_phys_footprint","droppedOutputBytes":0,"startedAt":"2026-11-15T19:43:28.764Z","finishedAt":"2026-11-15T19:43:31.326Z","exitCode":0,"executed":true}
