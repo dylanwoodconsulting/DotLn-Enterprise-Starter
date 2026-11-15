@@ -149,3 +149,91 @@ a change that did not cause it. Expected: a core-only suite run in an
 instance skips and gives its reason, or the review brief names the suites
 an instance's gates run. Route used: the pass read the runner's entry for
 the file and records the probe as one that cannot pass in an instance.
+
+## 2026-11-15 — WO-036 — a verdict its verifier withdraws has no ordinary route to a later verification
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+A verifier filed a failing report that rested on one reading of a criterion,
+then judged the reading wrong at the operator's direction. The correction
+rule asks for a later report and never an edit of the filed one, but the
+failed verdict had put the order in `needs-fix`, where the verify dispatch is
+not legal: the order's decision record says the ordinary command requires
+`ready-to-verify`, and it keeps no copy of the message printed. Expected: a
+route by which the role that filed a verdict can file a superseding
+verification of the same target tree when the judgment was wrong and the
+product was not, without a repair completion being invented to reach the
+phase. The route used was `operator override:`, with one override record
+naming the single check it bypassed and the later report allocated under it.
+
+## 2026-11-15 — WO-036 — the draft form of the target publish is refused once final review is dispatched
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+The passing verification above was recorded by a session that published
+nothing, so the order reached final review with no draft pull request, and
+this instance's orders make the draft's workflow runs and review threads a
+final-review duty. `node scripts/worktree.mjs publish WO-036
+--target-worktree --draft --branch <type>/<slug> --title <title> --body-file
+<path>`, run by the final reviewer before recording a result, printed `error:
+target publish refused: the draft form is legal at verified with a passing
+verification; WO-036 is final-review`. Expected: the draft form admitted in
+`final-review` until the result is recorded, so a reviewer who finds none can
+open it, read what it draws and then publish over it. The route used: the
+review recorded that no draft existed, judged on its own gates and published
+the pull request ready, where the workflows run before the operator merges.
+
+## 2026-11-15 — WO-036 — the document gate's formatting task ran out of its fixed thirty seconds on a busy host
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+A verification's `npm run test:docs` failed twice at its formatting task,
+which `scripts/test-runner.mjs` gives `timeoutMs: 30000`, and skipped the
+fourteen suites after it, so the order's document-gate criterion was judged
+unmet on a tree whose formatting was clean. The session had served a
+production build and driven a browser just before. The same check run alone
+took 11.9 seconds and passed, and the whole gate passed once nothing else of
+the session was running. Expected: a formatting task that times out reports
+a timeout under load and how to run it again, or takes its deadline from the
+host, and is not read as a failed formatting prerequisite. The route used:
+the gate was run again with the host quiet.
+
+## 2026-11-15 — WO-036 — a command the host guard stops at its memory budget ends with exit 1 and prints nothing
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+Outside the bounded wrapper the host guard gives a session's command three
+gibibytes. Twelve of an executor's commands in a target worktree were
+stopped there (the incident log's failure kind `memory-budget`), eleven of
+them one project's unit tests at their configured worker count, and each
+ended with exit 1 and no output, so several were rerun before the incident
+log was read. The guard also refuses the bounded wrapper in a target
+worktree, so the wrapper's larger budget was not to be had there. Expected:
+the stopped command's output names the guard, the budget and the footprint
+it measured. The route used: the tests ran at one worker outside the gate
+and at their configured count inside the registered target gate, which has
+its own budget for each command.
+
+## 2026-11-15 — WO-036 — recording a target order's review without naming the target binds the launchpad as the tree reviewed
+
+```json
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+```
+
+`npm run worker -- record` for an order whose header names a registered
+repository, run without `--target <id>`, filed six review reports whose
+receipts name the launchpad's working tree as the tree reviewed, with no
+refusal and no advisory. It came to light only when a later round's `--since
+<tree>` named a tree the bound checkout did not hold and was refused.
+Expected: the recorder takes the order's registered target by default, or
+refuses a target order's record that names none. The route used: the later
+rounds were recorded with `--target`, and the earlier receipts' identity is
+corrected in the order's decisions, the report bytes left as filed.
