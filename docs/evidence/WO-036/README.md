@@ -394,3 +394,8 @@ out the true figures.
   session running: `npm run test:docs`, 15 of 15 fresh suites in 62,195 ms. Its row records the
   tree without this evidence directory, so what the review wrote here afterwards leaves it
   standing, and `final-review-result pass` consumed it.
+- **The pull request's workflows.** DotLn-Angular's pull request 19, opened ready on
+  `feat/scene-walls-and-ways` at `22c1c7e203234e6700421a0105d79b14e1e72440` (the four reviewed
+  commits and the records commit), passed `title` in 14 s, `visual` in 3 min 47 s and `checks`
+  in 14 min 23 s, read at 22:38:58Z. No draft preceded it
+  ([D029](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d029)).

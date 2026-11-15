@@ -206,3 +206,29 @@ declared command at the reviewed commit; it was awaited through the host's compl
 and while it ran the reviewer wrote only in this order's evidence and final-review directories.
 After it the engine's suite, the scene feature's and scene store's suites and the bundle check
 ran one at a time in the target worktree.
+
+### The publications
+
+After `final-review-result pass` the reviewer committed the instance records as three commits
+ending at `74aaf3e`, then ran `DOTLN_LAUNCHPAD=<this worktree> node scripts/resume.mjs
+target-records` with its actor flags. It filed the order, its decisions, the three verifications
+and the final review in the target as the records commit
+`22c1c7e203234e6700421a0105d79b14e1e72440`, and the reviewer committed their removal here with
+the 81 links to them pointed at that commit (`c0a69eb`).
+
+The target publish ran plainly from the launchpad root:
+
+```sh
+node scripts/worktree.mjs publish WO-036 --target-worktree --branch feat/scene-walls-and-ways --title ":sparkles: Add walls, obstacles and pathfinding to the soldier scene" --body-file docs/final-reviews/WO-036/TARGET-PR.md
+```
+
+The hook admitted it and the host denied nothing. It printed `Pushed feat/scene-walls-and-ways
+at 22c1c7e203234e6700421a0105d79b14e1e72440 and opened pull request #19 on
+github.com/DylanBWood/DotLn-Angular.` The pull request was open, ready and mergeable when read
+back. Its three workflows passed, read with `gh pr checks 19 --repo DylanBWood/DotLn-Angular`
+at 22:38:58Z: `title` in 14 s, `visual` in 3 min 47 s and `checks` in 14 min 23 s. It had no
+review, comment or thread at that reading.
+
+The records publish, `node scripts/worktree.mjs publish WO-036 --title <title> --body-file
+docs/final-reviews/WO-036/PR.md`, runs after the commit that holds this paragraph, so its
+outcome is the records pull request itself and the reviewer's closing message.

@@ -836,7 +836,7 @@ sequence's order, then the later members with their reopening conditions
 | WO-034 standards pass I | the first movement batch's code read as the example, the wall study explaining its brief clearance correction, the guards tightened | merged; DotLn-Angular #16, `DotLn Angular v0.10.2` |
 | WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | merged; DotLn-Angular #17, `DotLn Angular v0.11.0` |
 | WO-039 standards pass II | nothing new on screen but the narrow register's state headings, which keep two thirds of their size at 360 and break a longer name across two lines; the enterprise batch's code read as the example an executable-model batch copies, Foreign Key Mapping's limit counting what it should | merged; DotLn-Angular #18, `DotLn Angular v0.11.1` |
-| WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state they can read, head-on pairs parting, a crowd that comes to rest | final-reviewed; its pull request on `feat/scene-walls-and-ways` awaits the operator's merge; the scene leads; [evidence](../evidence/WO-036/README.md) |
+| WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state they can read, head-on pairs parting, a crowd that comes to rest | final-reviewed; DotLn-Angular #19 awaits the operator's merge; the scene leads; [evidence](../evidence/WO-036/README.md) |
 | WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed; beside WO-036 |
 | WO-037 shooting and bullets | units firing at a target, bullets stopped by walls, a moving target led by the firing solution, hits counted, a knockout that re-lays the formation | filed |
 | WO-040 standards pass III | nothing new on screen but nineteen flow state sentences that read as English; both movement batches reading as one example | filed; beside WO-037 |
@@ -903,7 +903,7 @@ enters that reading (the operator's restatement of 2026-11-09, journal row 2026-
 | WO-027 | merged   | DotLn-Angular #15, `DotLn Angular v0.10.1`, its records #61; [evidence](../evidence/WO-027/README.md) |
 | WO-034 | merged | DotLn-Angular #16, `DotLn Angular v0.10.2`, its records #66; [evidence](../evidence/WO-034/README.md) |
 | WO-035 | filed    | [the order](../work-orders/WO-035-catalog-text-through-messages.md) |
-| WO-036 | final-reviewed | verified and accepted; DotLn-Angular's pull request on `feat/scene-walls-and-ways` awaits the operator's merge; [evidence](../evidence/WO-036/README.md) |
+| WO-036 | final-reviewed | DotLn-Angular #19 awaits the operator's merge; [evidence](../evidence/WO-036/README.md) |
 | WO-037 | filed    | [the order](../work-orders/WO-037-scene-shooting-and-bullets.md) |
 | WO-039 | merged | DotLn-Angular #18, `DotLn Angular v0.11.1`, its records #70; [evidence](../evidence/WO-039/README.md) |
 | WO-040 | filed    | [the order](../work-orders/WO-040-standards-pass-movement-second-batch.md) |
