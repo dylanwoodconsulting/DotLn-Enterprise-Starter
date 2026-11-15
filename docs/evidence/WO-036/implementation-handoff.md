@@ -17,9 +17,9 @@ review:
 The integrated target base is `eb9d227483e30164105da077f50673789d1e5c9f`, the target's `main`
 throughout. The candidate is the target's working tree `d0a6c4e21f2e0e0f22e8cb52165d88b8e526a199`.
 That is review round 3's tree (`1697743d6e012462802bfb02aa955d530bea0954`) and the 32 lines
-changed after it ([D016](decisions.md#wo-036-d016)). Neither main moved during the execution,
+changed after it ([D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)). Neither main moved during the execution,
 so nothing was integrated: the launchpad's is `562fb9146f458787d12edf9ee518a6252508858e` and
-the target's is `eb9d227`. The decisions are [decisions.md](decisions.md), WO-036-D001 to
+the target's is `eb9d227`. The decisions are [decisions.md](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md), WO-036-D001 to
 D016; the evidence index is [README.md](README.md).
 
 ## Acceptance criteria
@@ -49,7 +49,7 @@ four crowds of twelve come to rest and that three settled crowds re-targeted 12 
 reach the new objective no later than a plain Arrive. Both arms are recorded: exit 1 with all
 seven failing on their assertions against the whole base engine, exit 0 on the candidate
 ([README §Criterion 3](README.md#criterion-3-the-priority-repair-failing-at-the-base-and-passing-after-it)).
-The repair changes priority steering alone ([D003](decisions.md#wo-036-d003)). D003 records
+The repair changes priority steering alone ([D003](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d003)). D003 records
 the reviewers' measurements of near re-targets under both readings of "reaches" and leaves
 both readings to the verifier. The tools project's tests pass, 129 files and 1,116 tests, at
 one worker in the Preflight. `git diff --quiet eb9d227 -- libs/features/tools/src/lib/studies`
@@ -85,7 +85,7 @@ tools/i18n-copies.test.mjs` passes 3 of 3.
 
 **Criterion 8:** met — [design/comparisons.md](design/comparisons.md) records the first pair, A
 in the transport and B as a Field tab, and the operator's pick of A with the rounds ended
-([D009](decisions.md#wo-036-d009)). B had no file of its own. Its parts lived in
+([D009](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d009)). B had no file of its own. Its parts lived in
 `scene-page.html`, `scene-page.ts`, `en.json` and the scene testing copy, which stay as A's, so
 criterion 8's `ls` has no file of B's to run on. D009 names those files and the greps showing
 B's branch and messages gone from them.
@@ -111,22 +111,22 @@ blocked unit and its spec, changed after round 3 and judged by the executor alon
 **Round 1.** Three fresh reviewers (criteria, design and consistency) read the whole change
 against `eb9d227`. They found 41 findings, 35 once shared ones are joined. 27 were fixed, two
 of them later in the run (criterion 3's counts in round 2, the handoff link by this file), and
-8 were recorded ([D013](decisions.md#wo-036-d013)).
+8 were recorded ([D013](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d013)).
 
 **Round 2.** The same reviewers rechecked their findings and read the whole change again. Every
 fix held. Of 13 new findings, 10 distinct, three were admitted and fixed: two files Prettier
 refused; a blocked unit carrying velocity matching that cruised on; and criterion 3's base arm,
-which had stopped reaching its assertions. Seven were recorded ([D015](decisions.md#wo-036-d015)).
+which had stopped reaching its assertions. Seven were recorded ([D015](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d015)).
 
 **Round 3.** One combined worker read the change since round 2's tree. It found five findings,
 one admitted (a squad sealed off on the move coasted about 20 units), all five fixed after it
-([D016](decisions.md#wo-036-d016)).
+([D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)).
 
 Two executor errors are on the record:
 - the executor told the operator a critic was right before giving the operator that critic's
-  report ([D014](decisions.md#wo-036-d014));
+  report ([D014](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d014));
 - rounds 1 and 2 were recorded without `--target`, so their records name the launchpad's tree
-  ([D016](decisions.md#wo-036-d016)).
+  ([D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)).
 
 Recorded and not fixed, for the verifier and later orders:
 - near re-targets that arrive up to 3 frames after plain Arrive on the centre reading, and up
@@ -142,9 +142,9 @@ Recorded and not fixed, for the verifier and later orders:
 - WO-045's ray cast import, carried by `FUP-49f382b208b36ff7`.
 
 **The meta critic.** Separate from the ladder, a critic of the executor's conduct ran on
-GPT-6 Astra at the operator's request, as core's WO-276 ran it ([D012](decisions.md#wo-036-d012)).
+GPT-6 Astra at the operator's request, as core's WO-276 ran it ([D012](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d012)).
 Critic 1 ran from 16:09Z to 16:27Z, and its five points were all accepted
-([D014](decisions.md#wo-036-d014)). Its clock ended with the passing review gate at 17:23Z, a
+([D014](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d014)). Its clock ended with the passing review gate at 17:23Z, a
 minute before a second critic fell due, so none ran after it. Workers in all: seven
 `dotln-worker` uses (four launches, three re-tasks) and the one critic launch, eight of a cap
 of 40.

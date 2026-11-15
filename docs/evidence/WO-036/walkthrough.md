@@ -1,7 +1,7 @@
 # WO-036 walkthrough
 
 The executor's own run of the order's Objective, 2026-11-15, on the candidate review round 3
-and the change after it ([D016](decisions.md#wo-036-d016)) leave, in the served production
+and the change after it ([D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)) leave, in the served production
 build (`npx nx build dotln --configuration=production`, finished at 17:01:11Z, served from
 `dist/apps/dotln/browser` on the loopback), with motion on, in fresh Chromium contexts from the
 target's Playwright 1.64.1. The same fourteen steps ran at 2080 by 1460 (17:01:21Z to
@@ -43,7 +43,7 @@ trial's first divergence frame 868 to 933, and the head-on pair took 2.5 s at fo
 unit-02 and unit-04 do not start exactly in line (y = 16.6 and 16.7), so Collision avoidance's
 own steering parts them and the head-on policy, which acts only on a pair exactly head on, does
 not fire in this session; the engine's specs carry the policy's three cases and their replays
-(criterion 3; review round 1's finding C11, [D013](decisions.md#wo-036-d013)).
+(criterion 3; review round 1's finding C11, [D013](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d013)).
 
 **What I read from the page alone.** The squad found its way by a search I could watch: the
 shaded cells showed how far A* looked before it committed, the dashed lines showed where each

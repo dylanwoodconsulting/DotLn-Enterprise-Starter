@@ -7,11 +7,11 @@ obstacle and wall avoidance, a head-on policy beside collision avoidance, a crow
 priority steering that comes to rest, and geometry saved with a composition and replayed.
 The target is `dotln-angular` at `eb9d227483e30164105da077f50673789d1e5c9f`, WO-039's merge,
 which is also the target's `main` throughout this execution
-([WO-036-D002](decisions.md#wo-036-d002)).
+([WO-036-D002](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d002)).
 
 ## What to read
 
-- [decisions.md](decisions.md): D002 activation; D003 the priority repair and every arm
+- [decisions.md](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md): D002 activation; D003 the priority repair and every arm
   measured; D004 geometry, its one shape model and following; D005 the search and the
   cost functions; D006 avoidance and the head-on policy; D007 the enum's growth and the
   typed rows; D008 how path and field steps act on units; D009 the design round; D010 the
@@ -48,7 +48,7 @@ The first base arm, on 2026-11-14 at 23:35Z, swapped the base's `simulation.ts` 
 candidate and failed on the same two assertions. That method no longer reaches them: the
 candidate's interpreter now plans routes on every objective step, which the base's
 simulation gives no geometry to, so each case throws before it runs (review round 2's
-criteria finding C15, [D015](decisions.md#wo-036-d015)). Hence the whole base engine.
+criteria finding C15, [D015](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d015)). Hence the whole base engine.
 
 The repair changes priority steering alone. `git diff --quiet eb9d227 --
 libs/features/tools/src/lib/studies` exits 0, so the Collision avoidance study and its spec
@@ -76,7 +76,7 @@ rewritten. They were read at reading size in their final bytes as follows: `scen
 at 14:53:58Z, `scene-flocking-1440.png` at 14:56:46Z and `scene-360.png` at 14:56:49Z on
 2026-11-15, before the README first said all six were read; `scene-768.png`,
 `scene-flocking-768.png` and `scene-flocking-360.png` only at 16:30Z, after meta critic 1 found
-the claim ran ahead of the reads ([D014](decisions.md#wo-036-d014)). Every one is a
+the claim ran ahead of the reads ([D014](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d014)). Every one is a
 `scene-*.png` under `apps/dotln-e2e/src/visual-baselines/darwin/`:
 
 | Baseline | What changed in it |
@@ -120,7 +120,7 @@ the claim ran ahead of the reads ([D014](decisions.md#wo-036-d014)). Every one i
 ## The Preflight
 
 The order's Preflight line ran on the candidate review round 3 and the change after it leave
-([D016](decisions.md#wo-036-d016)), before the first full gate, in the target worktree with
+([D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)), before the first full gate, in the target worktree with
 `NX_DAEMON=false` and `NX_ISOLATE_PLUGINS=false`, one command at a time, each with its own exit
 code, between 17:06:32Z and 17:14:25Z on 2026-11-15:
 
@@ -168,9 +168,9 @@ are as they were before each command, so neither gate changed a tracked byte.
 
 ## The repair of VER-001
 
-2026-11-15, `resume: fix`. [VER-001](../../verifications/WO-036/VER-001.md) failed the order on
-three findings; the repair's decisions are [D019](decisions.md#wo-036-d019) to
-[D026](decisions.md#wo-036-d026) and its handoff is [handoff.md](handoff.md). The tree VER-001
+2026-11-15, `resume: fix`. [VER-001](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/verifications/WO-036/VER-001.md) failed the order on
+three findings; the repair's decisions are [D019](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d019) to
+[D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026) and its handoff is [handoff.md](handoff.md). The tree VER-001
 judged is the target's `d0a6c4e21f2e0e0f22e8cb52165d88b8e526a199`; the repair's one review read
 `52d4693845cbdd20c1a5aba868de21776036266d`; the candidate is
 `78254cc323844f197c04f8d1af6ae2020e655150`. The Preflight, the arms and the filed probes ran
@@ -183,10 +183,10 @@ and `interpreter.ts`, its `steering.spec.ts` and `path-following.spec.ts`, the b
 
 | Finding | What the repair holds | Decision |
 | --- | --- | --- |
-| F1, criterion 3: a settled crowd under priority steering reached a near objective after plain Arrive | Under separation's claim what a unit's neighbours add (a stiffened push and friction) is equal and opposite between a pair, so a crowd's centre moves as its units' own steering moves it; and a unit's own steering does not answer for the speed the push gives it, so a carried unit does not brake against the crowd. Closed at Arrive's defaults; steep tunings of Arrive are still late and criterion 3 is judged unmet | [D020](decisions.md#wo-036-d020), [D025](decisions.md#wo-036-d025), [D026](decisions.md#wo-036-d026) |
-| F2, criterion 1: a unit with Wander kept walking under a no-route notice | A unit with no route is steered by nothing, in one place, and brakes where it stands whatever it carries | [D021](decisions.md#wo-036-d021) |
-| F3, criterion 10: the document gate's formatting task timed out | No change; the check takes 11.9 s alone, and the gate's own row at the repair's tree decides | [D024](decisions.md#wo-036-d024) |
-| Adjacent, met while closing F2's class | A formation step takes the units it places off their routes | [D022](decisions.md#wo-036-d022) |
+| F1, criterion 3: a settled crowd under priority steering reached a near objective after plain Arrive | Under separation's claim what a unit's neighbours add (a stiffened push and friction) is equal and opposite between a pair, so a crowd's centre moves as its units' own steering moves it; and a unit's own steering does not answer for the speed the push gives it, so a carried unit does not brake against the crowd. Closed at Arrive's defaults; steep tunings of Arrive are still late and criterion 3 is judged unmet | [D020](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d020), [D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025), [D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026) |
+| F2, criterion 1: a unit with Wander kept walking under a no-route notice | A unit with no route is steered by nothing, in one place, and brakes where it stands whatever it carries | [D021](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d021) |
+| F3, criterion 10: the document gate's formatting task timed out | No change; the check takes 11.9 s alone, and the gate's own row at the repair's tree decides | [D024](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d024) |
+| Adjacent, met while closing F2's class | A formation step takes the units it places off their routes | [D022](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d022) |
 
 Two limits are boarded in the target's specs, each a skipped failing case under a `BOARDED:`
 comment (WS-001 rule 21), and each carried by a follow-up: with Arrive tuned to a slow radius
@@ -284,7 +284,7 @@ From this launchpad worktree on 2026-11-15, after the Preflight, with neither `m
 - **Document gate.** `DOTLN_LAUNCHPAD=<this worktree> node scripts/test-runner.mjs --document`
   passed from 20:52:31Z to 20:53:33Z with nothing else of the session running: `npm run
   test:docs`, 15 passed and 0 failed of 15 fresh tasks, its formatting task among them, which
-  is the task that timed out twice for VER-001 (F3, [D024](decisions.md#wo-036-d024)). The
+  is the task that timed out twice for VER-001 (F3, [D024](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d024)). The
   session journal records the gate at 61,159 ms. It ran after the last edit outside this
   evidence directory (the indexes and the follow-up register regenerated after D026), and the
   launchpad's `git status` read the same before and after the release and publication reports
@@ -292,11 +292,11 @@ From this launchpad worktree on 2026-11-15, after the Preflight, with neither `m
 
 ## The final review
 
-2026-11-15, `resume: final review`. [FINAL-001](../../final-reviews/WO-036/FINAL-001.md) accepts
+2026-11-15, `resume: final review`. [FINAL-001](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/final-reviews/WO-036/FINAL-001.md) accepts
 the order on the target's commit `a96a60cc3f2c54e5da5c9b615e9cf00a49916a0a`, whose tree is the
 candidate `78254cc323844f197c04f8d1af6ae2020e655150` that VER-002 and VER-003 judged; the review
-changed no source. Its decisions are [D029](decisions.md#wo-036-d029) to
-[D031](decisions.md#wo-036-d031).
+changed no source. Its decisions are [D029](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d029) to
+[D031](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d031).
 
 The reviewed tree is four commits on `eb9d227`:
 

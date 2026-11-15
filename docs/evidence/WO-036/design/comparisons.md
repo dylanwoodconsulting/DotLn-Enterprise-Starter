@@ -33,4 +33,4 @@ page's template and class from A to B as they stood, and the three messages B ad
 listed rather than applied.
 
 **Pick: A, and the rounds are done**, on the operator's word, recorded in
-[WO-036-D009](../decisions.md#wo-036-d009). B has left the code.
+[WO-036-D009](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d009). B has left the code.

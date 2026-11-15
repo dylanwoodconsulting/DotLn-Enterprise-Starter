@@ -1,30 +1,30 @@
 # WO-036 repair handoff
 
 2026-11-15, `resume: fix`. This repair answers
-[VER-001](../../verifications/WO-036/VER-001.md), which failed the order on three findings.
+[VER-001](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/verifications/WO-036/VER-001.md), which failed the order on three findings.
 The first execution's handoff is [implementation-handoff.md](implementation-handoff.md); what
 it says of the order's deliverables still holds except where this page says otherwise. The
-repair's decisions are [D019](decisions.md#wo-036-d019) to
-[D026](decisions.md#wo-036-d026), and its evidence is
+repair's decisions are [D019](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d019) to
+[D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026), and its evidence is
 [README §The repair of VER-001](README.md#the-repair-of-ver-001) with
 [repair-1/](repair-1/README.md).
 
 - **F1, criterion 3.** At Arrive's defaults a settled crowd under priority steering now starts
   for a new objective as fast as its units would under Arrive alone, because everything the
   crowd adds to a unit's own steering cancels between the two units of a pair
-  ([D020](decisions.md#wo-036-d020)), and it keeps ahead, because a unit's own steering no
-  longer brakes the speed the push gives it ([D025](decisions.md#wo-036-d025)). At those
+  ([D020](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d020)), and it keeps ahead, because a unit's own steering no
+  longer brakes the speed the push gives it ([D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025)). At those
   defaults none of the 19 crowd sizes from 2 to 20 reaches a near objective later than plain
   Arrive does by its centre, and twelve units are credited by the stopwatch no later at the
   offsets tried. Arrive tuned steeply is still a few frames late, so criterion 3 is judged
-  unmet ([D026](decisions.md#wo-036-d026)).
+  unmet ([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)).
 - **F2, criterion 1.** A unit with no route is steered by nothing and brakes where it stands,
   whatever else it carries, and goes on as it was composed when the walls clear
-  ([D021](decisions.md#wo-036-d021)).
+  ([D021](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d021)).
 - **F3, criterion 10.** Nothing was changed for the document gate; its own row decides
-  ([D024](decisions.md#wo-036-d024)).
+  ([D024](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d024)).
 - **Adjacent.** A formation step takes the units it places off their routes
-  ([D022](decisions.md#wo-036-d022)).
+  ([D022](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d022)).
 
 The repair is uncommitted in the target worktree, as the order's change is until final review.
 The target's base is still `eb9d227483e30164105da077f50673789d1e5c9f`, its `main`; the tree
@@ -37,13 +37,13 @@ review gate passed on it between 20:43:29Z and 20:46:17Z. The Preflight ran, and
 gate first passed (20:26:22Z to 20:29:10Z), on `c5485a4ead3d0f34377d4feb99c3a0e5e9980415`,
 called the Preflight tree below; the candidate differs from it in passages of `scene.md` and
 `scene-rules.md` and one comment in `steering.spec.ts`, 43 changed lines and no code
-([D026](decisions.md#wo-036-d026)). On the candidate itself ran the target's format check, the
+([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)). On the candidate itself ran the target's format check, the
 engine's suite and the review gate. Each line below says which run it stands on.
 
 **Criterion 1:** unmet — later-phase. The verifier performs the Objective's session in the
 served production build. What failed it in VER-001, a unit given Wander and then A* walking on
 under a notice that said it had stopped, is repaired in the engine
-([D021](decisions.md#wo-036-d021)) and has a browser case that follows the report's own
+([D021](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d021)) and has a browser case that follows the report's own
 recipe; this handoff records no waiver or defect.
 
 **Criterion 2:** met — the review gate's test row passed on the candidate, and in it the
@@ -84,7 +84,7 @@ part of what the crowd asks for (18.03 along the way against plain Arrive's 20.9
 of the rule that gives that back is still late. The forms measured are one family of rule
 ([repair-1/variants.md](repair-1/variants.md)); whether another rule meets the criterion at
 these tunings is not known, and this line claims nothing about it
-([D026](decisions.md#wo-036-d026), which withdraws what D025 said of it). The steep case is
+([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026), which withdraws what D025 said of it). The steep case is
 boarded in the target's spec and carried by `FUP-74e51991919f0a80` and `FUP-daf1ce232223262a`.
 
 **Criterion 4:** met — as VER-001 judged it, and untouched by the repair: `scene-store.spec.ts`
@@ -113,7 +113,7 @@ there.
 
 **Criterion 8:** met — as VER-001 judged it, and untouched by the repair:
 [design/comparisons.md](design/comparisons.md) records the first pair and the operator's pick
-of A with the rounds ended ([D009](decisions.md#wo-036-d009)).
+of A with the rounds ended ([D009](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d009)).
 
 **Criterion 9:** met — on the Preflight tree `npx nx run-many -t build` exits 0 with an initial
 total of 406.92 kB and no budget warning and `npm run check:bundle` passes at 406,919 initial
@@ -145,12 +145,12 @@ kit's helper with the target named, over the change since the tree VER-001 judge
 names the target's worktree, that base and the tree it read,
 `52d4693845cbdd20c1a5aba868de21776036266d`. It judged by reading the change: its sandbox
 refused its own probes, and it could not read the results directory, which was filed after it
-was launched ([D026](decisions.md#wo-036-d026), point 4). It found one thing, blocking:
+was launched ([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026), point 4). It found one thing, blocking:
 criterion 3 still fails with Arrive at a slow radius of 3, which the repair had boarded. The
 executor judged the input ordinary and the failure open, measured a further rule and took it,
 which closed the crowd sizes sampled and the stopwatch's reading for twelve units and narrowed
 the tunings that fail in the filed scan from eleven of twenty-five to six, and recorded what
-remains ([D025](decisions.md#wo-036-d025), corrected by D026). The finding is therefore
+remains ([D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025), corrected by D026). The finding is therefore
 recorded and not fixed, and it is criterion 3's unmet line above. The 149 lines changed after
 the review are 40 in `simulation.ts`, 67 in `steering.spec.ts`, 35 in `scene.md` and 7 in
 `scene-rules.md`; no reviewer has read them.
@@ -195,12 +195,12 @@ effort max as each launch configured it (not read back from the session). Each r
 the operator whole before any answer, and its clock ran every 75 minutes until the first
 passing gate run was in, at 20:29:10Z.
 
-- **Launch 2,** from 18:59:52Z, 15 minutes ([D019](decisions.md#wo-036-d019)). Five points on
+- **Launch 2,** from 18:59:52Z, 15 minutes ([D019](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d019)). Five points on
   the first execution's conduct, all accepted; three change this repair: criterion 3 is judged
   unmet here and not carried as a pass on an unsettled reading, the review is launched with
   the target named and its receipt read before it is relied on, and a check whose status
   matters runs unpiped.
-- **Launch 3,** from 20:14:56Z, 17 minutes ([D026](decisions.md#wo-036-d026)). Six points on
+- **Launch 3,** from 20:14:56Z, 17 minutes ([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)). Six points on
   this repair's conduct, all accepted: a claim that no rule could meet criterion 3 at steep
   tunings rested on one frame of one candidate and is withdrawn; the private queue log was
   read; coverage was claimed beyond what was sampled; the one review was launched before its
@@ -212,7 +212,7 @@ passing gate run was in, at 20:29:10Z.
 ## Errors of the executor's in this repair
 
 - Three times were written from memory and were wrong, two in the follow-up queue's completion
-  event and one in its check-in ([D023](decisions.md#wo-036-d023)); two more in the host record
+  event and one in its check-in ([D023](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d023)); two more in the host record
   were caught against the transcript before they stood.
 - The follow-up queue's event log under `docs/control/local/` was read directly and five lines
   of its numbers, times and kinds printed, against the launchpad's rule
@@ -224,7 +224,7 @@ passing gate run was in, at 20:29:10Z.
 - D025, and this page as first written, said that no rule keeping a crowd apart could meet
   criterion 3 at steep tunings and named it a contradiction, on one frame of one candidate. A
   form measured afterwards shows the sentence false as written
-  ([D026](decisions.md#wo-036-d026)).
+  ([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)).
 - This page, the target's scene document and a message to the operator at 20:27:09Z claimed
   every crowd size from 2 to 20, by the centre and by the stopwatch, when 17 sizes had been
   sampled by the centre and twelve units alone by the stopwatch.

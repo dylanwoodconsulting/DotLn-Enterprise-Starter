@@ -1,9 +1,9 @@
 # The repair of VER-001, measured
 
-2026-11-15. These files measure the repair of [VER-001](../../../verifications/WO-036/VER-001.md)
-recorded in [WO-036-D020](../decisions.md#wo-036-d020) to
-[D022](../decisions.md#wo-036-d022), [D025](../decisions.md#wo-036-d025) and
-[D026](../decisions.md#wo-036-d026). The probes read the target worktree's engine as it stands
+2026-11-15. These files measure the repair of [VER-001](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/verifications/WO-036/VER-001.md)
+recorded in [WO-036-D020](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d020) to
+[D022](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d022), [D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025) and
+[D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026). The probes read the target worktree's engine as it stands
 and write nothing; run them from the launchpad worktree:
 
 ```sh

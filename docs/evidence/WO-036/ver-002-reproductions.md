@@ -56,7 +56,7 @@ the page's arrival stopwatch; those are limits of the sample.
 Repair ownership remains with WO-036. Hold settling and the no-later comparison
 over supported tunings while changing priority steering alone; preserve the
 original known-outcome hashes and the movement studies. Keep the failing cases
-active during repair. [D027](decisions.md#wo-036-d027) records this judgment and
+active during repair. [D027](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d027) records this judgment and
 its reopening condition.
 
 ## VER-001 F2: blocked units now rest and resume
@@ -86,7 +86,7 @@ no-route state appeared. Clearing walls removed the notice and made it
 
 ## Browser and command evidence
 
-The [VER-002 walkthrough](../../verifications/WO-036/VER-002.md#walkthrough)
+The [VER-002 walkthrough](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/verifications/WO-036/VER-002.md#walkthrough)
 records the fresh production session, its five viewport captures and the
 additional avoidance, replay and comparison checks. The isolated browser was
 closed and its scratch HTTP server stopped before the document gate. The server's

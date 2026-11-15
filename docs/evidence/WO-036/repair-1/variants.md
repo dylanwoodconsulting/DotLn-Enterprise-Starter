@@ -1,11 +1,11 @@
 # The variants measured in the repair of VER-001 F1
 
 2026-11-15. Each rule below was measured before the repair was chosen
-([WO-036-D020](../decisions.md#wo-036-d020) and [D025](../decisions.md#wo-036-d025)), on a copy of the engine exactly as VER-001
+([WO-036-D020](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d020) and [D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025)), on a copy of the engine exactly as VER-001
 judged it, kept in session scratch, with `underSeparation` in `simulation.ts` replaced by the
 function at the foot of this page and one name chosen at a time. None of it is shipped code.
 The last two rows, `lim` and `free`, were measured after the repair was chosen, in answer to
-meta critic 3 ([D026](../decisions.md#wo-036-d026)); their code is under
+meta critic 3 ([D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)); their code is under
 [The two forms measured afterwards](#the-two-forms-measured-afterwards).
 The probes were the ones filed beside this page ([crowd-probe.ts](crowd-probe.ts)) in their
 scratch form: the settling sweep over 144 crowd tunings, and near re-targets of a settled

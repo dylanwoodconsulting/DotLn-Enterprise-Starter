@@ -35,9 +35,9 @@ for round 2 and one fresh combined launch for round 3, seven uses of a cap of 40
 session's own count. None changed either repository; the host refused their writes to session
 scratch, so each returned its report as text, recorded from that text with `npm run worker --
 record`. Rounds 1 and 2 were recorded without `--target dotln-angular`, so their records name
-the launchpad's working tree as the tree reviewed ([WO-036-D016](decisions.md#wo-036-d016)).
+the launchpad's working tree as the tree reviewed ([WO-036-D016](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d016)).
 
-The meta critic the operator asked for ([WO-036-D012](decisions.md#wo-036-d012)) ran once, from
+The meta critic the operator asked for ([WO-036-D012](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d012)) ran once, from
 16:09:10Z to 16:27:29Z, through the Codex CLI 0.169.0, signed in, on GPT-6 Astra at max, read-only
 and under the kit's isolated Codex home. Its isolation record: the operator's Codex
 configuration and trust table unchanged, the isolated home removed. The one Codex process new
@@ -54,7 +54,7 @@ operator's browser sessions nor desktop control. The local server for the captur
 stopped at 17:23Z.
 
 The operator answered two questions through the host's question tool: the design round's
-pick ([WO-036-D009](decisions.md#wo-036-d009)) and the authority to run past the dispatch
+pick ([WO-036-D009](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d009)) and the authority to run past the dispatch
 bound, recorded with `npm run resume -- accept-overrun` for `wallClockMs` and `completeRuns`
 with no ceiling, citing the ignored capture by its SHA-256. Mid-turn they asked for the meta
 critic on GPT-6 Astra (D012), and directed that the executor's reference to a critic's point
@@ -80,14 +80,14 @@ changed with the host's edit tool, apart from three passages of the two scene do
 replaced by short Python scripts: a table row of `scene.md` at 19:29Z, and after the review the
 separation group's passages in `scene.md` and `scene-rules.md`. After meta critic 3 those two
 passages and the comment on the boarded case in `steering.spec.ts` were changed again, with the
-edit tool ([WO-036-D026](decisions.md#wo-036-d026)). The hook refused none of the executor's
+edit tool ([WO-036-D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)). The hook refused none of the executor's
 commands. It gave two shell
 diagnostics, for an unquoted glob and for an assignment to zsh's reserved `status`, and each
 command ran again in a working form. The host denied no call. Two lines were run against the
 executor's own rule of one target command a line: a read-only `cd <target> && node -e` that
 printed catalog rows at 18:58Z, and lines that follow a target command with `tail` of its
 scratch log and the command's exit code, used from 19:26Z so that a check's status is never
-hidden by a pipe ([WO-036-D019](decisions.md#wo-036-d019), point 3).
+hidden by a pipe ([WO-036-D019](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d019), point 3).
 
 Probes ran one at a time under `node scripts/harness.mjs bounded`, from session scratch while
 the repair was being chosen and from `docs/evidence/WO-036/repair-1/` once filed. The scratch
@@ -97,7 +97,7 @@ ran Vitest inside scratch copies of the engine's project with the target's `node
 linked beside them; nothing was written to the target for them.
 
 The meta critic ran twice more at the operator's request
-([WO-036-D019](decisions.md#wo-036-d019), [WO-036-D026](decisions.md#wo-036-d026)): launch 2,
+([WO-036-D019](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d019), [WO-036-D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026)): launch 2,
 from 18:59:52Z for 15 minutes, and launch 3, from 20:14:56Z for 17 minutes, each through the
 Codex CLI on GPT-6 Astra with effort max as the launch configured it (the effective effort was
 not read back), read-only and under the kit's isolated Codex home, with the launcher the first
@@ -113,9 +113,9 @@ on the instance's default Codex worker, GPT-6.1 Sol with effort max pinned on th
 (the effective effort was not read back), from 19:52:09Z to 20:01:56Z, read-only in the target
 worktree; the helper filed its report in the reviews lane under `repair-1/` and counts its own
 launch. Its dry run was read first, and its receipt after, for the checkout, the base and the
-tree read ([WO-036-D025](decisions.md#wo-036-d025)). The reviewer's sandbox refused its own
+tree read ([WO-036-D025](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d025)). The reviewer's sandbox refused its own
 probes, so it judged by reading; it was launched before the candidate's results were filed and
-could not read the results directory ([WO-036-D026](decisions.md#wo-036-d026), point 4).
+could not read the results directory ([WO-036-D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026), point 4).
 
 The session used no browser of its own; the page-level evidence of the repair is the browser
 case added to the target's `scene.spec.ts`, which the review gate runs. It used neither the
@@ -128,12 +128,12 @@ events. The session's transcript, searched for its own calls naming that directo
 more touch against the rule, a listing of its first five names at 19:31:17Z, and one read that
 is the launcher's to make, the review's own report at 20:02:37Z. The queue's own projection,
 `npm run adjacent -- list`, is the reading to use, and it carries no event times; the times now
-stand in [WO-036-D023](decisions.md#wo-036-d023).
+stand in [WO-036-D023](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d023).
 
 The repair's review gate, `node scripts/target-gate.mjs WO-036 --review`, ran twice from the
 launchpad root in the background and passed every declared command each time: from 20:26:22Z
 to 20:29:10Z on the tree the Preflight ran on, and from 20:43:29Z to 20:46:17Z on the
-candidate, after the correction of [WO-036-D026](decisions.md#wo-036-d026). Of the first run: `node scripts/harness.mjs evidence --wait` reported no run to wait on for it and exited
+candidate, after the correction of [WO-036-D026](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d026). Of the first run: `node scripts/harness.mjs evidence --wait` reported no run to wait on for it and exited
 2, so the gate was awaited through its own task's completion; nothing was written outside the
 order's evidence directory while it ran. Meta critic 3 had been launched at 20:14:56Z, before
 the gate, and was still running through it. The critic's clock ended with the passing gate run
@@ -198,7 +198,7 @@ node scripts/worktree.mjs publish WO-036 --target-worktree --draft --branch feat
 
 The hook admitted the line and the kit refused it: `error: target publish refused: the draft
 form is legal at verified with a passing verification; WO-036 is final-review`
-([WO-036-D029](decisions.md#wo-036-d029)).
+([WO-036-D029](https://github.com/DylanBWood/DotLn-Angular/blob/22c1c7e203234e6700421a0105d79b14e1e72440/docs/dotln/evidence/WO-036/decisions.md#wo-036-d029)).
 
 The review gate, `node scripts/target-gate.mjs WO-036 --review`, ran once from the launchpad
 root in the background, from 22:08:25Z to 22:10:45Z by the session's journal, and passed every
