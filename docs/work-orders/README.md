@@ -266,6 +266,7 @@ None.
 - Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes).
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
+- Inherited ledger duty: discharge with [this order's decisions](../evidence/WO-018/decisions.md) and its row in [the decisions index](../lineage/decisions-index.md); no lifecycle ledger append.
 - Authority: [docs/work-orders/WO-018-art-of-war-map-and-toys.md](WO-018-art-of-war-map-and-toys.md)
 
 ### WO-043

@@ -292,7 +292,10 @@ then the target gate plain and review once each.
    `TwinVariant` and finds its row's `sha256` equal to `node:crypto`'s.
 5. The persisted-state spec asserts every key starts with
    `dotln-angular.twin` and nothing else is written to storage, cookies or the
-   network; an unparseable or unknown stored value yields the first variant
+   network. Import a synthetic file with a unique event marker. After import
+   and reload, inspect browser storage, including allowed keys. Only the
+   selection and configuration persisted and the marker is absent. An
+   unparseable or unknown stored value yields the first variant
    with no flips; a stage failing `twin-stage-v0` is listed with its reason;
    `grep -rlE "from 'node:|from \"node:|require\(" libs/shared/twin-model/src libs/features/twin/src libs/features/twin-data-access/src --include='*.ts' | grep -v spec`
    prints nothing.

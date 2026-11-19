@@ -772,7 +772,10 @@ target gate plain and review once each.
    reachable at verification, the verifier records the reproduction
    untested with the reason and judges it from the executor's recorded run
    in the decisions file, including the role-origin comparison at each pin.
-   The verifier repeats schema and relationship tests on the two committed
+   The replay labels these public snapshots as the revisions selected by
+   the order’s first timestamp. Only separately recorded session evidence
+   can identify an actor’s effective revision or profile. Verify that
+   distinction on the agent card. The verifier repeats schema and relationship tests on the two committed
    snapshots and identifies each source-only comparison it could not rerun);
    `npx nx test machinery-data-access` exits 0 with
    specs on both committed snapshots asserting that each role's entry lists

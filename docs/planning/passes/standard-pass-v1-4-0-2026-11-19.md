@@ -117,7 +117,7 @@ Three existing entries in `FOR-CORE.md` have release answers. The v1.0.1 command
 
 ## Process cost
 
-Three read-only default workers researched the target close, the core pin and the release answers. Six default Codex review launches covered the changed branch and the otherwise unchanged orders. A fresh default refuter is the tenth planned worker use, within the cap of 40. The parent was the sole repository writer. Review receipts reported 23,626,552 tokens in aggregate across the six external sessions, including cached input. They did not print a host model readback. The parent’s session token total, source and cutoff were unavailable. The update branch’s document gate took 0 h 1 min.
+Three read-only default workers researched the target close, the core pin and the release answers. Six default Codex review launches covered the changed branch and the otherwise unchanged orders. One fresh default refuter brought the total to ten worker uses against the cap of 40. The parent was the sole repository writer. Review receipts reported 23,626,552 tokens in aggregate across the six external sessions. They did not print a host model readback. The parent’s session token total, source and cutoff were unavailable. The update branch’s document gate took 0 h 1 min.
 
 ## Validation
 
@@ -186,3 +186,24 @@ The helper normally inlines changed orders. An additional one-batch run for each
 | 10, existing PoEAA count | Update the Unit of Work browser assertion along with the new study while the tooling check continues to verify exact membership. |
 | 11, formal-system interpreter | WO-018 owns a reading shelf. Remove the stale assignment of an interpreter sub-app. |
 | 12, versioned loader documentation | Replace the two v1-only statements where the target documents the loader. Retain the original schema and test both versions. |
+
+### Independent refutation
+
+[Receipt 030](../refutations/2026-11-19-planning-5d6b2f1d60db9d0f-030.md) records **aligned-with-findings** and zero holds. The fresh worker read the canonical pass-scope prompt. Nine goal or criteria projections and the sequence were judged. Seven verdicts carried forward by matching hash. The interval from dispatch to filing was 7 min 28 s. The prompt marked the vision and UIFA role passages unavailable. The judgment uses the standards and observations present in this instance.
+
+The receipt contains ten new known issues and two carried on WO-040. All twelve have criterion-bound dispositions in the planning control record.
+
+| Order and criterion | Disposition |
+| --- | --- |
+| WO-037 §5 | The roster is created in definition order and maintains its entries through updates. The replay concern reopens if a future editor can remove or reorder an entry, or a restore changes its identity. |
+| WO-008 §3 | Settle an outstanding mock refresh after a cross-tab sign-out and verify both sessions stay signed out. |
+| WO-040 §2, two carried issues | The four changed functions are internal to the two builder modules. Individual study changes or measured recurrence of the audited shape defects reopen these issues. |
+| WO-045 §6 | Exercise a disconnected grid through the normal reader and verify the accessible terminal state. |
+| WO-035 §§4 and 8 | Open a healthy work and the Scene after a translation failure. Revisit already loaded works, verify the key set stays stable and record repeated-visit memory behavior. |
+| WO-046 §2 | A missing required manifest fails. The historical optional directory can be absent. |
+| WO-017 §5 | An imported event marker stays out of browser storage, including the persistence keys that store configuration. |
+| WO-016 §3 | The replay identifies the timestamp-selected public source and distinguishes it from evidence of what a particular actor loaded. |
+| WO-018 §1 | Open three distinct toys even when all tool links resolve. |
+| WO-043 §4 | A new work’s unavailable chunk leaves a healthy v1 work readable through the same loader. |
+
+The terms screen found zero lines requiring contextual reading. The planning checks also verified the two pairs, every forward hard dependency, the four separate research orders, and dispositions for all 235 register entries.

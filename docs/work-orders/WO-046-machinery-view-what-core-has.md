@@ -249,7 +249,10 @@ target gate plain and review once each.
    refuses an absolute path and an e-mail shape, reads an absent input
    directory as empty, reads a legacy refusal and the current block’s
    configurable stops and separately elected desktop control through the
-   same schema, prints no value on failure, and rejects a dangling id in
+   same schema. Removing the required manifest from a synthetic current-pin
+   input fails before a snapshot can be presented as complete. The pinned
+   historical optional directory can be absent. The miner prints no value
+   on failure and rejects a dangling id in
    `--check`.
 3. `node tools/scripts/core-snapshot.mjs --core <path> --commit
    bc761ad9ce1008c72c647e9b0de63b09117ba822 --tag v1.4.0 --out <scratch>`

@@ -564,7 +564,9 @@ target gate plain and review once each.
    candidate; and step 4's tooling tests pass, so a `tool-v1` row with a
    `maxim`, a public-work checkpoint holding a map row, a map batch with no
    maps and a repository map that differs from its checkpoint are each
-   refused, and `--batch artofwar` reads no research run directory.
+   refused, and `--batch artofwar` reads no research run directory. A catalog
+   loading test makes one new work chunk unavailable, then opens a healthy
+   v1 work through the same loader. Its reading still renders.
 5. **The six toys and their tools.** `npm run toys:check` exits 0 over the
    shelf's records, six of origin `this-app`, one for each of `meadows`,
    `pirsig`, `poincare`, `gladwell`, `taleb` and `fives`, each with a scene

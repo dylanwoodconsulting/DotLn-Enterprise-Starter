@@ -472,8 +472,9 @@ once each.
    session in the served production build: open Toys from the menu; open
    The Twenty and follow a tool into the catalog's reading and its status
    into the scene; open The patience lane; filter the shelf to one source
-   and to designed toys; and, where `tool-resolution.json` records an
-   unresolved tool, open a toy that names one and read how it is named. The
+   and to designed toys. Open a third distinct toy. When the resolution
+   ledger lists an unresolved tool, choose a toy that names it and read
+   the label. Otherwise choose another designed toy from the shelf. The
    VER report carries a `## Walkthrough` section with the dated steps and
    names the screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by
    1620 under `docs/evidence/WO-018/walkthrough/`, and states in the

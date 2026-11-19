@@ -467,7 +467,9 @@ once each.
    `apps/dotln-e2e/src/storybook.spec.ts` lists the `StudyGrid` story beside
    the other families' and finds its composite rendered there. Loading the v2 study in the normal
    reader selects the grid drawing, and stepping advances the displayed
-   cell and its text equivalent together.
+   cell and its text equivalent together. A second valid grid has a disconnected
+   goal. Stepping it to the end reaches the engine’s no-path state with an
+   accessible terminal message and no rendered path.
 7. `collision-avoidance.model.spec.ts` asserts that on the exact head-on run
    the engine's `avoid` leaves the pair overlapping and the scene's head-on
    policy parts them from the first frame after it fires with no later

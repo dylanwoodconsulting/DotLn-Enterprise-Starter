@@ -574,7 +574,8 @@ review once each.
    wrong audience, skew within and beyond
    tolerance, two concurrent `401`s producing one refresh request (asserted
    through the MSW handler's call count), `state` mismatch, redirect loop
-   stop, cross-tab sign-out, permission denied on a route (the guard's
+   stop, cross-tab sign-out (including a successful outstanding mock refresh
+   settling after sign-out without restoring either session), permission denied on a route (the guard's
    redirect to `/denied`), permission revoked on refresh (the directive's
    element gone on the next render), and a page reload during a session (a
    fresh start is `anonymous` with no token at rest, and the `/account`

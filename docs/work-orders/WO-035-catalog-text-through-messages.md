@@ -464,7 +464,9 @@ once each.
    scope, the reading reaches the catalog page's failure alert with Try
    again and no raw key is visible (`npx nx test tools`); `MessageCatalog`'s
    spec shows the translator raising on a missing key under the production
-   configuration. The two e2e cases fail at the integrated base, both arms
+   configuration. In the same session, navigate from the failed work to a
+   healthy work and then to the Scene. Their texts render from their own
+   scopes and the affected work still offers retry. The two e2e cases fail at the integrated base, both arms
    in `controls.json`.
 5. Under the test language, a search for a word that occurs only in one
    row's translated definition returns that row; the same case at the
@@ -479,7 +481,9 @@ once each.
    `npm run check:bundle` passes, so no catalog source has entered the
    initial bundle; `package.json`'s `dependencies` keys equal the integrated base's;
    and `docs/evidence/WO-035/README.md` records the initial bundle, transfer
-   and registration figures of step 12.
+   and registration figures of step 12. Revisit the same two loaded works
+   in succession. The registered key set stays fixed on repeated visits.
+   Record the repeated-visit memory observation with its measurement method.
 9. `node scripts/target-gate.mjs WO-035 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight
