@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds a pure derivation of a work's on-screen messages from its
@@ -134,27 +134,21 @@ a key on the page. What the operator learns is that the hard rule now
 covers the last text that was outside it; what they decide is when a second
 language is worth adding.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** the catalog's 3,463 rows
-(AI for Games 768, RxJS 742, Team Topologies 637, Gödel, Escher, Bach 573,
-Patterns of Enterprise Application Architecture 455, Enterprise
-Integration Patterns 288) carry about 1.48 MB of English a reader sees
-(UTF-8, measured by this pass over
-`libs/shared/catalog/src/data/tools-*.json`: `definition` 549 KB, the four
-`place` parts 341 KB, `verified.note` 165 KB, the 1,907 untyped rows'
-`faces.transform.reason` 157 KB, `hooks[].clause` 117 KB, `title` 104 KB,
-the titles of relations with no id 30 KB, and the 129 typed rows'
-observables, metrics, parameter names and units 20 KB), none of it through
-Transloco. The templates bind the fields directly (`concept-reading.html`
-lines 4, 15, 23, 48, 96 and 104 to 108, under `translate="no"`;
-`contents-list.html` lines 13, 30 and 46; `catalog-search.ts` lines 23 and
-27; `reading-history.ts` line 17; `catalog-page.html` line 130; the scene's
-`unit-inspector.html` lines 4 and 5 and `toolbox-rail.html` line 26), the
-mappers make labels of the typed rows' faces with `readable()`
-(`reading-mapper.ts` lines 29 to 40; `inspector-mapper.ts` lines 56 to 58,
-106 and 111), and the scene names log steps, request notices and a saved
-composition from row titles (`scene.facade.ts` lines 438, 441, 457 to 459
-and 726 to 733; `log-mapper.ts` line 46, which shows the title stored with
-the composition). The catalog's own words are app literals or raw values:
+**Observed gap (checked 2026-11-19 at `6eef542`):** the eight bundled
+`libs/shared/catalog/src/data/tools-*.json` files hold 3,463 rows. Of these,
+136 have typed transforms, 1,900 have an untyped transform and 1,427 are
+background rows. The fields this order registers contain 1,483,684 UTF-8
+bytes, counting each field occurrence. Definitions contribute 549,464
+bytes, place fields 340,793, provenance notes 165,476, untyped reasons
+156,175, hook clauses 117,229, titles 104,018, titles of unlinked relations
+30,018 and the typed rows' observables, metric names, parameter names and
+units 20,511.
+
+In Tools, the reading, contents, search, history and catalog page bind the
+mined fields. The scene's rail and inspector bind definitions and derive
+labels in their mappers. The log, notifications and saved compositions
+also use row titles. The Ways group introduced in WO-036 exercises the same
+translation boundary. The catalog's own words are app literals or raw values:
 the work titles (`reading.ts` lines 18 to 27), the shelf's scene label
 (`work-shelf.ts` lines 37 to 39), the row type in the place line
 (`concept-reading.html` line 3) and the kind and status facet options
@@ -266,8 +260,9 @@ while the mined rows still are one.
   under a test language in which every message of the root, study and
   catalog scopes carries a visible prefix, and asserts that every visible
   text node of the listed surfaces carries the prefix, apart from numerals,
-  punctuation and text the operator typed; at the integrated base it fails,
-  because row text renders raw. The test language lives in the specs and
+  punctuation and text the operator typed. Interpolated row fields have
+  distinct translated values so an outer message cannot hide raw values.
+  The integrated base renders those fields in English and fails the check. The test language lives in the specs and
   ships nowhere. `npm run i18n:check` keeps covering the templates and the
   root and study catalogs.
 - **Documents.** `catalog.md` §Data and provenance states that the data
@@ -309,7 +304,7 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
 
 1. Base guard read with WO-014-D001, for WO-035: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
-   eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (a `main`
+   6eef542987ab2183817baba329a64373cb61b157 origin/main` exits 0 (a `main`
    that does not contain the pin stops for a planning pass); the target
    worktree then fast-forwards to the target's `main`, and that integrated
    commit is the baseline of every later comparison; then the route guard
@@ -323,9 +318,13 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
    seed, a search by a definition word, the scene's rail, its inspector with
    a tool chosen, its log and a saved composition, writing each surface's
    visible text to `crawl-before.json`; and D054's two cases run at the base
-   with the launchpad's `docs/evidence/WO-028/ver-003/message-attack.mjs`,
-   their outcome and exit code written to `controls.json`. Check: both files
-   name the integrated commit.
+   using the response fixtures documented in the launchpad’s
+   `docs/evidence/WO-028/ver-003/message-attack.mjs`. The original probe
+   records observations. Run the same criterion-4 assertions on both
+   served builds. For each response, record whether the retry state
+   rendered, whether a raw message key appeared, and the assertion’s exit
+   code in `controls.json`. Check: both evidence files name the integrated
+   commit.
 3. `libs/shared/catalog/src/lib/catalog-messages.ts` (new, exported through
    `public_api.ts`): the derivation over the Design's list and the scope
    name of each work; its spec over every row of every bundled work. Check:
@@ -379,8 +378,10 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
     beside WO-044's page, a new `tools-home.spec.ts` beside `tools-home.ts`,
     and `scene-page.spec.ts` gain the test language
     of the Design, built in the spec from `en.json`, the study catalogs and
-    the derived catalog messages; the cases of criteria 2, 4 (the row
-    message) and 5. Check: `npx nx test tools` and `npx nx test scene` exit
+    the derived catalog messages. Give each translated field a value distinct
+    from the surrounding message and the other fields. Check the rendered
+    substitutions in criterion 2 as well as the row message and fallback
+    cases in criteria 4 and 5. Check: `npx nx test tools` and `npx nx test scene` exit
     0, and the same cases run at the integrated base fail, both arms' exit
     codes written to `controls.json`.
 11. `apps/dotln-e2e/src/study-messages.spec.ts` gains D054's two cases.
@@ -442,14 +443,16 @@ once each.
    home, the shelf, the contents, a typed row's reading, an untyped row's
    reading, a reading with hook clauses and an unlinked relation, a study's
    nearby and next links, the search results, the history, the studied
-   list, the facets, and the scene's rail, inspector, log and saved list
+   list, the facets, and the scene's rail (including a Ways tool), inspector, log and saved list
    carries the prefix, apart from numerals, punctuation and text the
    operator typed; the surfaces between them show every field of the
    Design's list (title, definition, the four place parts, provenance note,
    hook clause, untyped reason, unlinked relation title, a typed row's
    observables, metrics, parameter names and units, and the work titles,
-   scene labels, row types, kinds and statuses). The case passes at the
-   candidate and fails at the integrated base, both arms' exit codes in
+   scene labels, row types, kinds and statuses). For values interpolated into
+   another message, assert each field’s distinct test translation at its
+   rendered location. In the reading’s place line this includes the row type
+   and every populated breadcrumb. The case passes at the candidate and fails at the integrated base, both arms' exit codes in
    `docs/evidence/WO-035/controls.json`.
 3. The spec of `catalog-messages.ts` derives the messages of every row of
    every bundled work and asserts that every field of the Design's list
@@ -461,7 +464,9 @@ once each.
    scope, the reading reaches the catalog page's failure alert with Try
    again and no raw key is visible (`npx nx test tools`); `MessageCatalog`'s
    spec shows the translator raising on a missing key under the production
-   configuration. The two e2e cases fail at the integrated base, both arms
+   configuration. In the same session, navigate from the failed work to a
+   healthy work and then to the Scene. Their texts render from their own
+   scopes and the affected work still offers retry. The two e2e cases fail at the integrated base, both arms
    in `controls.json`.
 5. Under the test language, a search for a word that occurs only in one
    row's translated definition returns that row; the same case at the
@@ -476,7 +481,9 @@ once each.
    `npm run check:bundle` passes, so no catalog source has entered the
    initial bundle; `package.json`'s `dependencies` keys equal the integrated base's;
    and `docs/evidence/WO-035/README.md` records the initial bundle, transfer
-   and registration figures of step 12.
+   and registration figures of step 12. Revisit the same two loaded works
+   in succession. The registered key set stays fixed on repeated visits.
+   Record the repeated-visit memory observation with its measurement method.
 9. `node scripts/target-gate.mjs WO-035 --review` records a passing row for
    every declared command with no tracked-byte mutation, and
    `npm run test:docs` passes in the launchpad order worktree; the Preflight

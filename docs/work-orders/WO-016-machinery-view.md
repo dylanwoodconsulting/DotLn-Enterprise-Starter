@@ -433,6 +433,12 @@ slots, select-then-apply, no generated cards, ideas saved to ignored intake.
   other change redraws the agent's card and the caption says the beats are
   unchanged), `sandbox-band`; mappers `declared-line`,
   `phase-glyph` (native emoji with a text equivalent), `gap-scale`; a layout.
+  Match a loaded record copy and snapshot by selected order before making
+  any beats or mechanism cards visible. Keep the loading or error state
+  until both belong to that order. Test a switch with late and failed
+  loads, followed by a retry. Persist an application with its idea id,
+  order, beat and agent occurrence so a ghost and its replacement keep
+  distinct changes after reload or a switch between recorded orders.
   `ReplayStore` (SignalStore) loads the selected order's core snapshot with
   WO-007's call state and holds the applied ideas and the shelf with
   WO-007's `withPersistedState({ key: 'machinery.replay', select, restore })`
@@ -463,7 +469,8 @@ slots, select-then-apply, no generated cards, ideas saved to ignored intake.
   `machinery` block.
 - **The idea sink** (`tools/idea-sink/idea-sink.mjs`, `npm run idea-sink`):
   a local Node process on `127.0.0.1` whose settings are command-line flags
-  and nothing else: `--port` (default 4310), `--dir` (default
+  and nothing else: `--port` (4310 for the development app, with other ports
+  available for standalone tooling tests), `--dir` (default
   `docs/intake/ideas/` in the DotLn-Angular checkout the sink runs from,
   never the launchpad's intake) and `--origin` (default
   `http://localhost:4200`, the development server's origin). It accepts
@@ -475,7 +482,12 @@ slots, select-then-apply, no generated cards, ideas saved to ignored intake.
   port is a cross-origin request the browser preflights; any other origin or
   host is refused with 403. It refuses a body over 16 KB with 413, never
   logs a body, and appends one JSON line per idea to `ideas-YYYY-MM-DD.jsonl`
-  in the directory, creating it; it refuses to start when the resolved
+  in that directory. Check the final file on each append: only an ignored,
+  regular file within the permitted directory may receive the entry. Refuse
+  a linked or otherwise unqualified destination before writing. The form
+  measures the complete serialized submission against the sink’s body
+  limit before applying it and keeps oversized input editable for revision.
+  The sink refuses to start when the resolved
   directory lies outside the Git root of the checkout the sink runs from,
   lies in no Git repository, is not ignored by the one that contains it
   (`git check-ignore -q <dir>` exits nonzero) or lies under `docs/control/`,
@@ -722,7 +734,10 @@ target gate plain and review once each.
    `recordedAt`, `workOrderId`, `actor`, `verdict`, carry a `source.commit`
    of `49d8c4c364dc5986e8c76b4ac27a0110c380206f` and no absolute path (`npm
    run check:fixtures` exits 0), a spec asserts `order-221.json` carries 16
-   rows and `order-226.json` 6, the reducer's tooling test proves a row value
+   rows and `order-226.json` 6. Independently project the permitted fields
+   from each pinned public source segment and compare every output row,
+   including optional verdicts and observed actor labels. The WO-221 failure
+   at beat 4 retains its verdict. The reducer’s tooling test proves a row value
    carrying a run of 32 or more hexadecimal characters or a UUID shape fails
    the scrub while the `source` block's commit passes, and `ls
    libs/shared/records/src/data/segments | grep -ciE '^wo-'` prints 0.
@@ -756,7 +771,13 @@ target gate plain and review once each.
    `cmp` exits 0 against each committed snapshot (where neither clone is
    reachable at verification, the verifier records the reproduction
    untested with the reason and judges it from the executor's recorded run
-   in the decisions file); `npx nx test machinery-data-access` exits 0 with
+   in the decisions file, including the role-origin comparison at each pin.
+   The replay labels these public snapshots as the revisions selected by
+   the order’s first timestamp. Only separately recorded session evidence
+   can identify an actor’s effective revision or profile. Verify that
+   distinction on the agent card. The verifier repeats schema and relationship tests on the two committed
+   snapshots and identifies each source-only comparison it could not rerun);
+   `npx nx test machinery-data-access` exits 0 with
    specs on both committed snapshots asserting that each role's entry lists
    exactly the ids its role carries there, nineteen for the executor and
    thirteen for each other role at both commits, its gems those of kind
@@ -785,6 +806,7 @@ target gate plain and review once each.
    order's snapshot.
 5. The tooling test for the idea sink passes (`npm run test:tooling` exits
    0): one post appends one JSON line to a temporary ignored directory; a
+   linked or outside destination receives no write, and a
    body over the Design's size limit is refused with 413 and appends
    nothing; a request whose `Origin` is not the allowed origin or whose
    `Host` is not the loopback address and port is refused with 403; the
@@ -797,7 +819,11 @@ target gate plain and review once each.
    tools/scripts/prime-environment.mjs` exits 0, and `grep -rl
    "127.0.0.1:4310" dist/apps/dotln/browser` prints nothing after `npx nx
    build dotln --configuration=production`.
-6. The persisted-state spec asserts every key written starts with
+6. A facade test accepts late record and snapshot loads in both orders and
+   confirms only matching orders are shown. A storage round trip keeps
+   an applied idea on its selected occupant and beat after an order switch.
+   A form test confirms an oversized idea stays editable and unapplied.
+   The persisted-state spec asserts every key written starts with
    `dotln-angular.machinery.replay` and no other storage, cookie or network
    write occurs except the sink post when `ideaSinkUrl` is set, a spec with
    that post failing asserts the dropped idea is applied and persisted and
@@ -848,7 +874,9 @@ target gate plain and review once each.
     statements as core stood when the order ran, and what it waited on;
     create an idea in the shelf, apply it to the verifier and read the
     caption and the band; apply a refused drop and read its reason; reload
-    and find the idea; switch to WO-226. The VER report carries a `##
+    and find the same application, its ghost, caption and shifted beats
+    on the WO-221 verifier at beat 4. Switch to WO-226 and back. The
+    WO-221 change remains bound to its original occupant. The VER report carries a `##
     Walkthrough` section with the dated steps and names each step's
     screenshots at 360, 768, 1440, about 2080 by 1460 and 3840 by 1620 under
     `docs/evidence/WO-016/walkthrough/`, and states in the verifier's own

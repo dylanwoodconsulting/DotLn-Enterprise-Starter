@@ -7,8 +7,8 @@
 | Application | `apps/dotln`, with its browser tests in `apps/dotln-e2e` |
 | Evidence root | `docs/dotln/` in the target |
 | Workstream | [WS-001](../workstreams/WS-001-dotln-angular.md), which holds the outcome, the house rules and the component taxonomy |
-| Last reviewed target source | `eb9d227483e30164105da077f50673789d1e5c9f`, WO-039's merge (#18), 2026-11-08 |
-| Latest target release | `DotLn Angular v0.11.1`, published 2026-11-08 from that merge |
+| Last reviewed target source | `6eef542987ab2183817baba329a64373cb61b157`, WO-036's merge (#19), 2026-11-15 |
+| Latest target release | `DotLn Angular v0.12.0`, published 2026-11-15 from that merge |
 
 A session on an order whose `**Repository:**` line names `dotln-angular` reads this
 profile. The profile is the repo-native convention authority for sessions acting in
@@ -50,8 +50,8 @@ Member orders keep the target's `docs/dev-reference/` and `docs/ai-reference/`
 current. A green gate is required and is not acceptance: a page is accepted by use
 (rule 24).
 
-Guards belong to WO-008, the records and replay libraries and the machinery view
-to WO-016, the twin model to WO-017 and the toy shelf to WO-018. None of them
+Guards belong to WO-008, the current machinery view to WO-046, the
+historical replay to WO-016, the twin model to WO-017 and the toy shelf to WO-018. None of them
 exists at the reviewed source, so read those orders and WS-001 before assuming
 otherwise.
 
@@ -217,8 +217,11 @@ of a target-code review. Since starter v1.0.0 a launch that names no worker
 runs the instance's `default`, and `--model <name>` names another worker or
 model of its table (`npm run worker -- list`). A reviewer launched through
 the host's own worker route in a Claude session is recorded in the same lane
-with `npm run worker -- record`, under the target identity it reviewed, and
-its use is accounted for.
+with `npm run worker -- record`. For a target-code review, render the review
+brief with `--order WO-NNN --target dotln-angular --dry-run`. Give the worker
+that brief and its `reviewedTree`. The report opens with `Reviewed tree: <tree>`.
+Record it with `--order WO-NNN --target dotln-angular --tree <tree>`, using
+the tree the worker actually read, including if the target advanced meanwhile.
 
 ## Find the implementation
 
@@ -300,6 +303,7 @@ workflow comments, with lexical and scope controls in `tools/board-count.test.mj
 | Walls and obstacles, the one shape model every clearance question is asked of, the ray cast and the stop at a shape | `libs/shared/scene-engine/src/lib/geometry.ts` |
 | The tile graph, A* with its heuristics and every expansion kept, smoothing, following and planning again | `libs/shared/scene-engine/src/lib/graph.ts`, `pathfinding.ts`, `path-following.ts` |
 | Field tools in the transport and the list of walls and obstacles under the unit list | `libs/features/scene/src/lib/composites/field-tools/field-tools.ts`, `libs/features/scene/src/lib/composites/geometry-list/geometry-list.ts` |
+| Public study imports for route search | `libs/shared/scene-engine/src/public_api.ts` exposes the graph and search functions. Wall casting and avoidance remain internal until WO-045. |
 | Page, facade and mappers | `libs/features/scene/src/lib/containers/scene-page/scene-page.ts`, `libs/features/scene/src/lib/facades/scene.facade.ts`, `libs/features/scene/src/lib/mappers/` |
 | Rail of the twenty-eight tools the engine runs | `libs/features/scene/src/lib/composites/toolbox-rail/toolbox-rail.ts`, `libs/features/scene/src/lib/mappers/rail-mapper.ts` |
 | Renderer seam, with text and null painters beside it | `libs/features/scene/src/lib/renderers/scene-renderer.ts` |
@@ -425,8 +429,8 @@ record the tool and documentation alignment.
 
 The route, draft at verified, is:
 
-1. The session that records `verification-result pass` runs the publish helper
-   from the launchpad root with `--draft`:
+1. Once `verification-result pass` places the order in `verified`, the verifier
+   opens the draft from the launchpad root before the final-review dispatch.
 
    ```sh
    node scripts/worktree.mjs publish WO-NNN --target-worktree --draft --branch <type>/<slug> --title <title> --body-file <path>
@@ -671,6 +675,7 @@ here) and in Git. Earlier versions of this profile are in
 | `DotLn Angular v0.10.2` | WO-034 | #16 | `9637f73539e387b46f65855db78f3c4b5285e561` | 2026-11-07T05:10:15Z |
 | `DotLn Angular v0.11.0` | WO-023 | #17 | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` | 2026-11-08T00:51:05Z |
 | `DotLn Angular v0.11.1` | WO-039 | #18 | `eb9d227483e30164105da077f50673789d1e5c9f` | 2026-11-08T21:12:53Z |
+| `DotLn Angular v0.12.0` | WO-036 | #19 | `6eef542987ab2183817baba329a64373cb61b157` | 2026-11-15T23:31:07Z |
 
 | Area | Order |
 | --- | --- |
@@ -681,7 +686,8 @@ here) and in Git. Earlier versions of this profile are in
 | The sub-app menu and the arriving routes | WO-013 |
 | The catalog pipeline | WO-014 |
 | The reading surface over the catalog and the Arrive study | WO-019 |
-| The scene engine and the soldier scene | WO-015 |
+| The scene engine and soldier scene | WO-015 |
+| Field geometry, editable walls and obstacles, route search, following and replay | WO-036 |
 | The study record, the `motion` and `timeline` families and the movement studies | WO-020 |
 | The `marbles` family and the RxJS studies | WO-021 |
 | The `flow` family and the messaging studies | WO-022 |
@@ -717,13 +723,12 @@ History stays here only where it explains a boundary or a recovery route:
   pushed with Git over the same pull request and recorded in
   [its control segment](../control/orders/WO-015.jsonl) and the target's
   `docs/dotln/evidence/WO-015/decisions.md` (D022).
-- **The dispatch bound.** The kit's sixth refusal stops a complete launchpad gate,
-  a bounded probe or a worker launch past the bound in
-  `docs/control/budgets.json`, and `next` and `fix` a redispatch; reads, listings
-  and focused runs stay admitted. When the operator authorizes going on in ordinary
-  language, the agent records `npm run resume -- accept-overrun`, as rule 25
-  describes; [WO-015's control segment](../control/orders/WO-015.jsonl) holds a
-  worked example.
+- **The dispatch bound.** `node scripts/features.mjs stops` shows the level
+  of `dispatch-bound` in this instance. At its current advisory level a
+  gate, bounded probe or worker can proceed when the recorded allowance
+  is exhausted. An explicit allowance for a dispatch is recorded with
+  `npm run resume -- accept-overrun` as WS-001 rule 25 describes.
+  [WO-015's control segment](../control/orders/WO-015.jsonl) contains a worked example.
 
 ## Upstream and copied-contract references
 

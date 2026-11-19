@@ -7034,6 +7034,16 @@
           "reopenWhen": "WO-036 changes the wall run or adds a second avoidance, or a later study demonstrates sustained avoidance with a valid short-ray counterfactual.",
           "targets": [],
           "at": "2026-11-07T02:52:42.107Z"
+        },
+        {
+          "sourceRevision": 2,
+          "status": "allocated",
+          "reason": "WO-036 added engine wall avoidance without changing the study’s own run. Its recorded condition has fired. WO-045 moves the study onto the public engine and checks the resulting long-ray and short-ray curves before describing the effect.",
+          "reopenWhen": "WO-045 is withdrawn or the description of the change exceeds the comparison the study actually shows.",
+          "targets": [
+            "WO-045"
+          ],
+          "at": "2026-11-19T00:18:24.910Z"
         }
       ]
     },
@@ -8207,7 +8217,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 3,
+          "status": "allocated",
+          "reason": "At the WO-036 merge the wall helpers are implemented inside the engine. WO-045 step 9 exposes them through its public API and updates the Corner trap study and its testing copy. Criterion 7 checks the public consumer and the messages.",
+          "reopenWhen": "WO-045 is withdrawn, its study needs a deep import, or a message still describes the public helper as missing.",
+          "targets": [
+            "WO-045"
+          ],
+          "at": "2026-11-19T00:18:24.801Z"
+        }
+      ]
     },
     {
       "id": "FUP-99f14d9a4a983b69",
@@ -8277,7 +8298,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 2,
+          "status": "deferred",
+          "reason": "WO-036 VER-003 passed the default settling and nearby re-target comparison. D020 measured lateness at steep tunings. D026 withdrew the proposed cause and found a separate zero-radius case in the same comparison. The evidence supports the default requirement and leaves broader tuning a product choice.",
+          "reopenWhen": "Operator play finds the crowd behavior unsatisfactory, a default nearby re-target regresses, or the operator requests a wider tuning guarantee.",
+          "targets": [],
+          "at": "2026-11-19T00:18:24.822Z"
+        }
+      ]
     },
     {
       "id": "FUP-bdcc89104aa99bb0",
@@ -8292,7 +8322,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "WO-036 ships routes for individual units. Routing a whole formation also needs an anchor route, clearance for its slots and a blocked state for the group. The next scene order works on membership and slot assignment.",
+          "reopenWhen": "The operator asks for a routed formation or a filed scene feature requires group navigation.",
+          "targets": [],
+          "at": "2026-11-19T00:18:24.840Z"
+        }
+      ]
     },
     {
       "id": "FUP-daf1ce232223262a",
@@ -8307,7 +8346,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "duplicate",
+          "reason": "D026 corrects D020. Moving the neighbor forces outside the acceleration cap restored the first frame but did not remove the lag. Four of 108 zero-radius cases missed the scratch scan’s tolerance. Both observations travel with the original tuning question.",
+          "reopenWhen": "A distinct zero-radius behavior is requested or new evidence changes the combined tuning question.",
+          "targets": [
+            "FUP-74e51991919f0a80"
+          ],
+          "at": "2026-11-19T00:18:24.857Z"
+        }
+      ]
     },
     {
       "id": "FUP-755d64e8d183ba8a",
@@ -8362,7 +8412,18 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "allocated",
+          "reason": "WO-037 already changes the inspector and replay tests. Step 10 and criterion 5 cover live route and search display after Restart without changing the meaning of Apply for parameter commits or formations.",
+          "reopenWhen": "WO-037 is withdrawn or the route readout or search overlay is empty after the recorded path step replays.",
+          "targets": [
+            "WO-037"
+          ],
+          "at": "2026-11-19T00:18:24.876Z"
+        }
+      ]
     },
     {
       "id": "FUP-91fba006916ff8c6",
@@ -8377,7 +8438,16 @@
           "missing": false
         }
       ],
-      "dispositions": []
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "deferred",
+          "reason": "The repaired crowd comes to rest, with first arrival credited later in the five comparisons in FINAL-001. First arrival is a separate observation from D020’s re-target after a crowd has settled.",
+          "reopenWhen": "Operator play finds first arrival slow. Compare first credit and the later settling together.",
+          "targets": [],
+          "at": "2026-11-19T00:18:24.893Z"
+        }
+      ]
     }
   ]
 }

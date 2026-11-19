@@ -134,9 +134,9 @@ idle between batches.
   `ordinary` pseudocode explains the mechanism without RxJS vocabulary. A
   row whose example cannot run under the scheduler as written (fromEvent
   over a DOM target, scheduled over a scheduler) runs over a test double the
-  module supplies, and a record that still cannot run marks its reading
-  illustrative with `// Illustrative: <reason>` as the code's first line and
-  the reason in the decisions, as the catalog rule admits.
+  module supplies. If a candidate still cannot run, use the permitted
+  substitution among the non-reserved rows and record the reason. A
+  marble study has a runnable model and a scheduler-backed example.
 - **Implementations and references, as WO-021's, with one addition.** Where
   this app uses the operator (a repository path read from the source at the
   integrated base, introduced as "where this app uses it") and one or two
@@ -159,6 +159,9 @@ idle between batches.
   `fork_turns: none` whose brief opens with the printed preamble, under Claude
   the `dotln-worker` definition). Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
+- A record the walkthrough, route checks or comparison opens by name stays
+  in this batch. Use the permitted substitution for a different candidate
+  and record the replacement and reason in the decisions.
 - **The inventory's consumers.** The work's record chunk
   (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
   every record and which `check-studies.mjs` holds to the directory) and the
@@ -205,11 +208,16 @@ its screenshots.
 2. The authors' brief into `fan-out.md` from WO-021's brief, with the
    work's index, the twenty rows, the marble contract and spec helper, the
    authoring date and the launch form of this host; dispatch the ten authors; merge the twenty drafts into the work's record
-   chunk and register each model in `study-models.ts`. Check: `npx nx test tools` exits 0 over
+   chunk and register each model in `study-models.ts`. Copy the work’s
+   English study messages into the matching scope of
+   `libs/features/tools/testing/src/lib/study-en.json` and run
+   `node --test tools/i18n-copies.test.mjs`. Check: `npx nx test tools` exits 0 over
    the modules' specs.
 3. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile;
-   set `checked`. Check: `npm run studies:check` exits 0 over
+   set `checked`. Regenerate `studies-summary.json` with the existing
+   `npm run studies:check -- --write-summary` writer on this batch’s first
+   integration and again after a sibling merges. Check: `npm run studies:check` exits 0 over
    `studies/rxjs/`.
 4. The link check into `docs/evidence/WO-029/README.md`. Check: every URL has
    a status.

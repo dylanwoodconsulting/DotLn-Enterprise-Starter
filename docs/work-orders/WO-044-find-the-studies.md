@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds one page, `/tools/studied` (`ChildPaths.Studied`), with its
@@ -248,7 +248,7 @@ screenshots; the documents.
 
 1. Base guard read with WO-014-D001, for WO-044: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
-   eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (a `main`
+   6eef542987ab2183817baba329a64373cb61b157 origin/main` exits 0 (a `main`
    that does not contain the pin stops for a planning pass); the target
    worktree then fast-forwards to the target's `main`, and that integrated
    commit is the baseline of every later comparison; then the route guard

@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/features/machinery-data-access`, `core-snapshot.ts` in
@@ -14,8 +14,8 @@
 row, `apps/dotln-e2e/src/machinery.spec.ts` and two documents; no runtime
 dependency; removes the arriving page, its story and its deep-link test;
 regenerates the `machinery-*.png` baselines. The miner's inputs sum to
-1,098,407 bytes at the pin (every path the Observed gap names, by `git
-ls-tree -r -l`). Source files, wall-clock, context bytes and
+1,109,768 bytes across 44 files at the pin (the pass records the
+`git ls-tree` inputs, including one copy of the seven role skills). Source files, wall-clock, context bytes and
 tokens: unknown until run. Commands added: none. Steps: 16. Re-mints: none.
 Refutations paid: the 2026-11-09 and 2026-11-14 passes' receipts.
 **Nomination provenance:** the operator's direction to the 2026-11-09 pass
@@ -30,6 +30,7 @@ D12). Opaque identifier, not a priority. Amended by the 2026-11-14 pass
 D7): the pin moved from core's v0.122.1 to its v1.0.0, and every fact the
 Observed gap, the Design and the criteria state about core was read again
 there; the reading rule and criterion 4's named capacities are unchanged.
+The [v1.4.0 planning pass](../planning/passes/standard-pass-v1-4-0-2026-11-19.md#the-machinery-view) records the current input inventory and capacity checks.
 **Depends on:** WO-013 merged (hard: the `/machinery` route and the
 Machinery menu group; DotLn-Angular #6, in the base). WO-035
 (reference-only, sequenced ahead: it lands the registration that puts mined
@@ -58,7 +59,7 @@ statements).
 (§Run the app and its checks); the target's
 `libs/shared/catalog/src/lib/catalog-loader.ts`, `eslint.config.mjs`,
 `docs/dotln/evidence/WO-026/decisions.md` (D012); core
-(`DylanBWood/DotLn`) at `ed66a822c1690ee96f1db4cde0af6320fe83388e`, the
+(`DylanBWood/DotLn`) at `bc761ad9ce1008c72c647e9b0de63b09117ba822`, the
 paths the Observed gap names.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens
@@ -73,31 +74,29 @@ three lists: enforced on one host and text-only on another, enforced on no
 host, and core's residue with its reasons. They learn what core has and
 where it is thin, and decide what to improve in core. No label-value list.
 
-**Observed gap (dated 2026-11-14 at `eb9d227`):** `/machinery` renders
+**Observed gap (checked 2026-11-19 at `6eef542`):** `/machinery` renders
 WO-013's arriving page; the target holds no copy of core's harness data. Core
-at `ed66a822c1690ee96f1db4cde0af6320fe83388e` (tag `v1.0.0`, core's `main`
-on 2026-11-14), read by the 2026-11-14 pass with `git show`, publishes:
-`.claude/harness-manifest.json` (SHA-256 `b4ecf588f585ef288ace9ef2fdbbfdfadc343e25eedb1b4f9526d29195485813`)
+at `bc761ad9ce1008c72c647e9b0de63b09117ba822` (tag `v1.4.0`), read
+at the release commit, publishes:
+`.claude/harness-manifest.json` (SHA-256 `ae59ca211f37c8d5163949fbb50f14c6fc5f22f41b5067db47dd4a9f92173e6a`)
 with `profiles` (per host `profile.profileId`, `harness`, `observedVersion`,
 `events` with `available` and `evidence`, `loadout`, `grants`,
 `outsideWriteGrants` per role, `files`), `installed` (36 surfaces: `path`,
 `rung`, `origin.ids`) and `residue` (ten items: `originId`, `reason`,
 `missingCapabilities`); `.claude/settings.json` and `.codex/hooks.json`,
-which register hook files on host events; each hook's `runHarnessHook`
-configuration, JSON with `event`, `kind` and, for feedback hooks,
+which register hook files on host events; the hooks that call `runHarnessHook`, whose JSON configuration carries `event`, `kind` and, for feedback hooks,
 `policy.mechanisms` (`unitId`, `handler`, `kind`, `rung`, `enforcement`);
 seven role skills with a `description`, an Origin stamp of ids, an `id:
 statement` line per feedback unit and supports as `Name: statement` lines;
 agent definitions in `.claude/agents/` (five at the pin, the four lifecycle
 roles and `dotln-worker`) and, at the commits that have it, `.codex/agents/`
 (the pin has none); `CLAUDE.md`'s
-`dotln-harness` block (the refusals and a residue line per host);
+`dotln-harness` block (core's configured stop levels and its residue lines per host);
 `packages/skeleton/src/loadouts/*.ts`, the only place pairing a support's
 name with its id and declaring kinds (`promptSupport`, `supportFacetId`,
 `activeMechanicId`); `packages/*/package.json` versions. Claude Code 2.1.263
 and Copilot CLI 1.0.86 report `PreToolUse`, `PostToolUse`, `Stop` and
-`UserPromptSubmit` available; Codex CLI 0.153.4 none. The 2026-11-09 pass's
-probe of the Design's rule, run again at this pin with the same result, found
+`UserPromptSubmit` available; Codex CLI 0.153.4 none. Applying the Design's rule to the v1.4.0 hook configurations gives
 four mechanisms enforced (`contributor.permissions`
 among them) and three advised on Claude and Copilot, all text-only on Codex,
 and the router served by neither the permission, writer, attribution nor
@@ -114,8 +113,12 @@ only `layer:shared-data-access`, events, models, core and util.
   `loadout`, `hosts`, `roles`, `mechanisms` (kind as core declares it, else
   `undeclared`; statement from the `id:` line, the paired `Name:` line or
   the role's `description`, else none), `surfaces` (a hook's event, `kind`,
-  `policy.mechanisms`), `residue` and the refusals; no runtime hashes or
-  code. Loaded as a lazy chunk by `import()`, as the catalog is.
+  `policy.mechanisms`), `residue` and `stops`. A stop carries the
+  source statement and the level the mined core block gives it
+  (`refuse`, `advise` or `off`). A stop governed by a separate election
+  has a null level. Older blocks that enumerate refusals map those
+  entries to `refuse`. The host-capacity calculation uses hook evidence
+  independently. The snapshot excludes runtime hashes and code. Loaded as a lazy chunk by `import()`, as the catalog is.
 - **Miner** (`tools/scripts/core-snapshot.mjs`, a helper): `--core <git dir>
   --commit <sha> [--tag <name>] [--out <file>]` reads by `git show`, never
   checking out, and reads an input directory the commit lacks as empty
@@ -133,9 +136,12 @@ only `layer:shared-data-access`, events, models, core and util.
   and implements none, and a hook may carry a unit it does not enforce);
   else `absent`; the host's residue item beside it. Role
   ids are roles, served by the hooks whose origins name them. *Relations*:
-  role to mechanisms, mechanism to roles and surfaces, surface to what it
-  implements (origin less role ids) and the roles it serves, mechanisms
-  sharing a surface. *Gaps*: text-only on a host while enforced or advised on
+  a role carries the non-role ids in its skill’s origin. A surface lists the
+  roles and mechanisms in its origin. Show its implementation separately,
+  using the handler entries and the commit-message and permission hook rules
+  above. A registration surface has no implemented mechanisms. A skill or a
+  prose entry carries its instructions as text. These relations also show
+  which mechanisms share a surface. *Gaps*: text-only on a host while enforced or advised on
   another; enforced on no host; each residue item.
 - **Store and page:** `CoreSnapshotStore` holds the snapshot with WO-007's
   call state and persists the selection under `dotln-angular.machinery.core`
@@ -241,10 +247,15 @@ target gate plain and review once each.
 2. `npm run check:fixtures` exits 0 with the snapshot check; `npm run
    test:tooling` exits 0 with tests that the miner reads by `git show`,
    refuses an absolute path and an e-mail shape, reads an absent input
-   directory as empty, prints no value on failure,
-   and that `--check` refuses a dangling id.
+   directory as empty, reads a legacy refusal and the current block’s
+   configurable stops and separately elected desktop control through the
+   same schema. Removing the required manifest from a synthetic current-pin
+   input fails before a snapshot can be presented as complete. The pinned
+   historical optional directory can be absent. The miner prints no value
+   on failure and rejects a dangling id in
+   `--check`.
 3. `node tools/scripts/core-snapshot.mjs --core <path> --commit
-   ed66a822c1690ee96f1db4cde0af6320fe83388e --tag v1.0.0 --out <scratch>`
+   bc761ad9ce1008c72c647e9b0de63b09117ba822 --tag v1.4.0 --out <scratch>`
    prints PASS and `cmp` exits 0 against the committed snapshot, run from the
    clone beside the launchpad or a fresh GitHub clone; where neither is
    reachable the verifier records it untested with the reason and judges
@@ -255,12 +266,14 @@ target gate plain and review once each.
    Copilot by its `PreToolUse` hook and text-only on Codex with core's
    residue reason; `verify-app-before-done` advised at `Stop`;
    `process-cost` `text` on every host and enforced on none, its rung-2
-   registration notwithstanding; `anti-oscillation`, which `finish.mjs` also
-   names, read by that hook's `policy.mechanisms` entry and `absent` on no
-   host whose skills carry it; every residue item among the gaps;
-   `finish.mjs` related to each unit its configuration names; a role's
-   mechanisms equal to its stamp's ids; a stored selection that does not
-   parse opening the first level.
+   registration notwithstanding. The `anti-oscillation` entry in `finish.mjs`
+   is a rung-7 prose rule. Its capacity is `text` separately on Claude,
+   Copilot and Codex. Every residue item appears among the gaps. The hook
+   stays related to the units its configuration names. The rung-2
+   `.claude/settings.json` registration lists `process-cost` in its
+   origin and has zero implemented mechanisms. The verifier role carries
+   its skill’s origin ids after the role ids are removed. An invalid
+   stored selection opens the first level.
 5. `grep -rnE "dotln-key-value-list|<dl" libs/features/machinery/src` prints
    nothing; `npm run i18n:check` and `npm run check:templates` exit 0;
    `grep -rlE "from 'node:|from \"node:|require\(" libs/features/machinery/src

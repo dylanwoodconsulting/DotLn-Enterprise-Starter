@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -76,7 +76,7 @@ executor's effort written `xhigh`. Amended by the 2026-11-09 pass ([planning doc
 **Depends on:** WO-020 merged (hard: the record, the check, the study
 composite, the addressable route and the fan-out procedure); WO-028 merged
 (hard: the `concept-study-v1` record, the work catalogs, the model split and
-the study guards every batch now writes to; its merge brought the four study batches and the shared migration, which the base above includes); WO-039 merged (hard: the reshaped enterprise batch its four executable models copy, so the shapes WO-023-D016 deferred are not copied into the `relations` batch; the 2026-11-08 pass, D3; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`). The base above is that merge, set by the second 2026-11-08 pass.
+the study guards every batch now writes to; its merge brought the four study batches and the shared migration, which the base above includes); WO-039 merged (hard: the reshaped enterprise batch its four executable models copy, so the shapes WO-023-D016 deferred are not copied into the `relations` batch; the 2026-11-08 pass, D3; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`). WO-039 is a required ancestor. The Repository pin is WO-036’s later merge.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -297,7 +297,7 @@ screenshots, and the design record.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-024: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit, recorded in the decisions file, is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin includes WO-039 and WO-036. A `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit, recorded in the decisions file, is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
 2. The builder `relationsModel` in
    `libs/features/tools/src/lib/studies/relations.ts` with
    `relations.spec.ts` (a three-level stack with a loop built from data,
@@ -463,14 +463,19 @@ each.
 `walkthrough.md` and its screenshots, `design/`, and
 `docs/evidence/WO-024/host-qualification.md`.
 
-**Known issues and carry-ins:** The second 2026-11-08 pass sets the base to WO-039's merge (#18), released as `DotLn Angular v0.11.1`, which brought the reshaped enterprise batch (lookup tables keyed by the study's id union, `matchKind`, `listOf`, `booleanParameter`, the comparison runs in the run description), the `states` builder's inferred transition, `TimelineModel<Axis>` and the one model-study loader `loadModelStudy(id, family)` in the tools test kit; the first 2026-11-08 pass had set it to WO-023's merge (#17, `DotLn Angular v0.11.0`), which brought the `states` family, the enterprise batch and WO-034's reshaped first batch (the 2026-11-06 pass set it to WO-027's merge; the 2026-11-05 pass carried the migrated record and code shape into the Design). WO-039's merge is the hard edge step 1 reads through the pin, so this order's executable models copy the reshaped batch. Step 1 still integrates the target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
+**Known issues and carry-ins:** The second 2026-11-08 pass required WO-039's merge (#18), released as `DotLn Angular v0.11.1`, which brought the reshaped enterprise batch (lookup tables keyed by the study's id union, `matchKind`, `listOf`, `booleanParameter`, the comparison runs in the run description), the `states` builder's inferred transition, `TimelineModel<Axis>` and the one model-study loader `loadModelStudy(id, family)` in the tools test kit; the first 2026-11-08 pass had set it to WO-023's merge (#17, `DotLn Angular v0.11.0`), which brought the `states` family, the enterprise batch and WO-034's reshaped first batch (the 2026-11-06 pass set it to WO-027's merge; the 2026-11-05 pass carried the migrated record and code shape into the Design). WO-039's merge is the hard edge step 1 reads through the pin, so this order's executable models copy the reshaped batch. Step 1 still integrates the target's current main and uses that commit for comparisons. From the 2026-11-01 pass's criteria adversary (its
 R1 and R6), carried into this text by the 2026-11-01 second pass: step 1's
 base guard is an ancestor check and the fast-forward, and criterion 3 names
 the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021, WO-022 and WO-028 change. WO-023, this order's first pair partner, merged first; this order now pairs with WO-036, the scene's walls and ways (WO-036 works in `libs/shared/scene-engine` and `libs/features/scene` and edits under `libs/features/tools` only `reading-mapper.ts` and the `tools-en.json` testing copy; that copy and the app catalog `apps/dotln/public/i18n/en.json`, where this order's family adds its words under `tools`, are the files both may edit; criterion 6 reads `package.json`'s `dependencies` at the latest integrated `main`, since WO-008, sequenced after, adds a library), the second to publish integrating the target's `main` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
+WO-021, WO-022 and WO-028 change. WO-024 pairs with WO-037. The two orders can both touch the app's English
+catalog and the Tools testing copy. Either order can open its verified draft first. Once one sibling merges, the
+remaining branch integrates target `main`, preserves both sets of keys and reruns
+`node --test tools/i18n-copies.test.mjs` before landing. A ready PR whose
+sibling merged later needs the same check on the integrated tree. The
+pair can also run one at a time. The remaining GEB and Team Topologies rows, the AI for Games
 pathfinding and decision-making chapters, the RxJS patterns and the remaining
 EIP and PoEAA patterns are the next batches' candidates (the filing pass's
 C3), cut when the operator drains this queue. This order activates only on a

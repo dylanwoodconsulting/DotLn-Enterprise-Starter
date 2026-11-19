@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/features/tools/src/lib/studies/grid.ts` (`gridModel`: a
@@ -29,7 +29,8 @@ its `study-models.ts` entry, its messages in
 `libs/features/tools/testing/src/lib/study-en.json`, its row in
 `studies-summary.json`; the Collision avoidance study's comparison, spec and
 messages; the wall study's simulation, model entry, moments, comparison
-chart, spec and messages; the scene inspector's study line
+chart, spec and messages, two existing helpers re-exported from the engine
+barrel and the Corner trap study's description of the public helper; the scene inspector's study line
 (`inspector-mapper.ts`, `unit-inspector.html`, a `scene.inspector` message
 and its copy `scene-en.json`); e2e cases and the regenerated
 `scene-flocking-*.png` baselines; the documents (`catalog.md` §The record
@@ -125,7 +126,7 @@ chooses the next cell and what its heuristic buys, and that the studies show
 the avoidance the scene runs; what they decide is which pathfinding concepts
 the research track studies next, now that the grid can draw them.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** `visualFamilies` in
+**Observed gap (checked 2026-11-19 at `6eef542`):** `visualFamilies` in
 `libs/shared/models/src/lib/concept-study.ts` and the `visual.family` enum
 of `concept-study-v1.schema.json` name six families (`motion`, `timeline`,
 `marbles`, `flow`, `states`, `relations`); five have a composite under
@@ -139,17 +140,19 @@ and none is studied. Two families are fed by one builder each, `marbleModel`
 (`studies/rxjs/marbles.ts`, line 381) and `flowModel` (`studies/flow.ts`,
 line 315), so a stream or messaging study is its example as data, while each
 movement study hand-writes a presentation module. The scene inspector shows
-a tool's definition and no link to its study, though each of the sixteen
-rail tools has a study, as do Collision avoidance (`aifg-a:134`) and
-Obstacle and wall avoidance (`aifg-a:137`), which WO-036 brings to the
-rail. The Collision avoidance study's simulation calls the engine's `avoid`
+a tool's definition and no link to its study, while 18 of the 28 rail tools have studies. The two avoidance tools are
+now on the rail. The Collision avoidance study's simulation calls the engine's `avoid`
 (line 144), and `collision-avoidance.model.spec.ts` pins the exact head-on
 zero and the overlap (lines 137 to 157), the honest record of WO-028-D009's
-blind spot; WO-036 leaves `avoid` so and adds the scene's policy beside it.
+blind spot. WO-036 retained `avoid` and exported the scene's `avoidCollisions`.
 The wall study builds its own ray cast (`castWallRay`) and avoidance step in
 `obstacle-and-wall-avoidance.simulation.ts`, re-exported by its model entry,
 where `catalog-rules.md` (line 99) asks a study to call the scene engine's
-function where it has the behaviour, which it has once WO-036 lands; and
+function where it has the behaviour. At the merge, `geometry.ts` exports
+`castRay` and `steering.ts` exports `avoidWalls` inside the engine. Its
+public barrel exposes neither. The Corner trap study's first mechanism
+step still describes the absence of a public helper. Both facts matter
+when the wall study changes its import (WO-036-D013). Also,
 WO-034-D013's two gaps stand: with the delivery straight ahead the moment
 buttons run Ray first hits, Ray misses again, Smallest clearance and End of
 run, out of time order (`momentsOf` lists the miss before the smallest
@@ -170,8 +173,10 @@ its height. The two avoidance studies' presentation modules and model specs,
   `pathfinding.ts` with its per-expansion trace, and returns the family's
   frames (each cell's state, the open and closed sets and the frontier at
   that expansion, the path once found), each frame's text equivalent, note
-  and worked step (the expanded cell's cost so far, estimate and total),
-  translated at the boundary through `StudyTranslate`. The search is the
+  and worked step. The engine trace currently records the expanded cell
+  and newly opened cells. Extend each expansion with the engine’s actual
+  cost so far, remaining estimate and priority at that cell. The study reads
+  those numbers from the trace. Its labels are translated at the boundary through `StudyTranslate`. The search is the
   engine's, never the study's (catalog rule: call the scene engine's
   function where it has the behaviour). The A* module holds its example and
   a `model` that returns `gridModel`'s result, and declares no frame, text
@@ -234,7 +239,10 @@ its height. The two avoidance studies' presentation modules and model specs,
   the pass round the wall's end, or the difference plotted; the executor
   records which). Where the engine's function moves the study's frames, the
   study's prose and placeholders follow it, and the walkthrough reads the
-  result.
+  result. Run the same scene with the study's long and short ray settings.
+  Describe a brief clearance correction as such. A claim of sustained
+  avoidance needs corresponding separation in the two recorded traces
+  (WO-028-D036 and WO-034-D013).
 - **The inspector's study line** (`FUP-592e538095eaead9`). The scene
   inspector's definition gains "read the study", linking `/tools/catalog/<id>`
   through `buildRoute` and `ChildPaths.Reading`, for a tool the catalog
@@ -288,7 +296,7 @@ changes; the inspector's study line; the regenerated scene baselines;
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-045: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <WO-036's merge commit>
+   `git fetch origin`, `git merge-base --is-ancestor 6eef542987ab2183817baba329a64373cb61b157
    origin/main` and `git merge-base --is-ancestor <WO-040's merge commit>
    origin/main` each exit 0 (the pass after both merge sets the pin; a
    `main` without either stops for a planning pass); the target worktree
@@ -311,12 +319,16 @@ changes; the inspector's study line; the regenerated scene baselines;
    record as v2 admitted (recorded with both exit codes); `npx nx test
    catalog`, `npx nx test models` and `npm run test:tooling` exit 0.
 3. `libs/features/tools/src/lib/studies/grid.ts` (`gridModel`), the
-   `GridStudyModel` member in `study-model.ts`, and `grid.spec.ts` over a
-   small fixed grid. Check: `npx nx test tools` exits 0.
+   `GridStudyModel` member and `ticksOf` in `study-model.ts`. Extend the
+   scene engine’s search trace for the worked step. In `grid.spec.ts`,
+   compare the displayed entries with the engine’s costs on a small fixed
+   grid, including a nonuniform weight. Keep the existing search result. Check: `npx nx test tools` exits 0.
 4. `libs/features/tools/src/lib/composites/study-visuals/grid/` (candidate
    A) with `grid-drawing.ts`, its spec, the composite's spec and the
-   `StudyGrid` stories, and the `grid` case in
-   `composites/study/study.html`. Check: `npx nx test tools` and
+   `StudyGrid` stories. Add the family to `StudyDrawingView` in `types.ts`
+   and to `drawingOf` in `mappers/study-mapper.ts`. Import the composite
+   in standalone `composites/study/study.ts` and render the grid case in
+   its template. Exercise the v2 record through the reader’s step control. Check: `npx nx test tools` and
    `npm run lint:components` exit 0.
 5. The first rendered pair (A numbers in cells, B tone alone) at about 2080
    by 1460 and 360, read at 3840 by 1620; the rounds, or their deferral as
@@ -344,15 +356,22 @@ changes; the inspector's study line; the regenerated scene baselines;
    with their messages: the head-on comparison under `avoid` and under the
    scene's policy. Check: `npx nx test tools` and `npm run i18n:check` exit
    0.
-9. `studies/movement/obstacle-and-wall-avoidance.simulation.ts` and
+9. Re-export `castRay` and `avoidWalls` from
+   `libs/shared/scene-engine/src/public_api.ts`. In `studyAifg/en.json`
+   and its `study-en.json` testing copy, update
+   `corner-trap.record.mechanism.steps.step0.text` to describe the
+   Corner trap study's own ray and the now-public engine helper.
+   Use the public imports in `studies/movement/obstacle-and-wall-avoidance.simulation.ts` and
    `obstacle-and-wall-avoidance.model.ts` on the engine's ray cast and wall
    avoidance, `obstacle-and-wall-avoidance.presentation.ts`'s `momentsOf` in
    step order and its comparison chart, `obstacle-and-wall-avoidance.model.spec.ts`
    pinning the straight-ahead run, and their messages. Check: `npx nx test
    tools` exits 0; `grep -c "castWallRay"` over the three modules prints 0
    for each.
-10. `libs/features/scene/src/lib/mappers/inspector-mapper.ts` and
-    `composites/unit-inspector/unit-inspector.html`: the study line, its
+10. Load the catalog’s `studiedIds` in `SceneFacade` with the scene rows
+    and pass the selected tool’s membership through the inspector mapper.
+    Give the facade test kit one listed and one unlisted tool. Render the
+    link in `composites/unit-inspector/unit-inspector.html`, with its
     message in `apps/dotln/public/i18n/en.json` and its copy `scene-en.json`.
     Check: `npx nx test scene`, `npm run i18n:check` and
     `node --test tools/i18n-copies.test.mjs` exit 0.
@@ -424,8 +443,9 @@ once each.
    nothing from `composites/`; `grid.spec.ts` asserts on its fixed grid that
    the builder's open and closed sets at each expansion and its path equal
    the trace and path WO-036's `pathfinding.ts` returns for the same grid,
-   and that each frame's text equivalent names the expanded cell and the
-   frontier's size; `a-star.spec.ts` asserts the example's path and its
+   that the displayed cost, estimate and total equal that expansion’s
+   engine trace on a grid with unequal costs, and that each frame’s text
+   equivalent names the expanded cell and the frontier’s size; `a-star.spec.ts` asserts the example's path and its
    expansions under the octile and the zero heuristic.
 4. `npm run studies:check` exits 0 over every record at the candidate, the
    A* record as `concept-study-v2` and every other as the version it
@@ -445,16 +465,26 @@ once each.
    equivalent renders beside the drawing, the composite steps on command and
    under reduced motion offers no Play and draws without transition; and
    `apps/dotln-e2e/src/storybook.spec.ts` lists the `StudyGrid` story beside
-   the other families' and finds its composite rendered there.
+   the other families' and finds its composite rendered there. Loading the v2 study in the normal
+   reader selects the grid drawing, and stepping advances the displayed
+   cell and its text equivalent together. A second valid grid has a disconnected
+   goal. Stepping it to the end reaches the engine’s no-path state with an
+   accessible terminal message and no rendered path.
 7. `collision-avoidance.model.spec.ts` asserts that on the exact head-on run
    the engine's `avoid` leaves the pair overlapping and the scene's head-on
    policy parts them from the first frame after it fires with no later
    overlap, and the study's comparison renders both runs; the wall study's
    simulation imports its ray cast and wall avoidance from
    `@dotln-angular/scene-engine`, `grep -c "castWallRay"` prints 0 for its
-   simulation, model and spec, and its spec pins the straight-ahead run's
+   simulation, model and spec, and the Corner trap mechanism step accurately
+   describes its own ray and the public helper in both message copies.
+   `npm run i18n:check` and `node --test tools/i18n-copies.test.mjs` pass.
+   The wall study's spec pins the straight-ahead run's
    moment labels and steps and asserts that every input's moments are
-   listed in step order.
+   listed in step order. A presentation test reads the two displayed traces
+   and compares them with two recorded runs from the same study inputs,
+   including the goal and starting state. Only the ray length varies. The
+   caption describes the difference those traces show.
 8. The scene inspector shows "read the study", linking the tool's reading,
    for a rail tool the summary lists as studied and no such line for one it
    does not (a scene spec covers both), and the e2e case follows A*'s line
@@ -484,9 +514,9 @@ once each.
 `design/`, `review.md`, `walkthrough.md` and its screenshots, and
 `docs/evidence/WO-045/host-qualification.md`.
 
-**Known issues and carry-ins:** The base is provisional, WO-039's merge;
-the pass after WO-036 and WO-040 merge sets it to the later of their merge
-commits. The `concept-study-v2` schema is this order's shared-infrastructure
+**Known issues and carry-ins:** The provisional base is WO-036's merge. WO-040 still
+blocks activation. Once it merges, use the integrated target containing
+both predecessors. The `concept-study-v2` schema is this order's shared-infrastructure
 change (WS-002 rule 7), bounded to the family enum; a research batch that
 draws a v1 family writes v1 or v2 with no other change, and one that draws
 `grid` writes v2. WO-024 also adds a family case to `study.html`, rows to

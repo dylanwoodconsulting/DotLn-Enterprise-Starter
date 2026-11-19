@@ -204,11 +204,11 @@ adding a work or a visible field to it takes, is unknown until it merges.
   two mappers (chapters 1 to 6 and 7 to 13); the critic samples twenty rows
   against the text and returns the rows that misstate it, which the mapper
   rewrites. A tooling test in `tools/catalog.test.mjs` asserts that every
-  `maxim` of a repository map occurs verbatim, whitespace aside, in the
-  text committed beside it, so an edited maxim fails, and that every `maxim`
-  the checkpoint `tools-artofwar.json` carries equals the maxim of the map
-  row its id names, so the sentence a reading shows is the one the text
-  holds. This is the
+  `maxim` of a repository map occurs in its cited chapter of the committed
+  edition, whitespace aside. A line present only in a different chapter
+  fails the attribution check. Compare each map row with its checkpoint
+  row by id, including the presence and value of the optional field in
+  both directions. This is the
   first map the app owns: a work mined in public into the app's own store,
   the direction the operator gave. The batch is `artofwar`, its rows
   `aow:<line>`.
@@ -391,21 +391,24 @@ the reading; the e2e cases and the refreshed baselines; the documents;
    admitted and one holding a map row refused; a map batch with no maps
    refused; a repository map whose bytes differ from its checkpoint's digest
    refused; `--batch` reading no research run directory and leaving every
-   other checkpoint's bytes unchanged; the fixture builder skipping
-   public-work rows; every `maxim` of a repository map found verbatim in
+   other checkpoint’s bytes unchanged. In the tooling fixture, keep historical
+   run maps under the run root, copy the repository map to its prescribed
+   repository-relative location and give public-work batches no map.
+   Check each checkpoint against the bytes its batch actually reads. Keep
+   eleven historical maps and add this repository map and six zero-map
+   batches; every `maxim` of a repository map found verbatim in
    the text beside it, and a scratch copy with one maxim altered refused);
    the `scripts.md` rows. Check: `npm run test:tooling` and
    `npm run check:scripts` exit 0, and `npm run catalog:check` exits 0 over
    the unchanged eight.
 5. The mapper brief in `fan-out.md` (the row schema, the maxim rule, the
-   chapter split, the house rules); two mappers and the map critic
-   dispatched; the sampled rows the critic names rewritten; the rows merged
+   chapter split, the house rules). The two mappers produce the rows, merged
    into `libs/shared/catalog/src/maps/art-of-war.jsonl`; the `artofwar`
    batch declared in the table (root `repository`, the map file, the prefix
    `aow`). Check: `npm run test:tooling` exits 0 with the verbatim test
    reading the map, `npm run catalog:check -- --partial` exits 0, and the
-   README records the row count and the critic's sample with its
-   disposition.
+   README records the row count. Step 6 records the critic’s sample and
+   disposition once the typed result is available.
 6. One classifier with WO-014's brief over the map; `tools-artofwar.json`
    (`tool-v2`) validated by `node tools/scripts/catalog/check-catalog.mjs
    <checkpoint>` and placed in `libs/shared/catalog/src/data/`; its `works`
@@ -417,6 +420,9 @@ the reading; the e2e cases and the refreshed baselines; the documents;
    libs/shared/catalog/src/data`. Check: `npm run catalog:check` exits 0,
    `npx nx test catalog` exits 0, and `npm run catalog:report` lists
    `artofwar` with its typed rows by kind.
+   Once the typed checkpoint is joined, the map critic reads the same sample
+   across source, map and typed output. Repair affected rows, repeat the
+   join and record the critic’s dispositions before proceeding.
 7. The designers' brief in `fan-out.md`; the six designers dispatched; each
    toy record and its messages merged into WO-018's
    `libs/shared/catalog/src/toys/toys.json` and
@@ -440,13 +446,15 @@ the reading; the e2e cases and the refreshed baselines; the documents;
    name, with the row count found (zero expected) or `unobserved` where the
    harness kept no journal rows for that worker.
 9. The agreement (WO-014-D014): a spec in `libs/shared/catalog` asserting
-   that the works the loader loads, the shelf's titled works and the
-   summary's works are one set, and assertions in `tools/catalog.test.mjs`
+   that the loader’s work keys, translated shelf-title keys, scene-type
+   mapping and summary cover the same works, and assertions in `tools/catalog.test.mjs`
    that each has its token in `_tokens.scss` and `_field-skin.scss` and an
    entry in the shelf's `@each`; the moved totals' figures in the
    decisions. Check: `npx nx test catalog` and `npm run test:tooling` exit
    0, and the spec fails on a scratch copy with `artofwar` removed from
-   `reading.ts`, that run recorded in the README.
+   the scene-type mapping. Separately remove its shelf-title key from the
+   root English catalog. In each case the agreement spec identifies the
+   missing membership. Record the failing assertions in the README.
 10. The seven works and `maxim` through WO-035's mechanism as step 2
     records it. Check: the check step 2 names exits 0 with the new works.
 11. The maxim in the reading: the reading mapper and `concept-reading`, the
@@ -474,7 +482,9 @@ the reading; the e2e cases and the refreshed baselines; the documents;
     `docs/evidence/WO-043/walkthrough.md` with the dated steps; the verifier
     repeats the session independently for criterion 1. Check: the files
     exist.
-14. Documents: `catalog.md` §Mining a new work, its inventory and new-work
+14. In `catalog.md` and the installed `catalog-rules.md`, replace the
+    v1-only loader statements with the two accepted versions and their
+    field rules. Keep the v1 schema bytes intact. Update `catalog.md` §Mining a new work, its inventory and new-work
     list, §Toys; `catalog-rules.md`; `scripts.md`. Check: `grep -n "^##
     Mining a new work" docs/dev-reference/architecture/catalog.md` prints
     the heading and `grep -c "maxim" docs/ai-reference/catalog-rules.md` is
@@ -531,10 +541,11 @@ target gate plain and review once each.
    count equal to the checkpoint's; the summary's `artofwar` entry lists
    the text's thirteen chapters; `npm run test:tooling` exits 0 with the
    test that finds every `maxim` of the map verbatim in
-   `libs/shared/catalog/src/maps/art-of-war-giles-1910.txt`, holds every
-   maxim of `tools-artofwar.json` equal to its map row's, and refuses both
-   a scratch map with one maxim altered and a scratch checkpoint with one
-   maxim altered beside the unchanged map; and `docs/evidence/WO-043/README.md`
+   the cited chapter of `libs/shared/catalog/src/maps/art-of-war-giles-1910.txt`
+   and rejects a wrong-chapter citation, holds every
+   map row and its checkpoint row equal on both presence and value of the
+   optional field, and rejects a scratch checkpoint that removes, adds or
+   edits the field beside an unchanged map; and `docs/evidence/WO-043/README.md`
    records the text's source, URL, retrieval date and SHA-256, equal to
    `shasum -a 256` over that file, and the critic's sampled rows with their
    disposition.
@@ -553,7 +564,9 @@ target gate plain and review once each.
    candidate; and step 4's tooling tests pass, so a `tool-v1` row with a
    `maxim`, a public-work checkpoint holding a map row, a map batch with no
    maps and a repository map that differs from its checkpoint are each
-   refused, and `--batch artofwar` reads no research run directory.
+   refused, and `--batch artofwar` reads no research run directory. A catalog
+   loading test makes one new work chunk unavailable, then opens a healthy
+   v1 work through the same loader. Its reading still renders.
 5. **The six toys and their tools.** `npm run toys:check` exits 0 over the
    shelf's records, six of origin `this-app`, one for each of `meadows`,
    `pirsig`, `poincare`, `gladwell`, `taleb` and `fives`, each with a scene
@@ -565,6 +578,9 @@ target gate plain and review once each.
    a toy-source checkpoint given a `maxim` fails `check-catalog.mjs`, and
    `fan-out.md` holds each of the six designers' confirmation that nothing
    it returned carries a passage of its source.
+   For each authored toy, resolve every declared designed-tool id in its
+   own source batch and check the toy’s rendered links against that set.
+   A valid catalog id belonging to another work fails the comparison.
 6. **Provenance excludes quarantined material.** `cat
    docs/evidence/WO-043/README.md` shows each map and toy worker's label and
    one-line statement that no quarantine file was read, beside the

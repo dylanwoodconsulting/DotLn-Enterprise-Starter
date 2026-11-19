@@ -42,7 +42,7 @@ route used meanwhile.
 ## 2026-11-14 — planning pass standard-pass-v1-0-0 — an update's merge that takes the starter's harness manifest leaves the emit refusing the instance's Codex surfaces
 
 ```json
-{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": "v1.0.1" }
 ```
 
 On the update branch for v1.0.0 Git stopped on a conflict in
@@ -65,7 +65,7 @@ before the emit, which then wrote 37 surfaces; `harness check` and
 ## 2026-11-14 — planning pass standard-pass-v1-0-0 — the new Markdown reader gives four register rows a new key and leaves their dispositions on rows that read missing
 
 ```json
-{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": "v1.2.0" }
 ```
 
 After the update `npm run sync` collected the follow-up register's
@@ -190,7 +190,7 @@ the pull request ready, where the workflows run before the operator merges.
 ## 2026-11-15 — WO-036 — the document gate's formatting task ran out of its fixed thirty seconds on a busy host
 
 ```json
-{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": null }
+{ "kit": "v1.0.0", "stopsNextOrder": false, "answered": "v1.3.0" }
 ```
 
 A verification's `npm run test:docs` failed twice at its formatting task,
