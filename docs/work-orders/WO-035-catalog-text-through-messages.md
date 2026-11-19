@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds a pure derivation of a work's on-screen messages from its
@@ -134,27 +134,21 @@ a key on the page. What the operator learns is that the hard rule now
 covers the last text that was outside it; what they decide is when a second
 language is worth adding.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** the catalog's 3,463 rows
-(AI for Games 768, RxJS 742, Team Topologies 637, Gödel, Escher, Bach 573,
-Patterns of Enterprise Application Architecture 455, Enterprise
-Integration Patterns 288) carry about 1.48 MB of English a reader sees
-(UTF-8, measured by this pass over
-`libs/shared/catalog/src/data/tools-*.json`: `definition` 549 KB, the four
-`place` parts 341 KB, `verified.note` 165 KB, the 1,907 untyped rows'
-`faces.transform.reason` 157 KB, `hooks[].clause` 117 KB, `title` 104 KB,
-the titles of relations with no id 30 KB, and the 129 typed rows'
-observables, metrics, parameter names and units 20 KB), none of it through
-Transloco. The templates bind the fields directly (`concept-reading.html`
-lines 4, 15, 23, 48, 96 and 104 to 108, under `translate="no"`;
-`contents-list.html` lines 13, 30 and 46; `catalog-search.ts` lines 23 and
-27; `reading-history.ts` line 17; `catalog-page.html` line 130; the scene's
-`unit-inspector.html` lines 4 and 5 and `toolbox-rail.html` line 26), the
-mappers make labels of the typed rows' faces with `readable()`
-(`reading-mapper.ts` lines 29 to 40; `inspector-mapper.ts` lines 56 to 58,
-106 and 111), and the scene names log steps, request notices and a saved
-composition from row titles (`scene.facade.ts` lines 438, 441, 457 to 459
-and 726 to 733; `log-mapper.ts` line 46, which shows the title stored with
-the composition). The catalog's own words are app literals or raw values:
+**Observed gap (checked 2026-11-19 at `6eef542`):** the eight bundled
+`libs/shared/catalog/src/data/tools-*.json` files hold 3,463 rows. Of these,
+136 have typed transforms, 1,900 have an untyped transform and 1,427 are
+background rows. The fields this order registers contain 1,483,684 UTF-8
+bytes, counting each field occurrence. Definitions contribute 549,464
+bytes, place fields 340,793, provenance notes 165,476, untyped reasons
+156,175, hook clauses 117,229, titles 104,018, titles of unlinked relations
+30,018 and the typed rows' observables, metric names, parameter names and
+units 20,511.
+
+In Tools, the reading, contents, search, history and catalog page bind the
+mined fields. The scene's rail and inspector bind definitions and derive
+labels in their mappers. The log, notifications and saved compositions
+also use row titles. The Ways group introduced in WO-036 exercises the same
+translation boundary. The catalog's own words are app literals or raw values:
 the work titles (`reading.ts` lines 18 to 27), the shelf's scene label
 (`work-shelf.ts` lines 37 to 39), the row type in the place line
 (`concept-reading.html` line 3) and the kind and status facet options
@@ -309,7 +303,7 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
 
 1. Base guard read with WO-014-D001, for WO-035: in the target clone, after
    `git fetch origin`, `git merge-base --is-ancestor
-   eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (a `main`
+   6eef542987ab2183817baba329a64373cb61b157 origin/main` exits 0 (a `main`
    that does not contain the pin stops for a planning pass); the target
    worktree then fast-forwards to the target's `main`, and that integrated
    commit is the baseline of every later comparison; then the route guard
@@ -442,7 +436,7 @@ once each.
    home, the shelf, the contents, a typed row's reading, an untyped row's
    reading, a reading with hook clauses and an unlinked relation, a study's
    nearby and next links, the search results, the history, the studied
-   list, the facets, and the scene's rail, inspector, log and saved list
+   list, the facets, and the scene's rail (including a Ways tool), inspector, log and saved list
    carries the prefix, apart from numerals, punctuation and text the
    operator typed; the surfaces between them show every field of the
    Design's list (title, definition, the four place parts, provenance note,

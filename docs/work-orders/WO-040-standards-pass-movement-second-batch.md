@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** patch
 **Target release notes:** reviewed
 **Cost:** edits the twenty `*.presentation.ts` modules of the second movement
@@ -297,7 +297,7 @@ and sizes; the nineteen reworded labels with their specs;
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-040: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor eb9d227483e30164105da077f50673789d1e5c9f origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
+   `git fetch origin`, `git merge-base --is-ancestor 6eef542987ab2183817baba329a64373cb61b157 origin/main` exits 0 (the pin includes WO-039 and WO-036. A `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit is the baseline of every later comparison, recaptured by step 2's crawl after any later integration of the target's `main`; then the route guard and activation as WO-005 step 1. Check: the decisions carry the integrated commit.
 2. The audit and the crawl before: copy `docs/evidence/WO-034/shape-audit.mjs`, `crawl.mjs`, `compare-dom.mjs`, `open-study-details.mjs` and `ver-001/time-placeholders.mjs` into `docs/evidence/WO-040/`, adapt the crawl and the comparator to the inventory and this order's permitted differences as the Design states, adapt the audit to list every function of the `shared` group (`flow.ts`, `states.ts` and their neighbours) and of the marble builder `rxjs/marbles.ts` with its file, name and parameter count, and every function of either movement batch over four positional parameters with its file, name and count, since the copied audit lists a function only when it belongs to the first batch, takes eight or more parameters or runs to 70 lines and counts the second batch's parameters only at six or more (the historical copies untouched), and record each script's source path, the launchpad commit it was copied from and the invocation that produced each file in the evidence README; run the audit over `studies/` at the integrated base into `shape-audit-before.json`, the placeholder script into `time-placeholders-before.json`, the inventory of the movement and stream study modules at the integrated base, by path, into `inventory.json`, and the adapted crawl over the movement and stream studies the inventory names (forty and forty at `eb9d227`) into `dom-before.json`. Check: the files exist, the before counts match this order's Observed gap (39, 1, 11, 21, 2, 11), the audit lists the second batch's functions over four positional parameters and the evidence README states their number (104 by the Observed gap's parser), the audit lists `frameOf` at nine and `studyOf`, `marbleFrames` and `eventsOf` at five, and the crawl's record counts are the inventory's.
 3. `libs/features/tools/src/lib/studies/flow.ts`'s `frameOf` with a frame description and its `studyOf` and `marbleFrames`, and `libs/features/tools/src/lib/studies/rxjs/marbles.ts`'s `eventsOf`, each with a description of what it reads and four positional parameters or fewer; the shared description-object types the second batch needs added beside WO-034's under `studies/`; the audit's control: the adapted audit run over a scratch copy of `flow.ts` whose `frameOf` takes one parameter more than the candidate's reports that count, recorded in the evidence README. Check: `npx nx test tools` exits 0 over the flow, marble and movement specs; the adapted audit lists no function of the `shared` group or of `rxjs/marbles.ts` over four positional parameters; the control's count is the candidate's plus one.
 4. Second-batch presentations one to ten reshaped under the Design, their
@@ -419,15 +419,11 @@ audits, the two placeholder reports, `dom-diff.json`, `label-sweep.json`,
 `walkthrough.md` and its frames, and
 `docs/evidence/WO-040/host-qualification.md`.
 
-**Known issues and carry-ins:** The second 2026-11-08 pass sets the base to WO-039's merge (#18, `DotLn Angular v0.11.1`), the hard edge the refuter asked for, now merged: the flow specs this order edits import the one loader. This is the third standards pass under
-WS-001 rule 31; WO-039 reads the enterprise batch and the `states` family
-on disjoint surfaces and runs first in the sequence, so WO-024's executable
-models copy a reshaped example; this order and WO-037 are a lane pair
-(disjoint surfaces: WO-037, the scene's shooting and bullets, edits under
-`libs/features/tools` only `reading-mapper.ts` and its `tools-en.json`
-copy, which this order does not touch;
-the second to publish integrates the target's `main` before its publish),
-and the operator may run them one at a time. A research batch
+**Known issues and carry-ins:** WO-039 supplied the loader used by the flow
+specs. The pinned target includes that merge and WO-036. WO-040 pairs with
+WO-008. Its standards work stays in the studies and their messages, while
+WO-008 owns the authentication feature. The second publisher integrates
+`main` and repeats its checks on the integrated tree. A research batch
 that lands first (WO-029 or WO-030) adds keys to `studyRxjs/en.json` or
 `studyEip/en.json` beside the nineteen this order rewords; this order integrates the target's `main` before its handoff and again before its final publish, reruns the stream specs, recaptures the before-crawl at the new base and records the sibling's regenerated catalog baselines as the sibling's. The next Movement research batch
 may be cut now that WO-034 has merged (WS-002 rule 6) and copies this

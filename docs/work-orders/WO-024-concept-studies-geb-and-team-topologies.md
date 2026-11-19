@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/catalog/src/studies/geb/` (ten records) and
@@ -297,7 +297,7 @@ screenshots, and the design record.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-024: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin is WO-039's merge; a `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit, recorded in the decisions file, is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
+   `git fetch origin`, `git merge-base --is-ancestor <the Repository pin> origin/main` exits 0 (the pin includes WO-039 and WO-036. A `main` without it stops for a planning pass); the target worktree then fast-forwards to the target's `main`, and that integrated commit, recorded in the decisions file, is the baseline of every later comparison; then the route guard and activation as WO-005 step 1; read the harness usage and record the subagent remainder; record the publishing decision as WO-020 did.
 2. The builder `relationsModel` in
    `libs/features/tools/src/lib/studies/relations.ts` with
    `relations.spec.ts` (a three-level stack with a loop built from data,
@@ -470,7 +470,10 @@ the four records that must carry a module and binds each spec to it,
 because a conditional criterion let every record take the null escape and
 a spec beside a module need not exercise it; the executor reads the study
 record, check, families and rules as the target's `main` leaves them, which
-WO-021, WO-022 and WO-028 change. WO-023, this order's first pair partner, merged first; this order now pairs with WO-036, the scene's walls and ways (WO-036 works in `libs/shared/scene-engine` and `libs/features/scene` and edits under `libs/features/tools` only `reading-mapper.ts` and the `tools-en.json` testing copy; that copy and the app catalog `apps/dotln/public/i18n/en.json`, where this order's family adds its words under `tools`, are the files both may edit; criterion 6 reads `package.json`'s `dependencies` at the latest integrated `main`, since WO-008, sequenced after, adds a library), the second to publish integrating the target's `main` before its publish; the operator may run them one at a time. The remaining GEB and Team Topologies rows, the AI for Games
+WO-021, WO-022 and WO-028 change. WO-024 pairs with WO-037. The two orders can both touch the app's English
+catalog and the Tools testing copy. The second publisher integrates the target's
+`main`, preserves both sets of messages and runs the fixture-copy check. The
+pair can also run one at a time. The remaining GEB and Team Topologies rows, the AI for Games
 pathfinding and decision-making chapters, the RxJS patterns and the remaining
 EIP and PoEAA patterns are the next batches' candidates (the filing pass's
 C3), cut when the operator drains this queue. This order activates only on a

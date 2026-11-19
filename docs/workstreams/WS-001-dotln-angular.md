@@ -43,7 +43,7 @@ target current. The workstream is delivered when WO-004 to WO-008, WO-013 to WO-
 | WO-019 | dotln-angular | `1c3a4ff24e38d179d0fd1ad910bc6719c2740045` (WO-014's merge) | the catalog as something to read: the run's definitions, relations and hooks as each tool's data, the allow-list and the scrub gone, the reading surface, one authored Arrive study (WO-019-D005), the scene's tools typed |
 | WO-015 | dotln-angular | `bc9133e932a00d33c15bc5289d683b8078f51ee4` (provisional; the executor fast-forwarded the target worktree to `main`) | the soldier scene: the pure scene engine, twenty units on a 2D canvas behind a renderer seam, a rail of the tools the engine runs with their definitions, RTS selection, flock, arrive, formation, the first look, the root route |
 | WO-016 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the replay of a recorded order at `/machinery/replay`: its agents in their role slots over scrubbed six-field copies of WO-221 and WO-226, each agent's machinery read from core as it stood when the order ran, the operator's ideas as mechanism changes dropped on an agent with the before as a ghost, the records and replay libraries and the local idea sink |
-| WO-008 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | authentication and permissions, legitimate from the Angular side; the first road order and the last member of the purpose's critical path |
+| WO-008 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | authentication and permissions, legitimate from the Angular side; the first road order and the last member of the purpose's critical path |
 | WO-017 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the digital twin's first lane: for a recorded stage, whether the twin would have made the same interventions as the operator, its variants kept as code |
 | WO-018 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the toy shelf: the run's nineteen toys as full records read on a shelf under Tools, their tools followed into the catalog, the next toy picked |
 | WO-025 | self          | this launchpad's `main` at activation      | a quality pass over this launchpad's standing documents under the kit's `quality pass:` procedure; the repository profile rewritten to the shape the operator chose |
@@ -52,18 +52,18 @@ target current. The workstream is delivered when WO-004 to WO-008, WO-013 to WO-
 | WO-021 | dotln-angular | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` (WO-020's merge) | twenty RxJS studies with executable marble examples and the `marbles` family |
 | WO-022 | dotln-angular | `4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9` (WO-020's merge) | twenty Enterprise Integration Patterns studies and the `flow` family |
 | WO-023 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass) | twenty enterprise application pattern studies with executable models and the `states` family |
-| WO-024 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the second 2026-11-08 pass) | ten Gödel, Escher, Bach and ten Team Topologies studies and the `relations` family, each study data passed to one builder |
+| WO-024 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | ten Gödel, Escher, Bach and ten Team Topologies studies and the `relations` family, each study data passed to one builder |
 | WO-027 | dotln-angular | `48c7f8e6916692bca833c4985e2cf95978ab2c06` (WO-028's merge, set by the 2026-11-05 pass) | the gate tools and standing documents corrected from the REVIEW-002 Entropy Reducer findings: the board gauge counts a marker wherever a defect is boarded, `check:scripts` fails on a missing or stale row, the title workflow admits a gitmoji and a subject alone, and the command lists, barrel rule, catalog pointers, cache rationale and scene paragraph say what is so |
 | WO-034 | dotln-angular | `d7d842dc4fdbde03099695933a448d9632fa4335` (WO-027's merge, set by the 2026-11-06 pass) | the first standards pass (rule 31): the first movement batch's twenty presentation modules reshaped with every output unchanged, the study guards tightened, the motion drawing's marks tidied, the wall study shown doing its avoidance, the work catalogs trimmed |
-| WO-035 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | every string on screen through the message system: the catalog's mined text registered with the translator from the loaded rows under one scope per work, every screen rendering through the translator, a missing message failing closed |
+| WO-035 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | every string on screen through the message system: the catalog's mined text registered with the translator from the loaded rows under one scope per work, every screen rendering through the translator, a missing message failing closed |
 | WO-036 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | walls and ways in the scene: walls and obstacles drawn on the field, a tile graph, A* and Dijkstra with the catalog's heuristics and cost functions as rail tools, path following with replanning and a no-route state, obstacle and wall avoidance with a deterministic head-on policy, geometry saved and replayed |
-| WO-037 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | shooting and bullets: a fire tool, bullets that walls stop, the firing solution and iterative targeting as aims, hits counted and shown, a knockout that re-lays the formation, the rail's `fight` group |
+| WO-037 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | shooting and bullets: a fire tool, bullets that walls stop, the firing solution and iterative targeting as aims, hits counted and shown, a knockout that re-lays the formation, the rail's `fight` group |
 | WO-039 | dotln-angular | `f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3` (WO-023's merge, set by the 2026-11-08 pass) | the second standards pass (rule 31): the enterprise batch's sixteen presentations on compiler-checked lookup tables and shared helpers, the `states` builder inferring transitions, one executable-study loader, Foreign Key Mapping's read limit repaired, the narrow register's headings decided and the token rule written, every other output unchanged |
-| WO-040 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the second 2026-11-08 pass) | the third standards pass (rule 31): the second movement batch's presentations reshaped to the first batch's rule, the first batch's boarded residue cleared, four functions of the two stream builders brought under the rule and nineteen flow state labels reworded, every other output unchanged |
-| WO-045 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the `grid` family, built builder-first over the engine's own search, the A* study, the scene inspector's link to a tool's study and the two avoidance studies shown doing what the scene runs |
-| WO-046 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the machinery view: what DotLn core currently has, what exists, in what capacity, in what organization and with what relations, mined from core's public repository at a recorded commit |
+| WO-040 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | the third standards pass (rule 31): the second movement batch's presentations reshaped to the first batch's rule, the first batch's boarded residue cleared, four functions of the two stream builders brought under the rule and nineteen flow state labels reworded, every other output unchanged |
+| WO-045 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | the `grid` family, built builder-first over the engine's own search, the A* study, the scene inspector's link to a tool's study and the two avoidance studies shown doing what the scene runs |
+| WO-046 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | the machinery view: what DotLn core currently has, what exists, in what capacity, in what organization and with what relations, mined from core's public repository at a recorded commit |
 | WO-043 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the first public mining: The Art of War mapped into the catalog from its public text with its maxims, and six new toys on the shelf |
-| WO-044 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | find the studies: a page listing every studied concept by work and chapter, links from the Tools home into each work, studied counts in the contents and the studied mark on nearby links |
+| WO-044 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | find the studies: a page listing every studied concept by work and chapter, links from the Tools home into each work, studied counts in the contents and the studied mark on nearby links |
 
 Proposed later members, not yet filed (§The app and its sub-apps below and
 the planning document of 2026-10-24 §10 record each with its reopening
@@ -91,12 +91,13 @@ D2). The road's order is each planning pass's reading and the operator moves
 an entry with a word. The scene leads: as the app stands it is the one
 part of it the operator likes, and they want more improvements to it (the
 operator on 2026-11-09, journal row 2026-11-10T02:37:58Z, digest
-`4a4715d6…`; D16). WO-036 runs first, then WO-037. WO-008 follows, the last member of the purpose's critical path, whose one
+`4a4715d6…`; D16). WO-036 supplied the field geometry and route tools. WO-037 now runs first
+with WO-024. WO-008 follows with WO-040, the last member of the purpose's critical path, whose one
 dependency merged on 2026-10-24; then the machinery view of what core has,
 WO-046; the twin's first lane, WO-017; the later replay of a recorded
 order, WO-016; and the toy shelf WO-018 with the Art of War map pass
 WO-043 behind it. Each road order builds on the target's `main` as it
-finds it and names its base at `eb9d227` or later.
+finds it. The order header names the activation base.
 
 Two road orders do not share a pair because each brings comparison rounds
 the operator attends (rule 25), not because their files collide: `nx.json`
@@ -122,11 +123,10 @@ track's batches (WS-002) run apart from both lanes on spare Codex capacity.
 | --- | --- |
 | WO-008 | WO-007 (the interceptors and stores it extends; merged) |
 | WO-024 | WO-020, WO-039 and WS-002's WO-028 (the study record, the reshaped enterprise batch its four executable models copy and the study message system; all merged) |
-| WO-036 | WO-015 (the scene and its engine; merged); WO-035 by reference (the later of the two to land integrates the target's `main`) |
 | WO-040 | WO-034, WO-039 and WS-002's WO-028 (the reshape rule, the one loader and the second movement batch it reshapes; all merged; the edge on WO-028 lives in the order's block and this table, since the kit admits a workstream edge only from a member) |
 | WO-016 | WO-013 (the machinery route; merged) and WO-046 (the page at `/machinery`, the machinery data-access library, the snapshot schema and the miner) |
-| WO-045 | WO-036 (the pathfinding module the study steps and the head-on policy its avoidance studies show) and WO-040 (it reshapes the two avoidance studies this order edits) |
-| WO-037 | WO-036 (walls stop bullets) |
+| WO-045 | WO-036 (the merged pathfinding module and avoidance policy) and WO-040 (it reshapes the two avoidance studies this order edits) |
+| WO-037 | WO-036 (field geometry and route state, merged) |
 | WO-044 | WO-019 (the reading surface; merged); WO-024 by reference (two more works' studies its lists must show) |
 | WO-035 | WS-002's WO-028 (the study message system; merged) and WO-044 (the studied page it routes through the translator); WO-023 and WO-024 by reference (the scopes it finds) |
 | WO-017 | WO-008 (the gated `/twin` route) |
@@ -441,8 +441,7 @@ changes the other.
     first pair, not a limit of two designs or one round. The plain skin
     stays the token layer the brief is expressed in (G4); a scene may scope
     a second token set to its region. The look is part of what an order
-    delivers (planning pass of 2026-10-26, D5). A comparison session runs
-    under the kit's dispatch bound, which since starter v1.0.0 counts the
+    delivers (planning pass of 2026-10-26, D5). The instance's `dispatch-bound` currently advises. Its time measure counts the
     time the phase worked and not the time since its dispatch (a gap of
     more than ten minutes in the phase's session journals that begins at a
     turn's end, such as a wait for the operator's pick, counts for nothing,
@@ -452,7 +451,7 @@ changes the other.
     2026-10-30 pass): when the operator says in ordinary language that the
     session runs as long as it needs, the executor captures the words in
     ignored intake and records `npm run resume -- accept-overrun` with
-    `--ceiling unlimited` for both metrics ahead of the stop, as the kit
+    `--ceiling unlimited` for both metrics as the kit
     guide describes (the 2026-10-30 pass, D4). The operator may delay an
     order's rounds when they have no time for them: the order records its
     first pair without a pick, ships its first-named candidate meanwhile
@@ -821,7 +820,7 @@ split into simulation, presentation and entry, released as `DotLn Angular
 v0.10.0` (WS-002's WO-028); the gate tools and standing documents saying
 and checking what is so, the board count reading a marker wherever a
 defect is boarded, `check:scripts` failing on a missing or stale row and
-the title workflow leaving a gitmoji-and-subject title as written, released as `DotLn Angular v0.10.1` (WO-027); the first standards pass, the first movement batch's twenty presentations reshaped with every output unchanged, the study guards tightened, the drawing's marks tidied and the wall study shown doing its avoidance, released as `DotLn Angular v0.10.2` (WO-034); twenty enterprise application pattern studies, sixteen stepped in `states` registers from small executable models and four structural, each naming where the app embodies it, released as `DotLn Angular v0.11.0` (WO-023); the second standards pass, the enterprise batch's sixteen presentations on compiler-checked lookup tables and shared helpers, the `states` builder inferring a move's transition, one model-study loader, Foreign Key Mapping's read limit repaired and the narrow register's headings decided, every other output unchanged, released as `DotLn Angular v0.11.1` (WO-039). What lies ahead, in the
+the title workflow leaving a gitmoji-and-subject title as written, released as `DotLn Angular v0.10.1` (WO-027); the first standards pass, the first movement batch's twenty presentations reshaped with every output unchanged, the study guards tightened, the drawing's marks tidied and the wall study shown doing its avoidance, released as `DotLn Angular v0.10.2` (WO-034); twenty enterprise application pattern studies, sixteen stepped in `states` registers from small executable models and four structural, each naming where the app embodies it, released as `DotLn Angular v0.11.0` (WO-023); the second standards pass, the enterprise batch's sixteen presentations on compiler-checked lookup tables and shared helpers, the `states` builder inferring a move's transition, one model-study loader, Foreign Key Mapping's read limit repaired and the narrow register's headings decided, every other output unchanged, released as `DotLn Angular v0.11.1` (WO-039). The scene now includes WO-036’s editable field geometry, route searches and saved paths, released in `DotLn Angular v0.12.0`. The table shows delivered work and the remaining members in the
 sequence's order, then the later members with their reopening conditions
 (the planning document of 2026-10-24 §10 carries the NoOp records):
 
@@ -836,12 +835,12 @@ sequence's order, then the later members with their reopening conditions
 | WO-034 standards pass I | the first movement batch's code read as the example, the wall study explaining its brief clearance correction, the guards tightened | merged; DotLn-Angular #16, `DotLn Angular v0.10.2` |
 | WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | merged; DotLn-Angular #17, `DotLn Angular v0.11.0` |
 | WO-039 standards pass II | nothing new on screen but the narrow register's state headings, which keep two thirds of their size at 360 and break a longer name across two lines; the enterprise batch's code read as the example an executable-model batch copies, Foreign Key Mapping's limit counting what it should | merged; DotLn-Angular #18, `DotLn Angular v0.11.1` |
-| WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state they can read, head-on pairs parting, a crowd that comes to rest | final-reviewed; DotLn-Angular #19 awaits the operator's merge; the scene leads; [evidence](../evidence/WO-036/README.md) |
-| WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed; beside WO-036 |
+| WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state they can read, head-on pairs parting, a crowd that comes to rest | merged in DotLn-Angular #19 and released as `DotLn Angular v0.12.0`. [Evidence](../evidence/WO-036/README.md) |
 | WO-037 shooting and bullets | units firing at a target, bullets stopped by walls, a moving target led by the firing solution, hits counted, a knockout that re-lays the formation | filed |
-| WO-040 standards pass III | nothing new on screen but nineteen flow state sentences that read as English; both movement batches reading as one example | filed; beside WO-037 |
+| WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed beside WO-037 |
 | WO-008 authentication and permissions | sign-in through the mocked provider, an account page that says in prose who is signed in and what they may do, a denied page that names the missing permission, a session that refreshes once and ends cleanly | filed |
-| WO-045 the grid family and the A* study | the A* search stepped cell by cell with its heuristic switched off and on; the inspector's link from a tool to its study; the two avoidance studies showing what the scene runs | filed; beside WO-008 |
+| WO-040 standards pass III | nothing new on screen but nineteen flow state sentences that read as English; both movement batches reading as one example | filed beside WO-008 |
+| WO-045 the grid family and the A* study | the A* search stepped cell by cell with its heuristic switched off and on; the inspector's link from a tool to its study; the two avoidance studies showing what the scene runs | filed after WO-040 |
 | WO-044 find the studies | every studied concept on one page by work and chapter; each work a link on the Tools home; studied counts in the contents; a mark on a nearby link that leads to another study | filed |
 | WO-035 every string on screen through the message system | nothing changed on screen; the catalog's mined text arriving through the message system, a missing message a visible failure | filed |
 | WO-046 the machinery view | what DotLn core has at a named commit: its roles, mechanisms, hosts and installed surfaces by level, a relation followed from a role to a mechanism to the surfaces that implement it, and the gaps | filed |
@@ -903,7 +902,7 @@ enters that reading (the operator's restatement of 2026-11-09, journal row 2026-
 | WO-027 | merged   | DotLn-Angular #15, `DotLn Angular v0.10.1`, its records #61; [evidence](../evidence/WO-027/README.md) |
 | WO-034 | merged | DotLn-Angular #16, `DotLn Angular v0.10.2`, its records #66; [evidence](../evidence/WO-034/README.md) |
 | WO-035 | filed    | [the order](../work-orders/WO-035-catalog-text-through-messages.md) |
-| WO-036 | final-reviewed | DotLn-Angular #19 awaits the operator's merge; [evidence](../evidence/WO-036/README.md) |
+| WO-036 | merged | DotLn-Angular #19, `DotLn Angular v0.12.0`. [Evidence](../evidence/WO-036/README.md) |
 | WO-037 | filed    | [the order](../work-orders/WO-037-scene-shooting-and-bullets.md) |
 | WO-039 | merged | DotLn-Angular #18, `DotLn Angular v0.11.1`, its records #70; [evidence](../evidence/WO-039/README.md) |
 | WO-040 | filed    | [the order](../work-orders/WO-040-standards-pass-movement-second-batch.md) |

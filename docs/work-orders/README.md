@@ -4,12 +4,11 @@
 
 ## Proposed order
 
-- [x] [WO-036] — Walls and ways: obstacles, walls and pathfinding in the scene · **final-reviewed** · pair 1
+- [ ] [WO-037] — Shooting and bullets in the scene · **queued** · pair 1
 - [ ] [WO-024] — Concept studies V: levels, loops and teams · **queued** · pair 1
-- [ ] [WO-037] — Shooting and bullets in the scene · **queued** · pair 2
+- [ ] [WO-008] — Authentication and permissions · **queued** · pair 2
 - [ ] [WO-040] — Standards pass III: the second movement batch's code and the first batch's residue · **queued** · pair 2
-- [ ] [WO-008] — Authentication and permissions · **queued** · pair 3
-- [ ] [WO-045] — The grid family and the A* study · **queued** · pair 3
+- [ ] [WO-045] — The grid family and the A* study · **queued**
 - [ ] [WO-044] — Find the studies · **queued**
 - [ ] [WO-035] — Every string on screen through the message system · **queued**
 - [ ] [WO-046] — The machinery view: what DotLn core has now · **queued**
@@ -32,11 +31,11 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 
 ### WS-001
 
-- [WO-003] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-003] — repository: self; base: d1eb33163b422993cd78443cd63c002d4683593c; phase: closed; verdict: pass; integration: current; stale: no; observed target: d1eb33163b422993cd78443cd63c002d4683593c.
 - [WO-004] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-011] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-011] — repository: self; base: d1eb33163b422993cd78443cd63c002d4683593c; phase: closed; verdict: pass; integration: current; stale: no; observed target: d1eb33163b422993cd78443cd63c002d4683593c.
 - [WO-005] — repository: dotln-angular; base: 651d76ff68e9b3a38fe770226deb634bca28b54c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-012] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-012] — repository: self; base: d1eb33163b422993cd78443cd63c002d4683593c; phase: closed; verdict: pass; integration: current; stale: no; observed target: d1eb33163b422993cd78443cd63c002d4683593c.
 - [WO-006] — repository: dotln-angular; base: 5102783f5cf575a6b487e75ed9bb0c064d6dbd9c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-007] — repository: dotln-angular; base: 90fa6e8d879cb499107ff79d1051c200d17c1cbc; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-013] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
@@ -44,27 +43,27 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 - [WO-019] — repository: dotln-angular; base: 1c3a4ff24e38d179d0fd1ad910bc6719c2740045; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-015] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-016] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-008] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-008] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-017] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-018] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-025] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-025] — repository: self; base: d1eb33163b422993cd78443cd63c002d4683593c; phase: closed; verdict: pass; integration: current; stale: no; observed target: d1eb33163b422993cd78443cd63c002d4683593c.
 - [WO-026] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-020] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-021] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-022] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-023] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-024] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-024] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-027] — repository: dotln-angular; base: 48c7f8e6916692bca833c4985e2cf95978ab2c06; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-034] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-035] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-035] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-036] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-037] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-037] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-039] — repository: dotln-angular; base: f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-040] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-045] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-040] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-045] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 - [WO-043] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-044] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
-- [WO-046] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-044] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-046] — repository: dotln-angular; base: 6eef542987ab2183817baba329a64373cb61b157; phase: draft; verdict: unknown; integration: current; stale: no; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 
 ### WS-002
 
@@ -82,29 +81,12 @@ None.
 
 ## Open
 
-### WO-024
-
-[WO-024 — Concept studies V: levels, loops and teams, ten concepts from Gödel, Escher, Bach and ten from Team Topologies, each with a relations drawing, the two works whose vocabulary describes the platform itself](WO-024-concept-studies-geb-and-team-topologies.md)
-
-- State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
-- Application target: unassigned.
-- Dependencies: typed; dependency-ready.
-- References: WO-020: hard (met) — the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; WO-028: hard (met) — the concept-study-v1 record, the work message catalogs, the simulation, presentation and entry split and the study guards every batch now writes to; WO-039: hard (met) — the reshaped enterprise batch whose executable-model shape this batch's four models copy, so the shapes WO-023-D016 deferred are not copied into the relations batch.
-- Verification: none recorded.
-- Final review: none recorded.
-- Release: none recorded.
-- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes).
-- Effort: executor xhigh; verifier xhigh; reviewer xhigh.
-- Track: delivery
-- Authority: [docs/work-orders/WO-024-concept-studies-geb-and-team-topologies.md](WO-024-concept-studies-geb-and-team-topologies.md)
-
 ### WO-037
 
 [WO-037 — Shooting and bullets: a unit given a fire tool shoots at a target unit or point, bullets as entities with speed, range, drag and a hit radius that walls and obstacles stop, aim leading a moving target by the catalog's firing solution and by iterative targeting, hits counted in the instruments and shown on the field and in the text layer, a knockout option that takes a unit out of the run after a number of hits, all deterministic and replayed, with the rail's new &#96;fight&#96; group](WO-037-scene-shooting-and-bullets.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; dependency-ready.
 - References: WO-036: hard (met) — the walls and obstacles a bullet stops at, the field steps and the older-trial rule, the rail's groups and the inspector's and painter's layers this order extends.
@@ -116,29 +98,29 @@ None.
 - Track: delivery
 - Authority: [docs/work-orders/WO-037-scene-shooting-and-bullets.md](WO-037-scene-shooting-and-bullets.md)
 
-### WO-040
+### WO-024
 
-[WO-040 — Standards pass III: the second movement batch's twenty presentations reshaped to the rule the first batch now follows, the first batch's boarded residue cleared, the shared flow builder's frame taken as a description and nineteen flow state labels reworded, with every other output unchanged](WO-040-standards-pass-movement-second-batch.md)
+[WO-024 — Concept studies V: levels, loops and teams, ten concepts from Gödel, Escher, Bach and ten from Team Topologies, each with a relations drawing, the two works whose vocabulary describes the platform itself](WO-024-concept-studies-geb-and-team-topologies.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; dependency-ready.
-- References: WO-034: hard (met) — the reshape rule, the shared number formatter, the description-object shape, the tightened corpus test and the production crawl this order is held to; WO-028: hard (met) — the second movement batch's twenty presentation modules this order reshapes; WO-039: hard (met) — its one executable-study loader rewrites the flow specs this order also edits, and the catalog document can say the enterprise batch follows the shape only once it has merged.
+- References: WO-020: hard (met) — the concept-study record, check, study composite, addressable route and fan-out procedure this batch reuses; WO-028: hard (met) — the concept-study-v1 record, the work message catalogs, the simulation, presentation and entry split and the study guards every batch now writes to; WO-039: hard (met) — the reshaped enterprise batch whose executable-model shape this batch's four models copy, so the shapes WO-023-D016 deferred are not copied into the relations batch.
 - Verification: none recorded.
 - Final review: none recorded.
 - Release: none recorded.
 - Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes).
 - Effort: executor xhigh; verifier xhigh; reviewer xhigh.
 - Track: delivery
-- Authority: [docs/work-orders/WO-040-standards-pass-movement-second-batch.md](WO-040-standards-pass-movement-second-batch.md)
+- Authority: [docs/work-orders/WO-024-concept-studies-geb-and-team-topologies.md](WO-024-concept-studies-geb-and-team-topologies.md)
 
 ### WO-008
 
 [WO-008 — Authentication and permissions for DotLn-Angular, legitimate from the Angular side: &#96;auth&#96; with an OpenID Connect authorization-code-with-PKCE client behind a port, in-memory token handling with single-flight refresh, expiry and invalid-token paths, the auth and permission stores, route and feature permission checks from a declared adjacency list, the mocked identity provider through MSW, and the failure-case matrix in unit and e2e tests](WO-008-authentication-and-permissions.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; dependency-ready.
 - References: WO-007: hard (met) — the events, interceptors, stores and MSW wiring this order extends; merged on 2026-10-24 as DotLn-Angular #5.
@@ -150,12 +132,29 @@ None.
 - Track: delivery
 - Authority: [docs/work-orders/WO-008-authentication-and-permissions.md](WO-008-authentication-and-permissions.md)
 
+### WO-040
+
+[WO-040 — Standards pass III: the second movement batch's twenty presentations reshaped to the rule the first batch now follows, the first batch's boarded residue cleared, the shared flow builder's frame taken as a description and nineteen flow state labels reworded, with every other output unchanged](WO-040-standards-pass-movement-second-batch.md)
+
+- State: draft.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
+- Application target: unassigned.
+- Dependencies: typed; dependency-ready.
+- References: WO-034: hard (met) — the reshape rule, the shared number formatter, the description-object shape, the tightened corpus test and the production crawl this order is held to; WO-028: hard (met) — the second movement batch's twenty presentation modules this order reshapes; WO-039: hard (met) — its one executable-study loader rewrites the flow specs this order also edits, and the catalog document can say the enterprise batch follows the shape only once it has merged.
+- Verification: none recorded.
+- Final review: none recorded.
+- Release: none recorded.
+- Model: any capable model; state the model and effort actually run (07-execution-guide.md §Model-specific notes).
+- Effort: executor xhigh; verifier xhigh; reviewer xhigh.
+- Track: delivery
+- Authority: [docs/work-orders/WO-040-standards-pass-movement-second-batch.md](WO-040-standards-pass-movement-second-batch.md)
+
 ### WO-045
 
 [WO-045 — The grid family and the A* study: the pathfinding chapter made drawable by a &#96;grid&#96; family that builds a study's frames from its data in one builder over the engine's own search, the study record's version step that admits it, A* stepped across a grid, the scene inspector's link to a tool's study, and the two avoidance studies made to demonstrate the avoidance the scene now runs](WO-045-grid-family-and-a-star-study.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; blocked on WO-040.
 - References: WO-036: hard (met) — the engine's pathfinding module and tile graph the grid builder runs, the wall avoidance and head-on policy the two avoidance studies demonstrate, and the scene inspector this order extends; WO-040: hard (unmet) — it reshapes the Collision avoidance and wall studies' presentation modules and specs and edits the AI for Games study messages, files this order edits.
@@ -172,7 +171,7 @@ None.
 [WO-044 — Find the studies: every studied concept two steps from the Tools home, through a link into each work and a list of the studied concepts by work and chapter, with studied counts beside the row counts in the contents and a mark on each nearby link whose concept has a study](WO-044-find-the-studies.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; dependency-ready.
 - References: WO-019: hard (met) — the catalog as something to read: the shelf, the contents and the addressable reading this order makes findable; WO-024: reference-only (non-blocking) — it adds two works' studies, which the studied list, the home's total and the contents' counts show with no change here because they read the studies summary; the later of the two to land integrates the target's main.
@@ -189,7 +188,7 @@ None.
 [WO-035 — Every string on screen through the message system: the catalog's mined text, 3,463 rows' titles, definitions, places, provenance notes, hook clauses, untyped reasons and typed faces, registered with the translator from the loaded rows under one scope per work, the catalog's own words for works, scenes, row types, kinds and statuses, the Tools home, the shelf, the contents, the reading, the search and the scene's rail, inspector, log and saved list rendering through the translator, a missing message failing closed, and the checks that refuse the next exception](WO-035-catalog-text-through-messages.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; blocked on WO-044.
 - References: WO-028: hard (met) — the MessageCatalog route, the StudyTranslate boundary and the work-level message catalogs this order extends from the authored studies to the mined rows; WO-023: reference-only (non-blocking) — merged: it removed the tool-v0 reader from catalog-loader.ts and added the studyPoeaa scope whose titles map this order removes; WO-024: reference-only (non-blocking) — sequenced ahead: it adds the studyGeb and studyTt scopes with their titles maps and edits catalog-loader.ts's study chunks; WO-044: hard (unmet) — it lands the studied page and its StudiedFacade, which steps 5 and 10 route through the translator, and changes the Tools home, the contents and the study's nearby links.
@@ -206,7 +205,7 @@ None.
 [WO-046 — The machinery view of what DotLn core has: its mechanisms, roles, hosts and installed surfaces at a pinned core commit, read by level, followed by relation, with the gaps core's own data shows](WO-046-machinery-view-what-core-has.md)
 
 - State: draft.
-- Repository: dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f.
+- Repository: dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157.
 - Application target: unassigned.
 - Dependencies: typed; dependency-ready.
 - References: WO-013: hard (met) — the machinery route and menu group whose arriving page this order replaces; merged, and the base contains it; WO-035: reference-only (non-blocking) — sequenced ahead: it lands the registration that puts mined text through the message system, which this order uses for core's statements.

@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/features/tools/src/lib/studies/grid.ts` (`gridModel`: a
@@ -29,7 +29,8 @@ its `study-models.ts` entry, its messages in
 `libs/features/tools/testing/src/lib/study-en.json`, its row in
 `studies-summary.json`; the Collision avoidance study's comparison, spec and
 messages; the wall study's simulation, model entry, moments, comparison
-chart, spec and messages; the scene inspector's study line
+chart, spec and messages, two existing helpers re-exported from the engine
+barrel and the Corner trap study's description of the public helper; the scene inspector's study line
 (`inspector-mapper.ts`, `unit-inspector.html`, a `scene.inspector` message
 and its copy `scene-en.json`); e2e cases and the regenerated
 `scene-flocking-*.png` baselines; the documents (`catalog.md` §The record
@@ -125,7 +126,7 @@ chooses the next cell and what its heuristic buys, and that the studies show
 the avoidance the scene runs; what they decide is which pathfinding concepts
 the research track studies next, now that the grid can draw them.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** `visualFamilies` in
+**Observed gap (checked 2026-11-19 at `6eef542`):** `visualFamilies` in
 `libs/shared/models/src/lib/concept-study.ts` and the `visual.family` enum
 of `concept-study-v1.schema.json` name six families (`motion`, `timeline`,
 `marbles`, `flow`, `states`, `relations`); five have a composite under
@@ -139,17 +140,19 @@ and none is studied. Two families are fed by one builder each, `marbleModel`
 (`studies/rxjs/marbles.ts`, line 381) and `flowModel` (`studies/flow.ts`,
 line 315), so a stream or messaging study is its example as data, while each
 movement study hand-writes a presentation module. The scene inspector shows
-a tool's definition and no link to its study, though each of the sixteen
-rail tools has a study, as do Collision avoidance (`aifg-a:134`) and
-Obstacle and wall avoidance (`aifg-a:137`), which WO-036 brings to the
-rail. The Collision avoidance study's simulation calls the engine's `avoid`
+a tool's definition and no link to its study, while 18 of the 28 rail tools have studies. The two avoidance tools are
+now on the rail. The Collision avoidance study's simulation calls the engine's `avoid`
 (line 144), and `collision-avoidance.model.spec.ts` pins the exact head-on
 zero and the overlap (lines 137 to 157), the honest record of WO-028-D009's
-blind spot; WO-036 leaves `avoid` so and adds the scene's policy beside it.
+blind spot. WO-036 retained `avoid` and exported the scene's `avoidCollisions`.
 The wall study builds its own ray cast (`castWallRay`) and avoidance step in
 `obstacle-and-wall-avoidance.simulation.ts`, re-exported by its model entry,
 where `catalog-rules.md` (line 99) asks a study to call the scene engine's
-function where it has the behaviour, which it has once WO-036 lands; and
+function where it has the behaviour. At the merge, `geometry.ts` exports
+`castRay` and `steering.ts` exports `avoidWalls` inside the engine. Its
+public barrel exposes neither. The Corner trap study's first mechanism
+step still describes the absence of a public helper. Both facts matter
+when the wall study changes its import (WO-036-D013). Also,
 WO-034-D013's two gaps stand: with the delivery straight ahead the moment
 buttons run Ray first hits, Ray misses again, Smallest clearance and End of
 run, out of time order (`momentsOf` lists the miss before the smallest
@@ -234,7 +237,10 @@ its height. The two avoidance studies' presentation modules and model specs,
   the pass round the wall's end, or the difference plotted; the executor
   records which). Where the engine's function moves the study's frames, the
   study's prose and placeholders follow it, and the walkthrough reads the
-  result.
+  result. Run the same scene with the study's long and short ray settings.
+  Describe a brief clearance correction as such. A claim of sustained
+  avoidance needs corresponding separation in the two recorded traces
+  (WO-028-D036 and WO-034-D013).
 - **The inspector's study line** (`FUP-592e538095eaead9`). The scene
   inspector's definition gains "read the study", linking `/tools/catalog/<id>`
   through `buildRoute` and `ChildPaths.Reading`, for a tool the catalog
@@ -288,7 +294,7 @@ changes; the inspector's study line; the regenerated scene baselines;
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-045: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <WO-036's merge commit>
+   `git fetch origin`, `git merge-base --is-ancestor 6eef542987ab2183817baba329a64373cb61b157
    origin/main` and `git merge-base --is-ancestor <WO-040's merge commit>
    origin/main` each exit 0 (the pass after both merge sets the pin; a
    `main` without either stops for a planning pass); the target worktree
@@ -344,7 +350,12 @@ changes; the inspector's study line; the regenerated scene baselines;
    with their messages: the head-on comparison under `avoid` and under the
    scene's policy. Check: `npx nx test tools` and `npm run i18n:check` exit
    0.
-9. `studies/movement/obstacle-and-wall-avoidance.simulation.ts` and
+9. Re-export `castRay` and `avoidWalls` from
+   `libs/shared/scene-engine/src/public_api.ts`. In `studyAifg/en.json`
+   and its `study-en.json` testing copy, update
+   `corner-trap.record.mechanism.steps.step0.text` to describe the
+   Corner trap study's own ray and the now-public engine helper.
+   Use the public imports in `studies/movement/obstacle-and-wall-avoidance.simulation.ts` and
    `obstacle-and-wall-avoidance.model.ts` on the engine's ray cast and wall
    avoidance, `obstacle-and-wall-avoidance.presentation.ts`'s `momentsOf` in
    step order and its comparison chart, `obstacle-and-wall-avoidance.model.spec.ts`
@@ -452,9 +463,13 @@ once each.
    overlap, and the study's comparison renders both runs; the wall study's
    simulation imports its ray cast and wall avoidance from
    `@dotln-angular/scene-engine`, `grep -c "castWallRay"` prints 0 for its
-   simulation, model and spec, and its spec pins the straight-ahead run's
+   simulation, model and spec, and the Corner trap mechanism step accurately
+   describes its own ray and the public helper in both message copies.
+   `npm run i18n:check` and `node --test tools/i18n-copies.test.mjs` pass.
+   The wall study's spec pins the straight-ahead run's
    moment labels and steps and asserts that every input's moments are
-   listed in step order.
+   listed in step order. Its long- and short-ray traces support the effect
+   described by the caption.
 8. The scene inspector shows "read the study", linking the tool's reading,
    for a rail tool the summary lists as studied and no such line for one it
    does not (a scene spec covers both), and the e2e case follows A*'s line
@@ -484,9 +499,9 @@ once each.
 `design/`, `review.md`, `walkthrough.md` and its screenshots, and
 `docs/evidence/WO-045/host-qualification.md`.
 
-**Known issues and carry-ins:** The base is provisional, WO-039's merge;
-the pass after WO-036 and WO-040 merge sets it to the later of their merge
-commits. The `concept-study-v2` schema is this order's shared-infrastructure
+**Known issues and carry-ins:** The provisional base is WO-036's merge. WO-040 still
+blocks activation. Once it merges, use the integrated target containing
+both predecessors. The `concept-study-v2` schema is this order's shared-infrastructure
 change (WS-002 rule 7), bounded to the family enum; a research batch that
 draws a v1 family writes v1 or v2 with no other change, and one that draws
 `grid` writes v2. WO-024 also adds a family case to `study.html`, rows to

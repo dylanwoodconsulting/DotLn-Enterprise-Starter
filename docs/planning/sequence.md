@@ -6,13 +6,12 @@ Two entries between blank lines are a lane pair; the entries after the last
 pair run one at a time.
 
 <!-- dotln-work-order-sequence:start -->
-- WO-036 — Walls and ways: obstacles, walls and pathfinding in the scene
+- WO-037 — Shooting and bullets in the scene
 - WO-024 — Concept studies V: levels, loops and teams
 
-- WO-037 — Shooting and bullets in the scene
+- WO-008 — Authentication and permissions
 - WO-040 — Standards pass III: the second movement batch's code and the first batch's residue
 
-- WO-008 — Authentication and permissions
 - WO-045 — The grid family and the A* study
 
 - WO-044 — Find the studies

@@ -6,8 +6,8 @@
       "members": [
         {
           "workOrderId": "WO-003",
-          "base": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
-          "targetCommit": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
+          "base": "d1eb33163b422993cd78443cd63c002d4683593c",
+          "targetCommit": "d1eb33163b422993cd78443cd63c002d4683593c",
           "integration": "current",
           "stale": "no"
         },
@@ -20,8 +20,8 @@
         },
         {
           "workOrderId": "WO-011",
-          "base": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
-          "targetCommit": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
+          "base": "d1eb33163b422993cd78443cd63c002d4683593c",
+          "targetCommit": "d1eb33163b422993cd78443cd63c002d4683593c",
           "integration": "current",
           "stale": "no"
         },
@@ -34,8 +34,8 @@
         },
         {
           "workOrderId": "WO-012",
-          "base": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
-          "targetCommit": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
+          "base": "d1eb33163b422993cd78443cd63c002d4683593c",
+          "targetCommit": "d1eb33163b422993cd78443cd63c002d4683593c",
           "integration": "current",
           "stale": "no"
         },
@@ -90,10 +90,10 @@
         },
         {
           "workOrderId": "WO-008",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-017",
@@ -111,8 +111,8 @@
         },
         {
           "workOrderId": "WO-025",
-          "base": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
-          "targetCommit": "20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4",
+          "base": "d1eb33163b422993cd78443cd63c002d4683593c",
+          "targetCommit": "d1eb33163b422993cd78443cd63c002d4683593c",
           "integration": "current",
           "stale": "no"
         },
@@ -153,10 +153,10 @@
         },
         {
           "workOrderId": "WO-024",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-027",
@@ -174,10 +174,10 @@
         },
         {
           "workOrderId": "WO-035",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-036",
@@ -188,10 +188,10 @@
         },
         {
           "workOrderId": "WO-037",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-039",
@@ -202,17 +202,17 @@
         },
         {
           "workOrderId": "WO-040",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-045",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-043",
@@ -223,17 +223,17 @@
         },
         {
           "workOrderId": "WO-044",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         },
         {
           "workOrderId": "WO-046",
-          "base": "eb9d227483e30164105da077f50673789d1e5c9f",
+          "base": "6eef542987ab2183817baba329a64373cb61b157",
           "targetCommit": "6eef542987ab2183817baba329a64373cb61b157",
-          "integration": "behind",
-          "stale": "yes"
+          "integration": "current",
+          "stale": "no"
         }
       ]
     },

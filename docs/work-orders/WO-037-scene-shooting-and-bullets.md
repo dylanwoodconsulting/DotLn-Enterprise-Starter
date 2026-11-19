@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds to `libs/shared/scene-engine` the modules `projectiles.ts`
@@ -42,12 +42,11 @@ the trial compare's accuracy series; `range-known-outcome.json` listed in
 e2e cases, the scene's regenerated visual baselines and the documents
 (`scene.md`, `scene-rules.md`, the profile's implementation map); about 45
 source files; adds no runtime dependency and no tool script. Removes
-nothing. The rail grows by five tools, to thirty-three if WO-036 lands as
-filed. Wall-clock: estimated at about 6 h 0 min to 9 h 0 min of executor
+nothing. The rail grows by five tools, from twenty-eight at the base to thirty-three. Wall-clock: estimated at about 6 h 0 min to 9 h 0 min of executor
 work plus the design rounds and the fixed cycle, an estimate and not a
-measure; unknown until run. Context bytes: the engine after WO-036 (68 KB
-of source at `eb9d227`, more after WO-036; unknown until it merges), the
-scene feature (134 KB of source at `eb9d227`), `scene.md`, `scene-rules.md`,
+measure; unknown until run. Context bytes: 131,976 bytes of engine TypeScript and
+173,319 bytes of scene TypeScript, templates and Sass at `6eef542`
+(excluding specs and stories), `scene.md`, `scene-rules.md`,
 the catalog's Chapter 3 §3.5 rows and WO-028's Projectile trajectory, The
 firing solution and Iterative targeting studies, WS-001 rules 9, 24, 25, 28
 and 29, this order; about 450 KB for the executor, an estimate. Commands
@@ -124,9 +123,9 @@ diverge. What the operator learns is what it takes to hit a moving thing
 and what a wall does to a line of fire; what they decide is whether the
 scene's next toy is cover, or ammunition, or sides.
 
-**Observed gap (dated 2026-11-09 at `eb9d227`):** the engine has no
+**Observed gap (checked 2026-11-19 at `6eef542`):** the engine has no
 projectile and no aim: `SimulationState` holds units, formations and an
-objective (WO-036 adds geometry); the catalog's §3.5 rows (Aiming and
+objective and field geometry; the catalog's §3.5 rows (Aiming and
 shooting, The firing solution, Iterative targeting, Moving targets,
 Projectile trajectory) are untyped, so the rail does not offer them,
 although WO-028 studied three of them with executable models that the
@@ -142,8 +141,9 @@ keeps neither the pattern, the spacing nor the slot costs it was formed
 with, so nothing can lay it out again. A step's parameters are numbers
 (`isNumberRecord` in `stored-scene.ts`), so a target unit cannot ride in a
 step as its id. `hashFrame` hashes the units' positions and velocities
-alone. `isSafeStep` bounds every parameter it is given but has no least
-value above zero for a parameter the engine would divide by here.
+alone. `isSafeStep` consults `leastValueOf` for positive minima, including
+`look-ahead`. The stored trial reader already fills a missing metric with
+a null series of the length of its branch.
 
 **Design:**
 
@@ -274,8 +274,8 @@ and its screenshots; the documents.
 **Execution plan:**
 
 1. Base guard read with WO-014-D001, for WO-037: in the target clone, after
-   `git fetch origin`, `git merge-base --is-ancestor <WO-036's merge commit>
-   origin/main` exits 0 (the pass after WO-036 merges sets the pin; a `main`
+   `git fetch origin`, `git merge-base --is-ancestor 6eef542987ab2183817baba329a64373cb61b157
+   origin/main` exits 0 (a `main`
    that does not contain it stops for a planning pass); the target worktree
    then fast-forwards to the target's `main`, and that integrated commit is
    the baseline of every later comparison until a later integration of
@@ -324,7 +324,12 @@ and its screenshots; the documents.
    rail as the catalog now gives it.
 10. The inspector's fire views and target chooser, the painter's bullet,
     spark, wall-mark and down layers (candidate A), the text layer's rows
-    and counts, the trial's accuracy series. Check: `npx nx test scene`,
+    and counts, the trial's accuracy series. In `scene.facade.ts` keep the
+    route display independent of whether a tool is armed. With a path tool
+    selected, the inspector and Show search read the selected units' routes
+    once the recorded path step has replayed. Before that step, the paused
+    preview continues to describe what Apply would do. Keep Restart's
+    selection, parameter editing and formation-slot behavior. Check: `npx nx test scene`,
     `npm run lint:components` and `npm run i18n:check` exit 0.
 11. The first rendered pair (A spark and counts, B the hit ring) at about
     2080 by 1460 and 360, read at 3840 by 1620; the rounds, or their
@@ -429,7 +434,11 @@ once each.
    tick; a stored value and an export whose kept trial predates the four
    metrics restore and import with them as `null` series; and
    `npm run check:fixtures` passes with `range-known-outcome.json` among the
-   files `check-scene-fixtures.mjs` validates.
+   files `check-scene-fixtures.mjs` validates. A scene test restarts a
+   composition with a recorded path step and a selected unit. Before the
+   step, its paused inspector can preview the route. After the step, the
+   playing inspector shows the unit's route and Show search displays that
+   route's search. The test covers WO-036-D030.
 6. `npx nx e2e dotln-e2e` exits 0 with the step 14 cases, axe at the board
    spec's threshold and no horizontal overflow at 360, 768, 1440, about
    2080 by 1460 and 3840 by 1620; `npx nx e2e-visual dotln-e2e` exits 0, and
@@ -457,13 +466,10 @@ once each.
 `design/`, `walkthrough.md` and its screenshots, and
 `docs/evidence/WO-037/host-qualification.md`.
 
-**Known issues and carry-ins:** The base is provisional, WO-039's merge;
-the pass after WO-036 merges sets it to WO-036's merge commit. This order is
-the road entry of its lane pair, beside a Tools-side order; the one file it
-edits under `libs/features/tools` is `reading-mapper.ts` (with the
-`tools-en.json` copy), which the enum's growth forces, and if the order
-beside it edits the same mapper the second publisher integrates the
-target's `main`. The inspector's link to the three studies is WO-045's.
+**Known issues and carry-ins:** WO-036 merged in DotLn-Angular #19. The
+pinned target contains its geometry, routes and inspector. WO-024 can run
+beside this order. Integrate both orders' English catalog changes and the
+Tools testing copy before the second publish. The inspector's link to the three studies is WO-045's.
 Sides, cover, ammunition and a lobbed arc are later toys the operator picks
 after playing. The scene's known outcome is regenerated here with its
 reason in the pull request. This order activates only on a launchpad whose

@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/auth` with its kit and, in its `testing` entry,
@@ -49,10 +49,9 @@ packages. Amended by the 2026-10-18 main-rules planning pass
 the repairs of receipt 001's known issues.
 **Depends on:** WO-007 merged (hard: the event tiers, interceptors, stores and
 MSW this order extends; merged on 2026-10-24 as DotLn-Angular #5, `2ab4f28`,
-released as `DotLn Angular v0.2.0`). No other order is required: this order
-follows the two scene orders in the sequence, in the first lane beside
-WO-045, whose surface (`libs/features/tools`, the study catalogs and the
-scene inspector's link to a study) this order does not touch. Amended by the 2026-10-21
+released as `DotLn Angular v0.2.0`). WO-008 follows WO-037 and can run alongside WO-040. The two orders share
+the integrated workspace for their checks. WO-040 works on study presentation
+and messages while WO-008 owns the authentication feature. Amended by the 2026-10-21
 UI planning pass ([planning document](../planning/passes/ui-planning-2026-10-21.md)
 §6 D1 and D4): the release header, the node-spelled draft publish and the
 board's path enum. Amended by the 2026-10-23 standard pass

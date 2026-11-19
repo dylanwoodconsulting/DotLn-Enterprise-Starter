@@ -5,7 +5,7 @@
 **Effort:** executor xhigh; verifier xhigh; reviewer xhigh.
 **Track:** delivery
 **Release classification:** none; a target order records no launchpad release.
-**Repository:** dotln-angular @ eb9d227483e30164105da077f50673789d1e5c9f
+**Repository:** dotln-angular @ 6eef542987ab2183817baba329a64373cb61b157
 **Target release classification:** minor
 **Target release notes:** reviewed
 **Cost:** adds `libs/features/machinery-data-access`, `core-snapshot.ts` in
@@ -14,8 +14,8 @@
 row, `apps/dotln-e2e/src/machinery.spec.ts` and two documents; no runtime
 dependency; removes the arriving page, its story and its deep-link test;
 regenerates the `machinery-*.png` baselines. The miner's inputs sum to
-1,098,407 bytes at the pin (every path the Observed gap names, by `git
-ls-tree -r -l`). Source files, wall-clock, context bytes and
+1,109,768 bytes across 44 files at the pin (the pass records the
+`git ls-tree` inputs, including one copy of the seven role skills). Source files, wall-clock, context bytes and
 tokens: unknown until run. Commands added: none. Steps: 16. Re-mints: none.
 Refutations paid: the 2026-11-09 and 2026-11-14 passes' receipts.
 **Nomination provenance:** the operator's direction to the 2026-11-09 pass
@@ -30,6 +30,7 @@ D12). Opaque identifier, not a priority. Amended by the 2026-11-14 pass
 D7): the pin moved from core's v0.122.1 to its v1.0.0, and every fact the
 Observed gap, the Design and the criteria state about core was read again
 there; the reading rule and criterion 4's named capacities are unchanged.
+The [v1.4.0 planning pass](../planning/passes/standard-pass-v1-4-0-2026-11-19.md#the-machinery-view) records the current input inventory and capacity checks.
 **Depends on:** WO-013 merged (hard: the `/machinery` route and the
 Machinery menu group; DotLn-Angular #6, in the base). WO-035
 (reference-only, sequenced ahead: it lands the registration that puts mined
@@ -58,7 +59,7 @@ statements).
 (§Run the app and its checks); the target's
 `libs/shared/catalog/src/lib/catalog-loader.ts`, `eslint.config.mjs`,
 `docs/dotln/evidence/WO-026/decisions.md` (D012); core
-(`DylanBWood/DotLn`) at `ed66a822c1690ee96f1db4cde0af6320fe83388e`, the
+(`DylanBWood/DotLn`) at `bc761ad9ce1008c72c647e9b0de63b09117ba822`, the
 paths the Observed gap names.
 
 **Objective:** (the operator's session, WS-001 rule 24) the operator opens
@@ -73,31 +74,29 @@ three lists: enforced on one host and text-only on another, enforced on no
 host, and core's residue with its reasons. They learn what core has and
 where it is thin, and decide what to improve in core. No label-value list.
 
-**Observed gap (dated 2026-11-14 at `eb9d227`):** `/machinery` renders
+**Observed gap (checked 2026-11-19 at `6eef542`):** `/machinery` renders
 WO-013's arriving page; the target holds no copy of core's harness data. Core
-at `ed66a822c1690ee96f1db4cde0af6320fe83388e` (tag `v1.0.0`, core's `main`
-on 2026-11-14), read by the 2026-11-14 pass with `git show`, publishes:
-`.claude/harness-manifest.json` (SHA-256 `b4ecf588f585ef288ace9ef2fdbbfdfadc343e25eedb1b4f9526d29195485813`)
+at `bc761ad9ce1008c72c647e9b0de63b09117ba822` (tag `v1.4.0`), read
+at the release commit, publishes:
+`.claude/harness-manifest.json` (SHA-256 `ae59ca211f37c8d5163949fbb50f14c6fc5f22f41b5067db47dd4a9f92173e6a`)
 with `profiles` (per host `profile.profileId`, `harness`, `observedVersion`,
 `events` with `available` and `evidence`, `loadout`, `grants`,
 `outsideWriteGrants` per role, `files`), `installed` (36 surfaces: `path`,
 `rung`, `origin.ids`) and `residue` (ten items: `originId`, `reason`,
 `missingCapabilities`); `.claude/settings.json` and `.codex/hooks.json`,
-which register hook files on host events; each hook's `runHarnessHook`
-configuration, JSON with `event`, `kind` and, for feedback hooks,
+which register hook files on host events; the hooks that call `runHarnessHook`, whose JSON configuration carries `event`, `kind` and, for feedback hooks,
 `policy.mechanisms` (`unitId`, `handler`, `kind`, `rung`, `enforcement`);
 seven role skills with a `description`, an Origin stamp of ids, an `id:
 statement` line per feedback unit and supports as `Name: statement` lines;
 agent definitions in `.claude/agents/` (five at the pin, the four lifecycle
 roles and `dotln-worker`) and, at the commits that have it, `.codex/agents/`
 (the pin has none); `CLAUDE.md`'s
-`dotln-harness` block (the refusals and a residue line per host);
+`dotln-harness` block (core's configured stop levels and its residue lines per host);
 `packages/skeleton/src/loadouts/*.ts`, the only place pairing a support's
 name with its id and declaring kinds (`promptSupport`, `supportFacetId`,
 `activeMechanicId`); `packages/*/package.json` versions. Claude Code 2.1.263
 and Copilot CLI 1.0.86 report `PreToolUse`, `PostToolUse`, `Stop` and
-`UserPromptSubmit` available; Codex CLI 0.153.4 none. The 2026-11-09 pass's
-probe of the Design's rule, run again at this pin with the same result, found
+`UserPromptSubmit` available; Codex CLI 0.153.4 none. Applying the Design's rule to the v1.4.0 hook configurations gives
 four mechanisms enforced (`contributor.permissions`
 among them) and three advised on Claude and Copilot, all text-only on Codex,
 and the router served by neither the permission, writer, attribution nor
@@ -244,7 +243,7 @@ target gate plain and review once each.
    directory as empty, prints no value on failure,
    and that `--check` refuses a dangling id.
 3. `node tools/scripts/core-snapshot.mjs --core <path> --commit
-   ed66a822c1690ee96f1db4cde0af6320fe83388e --tag v1.0.0 --out <scratch>`
+   bc761ad9ce1008c72c647e9b0de63b09117ba822 --tag v1.4.0 --out <scratch>`
    prints PASS and `cmp` exits 0 against the committed snapshot, run from the
    clone beside the launchpad or a fresh GitHub clone; where neither is
    reachable the verifier records it untested with the reason and judges
