@@ -11,8 +11,8 @@
 **Cost:** adds to `libs/shared/scene-engine` the modules `projectiles.ts`
 (bullets as entities: owner, position, velocity, range left, radius, drag;
 their advance, their hit test against units and geometry) and `aiming.ts`
-(the closed-form intercept of a moving target for a straight bullet, the
-iterative solution under drag) and their specs, extends `types.ts`
+(single-cue and repeated-cue aim from a moving piece's board animation)
+and their specs, extends `types.ts`
 (`BulletState`, `hits` and the `down` activity on a unit state,
 `SimulationState.bullets`, the frame's bullets), `formation.ts`
 (`FormationState` keeps the pattern, spacing and slot costs it was formed
@@ -115,7 +115,7 @@ hits and accuracy, and the target's row in the text layer counts its hits;
 they set the target moving with Arrive and an objective and watch the
 shots fall behind it; they give the shooters The firing solution and the
 bullets lead the target and hit; they turn drag up in the inspector and the
-closed-form lead misses again, then give them Iterative targeting and the
+single-cue shot misses again, then give them Iterative targeting and the
 hits return; they draw a wall between shooters and target and every bullet
 ends on the wall with a mark; they set knockout to three hits, and the
 target goes down after the third, its squad closing up round the gap it
@@ -171,25 +171,17 @@ a null series of the length of its branch.
   never knocked out); `isSafeStep` gains least values above zero for `rate`
   and `bullet-speed`. A unit fires along its aim while the step is active
   and the target is within range.
-- **Aim.** `combat.aim` chooses the lead: The firing solution
-  (`aifg-a:163`) and Moving targets (`aifg-a:167`) give the closed-form
-  intercept of a target moving at its current velocity for a straight
-  bullet at `bullet-speed`, the quadratic the catalog's study walks
-  through; Iterative targeting (`aifg-a:166`) refines the aim by simulating
-  the bullet under drag for `iterations`; with no aim tool a unit fires at
-  the target's current position. Projectile trajectory (`aifg-a:162`,
-  `combat.projectile`) sets `bullet-speed` and `drag`. Both aims are new
-  mechanisms of the engine's `aiming.ts`, written there because the scene
-  engine is `type:util` and imports nothing from a feature (WS-001 rule 15,
-  the module-boundary lint) and because the three WO-028 studies hold
-  different mechanisms: `solveFiringSolution` gives the low and high gravity
-  arcs to a fixed point, `searchTarget` bisects a launch angle under
-  gravity, and neither takes a target velocity, so they are not the
-  straight-bullet intercept or the drag-aware lead the scene needs. The
-  studies keep their mechanisms and records unchanged, and nothing is
-  claimed to be shared that is not. Each of the three has a study, so the
-  inspector's study line WO-045 adds links it where WO-045 has landed; this
-  order adds no link of its own.
+- **Aim.** The firing solution (`aifg-a:163`) and Moving targets
+  (`aifg-a:167`) choose a single pose from the marked piece's board
+  animation. Drag stretches the shot animation. Iterative targeting
+  (`aifg-a:166`) can read later cues, up to its `iterations` setting,
+  so its streak can meet the later pose. With no aim tool, a streak heads
+  for the piece's current position. Projectile trajectory (`aifg-a:162`,
+  `combat.projectile`) sets `bullet-speed` and `drag`. The engine's
+  `aiming.ts` owns the two arcade modes and the clock identifies each
+  cue on replay. The three WO-028 studies keep their own mechanisms and
+  the inspector's study links remain WO-045's. The executor recorded the
+  operator's substitution in [WO-037-D002](../evidence/WO-037/decisions.md#wo-037-d002).
 - **Hits, knockout and the formation re-forming.** A hit increments the
   unit's `hits`; at `knockout-hits` the unit's activity becomes `down`: it
   stops, is not steered, no bullet hits it again, it is drawn dim and listed
@@ -223,7 +215,7 @@ a null series of the length of its branch.
   `reading-mapper.ts` and `scene-labels.ts` labelling the three kinds
   through messages; the rail group `fight`; the inspector's fire view names
   the target (unit or objective), shows the preview rows (time to target,
-  lead angle, range after drag) and the knockout setting. Every new string
+  animation cue, range after drag) and the knockout setting. Every new string
   on screen is a message (rule 9).
 - **Design brief and the first pair** (WS-001 rule 25, at the operator's
   sizes, rule 29): A: a hit is a spark on the field and a count in the
@@ -286,11 +278,9 @@ and its screenshots; the documents.
    drag, range, the hit tests against units and geometry, the frame's
    bullets. Check: `npx nx test scene-engine` exits 0 with a spec that ends
    a bullet on a wall, in an obstacle and on a unit.
-3. `aiming.ts`: the closed-form intercept of a target at constant velocity
-   for a straight bullet and the iterative lead under drag, as engine
-   functions with no import outside the engine. Check: a spec hits a crossing
-   target with the closed form at drag 0 and misses it at drag 0.3, where
-   the iterative solution hits.
+3. Implement the two animation-cue modes in `aiming.ts`, with imports inside
+   the engine. Check that a single cue meets a crossing piece at drag 0
+   and misses it at drag 0.3, where reading later cues restores the hit.
 4. `formation.ts`: `FormationState` keeping its pattern, spacing and slot
    costs (set by `applyTwoLevel` and `applyFixed` in `interpreter.ts`), and
    the re-forming of a formation that loses a member to a knockout. Check:
@@ -392,7 +382,7 @@ once each.
 
 1. **Use (WS-001 rule 24).** The verifier performs the Objective's session
    in the served production build: fire at a standing unit, set it moving,
-   lead it with the closed form, raise drag and watch the miss, lead it
+   lead it with the single cue, raise drag and watch the miss, lead it
    with Iterative targeting, draw a wall between them, set knockout to
    three and watch the target go down and its squad close up, run the
    trial of the two aims. The VER report carries a `## Walkthrough` section
@@ -410,7 +400,7 @@ once each.
    frame, that in branch B no bullet reaches the target and every bullet
    ends on the wall, and that the frame hashes, bullets included, reproduce
    across two runs; `aiming.spec.ts` and a simulation spec assert that a
-   crossing target is hit by the closed form at drag 0 and missed by it at
+   crossing target is hit by the single cue at drag 0 and missed by it at
    drag 0.3 where the iterative aim hits; and the `hashes` of
    `trial-known-outcome.json` and `walls-known-outcome.json` equal their
    respective arrays at the latest integrated `main`.
@@ -436,7 +426,7 @@ once each.
    outside the engine (`grep -cE "@dotln-angular/|libs/features"
    libs/shared/scene-engine/src/lib/aiming.ts` prints 0), `npx nx lint
    scene-engine` passes the module-boundary rule, and `aiming.spec.ts`
-   asserts the intercept and the drag-aware lead on a crossing target.
+   asserts which recorded pose each aim reads on a crossing target.
 5. A composition exported with a fire step imports and replays it at its
    tick; a stored value and an export whose kept trial predates the four
    metrics restore and import with them as `null` series; and
@@ -499,7 +489,7 @@ height; cover and line of sight beyond the wall stop; a study of its own
 Babylon.js (candidate C2).
 
 **Operator-review assumptions:** the operator accepts straight bullets with
-drag as the scene's projectiles, the closed-form and iterative aims as the
+drag as the scene's projectiles, the single-cue and repeated-cue aims as the
 two tools, knockout as a parameter that defaults off and a squad that
 closes up round a downed member, judges the first pair and ends or delays
 the rounds in their own words, and reads the one draft pull request before

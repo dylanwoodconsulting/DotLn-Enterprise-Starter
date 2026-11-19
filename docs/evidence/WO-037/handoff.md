@@ -1,0 +1,41 @@
+# WO-037 executor handoff
+
+The production scene offers five tools in Fight. Three pieces can mark a runner, replay an authored cue, leave a contact mark on a wall, and compare their accuracy against a second run of the same seed. The session kept a headed Playwright browser on the application during implementation and validation. Its three saved compositions include the wall appearing mid-volley, the fixed squad's succession and the two-take trial. [Walkthrough](walkthrough.md) · [Design comparison](design/comparisons.md) · [Decisions](decisions.md)
+
+## Acceptance
+
+**Criterion 1:** unmet, later-phase. The verifier's own dated Walkthrough and VER verdict are due at independent verification. The executor completed each interaction in the optimized app and supplied 45 screenshots across the five required viewports. The wall stopped the volley, the runner took 0, 11, 0 and 8 hits in the four crossings, and the leader's third hit left two assigned survivors. [Executor walkthrough](walkthrough.md)
+
+**Criterion 2:** met. Regenerating and formatting all three known-outcome fixtures reproduced each candidate file byte for byte. The new fixture accounted for nine unit contacts in the open branch and nine wall contacts in the walled branch. It first diverges at frame 21. Both hash arrays in each older fixture match the integrated base. The crossing tests cover the precise board pose chosen on each beat and the different outcomes at drag 0 and 0.3. [Replay evidence](README.md#determinism)
+
+**Criterion 3:** met. Engine tests cover a zero threshold, the third contact, zero velocity thereafter, restart, original slot costs, settled two-level slot error, fixed leader promotion and manual detachments. The stock-board walkthrough shows 09, 10 and 14 before the third hit and 10 and 14 afterward. [Walkthrough](walkthrough.md)
+
+**Criterion 4:** met. The five typed rows bring the rail to 33. The facade checks the exact eligible catalog IDs, all defaults and parameters. Both catalog checks, the catalog tests and scene-engine lint passed. The aim source has zero feature or package-alias imports. [Catalog and fixture decision](decisions.md#wo-037-d003)
+
+**Criterion 5:** met. A stored or imported earlier trial receives four null metric series. The fire step survives export, import and replay at its recorded tick. The route regression holds the recorded 111-cell search through playback and pause, then displays the pending 1,220-cell search in both places even after clicking the same glyph. The unit keeps following the recorded route and the step count stays at two. The fixture checker includes range. [Route decision](decisions.md#wo-037-d005)
+
+**Criterion 6:** met. The complete Playwright run passed 186 behavioral cases. The visual run passed 53 cases on macOS Chromium. The browser tests cover glyph and keyboard targeting, the four crossing outcomes, a kept trial, knockout and restart, axe and overflow at all five widths. The evidence inventory names the six regenerated scene baselines and the three new ones. [Baseline inventory](README.md#visual-baselines)
+
+**Criterion 7:** met. The i18n inventory and all three translation-copy tests passed. A browser test supplied alternative messages for the board and the catalog. Each screen rendered its own substituted labels. [Message ownership](decisions.md#wo-037-d008)
+
+**Criterion 8:** met. All six A/B images show frame 57 and two hits toward a threshold of three. The executor retained A, the spark and count treatment, under the operator’s direction to keep the show running without waiting. The operator’s visual preference remains open in FUP-39cae0adf6da4ee2. The temporary hit-ring candidate and its frame wiring were removed. [Comparison](design/comparisons.md) · [Decision](decisions.md#wo-037-d004)
+
+**Criterion 9:** met. The production build and bundle check passed. The optimized entry totaled 406.92 kB with an estimated transfer of 114.69 kB. Runtime dependency keys match integrated main at `6eef542987ab2183817baba329a64373cb61b157`.
+
+**Criterion 10:** met. Before either target gate, every declared product preflight command passed, and the launchpad document preflight passed all 15 tasks. The plain gate passed install, lint, typecheck, test and format in 488.22 seconds. The review gate passed all five plus build, behavioral E2E and visual E2E in 383.41 seconds. Both recorded the same target HEAD and preserved its tracked and untracked candidate bytes. The full behavioral and visual preflight executions took 4.3 and 1.9 minutes respectively. [Host](host-qualification.md)
+
+## Review and qualification
+
+self-review: found 13; fixed 11; recorded 2; rounds 3; unreviewed 37 lines (19 additions and 18 deletions in the target after the last review, covering message ownership, the steering deadlines and two waits for drawing readiness)
+
+The first round produced separate criteria, design and consistency reports. It found ten issues. Nine were fixed, including succession after a leader’s manual detachment and an unarmed route preview after reselecting the same glyph. The recorded item qualified the operator’s pending A/B preference. All three reviewers rechecked the full change in round two. Two new design findings affected translated vocabulary and the tempo hint at 59.68. The executor reproduced and fixed both. In round three a fresh combined reviewer checked the twelve-file delta at `69539994eb9371653a6bd5b3325d26cb31d58159`. It recorded one observation about possible future catalog words. Every currently authored word has a translation. The seven reports were filed through the work order’s review recorder. [Round one](decisions.md#wo-037-d007) · [Round two](decisions.md#wo-037-d008) · [Round three](decisions.md#wo-037-d009)
+
+After round three the workspace audit identified punctuation and a composite target label. The engine and browser runs also identified three long-running steering test groups and two waits for an asynchronously loaded study drawing. The 37-line delta above includes these repairs. All original simulation frame limits, label geometry checks and screenshot comparisons remain in force. The separate Tools test target passed 1,327 cases, and the Scene target passed 198. The product preflight covered 20 projects, with all 39 lint, test and build tasks succeeding. [Preflight repairs](decisions.md#wo-037-d010)
+
+Both registered worktrees used `wo-037`. Target HEAD, local main and fetched origin/main matched `6eef542987ab2183817baba329a64373cb61b157` before the selected runs. The candidate Git tree before and after both runs was `27e2390c6eb19f8e988e54d6545a4a0bb563ce9e`. The work order classifies the target change as minor and calls for reviewed release notes. Local release preparation assigned no launchpad version. Publication belongs to the later release workflow.
+
+The authored walkthrough, its nine frames at five widths, the six A/B images, the two target reference pages, the fixture output and the release and work-order records were checked. The branch term check listed zero refuse lines and zero context lines to read. The available browser evidence matches the intended board-animated mechanics. The independent verifier still owes the dated walkthrough and its own assessment of how the game reads and feels. [Executor evidence](README.md) · [Host qualification](host-qualification.md)
+
+The session reported Codex CLI 0.170.0, gpt-6.2-astra and selected effort max. The completion attestation uses `codex-session-readback`. The lifecycle command identified these as supplied values and reported that its discovery record lacked a matching observation. The four fresh review workers and three rechecks used the configured worker model gpt-6.2-sol at max effort. Their effective model and effort were unavailable. The harness observed zero worker launches through its own channel. The seven submitted review reports establish the separate session count.
+
+The usage reading from `node scripts/harness.mjs usage` covered this dispatch through 04:23:05 UTC on 19 November 2026, from `codex-transcript-counter`. At that cutoff the harness reported three hours and one minute of an eight-hour bound. Its launchpad complete-run count was zero. The two target runs have their own passing records. The dollar cost was unavailable.

@@ -8448,6 +8448,73 @@
           "at": "2026-11-19T00:18:24.893Z"
         }
       ]
+    },
+    {
+      "id": "FUP-39cae0adf6da4ee2",
+      "key": "decision:docs/evidence/WO-037/decisions.md#wo-037-d004",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "715ca1e106473a035208a5c18195c8eb44e724ce33c0f99af186145af3f4c359",
+          "ref": "docs/evidence/WO-037/decisions.md#wo-037-d004",
+          "title": "WO-037-D004: Resume WO-037's hit-marker design rounds with the operator, starting with the saved A and B pair. The operator picks or requests another change and decides when the rounds end.",
+          "summary": "{ \"id\": \"WO-037-D004\", \"date\": \"2026-11-19\", \"dispatch\": \"resume: next\", \"decision\": \"Record round one without an operator pick and ship A, which combines a short contact spark with the recipient's count. The operator requested an unattended live presentation. Carry their visual choice to the next round.\", \"evidence\": [ \"The operator's direction to continue without waiting for their input is recorded in ignored intake notes/wo037-live-presentation.md, SHA-256 b073cfb3d1a2d4b7e3f38ce843aeffb35ef5e035e80e37686e11512539094c2d. The deferral is the executor's application of that direction.\", \"design/comparisons.md links A followed by B at 2080, 360 and 3840 pixels. The screenshots use identical i",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-77ba3fe3d5a6fc0f",
+      "key": "decision:docs/evidence/WO-037/decisions.md#wo-037-d011",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "32cb5585f4463d19a52c53f7bf3b396074198560b1db6134d4ecb476d3033c8b",
+          "ref": "docs/evidence/WO-037/decisions.md#wo-037-d011",
+          "title": "WO-037-D011: Make the soldier scene's Down units instrument agree with the field while shooters are selected. Rule: with pieces in focus, the reading counts the pieces their shots have retired, or it…",
+          "summary": "{ \"id\": \"WO-037-D011\", \"date\": \"2026-11-19\", \"dispatch\": \"resume: verify\", \"decision\": \"Board, and do not fix in verification, what the Down units instrument reads while the shooters are selected. Every instrument reads the selected units, so a target the selection has knocked out is never counted and the figure stays at zero beside a field and a text layer that show it down.\", \"evidence\": [ \"In the production build, with units 03, 08 and 13 selected, Down units read 0 on frame 574 while unit 09's row read down with three hits, and 0 on frame 2450 while five rows read down. With nothing selected the same state reads 1.\", \"The engine gives the same answer: with unit 09 down, measure over the ",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-3f5051167d23c0bb",
+      "key": "decision:docs/evidence/WO-037/decisions.md#wo-037-d012",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "9ff701332213acd4403e9c4fab74550ff503abe098921fa7bf967550f06d507f",
+          "ref": "docs/evidence/WO-037/decisions.md#wo-037-d012",
+          "title": "WO-037-D012: Decide what a knockout setting counts in the soldier scene. Rule: either a piece's hits toward a knockout start when the setting reaches the shooter, or the inspector states that hits…",
+          "summary": "{ \"id\": \"WO-037-D012\", \"date\": \"2026-11-19\", \"dispatch\": \"resume: verify\", \"decision\": \"Board, and do not fix in verification, that Hits to knock out compares against every hit a piece has taken since the run began. In a session that has already been firing, the setting retires the target and any bystander already past the count on the first later shot to reach each of them.\", \"evidence\": [ \"In one continuous production session units 04, 09, 10, 14 and 15 held 19, 82, 7, 11 and 8 hits when the shooters' knockout was set to three on frame 2121. All five were down by frame 2450, four of them bystanders in the line of fire, leaving one of the six-piece squad standing.\", \"From a fresh compositio",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-7c72e1e00b37587e",
+      "key": "decision:docs/evidence/WO-037/decisions.md#wo-037-d013",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "f6609392c986e0425565bf7b85c9648077e0e9b96fe1590cf239626acc195ee3",
+          "ref": "docs/evidence/WO-037/decisions.md#wo-037-d013",
+          "title": "WO-037-D013: Open the soldier scene's Aiming and shooting view on what the selected pieces are doing. Rule: for pieces that already have a mark, Fire at and the launcher settings show their current…",
+          "summary": "{ \"id\": \"WO-037-D013\", \"date\": \"2026-11-19\", \"dispatch\": \"resume: verify\", \"decision\": \"Board, and do not fix in verification, that Aiming and shooting opens on its defaults when another tool was the last one applied to the same pieces. Its view then names the objective point and the default rate while the pieces fire at a unit, and Apply records a fire step without that unit.\", \"evidence\": [ \"In the production build three pieces fired at unit 09 at three shots a second and were then given The firing solution. Opening Aiming and shooting on them again showed Objective point, two shots a second and the preview line asking for a target.\", \"Moving only Hits to knock out to three and pressing Ap",
+          "missing": false
+        },
+        {
+          "hash": "adc1659b34f315f932a4640b6d6339951bb12f75652a8e0882963aa26db2e104",
+          "ref": "docs/evidence/WO-037/decisions.md#wo-037-d013",
+          "title": "WO-037-D013: Open the soldier scene's Aiming and shooting view on what the selected pieces are doing. Rule: for pieces that already have a mark, Fire at and the launcher settings show their current…",
+          "summary": "{ \"id\": \"WO-037-D013\", \"date\": \"2026-11-19\", \"dispatch\": \"resume: verify\", \"decision\": \"Board, and do not fix in verification, that Aiming and shooting opens on its defaults when another tool was the last one applied to the same pieces. Its view then names the objective point and the default rate while the pieces fire at a unit, and Apply records a fire step without that unit.\", \"evidence\": [ \"In the production build three pieces fired at unit 09 at three shots a second and were then given The firing solution. Opening Aiming and shooting on them again showed Objective point, two shots a second and the preview line asking for a target.\", \"Moving only Hits to knock out to three and pressing Ap",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

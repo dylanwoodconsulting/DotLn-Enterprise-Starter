@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-037",
+  "repository": "DylanBWood/DotLn-Angular",
+  "number": 20,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/20",
+  "baseBranch": "main",
+  "headBranch": "feat/scene-shooting",
+  "draft": {
+    "publication": "draft",
+    "publisher": {
+      "command": "node scripts/worktree.mjs publish WO-037 --target-worktree --draft --branch feat/scene-shooting --title \"feat: add shooting and bullets to the soldier scene\" --body-file docs/evidence/WO-037/DRAFT-PR.md",
+      "session": "the verifying Claude Code session, after verification-result pass (VerificationCompleted for VER-001 at 2026-11-19T06:25:48.613Z)",
+      "source": "docs/evidence/WO-037/host-qualification.md, where the verifying session recorded the invocation and the host's decision; the final review read the pull request back from the forge (gh pr view, one GraphQL query for reviews, comments, review threads and title events, gh run list and gh run view)"
+    },
+    "headSha": "58e4e9b55772cf833c919efd427260c3da030b7e",
+    "parent": "6eef542987ab2183817baba329a64373cb61b157",
+    "tree": "27e2390c6eb19f8e988e54d6545a4a0bb563ce9e",
+    "titleAsPublished": "feat: add shooting and bullets to the soldier scene",
+    "body": "docs/evidence/WO-037/DRAFT-PR.md",
+    "verification": {
+      "id": "VER-001",
+      "path": "docs/verifications/WO-037/VER-001.md",
+      "verdict": "pass",
+      "treeHash": "27e2390c6eb19f8e988e54d6545a4a0bb563ce9e"
+    },
+    "targetGate": "target-gate:ff380c6d-cded-4d45-8185-aaec7cac370a (review selection) at the same tree, recorded 2026-11-19T04:22:55.833Z by the executor"
+  },
+  "finalReview": {
+    "observedAt": "2026-11-19T06:58:48Z",
+    "state": "OPEN",
+    "isDraft": true,
+    "headSha": "58e4e9b55772cf833c919efd427260c3da030b7e",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "titleEvents": [
+      {
+        "at": "2026-11-19T06:27:56Z",
+        "actor": "github-actions",
+        "previousTitle": "feat: add shooting and bullets to the soldier scene",
+        "currentTitle": ":sparkles: feat: add shooting and bullets to the soldier scene"
+      }
+    ],
+    "workflowRuns": [
+      {
+        "workflow": "CI",
+        "runId": 44472303976,
+        "event": "pull_request",
+        "headSha": "58e4e9b55772cf833c919efd427260c3da030b7e",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "checks",
+            "conclusion": "success",
+            "startedAt": "2026-11-19T06:27:35Z",
+            "completedAt": "2026-11-19T06:42:19Z"
+          },
+          {
+            "name": "visual",
+            "conclusion": "success",
+            "startedAt": "2026-11-19T06:27:35Z",
+            "completedAt": "2026-11-19T06:31:35Z"
+          }
+        ]
+      },
+      {
+        "workflow": "Pull request title",
+        "runId": 44472303966,
+        "event": "pull_request",
+        "headSha": "58e4e9b55772cf833c919efd427260c3da030b7e",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "title",
+            "conclusion": "success",
+            "startedAt": "2026-11-19T06:27:35Z",
+            "completedAt": "2026-11-19T06:28:00Z"
+          }
+        ]
+      }
+    ],
+    "threads": [],
+    "routes": "No review, comment or review thread existed when the final review read the pull request, so no item needed a route. The title workflow decorated the published title with its gitmoji; the final publish sets the reviewed title, which already carries one."
+  }
+}
