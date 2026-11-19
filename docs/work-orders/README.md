@@ -32,49 +32,49 @@ Full evidence for the active and sequenced orders follows; the Open cards are in
 
 ### WS-001
 
-- [WO-003] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
-- [WO-004] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-011] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
-- [WO-005] — repository: dotln-angular; base: 651d76ff68e9b3a38fe770226deb634bca28b54c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-012] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
-- [WO-006] — repository: dotln-angular; base: 5102783f5cf575a6b487e75ed9bb0c064d6dbd9c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-007] — repository: dotln-angular; base: 90fa6e8d879cb499107ff79d1051c200d17c1cbc; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-013] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-014] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-019] — repository: dotln-angular; base: 1c3a4ff24e38d179d0fd1ad910bc6719c2740045; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-015] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-016] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-008] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-017] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-018] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-025] — repository: self; base: 562fb9146f458787d12edf9ee518a6252508858e; phase: closed; verdict: pass; integration: current; stale: no; observed target: 562fb9146f458787d12edf9ee518a6252508858e.
-- [WO-026] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-020] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-021] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-022] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-023] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-024] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-027] — repository: dotln-angular; base: 48c7f8e6916692bca833c4985e2cf95978ab2c06; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-034] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-035] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-036] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: closed; verdict: pass; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-037] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-039] — repository: dotln-angular; base: f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-040] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-045] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-043] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-044] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-046] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
+- [WO-003] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-004] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-011] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-005] — repository: dotln-angular; base: 651d76ff68e9b3a38fe770226deb634bca28b54c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-012] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-006] — repository: dotln-angular; base: 5102783f5cf575a6b487e75ed9bb0c064d6dbd9c; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-007] — repository: dotln-angular; base: 90fa6e8d879cb499107ff79d1051c200d17c1cbc; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-013] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-014] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-019] — repository: dotln-angular; base: 1c3a4ff24e38d179d0fd1ad910bc6719c2740045; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-015] — repository: dotln-angular; base: bc9133e932a00d33c15bc5289d683b8078f51ee4; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-016] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-008] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-017] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-018] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-025] — repository: self; base: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4; phase: closed; verdict: pass; integration: current; stale: no; observed target: 20e16cd0ced6d5d2b2fb74cde03f37a4e61836a4.
+- [WO-026] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-020] — repository: dotln-angular; base: 6268de9fc3cae84bf66091c1fbcc30d344411cd2; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-021] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-022] — repository: dotln-angular; base: 4c21c586634ac8a5ab5dba9852cd7da81c6d6ee9; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-023] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-024] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-027] — repository: dotln-angular; base: 48c7f8e6916692bca833c4985e2cf95978ab2c06; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-034] — repository: dotln-angular; base: d7d842dc4fdbde03099695933a448d9632fa4335; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-035] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-036] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-037] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-039] — repository: dotln-angular; base: f99580f10803bfaa5abae7cd8b0af3b6eeaf8ed3; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-040] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-045] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-043] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-044] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-046] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 
 ### WS-002
 
 Separate track; outside the proposed serial order.
 
-- [WO-028] — repository: dotln-angular; base: 55b59c9133056c1d6471274a9676a7d5649196ac; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-029] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-030] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-031] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
-- [WO-032] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: current; stale: no; observed target: eb9d227483e30164105da077f50673789d1e5c9f.
+- [WO-028] — repository: dotln-angular; base: 55b59c9133056c1d6471274a9676a7d5649196ac; phase: closed; verdict: pass; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-029] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-030] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-031] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
+- [WO-032] — repository: dotln-angular; base: eb9d227483e30164105da077f50673789d1e5c9f; phase: draft; verdict: unknown; integration: behind; stale: yes; observed target: 6eef542987ab2183817baba329a64373cb61b157.
 
 ## Active
 
