@@ -117,7 +117,11 @@ test("WO-070 copied control plane emits a decoded Beacon without TypeScript sour
     "gate-deadlines.mjs",
     "gate-evidence.mjs",
     "runtime-inputs.mjs",
+    // The configuration reader reads a `stops` section against the table.
+    "stops.mjs",
     "temporary-root-records.mjs",
+    // The gate evidence reads its time limits from the table (WO-284).
+    "time-limits.mjs",
     // The configuration reader validates its `workers` section against the
     // worker table, whose two modules are build-free.
     "worker-catalog.mjs",

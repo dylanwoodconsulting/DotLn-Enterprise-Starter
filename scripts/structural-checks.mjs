@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 import { dispatchBoundResult } from "./lib/dispatch-bound.mjs";
 import { formatDuration } from "./lib/duration.mjs";
-import { findLaunchpad } from "./lib/config.mjs";
+import { findLaunchpad, loadConfig, stopLevel } from "./lib/config.mjs";
+import {
+  ADVISED_STOPS_LINE,
+  failuresByLevel,
+  stopAdvisory,
+} from "../packages/skeleton/src/stops.mjs";
+import { readFeatures } from "./lib/features.mjs";
 import { judgeRunningGit, judgeRunningNode } from "./lib/node-engines.mjs";
 import { isMainModule } from "./lib/paths.mjs";
 import { unownedTemporaryRootSites } from "./lib/temporary-root-declarations.mjs";
@@ -56,16 +62,26 @@ export function checkHost(
     return { ...dispatchBoundResult(standing), sample, fileEvents };
   const standsOnRunningGate = underRunningGate && sample.level === "warning";
   const daemon = judgeFileEventDaemon(fileEvents, { underRunningGate });
+  // The row holds three checks, each a stop of the table: the toolchain's
+  // floor, the machine's memory and the file-events daemon. A read of Git's
+  // version that was ended for time judged nothing of the toolchain: it is
+  // the time limit's stop, which is set in its own file and which no level
+  // lowers, so the row fails on it in any root.
+  const stops = [
+    ...(!runtime.admitted || (!git.admitted && !git.timedOut)
+      ? ["host-toolchain"]
+      : []),
+    ...(git.timedOut ? ["time-limits"] : []),
+    ...(sample.level === "critical" ||
+    (sample.level === "warning" && !underRunningGate) ||
+    underBudget
+      ? ["host-memory"]
+      : []),
+    ...(daemon.refused ? ["host-file-events"] : []),
+  ];
   return {
-    exitCode:
-      !runtime.admitted ||
-      !git.admitted ||
-      sample.level === "critical" ||
-      (sample.level === "warning" && !underRunningGate) ||
-      daemon.refused ||
-      underBudget
-        ? 1
-        : 0,
+    exitCode: stops.length ? 1 : 0,
+    ...(stops.length ? { stops } : {}),
     sample,
     fileEvents,
     taskBudgetBytes: limits.taskBytes,
@@ -120,6 +136,32 @@ export function judgeFileEventDaemon(
       };
 }
 
+/** An instance's configuration row: load the configuration that governs
+ * `root`, with the document roots, registrations and feature elections it
+ * declares, and report what the loader refuses. Every later check resolves
+ * its paths through this configuration, so one the loader refuses is named
+ * here, by the loader's own message, before any of them reads through it.
+ * An absent configuration is the default layout and passes. */
+export function checkConfiguration(root) {
+  try {
+    const config = loadConfig(root);
+    // The elections are read as well as declared: a feature the registry
+    // refuses is refused here.
+    readFeatures(root);
+    const count = (items, one, many) =>
+      `${items.length} ${items.length === 1 ? one : many}`;
+    return {
+      exitCode: 0,
+      output: `Configuration: ${config.present ? "dotln.config.json loads" : "no dotln.config.json; the default layout applies"}; ${count(Object.keys(config.roots), "document root", "document roots")}, ${count(Object.keys(config.repositories), "registered repository", "registered repositories")}, ${count(Object.keys(config.features), "declared feature election", "declared feature elections")}.`,
+    };
+  } catch (error) {
+    return {
+      exitCode: 1,
+      output: `Configuration refused: ${error.message}\nRepair what it names in this root's configuration and rerun this command.`,
+    };
+  }
+}
+
 export function checkDeclarations(root, table, closures) {
   const machinery = uncoveredMachinerySources(root, table);
   const fixtures = uncoveredFixtureInputs(root, closures);
@@ -161,10 +203,16 @@ if (isMainModule(import.meta.url)) {
       rest[0] === "--under-running-gate";
     if (
       (rest.length && !buildPhaseOnly && !recording && !underRunningGate) ||
-      !["declarations", "generated", "git-surface", "host"].includes(mode)
+      ![
+        "configuration",
+        "declarations",
+        "generated",
+        "git-surface",
+        "host",
+      ].includes(mode)
     )
       throw new Error(
-        "usage: structural-checks.mjs declarations|generated [--build-phase-only]|git-surface [--record]|host [--under-running-gate]",
+        "usage: structural-checks.mjs configuration|declarations|generated [--build-phase-only]|git-surface [--record]|host [--under-running-gate]",
       );
     let result;
     if (recording) {
@@ -176,6 +224,7 @@ if (isMainModule(import.meta.url)) {
         output: `Recorded scripts/lib/git-surface.json: ${added.length} added${added.length ? ` (${added.join(", ")})` : ""}; ${removed.length} removed${removed.length ? ` (${removed.join(", ")})` : ""}. Confirm each added form against the declared Git floor's manual before committing.${scopedElsewhere.length ? ` A scoped form is named outside the files its entry admits, and the check keeps failing there until a reviewer adds the file to the entry: ${scopedElsewhere.join(", ")}.` : ""}`,
       };
     } else if (mode === "git-surface") result = checkGitSurface(root);
+    else if (mode === "configuration") result = checkConfiguration(root);
     else if (mode === "declarations") {
       const { suites, expandSuiteTasks } = await import("./test-runner.mjs");
       result = checkDeclarations(
@@ -197,7 +246,32 @@ if (isMainModule(import.meta.url)) {
             }
           : {},
       );
-    else result = checkHost(undefined, { underRunningGate });
+    else {
+      result = checkHost(undefined, { underRunningGate });
+      // Each failed check of the row answers at this root's level for its
+      // stop: the row fails where one refuses, and where every one advises
+      // it says so and exits zero, naming the stops for the gate to record.
+      if (result.exitCode && result.stops?.length) {
+        const { refused, advised } = failuresByLevel(
+          result.stops.map((stop) => ({ stop })),
+          (id) => stopLevel(root, id),
+        );
+        result = {
+          ...result,
+          exitCode: refused.length ? 1 : 0,
+          output: [
+            result.output,
+            ...advised.map(
+              ({ stop }) =>
+                `ADVISORY ${stopAdvisory(stop, "the reading above is past what this row admits")}.`,
+            ),
+          ].join("\n"),
+          ...(advised.length
+            ? { advisedStops: advised.map(({ stop }) => stop) }
+            : {}),
+        };
+      }
+    }
     if (result.output) console.log(result.output);
     for (const row of result.cases ?? []) {
       console.log(
@@ -210,6 +284,10 @@ if (isMainModule(import.meta.url)) {
         `Run npm run sync; stale artifacts: ${result.stale.join(", ")}`,
       );
     console.log(`STRUCTURAL_RESULT ${JSON.stringify(result)}`);
+    if (!result.exitCode && result.advisedStops?.length)
+      console.log(
+        `${ADVISED_STOPS_LINE}${JSON.stringify(result.advisedStops)}`,
+      );
     process.exitCode = result.exitCode;
   } catch (error) {
     console.error(error.message);

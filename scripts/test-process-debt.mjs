@@ -95,7 +95,6 @@ import {
   metaHealth,
   planCostTable,
   planCostText,
-  PLAN_COST_BYTES,
   writeOrderSnapshot,
   recoveredUsageSnapshot,
   usageTotals,
@@ -1994,41 +1993,19 @@ test("WO-172 every closed order carries its failed judgments, repairs and record
     recordedCorrections: 0,
   });
   assert.equal(table.rows[1].metrics, null, "outside the meter's rows");
-  // The table is written whole within its 64 KB bound and refused over it:
-  // at the bound's last byte, one byte past it, in bytes where characters
-  // would still fit, and for the builder's own rows.
-  assert.equal(PLAN_COST_BYTES, 65536);
+  // The table is written whole, at any size: the 64 KB cap it once carried
+  // was removed on the operator's direction of 2026-11-15, after it refused
+  // every planning pass over the meter's whole-record data.
   assert.equal(planCostText(table), json(table));
-  const padded = (bytes) => ({
-    pad: "x".repeat(bytes - Buffer.byteLength(json({ pad: "" }))),
+  const large = planCostTable(meta, {
+    costTable: { schemaVersion: 1 },
+    revision: "fixture",
+    orders: Array.from({ length: 1200 }, (_, index) => ({
+      workOrderId: `WO-${String(index).padStart(4, "0")}`,
+    })),
   });
-  assert.equal(
-    Buffer.byteLength(planCostText(padded(PLAN_COST_BYTES))),
-    PLAN_COST_BYTES,
-  );
-  assert.throws(
-    () => planCostText(padded(PLAN_COST_BYTES + 1)),
-    /Planning cost table exceeds 64 KB/,
-  );
-  const wide = { pad: "é".repeat(PLAN_COST_BYTES / 2) };
-  assert.ok(
-    json(wide).length < PLAN_COST_BYTES,
-    "fewer characters than the bound",
-  );
-  assert.throws(() => planCostText(wide), /Planning cost table exceeds 64 KB/);
-  assert.throws(
-    () =>
-      planCostText(
-        planCostTable(meta, {
-          costTable: { schemaVersion: 1 },
-          revision: "fixture",
-          orders: Array.from({ length: 1200 }, (_, index) => ({
-            workOrderId: `WO-${String(index).padStart(3, "0")}`,
-          })),
-        }),
-      ),
-    /Planning cost table exceeds 64 KB/,
-  );
+  assert.ok(Buffer.byteLength(json(large)) > 65536, "past the old cap");
+  assert.equal(planCostText(large), json(large));
   assert.equal(meta.reopenCandidates.length, 0);
   assert.ok(
     meta.traps.every((row) =>
@@ -8679,6 +8656,93 @@ test("follow-ups retain changed, removed and overlapping public sources without 
   assert.throws(() => collectFollowupSources(root), /symbolic link/);
 });
 
+test("WO-282: a newly re-keyed candidate carries current dispositions by unchanged source, deterministically", (t) => {
+  const sourcePath = "docs/product/candidates.md";
+  const body =
+    "## Candidates\n\n- **Files under `**/*.mjs`.** Keep their public descriptions.\n";
+  const prepare = (root, mode) => {
+    write(root, sourcePath, body);
+    const state = syncFollowups(root);
+    const old = state.entries[0];
+    // Model the earlier line reader's shorter title, keeping the raw item
+    // hash and section exactly as the document reader observes them today.
+    old.key = `candidate:${sourcePath}#candidates::${digest("Files under `")}`;
+    old.id = `FUP-${digest(old.key).slice(0, 16)}`;
+    old.revisions.unshift({
+      ...old.revisions[0],
+      hash: digest("earlier body"),
+    });
+    old.dispositions = [
+      {
+        sourceRevision: 1,
+        status: "deferred",
+        reason: "Await public evidence.",
+        reopenWhen: "Evidence arrives.",
+        targets: [],
+        at: "2026-11-01T00:00:00.000Z",
+      },
+      {
+        sourceRevision: mode === "stale" ? 1 : 2,
+        status: "settled",
+        reason: "Public evidence settled the item.",
+        reopenWhen: "The source changes.",
+        targets: [],
+        at: "2026-11-02T00:00:00.000Z",
+      },
+    ];
+    if (mode === "missing")
+      old.revisions.push({
+        ...old.revisions.at(-1),
+        hash: null,
+        missing: true,
+      });
+    write(root, FOLLOWUPS, json(state));
+    if (mode === "changed")
+      write(
+        root,
+        sourcePath,
+        body.replace("public descriptions", "expanded public descriptions"),
+      );
+    return structuredClone(old);
+  };
+  for (const mode of ["current", "stale", "changed", "missing"]) {
+    const root = repo(t),
+      sibling = repo(t);
+    const before = prepare(root, mode);
+    prepare(sibling, mode);
+    const state = syncFollowups(root);
+    assert.equal(json(state), json(syncFollowups(sibling)), mode);
+    const old = state.entries.find(({ id }) => id === before.id);
+    const fresh = state.entries.find(({ id }) => id !== before.id);
+    assert.equal(state.entries.length, 2);
+    assert.deepEqual(
+      old.dispositions.slice(0, before.dispositions.length),
+      before.dispositions,
+      mode,
+    );
+    if (mode === "current") {
+      assert.equal(followupStatus(old), "duplicate");
+      assert.deepEqual(old.dispositions.at(-1).targets, [fresh.id]);
+      assert.equal(old.dispositions.at(-1).at, before.dispositions.at(-1).at);
+      assert.deepEqual(
+        fresh.dispositions,
+        before.dispositions.map((row) => ({ ...row, sourceRevision: 1 })),
+      );
+      assert.equal(followupStatus(fresh), "settled");
+      assert.equal(planningFollowups(root).pending, 0);
+    } else {
+      assert.equal(followupStatus(old), "needs-review", mode);
+      assert.equal(followupStatus(fresh), "untriaged", mode);
+      assert.deepEqual(fresh.dispositions, []);
+    }
+    assert.equal(
+      json(syncFollowups(root)),
+      json(state),
+      "the next sync changes nothing",
+    );
+  }
+});
+
 test("only named actions and observed reopenings enter the decision feed; history and heading links survive", (t) => {
   const root = repo(t);
   const base = {
@@ -8880,6 +8944,17 @@ test("WO-276 criterion R3: a batch is judged as the register it produces: re-dis
   });
   // The register as it stands names an order with no file: a read refuses.
   const original = readFileSync(register);
+  assert.throws(
+    () =>
+      disposeFollowups(root, [
+        { ...request(first, "deferred"), expectedRevision: "0".repeat(64) },
+      ]),
+    new RegExp(
+      `stale register revision or request shape; reread follow-ups at register revision ${revision}`,
+      "u",
+    ),
+  );
+  assert.deepEqual(readFileSync(register), original);
   assert.throws(
     () => planningFollowups(root),
     /allocation target WO-888 has no filed work order/u,
@@ -10095,7 +10170,7 @@ test("WO-169 followups --apply takes a batch under one revision, all or none", a
         request(first, "deferred"),
         { ...request(second, "deferred"), expectedRevision: "0".repeat(64) },
       ],
-      /stale register revision or request shape; reread follow-ups \(request index 1; /,
+      /stale register revision or request shape; reread follow-ups at register revision [a-f0-9]{64} \(request index 1; /,
     ],
     [
       [
@@ -10106,7 +10181,7 @@ test("WO-169 followups --apply takes a batch under one revision, all or none", a
     ],
     [
       [request(first, "deferred"), request(second, "deferred"), "third"],
-      /request shape; reread follow-ups \(request index 2; /,
+      /request shape; reread follow-ups at register revision [a-f0-9]{64} \(request index 2; /,
     ],
     [[], /a batch names at least one request/],
   ];
@@ -10125,7 +10200,7 @@ test("WO-169 followups --apply takes a batch under one revision, all or none", a
   disposeFollowups(root, [request(first, "deferred")]);
   assert.throws(
     () => disposeFollowups(root, [request(second, "deferred")]),
-    /stale register revision or request shape; reread follow-ups \(request index 0; /,
+    /stale register revision or request shape; reread follow-ups at register revision [a-f0-9]{64} \(request index 0; /,
   );
 });
 

@@ -18,7 +18,7 @@ no skill carries phase state or grants authority.
 | Reviewer (`final review`)                            | `@skills/dotln-reviewer/SKILL.md`      | §Goal-aligned decisions; selected order and cited sections; complete subject and numbered verification sequence; `package.json`; 08 §PRs and commits; current review/PR/release-note outputs                                                   |
 | Release close                                        | `@skills/dotln-release-close/SKILL.md` | §Goal-aligned decisions; selected order and cited sections; canonical final review, PR body and release notes                                                                                                                                  |
 | Planner                                              | `@skills/dotln-planner/SKILL.md`       | §Goal-aligned decisions; sequence file; this guide's planning section, and its ideation section for an `ideation:` entry; addressed candidates and source lookups                                                                                                                   |
-| Router (`drive: WO-NNN`)                             | `@skills/dotln-router/SKILL.md`        | Canonical status through `node scripts/drive.mjs status WO-NNN` and nothing else: no order, diff, report or worker transcript |
+| Router (`drive: WO-NNN`)                             | `@skills/dotln-router/SKILL.md`        | Canonical status through `node scripts/drive.mjs status WO-NNN` and, after a stop, the drive's own account through `node scripts/drive.mjs why WO-NNN`: no order, diff, report or worker transcript |
 | Refuter                                              | `@skills/dotln-refuter/SKILL.md`       | §Goal-aligned decisions supplies purpose; the canonical prompt from `npm run plan -- refute --direct` is the sole subject evidence. No map, ledger or prior receipt is a subject preread.                                                      |
 
 The generated `Read:` and `Read[role]:` directives are binding throughout the
@@ -109,18 +109,31 @@ work.
 
 <!-- dotln-goal-rules:end -->
 
-**Platform lens.** Four checks from the platforms lesson the operator
+**Platform lens.** Five checks from the platforms lesson the operator
 pointed at (Steve Yegge's 2011 account of the Amazon service mandate) apply
-to any capability a plan or order lands: it arrives as an interface
-something else consumes (a transport profile, a typed event, a projection, a
-handoff packet), never only as a script or a session; it is externalizable
-by construction (content-addressed inputs, declared contracts, no private
-setting as the source of a guarantee); this repository and the operator's
-own repository consume it before any export; and its result is usable by a
-stranger to the session, so a receipt that needs reverse-engineering is an
-accessibility failure [[vision-into-use pass](../planning/vision-into-use-2026-09-17.md)
-§12, 2026-09-17]. The planning refuter's platform-first standard is
-unchanged.
+to any capability a plan or order lands
+[[vision-into-use pass](../planning/vision-into-use-2026-09-17.md) §12,
+2026-09-17; [the 2026-11-16 pass](../planning/passes/the-kit-stops-no-work-2026-11-16.md#what-a-stop-protects-and-where-it-belongs)]:
+
+- It arrives as an interface something else consumes (a transport profile,
+  a typed event, a projection, a handoff packet), never only as a script or
+  a session.
+- It is externalizable by construction: content-addressed inputs, declared
+  contracts, no private setting as the source of a guarantee.
+- This repository and the operator's own repository consume it before any
+  export.
+- Its result is usable by a stranger to the session, so a receipt that
+  needs reverse-engineering is an accessibility failure.
+- An owner who is not the author can reach it on a machine that is not
+  core's. One product is not right for everyone, so a stop, a fixed figure
+  or a rule that such an owner cannot change fails this check before it
+  protects anything.
+
+Where reach and protection pull apart in an instance, a protection stays
+on only where it guards what cannot be undone, and it stays the owner's to
+lower. That does not make every stop useless: which ones earn their place
+is judged stop by stop, from what each protects. The planning refuter's
+platform-first standard is unchanged.
 
 <!-- dotln-goal-rules:start -->
 
@@ -168,9 +181,22 @@ records approval, then may resume in a fresh phase session. See the
 `drive: WO-NNN` selects the router in main and carries the authority of the
 lifecycle phrases it dispatches, including final-review publication and release
 close after the operator merges. It grants no merge authority. The router reads
-canonical status only, launches a fresh pinned phase worker in the recorded order
+canonical status, launches a fresh pinned phase worker in the recorded order
 worktree with exactly its lifecycle phrase, and reads status again when the worker
-ends. It reads no order, diff, report or worker narrative and holds no writer.
+ends. When a drive stops for anything but the merge or a release, the router
+also reads the drive's own account, `node scripts/drive.mjs why WO-NNN`, and
+answers the operator from it: what ended the last attempt, which call the host
+denied and who made it, what the kit's guard refused, whether the phase
+recorded its completion, what the worktree holds and the next step. The
+account is made of counts, fixed words and command shapes from the drive's
+record ([decision](../evidence/WO-287/decisions.md#wo-287-d031--parts-d-and-e-as-built-what-a-denial-keeps-a-helpers-denial-apart-from-the-workers-the-lifted-wait-the-account-and-its-command-the-routers-reading-of-it-and-the-one-case-for-a-driven-workers-helper)).
+
+The drive retains operation names only while it can determine their argument
+positions. A new attempt records which shape format it used. The public account
+shows placeholders for words from older formats that discarded the information
+needed to identify an operation. [Repair decision](../evidence/WO-287/decisions.md#wo-287-d074--mask-arguments-once-their-positions-are-uncertain)
+
+The router reads no order, diff, report or worker narrative and holds no writer.
 The measured Claude host uses separate print sessions because in-process workers
 did not load the target worktree's hooks. Its target workers explicitly dispatch
 through the qualified launchpad command; target tool hooks do not supply a
@@ -188,7 +214,17 @@ inside nested tool shells. Receipts report the launcher-selected version.
 Claude driven attempts also use fresh print sessions without persistence: the
 nested host comparison did not retain a resumable session after a successful
 exit. An interrupted phase receives the same phrase and canonical briefing in
-a fresh session. Codex
+a fresh session. A Claude phase starts with the host's wait for background
+work uncapped, since the host otherwise stops a print-mode run's background
+agents ten minutes after its last turn and a worker awaits reviewers longer
+than that; the phase's own time limit bounds the wait. A host's denial of a
+call the phase worker made ends the phase and stops the drive; a denial of a
+helper agent's call is recorded and the phase goes on. A Claude release-close
+phase starts with a narrow rule allowing the close's one helper command in
+its two exact spellings for the order being closed, since a host in its
+automatic-review mode reviews each shell command itself and declined that
+command after the kit's hook admitted it
+([decision](../evidence/WO-287/decisions.md#wo-287-d048--the-drive-could-not-finish-a-release-close-on-a-host-in-automatic-review-the-hosts-review-declined-the-one-helper-command-the-kits-hook-had-admitted-a-claude-release-close-phase-now-starts-with-a-narrow-rule-for-that-command-and-a-live-run-before-and-after-shows-the-stop-and-the-close)). Codex
 role and writer entry are explicit, while tool boundaries and per-spawner
 budgets remain role text where hooks are absent. Its native collaboration
 stream contributes only the observed minimum. A configured dollar limit
@@ -1275,6 +1311,29 @@ The agent still acts within the actual operator request and the host's tool
 permissions. These controls must be present in Claude's generated entry code
 and Codex's shared instructions, with a dependency-free local adapter.
 
+The override is the operator's last resort for pushing something through
+whatever state the repository is in, and no refusal names it as its route.
+Every stop is a row of the table of stops
+(`packages/skeleton/src/stops.mjs`), with an id and a class. A stop that a
+hook, a gate task or a bound's own admission holds has a level, which one
+line of the root's `stops` section sets
+([docs/KIT.md §Stops](../KIT.md#stops)), unless it keeps a switch of its
+own or is set in a file of its own. Four keep a switch: desktop control and
+plan-first, which a hook holds, and the starter update's request and the
+kit update's instance actions, which their commands hold. Two are set in a
+file: the refuse class of the private terms list, and the time limits.
+What a lifecycle command declines is a row too, with no level and with its
+way forward. A refusal that remains names its
+stop and that line, and where the line is written when the refusal covers
+the configuration file itself, as a planning branch's does. A stop's level
+is its owner's to change, and a session changes one only when its owner
+asks for it in that session. Both controls reach a registered target
+worktree's guards: its bundle holds one prompt hook, which records them for
+the session and imports nothing of the runtime, and each guard reads them
+ahead of every runtime import, as the launchpad's hooks do
+([the table](../evidence/WO-287/decisions.md#wo-287-d005--part-a-the-table-of-stops-as-built-its-rows-their-classes-and-what-has-no-line),
+[the hooks](../evidence/WO-287/decisions.md#wo-287-d006--part-a-what-a-hook-answers-at-each-level-in-the-launchpad-and-in-a-target-worktree)).
+
 **Candidate — immediate working-state recovery.** Operator override must be
 able to restore a usable working repository despite DotLn holds, locks,
 incomplete setup or damaged operational state. Recovery may use a dedicated
@@ -2044,6 +2103,41 @@ captureDigest}` with an optional `class`, and the plan check reads that
    ([the 2026-10-28 pass](../planning/passes/document-contract-and-release-close-2026-10-28.md);
    [WO-238](../evidence/WO-238/decisions.md#wo-238-d001--kinds-by-path-class-the-entry-points-and-a-reader-binding-that-counts-programs)).
 
+   A long paragraph is a smell, and length alone is no fault: a document
+   that is easy to follow may be long. `npm run test:docs` lists each
+   paragraph a branch adds or changes in a standing document that runs past
+   the instance's figure, by file and line, for the stage at hand to read
+   and, where it is hard to follow, rewrite.
+
+   The figure is `documents.paragraphWords` in `docs/control/budgets.json`,
+   120 words when unset and null for no list; any other value is named in an
+   advisory and the list then uses 120 words. The list refuses nothing and
+   keeps no total,
+   an instance's list leaves out the kit's own documents, and
+   `node scripts/docs-check.mjs --long-paragraphs` prints the same reading of
+   every standing document
+   ([WO-281](../evidence/WO-281/decisions.md#wo-281-d010--step-4-the-document-check-lists-the-long-paragraphs-a-branch-writes-in-standing-documents-at-a-figure-of-120-words-and-prints-the-whole-list-on-request);
+   [a figure the check cannot use stops no command](../evidence/WO-281/decisions.md#wo-281-d022--round-ones-fixes-as-built-the-rule-table-regenerated-a-case-for-criterion-3-no-refusal-over-the-figure-the-cases-the-reviewers-found-missing-and-the-guide-and-the-map-changed-where-a-reader-was-stopped-or-the-text-read-as-filler)).
+8. The critics' record is read at every pass, by a critic of the critics,
+   from the release in which the kit launches it by name (the second kind
+   of WO-288's Part A). Until then the input is core's alone: its pass
+   launches one research worker with
+   [the brief the 2026-11-16 pass kept](../planning/passes/the-kit-stops-no-work-2026-11-16-critic-of-the-critic-brief.md),
+   which an instance does not carry, over the criticisms and the
+   operator's recorded corrections since the last pass. For each class it
+   reports, the pass changes a document in
+   the pass, files the change in an order, or declines it with what would
+   show the decline wrong; a class given nothing is read again when it
+   comes back.
+
+   A class that came back while a rule for it stood is answered first by
+   looking for what the kit itself said at the moment of choice: a
+   command's output, an order's form, a record's schema. In the two
+   costliest recurrences of November a written rule stood, and the
+   session's own record names a kit output, a pending register row or the
+   order's steps that said the opposite
+   ([the 2026-11-16 pass](../planning/passes/the-kit-stops-no-work-2026-11-16.md#the-critics-record)).
+
 **`planning: refute` and `planning: refute full`.** These exact phrases load
 the dedicated refuter skill in either harness. The parent runs
 `npm run plan -- refute` (add `--scope full` for the whole horizon; `--direct`
@@ -2281,11 +2375,12 @@ Standard artifacts, all doc-only:
   wall-clock, context bytes, commands, tokens and steps, provenance, a dated
   observed gap, acceptance criteria whose last names both `npm test` and
   `npm run test:docs` [off-ramps pass, 2026-09-25; WO-111 VER-001 B3](../planning/passes/off-ramps-5s-entropy-2026-09-25.md),
-  a Preflight line spelling each single-suite check as
-  `npm test -- --only <suite>` for its steps; these suites and the
-  structural phase are the order's handoff gate (a target order keeps its
-  repository's declared target gate), with the complete gate paid once at
-  final review (§Preflight before the full gate), a Design naming at
+  a Preflight line naming, as `npm test -- --only <suite>`, each suite
+  the order's change reaches: the lifecycle reads the line, the order's one
+  complete run supplies those suites' rows (a target order keeps its
+  repository's declared target gate), and a step's own check is a single
+  case, by the screen below (§Preflight before the full gate), a Design
+  naming at
   least one rejected alternative and the axis it differs on (2026-10-17
   pass), evidence, non-goals,
   and operator-review assumptions; an order
@@ -2309,9 +2404,15 @@ Standard artifacts, all doc-only:
   runs the complete review selection (WO-144 D010; WO-216);
 - product-doc write-back for durable understanding, with the publication
   index and edition locks repaired in the same pass;
-- `npm run meta -- --plan-cost` refreshes the bounded, subject-hashed cost
-  table after the subject revision. It carries latest meter rows and trap
-  signals. Stale or missing observations are labeled; cost shortfalls become
+- `npm run meta -- --plan-cost` refreshes the subject-hashed cost table
+  after the subject revision. The table is the measured record the plan's
+  independent reviewer reads: one row for each order of the subject, and
+  the meter's five trap signals over the last five closed orders (among
+  them the operator's corrections and directions, guard refusals, and the
+  growth of the gate and the cold-start documents). It is written whole,
+  with no size limit
+  ([what it is and why it stays](../planning/passes/v1-0-0-instance-returns-and-followups-2026-11-14.md#the-planning-cost-table-what-it-is-and-why-it-stays)).
+  Stale or missing observations are labeled; cost shortfalls become
   planning input and never create an automatic structural hold;
 - `npm run work-orders -- index` regenerated and `npm run test:docs` green.
   A document-only pass runs no code suite.
@@ -2421,6 +2522,24 @@ failures behind each are in the
   a work laptop on Git 2.31, and v0.121.0 refused that laptop at every gate
   ([the 2026-11-08 pass](../planning/passes/git-2-31-support-and-fork-returns-2026-11-08.md);
   [WO-260](../work-orders/WO-260-the-kit-runs-on-git-2-31.md)).
+- An order adds no stop that an instance's owner cannot lower. A refusal,
+  a failing check or a fixed figure an order adds is named in its Release
+  classification line with what it protects. In an instance it advises and
+  the work goes on, unless it keeps the owner's work or private material
+  from loss or exposure that cannot be undone; either way it has a setting
+  the owner can change. A time limit on a gate's path is a row of the
+  kit's table of limits. Core's own gate may gain a stop, since a stop is
+  core's discipline for building the starter
+  ([the 2026-11-16 pass](../planning/passes/the-kit-stops-no-work-2026-11-16.md#what-a-stop-protects-and-where-it-belongs),
+  whose census counted 139 stops, 133 of them shipped to an instance and
+  19 that an instance could lower).
+- A step's check is one case, run alone under the bounded wrapper, or a
+  read of a command's output; no step asks for a suite run. WO-281's
+  executor ran its order's per-step suites one at a time, sixteen runs and
+  74 minutes of gate time, while its role text said that a focused run
+  never precedes the complete run
+  ([WO-281-D019](../evidence/WO-281/decisions.md#wo-281-d019--the-operators-word-on-the-time-the-focused-suites-run-one-at-a-time-had-taken-longer-than-a-complete-run-the-rest-go-into-the-one-complete-run);
+  [the 2026-11-16 pass](../planning/passes/the-kit-stops-no-work-2026-11-16.md#the-critics-record)).
 - Five defect classes
   ([the 2026-11-01 pass](../planning/passes/fork-blocks-close-residue-reviews-criteria-desktop-opt-in-2026-11-01.md)):
   a criterion states a behavior observable on the uncommitted candidate by a
@@ -2505,6 +2624,90 @@ produced. A code or configuration
 change it identifies becomes a work order or a named boy-scout item for the
 next activation. Its output lands through the ordinary pull request from a
 planning branch, since `main` requires one; the `:memo:` title rule applies.
+
+### The queue form
+
+A pass may file several queued orders as the parts of one order, under
+one activation, one verification, one final review and one release. The
+operator made it a form a planner can choose on 2026-11-16
+([the 2026-11-16 pass](../planning/passes/the-kit-stops-no-work-2026-11-16.md#the-queue-form-what-wo-276-showed)).
+WO-276 was the first such order, and WO-287 and WO-288 are the second and
+third. The rules below come from the operator's own messages as WO-276
+ran and from that order's record, read in
+[the study the pass kept](../planning/passes/the-kit-stops-no-work-2026-11-16-wo-276-form-study.md).
+
+**When it fits.** The queued orders would run one after another, each
+paying its own cycle, and they share files or the editions they re-mint.
+Three things keep an order out of it. Something is waiting on it: one
+release means nothing ships until the last part does, so an order an
+instance is stopped on is filed by itself, ahead. Another part consumes a
+contract it changes, as a shared reader's rewrite did inside WO-276: that
+order goes alone and first. And the whole would be more than one
+verification can hold: a queue is cut into two or three orders of the
+form, what is needed soonest first, before it is filed as one of many
+parts.
+
+**How it is filed.** Each absorbed order stays a file, as an umbrella
+record, and its design, observed gap, plan and known issues are read from
+there. The queue order holds a frame: the parts in order with the reason
+for that order, the rules it runs by, what each part differs in from its
+record, every part's criteria restated under the part's letter, one
+Preflight line, and whatever the frame adds of its own. It holds two to
+eight parts, each about the size of an ordinary order. After filing, the
+index check's count of its criteria is compared with the list's last
+number.
+
+The queue order's Cost and Non-goals state every part's in full, since
+the planning subject, the cost table and the refuter read the sequenced
+order and not the records it absorbs. Its typed dependencies name every
+order whose output a part consumes.
+
+**How it runs.**
+
+1. The parts run in the order given, and a part others lean on comes
+   first. After a part the executor regenerates what it changed, and the
+   next part is written against the files as that part left them.
+2. A part ends on its steps' cases, each run alone; on the suites that
+   hold what it changed, at most three, found by searching the tests and
+   fixtures for every wording, pin and list it changed; with what it
+   regenerates clean, its write-backs passing the document check and the
+   terms screen, a checkpoint made, its two readers launched on that
+   checkpoint and the standing file rewritten, naming the readers still
+   out. No part has a ladder of its own.
+3. Two readers go out on each part's checkpoint, and the next part does
+   not wait for them: one combined reviewer over the part's change, and
+   one reader over everything changed so far. Their findings are judged
+   as they come, and all of them before the ladder at the end. No
+   reviewer runs on a clock.
+4. The critic of conduct runs on a clock, from one interval after a
+   dispatch begins until that dispatch's passing run. Nothing waits for
+   it, and its report goes to the operator whole before it is answered.
+5. The whole change is read by a full ladder once, at the end, and then
+   run in full. An order of more than four parts names one midpoint for a
+   complete run.
+6. The standing file says where the work is and carries no forecast. It
+   is rewritten at each part's end and whenever a session stops, and a
+   session may end at a part's boundary.
+7. A defect met beside a part's change is fixed in the order; what cannot
+   be settled is boarded and does not hold the order. A part's write-backs
+   touch only its own sections, and the end reads every changed standing
+   section whole.
+8. The executor states the bound the order needs once, at its start, and
+   records the operator's acceptance; it does not ask again part by part.
+9. Verification and final review read with one worker for each part and
+   one for what the parts share, and then send workers over whatever
+   those left unread.
+10. A part can be cut on the operator's word without rewriting another.
+    The cut amends the queue order, makes the part's record an open order
+    again by removing its umbrella label and its typed `superseded` entry,
+    gives it an entry in the sequence and regenerates the index.
+
+The workers, the critic's interval and any midpoint are the order's to
+state. In this repository the critic on a cadence is on for an order of
+this form by core's own election, on the worker the operator named; an
+instance elects its own. Until WO-288 changes it, the executor's role
+text gives an order in parts a ladder for each part, and a queue order's
+own text is the one to follow.
 
 ### Paired passes and the synthesis pass
 
@@ -3492,87 +3695,118 @@ and resumes that commit, then completes cleanup after publication.
 
 ## Documentation freshness and ownership
 
-The executor owns current factual documentation for its change. Before declaring
-implementation ready, update affected blueprint facts and their reader entry
-points in the same pass: examples, names and paths, component/source claims,
-capability limitations, runbook instructions, planning recommendations, and
-publication links where the change reaches them. Use the diff and inbound
-references to bound the check. Write back by editing the sentence that is now
-wrong and citing the evidence; a dated paragraph appended under a product
-heading is a receipt and belongs in the order's evidence README, and a
-candidate belongs in the planning map; `scripts/docs-check.mjs` in
-`npm run test:docs` refuses both shapes in a product document. The same rule
-holds for every standing document, not only a product document: the sequence,
-the map's catalog, a workstream, a repository profile and an instance's
-operator record state what is so for their readers and are replaced in place,
-and the dated account of what happened lives in a record, which is the order's
-decisions, the pass's document, a verification or a receipt (§Operator-opened
-planning pass, item 7, which also names the kinds, the reader entry points,
-the read census and the red tags). The final reviewer judges a changed
-standing document's diff: a replacement passes, and a dated account added
-under a standing heading returns to repair. No operator message is saved
-verbatim in a committed artifact (operator direction, 2026-11-07, ignored
-capture SHA-256
+The executor owns current factual documentation for its change. Before
+declaring implementation ready, update affected blueprint facts and their
+reader entry points in the same pass: examples, names and paths,
+component/source claims, capability limitations, runbook instructions, planning
+recommendations, and publication links where the change reaches them. Use the
+diff and inbound references to bound the check.
+
+Write back by editing the sentence that is now wrong and citing the evidence; a
+dated paragraph appended under a product heading is a receipt and belongs in
+the order's evidence README, and a candidate belongs in the planning map;
+`scripts/docs-check.mjs` in `npm run test:docs` refuses both shapes in a
+product document.
+
+The same rule holds for every standing document, not only a product document:
+the sequence, the map's catalog, a workstream, a repository profile and an
+instance's operator record state what is so for their readers and are replaced
+in place, and the dated account of what happened lives in a record, which is
+the order's decisions, the pass's document, a verification or a receipt
+(§Operator-opened planning pass, item 7, which also names the kinds, the reader
+entry points, the read census and the red tags).
+
+The final reviewer judges a changed standing document's diff: a replacement
+passes, a dated account added under a standing heading returns to repair,
+and so does a changed passage its reader cannot follow, which the review
+names. The rule the write-back is held to is the one every role carries: a
+passage is judged by what its reader can understand, and accumulated prose
+is rewritten or split. A long paragraph is a smell and no fault, and the
+document check lists the ones a branch writes (§Operator-opened planning
+pass, item 7)
+([WO-281](../evidence/WO-281/decisions.md#wo-281-d011--step-5-the-final-reviewer-returns-a-changed-standing-passage-its-reader-cannot-follow-in-the-rule-every-role-carries-and-in-product-07)).
+
+No operator message is saved verbatim in a committed artifact (operator
+direction, 2026-11-07, ignored capture SHA-256
 `123eb18018301f41fb4b107f0fb0ad53eb40eb38b13c75a906f588dc913c6cd6`): a
-committed document, record or source file paraphrases the operator and
-cites the ignored intake capture by its digest; a quotation is written only
-where the operator asks in the session for that message to be saved,
-recorded as an `operatorQuote` naming the capture's digest and the
-request's, or where a clone or fork has turned the rule off in its
-configuration. Every role and every worker carries the rule, and
-`npm run test:docs` enforces it on what a branch adds against its merge base
-with `main`, so a record written before keeps its bytes: the verbatim screen
-compares each line a branch adds, or joins by deleting what stood between, to
-Markdown under a document root or at the repository root, or to source under
-`scripts/` and `packages/*/src/`, with
-every text capture under this checkout's ignored intake root, and a run of
-twelve consecutive words both hold fails naming the file, the line and the
-capture's digest, never the words; a run the repository already held at the
-merge base is its own text, which a capture may quote, and a checkout with no
-capture prints `verbatim screen: no captures` and passes. A changed file the
-screen cannot read, and an intake root it cannot list, fail naming the path; a
-directory or a capture below the intake root that its owner closed is private
-material, which never fails the check, so it is named in an advisory and the
-status line reads `no readable captures` when nothing could be read
-([WO-259-D020](../evidence/WO-259/decisions.md#wo-259-d020)). A current record's
-operator-attributed words without a capture citation fail where the branch
-adds or changes them, stay an advisory elsewhere, and the historical baseline
-keeps its note. The exception is typed: `operatorQuote` carries
-`captureSha256` and `requestedIn`, the digest of the capture holding the
-operator's request to save that message, which a record the branch adds must
-name and the screen exempts for that capture alone; an instance that elects
-`features.verbatim-operator-words` turns the rule off, and both checks then
-advise instead of failing
-([WO-259-D006](../evidence/WO-259/decisions.md#wo-259-d006)). A document that moves keeps its
-bytes, and [`docs/control/document-moves.json`](../control/document-moves.json)
-names where it went. Every reader of a reference gives it one meaning: the
-link check, the entry points, the reader bindings, the red tags, the read
-census and `plan documents` read a moved document's own links from the
-directory it was written in, and an old path the map lists names the document
-where it lives now. A moved path is never reused: the document check refuses a
-file at one, so an old path names one document whenever it was read or linked.
-The accounts of how this guide's own rules arrived are in
-the [execution-guide record](../planning/passes/execution-guide-record.md). Record the affected surfaces
-and evidence in the existing work-order outcome or breakout receipt; do not
-create a new ceremony or rewrite unrelated historical artifacts. The front
-page, `README.md`, is edited only by an order whose leading header carries
-`**Front page:** README.md` on main, or whose current order bytes and recorded
-operator decision carry that declaration through a validated execution
+committed document, record or source file paraphrases the operator and cites
+the ignored intake capture by its digest; a quotation is written only where the
+operator asks in the session for that message to be saved, recorded as an
+`operatorQuote` naming the capture's digest and the request's, or where a clone
+or fork has turned the rule off in its configuration.
+
+Every role and every worker carries the rule, and `npm run test:docs` enforces
+it on what a branch adds against its merge base with `main`, so a record
+written before keeps its bytes.
+
+The verbatim screen compares each line a branch adds, or joins by deleting what
+stood between, to Markdown under a document root or at the repository root, or
+to source under `scripts/` and `packages/*/src/`, with every text capture under
+this checkout's ignored intake root, and a run of twelve consecutive words both
+hold fails naming the file, the line and the capture's digest, never the words;
+a run the repository already held at the merge base is its own text, which a
+capture may quote, and a checkout with no capture prints `verbatim screen: no
+captures` and passes.
+
+A changed file the screen cannot read, and an intake root it cannot list, fail
+naming the path; a directory or a capture below the intake root that its owner
+closed is private material, which never fails the check, so it is named in an
+advisory and the status line reads `no readable captures` when nothing could be
+read ([WO-259-D020](../evidence/WO-259/decisions.md#wo-259-d020)).
+
+A current record's operator-attributed words without a capture citation fail
+where the branch adds or changes them, stay an advisory elsewhere, and the
+historical baseline keeps its note.
+
+The exception is typed: `operatorQuote` carries `captureSha256` and
+`requestedIn`, the digest of the capture holding the operator's request to save
+that message, which a record the branch adds must name and the screen exempts
+for that capture alone
+([WO-259-D006](../evidence/WO-259/decisions.md#wo-259-d006)).
+
+Both checks are one stop, `verbatim-operator-words`, with a level as any
+record stop has: core refuses, and an exported instance advises until its
+owner sets it, naming a file once however many runs it holds. The election
+`features.verbatim-operator-words`, which was the rule's switch, still sets
+the level where a root makes it and writes no line for the stop: elected
+both checks advise, declined both refuse
+([decision](../evidence/WO-287/decisions.md#wo-287-d021--part-c-the-paraphrase-rules-stop-has-a-level-an-instance-is-told-once-a-file-and-the-election-that-was-its-switch-still-sets-it)).
+
+A document that moves keeps its bytes, and
+[`docs/control/document-moves.json`](../control/document-moves.json) names
+where it went. Every reader of a reference gives it one meaning: the link
+check, the entry points, the reader bindings, the red tags, the read census and
+`plan documents` read a moved document's own links from the directory it was
+written in, and an old path the map lists names the document where it lives
+now. A moved path is never reused: the document check refuses a file at one, so
+an old path names one document whenever it was read or linked.
+
+The accounts of how this guide's own rules arrived are in the [execution-guide
+record](../planning/passes/execution-guide-record.md). Record the affected
+surfaces and evidence in the existing work-order outcome or breakout receipt;
+do not create a new ceremony or rewrite unrelated historical artifacts.
+
+The front page, `README.md`, is edited only by an order whose leading header
+carries `**Front page:** README.md` on main, or whose current order bytes and
+recorded operator decision carry that declaration through a validated execution
 amendment. Amendment authority admits page prose only; it cannot change the
-control record. Both routes retain the “What runs today” line budget
-that `docs/control/front-page.json` records on main: the section is named once
-among the headings, the page holds no raw HTML outside its marker lines and no
+control record.
+
+Both routes retain the “What runs today” line budget that
+`docs/control/front-page.json` records on main: the section is named once among
+the headings, the page holds no raw HTML outside its marker lines and no
 receipt outside its generated blocks, and each counted line is one whole,
 unwrapped sentence of Markdown prose; a new bypass or wrongly refused sentence
 becomes a row of `scripts/fixtures/front-page-corpus.json` before the check
 changes, and the front-page order applies the operator's recorded judgment,
 asking only about a choice no record covers.
-The release block between its markers holds only the version line
-`release prepare` writes. Any other order proposes a capability the page should
-mention as one sentence in its evidence README, and when a planning pass finds
-two such proposals waiting, it files a front-page order
-([WO-189-D001](../evidence/WO-189/decisions.md#wo-189-d001),
-[closed judgment](../evidence/WO-189/decisions.md#wo-189-d021--repair-close-the-surfaces-where-github-and-the-parser-disagree-and-judge-each-line-twice)).
+
+The release block between its markers holds only the version line `release
+prepare` writes. Any other order proposes a capability the page should mention
+as one sentence in its evidence README, and when a planning pass finds two such
+proposals waiting, it files a front-page order
+([WO-189-D001](../evidence/WO-189/decisions.md#wo-189-d001), [closed
+judgment](../evidence/WO-189/decisions.md#wo-189-d021--repair-close-the-surfaces-where-github-and-the-parser-disagree-and-judge-each-line-twice)).
 
 Apply the [corpus maintenance constraint](03-architecture.md#corpus-policy)
 when choosing that surface: reuse an existing outcome or receipt, link canonical
@@ -4327,7 +4561,23 @@ and generated evidence, including fixtures, manifests and installed guidance.
   admits no record writes. Completion consumes the rows and runs no gate. A
   source edit changes code identity, so the complete row must run at the new
   identity, as must the final review; report, control and
-  generated-document edits keep code identity. The document row binds the exact
+  generated-document edits keep code identity. An edit to documents alone
+  keeps it too, the kit guide and every other authored document included: it
+  owes `npm run test:docs` on the exact tree, and no role runs the complete
+  gate after it, whatever a pending follow-up row proposes or an earlier
+  order did ([operator direction, 2026-11-16](../evidence/WO-282/decisions.md#wo-282-d024--critical-errors-a-complete-run-after-a-document-only-edit-and-the-rule-that-none-ever-follows-one)).
+
+  The tools say the same. Where a passing complete review row stands at the
+  current code identity, recorded under the time limits in force, the
+  closeout selection that the briefing and `worktree integrate` print says
+  the complete run is satisfied by that row, with its time, and lists the
+  document gate alone
+  ([decision](../evidence/WO-284/decisions.md#wo-284-d009--the-closeout-selection-says-a-complete-run-is-satisfied-by-the-row-the-final-reviews-claim-would-consume)). At such an identity `npm test -- --review --again`
+  prints the row, runs nothing and exits 0; only `--reason <why>` runs the
+  selection again, and its row keeps the reason
+  ([decision](../evidence/WO-284/decisions.md#wo-284-d010--a-complete-selection-forced-at-an-identity-that-is-already-green-needs-a-stated-reason-and-a-reused-suite-is-named-as-reused)).
+
+  The document row binds the exact
   candidate tree, including current reports, decisions and generated indexes.
 - **Scratch repositories (WO-188).** A nested repository outside the intake
   lane that the tracked tree does not declare as a submodule is scratch. An
@@ -4396,7 +4646,8 @@ and generated evidence, including fixtures, manifests and installed guidance.
   logical size in full (two probe copies filled the host volume on
   2026-10-06; WO-187 D053) [2026-10-11 pass](../planning/passes/standard-pass-2026-10-11.md). The wrapper
   preserves argv, the caller's environment, working directory and ordinary exit
-  status, with the existing 900-second deadline and bounded output tail; a
+  status, with its deadline (900 seconds unless the root's time limits set
+  another, `probe.command`) and bounded output tail; a
   memory-budget stop exits 125. On the measured
   macOS host, original-parent identities and inherited output-socket identities
   retain ownership through detached descendants, including unsampled double
@@ -4989,7 +5240,8 @@ and generated evidence, including fixtures, manifests and installed guidance.
   browser pane) without the instance's `features.desktop-control` election.
   That election is off by default. `true`, `false` and `{ "on": boolean,
   "note": "the operator's reason" }` are accepted in `dotln.config.json`;
-  unknown feature ids refuse by name. An election makes these tools
+  an unknown feature id refuses by name in core and is named in one
+  advisory and ignored in an exported instance. An election makes these tools
   admissible, but the operator must still explicitly request their use in
   the session. The permission hook reads the election at judgment time;
   `harness emit` writes the matching server, enable-tool and Skill deny
@@ -4997,7 +5249,14 @@ and generated evidence, including fixtures, manifests and installed guidance.
   settings. Re-emit after changing the election. Codex tool calls are
   unhooked and follow the same rule through the role text. The generated
   refusal count follows its list of classes
-  ([WO-251 decision](../evidence/WO-251/decisions.md#wo-251-d001)).
+  ([WO-251 decision](../evidence/WO-251/decisions.md#wo-251-d001)). Each of
+  the nine is a row of the table of stops and is answered at the level its
+  root gives it: core refuses on each, as this list says, and an exported
+  instance advises on those that guard the kit's own records, a host
+  property or a bound until its owner sets them; desktop control alone
+  keeps its own election and has no level
+  (§Operator recovery controls;
+  [decision](../evidence/WO-287/decisions.md#wo-287-d006--part-a-what-a-hook-answers-at-each-level-in-the-launchpad-and-in-a-target-worktree)).
 
   Verify a web surface through a browser the session launches or the
   project's browser tests. Follow product 03's perception hierarchy:
@@ -5185,9 +5444,14 @@ and generated evidence, including fixtures, manifests and installed guidance.
   records the completed tasks as a stopped row, which supplies no pass; a
   stop before any completion and errors in final identity, deadline parsing
   or index locking leave no row and displace nothing. Both lookups choose worktree executions first, across
-  checks. A row stands while each task's latest run supplies its result or
-  a pass that may be carried; integrity failures displace their executed
-  tasks. Identity errors (including symbolic aliases) and unreadable consulted
+  checks. A complete row stands while each task it names has, as its latest
+  run at the identity, that row's own result or a later one that a selection
+  accepted: a pass, a failure whose stop advised, or a task whose stop was
+  off. An advised or off result keeps its row
+  standing for the completion that consumes it and is never carried into a
+  later selection, which runs the task again
+  ([decision](../evidence/WO-287/decisions.md#wo-287-d061--repair-of-f1-a-selection-that-succeeded-with-advised-or-off-tasks-stands-for-the-completion-that-consumes-it-and-a-later-selection-still-runs-those-tasks-again));
+  integrity failures displace their executed tasks. Identity errors (including symbolic aliases) and unreadable consulted
   main indexes retain the storage-unavailable contract: `Gate index unavailable`
   names the error, leaving an actor-stated unproved claim with no product gate.
   Passing tasks may compose after an unchanged-code failure; partial results
@@ -5199,10 +5463,29 @@ and generated evidence, including fixtures, manifests and installed guidance.
   worktree registration, without writing to main; a pass it carried from
   main is checked against main’s latest execution at each later lookup;
   unresolvable main leaves the worktree’s own rows.
-  `--again` always runs every selected task fresh; review selections may reuse
-  eligible passing tasks. Reuse compares code identity and never the Node that
-  ran a task, so a run that judges one supported line passes `--again` and shows
-  no reused task on its row. Review selection diffs against the
+
+  `--again` runs every selected task fresh; review selections may reuse
+  eligible passing tasks. On a plain selection at an identity whose passing
+  complete row covers it, and on a review selection at one that holds the
+  review row a completion consumes (every named suite ran and passed in
+  it), `--again` needs `--reason <why>`: without one the runner prints that
+  row and what running again costs, runs nothing, not a build either, and
+  exits 0, and with one the row keeps the reason. A plain row never answers
+  a review selection.
+
+  Reuse compares
+  code identity and the time limits in force, and never the Node that ran a
+  task, so a run that judges one supported line passes `--again` with its
+  reason and shows no reused task on its row. A row recorded under other
+  time limits supplies no reused task and answers no forced selection
+  ([decision](../evidence/WO-284/decisions.md#wo-284-d032--a-pass-recorded-under-other-time-limits-is-neither-carried-nor-standing)).
+
+  A suite the selection reuses whole is named in the schedule line as
+  reused at the code identity, never as changed or as scheduled first: it
+  does not run, and whatever changed in its sources since the last gate row
+  lies outside that identity.
+
+  Review selection diffs against the
   merge base, retaining the worktree’s changes when a sibling advances main.
   During a product gate, roles may write only the active order’s evidence,
   verification and final-review directories at the default document roots;
@@ -5268,6 +5551,57 @@ and generated evidence, including fixtures, manifests and installed guidance.
   a Node outside the range and is not a lifecycle prerequisite. Read authored outputs and validate generated
   outputs using their existing commands, without a new receipt ritual.
 
+- **Time limits (WO-284).** Every time limit that can end or fail a gate
+  run or a bounded probe is a row of one build-free table,
+  `packages/skeleton/src/time-limits.mjs`: a key, the kit's figure, what it
+  bounds and what passing it does. A limit stays a limit: none adapts to
+  the host, and none outside the gate path is in the table.
+  - **Who reads it.** The runner's suite rows, the generated checks, the
+    license check's dry runs, the evidence and probe wrappers, the index
+    check's child and the host's monitor, guard, helper-compile and
+    record-lock bounds read their figures there and keep none of their
+    own. A core-only case reads each file on that path and fails on a
+    figure written back ([decision](../evidence/WO-284/decisions.md#wo-284-d005--what-the-gate-path-is-for-criterion-4-and-the-limits-in-its-files-that-are-not-on-it)).
+  - **Who sets it.** A root's owner changes the figures in
+    `time-limits.json` in the control root: `set` on a key (a figure in
+    milliseconds, `null` for that limit off, or `"kit"`), `scale` for all
+    of them and `enforce: false` for none. `npm run limits` lists every
+    key with the figure that applies and its source, and
+    `npm run limits -- --write` writes the file with every key, each
+    entry as its owner left it, and refuses a file it cannot read as its
+    own.
+  - **What an unusable value does.** A value the resolver cannot use is
+    one advisory and the kit's figure applies. Reading a limit prints
+    nothing: the runner, the probe wrapper and the sync print a root's
+    advisories once where they begin.
+    The pauses after a stop are rows too, and stay on
+    ([decision](../evidence/WO-284/decisions.md#wo-284-d004--how-a-roots-file-changes-the-figures-null-is-a-limit-turned-off-the-pauses-after-a-stop-stay-on-and-never-shrink-and-one-unusable-value-is-one-advisory-for-a-whole-command)).
+  - **What a miss says.** A step that is ended for time names its key, the
+    figure, the file and the listing command. A structural task ended that
+    way is reported as time, not as a failed check.
+  - **What a change does.** A gate row records the limits it ran under, as
+    one digest of every figure that applies (none where each is the kit's)
+    and whether they changed before it ended. A pass is reused, and a
+    complete row stands for the runner's answer to a forced selection, the
+    closeout, a completion's claim and the evidence command, only where
+    those are the limits in force; a later run under any limits still
+    displaces an older pass ([decision](../evidence/WO-284/decisions.md#wo-284-d032--a-pass-recorded-under-other-time-limits-is-neither-carried-nor-standing)).
+  - **What changes nothing.** A change to the file that changes no figure
+    leaves every pass reused and standing. The closeout still counts the
+    file among the records the gates read, as it counts the budgets, so a
+    target order that changes it in any way owes the launchpad's complete
+    run unless a row stands.
+  - **How much room.** A step an instance's gate runs has at least ten
+    times its slowest passing time in core's gate record, a suite row at
+    least five minutes, and a row only core's complete run uses at least
+    three times ([decision](../evidence/WO-284/decisions.md#wo-284-d003--the-tables-keys-and-the-kits-figures-each-with-the-times-it-rests-on)). Core's export fixture checks that
+    room: it runs an exported instance's three selections at a third of
+    every figure and judges each task's own result
+    ([decision](../evidence/WO-284/decisions.md#wo-284-d014--core-checks-the-starters-room-by-running-an-exported-instances-three-selections-at-a-third-of-every-figure-with-one-arm-that-shows-the-check-failing)).
+    Three rows also bound a step inside a hook or a dispatch whose own
+    bound is fixed (a gate owner's start read, the temporary directory read
+    and the guard's start), so they keep the figures they had
+    ([decision](../evidence/WO-284/decisions.md#wo-284-d017--paired-review-round-1-27-distinct-findings-from-the-four-reports-each-with-who-found-it-its-class-and-what-becomes-of-it)).
 - **Build publication.** Compile into staging with the existing Node
   toolchain, replace each complete output file atomically, and finish the
   build barrier before dependent application commands run [operator decision,
@@ -5469,9 +5803,20 @@ Saved rejection diagnostics and pending entropy subjects are promoted out of
 temporary ownership. Their existing retention or filing/discard protocol owns
 them across sessions; session cleanup cannot remove them.
 
-Every selection begins with six structural tasks, in order: `format`,
-`configuration-root`, `registrations`, `declarations`, `generated` and
-`host`; core runs a seventh, `git-surface`, between `generated` and `host`,
+Every selection begins with its root's structural tasks, in order. An
+instance runs six: `format`, `configuration`, `registrations`,
+`declarations`, `generated` and `host`. Its `configuration` task loads the
+instance's own configuration, with its document roots, registrations and
+feature elections, and names what the loader refuses. Core runs
+`configuration-root` in that place, the kit's tests of the loader, which an
+instance runs only by name since its kit verification already compares
+their bytes ([decision](../evidence/WO-284/decisions.md#wo-284-d008--an-instances-configuration-row-loads-its-own-configuration-and-the-other-roots-structural-row-runs-only-by-name)).
+No selection of an instance includes it, the machinery selection among
+them; the review listing's inventory still names it there, as a suite
+available by that name.
+
+Core also runs a seventh, `git-surface`,
+between `generated` and `host`,
 which an exported kit does not carry: it fails on a Git form its static
 reading finds in the kit's scripts and tests that
 `scripts/lib/git-surface.json` has not recorded as confirmed against the
@@ -5597,8 +5942,9 @@ one exists, whichever role recorded it: the identity, not the dispatch time,
 says what was tested, so under serial orders an integration that brought no
 change costs no second run. Only when that identity has no passing complete
 row does it start `npm test -- --review` in the background, never under the
-bounded probe wrapper (which applies a six-hour outer bound to a complete
-selection instead of its default 900-second probe deadline; an explicitly
+bounded probe wrapper (which gives a test selection, complete or by name, a
+six-hour outer bound, `probe.test-selection`, in place of an ordinary
+command's 900 seconds, `probe.command`; an explicitly
 bounded live lifecycle probe can set `--timeout-seconds` from 1 to 21600
 without changing memory protection or the command's own deadlines),
 awaiting it with `node scripts/harness.mjs evidence --wait`. The FINAL
@@ -5667,7 +6013,8 @@ with `stopped: true`; a stop before any completion records nothing. A stopped
 row supplies no passing claim. An execution finishing after its row was
 recorded also supplies no pass. Launchpad declares its files in
 update/refresh, export/verify and seeds/staging order, at most two at a time,
-each with its own 900-second deadline and two host slots. Measured light
+each under the default task limit (`suite.default`, 45 minutes at the kit's
+figure) and with two host slots. Measured light
 files can still run first beside an exclusive task. Declaring the longer
 update file first aims to reduce the tail when only one heavy file fits;
 the required tasks, assertions and admission limits are unchanged.
@@ -5689,7 +6036,8 @@ on the latter (WO-229 D001); failed samples remain unavailable.
 
 At the measured eight-slot capacity, structural host requests are `format` 3,
 `configuration-root` 2, `registrations` 2, `declarations` 4, `generated` 2,
-`host` 2, `kit-verify` 2.
+`host` 2, `kit-verify` 2; an instance's `configuration` task, one process
+that loads one configuration, asks for 1 and is not yet measured.
 These requests are capped by the available local reservation on smaller hosts;
 the local serial structural phase keeps every local lane. The
 [measurement and sizing decision](../evidence/WO-229/decisions.md#wo-229-d002)
@@ -5734,7 +6082,7 @@ case registers, so one case still runs by its name under the bounded
 wrapper. A shard's deadline declaration counts the other shards with the
 light peers ([WO-276-D047](../evidence/WO-276/decisions.md#wo-276-d047--part-d-as-built-the-control-and-what-it-can-show-the-convoy-the-shards-the-file-order-the-conditions-reading-and-the-cases-that-follow)). Target-worktree's
 close, start, publication and release files run two at a time, each under
-its own 900-second deadline. No list of case titles is kept for those files
+the default task limit. No list of case titles is kept for those files
 or the launchpad's: a case of the runner's tests reads the top-level
 registrations of every suite file through the source reader and refuses a
 file that declares one title twice, the fault that makes a name pattern

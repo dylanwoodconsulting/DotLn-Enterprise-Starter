@@ -16,10 +16,12 @@ export const machinerySources = {
     // The carried parser's proof, whose check and writer the suite calls.
     "scripts/lib/vendored-parser.mjs",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/harness.mjs",
     "scripts/lib/harness.mjs",
     "scripts/meta.mjs",
     "scripts/release.mjs",
+    "scripts/lib/release-history.mjs",
     // The close's step names, blocker classes and removal children, which
     // release.mjs, worktree.mjs and plan failures import.
     "scripts/lib/release-steps.mjs",
@@ -36,6 +38,8 @@ export const machinerySources = {
     "scripts/sync.mjs",
     "scripts/lib/generated-artifacts.mjs",
     "scripts/lib/build-freshness.mjs",
+    // The table whose miss text the suite's time-limit case reads (WO-284).
+    "packages/skeleton/src/time-limits.mjs",
     // The operator commands page's generator and its inputs (WO-275).
     "scripts/lib/operator-commands.mjs",
     defaultDocRelative("docs", "KIT.md"),
@@ -43,6 +47,7 @@ export const machinerySources = {
   ],
   "launchpad-planning": [
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
@@ -120,6 +125,7 @@ export const machinerySources = {
   "harness-probe": [
     "scripts/meta.mjs",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
@@ -153,14 +159,20 @@ export const machinerySources = {
     "scripts/probes/local-model-role-qualification.mjs",
     // The probes build their Codex argv and home through the launcher (WO-159).
     "packages/skeleton/src/worker-transport.ts",
+    // The cases read what a probe launches from the kit's one model table.
+    "packages/skeleton/src/worker-models.mjs",
   ],
   "harness-fixtures": [
+    // The table of stops, whose levels the emitted hooks carry and whose
+    // rows the cases of a hook's answers read.
+    "packages/skeleton/src/stops.mjs",
     // The kit's own models and workers, which the emitted definitions and
     // their cases read as data (WO-276).
     "packages/skeleton/src/worker-models.mjs",
     "packages/skeleton/src/worker-catalog.mjs",
     "scripts/lib/test-shards.mjs",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
@@ -233,6 +245,7 @@ export const machinerySources = {
     "scripts/test-drive.mjs",
     "scripts/drive.mjs",
     "scripts/fixtures/drive-live.mjs",
+    "scripts/lib/drive-account.mjs",
     "scripts/lib/drive-diagnostics.mjs",
     "scripts/lib/drive-evidence.mjs",
     "scripts/lib/drive-process.mjs",
@@ -243,6 +256,7 @@ export const machinerySources = {
     "scripts/lib/drive-stream.mjs",
     "scripts/lib/drive-transport.mjs",
     "scripts/lib/drive-worker.mjs",
+    "scripts/lib/lifecycle-actions.mjs",
     "scripts/lib/host-resources.mjs",
     "scripts/lib/process-budget.mjs",
     "scripts/lib/release-tags.mjs",
@@ -332,6 +346,14 @@ export const machinerySources = {
   "configuration-root": [
     "scripts/",
     "packages/skeleton/src/runtime-inputs.mjs",
+    // The table of time limits, whose resolver and listing the suite judges.
+    "packages/skeleton/src/time-limits.mjs",
+    // The table of stops, whose levels, section and listing the suite judges.
+    "packages/skeleton/src/stops.mjs",
+    // The rules the features page lists and the overlay's ids, which the
+    // suite reads from the built loadout and through the built compiler.
+    "packages/skeleton/src/loadouts/",
+    "packages/compiler/src/harness.ts",
   ],
   "harness-context": [
     "scripts/lib/markdown-links.mjs",
@@ -365,6 +387,7 @@ export const machinerySources = {
     // blocker classes and step names from here.
     "scripts/lib/release-steps.mjs",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
@@ -438,7 +461,19 @@ export const machinerySources = {
     "packages/skeleton/src/usage-reading.mjs",
   ],
   "runner-fixtures": [
+    // The document check, which a case runs against a fixture root to read
+    // each failure's own stop.
+    "scripts/docs-check.mjs",
     "packages/skeleton/src/source-reading.mjs",
+    // The table the runner reads every suite's limit from, and the files on
+    // the gate path that the suite reads for a time limit kept outside it.
+    "packages/skeleton/src/time-limits.mjs",
+    // The closeout's standing row, which a pass recorded under other time
+    // limits does not supply.
+    "scripts/lib/closeout-scope.mjs",
+    "scripts/sync.mjs",
+    "scripts/work-orders.mjs",
+    "scripts/test-configuration-root.mjs",
     "scripts/lib/test-shards.mjs",
     "scripts/doctor.mjs",
     "scripts/lib/host-doctor.mjs",
@@ -571,6 +606,7 @@ export const machinerySources = {
     "scripts/lib/handoff-ledger.mjs",
     "packages/skeleton/src/loadouts/executor-supports.ts",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
@@ -711,6 +747,7 @@ export const machinerySources = {
   meta: [
     "scripts/lib/usage-reading.mjs",
     "scripts/features.mjs",
+    "scripts/lib/rule-inventory.mjs",
     "scripts/lib/feature-registry.mjs",
     "scripts/lib/features.mjs",
     "scripts/lib/build-overlay.mjs",
