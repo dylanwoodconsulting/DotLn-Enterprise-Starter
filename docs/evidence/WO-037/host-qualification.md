@@ -17,3 +17,15 @@ node scripts/worktree.mjs publish WO-037 --target-worktree --draft --branch feat
 ```
 
 The hook admitted it and the host ran it. No refusal or denial reached the session. The helper pushed `feat/scene-shooting` at `58e4e9b55772cf833c919efd427260c3da030b7e` and opened draft pull request #20 on `github.com/DylanBWood/DotLn-Angular`, leaving the target worktree's HEAD and index unchanged. A read-back with `gh pr view 20 --repo DylanBWood/DotLn-Angular` showed it open, draft, on base `main` at that head. Its threads and workflow runs are the final review's to collect. No session merged, pushed `main` or published a release.
+
+## Final reviewer host and the ready publication
+
+The 2026-11-19 UTC final review ran under Claude Code 2.1.328, model `claude-opus-5-5` at selected effort max, on the same macOS arm64 host with Node 26.9.0, in the order's two registered worktrees on `wo-037`. No Playwright MCP was attached. The reviewer's session used a headless Chromium launched through the target's Playwright package against a loopback static server over the production output, and the operator's own browser was not used. The repair the review wrote and withdrew touched two files of the target worktree; after its removal the target tree hashed again as `27e2390c6eb19f8e988e54d6545a4a0bb563ce9e`, and that tree was committed as four commits ending at `14e46e33ab2a5079c5182ad64b41f6ebdba90129` before `final-review-result pass`. `target-records` then added the records commit `3d3e3cd191b8ee784b21d9effa2992f2fc8de219`.
+
+The reviewer then ran the profile's ready form plainly from the launchpad order worktree:
+
+```sh
+node scripts/worktree.mjs publish WO-037 --target-worktree --branch feat/scene-shooting --title ":sparkles: Add shooting and bullets to the soldier scene" --body-file docs/final-reviews/WO-037/TARGET-PR.md
+```
+
+The hook admitted it and the host ran it, with no refusal or denial. The helper pushed `feat/scene-shooting` at `3d3e3cd` over the draft head `58e4e9b` under its lease and marked pull request #20 ready. On that head CI run 44477689922 passed its `visual` job (07:11 to 07:15) and its `checks` job (07:11 to 07:32), and the title run passed. Read back at 07:33, the pull request was open, no longer a draft, carried the reviewed title, merged clean and had no review, comment or thread. No session merged, pushed `main` or published a release.
