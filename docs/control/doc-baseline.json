@@ -310,6 +310,90 @@
       "reason": "missing file",
       "count": 1,
       "note": "WO-038 was filed by the 2026-11-05 planning pass and removed, never activated, by the 2026-11-09 planning pass on the operator's correction (docs/planning/passes/standard-pass-v0-122-1-open-orders-rejudged-2026-11-09.md D13); the 2026-11-05 planning document keeps its link to the order as it was filed, whose text is in history at 0461bed."
+    },
+    {
+      "file": "docs/evidence/WO-037/README.md",
+      "href": "decisions.md",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/design/comparisons.md",
+      "href": "../decisions.md#wo-037-d004",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d003",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d004",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d005",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d007",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d008",
+      "reason": "missing file",
+      "count": 2,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d009",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/handoff.md",
+      "href": "decisions.md#wo-037-d010",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/evidence/WO-037/ver-001-reproductions.md",
+      "href": "../../verifications/WO-037/VER-001.md",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md, VER-001.md and FINAL-001.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); the launchpad record keeps its original link; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
+    },
+    {
+      "file": "docs/work-orders/WO-037-scene-shooting-and-bullets.md",
+      "href": "../evidence/WO-037/decisions.md#wo-037-d002",
+      "reason": "missing file",
+      "count": 1,
+      "note": "WO-037's decisions.md moved into DotLn-Angular's docs/dotln/ by target-records (TargetRecordsCommitted, 2026-11-19, records commit 3d3e3cd1); this link sits inside the order bytes its execution amendment (WO-037-D002) binds, so it is declared rather than rewritten; declared by WO-037's final review (FINAL-001, 2026-11-19) before the records publish, so the records branch and main stay green."
     }
   ],
   "homePaths": {
