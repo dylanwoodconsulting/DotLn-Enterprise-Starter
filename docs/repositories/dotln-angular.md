@@ -301,21 +301,22 @@ workflow comments, with lexical and scope controls in `tools/board-count.test.mj
 | A live run and its replay, kept the same | `libs/shared/scene-engine/src/lib/run.ts` |
 | Pinned frame hashes for a run | `libs/features/scene/src/testing/fixtures/trial-known-outcome.json`, and for routes round a wall with and without the gap sealed, `walls-known-outcome.json` beside it |
 | Walls and obstacles, the one shape model every clearance question is asked of, the ray cast and the stop at a shape | `libs/shared/scene-engine/src/lib/geometry.ts` |
+| Streaks, the two animation cues, knockout and squad re-formation | `libs/shared/scene-engine/src/lib/projectiles.ts`, `aiming.ts`, `formation.ts` and the `range-known-outcome.json` fixture |
 | The tile graph, A* with its heuristics and every expansion kept, smoothing, following and planning again | `libs/shared/scene-engine/src/lib/graph.ts`, `pathfinding.ts`, `path-following.ts` |
 | Field tools in the transport and the list of walls and obstacles under the unit list | `libs/features/scene/src/lib/composites/field-tools/field-tools.ts`, `libs/features/scene/src/lib/composites/geometry-list/geometry-list.ts` |
 | Public study imports for route search | `libs/shared/scene-engine/src/public_api.ts` exposes the graph and search functions. Wall casting and avoidance remain internal until WO-045. |
 | Page, facade and mappers | `libs/features/scene/src/lib/containers/scene-page/scene-page.ts`, `libs/features/scene/src/lib/facades/scene.facade.ts`, `libs/features/scene/src/lib/mappers/` |
-| Rail of the twenty-eight tools the engine runs | `libs/features/scene/src/lib/composites/toolbox-rail/toolbox-rail.ts`, `libs/features/scene/src/lib/mappers/rail-mapper.ts` |
+| Rail of the thirty-three tools the engine runs | `libs/features/scene/src/lib/composites/toolbox-rail/toolbox-rail.ts`, `libs/features/scene/src/lib/mappers/rail-mapper.ts` |
 | Renderer seam, with text and null painters beside it | `libs/features/scene/src/lib/renderers/scene-renderer.ts` |
 | Canvas painter behind the drawing wrapper | `libs/features/scene/src/lib/wrappers/scene-canvas/canvas-scene-renderer.ts` |
 | Scene store and persisted compositions | `libs/features/scene-data-access/src/lib/scene-store.ts`, `libs/features/scene-data-access/src/lib/stored-scene.ts` |
 | Field skin | `libs/shared/ui/src/styles/_field-skin.scss` |
 
 A run is a seed and a list of steps, the walls and obstacles drawn on the field among them
-as field steps. The twenty-eight tools are the catalog's rows whose transform kinds the
+as field steps. The thirty-three tools are the catalog's rows whose transform kinds the
 interpreter runs: ten `steer.blend`, two `steer.priority`, one `formation.fixed`, five
-`formation.twoLevel`, two `path.find`, one `path.smooth`, two `path.follow` and five
-`path.cost`, grouped on the rail as move, ways, group, avoid and form. A later painter changes
+`formation.twoLevel`, two `path.find`, one `path.smooth`, two `path.follow`, five `path.cost`,
+one `combat.fire`, one `combat.projectile` and three `combat.aim`, grouped on the rail as move, ways, group, avoid, form and fight. A later painter changes
 neither the engine nor the feature. The field skin is a token layer under
 `[data-skin='field']` over the plain skin, reaching the shell around the page
 through `html:has()`; `[data-full-bleed]` in the app's styles is the one rule that

@@ -237,3 +237,25 @@ Expected: the recorder takes the order's registered target by default, or
 refuses a target order's record that names none. The route used: the later
 rounds were recorded with `--target`, and the earlier receipts' identity is
 corrected in the order's decisions, the report bytes left as filed.
+
+## 2026-11-19 — WO-037 — the final reviewer's briefing says a defect in the order's surfaces is repaired in the order, where the execution guide says a reviewer never writes a behavioral fix it certifies
+
+```json
+{ "kit": "v1.4.0", "stopsNextOrder": false, "answered": null }
+```
+
+At `resume: final review` the briefing told the reviewer that a repairable
+defect within the order's declared surfaces is repaired in the order through
+Adjacent Repair, and the reviewer role text says to fix a met defect within
+the Boy Scout bound or board it. Product 07's §Independent workflows and
+integration says a reviewer never writes a behavioral fix and certifies it,
+and §Verification review and attack routes a defect that breaks no criterion
+to a follow-up. Read together, the briefing reads as a duty the reviewer
+cannot discharge without breaking the guide's rule. Expected: the reviewer's
+briefing says which rule binds the final reviewer. For example, a follow-up
+in the declared surfaces stays boarded unless its fix is non-behavioral
+cleanup, and a behavioral repair returns through `resume: fix` with fresh
+verification. The route used: the reviewer wrote a small behavioral repair
+in the order's surfaces with a regression case and withdrew it before
+relying on any gate row. The verified tree stood, and the defect stayed a
+follow-up with the repair's approach recorded on its decision.
