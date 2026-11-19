@@ -8,8 +8,12 @@ Insert this instance's dated sessions below, newest first.
 
 The [planning record](../planning/passes/standard-pass-v1-4-0-2026-11-19.md)
 records the release taken on the operator's request, the dispositions from
-WO-036 and the source commitments for the next orders. Dispatch capture
-SHA-256 `ff9c3db3880e2ab9f4b07b5e909ee48e28a94fe5d1a33f5ed14ce9a836242098`.
+WO-036 and the source commitments for the next orders. The dispatch is
+`docs/intake/notes/planning-2026-11-18-upstream.md`, SHA-256
+`ff9c3db3880e2ab9f4b07b5e909ee48e28a94fe5d1a33f5ed14ce9a836242098`.
+The operator’s merge confirmation is
+`docs/intake/notes/planning-2026-11-18-update-merged.md`, SHA-256
+`3f8f09c8e09f712b362183db69f4f061bd948d7a61e7663b585d723602c559b1`.
 
 ## 2026-11-14 — planning pass: starter v1.0.0 taken on the operator's word, what the release makes wrong in this instance's records corrected, the machinery view pinned to core's v1.0.0, seven orders amended and none filed (operator dispatch of 2026-11-14)
 

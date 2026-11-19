@@ -173,8 +173,10 @@ its height. The two avoidance studies' presentation modules and model specs,
   `pathfinding.ts` with its per-expansion trace, and returns the family's
   frames (each cell's state, the open and closed sets and the frontier at
   that expansion, the path once found), each frame's text equivalent, note
-  and worked step (the expanded cell's cost so far, estimate and total),
-  translated at the boundary through `StudyTranslate`. The search is the
+  and worked step. The engine trace currently records the expanded cell
+  and newly opened cells. Extend each expansion with the engine’s actual
+  cost so far, remaining estimate and priority at that cell. The study reads
+  those numbers from the trace. Its labels are translated at the boundary through `StudyTranslate`. The search is the
   engine's, never the study's (catalog rule: call the scene engine's
   function where it has the behaviour). The A* module holds its example and
   a `model` that returns `gridModel`'s result, and declares no frame, text
@@ -317,12 +319,16 @@ changes; the inspector's study line; the regenerated scene baselines;
    record as v2 admitted (recorded with both exit codes); `npx nx test
    catalog`, `npx nx test models` and `npm run test:tooling` exit 0.
 3. `libs/features/tools/src/lib/studies/grid.ts` (`gridModel`), the
-   `GridStudyModel` member in `study-model.ts`, and `grid.spec.ts` over a
-   small fixed grid. Check: `npx nx test tools` exits 0.
+   `GridStudyModel` member and `ticksOf` in `study-model.ts`. Extend the
+   scene engine’s search trace for the worked step. In `grid.spec.ts`,
+   compare the displayed entries with the engine’s costs on a small fixed
+   grid, including a nonuniform weight. Keep the existing search result. Check: `npx nx test tools` exits 0.
 4. `libs/features/tools/src/lib/composites/study-visuals/grid/` (candidate
    A) with `grid-drawing.ts`, its spec, the composite's spec and the
-   `StudyGrid` stories, and the `grid` case in
-   `composites/study/study.html`. Check: `npx nx test tools` and
+   `StudyGrid` stories. Add the family to `StudyDrawingView` in `types.ts`
+   and to `drawingOf` in `mappers/study-mapper.ts`. Import the composite
+   in standalone `composites/study/study.ts` and render the grid case in
+   its template. Exercise the v2 record through the reader’s step control. Check: `npx nx test tools` and
    `npm run lint:components` exit 0.
 5. The first rendered pair (A numbers in cells, B tone alone) at about 2080
    by 1460 and 360, read at 3840 by 1620; the rounds, or their deferral as
@@ -362,8 +368,10 @@ changes; the inspector's study line; the regenerated scene baselines;
    pinning the straight-ahead run, and their messages. Check: `npx nx test
    tools` exits 0; `grep -c "castWallRay"` over the three modules prints 0
    for each.
-10. `libs/features/scene/src/lib/mappers/inspector-mapper.ts` and
-    `composites/unit-inspector/unit-inspector.html`: the study line, its
+10. Load the catalog’s `studiedIds` in `SceneFacade` with the scene rows
+    and pass the selected tool’s membership through the inspector mapper.
+    Give the facade test kit one listed and one unlisted tool. Render the
+    link in `composites/unit-inspector/unit-inspector.html`, with its
     message in `apps/dotln/public/i18n/en.json` and its copy `scene-en.json`.
     Check: `npx nx test scene`, `npm run i18n:check` and
     `node --test tools/i18n-copies.test.mjs` exit 0.
@@ -435,8 +443,9 @@ once each.
    nothing from `composites/`; `grid.spec.ts` asserts on its fixed grid that
    the builder's open and closed sets at each expansion and its path equal
    the trace and path WO-036's `pathfinding.ts` returns for the same grid,
-   and that each frame's text equivalent names the expanded cell and the
-   frontier's size; `a-star.spec.ts` asserts the example's path and its
+   that the displayed cost, estimate and total equal that expansion’s
+   engine trace on a grid with unequal costs, and that each frame’s text
+   equivalent names the expanded cell and the frontier’s size; `a-star.spec.ts` asserts the example's path and its
    expansions under the octile and the zero heuristic.
 4. `npm run studies:check` exits 0 over every record at the candidate, the
    A* record as `concept-study-v2` and every other as the version it
@@ -456,7 +465,9 @@ once each.
    equivalent renders beside the drawing, the composite steps on command and
    under reduced motion offers no Play and draws without transition; and
    `apps/dotln-e2e/src/storybook.spec.ts` lists the `StudyGrid` story beside
-   the other families' and finds its composite rendered there.
+   the other families' and finds its composite rendered there. Loading the v2 study in the normal
+   reader selects the grid drawing, and stepping advances the displayed
+   cell and its text equivalent together.
 7. `collision-avoidance.model.spec.ts` asserts that on the exact head-on run
    the engine's `avoid` leaves the pair overlapping and the scene's head-on
    policy parts them from the first frame after it fires with no later
@@ -468,8 +479,10 @@ once each.
    `npm run i18n:check` and `node --test tools/i18n-copies.test.mjs` pass.
    The wall study's spec pins the straight-ahead run's
    moment labels and steps and asserts that every input's moments are
-   listed in step order. Its long- and short-ray traces support the effect
-   described by the caption.
+   listed in step order. A presentation test reads the two displayed traces
+   and compares them with two recorded runs from the same study inputs,
+   including the goal and starting state. Only the ray length varies. The
+   caption describes the difference those traces show.
 8. The scene inspector shows "read the study", linking the tool's reading,
    for a rail tool the summary lists as studied and no such line for one it
    does not (a scene spec covers both), and the e2e case follows A*'s line

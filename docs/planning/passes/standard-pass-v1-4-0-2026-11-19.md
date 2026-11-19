@@ -29,7 +29,7 @@ The target’s `main` contains [DotLn-Angular #19](https://github.com/DylanBWood
 
 The prior pass’s D7 reopens when core releases before WO-046 activates. Its new source is core v1.4.0 at `bc761ad9ce1008c72c647e9b0de63b09117ba822`. The input selection below reproduces 1,098,407 bytes at v1.0.0 and 1,109,768 at v1.4.0, 44 files in each. It counts one copy of each role skill. The new manifest digest is `ae59ca211f37c8d5163949fbb50f14c6fc5f22f41b5067db47dd4a9f92173e6a`.
 
-```sh
+```bash
 git -C ../DotLn ls-tree -r -l v1.4.0 -- \
   .claude/harness-manifest.json .claude/settings.json .codex/hooks.json \
   .claude/hooks/ .codex/hooks/ .claude/skills/ .claude/agents/ .codex/agents/ \
@@ -44,7 +44,7 @@ The local failure and condition reports, the 235-row register, the previous pass
 
 ## Orders filed and amended
 
-Eight existing orders were amended. The pass filed no new order. Every revised target header names the observed WO-036 merge. The second publisher in a pair integrates the current target before publishing.
+The first draft amended eight existing orders and refreshed their target headers to the WO-036 merge. Review added bounded corrections to the other eight open orders. Their earlier minimum target revisions and integrated-base checks remain valid. The pass filed no new order. After either sibling merges, the remaining branch integrates the current target and repeats affected checks before it lands. Either can open a verified draft first.
 
 | Orders | What changes for the executor |
 | --- | --- |
@@ -54,7 +54,7 @@ Eight existing orders were amended. The pass filed no new order. Every revised t
 | WO-044 and WO-035 | Study discovery reads the summary at integration. The translation order now measures 136 typed, 1,900 untyped and 1,427 background rows and covers the scene’s Ways group. |
 | WO-046 | Criterion 3 reproduces the snapshot at core v1.4.0. The observed manifest and the costs are current. |
 
-The review horizon also includes WO-017, WO-016, WO-018 and WO-043 in the sequence, and WO-029 through WO-032 on WS-002. The later replay keeps its historical inputs, the twin awaits authentication, and the research refill condition has not fired. The three runnable research orders integrate current target `main` by their existing step 1. The fourth waits on WO-024.
+WO-016 and WO-017 now specify which replay state survives a reload, how recorded events are ordered and how a real stage stays private. WO-018 and WO-043 tie the displayed catalog rows to their sources. WO-029 through WO-032 cover the existing fixture copies, the first summary generation and the named walkthrough examples. The later replay keeps its historical inputs, the twin awaits authentication, and the research refill condition has not fired. The three runnable research orders integrate current target `main` by their existing step 1. The fourth waits on WO-024.
 
 ## Register
 
@@ -88,12 +88,12 @@ The document census found 84 standing documents, 716 records and 13 generated do
 
 ## NoOps
 
-| Candidate | Decision and evidence | Reopen when |
-| --- | --- | --- |
-| A new order for the route readout or the wall-study helpers | Existing orders already change those exact consumers. Giving each a criterion keeps the fixes verifiable without another activation. | An owning order is withdrawn or verified without the repair. |
-| New queue entries for formation routing or non-default crowd tuning | The released scope and known outcomes are recorded above. A new order would decide a gameplay preference in advance of play. | The operator observes the relevant behavior in use or requests group routing. |
-| Changing stop levels, timing scale or host elections | The update exposed defaults and the new deadline. The updated branch passed every document task. | An observed failure or a new operator direction justifies a setting change. |
-| A new research batch | WS-002 already has four filed orders. Its refill point is fewer than two queued orders. | The research queue falls below that point. |
+| Candidate (kind) | Reason and evidence | Reevaluate when | Useful when |
+| --- | --- | --- | --- |
+| A separate route-readout or wall-study order (NoOp) | WO-037 and WO-045 already change the relevant consumers. The two repairs now have verifiable outcomes in those orders. | An owning order is withdrawn or verified without its repair. | A repair needs to ship independently. |
+| Formation routing or non-default crowd tuning (NoOp) | The released defaults pass. Each proposal would settle a gameplay preference in advance of play. | The operator observes the behavior in use or requests group routing. | A concrete scene shows the outcome the operator wants. |
+| Stop levels, timing scale or host elections (NoOp) | The release supplies the new defaults. All document tasks passed with them. | An observed failure or operator direction calls for a change. | A setting can be tied to a specific operating problem. |
+| Another research batch (NoOp) | WS-002 already has four filed orders. Its refill point is fewer than two queued. | The queue drops below two. | Another batch can use the freed research capacity. |
 
 ## Sequence
 
@@ -117,8 +117,72 @@ Three existing entries in `FOR-CORE.md` have release answers. The v1.0.1 command
 
 ## Process cost
 
-Three read-only default workers researched the target close, the core pin and the release answers. Their findings were checked against the committed sources. The initial budget reserved three independent review roles and one fresh refuter, with room for the helper’s document batches and focused rechecks under the 40-use cap. The parent was the sole repository writer. The harness reported no session token counter, scope or cutoff at entry. The updated release branch’s document gate took 0 h 1 min.
+Three read-only default workers researched the target close, the core pin and the release answers. Six default Codex review launches covered the changed branch and the otherwise unchanged orders. A fresh default refuter is the tenth planned worker use, within the cap of 40. The parent was the sole repository writer. Review receipts reported 23,626,552 tokens in aggregate across the six external sessions, including cached input. They did not print a host model readback. The parent’s session token total, source and cutoff were unavailable. The update branch’s document gate took 0 h 1 min.
 
 ## Validation
 
-The update branch passed kit verification, the harness check, lineage and the document gate. The planning reviews cover all sixteen open orders named above, including WS-002, the two standing profiles affected by the changes and every document in the branch diff. The planning judgment is filed after the reviews.
+The starter update passed kit verification, the harness check, lineage and all 15 document tasks. The planning reviews below returned 65 entries covering 50 distinct findings. Each disposition in the tables refers to the applicable report’s finding number. The helper ran one batch per role in each set. The first set took 13, 10 and 22 minutes for criteria, design and consistency. The second took 12, 10 and 18 minutes.
+
+`self-review: found 50; fixed 50; recorded 0`
+
+### Reviews of the changed documents
+
+All three reports judged commit `98338ec` against its merge base. The report names are `round-1-criteria.md`, `round-1-design.md` and `round-1-consistency.md` in this branch’s ignored review lane. The criteria report locates both parts of the operator’s dispatch. Its evidence for the update is the merge of #78 and the finish on main.
+
+| Subject | Review findings | Decision and executable check |
+| --- | --- | --- |
+| Recording a target review | criteria 1 | Give the worker the helper’s named target tree and pass that same tree to the recorder. The recorder compares the report’s declared tree with the explicit argument. |
+| Route readout following Restart | criteria 2, design 3, consistency 5 | Use the same route for the inspector and Show search. Test playback, pause without editing, then an unapplied edit while paused. The unit keeps following its recorded route and the edit leaves the composition untouched. |
+| Translated interpolations | criteria 3 | A translated sentence can still contain raw English. Assert distinct translated values for the row type and populated breadcrumbs rendered in that sentence. |
+| Wall-study comparison | criteria 4 | The study’s two authored goals differ. Compare the displayed traces with same-goal, same-start runs that vary only the sensor length. |
+| Machinery capacity | criteria 5 | The pinned hook calls anti-oscillation a rung-7 prose entry. Assert text capacity for each of the three hosts. |
+| Surface implementation and role membership | criteria 6 and 7 | Prove that the registration surface implements zero mechanisms. Remove role ids before comparing the verifier’s mechanism list with its skill’s origin. Test the two relations separately. |
+| Stop schema | design 1 | Read the current stop levels, the desktop election and the older refusal lists through one snapshot shape. The historic replay can use the same reader. |
+| Sibling integration | design 2 | The remaining branch integrates after the first sibling merges, even if both drafts are already open. The message-copy test runs on their combined changes. |
+| Stale bases and partners | design 4, consistency 8 | Correct the operative statements in WO-008, WO-024, WO-040 and WS-001. The dated dependency records still explain why WO-039 matters. |
+| Capture counts | design 5, criteria 8 | The cost generator counts distinct intake paths in the ledger section. Name the dispatch and merge confirmation there and regenerate the cost row. |
+| Scene fixture migration | consistency 1 | The writer already emits the trial and walls fixtures. Format and check those plus the new fixture, preserve both existing hash arrays and verify a normal run leaves all three files stable. |
+| Study message copy | consistency 2 | Change the testing copy with the published EIP messages. Retain the Control Bus queue assertions and run the target’s byte-equivalence test. |
+| Missing-message controls | consistency 3 | The older browser probe logs outcomes. Run the actual retry-state and visible-key assertions on the base and candidate, with a separate result for each response. |
+| Grid study reader | consistency 4 | Trace the new model through ticks, drawing mapping, the standalone component and the reader controls. Step through a v2 study in the normal reader. |
+| Inspector’s study link | consistency 6 | Load studied ids through the catalog and pass membership to the mapper. Test a listed and an unlisted tool through the facade. |
+| Grid arithmetic | consistency 7 | The search records cell membership today. Carry the actual cost, estimate and priority in each expansion and check the displayed values against a weighted engine run. |
+
+### Reviews of the other eight open orders
+
+The helper normally inlines changed orders. An additional one-batch run for each role presented WO-016, WO-017, WO-018, WO-029, WO-030, WO-031, WO-032 and WO-043 in full. Its comparison tree `5275fdfd` was made from the reviewed commit with just those eight paths omitted in a temporary Git index. This selected their existing text for review. The real index and branch were untouched. Each report has the same basename as its first counterpart in the lane `since-5275fdfd3181`. The isolated batch’s criteria table cannot locate the dispatch or update in those eight orders. The branch criteria report, the two captures and merged update supply that evidence.
+
+| Subject | Review findings | Decision and executable check |
+| --- | --- | --- |
+| Private stage input and retention | design 1 and 9, criteria 6 and 10 | Real exports use an operator-selected private directory outside the checkout. A signed-in file picker opens the reduced data locally. Synthetic fixtures exercise the guard, builds and file picker, and worktree cleanup has no claim on the operator’s files. |
+| Required research examples | design 2, criteria 13 | Reserve examples opened by the walkthrough or e2e when a batch substitutes another candidate. All four research orders follow the same rule. |
+| Map and checkpoint field parity | design 3, criteria 14 | Compare presence and value in both directions for each row. The check rejects a removed, added or altered field. |
+| Asynchronous order switches | design 4 | Only show a record and its machinery snapshot when both loads match the selected order. Exercise a late response, failure and retry. |
+| Persisted replay applications | design 5, criteria 2 | Persist the idea’s target order, occupant and beat. Verify the original ghost, caption and timing after reload and an order switch. |
+| Local sink ports | design 6 | Document the fixed development endpoint and reserve custom ports for standalone tooling tests. |
+| Silence at the start and end of a stage | design 7, criteria 9 | Start the timer at opening, reset it on a result and cancel it at the last recorded event. Check an interval with no result and a timer that would otherwise fire after the stage. |
+| Earlier twin variants | design 8, criteria 8 | Keep the ordinary registry test independent of Git. At integration, compare existing ids, digests and entries with the saved target base. Test a coordinated rewrite. |
+| Authored toy records | design 10 | Render a locally authored toy’s catalog ids, scene type and metrics. Imported run records retain their source-specific fields. |
+| Resolved toy links | design 11, criteria 11 | Bind each source value, key and resolved id to one entry. Recheck the association against the original values and detect two valid ids exchanged between tools. |
+| First study integration | design 12 | Each research order runs the existing summary writer after integrating its own records and again when integrating a concurrent merge. |
+| Bounded display of an unbounded loop | design 13 | Each frame runs one FlooP transition. Test an unfinished input at the end of the displayed prefix. |
+| Map review timing | design 14 | Run the critic after classification and joining so the sampled source, map and typed output can be checked together. |
+| Work inventory agreement | design 15 | Test loader keys, translated titles, the scene-type mapping and the styles against the summary’s work keys. |
+| Public replay segment projection | criteria 1 | Independently compare every retained field of both public source segments, including the observed failure verdict at WO-221 beat 4. |
+| Sink destination and payload | criteria 3 and 4 | Validate the actual output file on each append. At the form, check the whole serialized payload before applying an idea. Assert that an oversized entry remains editable. |
+| Offline historical source | criteria 5 | Run local schema and relationship assertions. Where the source clone is unavailable, identify the executor’s per-pin evidence and the checks the verifier could not independently repeat. |
+| Decreasing journal timestamps | criteria 7 | Keep append order, clamp backward offsets for scheduling, and test a regression with a backward clock adjustment. |
+| Toy scene paragraphs | criteria 12 | Compare each rendered paragraph with its pinned design anchor. Swapping two valid paragraphs fails the comparison. |
+| Source chapter and source-specific links | criteria 15 and 16 | Reject a passage attributed to the wrong chapter. Verify that a toy’s designed-tool links belong to its own source batch, including a valid id from another work as a negative control. |
+
+| Additional consistency findings | Decision and check |
+| --- | --- |
+| 1 and 2, all English message copies | WO-018 updates the Tools testing copy. WO-029 through WO-032 update the corresponding work scopes in the study testing copy. Each names the fixture-copy test. |
+| 3, marble study | Preserve the drawn family’s executable requirement. Use the permitted substitution if a non-reserved candidate cannot supply a runnable model. |
+| 4, catalog fixture roots | The fixture builder gives historical maps, the new repository map and the six map-free works the storage each reader actually uses. |
+| 5, work inventory controls | Exercise missing translated-title and scene-type mappings independently. Each mutation must fail the relevant membership assertion. |
+| 6, 7, 8 and 13 | These corroborate field parity, variant history, private stage retention and independent tool resolution respectively. Tests include field deletion, a coordinated variant removal or rewrite, a private export and two known ids exchanged. |
+| 9, journal observations | The installed writer can emit a tool result and a separate timing entry. A synthetic paired fixture must produce one result and preserve the next gap. |
+| 10, existing PoEAA count | Update the Unit of Work browser assertion along with the new study while the tooling check continues to verify exact membership. |
+| 11, formal-system interpreter | WO-018 owns a reading shelf. Remove the stale assignment of an interpreter sub-app. |
+| 12, versioned loader documentation | Replace the two v1-only statements where the target documents the loader. Retain the original schema and test both versions. |

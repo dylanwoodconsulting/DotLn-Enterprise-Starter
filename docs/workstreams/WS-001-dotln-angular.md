@@ -43,7 +43,7 @@ target current. The workstream is delivered when WO-004 to WO-008, WO-013 to WO-
 | WO-019 | dotln-angular | `1c3a4ff24e38d179d0fd1ad910bc6719c2740045` (WO-014's merge) | the catalog as something to read: the run's definitions, relations and hooks as each tool's data, the allow-list and the scrub gone, the reading surface, one authored Arrive study (WO-019-D005), the scene's tools typed |
 | WO-015 | dotln-angular | `bc9133e932a00d33c15bc5289d683b8078f51ee4` (provisional; the executor fast-forwarded the target worktree to `main`) | the soldier scene: the pure scene engine, twenty units on a 2D canvas behind a renderer seam, a rail of the tools the engine runs with their definitions, RTS selection, flock, arrive, formation, the first look, the root route |
 | WO-016 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the replay of a recorded order at `/machinery/replay`: its agents in their role slots over scrubbed six-field copies of WO-221 and WO-226, each agent's machinery read from core as it stood when the order ran, the operator's ideas as mechanism changes dropped on an agent with the before as a ghost, the records and replay libraries and the local idea sink |
-| WO-008 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | authentication and permissions, legitimate from the Angular side; the first road order and the last member of the purpose's critical path |
+| WO-008 | dotln-angular | `6eef542987ab2183817baba329a64373cb61b157` (WO-036's merge) | authentication and permissions from the Angular client, following WO-037 and completing the purpose’s critical path |
 | WO-017 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the digital twin's first lane: for a recorded stage, whether the twin would have made the same interventions as the operator, its variants kept as code |
 | WO-018 | dotln-angular | `eb9d227483e30164105da077f50673789d1e5c9f` (WO-039's merge, set by the 2026-11-09 pass) | the toy shelf: the run's nineteen toys as full records read on a shelf under Tools, their tools followed into the catalog, the next toy picked |
 | WO-025 | self          | this launchpad's `main` at activation      | a quality pass over this launchpad's standing documents under the kit's `quality pass:` procedure; the repository profile rewritten to the shape the operator chose |
@@ -92,8 +92,9 @@ an entry with a word. The scene leads: as the app stands it is the one
 part of it the operator likes, and they want more improvements to it (the
 operator on 2026-11-09, journal row 2026-11-10T02:37:58Z, digest
 `4a4715d6…`; D16). WO-036 supplied the field geometry and route tools. WO-037 now runs first
-with WO-024. WO-008 follows with WO-040, the last member of the purpose's critical path, whose one
-dependency merged on 2026-10-24; then the machinery view of what core has,
+with WO-024. WO-008, the last member of the purpose’s critical path, follows with WO-040.
+Its authentication prerequisite merged on 2026-10-24. The road then continues
+to the machinery view of what core has,
 WO-046; the twin's first lane, WO-017; the later replay of a recorded
 order, WO-016; and the toy shelf WO-018 with the Art of War map pass
 WO-043 behind it. Each road order builds on the target's `main` as it
@@ -102,11 +103,11 @@ finds it. The order header names the activation base.
 Two road orders do not share a pair because each brings comparison rounds
 the operator attends (rule 25), not because their files collide: `nx.json`
 last changed with WO-006 and `tsconfig.base.json` with WO-015, and a new
-library's lines there merge mechanically. The two members of a pair touch
-disjoint surfaces and hold no edge between them; the second publisher
-integrates the target's `main` and regenerates what both share before its
-publish, and the operator may run any pair one at a time (the 2026-10-30
-second pass, D9).
+library's lines there merge mechanically. Each pair has independent prerequisites. The first pair shares the app’s
+English catalog and its Tools testing copy. Either order can open its verified
+draft first. After one sibling merges, the remaining branch integrates target
+`main`, reconciles shared files and repeats the affected checks before landing.
+The operator may run a pair one at a time (the 2026-10-30 second pass, D9).
 
 **Side work.** The side members are the concept-study batch WO-024, the
 standards pass WO-040 (rule 31), the `grid` family with its A* study WO-045,

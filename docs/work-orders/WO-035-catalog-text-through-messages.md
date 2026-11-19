@@ -260,8 +260,9 @@ while the mined rows still are one.
   under a test language in which every message of the root, study and
   catalog scopes carries a visible prefix, and asserts that every visible
   text node of the listed surfaces carries the prefix, apart from numerals,
-  punctuation and text the operator typed; at the integrated base it fails,
-  because row text renders raw. The test language lives in the specs and
+  punctuation and text the operator typed. Interpolated row fields have
+  distinct translated values so an outer message cannot hide raw values.
+  The integrated base renders those fields in English and fails the check. The test language lives in the specs and
   ships nowhere. `npm run i18n:check` keeps covering the templates and the
   root and study catalogs.
 - **Documents.** `catalog.md` §Data and provenance states that the data
@@ -317,9 +318,13 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
    seed, a search by a definition word, the scene's rail, its inspector with
    a tool chosen, its log and a saved composition, writing each surface's
    visible text to `crawl-before.json`; and D054's two cases run at the base
-   with the launchpad's `docs/evidence/WO-028/ver-003/message-attack.mjs`,
-   their outcome and exit code written to `controls.json`. Check: both files
-   name the integrated commit.
+   using the response fixtures documented in the launchpad’s
+   `docs/evidence/WO-028/ver-003/message-attack.mjs`. The original probe
+   records observations. Run the same criterion-4 assertions on both
+   served builds. For each response, record whether the retry state
+   rendered, whether a raw message key appeared, and the assertion’s exit
+   code in `controls.json`. Check: both evidence files name the integrated
+   commit.
 3. `libs/shared/catalog/src/lib/catalog-messages.ts` (new, exported through
    `public_api.ts`): the derivation over the Design's list and the scope
    name of each work; its spec over every row of every bundled work. Check:
@@ -373,8 +378,10 @@ with `crawl.mjs`, `crawl-before.json`, `crawl-after.json`,
     beside WO-044's page, a new `tools-home.spec.ts` beside `tools-home.ts`,
     and `scene-page.spec.ts` gain the test language
     of the Design, built in the spec from `en.json`, the study catalogs and
-    the derived catalog messages; the cases of criteria 2, 4 (the row
-    message) and 5. Check: `npx nx test tools` and `npx nx test scene` exit
+    the derived catalog messages. Give each translated field a value distinct
+    from the surrounding message and the other fields. Check the rendered
+    substitutions in criterion 2 as well as the row message and fallback
+    cases in criteria 4 and 5. Check: `npx nx test tools` and `npx nx test scene` exit
     0, and the same cases run at the integrated base fail, both arms' exit
     codes written to `controls.json`.
 11. `apps/dotln-e2e/src/study-messages.spec.ts` gains D054's two cases.
@@ -442,8 +449,10 @@ once each.
    Design's list (title, definition, the four place parts, provenance note,
    hook clause, untyped reason, unlinked relation title, a typed row's
    observables, metrics, parameter names and units, and the work titles,
-   scene labels, row types, kinds and statuses). The case passes at the
-   candidate and fails at the integrated base, both arms' exit codes in
+   scene labels, row types, kinds and statuses). For values interpolated into
+   another message, assert each field’s distinct test translation at its
+   rendered location. In the reading’s place line this includes the row type
+   and every populated breadcrumb. The case passes at the candidate and fails at the integrated base, both arms' exit codes in
    `docs/evidence/WO-035/controls.json`.
 3. The spec of `catalog-messages.ts` derives the messages of every row of
    every bundled work and asserts that every field of the Design's list

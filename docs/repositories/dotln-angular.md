@@ -217,8 +217,11 @@ of a target-code review. Since starter v1.0.0 a launch that names no worker
 runs the instance's `default`, and `--model <name>` names another worker or
 model of its table (`npm run worker -- list`). A reviewer launched through
 the host's own worker route in a Claude session is recorded in the same lane
-with `npm run worker -- record`. Supply `--order WO-NNN --target dotln-angular`
-for a target-code report so its receipt binds the target tree that worker read.
+with `npm run worker -- record`. For a target-code review, render the review
+brief with `--order WO-NNN --target dotln-angular --dry-run`. Give the worker
+that brief and its `reviewedTree`. The report opens with `Reviewed tree: <tree>`.
+Record it with `--order WO-NNN --target dotln-angular --tree <tree>`, using
+the tree the worker actually read, including if the target advanced meanwhile.
 
 ## Find the implementation
 

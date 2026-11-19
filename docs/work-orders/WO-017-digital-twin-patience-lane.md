@@ -10,8 +10,7 @@
 **Target release notes:** reviewed
 **Cost:** adds `libs/shared/twin-model`, `libs/features/twin`,
 `libs/features/twin-data-access`, the stage exporter with `npm run
-twin:export`, its tooling test and `scripts.md` row, an ignored stage
-directory, `twin:read` in `routePermissions` with the mock's claim, a menu
+twin:export`, its tooling test and `scripts.md` row, a local stage-file picker, `twin:read` in `routePermissions` with the mock's claim, a menu
 item, `twin.*` messages, a `check-bundle.mjs` case, two documents; about 45
 source files (the planner's estimate); no runtime dependency. Removes nothing.
 Wall-clock, context bytes and tokens: unknown until run. Commands added in the
@@ -75,7 +74,8 @@ parameter and watch the twin's marks move over a faint ghost while theirs
 stay, read in one sentence what it matched and added, and keep a flip by
 exporting it as TypeScript. After a reload they sign in again (a reload ends
 the session while the mock runs in the page, WO-008) and return by the page
-kept for after the sign-in to their stage, variant and flips. They decide
+kept for after the sign-in to their selection, variant and flips. They
+reselect a locally imported file to reopen its events. They decide
 whether the variant describes them. Nothing says when the stage ran.
 
 **Observed gap (dated 2026-11-09 at `eb9d227`):** `BasePaths` holds `Board`,
@@ -100,11 +100,13 @@ leaves no result or failure row; gate results sit apart without an order.
 **Design:**
 
 - **The stage.** `tools/scripts/twin/export-stage.mjs` (`npm run twin:export
-  -- --journals <dir> --order WO-NNN --phase <phase>`; `--list` lists the
+  -- --journals <dir> --order WO-NNN --phase <phase> --out <private-dir>`; `--list` lists the
   stages) reads the `<64 hex>.jsonl` files of the directory given and writes
-  one `twin-stage-v0` file per session and phase, with an `index.json`, into
-  `apps/dotln/public/twin-stages/`, which `.gitignore` lists and the
-  `production` and `configured` builds' assets ignore. A stage is the rows of
+  one `twin-stage-v0` file per session and phase, with an index, in the
+  operator’s explicit private output directory outside the checkout and
+  static asset roots. Only the operator runs the exporter and retains or
+  removes that directory. The signed-in page imports a selected local file.
+  A stage is the rows of
   one session file naming that order and phase, a row naming neither taking
   the nearest preceding row's. Rows keep journal order as `{ i, at, kind,
   tool?, commandRun?, effect?, allowed?, completionReady?, class?, prefix?,
@@ -121,7 +123,10 @@ leaves no result or failure row; gate results sit apart without an order.
   `stageStream(stage, scheduler)` emits each agent event at its `at` on an
   injected `VirtualTimeScheduler` from `rxjs`, flushed synchronously in specs
   and on the page. Events that share an `at` are delivered in journal order, each
-  as its own scheduled action. An operator intervention's gap is the count
+  as its own scheduled action. For scheduling, clamp a backward timestamp
+  to the preceding effective offset. Preserve append order for ties. A
+  regression with offsets 0, 20 and 10 keeps the third event third.
+  An operator intervention's gap is the count
   of agent events before it; a twin intervention's gap is the count of agent
   events the stream has delivered when the variant emits it, so a variant
   that answers an event at once falls directly after that event and before
@@ -129,12 +134,19 @@ leaves no result or failure row; gate results sit apart without an order.
   `at` falls after that event. In each gap the two sides pair in order: a paired operator
   intervention is matched, an unpaired one missed, an unpaired twin one
   extra. The class is shown and does not decide a match. Shifting every `at`
-  by one constant changes no result.
+  by one constant changes no result. The observation window ends at the last
+  recorded row, including interventions retained only as reference. Deliver
+  the events and due timers through that point, then unsubscribe. Test a
+  result immediately before the end and a second stage long enough for the
+  silence timer to fire. Completion cannot flush a pending question early.
 - **The variants**, hypotheses about the operator with the planner's
   defaults: `v0-denial-step-in` (a `direction` after `after` host denials in
   a row, 1); `v0-silence-question` (a `question` once `minutes` pass with no
-  `result`, 15, on `debounceTime`); `v0-unready-stop` (a `direction` after
-  `count` stops with `completionReady: false`, 2). A `TwinVariant { id,
+  `result`, 15). Start its timer at the stage opening, reset it on a result
+  and cancel it at the stage end. A synthetic stage with no results and
+  unrelated steps beyond fifteen minutes produces one question.
+  `v0-unready-stop` emits a direction after `count` stops with
+  `completionReady: false` (default 2). A `TwinVariant { id,
   version, since, supersedes?, family, describe(events$, scheduler, params),
   params }` reads every field of the agent events and never the operator's
   interventions, the reference. A flip overrides a named parameter; a kept
@@ -144,7 +156,9 @@ leaves no result or failure row; gate results sit apart without an order.
   `.prettierignore` lists the directory. `registry.spec.ts` checks the
   working tree alone (ids, files, digests, exported lineage) and fails three
   altered copies (a row removed, a variant's bytes changed, a file with no
-  row).
+  row). At integration compare existing variant ids, digests and entries
+  to the target base so an edit to a module and its manifest together
+  still exposes a change to an earlier variant.
 - **Feature** (`libs/features/twin`, `type:feature`; `BasePaths.Twin` in the
   Machinery menu group; `twin:read` granted to the mocked default user,
   withheld from `denied`; the Twin item renders for a session that holds
@@ -154,9 +168,11 @@ leaves no result or failure row; gate results sit apart without an order.
   the twin's marks and their ghost, the operator's marks; translated
   sentences as the text equivalent), `stage-picker`, `variant-picker`,
   `flip-panel`, `match-summary` (prose), `export-variant`; `TwinStore`
-  (`twin-data-access`) loads the index and stages from the app's own assets,
-  lists an unreadable stage with its reason, and persists stage, variant and
-  flips under `dotln-angular.twin`. Every string on screen is a message in
+  (`twin-data-access`) offers the bundled synthetic stage and validates local files the signed-in
+  operator selects. Keep an imported stage in memory. Persist its selection
+  and configuration, restore the variant and flips after sign-in, and let
+  the operator reselect the local file after reload. List a validation
+  failure with its reason. Store the selection, variant and flips under `dotln-angular.twin`. Every string on screen is a message in
   `apps/dotln/public/i18n/en.json`; `twin-labels.ts` maps each family,
   parameter, kind and class through `translateSignal` in tables typed by
   those unions, so no display text sits in TypeScript (rule 9). The twin's
@@ -181,7 +197,7 @@ restatement); the operator's interventions in a variant's input (axis: they
 are the reference); committing a real stage or reading journals from the app
 (axis: the journals are private and the repository public); merging a
 phase's sessions by clock (axis: only a file's append order is certain); a
-registry check reading a base commit (axis: no later gate has this base).
+registry unit test requiring Git history (the integration comparison uses the saved target base).
 
 Live-run surfaces: at the base, the `mocked` build served by `nx
 serve-static dotln`, Storybook, MSW and the Machinery menu group
@@ -190,7 +206,7 @@ and `/denied`, not yet run here; the operator's journals, which no session
 reads.
 
 **Deliverables:** the three libraries with kits; the exporter, its script,
-test and row; the ignored stage directory; the route, permission, claim and
+test and row; local stage-file import; the route, permission, claim and
 menu item; the bundle case; two documents; `docs/evidence/WO-017/`.
 
 **Execution plan:**
@@ -201,8 +217,9 @@ menu item; the bundle case; two documents; `docs/evidence/WO-017/`.
    merge (`ls -d libs/shared/auth`), else stop for a planning pass; then as
    WO-005 step 1. Check: the decisions file records the commit.
 2. Generate the three libraries, logged. Check: `npx nx show projects`.
-3. The exporter, its script and `scripts.md` row, `.gitignore`, the assets
-   ignore in `apps/dotln/project.json`, `tools/twin-export.test.mjs`. Check:
+3. The exporter, its script and `scripts.md` row, and
+   `tools/twin-export.test.mjs`. Reject a resolved output inside the checkout
+   or a served directory before writing any stage. Check:
    `npm run test:tooling`, `npm run check:scripts`.
 4. `stage.ts`, `stage-stream.ts`, `match.ts`. Check: `npx nx test twin-model`.
 5. The variants, `index.ts`, `variants.json`, `.prettierignore`, the
@@ -241,26 +258,34 @@ then the target gate plain and review once each.
    journal directory: one `twin-stage-v0` file per session and phase holding
    only the Design's keys in journal order; the preceding-row rule; the
    host's notification, a hand-back and the `resume:` dispatch kept out of
-   the interventions; a path, digest, receipt, denial reason, advisory and
+   the interventions. Supply a tool-result record and its separate
+   PostToolUse timing entry as the installed writer emits them. Exactly
+   one contributes a result and the next gap stays in place. A path, digest, receipt, denial reason, advisory and
    message text, each seeded in the input, absent from the output; a seeded
    row of an unrecognized shape counted in the line the command prints for
    its session file; and a session file whose rows name the order and phase
-   and yield no stage named with a nonzero exit. `git
-   check-ignore -q apps/dotln/public/twin-stages/x.json` and `npm run
-   check:scripts` exit 0.
-2. With a file in `apps/dotln/public/twin-stages/`, `npx nx build dotln
-   --configuration=production` and `--configuration=configured` each leave
-   no `twin-stages` under `dist/apps/dotln/browser`.
+   and yield no stage named with a nonzero exit. A synthetic export to an
+   operator-selected private directory succeeds. A public-assets destination
+   is rejected before any bytes are written. `npm run check:scripts` passes.
+2. Import a synthetic export through the authorized file picker in the
+   mocked app. It displays its events without issuing an HTTP request for
+   the file. The development, mocked, local, production and configured
+   builds contain only the bundled example. Inspect a private synthetic
+   marker in build outputs and static responses to confirm it is absent.
 3. `npx nx test twin-model` exits 0 with specs on the synthetic stage
    asserting every gap, match, miss and extra the Design's rule gives; a
    twin intervention emitted with an agent event falling after it; a stage
    whose denial, operator intervention and next step share one `at`, on
    which the denial variant's intervention falls in the operator's gap and
    is matched; equal results with every `at` shifted by one constant; a result of gaps,
-   classes and verdicts with no time field; each variant's interventions at
-   its defaults; a flip moving the twin's interventions and not the
+   classes and verdicts with no time field; each variant’s interventions at
+   its defaults, including silence that expires within the stage and a
+   pending silence timer cancelled at its end; a flip moving the twin's interventions and not the
    operator's; a stream carrying no intervention row; and the registry spec,
    `variants.json` listing the three variants, failing each altered copy.
+   The integration comparison preserves every variant at the saved base
+   and detects an existing variant and matching manifest edited together
+   in a synthetic before-and-after pair.
 4. `grep -rlE "JSON.parse|new Function|eval\(|rxjs/testing" libs/shared/twin-model/src libs/features/twin/src --include='*.ts' | grep -v spec`
    prints nothing; a spec asserts each registry entry exports `describe` as a
    function; the export spec type-checks a generated variant against
@@ -334,10 +359,9 @@ sessions exports as several stages, and one session that ran a phase twice
 as one; a closed order's journals last as long as its retained lane. The operator runs the export; no session reads
 `docs/control/local/` (CLAUDE.md §Secrets). A real stage is read on the
 operator's machine alone: the evidence, the screenshots and the reports
-show the synthetic stage. The `mocked`, `local` and `development` builds
-serve the ignored stage directory on that machine, which is how the page
-reads a stage; the repository publishes no build output (no workflow
-uploads or deploys one at `eb9d227`). Production has no identity
+show the synthetic stage. Only the signed-in operator selects a reduced
+stage from local storage. Its chosen directory lies outside the checkout,
+so closing an order worktree cannot discard it. Production has no identity
 provider (WO-008), so the walkthrough runs on the `mocked` build. Receipts
 008 to 012 judged the patience lane; their items on the gated route, the
 signed-in e2e, the `mocked` build and an unparseable stored value carry
@@ -349,7 +373,7 @@ headers follow WO-012's declared policy.
 stages; a score across stages; the operator's words or the agent's text;
 committing a real stage or serving one beyond the operator's machine;
 reading journals from the app; the grid over several orders; any write
-outside browser storage and the ignored stage directory.
+outside browser storage and the exporter’s operator-selected private directory.
 
 **Operator-review assumptions:** the operator exports the stages they want
 with `npm run twin:export` on their machine, takes the three first variants

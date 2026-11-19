@@ -83,7 +83,7 @@ WO-036 in place of WO-024.
 **Depends on:** WO-034 merged (hard: the reshape rule, the shared
 formatter, the description-object shape, the tightened corpus test and the
 crawl this order is held to; merged as DotLn-Angular #16, released as
-`DotLn Angular v0.10.2`); WO-028 merged (hard: the twenty presentations it reshapes; merged as DotLn-Angular #14, released as `DotLn Angular v0.10.0`); WO-039 merged (hard: its one loader rewrites the flow specs this order also edits, and `catalog.md` §The models can say the enterprise batch follows the shape only once WO-039 has merged; the refuter's finding on criterion 7, the 2026-11-08 pass; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`, the base above, set by the second 2026-11-08 pass).
+`DotLn Angular v0.10.2`); WO-028 merged (hard: the twenty presentations it reshapes; merged as DotLn-Angular #14, released as `DotLn Angular v0.10.0`); WO-039 merged (hard: its one loader rewrites the flow specs this order also edits, and `catalog.md` §The models can say the enterprise batch follows the shape only once WO-039 has merged; the refuter's finding on criterion 7, the 2026-11-08 pass; merged as DotLn-Angular #18 on 2026-11-08, released as `DotLn Angular v0.11.1`). The current Repository pin includes WO-039 and the later WO-036 merge.
 **Workstream:** WS-001
 
 <!-- dotln-dependencies:start -->
@@ -323,8 +323,11 @@ and sizes; the nineteen reworded labels with their specs;
    prints 0; WO-034's label sweep reads zero cut and zero overprinted
    frames at 360, 768, 1440, about 2080×1460 and 3840×1620.
 8. The nineteen state labels in `apps/dotln/public/i18n/studyEip/en.json`
-   reworded under the one choice, their specs updated, the before and after
-   listed in the evidence README. Check: `npx nx test tools` exits 0.
+   and the matching keys in `libs/features/tools/testing/src/lib/study-en.json`
+   use the new wording. Adjust affected sentence assertions while retaining
+   Control Bus’s queue-count and state checks. List the original and revised
+   labels in the evidence README. Check: `npx nx test tools` and
+   `node --test tools/i18n-copies.test.mjs` pass.
 9. The adapted crawl after over the inventory's studies into `dom-after.json` and the diff into `dom-diff.json`; the comparator's control (the base crawl against a copy of it with one unrelated text node changed) recorded with its exit code. Check: zero differing text nodes outside the nineteen sentences step 8 lists; the control exits non-zero.
 10. The write-back of the standards-pass rule to the target's
     `docs/ai-reference/catalog-rules.md`: the sentence at lines 154 to 155
@@ -422,8 +425,8 @@ audits, the two placeholder reports, `dom-diff.json`, `label-sweep.json`,
 **Known issues and carry-ins:** WO-039 supplied the loader used by the flow
 specs. The pinned target includes that merge and WO-036. WO-040 pairs with
 WO-008. Its standards work stays in the studies and their messages, while
-WO-008 owns the authentication feature. The second publisher integrates
-`main` and repeats its checks on the integrated tree. A research batch
+WO-008 owns the authentication feature. After either sibling merges, the remaining branch integrates target
+`main` and repeats the affected checks before it lands. A research batch
 that lands first (WO-029 or WO-030) adds keys to `studyRxjs/en.json` or
 `studyEip/en.json` beside the nineteen this order rewords; this order integrates the target's `main` before its handoff and again before its final publish, reruns the stream specs, recaptures the before-crawl at the new base and records the sibling's regenerated catalog baselines as the sibling's. The next Movement research batch
 may be cut now that WO-034 has merged (WS-002 rule 6) and copies this

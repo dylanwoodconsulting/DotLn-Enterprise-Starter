@@ -113,8 +113,12 @@ only `layer:shared-data-access`, events, models, core and util.
   `loadout`, `hosts`, `roles`, `mechanisms` (kind as core declares it, else
   `undeclared`; statement from the `id:` line, the paired `Name:` line or
   the role's `description`, else none), `surfaces` (a hook's event, `kind`,
-  `policy.mechanisms`), `residue` and the refusals; no runtime hashes or
-  code. Loaded as a lazy chunk by `import()`, as the catalog is.
+  `policy.mechanisms`), `residue` and `stops`. A stop carries the
+  source statement and the level the mined core block gives it
+  (`refuse`, `advise` or `off`). A stop governed by a separate election
+  has a null level. Older blocks that enumerate refusals map those
+  entries to `refuse`. The host-capacity calculation uses hook evidence
+  independently. The snapshot excludes runtime hashes and code. Loaded as a lazy chunk by `import()`, as the catalog is.
 - **Miner** (`tools/scripts/core-snapshot.mjs`, a helper): `--core <git dir>
   --commit <sha> [--tag <name>] [--out <file>]` reads by `git show`, never
   checking out, and reads an input directory the commit lacks as empty
@@ -132,9 +136,12 @@ only `layer:shared-data-access`, events, models, core and util.
   and implements none, and a hook may carry a unit it does not enforce);
   else `absent`; the host's residue item beside it. Role
   ids are roles, served by the hooks whose origins name them. *Relations*:
-  role to mechanisms, mechanism to roles and surfaces, surface to what it
-  implements (origin less role ids) and the roles it serves, mechanisms
-  sharing a surface. *Gaps*: text-only on a host while enforced or advised on
+  a role carries the non-role ids in its skill’s origin. A surface lists the
+  roles and mechanisms in its origin. Show its implementation separately,
+  using the handler entries and the commit-message and permission hook rules
+  above. A registration surface has no implemented mechanisms. A skill or a
+  prose entry carries its instructions as text. These relations also show
+  which mechanisms share a surface. *Gaps*: text-only on a host while enforced or advised on
   another; enforced on no host; each residue item.
 - **Store and page:** `CoreSnapshotStore` holds the snapshot with WO-007's
   call state and persists the selection under `dotln-angular.machinery.core`
@@ -240,8 +247,10 @@ target gate plain and review once each.
 2. `npm run check:fixtures` exits 0 with the snapshot check; `npm run
    test:tooling` exits 0 with tests that the miner reads by `git show`,
    refuses an absolute path and an e-mail shape, reads an absent input
-   directory as empty, prints no value on failure,
-   and that `--check` refuses a dangling id.
+   directory as empty, reads a legacy refusal and the current block’s
+   configurable stops and separately elected desktop control through the
+   same schema, prints no value on failure, and rejects a dangling id in
+   `--check`.
 3. `node tools/scripts/core-snapshot.mjs --core <path> --commit
    bc761ad9ce1008c72c647e9b0de63b09117ba822 --tag v1.4.0 --out <scratch>`
    prints PASS and `cmp` exits 0 against the committed snapshot, run from the
@@ -254,12 +263,14 @@ target gate plain and review once each.
    Copilot by its `PreToolUse` hook and text-only on Codex with core's
    residue reason; `verify-app-before-done` advised at `Stop`;
    `process-cost` `text` on every host and enforced on none, its rung-2
-   registration notwithstanding; `anti-oscillation`, which `finish.mjs` also
-   names, read by that hook's `policy.mechanisms` entry and `absent` on no
-   host whose skills carry it; every residue item among the gaps;
-   `finish.mjs` related to each unit its configuration names; a role's
-   mechanisms equal to its stamp's ids; a stored selection that does not
-   parse opening the first level.
+   registration notwithstanding. The `anti-oscillation` entry in `finish.mjs`
+   is a rung-7 prose rule. Its capacity is `text` separately on Claude,
+   Copilot and Codex. Every residue item appears among the gaps. The hook
+   stays related to the units its configuration names. The rung-2
+   `.claude/settings.json` registration lists `process-cost` in its
+   origin and has zero implemented mechanisms. The verifier role carries
+   its skill’s origin ids after the role ids are removed. An invalid
+   stored selection opens the first level.
 5. `grep -rnE "dotln-key-value-list|<dl" libs/features/machinery/src` prints
    nothing; `npm run i18n:check` and `npm run check:templates` exit 0;
    `grep -rlE "from 'node:|from \"node:|require\(" libs/features/machinery/src

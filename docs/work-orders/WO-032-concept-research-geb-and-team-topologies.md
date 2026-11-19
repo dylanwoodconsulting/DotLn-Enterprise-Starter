@@ -150,7 +150,10 @@ unstudied beyond WO-024's, 185 and 382 of them related to by other rows.
 - **Executable arm where it exists, as WO-024's.** A study with a mechanism
   to run carries `executable: { kind: 'typescript', module }` with a spec: a
   recursion over a toy structure, BlooP's bounded and FlooP's unbounded loop
-  over one toy problem, a completeness check over the toy rule system
+  over one toy problem. Each FlooP frame performs one transition. A bounded
+  displayed prefix can end with the computation still running. Its spec
+  exercises a nonterminating input and the reader remains responsive.
+  Other studies include a completeness check over the toy rule system
   WO-024's Consistency study authored, a fantasy-rule derivation, a count of
   communication paths over a team graph, a sum of domain complexity per
   team; the others mark `executable: null` with their reason. The `rxjs`
@@ -175,6 +178,9 @@ unstudied beyond WO-024's, 185 and 382 of them related to by other rows.
   `fork_turns: none` whose brief opens with the printed preamble, under Claude
   the `dotln-worker` definition). Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
+- A record the walkthrough, route checks or comparison opens by name stays
+  in this batch. Use the permitted substitution for a different candidate
+  and record the replacement and reason in the decisions.
 - **The inventory's consumers.** The work's record chunk
   (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
   every record and which `check-studies.mjs` holds to the directory) and the
@@ -221,11 +227,16 @@ with `fan-out.md`, `review.md`, `README.md` (the link check),
 2. The authors' brief into `fan-out.md` from WO-024's brief, with each
    work's index, the twenty rows, the analogy and absent-material rules, the
    authoring date and the launch form of this host; dispatch the ten authors; merge the twenty drafts into the work's record
-   chunk and register each model in `study-models.ts`. Check: `npx nx test tools` exits 0 over
+   chunk and register each model in `study-models.ts`. Copy the work’s
+   English study messages into the matching scope of
+   `libs/features/tools/testing/src/lib/study-en.json` and run
+   `node --test tools/i18n-copies.test.mjs`. Check: `npx nx test tools` exits 0 over
    the models' specs.
 3. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile;
-   set `checked`. Check: `npm run studies:check` exits 0 over
+   set `checked`. Regenerate `studies-summary.json` with the existing
+   `npm run studies:check -- --write-summary` writer on this batch’s first
+   integration and again after a sibling merges. Check: `npm run studies:check` exits 0 over
    `studies/geb/` and `studies/tt/`.
 4. The link check into `docs/evidence/WO-032/README.md`. Check: every URL has
    a status.
@@ -377,7 +388,7 @@ each.
   `Target release classification: minor` and `Target release notes:
   reviewed` are set under WO-012's declared policy.
 - The remaining rows of both works are the next cuts (WS-002 rule 6); the
-  formal-system interpreter as a sub-app stays WO-018's route.
+  formal-system interpreter has no assigned sub-app order. WO-018 owns the toy shelf.
 
 **Non-goals:** a new visual family, composite, route or page; design rounds;
 a formal-system interpreter as a sub-app; the remaining rows of either work;

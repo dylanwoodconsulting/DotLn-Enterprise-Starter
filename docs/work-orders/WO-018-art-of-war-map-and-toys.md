@@ -195,7 +195,10 @@ many of them the catalog has.
   (`designed`, `built`,
   `graduated`, `did-not-stick`), `route` (a `BasePaths` value for a built
   toy, else null), `origin`, and `toolIds`, one catalog id or null per
-  entry of `tools`, kept beside the run's values and never replacing them.
+  entry of `tools`, kept beside the run’s values. For a `this-app` design
+  the author supplies the catalog ids directly, in the toy’s declared
+  order. Its page shows their linked catalog titles, scene type and named
+  metrics. Run-only source fields belong to imported toys.
 - **Text through the message system** (rule 9; G3). Every string a toy page
   shows is a message. The record holds keys, `toys.<toy id>.<field>` with a
   list's entries by position, for the run's prose fields, the app's `title`
@@ -219,7 +222,12 @@ many of them the catalog has.
   Otherwise it stays unresolved (null).
   `docs/evidence/WO-018/tool-resolution.json` lists every entry with the
   run's value, the id or null and the rule that resolved it, and each
-  record's `toolIds` equals its entries. On the toy page a resolved tool is
+  record’s tool entries keep source value, positional message key and resolved
+  id together. Derive `toolIds` and the evidence from the same ordered
+  entries. A test interchanges two known ids and expects the resolution
+  check to fail. Recompute each expected id independently from the source
+  value and the ranked lookup rule, including exact-id precedence and a
+  duplicate-title case that stays unresolved. On the toy page a resolved tool is
   a link to its reading, `/tools/catalog/<id>`, named by its catalog title;
   an unresolved one reads as the run wrote it, with the words "not in the
   catalog" (`tools.toys.notInCatalog`) and no link. The run's values are
@@ -395,7 +403,9 @@ record, `walkthrough.md` and its screenshots.
    and `toy-page`; the shelf and toy-reading composites (candidate A
    first); the facets; the menu link in `apps/dotln/src/app/app.ts`; the
    Tools home's Toys line and counts in `tools-home.ts`; `tools.toys.*` keys
-   in `apps/dotln/public/i18n/en.json`; stories `Shelf`, `ToyBuilt`,
+   in `apps/dotln/public/i18n/en.json` and the corresponding Tools block
+   of `libs/features/tools/testing/src/lib/tools-en.json`. Run
+   `node --test tools/i18n-copies.test.mjs`. Stories `Shelf`, `ToyBuilt`,
    `ToyDesigned`, `ToyUnresolvedTool` and one per shelf candidate while its
    round is open; component specs that render, from fixtures, a resolved
    tool as a link and an unresolved one with `tools.toys.notInCatalog` and
@@ -495,6 +505,9 @@ once each.
    table does not map each fail the mode. Where the verifier's host has no
    copy of the file at that digest, the recorded command and output and the
    tooling test stand as the evidence.
+   Also compare each rendered `youWouldSee` with the scene paragraph at that
+   toy’s pinned design anchor. Two synthetic paragraphs exchanged between
+   valid source records fail this independent comparison.
 4. **The tools in the catalog.** `docs/evidence/WO-018/tool-resolution.json`
    lists every entry of every run toy's `tools` with the run's value, the
    catalog id or null and the rule that resolved it, and each record's
@@ -502,7 +515,9 @@ once each.
    tool as a link to `/tools/catalog/<id>` named by its catalog title, an
    unresolved one as the run's text with `tools.toys.notInCatalog` and no
    link, and a `this-app` toy after the run's toys in its own group under
-   its source.
+   its source. A `this-app` example shows its authored id as a catalog link,
+   with its scene type and metrics. Swapping two resolved ids in a run
+   toy fails the per-entry check.
 5. **Status and routes.** The Twenty is `built` with `route`
    `BasePaths.Scene`; every other run toy, The patience lane among them,
    is `designed` with a null route;

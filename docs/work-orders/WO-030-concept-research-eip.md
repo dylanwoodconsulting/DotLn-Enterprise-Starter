@@ -170,6 +170,9 @@ fan-out procedure exist and are idle between batches.
   `fork_turns: none` whose brief opens with the printed preamble, under Claude
   the `dotln-worker` definition). Each worker writes only in its private copy of the target,
   spawns nothing and starts no gate; the executor stays the one writer.
+- A record the walkthrough, route checks or comparison opens by name stays
+  in this batch. Use the permitted substitution for a different candidate
+  and record the replacement and reason in the decisions.
 - **The inventory's consumers.** The work's record chunk
   (`libs/shared/catalog/src/studies/<work>.ts`, which imports and exports
   every record and which `check-studies.mjs` holds to the directory) and the
@@ -222,11 +225,16 @@ link check), `walkthrough.md` and its screenshots.
    of WO-022's batch, which WO-040 rewords), the authoring date and the
    launch form of this host;
    dispatch the ten authors; merge the twenty drafts into the work's record
-   chunk and register each model in `study-models.ts`. Check: `npx nx test
+   chunk and register each model in `study-models.ts`. Copy the work’s
+   English study messages into the matching scope of
+   `libs/features/tools/testing/src/lib/study-en.json` and run
+   `node --test tools/i18n-copies.test.mjs`. Check: `npx nx test
    tools` exits 0 over the executable modules' specs and the flow specs.
 3. Dispatch the two critics; dispose the findings; rewrite through the same
    authors or apply the bounded corrections in the parent under the profile;
-   set `checked`. Check: `npm run studies:check` exits 0 over `studies/eip/`.
+   set `checked`. Regenerate `studies-summary.json` with the existing
+   `npm run studies:check -- --write-summary` writer on this batch’s first
+   integration and again after a sibling merges. Check: `npm run studies:check` exits 0 over `studies/eip/`.
 4. The link check into `docs/evidence/WO-030/README.md`. Check: every URL has
    a status.
 5. e2e `apps/dotln-e2e/src/catalog.spec.ts`: Enterprise Integration Patterns
