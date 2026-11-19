@@ -12,6 +12,7 @@ import { syncArtifacts } from "./sync.mjs";
 import {
   checkGenerated,
   checkArtifact,
+  compileStaleRuntime,
   generatedArtifacts,
 } from "./lib/generated-artifacts.mjs";
 import { TOOL_ROOT } from "./lib/config.mjs";
@@ -200,11 +201,9 @@ test("WO-275 criterion 3: the operator commands page holds the kit guide's marke
   assert.equal(read(root, "docs/OPERATOR.md"), before);
   // A longer fence keeps its length on the page, so a block that holds a
   // three-backtick line (a here-document writing a fence) keeps its bytes.
-  const longer = changed.replace(
-    "npm run worktree -- start WO-NNN docs/work-orders/WO-NNN-<slug>.md\n```\n",
-    "npm run worktree -- start WO-NNN docs/work-orders/WO-NNN-<slug>.md\n```\n\n<!-- operator-commands run-order -->\n````sh\ncat <<'EOF' > fence.md\n```\nEOF\n````\n",
-  );
-  assert.notEqual(longer, changed);
+  // The block is added at the guide's end, so the case does not depend on
+  // where the guide sets its own blocks.
+  const longer = `${changed}\n<!-- operator-commands run-order -->\n\`\`\`\`sh\ncat <<'EOF' > fence.md\n\`\`\`\nEOF\n\`\`\`\`\n`;
   const { page: rendered, faults: longerFaults } = renderOperatorPage(root, {
     guide: longer,
   });
@@ -419,6 +418,110 @@ test("sync refuses a timed-out check without running its writer", async (t) => {
   );
   assert.match(row.reason, /timed out/);
   assert.ok(!commands.includes(artifact.write), "no writer ran");
+});
+
+test("WO-284 criterion 2: a generated check ended for time names its key, the figure, the file and the listing command, and sync leaves its artifact unwritten", async (t) => {
+  const { root, artifacts } = fixture(t);
+  writeFileSync(join(root, "format"), "current\n");
+  // A check that takes five seconds, under a root whose file gives each
+  // generated check a fifth of a second.
+  const slow = {
+    ...artifacts[0],
+    check: [process.execPath, "-e", "setTimeout(() => {}, 5000)"],
+  };
+  const limits = (body) => {
+    mkdirSync(join(root, "docs/control"), { recursive: true });
+    writeFileSync(
+      join(root, "docs/control/time-limits.json"),
+      JSON.stringify(body),
+    );
+  };
+  limits({ limits: { "generated.check": { set: 200 } } });
+  const miss =
+    "Time limit generated.check reached: 200 ms. docs/control/time-limits.json raises it, scales every limit or turns them off; npm run limits lists every key.";
+  const checked = checkArtifact(slow, root);
+  assert.deepEqual(
+    [checked.exitCode, checked.timedOut, checked.timeLimitKey, checked.stale],
+    [1, true, "generated.check", false],
+  );
+  assert.ok(checked.output.endsWith(miss), checked.output);
+  assert.ok(checked.durationMs < 4000, String(checked.durationMs));
+  // The generated row fails on it and the row's case carries the message.
+  const generated = checkGenerated(root, { artifacts: [slow] });
+  assert.equal(generated.exitCode, 1);
+  assert.ok(generated.cases[0].output.endsWith(miss));
+  // Sync reports the artifact unread and runs no writer for it.
+  const result = await syncArtifacts(root, { artifacts: [slow] });
+  const row = result.rows.find((entry) => entry.artifact === slow.name);
+  assert.deepEqual(
+    [row.before, row.after, row.action],
+    ["unknown", "unknown", "refused"],
+  );
+  assert.ok(row.reason.startsWith("check timed out;"), row.reason);
+  assert.ok(row.reason.endsWith(miss), row.reason);
+  // Core's build of a stale runtime before a selection: ended for time, it
+  // hands its caller the text that names its limit, since the generated
+  // check that follows judges only the runtime that stayed stale.
+  mkdirSync(join(root, "packages/skeleton/src"), { recursive: true });
+  const built = compileStaleRuntime(root, {
+    artifacts: [
+      {
+        name: "runtime",
+        inspect: () => ({ current: false, reason: "a source is newer" }),
+        // The build's stand-in below never starts this command.
+        write: [process.execPath, "-e", ""],
+        writeLimit: "generated.runtime-build",
+      },
+    ],
+    run: (_command, _root, key) => ({
+      exitCode: 1,
+      output: "",
+      timedOut: true,
+      timeLimitKey: key,
+    }),
+  });
+  assert.deepEqual(built, [
+    {
+      name: "runtime",
+      exitCode: 1,
+      miss: "Time limit generated.runtime-build reached: 0 h 2 min (120000 ms). docs/control/time-limits.json raises it, scales every limit or turns them off; npm run limits lists every key.",
+    },
+  ]);
+  // Raised, the same check is read: here it finishes and reports no stale
+  // artifact of its own, so it is judged and no longer ended for time.
+  limits({ limits: { "generated.check": { set: 60_000 } } });
+  const read = checkArtifact(
+    { ...slow, check: [process.execPath, "-e", "setTimeout(() => {}, 600)"] },
+    root,
+  );
+  assert.deepEqual([read.exitCode, read.timedOut], [0, undefined]);
+  // Sync's own format row reads its own key, and a writer the writers' key.
+  limits({
+    limits: {
+      "sync.format": { set: 200 },
+      "generated.check": { set: 60_000 },
+    },
+  });
+  const formatted = await syncArtifacts(root, {
+    artifacts: [],
+    run: (command, _root, key) => ({ exitCode: 0, output: "", key }),
+  });
+  assert.equal(formatted.exitCode, 0);
+  const keys = [];
+  await syncArtifacts(root, {
+    artifacts: [artifacts[1]],
+    run: (command, _root, key) => {
+      keys.push(key);
+      return command.includes("check") && keys.length < 3
+        ? { exitCode: 1, output: `DOTLN_ARTIFACT_STALE ${artifacts[1].name}` }
+        : { exitCode: 0, output: "" };
+    },
+  });
+  assert.deepEqual(keys.slice(0, 3), [
+    "sync.format",
+    "generated.check",
+    "sync.write",
+  ]);
 });
 
 test("sync refuses an unclassified failure without running its writer", async (t) => {
@@ -715,6 +818,11 @@ test(
     const { execGit } = await import("./lib/git.mjs");
     const { appendFileSync, existsSync, lstatSync } = await import("node:fs");
     const { copy } = editionCopy(t, { workspace: true });
+    const { writeReleaseHistory } = await import("./lib/release-history.mjs");
+    // A clone may legitimately retain a table through an older tag. Give
+    // these recovery cases a complete table so its boundary can be recovered
+    // from the table itself after its observation record is lost.
+    writeReleaseHistory(copy);
     const inventory = generatedArtifacts(copy);
     const byName = (name) => inventory.find((row) => row.name === name);
     const bytes = (file) => readFileSync(join(copy, file));

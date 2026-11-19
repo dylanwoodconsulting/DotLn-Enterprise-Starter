@@ -19,7 +19,9 @@
     "packages/skeleton/src/dispatch-journal.mjs",
     "packages/skeleton/src/test-selection.mjs",
     "packages/skeleton/src/worker-catalog.mjs",
-    "packages/skeleton/src/worker-models.mjs"
+    "packages/skeleton/src/worker-models.mjs",
+    "packages/skeleton/src/time-limits.mjs",
+    "packages/skeleton/src/stops.mjs"
   ],
   "directories": [
     "packages/beacons"

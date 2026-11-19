@@ -62,6 +62,11 @@ import {
   parseMarkdown,
 } from "./lib/markdown-links.mjs";
 import { suites, STRUCTURAL_TASKS } from "./test-runner.mjs";
+import {
+  TIME_LIMITS,
+  renderTimeLimits,
+  suiteTimeLimitKey,
+} from "../packages/skeleton/src/time-limits.mjs";
 
 import {
   repository,
@@ -159,7 +164,7 @@ test("[document] the kit owns its complete guide and the front page is a pinned 
   // migration in the changing order's decisions and release's Read before upgrading.
   assert.equal(
     sha256(readFileSync(join(repository, "scripts/kit/README.client.md"))),
-    "4b60b964df6168c2d9ddef3b806d051d9f3b0e2be5ea40dfef10760909ab9699",
+    "7b2c2d3210e0593b93eb11cba7f49d2f6ed968aabbaf6c680c8b5beffdafad9e",
   );
   const seed = readFileSync(join(kit, "README.md"), "utf8");
   assert.equal(
@@ -200,6 +205,62 @@ test("WO-254 criterion 5: the exported instance's operator record says a standin
       "A standing rule enters this record, or any standing document, only from the operator's direction: the planning pass that writes it names it in its Rules recorded block with the operator message's journal reference and capture digest, and `plan check` refuses a rule whose message was a question or that names no message.",
     ),
     record,
+  );
+});
+
+test("WO-287 criterion B6: a fresh export's CLAUDE.md says its Clean Room and Secrets sections are the owner's own text, its kit guide has the section that states which layer is whose, and its features list prints the rules and no line saying the floor cannot be chosen", () => {
+  const floor = readFileSync(join(kit, "CLAUDE.md"), "utf8");
+  // The seed heads the section plainly and says whose it is.
+  assert.match(floor, /^## Clean Room$/mu);
+  assert.doesNotMatch(floor, /locked floor/u);
+  assert.ok(
+    floor
+      .replace(/\s+/gu, " ")
+      .includes(
+        "This section and Secrets are the owner's own text; edit them here.",
+      ),
+    floor,
+  );
+  assert.match(floor, /^## Secrets$/mu);
+  // The line the emit writes into the same file about that section agrees
+  // with the seed: it is the owner's own text, and nothing says locked.
+  assert.ok(
+    floor.includes(
+      "clean-room: Source provenance needs the owner's judgment; the Clean Room section of this file is the owner's own text.",
+    ),
+    floor,
+  );
+  assert.doesNotMatch(floor, /floor stays locked/u);
+  const guide = readFileSync(join(kit, "docs/KIT.md"), "utf8");
+  const section = guide
+    .split("### What is the kit's and what is the author's")[1]
+    ?.split("### The build overlay")[0];
+  assert.ok(section, "the kit guide states which layer is whose");
+  for (const said of [
+    "**The platform** is mechanism",
+    "**The author's layer** is how the kit's author wants work conducted",
+    '"unequip": ["author"]',
+    "| The Clean Room and Secrets sections of `CLAUDE.md` | Yours |",
+  ])
+    assert.ok(section.includes(said), said);
+  // The export's own features list: the rules with their layers, and no
+  // line that says the floor cannot be chosen.
+  const listed = ok(
+    run(process.execPath, ["scripts/features.mjs", "list"], { cwd: kit }),
+    "features list",
+  ).stdout;
+  assert.match(listed, /^## Rules$/mu);
+  assert.match(
+    listed,
+    /^\| durations \| shared rule \| author \| a sentence in the role's text \| yes \| the kit \| "unequip": \["durations"\] \|$/mu,
+  );
+  assert.match(
+    listed,
+    /^\| worker-launch \| shared rule \| platform \| a sentence in the role's text \| yes \| the kit \| none: every build carries it \|$/mu,
+  );
+  assert.doesNotMatch(
+    listed,
+    /not electable|cannot be chosen|locked floor|clean.?room/iu,
   );
 });
 
@@ -632,6 +693,7 @@ test("WO-074 criterion 1: the scripts are byte-identical to UPSTREAM.md's commit
     "docs/control/README.md",
     "docs/control/budgets.json",
     "docs/control/doc-baseline.json",
+    "docs/control/time-limits.json",
     "docs/decisions/README.md",
     "docs/discovery/README.md",
     "docs/evidence/README.md",
@@ -957,6 +1019,19 @@ test("WO-201 criterion 4: verify checks runtime and compiled tests, and reports 
   } finally {
     writeFileSync(script, original);
   }
+  // A listed file that is no regular file, a link here, is one more kit
+  // edit: verification counts it and does not refuse.
+  const guide = join(kit, "docs/KIT.md");
+  const guideBytes = readFileSync(guide);
+  try {
+    rmSync(guide);
+    symlinkSync(script, guide);
+    const linked = ok(verify(), "a kit file replaced by a link");
+    assert.match(linked.stdout, /^kit: 1 kit files differ from the manifest$/m);
+  } finally {
+    rmSync(guide, { force: true });
+    writeFileSync(guide, guideBytes);
+  }
 });
 
 test("the exported instance checks runtime, coordination records and explicit diagnostics separately", (t) => {
@@ -1130,7 +1205,130 @@ test("the exported instance checks runtime, coordination records and explicit di
   assert.ok(binMode & 0o111);
   chmodSync(bin, 0o700);
   assert.deepEqual(runtimeState(), cleanRuntime);
+  // The instance's configuration row loads the instance's own configuration:
+  // it passes on the seeded one and names what the loader refuses in one the
+  // owner broke, where the kit's tests of the loader would still pass.
+  const configuration = () =>
+    run(process.execPath, ["scripts/structural-checks.mjs", "configuration"], {
+      cwd: destination,
+    });
+  assert.match(
+    ok(configuration(), "the instance's configuration row").stdout,
+    /^Configuration: dotln\.config\.json loads; /u,
+  );
+  const seededConfiguration = readFileSync(
+    join(destination, "dotln.config.json"),
+    "utf8",
+  );
+  try {
+    writeFileSync(
+      join(destination, "dotln.config.json"),
+      JSON.stringify({ version: 1, roots: { control: 7 } }),
+    );
+    const refused = configuration();
+    assert.equal(refused.status, 1, refused.stdout);
+    assert.match(refused.stdout, /^Configuration refused: .*roots\.control/mu);
+  } finally {
+    writeFileSync(join(destination, "dotln.config.json"), seededConfiguration);
+  }
+  // The kit's own configuration tests are no part of an instance's
+  // selections; named, they run after the instance's structural phase.
+  const namedSuite = ok(
+    run(
+      process.execPath,
+      [
+        "scripts/test-runner.mjs",
+        "--only",
+        "configuration-root",
+        "--list",
+        "--selected",
+      ],
+      { cwd: destination },
+    ),
+    "the kit's configuration tests, by name",
+  )
+    .stdout.split("\n")
+    .filter((line) => line.includes(" — protects:"))
+    .map((line) => line.split(" — ")[0]);
+  assert.deepEqual(namedSuite, [
+    ...STRUCTURAL_TASKS,
+    "kit-verify",
+    "configuration-root",
+  ]);
+  // And named, they run and pass there: the kit's tests of its loader and of
+  // the time-limit table, the template and the listing command among them.
+  const namedRun = ok(
+    run(
+      process.execPath,
+      ["scripts/test-runner.mjs", "--only", "configuration-root"],
+      { cwd: destination },
+    ),
+    "the kit's configuration tests run by name in the instance",
+  );
+  assert.match(namedRun.stdout, /^PASS configuration-root /mu);
+  // Room for a slower machine is checked here and not asserted: the three
+  // selections below run at one third of every time limit, so a release
+  // whose instance gate needs more than a third of a figure on core's host
+  // fails this case before it ships. The seed holds every key at the kit's
+  // figure; the instance's owner would set scale the same way.
+  const limitsPath = join(destination, "docs/control/time-limits.json");
+  const seededLimits = readFileSync(limitsPath, "utf8");
+  assert.equal(seededLimits, renderTimeLimits());
+  const setLimits = (change) => {
+    const body = JSON.parse(seededLimits);
+    change(body);
+    writeFileSync(limitsPath, `${JSON.stringify(body, null, 2)}\n`);
+  };
+  // Each task's own result, not the selection's exit alone: a task that was
+  // ended for time, that did not run or pass, or that ran as long as the
+  // figure that applied to it, is outside its limit.
+  const outsideLimits = (row) =>
+    row.taskTimeline.flatMap((task) =>
+      task.failureKind === "timeout"
+        ? [`${task.name} was ended for time at ${task.timeoutMs} ms`]
+        : task.executed !== true || task.exitCode !== 0
+          ? [`${task.name} did not pass`]
+          : !(task.durationMs < task.timeoutMs)
+            ? [`${task.name} took ${task.durationMs} ms of ${task.timeoutMs}`]
+            : [],
+    );
+  // The arm that shows the judgment failing: with one row's figure below
+  // what the row takes, the selection fails and the judgment names the row.
+  setLimits((body) => {
+    body.scale = 1 / 3;
+    body.limits["suite.format"].set = 1;
+  });
+  const outlivedStarted = performance.now();
+  const outlived = run(
+    process.execPath,
+    ["scripts/harness.mjs", "bounded", "--", "npm", "test"],
+    { cwd: destination },
+  );
+  const outlivedWallMs = Math.round(performance.now() - outlivedStarted);
+  assert.notEqual(outlived.status, 0, outlived.stdout);
+  assert.match(
+    outlived.stdout,
+    /Time limit suite\.format reached: 1 ms\. docs\/control\/time-limits\.json raises it, scales every limit or turns them off; npm run limits lists every key\./u,
+  );
+  assert.match(
+    outlived.stdout,
+    /Required format structural preflight was ended for time before it finished/u,
+  );
+  assert.deepEqual(
+    outsideLimits(
+      readGateChecks(destination)
+        .filter((row) => row.checkId !== "structural")
+        .at(-1),
+    ).filter((failure) => failure.startsWith("format ")),
+    ["format was ended for time at 1 ms"],
+  );
+  setLimits((body) => {
+    body.scale = 1 / 3;
+  });
   const observed = [];
+  // What each selection's tasks took beside the reduced figure they ran
+  // under, printed for the order's evidence.
+  const limited = [];
   const ran = new Set();
   for (const { command, args } of selections) {
     const list = ok(
@@ -1149,6 +1347,9 @@ test("the exported instance checks runtime, coordination records and explicit di
       .filter((line) => line.includes(" — protects:"))
       .map((line) => line.split(" — ")[0]);
     assert.deepEqual(names.slice(0, 6), STRUCTURAL_TASKS);
+    // The instance's own configuration row, never the kit's tests of it.
+    assert.ok(names.includes("configuration"));
+    assert.ok(!names.includes("configuration-root"));
     assert.ok(!names.includes("build"));
     // The recorded Git surface check is core's, as every core-only row is.
     assert.ok(!names.includes("git-surface"));
@@ -1199,6 +1400,27 @@ test("the exported instance checks runtime, coordination records and explicit di
       [...names].sort(),
     );
     for (const suite of row.cases) ran.add(suite.name);
+    // Every task ran under a third of its kit figure and finished inside it.
+    for (const task of row.taskTimeline) {
+      const key = suiteTimeLimitKey(task.name);
+      assert.equal(task.timeLimitKey, key, task.name);
+      assert.equal(
+        task.timeoutMs,
+        Math.round(TIME_LIMITS[key].ms / 3),
+        task.name,
+      );
+    }
+    assert.deepEqual(outsideLimits(row), [], `npm ${command.join(" ")}`);
+    limited.push({
+      command: `npm ${command.join(" ")}`,
+      durationMs: row.durationMs,
+      tasks: row.taskTimeline.map((task) => ({
+        name: task.name,
+        durationMs: Math.round(task.durationMs),
+        timeoutMs: task.timeoutMs,
+        timeLimitKey: task.timeLimitKey,
+      })),
+    });
     observed.push({
       command: `npm ${command.join(" ")}`,
       listedSuites: names,
@@ -1237,6 +1459,11 @@ test("the exported instance checks runtime, coordination records and explicit di
     });
   }
   assert.deepEqual([...ran].sort(), inventory);
+  // The seed is the instance's again: every key at the kit's figure.
+  writeFileSync(limitsPath, seededLimits);
+  t.diagnostic(
+    `WO284_INSTANCE_LIMITS ${JSON.stringify({ scale: 1 / 3, outlivedArm: { command: "npm test", wallMs: outlivedWallMs, key: "suite.format", figureMs: 1 }, selections: limited })}`,
+  );
   // With the instance's own files in the tree every selection above passed.
   // Its emit and its check pass too, it is still a kit root, and no task
   // rewrote a file under the reserved root or left one beside them.
@@ -1282,15 +1509,29 @@ test("the exported instance checks runtime, coordination records and explicit di
         "-e",
         `
     import assert from 'node:assert/strict';
-    import { readFileSync, rmSync } from 'node:fs';
+    import { readFileSync, rmSync, writeFileSync } from 'node:fs';
     import { findGateCheck, readGateChecks, gateInstanceInputDigest } from './scripts/lib/gate-evidence.mjs';
     import { gateCandidates, coveringGateCheck } from './scripts/lib/gate-reuse.mjs';
     import { prepareKitReleaseRuntime } from './scripts/lib/release-kit-runtime.mjs';
     const root = process.cwd();
     const row = readGateChecks(root).filter(row => row.checkId === 'npm test').at(-1);
-    assert.equal(findGateCheck(root, 'npm test', row.treeHash).evidenceRef, row.evidenceRef);
     assert.equal((await gateCandidates(root, 'npm test')).rows.at(-1).evidenceRef, row.evidenceRef);
-    assert.equal((await coveringGateCheck(root, 'npm test', ['kit-verify', 'generated'])).row.evidenceRef, row.evidenceRef);
+    // The row ran at a third of every figure. Under the seed's kit figures it
+    // stands for no claim and no evidence command; under the third it ran
+    // at, it does.
+    assert.equal(findGateCheck(root, 'npm test', row.treeHash), undefined);
+    assert.equal((await coveringGateCheck(root, 'npm test', ['kit-verify', 'generated'])).row, undefined);
+    const limits = 'docs/control/time-limits.json';
+    const seed = readFileSync(limits, 'utf8');
+    const third = JSON.parse(seed);
+    third.scale = 1 / 3;
+    writeFileSync(limits, JSON.stringify(third, null, 2) + '\\n');
+    try {
+      assert.equal(findGateCheck(root, 'npm test', row.treeHash).evidenceRef, row.evidenceRef);
+      assert.equal((await coveringGateCheck(root, 'npm test', ['kit-verify', 'generated'])).row.evidenceRef, row.evidenceRef);
+    } finally {
+      writeFileSync(limits, seed);
+    }
     await prepareKitReleaseRuntime(root);
     const runtime = JSON.parse(readFileSync('.claude/harness-manifest.json', 'utf8')).profiles[0].profile.runtime;
     rmSync(runtime.snapshot, {recursive: true});
@@ -1307,27 +1548,66 @@ test("the exported instance checks runtime, coordination records and explicit di
   assert.deepEqual(runtimeState(), cleanRuntime);
   const record = join(destination, "docs/invalid-instance-record.md");
   const recordIdentity = gateCodeIdentity(destination);
+  // Lines of the instance's own stops section, written for one run and
+  // taken away after it.
+  const withStops = (stops, body) => {
+    const path = join(destination, "dotln.config.json");
+    const before = existsSync(path) ? readFileSync(path) : null;
+    const config = before ? JSON.parse(before) : { version: 1 };
+    writeFileSync(
+      path,
+      `${JSON.stringify({ ...config, stops: { ...config.stops, ...stops } }, null, 2)}\n`,
+    );
+    try {
+      return body();
+    } finally {
+      if (before) writeFileSync(path, before);
+      else rmSync(path, { force: true });
+    }
+  };
+  const documentRow = () =>
+    readGateChecks(destination)
+      .filter((row) => row.checkId === "npm run test:docs")
+      .at(-1);
   try {
     writeFileSync(
       record,
       "# Invalid record\n\n[Missing](missing-coordination-record.md)\n",
     );
     assert.equal(gateCodeIdentity(destination), recordIdentity);
-    const invalid = run(
-      process.execPath,
-      ["scripts/harness.mjs", "bounded", "--", "npm", "run", "test:docs"],
-      { cwd: destination },
+    const documents = () =>
+      run(
+        process.execPath,
+        ["scripts/harness.mjs", "bounded", "--", "npm", "run", "test:docs"],
+        { cwd: destination },
+      );
+    // A link that does not resolve meets a stop that guards the kit's own
+    // records. An instance that sets nothing is told of it, by file and
+    // line, and its selection passes with the task recorded as advised.
+    const advised = documents();
+    assert.equal(advised.status, 0, advised.stdout + advised.stderr);
+    assert.match(
+      advised.stdout,
+      /ADVISED docs\/invalid-instance-record\.md:3: missing file: missing-coordination-record\.md \(stop docs-links\)/u,
     );
-    assert.equal(invalid.status, 1, invalid.stdout + invalid.stderr);
-    const failed = readGateChecks(destination)
-      .filter((row) => row.checkId === "npm run test:docs")
-      .at(-1);
-    assert.equal(failed.codeIdentity, recordIdentity);
-    assert.equal(failed.reusedSuites, 0);
-    assert.equal(
-      failed.cases.find((row) => row.name === "docs-check").exitCode,
-      1,
-    );
+    const advisedRow = documentRow();
+    assert.equal(advisedRow.codeIdentity, recordIdentity);
+    assert.deepEqual(advisedRow.advisedTasks, [
+      { name: "docs-check", stops: ["docs-links"] },
+    ]);
+    // Where the owner sets that stop to refuse, the same record fails the
+    // selection as it did before a stop had a level.
+    withStops({ "docs-links": "refuse" }, () => {
+      const invalid = documents();
+      assert.equal(invalid.status, 1, invalid.stdout + invalid.stderr);
+      const failed = documentRow();
+      assert.equal(failed.codeIdentity, gateCodeIdentity(destination));
+      assert.equal(failed.reusedSuites, 0);
+      assert.equal(
+        failed.cases.find((row) => row.name === "docs-check").exitCode,
+        1,
+      );
+    });
   } finally {
     rmSync(record, { force: true });
   }
@@ -1427,10 +1707,46 @@ test("the exported instance checks runtime, coordination records and explicit di
       identity,
       "the ordinary gate identity includes tracked compiled tests",
     );
-    refused = run(
+    // A carried file that differs from the kit's manifest meets two stops
+    // that guard the kit's own records: the runtime kept current and the
+    // kit as its manifest records it. An instance that sets nothing is told
+    // of both, with the path, and its selection goes on.
+    const advised = run(
       process.execPath,
-      ["scripts/harness.mjs", "bounded", "--", "npm", "test"],
+      [
+        "scripts/harness.mjs",
+        "bounded",
+        "--",
+        "npm",
+        "test",
+        "--",
+        "--only",
+        "kit-verify",
+      ],
       { cwd: destination },
+    );
+    assert.equal(advised.status, 0, advised.stdout + advised.stderr);
+    assert.ok(
+      advised.stdout.includes(changedPath),
+      advised.stdout + advised.stderr,
+    );
+    assert.deepEqual(
+      readGateChecks(destination)
+        .at(-1)
+        .advisedTasks.map((task) => task.stops),
+      [["gate-generated"], ["gate-kit-verify"]],
+      advised.stdout + advised.stderr,
+    );
+    // Where the owner sets them to refuse, the complete selection stops at
+    // the first, as it did before a stop had a level.
+    refused = withStops(
+      { "gate-generated": "refuse", "gate-kit-verify": "refuse" },
+      () =>
+        run(
+          process.execPath,
+          ["scripts/harness.mjs", "bounded", "--", "npm", "test"],
+          { cwd: destination },
+        ),
     );
     assert.equal(refused.status, 1);
     assert.ok(
@@ -1797,8 +2113,10 @@ test("WO-074 criteria 1, 2 and 5: without package source the export activates it
       "packages/skeleton/src/runtime-inputs.mjs",
       "packages/skeleton/src/shell-reading.mjs",
       "packages/skeleton/src/source-reading.mjs",
+      "packages/skeleton/src/stops.mjs",
       "packages/skeleton/src/temporary-root-records.mjs",
       "packages/skeleton/src/test-selection.mjs",
+      "packages/skeleton/src/time-limits.mjs",
       "packages/skeleton/src/usage-observation.mjs",
       "packages/skeleton/src/usage-reading.mjs",
       "packages/skeleton/src/worker-catalog.mjs",
@@ -3241,16 +3559,20 @@ test("WO-226 a fast-forwarded export restores its selected runtime for recovery,
           .map((line) => ({ path, line })),
       );
     assert.deepEqual([...new Set(buildAdvice.map((row) => row.path))].sort(), [
+      "scripts/features.mjs",
       "scripts/lib/harness-runtime.mjs",
       "scripts/release.mjs",
       "scripts/resume.mjs",
     ]);
+    // Each such line chooses a kit's own remedy where the build is core's:
+    // the bootstrap where a runtime is to be prepared, and the kit's
+    // verification where a carried compiled file is missing.
     for (const row of buildAdvice.filter(
       (row) => row.path !== "scripts/lib/harness-runtime.mjs",
     ))
       assert.match(
         row.line,
-        /isKit(?:Root|Worktree).*node scripts\/bootstrap\.mjs.*npm run build/,
+        /isKit(?:Root|Worktree).*(?:node scripts\/bootstrap\.mjs|node scripts\/launchpad\.mjs verify).*npm run build/,
       );
     assert.match(
       readFileSync(join(destination, "docs/KIT.md"), "utf8"),
@@ -3373,4 +3695,23 @@ test("WO-225 kit carries the console schemas and npm console uses the carried bu
   );
   const json = console.stdout.slice(console.stdout.indexOf("{\n"));
   assert.equal(JSON.parse(json).viewModelVersion, "uifa-board-v1");
+});
+
+test("WO-284 criterion 8: a fresh export's first order keeps a terms list that is present and creates one from the example only where none is", () => {
+  const order = readFileSync(
+    join(kit, "docs/work-orders/WO-001-environment-truth.md"),
+    "utf8",
+  );
+  const item = order
+    .split(/^4\. /mu)[1]
+    .split(/^5\. /mu)[0]
+    .replace(/\s+/gu, " ");
+  assert.ok(
+    item.startsWith(
+      "Local-terms registration: where `docs/control/local/terms.txt` is present, keep it as it is. It holds the entries the operator registered before this order, and this order never replaces, rewrites or empties it. Only where none is present, create it from `scripts/kit/terms.example.txt` ",
+    ),
+    item,
+  );
+  // The item still screens the files the order writes.
+  assert.ok(item.includes("npm run terms -- check "), item);
 });
