@@ -548,6 +548,8 @@ component in a DotLn-Angular feature. The analogy stays because it answers the
 one question a reader has when opening a component: **what is this allowed to
 know?**
 
+The catalog connects these boundaries to what each layer can describe in Levels of description (`/tools/catalog/geb2:8`) and to what teams exchange across them in the Team Topologies studies, starting with Collaboration mode (`/tools/catalog/tt3:7`).
+
 | Role      | Asks                   | Knows                        | May inject                                | Lives in                                                        |
 | --------- | ---------------------- | ---------------------------- | ----------------------------------------- | --------------------------------------------------------------- |
 | Salesman  | Does it look right?    | its own inputs               | nothing; a component that needs `ElementRef` or `DOCUMENT` is a wrapper, which may inject platform tokens (receipt 006; UI planning pass of 2026-10-21, D13) | `libs/shared/ui`, `libs/<app>/ui`                               |
@@ -837,8 +839,8 @@ sequence's order, then the later members with their reopening conditions
 | WO-023 the enterprise pattern studies | twenty patterns, sixteen stepped in state drawings from small executable models and four structural, each naming where the app embodies it | merged; DotLn-Angular #17, `DotLn Angular v0.11.0` |
 | WO-039 standards pass II | nothing new on screen but the narrow register's state headings, which keep two thirds of their size at 360 and break a longer name across two lines; the enterprise batch's code read as the example an executable-model batch copies, Foreign Key Mapping's limit counting what it should | merged; DotLn-Angular #18, `DotLn Angular v0.11.1` |
 | WO-036 walls and ways | walls and obstacles drawn on the field, a squad routing around them, replanning, a no-route state they can read, head-on pairs parting, a crowd that comes to rest | merged in DotLn-Angular #19 and released as `DotLn Angular v0.12.0`. [Evidence](../evidence/WO-036/README.md) |
-| WO-037 shooting and bullets | three units marking a crossing piece, two animation aims, a wall that stops the volley, counted hits and a knockout that re-forms the squad | final-reviewed; DotLn-Angular #20 awaits the operator's merge. [Evidence](../evidence/WO-037/README.md) |
-| WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts with relations drawings | filed beside WO-037 |
+| WO-037 shooting and bullets | three units marking a crossing piece, two animation aims, a wall that stops the volley, counted hits and a knockout that re-forms the squad | merged in DotLn-Angular #20 and released as `DotLn Angular v0.13.0`. [Evidence](../evidence/WO-037/README.md) |
+| WO-024 levels, loops and teams | ten Gödel, Escher, Bach and ten Team Topologies concepts, each stepped as a map of named things and the relationships between them, four with a small mechanism the reader can change | final-reviewed; its DotLn-Angular pull request on `feat/levels-loops-and-teams-studies` awaits the operator's merge. [Evidence](../evidence/WO-024/README.md) |
 | WO-008 authentication and permissions | sign-in through the mocked provider, an account page that says in prose who is signed in and what they may do, a denied page that names the missing permission, a session that refreshes once and ends cleanly | filed |
 | WO-040 standards pass III | nothing new on screen but nineteen flow state sentences that read as English; both movement batches reading as one example | filed beside WO-008 |
 | WO-045 the grid family and the A* study | the A* search stepped cell by cell with its heuristic switched off and on; the inspector's link from a tool to its study; the two avoidance studies showing what the scene runs | filed after WO-040 |
@@ -899,12 +901,12 @@ enters that reading (the operator's restatement of 2026-11-09, journal row 2026-
 | WO-021 | merged   | DotLn-Angular #12, `DotLn Angular v0.8.0`, its records #48; [evidence](../evidence/WO-021/README.md) |
 | WO-022 | merged | DotLn-Angular #13, `DotLn Angular v0.9.0`, its records #50; [evidence](../evidence/WO-022/README.md) |
 | WO-023 | merged | DotLn-Angular #17, `DotLn Angular v0.11.0`, its records #67; [evidence](../evidence/WO-023/README.md) |
-| WO-024 | filed    | [the order](../work-orders/WO-024-concept-studies-geb-and-team-topologies.md) |
+| WO-024 | final-reviewed | its DotLn-Angular pull request on `feat/levels-loops-and-teams-studies` awaits the operator's merge; [evidence](../evidence/WO-024/README.md) |
 | WO-027 | merged   | DotLn-Angular #15, `DotLn Angular v0.10.1`, its records #61; [evidence](../evidence/WO-027/README.md) |
 | WO-034 | merged | DotLn-Angular #16, `DotLn Angular v0.10.2`, its records #66; [evidence](../evidence/WO-034/README.md) |
 | WO-035 | filed    | [the order](../work-orders/WO-035-catalog-text-through-messages.md) |
 | WO-036 | merged | DotLn-Angular #19, `DotLn Angular v0.12.0`. [Evidence](../evidence/WO-036/README.md) |
-| WO-037 | final-reviewed | DotLn-Angular #20 awaits the operator's merge; [evidence](../evidence/WO-037/README.md) |
+| WO-037 | merged | DotLn-Angular #20, `DotLn Angular v0.13.0`, its records #80; [evidence](../evidence/WO-037/README.md) |
 | WO-039 | merged | DotLn-Angular #18, `DotLn Angular v0.11.1`, its records #70; [evidence](../evidence/WO-039/README.md) |
 | WO-040 | filed    | [the order](../work-orders/WO-040-standards-pass-movement-second-batch.md) |
 | WO-045 | filed    | [the order](../work-orders/WO-045-grid-family-and-a-star-study.md) |
