@@ -1,0 +1,1597 @@
+{
+  "base": "http://127.0.0.1:61194",
+  "startedAt": "2026-11-21T03:25:35.849Z",
+  "sizes": [
+    {
+      "size": "2080x1460",
+      "steps": [
+        {
+          "name": "tools",
+          "at": "2026-11-21T03:25:36.335Z",
+          "url": "/tools",
+          "fits": true,
+          "home": "Tools Read the works behind the toys. Follow a concept into its neighbours, then choose something to try. Read the catalog AI for Games768 concepts40 studied Enterprise Integration Patterns288 concepts20 studied Gödel, Escher, Bach573 concepts10 studied Patterns of Enterprise Application Architecture455 concepts20 studied RxJS742 concepts20 studied Team Topologies637 concepts10 studied"
+        },
+        {
+          "name": "catalog",
+          "at": "2026-11-21T03:25:37.225Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelf": "THE WORKS AI for Games 768 concepts 40 studied units on terrain Enterprise Integration Patterns 288 concepts 20 studied channels Gödel, Escher, Bach 573 concepts 10 studied levels Patterns of Enterprise Application Architecture 455 concepts 20 studied channels RxJS 742 concepts 20 studied marbles Team Topologies 637 concepts 10 studied teams"
+        },
+        {
+          "name": "geb",
+          "at": "2026-11-21T03:25:37.636Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Gödel, Escher, Bach 573 concepts 10 studied levels",
+          "studiedLinks": [
+            "Jumping out of the system",
+            "Decision procedure",
+            "Isomorphism",
+            "Consistency",
+            "Gödel numbering",
+            "Levels of description",
+            "Chunking",
+            "Active symbols",
+            "Sentence G",
+            "Strange loop"
+          ]
+        },
+        {
+          "name": "levels-open",
+          "at": "2026-11-21T03:25:38.572Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "heading": "Levels of description",
+          "intro": "Look at one thing and try to answer two different questions about it. The details you need can change even while the thing in front of you stays exactly the same. That is the idea behind levels of description.",
+          "specimen": "READ ONE LINE OF TEST OUTPUT We made a tiny guide for this test. It contains two links, #install and #start, and headings named install and start. We ran the check and the runner printed this line. ok 1 - both guide links have a target Look for the small word “ok.” It consists of two characters. Read it as a test verdict and it means the first check passed. The words after the dash came from the name we wrote for the test. They tell you exactly what was checked. Would the test still pass if the setup instructions were out of date?",
+          "worked": "THE WORKED EXAMPLE Imagine a tutorial that links to a setup guide. During a 45-minute work session your team revises the guide first. A guard blocks one extra edit while a checker follows the saved guide’s links. Here are four invented entries you could lay side by side after that afternoon. The labels name types of DotLn records. Hook refusal · “Edit blocked.” The guard attached the refusal to th",
+          "caption": "Read from the bottom up. The bottom arrow joins two records from the same check. The next arrow links that check to the assignment it helps verify. The top arrow leads to the plan that scheduled the work.",
+          "accessibleName": "Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+        },
+        {
+          "name": "levels-prediction",
+          "at": "2026-11-21T03:25:39.478Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "answer": "Yes. The checker only looked for the two link targets. The same green result can sit beside an outdated paragraph. Now read the assignment below to find out what else the team promised."
+        },
+        {
+          "name": "levels-stepped",
+          "at": "2026-11-21T03:25:39.979Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Hook refusal",
+              "reading": "In focus Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+            },
+            {
+              "step": 1,
+              "active": "node:Gate row",
+              "reading": "In focus Gate row. Did the links work? The checker followed them in the saved copy and recorded a pass. The blocked edit and the passing check happened during the same run."
+            },
+            {
+              "step": 2,
+              "active": "node:Work order",
+              "reading": "In focus Work order. What did the team agree to deliver? The assignment called for revised setup steps and working links. The passing row answers only the part about links."
+            },
+            {
+              "step": 3,
+              "active": "node:Planning pass",
+              "reading": "In focus Planning pass. Why do the guide first? The tutorial will send readers there tomorrow. The plan records that dependency. To find out what happened to one edit, you must look back down at the refusal."
+            }
+          ]
+        },
+        {
+          "name": "levels-pseudocode",
+          "at": "2026-11-21T03:25:40.888Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "pseudocode": "const events = readEventsFor('Setup guide', example.parameters.windowMinutes);\nconst refusals = events.filter(event => event.kind === 'Edit blocked');\n\nconst gateRows = [];\nfor (const [runId, edits] of Map.groupBy(refusals, edit => edit.gateRunId)) {\n  gateRows.push({ ...readGateRow(runId, 'Guide links'), refusals: edits });\n}\n\nconst orders = [];\nfor (const [orderId, rows] of Map.groupBy(gateRows, row => row.orderId)) {\n  orders.push({ ...readWorkOrder(orderId), evidence: rows });\n}\n\nconst planningPasses = [];\nfor (const [passId, assignments] of Map.groupBy(orders, order => order.passId)) {\n  planningPasses.push({ ...readPlanningPass(passId), assignments });\n}",
+          "steps": [
+            "In the 45-minute recording, find the “Edit blocked” entry for the setup guide. It names the Guide links run in which the guard refused that extra write.",
+            "Read the “Guide links passed” row with the same run identifier. It records the saved guide that was checked. The refusal and the pass answer different questions about that run.",
+            "Follow the row’s work-order identifier to the existing assignment, “Revise setup steps and check links.” Its first requirement needs separate evidence.",
+            "Read the planning pass named by that assignment. Its written ordering, “Guide first, tutorial next,” gives you the dependency. Grouping results cannot supply the planner’s reason."
+          ]
+        },
+        {
+          "name": "levels-streams",
+          "at": "2026-11-21T03:25:42.213Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "text": "Think in streams An RxJS reading of the same example. RXJS PSEUDOCODE Illustrative: this shows the shape of the stream. Nothing here runs or is tested. // Illustrative: these helpers read a finished recording and its saved records. Each group reads the record named by its key. import { filter, from, groupBy, map, mergeMap, toArray } from 'rxjs'; const refusals$ = from(readEventsFor('Setup guide', example.parameters.windowMinutes)).pipe( filter(event => event.kind === 'Edit blocked') ); const gat"
+        },
+        {
+          "name": "levels-limits",
+          "at": "2026-11-21T03:25:42.605Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "limits": [
+            "A gate row can seal off the hook's detail while you ask whether the checked version passed. If an edit slips through and changes the guide, use the event trail and the gate's recorded revision to find out which version the pass covers.",
+            "The analogy uses run, order and pass identifiers to join the views. A gate covering several orders may supply evidence to each of them. The order's criterion and the planning pass's reason for adding the guide still live in their written records.",
+            "The stream example assumes the recording ends. With a live feed, each group needs a closing rule before an array of its events can appear."
+          ]
+        },
+        {
+          "name": "levels-elsewhere",
+          "at": "2026-11-21T03:25:43.930Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "links": [
+            "Chrome DevTools Performance panel → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "Gödel, Escher, Bach, Basic Books → https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/g%C3%B6del-escher-bach/9780465026562/?lens=basic-books",
+            "DotLn Kit Guide → https://github.com/DylanBWood/DotLn/blob/main/docs/KIT.md",
+            "Chrome DevTools Performance features → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "RxJS groupBy implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/groupBy.ts",
+            "RxJS toArray implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/toArray.ts"
+          ],
+          "nearby": [
+            "Chunking\nSee how grouping events can give a higher-level reader a smaller set of units to inspect.",
+            "Sealed-off levels\nAsk when a view can rely on its own terms and which lower-level change forces you to open the detail.",
+            "Strange loop\nFollow a crossing between levels that eventually comes back to the one where it began."
+          ]
+        },
+        {
+          "name": "loop-open",
+          "at": "2026-11-21T03:25:44.343Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "heading": "Strange loop",
+          "specimen": "WHERE DOES EACH INSTRUCTION SEND YOU? We wrote these two cards for this lesson. Imagine picking up the first card, doing what it says and putting it down. Then read the second. Count the windows in this room. Count the letters on this card. Both cards start the same way. Your eyes pick out the marks, then you read them as an instruction. Look at the last words on each card to decide what to count. Which card sends you back to its own ink?",
+          "source": [
+            "View the 1956 Print Gallery on the museum website → https://www.escherinhetpaleis.nl/en/about-escher/masterpieces/print-gallery"
+          ]
+        },
+        {
+          "name": "loop-stepped",
+          "at": "2026-11-21T03:25:44.878Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. Start in the exhibition room where the visitor stands."
+            },
+            {
+              "step": 1,
+              "active": "edge:exhibits",
+              "reading": "In focus Gallery exhibits Seaport print. At this level, the seaport print is an object hanging on the wall."
+            },
+            {
+              "step": 2,
+              "active": "edge:depicts",
+              "reading": "In focus Seaport print depicts Seaport scene. Look into the picture at the buildings along the waterfront."
+            },
+            {
+              "step": 3,
+              "active": "edge:return",
+              "reading": "In focus Seaport scene contains Gallery. The gallery appears among the seaport buildings. The arrow points back to the room where the print hangs."
+            },
+            {
+              "step": 4,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. You are back at the starting point. The room that holds the picture also appears inside it."
+            }
+          ],
+          "returned": true
+        },
+        {
+          "name": "loop-restart",
+          "at": "2026-11-21T03:25:45.764Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "slider": "4",
+          "focused": "range"
+        },
+        {
+          "name": "isomorphism",
+          "at": "2026-11-21T03:25:46.479Z",
+          "url": "/tools/catalog/geb1:65",
+          "fits": true,
+          "heading": "Isomorphism",
+          "worked": "THE WORKED EXAMPLE Follow the same pair, L and R, along both paths. Write their digits 1 and 2 together in base three and their value is 1 × 3 + 2 = 5. Encode the letters separately and combine the two codes by shifting and adding, and you also get 5. The last step tests the fixed candidate 3. Open Gödel numbering to run the encoder and try other candidate numbers.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:joinWords",
+              "reading": "In focus L then R join to form LR. Start with L followed by R. Join the words by putting R after L."
+            },
+            {
+              "step": 1,
+              "active": "edge:encodeWord",
+              "reading": "In focus LR encodes as 5. LR gives the digits 12 in base three, which represent 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:encodePair",
+              "reading": "In focus L then R encode as 1 then 2. Start again with the same pair. This time encode L and R separately."
+            },
+            {
+              "step": 3,
+              "active": "edge:joinCodes",
+              "reading": "In focus 1 then 2 combine to give 5. Shift 1 by one base-three place and add 2. Both routes meet at 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus 5 decodes to LR. Read the digits 12 from left to right and turn them back into L and R."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. In base three, 3 is written 10. The digit 0 has no letter, so this positive number lies outside the image."
+            }
+          ]
+        },
+        {
+          "name": "godel",
+          "at": "2026-11-21T03:25:47.798Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "heading": "Gödel numbering",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:encodePair",
+              "reading": "In focus Words L and R encode as Codes 1 and 2. Start each code at zero. Multiply by three and add the digit for each letter in order."
+            },
+            {
+              "step": 1,
+              "active": "edge:joinCodes",
+              "reading": "In focus Codes 1 and 2 combine to give code 5. The number of base-three places on the right is 1. The join is 1 × 3 + 2 = 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:joinWords",
+              "reading": "In focus Words L and R join to form word LR. Write the second word after the first to see the same join on the word side."
+            },
+            {
+              "step": 3,
+              "active": "edge:encodeWord",
+              "reading": "In focus word LR encodes as code 5. Encoding the joined word gives 5. Joining the codes gives 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus code 5 decodes to word LR. Repeatedly divide 5 by three. Read the remainders in reverse order to recover LR."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. The numeral 10 in base three has a zero digit. Dividing 3 by three exposes that remainder, so the candidate is outside the image."
+            }
+          ],
+          "model": "Executable model libs/features/tools/src/lib/studies/geb/godel-numbering.model.ts The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps.",
+          "specNote": "The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps."
+        },
+        {
+          "name": "godel-candidate-7",
+          "at": "2026-11-21T03:25:49.179Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "reading": "In focus Candidate 7 decodes to word RL. The candidate decodes to RL and belongs to the image.",
+          "nodes": [
+            "Words L and R",
+            "Codes 1 and 2",
+            "word LR",
+            "code 5",
+            "Candidate 7",
+            "word RL"
+          ]
+        },
+        {
+          "name": "teams",
+          "at": "2026-11-21T03:25:50.090Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Team Topologies 637 concepts 10 studied teams",
+          "studiedLinks": [
+            "Conway's law (1968)",
+            "Homomorphic force",
+            "Reverse Conway manoeuvre",
+            "Team-scoped flow",
+            "Seven-to-nine maximum effective team size",
+            "Platform as a product",
+            "Collaboration mode",
+            "X-as-a-Service mode",
+            "Facilitating mode",
+            "Organizational sensing"
+          ]
+        },
+        {
+          "name": "mode-1",
+          "at": "2026-11-21T03:25:51.246Z",
+          "url": "/tools/catalog/tt3:7",
+          "fits": true,
+          "heading": "Collaboration mode",
+          "intro": "When a decision needs knowledge from two teams, bring their examples and prototypes into the same trial. Both teams help interpret the results and change the design. Give that work a question and a deadline so everyone knows when to return to their own work.",
+          "specimen": "CAN THE JOINT SESSIONS END? Imagine Checkout needs a running copy of a change to test it. Release Platform can provide one, but the two teams have to agree when a preview is ready and what happens when a build fails. We wrote these trial notes for the example. During joint work · Checkout brought a passing and a failing build. Both teams agreed to show the link only when the preview was ready. At handoff · A Checkout engineer who missed the sessions used the instructions to create and remove a preview and diagnose the failed build. Release Platform checked that the failed run left nothing running. At first, each team holds a piece the other needs. At the end, an engineer who missed the joint sessions can follow the instructions alone. Release Platform owns and supports the service. Checkout owns its builds. Would agreeing on the instructions be enough to end this trial?",
+          "caption": "Follow the highlighted exchange from joint design to separate ownership of the service and the builds.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Checkout",
+              "reading": "In focus Checkout. Checkout and Release Platform agree to spend ten working days finding a way to create, diagnose and remove a preview from the docs."
+            },
+            {
+              "step": 1,
+              "active": "edge:share-builds",
+              "reading": "In focus Checkout brings test builds to Release Platform. Checkout shares a passing build and a failed build. Release Platform contributes a prototype and its rules for cleaning up environments."
+            },
+            {
+              "step": 2,
+              "active": "edge:try-prototype",
+              "reading": "In focus Release Platform tests a prototype with Checkout. An early URL fails to open. The teams agree to return a request ID first, then a working URL or a build error."
+            },
+            {
+              "step": 3,
+              "active": "edge:try-from-docs",
+              "reading": "In focus Checkout tests the draft Preview API. Checkout creates and removes a preview from the docs and diagnoses the failed build. Release Platform confirms the failed run leaves no resources."
+            },
+            {
+              "step": 4,
+              "active": "edge:publish-api",
+              "reading": "In focus Release Platform publishes and owns the Preview API. A fresh Checkout engineer built, diagnosed and cleaned up a preview from the docs alone. Joint sessions end and Release Platform owns the API. If that test still failed on day ten, this trial would end and the teams would revisit scope or ownership."
+            }
+          ]
+        },
+        {
+          "name": "mode-2",
+          "at": "2026-11-21T03:25:52.480Z",
+          "url": "/tools/catalog/tt3:8",
+          "fits": true,
+          "heading": "X-as-a-Service mode",
+          "intro": "Imagine you changed the Pay button in an online shop. Before you publish the change, you want to try the button on a private copy of the shop app. That test copy is a preview.",
+          "specimen": "WHEN CAN CHECKOUT GET A TEST COPY ON ITS OWN? An engineer wants to try a change to an online shop’s Pay page before shoppers see it. The Pay page is part of the app that the Checkout team builds. Another team, Release Platform, runs the Preview API. That tool makes a private copy of the whole app. We invented the team names and wrote both requests and replies below. Checkout asks, “Can I get a copy of our shop app to check the Pay button?” The tool replies, “Your copy is ready. Open the test link.” Checkout asks, “Can I start our shop app and a fake payments app that will decline my test payment?” The tool replies, “This tool starts only one app per preview.” Checkout gets the first copy through a tool that Release Platform runs. That is what “as a service” means here. Nobody at Release Platform has to set it up for the engineer. The second request exceeds the one-app limit. Now the teams need to work out how the tool can start both apps together. What would let Checkout run the second test alone next time?",
+          "caption": "Checkout builds the shop app that contains the Pay page. Release Platform runs the Preview API, the tool that makes a test copy of that app. An arrow from Checkout to the tool shows the engineer asking for a copy. An arrow from Checkout to Release Platform shows the engineer asking its owners about the two-app test. The sentence under the controls tells you what each highlighted arrow means.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:maintain",
+              "reading": "In focus Release Platform runs the Preview API. Release Platform writes the instructions. They tell Checkout what to send, how to get the link to its test copy and where to ask for help."
+            },
+            {
+              "step": 1,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout's pipeline sends a commit reference, receives a request ID and uses it to look up the preview's status."
+            },
+            {
+              "step": 2,
+              "active": "edge:respond",
+              "reading": "In focus Preview API returns a ready URL to Checkout. Checkout tests the commit at the returned URL and removes its preview after testing."
+            },
+            {
+              "step": 3,
+              "active": "edge:report",
+              "reading": "In focus Checkout reports a gap to Release Platform. Three two-app runs hit the documented one-app limit. Checkout brings their request IDs to Release Platform. Only this unsupported case needs joint design. Routine one-app previews continue through the API."
+            },
+            {
+              "step": 4,
+              "active": "edge:reopen",
+              "reading": "In focus Release Platform tries a revised contract with Checkout. The teams try readiness and cleanup rules for a two-app preview while routine one-app jobs keep using the supported version."
+            },
+            {
+              "step": 5,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout now runs a fresh two-app preview from the revised instructions without Release Platform’s help. Two-app previews can return to routine service use. Release Platform supports the version and Checkout chooses when to adopt it."
+            }
+          ]
+        },
+        {
+          "name": "mode-3",
+          "at": "2026-11-21T03:25:53.678Z",
+          "url": "/tools/catalog/tt3:9",
+          "fits": true,
+          "heading": "Facilitating mode",
+          "intro": "A team can deploy its service and still lack practice undoing a faulty release. In facilitating mode, a second team coaches the service owners through that specific skill. The test of the engagement comes when the coach steps back. Can someone on the owning team recognize the failure, restore a healthy release and verify recovery alone?",
+          "specimen": null,
+          "caption": "Follow who drives the rollback drill. The last step shows who looks after the skill after the coaching ends.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:request",
+              "reading": "In focus Returns team requests coaching from Reliability team. Returns asks for help rolling back its API and sets a two-week coaching window with Reliability."
+            },
+            {
+              "step": 1,
+              "active": "edge:teach",
+              "reading": "In focus Reliability team coaches Returns team. Reliability shows how to spot a faulty release in staging, restore a healthy version and check for recovery."
+            },
+            {
+              "step": 2,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A Returns engineer runs the drill with Reliability coaching and records the checks in the Returns runbook."
+            },
+            {
+              "step": 3,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A second Returns engineer restores the healthy release and verifies recovery using the runbook alone."
+            },
+            {
+              "step": 4,
+              "active": "edge:maintain",
+              "reading": "In focus Returns team maintains Returns runbook. A second Returns engineer verified recovery alone. Coaching ends and Returns owns the runbook. If the two weeks expired first, this engagement would still end. The teams would record what remained to learn."
+            }
+          ]
+        },
+        {
+          "name": "conway",
+          "at": "2026-11-21T03:25:55.030Z",
+          "url": "/tools/catalog/tt1:92",
+          "fits": true,
+          "heading": "Conway's law (1968)",
+          "caption": "Teams on the left own components on the right. This toy gives one component to each team and copies selected design contacts into component dependencies. Conway followed system interfaces back to the groups that designed them. Several components can trace back to one group. Change a design contact under Try another value to test the toy’s assumption.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:owns-stock",
+              "reading": "In focus Step 0. Stock team owns Inventory. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 1,
+              "active": "edge:owns-checkout",
+              "reading": "In focus Step 1. Checkout team owns Order entry. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 2,
+              "active": "edge:owns-billing",
+              "reading": "In focus Step 2. Billing team owns Payment processing. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 3,
+              "active": "edge:contact-checkout-stock",
+              "reading": "In focus Step 3. Checkout team starts design talks with Stock team. On the right, this contact becomes a dependency from Order entry to Inventory."
+            },
+            {
+              "step": 4,
+              "active": "edge:dependency-checkout-stock",
+              "reading": "In focus Step 4. Order entry depends on Inventory. On the left, this dependency corresponds to Checkout team initiating a design conversation with Stock team."
+            },
+            {
+              "step": 5,
+              "active": "edge:contact-checkout-billing",
+              "reading": "In focus Step 5. Checkout team starts design talks with Billing team. On the right, this contact becomes a dependency from Order entry to Payment processing."
+            },
+            {
+              "step": 6,
+              "active": "edge:dependency-checkout-billing",
+              "reading": "In focus Step 6. Order entry depends on Payment processing. On the left, this dependency corresponds to Checkout team initiating a design conversation with Billing team."
+            },
+            {
+              "step": 7,
+              "active": "node:Order entry",
+              "reading": "In focus Step 7. Order entry. The ownership pairs stay in place. Each direct dependency mirrors a design contact drawn on the left."
+            }
+          ],
+          "nearby": [
+            "Reverse Conway manoeuvre\nStart from the intended component boundaries and use them to plan who needs to work together.",
+            "Homomorphic force\nLook more closely at what a structure-preserving correspondence can retain when several subsystems share a design group.",
+            "Real communication paths as the value-creation structure\nFind the real conversations and handoffs underlying the communication graph."
+          ]
+        },
+        {
+          "name": "reverse-conway",
+          "at": "2026-11-21T03:25:56.310Z",
+          "url": "/tools/catalog/tt1:138",
+          "fits": true,
+          "heading": "Reverse Conway manoeuvre",
+          "worked": "THE WORKED EXAMPLE Checkout writes directly into Inventory’s reservation tables. Checkout and Stock have to agree on a database edit and release it together. The desired interface lets Order entry ask Inventory for a reservation. That goal guides a change in ownership. Stock will decide and deploy the reservation rule, and Checkout will own the call. In the pilot, watch whether Stock can change its rule without a joint release.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:reserve",
+              "reading": "In focus Step 0. Order entry reserves stock through Inventory. The proposed interface replaces direct reservation writes. Inventory will own the reservation rule."
+            },
+            {
+              "step": 1,
+              "active": "edge:authorize",
+              "reading": "In focus Step 1. Order entry requests authorization from Payment processing. Order entry requests payment authorization through a separate contract."
+            },
+            {
+              "step": 2,
+              "active": "edge:stock-owner",
+              "reading": "In focus Step 2. Inventory is owned by Stock team. Give the Stock team authority over Inventory’s reservation logic, data and releases."
+            },
+            {
+              "step": 3,
+              "active": "edge:checkout-owner",
+              "reading": "In focus Step 3. Order entry is owned by Checkout team. Give the Checkout team responsibility for the customer’s checkout and for consuming both contracts."
+            },
+            {
+              "step": 4,
+              "active": "edge:billing-owner",
+              "reading": "In focus Step 4. Payment processing is owned by Billing team. Give the Billing team responsibility for payment authorization."
+            },
+            {
+              "step": 5,
+              "active": "edge:reservation-contract",
+              "reading": "In focus Step 5. Checkout team agrees on the reservation contract with Stock team. Agree the reservation behavior and move Checkout’s direct writes behind Inventory’s interface."
+            },
+            {
+              "step": 6,
+              "active": "edge:payment-contract",
+              "reading": "In focus Step 6. Checkout team agrees on the authorization contract with Billing team. Agree how payment is authorized and what Order entry receives on failure."
+            },
+            {
+              "step": 7,
+              "active": "node:Stock team",
+              "reading": "In focus Step 7. Stock team. Try one reservation-rule change. Can the Stock team deploy Inventory on its own while checkout still works through the same contract?"
+            }
+          ]
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "overflow": []
+    },
+    {
+      "size": "3840x1620",
+      "steps": [
+        {
+          "name": "tools",
+          "at": "2026-11-21T03:25:57.299Z",
+          "url": "/tools",
+          "fits": true,
+          "home": "Tools Read the works behind the toys. Follow a concept into its neighbours, then choose something to try. Read the catalog AI for Games768 concepts40 studied Enterprise Integration Patterns288 concepts20 studied Gödel, Escher, Bach573 concepts10 studied Patterns of Enterprise Application Architecture455 concepts20 studied RxJS742 concepts20 studied Team Topologies637 concepts10 studied"
+        },
+        {
+          "name": "catalog",
+          "at": "2026-11-21T03:25:58.258Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelf": "THE WORKS AI for Games 768 concepts 40 studied units on terrain Enterprise Integration Patterns 288 concepts 20 studied channels Gödel, Escher, Bach 573 concepts 10 studied levels Patterns of Enterprise Application Architecture 455 concepts 20 studied channels RxJS 742 concepts 20 studied marbles Team Topologies 637 concepts 10 studied teams"
+        },
+        {
+          "name": "geb",
+          "at": "2026-11-21T03:25:58.666Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Gödel, Escher, Bach 573 concepts 10 studied levels",
+          "studiedLinks": [
+            "Jumping out of the system",
+            "Decision procedure",
+            "Isomorphism",
+            "Consistency",
+            "Gödel numbering",
+            "Levels of description",
+            "Chunking",
+            "Active symbols",
+            "Sentence G",
+            "Strange loop"
+          ]
+        },
+        {
+          "name": "levels-open",
+          "at": "2026-11-21T03:25:59.668Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "heading": "Levels of description",
+          "intro": "Look at one thing and try to answer two different questions about it. The details you need can change even while the thing in front of you stays exactly the same. That is the idea behind levels of description.",
+          "specimen": "READ ONE LINE OF TEST OUTPUT We made a tiny guide for this test. It contains two links, #install and #start, and headings named install and start. We ran the check and the runner printed this line. ok 1 - both guide links have a target Look for the small word “ok.” It consists of two characters. Read it as a test verdict and it means the first check passed. The words after the dash came from the name we wrote for the test. They tell you exactly what was checked. Would the test still pass if the setup instructions were out of date?",
+          "worked": "THE WORKED EXAMPLE Imagine a tutorial that links to a setup guide. During a 45-minute work session your team revises the guide first. A guard blocks one extra edit while a checker follows the saved guide’s links. Here are four invented entries you could lay side by side after that afternoon. The labels name types of DotLn records. Hook refusal · “Edit blocked.” The guard attached the refusal to th",
+          "caption": "Read from the bottom up. The bottom arrow joins two records from the same check. The next arrow links that check to the assignment it helps verify. The top arrow leads to the plan that scheduled the work.",
+          "accessibleName": "Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+        },
+        {
+          "name": "levels-prediction",
+          "at": "2026-11-21T03:26:00.677Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "answer": "Yes. The checker only looked for the two link targets. The same green result can sit beside an outdated paragraph. Now read the assignment below to find out what else the team promised."
+        },
+        {
+          "name": "levels-stepped",
+          "at": "2026-11-21T03:26:01.162Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Hook refusal",
+              "reading": "In focus Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+            },
+            {
+              "step": 1,
+              "active": "node:Gate row",
+              "reading": "In focus Gate row. Did the links work? The checker followed them in the saved copy and recorded a pass. The blocked edit and the passing check happened during the same run."
+            },
+            {
+              "step": 2,
+              "active": "node:Work order",
+              "reading": "In focus Work order. What did the team agree to deliver? The assignment called for revised setup steps and working links. The passing row answers only the part about links."
+            },
+            {
+              "step": 3,
+              "active": "node:Planning pass",
+              "reading": "In focus Planning pass. Why do the guide first? The tutorial will send readers there tomorrow. The plan records that dependency. To find out what happened to one edit, you must look back down at the refusal."
+            }
+          ]
+        },
+        {
+          "name": "levels-pseudocode",
+          "at": "2026-11-21T03:26:02.154Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "pseudocode": "const events = readEventsFor('Setup guide', example.parameters.windowMinutes);\nconst refusals = events.filter(event => event.kind === 'Edit blocked');\n\nconst gateRows = [];\nfor (const [runId, edits] of Map.groupBy(refusals, edit => edit.gateRunId)) {\n  gateRows.push({ ...readGateRow(runId, 'Guide links'), refusals: edits });\n}\n\nconst orders = [];\nfor (const [orderId, rows] of Map.groupBy(gateRows, row => row.orderId)) {\n  orders.push({ ...readWorkOrder(orderId), evidence: rows });\n}\n\nconst planningPasses = [];\nfor (const [passId, assignments] of Map.groupBy(orders, order => order.passId)) {\n  planningPasses.push({ ...readPlanningPass(passId), assignments });\n}",
+          "steps": [
+            "In the 45-minute recording, find the “Edit blocked” entry for the setup guide. It names the Guide links run in which the guard refused that extra write.",
+            "Read the “Guide links passed” row with the same run identifier. It records the saved guide that was checked. The refusal and the pass answer different questions about that run.",
+            "Follow the row’s work-order identifier to the existing assignment, “Revise setup steps and check links.” Its first requirement needs separate evidence.",
+            "Read the planning pass named by that assignment. Its written ordering, “Guide first, tutorial next,” gives you the dependency. Grouping results cannot supply the planner’s reason."
+          ]
+        },
+        {
+          "name": "levels-streams",
+          "at": "2026-11-21T03:26:03.527Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "text": "Think in streams An RxJS reading of the same example. RXJS PSEUDOCODE Illustrative: this shows the shape of the stream. Nothing here runs or is tested. // Illustrative: these helpers read a finished recording and its saved records. Each group reads the record named by its key. import { filter, from, groupBy, map, mergeMap, toArray } from 'rxjs'; const refusals$ = from(readEventsFor('Setup guide', example.parameters.windowMinutes)).pipe( filter(event => event.kind === 'Edit blocked') ); const gat"
+        },
+        {
+          "name": "levels-limits",
+          "at": "2026-11-21T03:26:03.916Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "limits": [
+            "A gate row can seal off the hook's detail while you ask whether the checked version passed. If an edit slips through and changes the guide, use the event trail and the gate's recorded revision to find out which version the pass covers.",
+            "The analogy uses run, order and pass identifiers to join the views. A gate covering several orders may supply evidence to each of them. The order's criterion and the planning pass's reason for adding the guide still live in their written records.",
+            "The stream example assumes the recording ends. With a live feed, each group needs a closing rule before an array of its events can appear."
+          ]
+        },
+        {
+          "name": "levels-elsewhere",
+          "at": "2026-11-21T03:26:05.296Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "links": [
+            "Chrome DevTools Performance panel → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "Gödel, Escher, Bach, Basic Books → https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/g%C3%B6del-escher-bach/9780465026562/?lens=basic-books",
+            "DotLn Kit Guide → https://github.com/DylanBWood/DotLn/blob/main/docs/KIT.md",
+            "Chrome DevTools Performance features → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "RxJS groupBy implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/groupBy.ts",
+            "RxJS toArray implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/toArray.ts"
+          ],
+          "nearby": [
+            "Chunking\nSee how grouping events can give a higher-level reader a smaller set of units to inspect.",
+            "Sealed-off levels\nAsk when a view can rely on its own terms and which lower-level change forces you to open the detail.",
+            "Strange loop\nFollow a crossing between levels that eventually comes back to the one where it began."
+          ]
+        },
+        {
+          "name": "loop-open",
+          "at": "2026-11-21T03:26:05.693Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "heading": "Strange loop",
+          "specimen": "WHERE DOES EACH INSTRUCTION SEND YOU? We wrote these two cards for this lesson. Imagine picking up the first card, doing what it says and putting it down. Then read the second. Count the windows in this room. Count the letters on this card. Both cards start the same way. Your eyes pick out the marks, then you read them as an instruction. Look at the last words on each card to decide what to count. Which card sends you back to its own ink?",
+          "source": [
+            "View the 1956 Print Gallery on the museum website → https://www.escherinhetpaleis.nl/en/about-escher/masterpieces/print-gallery"
+          ]
+        },
+        {
+          "name": "loop-stepped",
+          "at": "2026-11-21T03:26:06.243Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. Start in the exhibition room where the visitor stands."
+            },
+            {
+              "step": 1,
+              "active": "edge:exhibits",
+              "reading": "In focus Gallery exhibits Seaport print. At this level, the seaport print is an object hanging on the wall."
+            },
+            {
+              "step": 2,
+              "active": "edge:depicts",
+              "reading": "In focus Seaport print depicts Seaport scene. Look into the picture at the buildings along the waterfront."
+            },
+            {
+              "step": 3,
+              "active": "edge:return",
+              "reading": "In focus Seaport scene contains Gallery. The gallery appears among the seaport buildings. The arrow points back to the room where the print hangs."
+            },
+            {
+              "step": 4,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. You are back at the starting point. The room that holds the picture also appears inside it."
+            }
+          ],
+          "returned": true
+        },
+        {
+          "name": "loop-restart",
+          "at": "2026-11-21T03:26:07.207Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "slider": "4",
+          "focused": "range"
+        },
+        {
+          "name": "isomorphism",
+          "at": "2026-11-21T03:26:07.908Z",
+          "url": "/tools/catalog/geb1:65",
+          "fits": true,
+          "heading": "Isomorphism",
+          "worked": "THE WORKED EXAMPLE Follow the same pair, L and R, along both paths. Write their digits 1 and 2 together in base three and their value is 1 × 3 + 2 = 5. Encode the letters separately and combine the two codes by shifting and adding, and you also get 5. The last step tests the fixed candidate 3. Open Gödel numbering to run the encoder and try other candidate numbers.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:joinWords",
+              "reading": "In focus L then R join to form LR. Start with L followed by R. Join the words by putting R after L."
+            },
+            {
+              "step": 1,
+              "active": "edge:encodeWord",
+              "reading": "In focus LR encodes as 5. LR gives the digits 12 in base three, which represent 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:encodePair",
+              "reading": "In focus L then R encode as 1 then 2. Start again with the same pair. This time encode L and R separately."
+            },
+            {
+              "step": 3,
+              "active": "edge:joinCodes",
+              "reading": "In focus 1 then 2 combine to give 5. Shift 1 by one base-three place and add 2. Both routes meet at 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus 5 decodes to LR. Read the digits 12 from left to right and turn them back into L and R."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. In base three, 3 is written 10. The digit 0 has no letter, so this positive number lies outside the image."
+            }
+          ]
+        },
+        {
+          "name": "godel",
+          "at": "2026-11-21T03:26:09.329Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "heading": "Gödel numbering",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:encodePair",
+              "reading": "In focus Words L and R encode as Codes 1 and 2. Start each code at zero. Multiply by three and add the digit for each letter in order."
+            },
+            {
+              "step": 1,
+              "active": "edge:joinCodes",
+              "reading": "In focus Codes 1 and 2 combine to give code 5. The number of base-three places on the right is 1. The join is 1 × 3 + 2 = 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:joinWords",
+              "reading": "In focus Words L and R join to form word LR. Write the second word after the first to see the same join on the word side."
+            },
+            {
+              "step": 3,
+              "active": "edge:encodeWord",
+              "reading": "In focus word LR encodes as code 5. Encoding the joined word gives 5. Joining the codes gives 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus code 5 decodes to word LR. Repeatedly divide 5 by three. Read the remainders in reverse order to recover LR."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. The numeral 10 in base three has a zero digit. Dividing 3 by three exposes that remainder, so the candidate is outside the image."
+            }
+          ],
+          "model": "Executable model libs/features/tools/src/lib/studies/geb/godel-numbering.model.ts The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps.",
+          "specNote": "The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps."
+        },
+        {
+          "name": "godel-candidate-7",
+          "at": "2026-11-21T03:26:10.744Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "reading": "In focus Candidate 7 decodes to word RL. The candidate decodes to RL and belongs to the image.",
+          "nodes": [
+            "Words L and R",
+            "Codes 1 and 2",
+            "word LR",
+            "code 5",
+            "Candidate 7",
+            "word RL"
+          ]
+        },
+        {
+          "name": "teams",
+          "at": "2026-11-21T03:26:11.787Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Team Topologies 637 concepts 10 studied teams",
+          "studiedLinks": [
+            "Conway's law (1968)",
+            "Homomorphic force",
+            "Reverse Conway manoeuvre",
+            "Team-scoped flow",
+            "Seven-to-nine maximum effective team size",
+            "Platform as a product",
+            "Collaboration mode",
+            "X-as-a-Service mode",
+            "Facilitating mode",
+            "Organizational sensing"
+          ]
+        },
+        {
+          "name": "mode-1",
+          "at": "2026-11-21T03:26:12.959Z",
+          "url": "/tools/catalog/tt3:7",
+          "fits": true,
+          "heading": "Collaboration mode",
+          "intro": "When a decision needs knowledge from two teams, bring their examples and prototypes into the same trial. Both teams help interpret the results and change the design. Give that work a question and a deadline so everyone knows when to return to their own work.",
+          "specimen": "CAN THE JOINT SESSIONS END? Imagine Checkout needs a running copy of a change to test it. Release Platform can provide one, but the two teams have to agree when a preview is ready and what happens when a build fails. We wrote these trial notes for the example. During joint work · Checkout brought a passing and a failing build. Both teams agreed to show the link only when the preview was ready. At handoff · A Checkout engineer who missed the sessions used the instructions to create and remove a preview and diagnose the failed build. Release Platform checked that the failed run left nothing running. At first, each team holds a piece the other needs. At the end, an engineer who missed the joint sessions can follow the instructions alone. Release Platform owns and supports the service. Checkout owns its builds. Would agreeing on the instructions be enough to end this trial?",
+          "caption": "Follow the highlighted exchange from joint design to separate ownership of the service and the builds.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Checkout",
+              "reading": "In focus Checkout. Checkout and Release Platform agree to spend ten working days finding a way to create, diagnose and remove a preview from the docs."
+            },
+            {
+              "step": 1,
+              "active": "edge:share-builds",
+              "reading": "In focus Checkout brings test builds to Release Platform. Checkout shares a passing build and a failed build. Release Platform contributes a prototype and its rules for cleaning up environments."
+            },
+            {
+              "step": 2,
+              "active": "edge:try-prototype",
+              "reading": "In focus Release Platform tests a prototype with Checkout. An early URL fails to open. The teams agree to return a request ID first, then a working URL or a build error."
+            },
+            {
+              "step": 3,
+              "active": "edge:try-from-docs",
+              "reading": "In focus Checkout tests the draft Preview API. Checkout creates and removes a preview from the docs and diagnoses the failed build. Release Platform confirms the failed run leaves no resources."
+            },
+            {
+              "step": 4,
+              "active": "edge:publish-api",
+              "reading": "In focus Release Platform publishes and owns the Preview API. A fresh Checkout engineer built, diagnosed and cleaned up a preview from the docs alone. Joint sessions end and Release Platform owns the API. If that test still failed on day ten, this trial would end and the teams would revisit scope or ownership."
+            }
+          ]
+        },
+        {
+          "name": "mode-2",
+          "at": "2026-11-21T03:26:14.293Z",
+          "url": "/tools/catalog/tt3:8",
+          "fits": true,
+          "heading": "X-as-a-Service mode",
+          "intro": "Imagine you changed the Pay button in an online shop. Before you publish the change, you want to try the button on a private copy of the shop app. That test copy is a preview.",
+          "specimen": "WHEN CAN CHECKOUT GET A TEST COPY ON ITS OWN? An engineer wants to try a change to an online shop’s Pay page before shoppers see it. The Pay page is part of the app that the Checkout team builds. Another team, Release Platform, runs the Preview API. That tool makes a private copy of the whole app. We invented the team names and wrote both requests and replies below. Checkout asks, “Can I get a copy of our shop app to check the Pay button?” The tool replies, “Your copy is ready. Open the test link.” Checkout asks, “Can I start our shop app and a fake payments app that will decline my test payment?” The tool replies, “This tool starts only one app per preview.” Checkout gets the first copy through a tool that Release Platform runs. That is what “as a service” means here. Nobody at Release Platform has to set it up for the engineer. The second request exceeds the one-app limit. Now the teams need to work out how the tool can start both apps together. What would let Checkout run the second test alone next time?",
+          "caption": "Checkout builds the shop app that contains the Pay page. Release Platform runs the Preview API, the tool that makes a test copy of that app. An arrow from Checkout to the tool shows the engineer asking for a copy. An arrow from Checkout to Release Platform shows the engineer asking its owners about the two-app test. The sentence under the controls tells you what each highlighted arrow means.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:maintain",
+              "reading": "In focus Release Platform runs the Preview API. Release Platform writes the instructions. They tell Checkout what to send, how to get the link to its test copy and where to ask for help."
+            },
+            {
+              "step": 1,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout's pipeline sends a commit reference, receives a request ID and uses it to look up the preview's status."
+            },
+            {
+              "step": 2,
+              "active": "edge:respond",
+              "reading": "In focus Preview API returns a ready URL to Checkout. Checkout tests the commit at the returned URL and removes its preview after testing."
+            },
+            {
+              "step": 3,
+              "active": "edge:report",
+              "reading": "In focus Checkout reports a gap to Release Platform. Three two-app runs hit the documented one-app limit. Checkout brings their request IDs to Release Platform. Only this unsupported case needs joint design. Routine one-app previews continue through the API."
+            },
+            {
+              "step": 4,
+              "active": "edge:reopen",
+              "reading": "In focus Release Platform tries a revised contract with Checkout. The teams try readiness and cleanup rules for a two-app preview while routine one-app jobs keep using the supported version."
+            },
+            {
+              "step": 5,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout now runs a fresh two-app preview from the revised instructions without Release Platform’s help. Two-app previews can return to routine service use. Release Platform supports the version and Checkout chooses when to adopt it."
+            }
+          ]
+        },
+        {
+          "name": "mode-3",
+          "at": "2026-11-21T03:26:15.642Z",
+          "url": "/tools/catalog/tt3:9",
+          "fits": true,
+          "heading": "Facilitating mode",
+          "intro": "A team can deploy its service and still lack practice undoing a faulty release. In facilitating mode, a second team coaches the service owners through that specific skill. The test of the engagement comes when the coach steps back. Can someone on the owning team recognize the failure, restore a healthy release and verify recovery alone?",
+          "specimen": null,
+          "caption": "Follow who drives the rollback drill. The last step shows who looks after the skill after the coaching ends.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:request",
+              "reading": "In focus Returns team requests coaching from Reliability team. Returns asks for help rolling back its API and sets a two-week coaching window with Reliability."
+            },
+            {
+              "step": 1,
+              "active": "edge:teach",
+              "reading": "In focus Reliability team coaches Returns team. Reliability shows how to spot a faulty release in staging, restore a healthy version and check for recovery."
+            },
+            {
+              "step": 2,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A Returns engineer runs the drill with Reliability coaching and records the checks in the Returns runbook."
+            },
+            {
+              "step": 3,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A second Returns engineer restores the healthy release and verifies recovery using the runbook alone."
+            },
+            {
+              "step": 4,
+              "active": "edge:maintain",
+              "reading": "In focus Returns team maintains Returns runbook. A second Returns engineer verified recovery alone. Coaching ends and Returns owns the runbook. If the two weeks expired first, this engagement would still end. The teams would record what remained to learn."
+            }
+          ]
+        },
+        {
+          "name": "conway",
+          "at": "2026-11-21T03:26:17.215Z",
+          "url": "/tools/catalog/tt1:92",
+          "fits": true,
+          "heading": "Conway's law (1968)",
+          "caption": "Teams on the left own components on the right. This toy gives one component to each team and copies selected design contacts into component dependencies. Conway followed system interfaces back to the groups that designed them. Several components can trace back to one group. Change a design contact under Try another value to test the toy’s assumption.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:owns-stock",
+              "reading": "In focus Step 0. Stock team owns Inventory. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 1,
+              "active": "edge:owns-checkout",
+              "reading": "In focus Step 1. Checkout team owns Order entry. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 2,
+              "active": "edge:owns-billing",
+              "reading": "In focus Step 2. Billing team owns Payment processing. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 3,
+              "active": "edge:contact-checkout-stock",
+              "reading": "In focus Step 3. Checkout team starts design talks with Stock team. On the right, this contact becomes a dependency from Order entry to Inventory."
+            },
+            {
+              "step": 4,
+              "active": "edge:dependency-checkout-stock",
+              "reading": "In focus Step 4. Order entry depends on Inventory. On the left, this dependency corresponds to Checkout team initiating a design conversation with Stock team."
+            },
+            {
+              "step": 5,
+              "active": "edge:contact-checkout-billing",
+              "reading": "In focus Step 5. Checkout team starts design talks with Billing team. On the right, this contact becomes a dependency from Order entry to Payment processing."
+            },
+            {
+              "step": 6,
+              "active": "edge:dependency-checkout-billing",
+              "reading": "In focus Step 6. Order entry depends on Payment processing. On the left, this dependency corresponds to Checkout team initiating a design conversation with Billing team."
+            },
+            {
+              "step": 7,
+              "active": "node:Order entry",
+              "reading": "In focus Step 7. Order entry. The ownership pairs stay in place. Each direct dependency mirrors a design contact drawn on the left."
+            }
+          ],
+          "nearby": [
+            "Reverse Conway manoeuvre\nStart from the intended component boundaries and use them to plan who needs to work together.",
+            "Homomorphic force\nLook more closely at what a structure-preserving correspondence can retain when several subsystems share a design group.",
+            "Real communication paths as the value-creation structure\nFind the real conversations and handoffs underlying the communication graph."
+          ]
+        },
+        {
+          "name": "reverse-conway",
+          "at": "2026-11-21T03:26:18.625Z",
+          "url": "/tools/catalog/tt1:138",
+          "fits": true,
+          "heading": "Reverse Conway manoeuvre",
+          "worked": "THE WORKED EXAMPLE Checkout writes directly into Inventory’s reservation tables. Checkout and Stock have to agree on a database edit and release it together. The desired interface lets Order entry ask Inventory for a reservation. That goal guides a change in ownership. Stock will decide and deploy the reservation rule, and Checkout will own the call. In the pilot, watch whether Stock can change its rule without a joint release.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:reserve",
+              "reading": "In focus Step 0. Order entry reserves stock through Inventory. The proposed interface replaces direct reservation writes. Inventory will own the reservation rule."
+            },
+            {
+              "step": 1,
+              "active": "edge:authorize",
+              "reading": "In focus Step 1. Order entry requests authorization from Payment processing. Order entry requests payment authorization through a separate contract."
+            },
+            {
+              "step": 2,
+              "active": "edge:stock-owner",
+              "reading": "In focus Step 2. Inventory is owned by Stock team. Give the Stock team authority over Inventory’s reservation logic, data and releases."
+            },
+            {
+              "step": 3,
+              "active": "edge:checkout-owner",
+              "reading": "In focus Step 3. Order entry is owned by Checkout team. Give the Checkout team responsibility for the customer’s checkout and for consuming both contracts."
+            },
+            {
+              "step": 4,
+              "active": "edge:billing-owner",
+              "reading": "In focus Step 4. Payment processing is owned by Billing team. Give the Billing team responsibility for payment authorization."
+            },
+            {
+              "step": 5,
+              "active": "edge:reservation-contract",
+              "reading": "In focus Step 5. Checkout team agrees on the reservation contract with Stock team. Agree the reservation behavior and move Checkout’s direct writes behind Inventory’s interface."
+            },
+            {
+              "step": 6,
+              "active": "edge:payment-contract",
+              "reading": "In focus Step 6. Checkout team agrees on the authorization contract with Billing team. Agree how payment is authorized and what Order entry receives on failure."
+            },
+            {
+              "step": 7,
+              "active": "node:Stock team",
+              "reading": "In focus Step 7. Stock team. Try one reservation-rule change. Can the Stock team deploy Inventory on its own while checkout still works through the same contract?"
+            }
+          ]
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "overflow": []
+    },
+    {
+      "size": "360x800",
+      "steps": [
+        {
+          "name": "tools",
+          "at": "2026-11-21T03:26:19.754Z",
+          "url": "/tools",
+          "fits": true,
+          "home": "Tools Read the works behind the toys. Follow a concept into its neighbours, then choose something to try. Read the catalog AI for Games768 concepts40 studied Enterprise Integration Patterns288 concepts20 studied Gödel, Escher, Bach573 concepts10 studied Patterns of Enterprise Application Architecture455 concepts20 studied RxJS742 concepts20 studied Team Topologies637 concepts10 studied"
+        },
+        {
+          "name": "catalog",
+          "at": "2026-11-21T03:26:20.602Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelf": "THE WORKS AI for Games 768 concepts 40 studied units on terrain Enterprise Integration Patterns 288 concepts 20 studied channels Gödel, Escher, Bach 573 concepts 10 studied levels Patterns of Enterprise Application Architecture 455 concepts 20 studied channels RxJS 742 concepts 20 studied marbles Team Topologies 637 concepts 10 studied teams"
+        },
+        {
+          "name": "geb",
+          "at": "2026-11-21T03:26:21.003Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Gödel, Escher, Bach 573 concepts 10 studied levels",
+          "studiedLinks": [
+            "Jumping out of the system",
+            "Decision procedure",
+            "Isomorphism",
+            "Consistency",
+            "Gödel numbering",
+            "Levels of description",
+            "Chunking",
+            "Active symbols",
+            "Sentence G",
+            "Strange loop"
+          ]
+        },
+        {
+          "name": "levels-open",
+          "at": "2026-11-21T03:26:21.824Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "heading": "Levels of description",
+          "intro": "Look at one thing and try to answer two different questions about it. The details you need can change even while the thing in front of you stays exactly the same. That is the idea behind levels of description.",
+          "specimen": "READ ONE LINE OF TEST OUTPUT We made a tiny guide for this test. It contains two links, #install and #start, and headings named install and start. We ran the check and the runner printed this line. ok 1 - both guide links have a target Look for the small word “ok.” It consists of two characters. Read it as a test verdict and it means the first check passed. The words after the dash came from the name we wrote for the test. They tell you exactly what was checked. Would the test still pass if the setup instructions were out of date?",
+          "worked": "THE WORKED EXAMPLE Imagine a tutorial that links to a setup guide. During a 45-minute work session your team revises the guide first. A guard blocks one extra edit while a checker follows the saved guide’s links. Here are four invented entries you could lay side by side after that afternoon. The labels name types of DotLn records. Hook refusal · “Edit blocked.” The guard attached the refusal to th",
+          "caption": "Read from the bottom up. The bottom arrow joins two records from the same check. The next arrow links that check to the assignment it helps verify. The top arrow leads to the plan that scheduled the work.",
+          "accessibleName": "Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+        },
+        {
+          "name": "levels-prediction",
+          "at": "2026-11-21T03:26:22.654Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "answer": "Yes. The checker only looked for the two link targets. The same green result can sit beside an outdated paragraph. Now read the assignment below to find out what else the team promised."
+        },
+        {
+          "name": "levels-stepped",
+          "at": "2026-11-21T03:26:23.153Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Hook refusal",
+              "reading": "In focus Hook refusal. Did the extra edit get saved? The guard blocked it while the checker was reading the guide. The refusal records that one attempted change."
+            },
+            {
+              "step": 1,
+              "active": "node:Gate row",
+              "reading": "In focus Gate row. Did the links work? The checker followed them in the saved copy and recorded a pass. The blocked edit and the passing check happened during the same run."
+            },
+            {
+              "step": 2,
+              "active": "node:Work order",
+              "reading": "In focus Work order. What did the team agree to deliver? The assignment called for revised setup steps and working links. The passing row answers only the part about links."
+            },
+            {
+              "step": 3,
+              "active": "node:Planning pass",
+              "reading": "In focus Planning pass. Why do the guide first? The tutorial will send readers there tomorrow. The plan records that dependency. To find out what happened to one edit, you must look back down at the refusal."
+            }
+          ]
+        },
+        {
+          "name": "levels-pseudocode",
+          "at": "2026-11-21T03:26:23.994Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "pseudocode": "const events = readEventsFor('Setup guide', example.parameters.windowMinutes);\nconst refusals = events.filter(event => event.kind === 'Edit blocked');\n\nconst gateRows = [];\nfor (const [runId, edits] of Map.groupBy(refusals, edit => edit.gateRunId)) {\n  gateRows.push({ ...readGateRow(runId, 'Guide links'), refusals: edits });\n}\n\nconst orders = [];\nfor (const [orderId, rows] of Map.groupBy(gateRows, row => row.orderId)) {\n  orders.push({ ...readWorkOrder(orderId), evidence: rows });\n}\n\nconst planningPasses = [];\nfor (const [passId, assignments] of Map.groupBy(orders, order => order.passId)) {\n  planningPasses.push({ ...readPlanningPass(passId), assignments });\n}",
+          "steps": [
+            "In the 45-minute recording, find the “Edit blocked” entry for the setup guide. It names the Guide links run in which the guard refused that extra write.",
+            "Read the “Guide links passed” row with the same run identifier. It records the saved guide that was checked. The refusal and the pass answer different questions about that run.",
+            "Follow the row’s work-order identifier to the existing assignment, “Revise setup steps and check links.” Its first requirement needs separate evidence.",
+            "Read the planning pass named by that assignment. Its written ordering, “Guide first, tutorial next,” gives you the dependency. Grouping results cannot supply the planner’s reason."
+          ]
+        },
+        {
+          "name": "levels-streams",
+          "at": "2026-11-21T03:26:25.219Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "text": "Think in streams An RxJS reading of the same example. RXJS PSEUDOCODE Illustrative: this shows the shape of the stream. Nothing here runs or is tested. // Illustrative: these helpers read a finished recording and its saved records. Each group reads the record named by its key. import { filter, from, groupBy, map, mergeMap, toArray } from 'rxjs'; const refusals$ = from(readEventsFor('Setup guide', example.parameters.windowMinutes)).pipe( filter(event => event.kind === 'Edit blocked') ); const gat"
+        },
+        {
+          "name": "levels-limits",
+          "at": "2026-11-21T03:26:25.632Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "limits": [
+            "A gate row can seal off the hook's detail while you ask whether the checked version passed. If an edit slips through and changes the guide, use the event trail and the gate's recorded revision to find out which version the pass covers.",
+            "The analogy uses run, order and pass identifiers to join the views. A gate covering several orders may supply evidence to each of them. The order's criterion and the planning pass's reason for adding the guide still live in their written records.",
+            "The stream example assumes the recording ends. With a live feed, each group needs a closing rule before an array of its events can appear."
+          ]
+        },
+        {
+          "name": "levels-elsewhere",
+          "at": "2026-11-21T03:26:26.864Z",
+          "url": "/tools/catalog/geb2:8",
+          "fits": true,
+          "links": [
+            "Chrome DevTools Performance panel → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "Gödel, Escher, Bach, Basic Books → https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/g%C3%B6del-escher-bach/9780465026562/?lens=basic-books",
+            "DotLn Kit Guide → https://github.com/DylanBWood/DotLn/blob/main/docs/KIT.md",
+            "Chrome DevTools Performance features → https://developer.chrome.com/docs/devtools/performance/reference/",
+            "OpenTelemetry Tracing API → https://opentelemetry.io/docs/specs/otel/trace/api/",
+            "RxJS groupBy implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/groupBy.ts",
+            "RxJS toArray implementation → https://raw.githubusercontent.com/ReactiveX/rxjs/7.8.2/src/internal/operators/toArray.ts"
+          ],
+          "nearby": [
+            "Chunking\nSee how grouping events can give a higher-level reader a smaller set of units to inspect.",
+            "Sealed-off levels\nAsk when a view can rely on its own terms and which lower-level change forces you to open the detail.",
+            "Strange loop\nFollow a crossing between levels that eventually comes back to the one where it began."
+          ]
+        },
+        {
+          "name": "loop-open",
+          "at": "2026-11-21T03:26:27.275Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "heading": "Strange loop",
+          "specimen": "WHERE DOES EACH INSTRUCTION SEND YOU? We wrote these two cards for this lesson. Imagine picking up the first card, doing what it says and putting it down. Then read the second. Count the windows in this room. Count the letters on this card. Both cards start the same way. Your eyes pick out the marks, then you read them as an instruction. Look at the last words on each card to decide what to count. Which card sends you back to its own ink?",
+          "source": [
+            "View the 1956 Print Gallery on the museum website → https://www.escherinhetpaleis.nl/en/about-escher/masterpieces/print-gallery"
+          ]
+        },
+        {
+          "name": "loop-stepped",
+          "at": "2026-11-21T03:26:27.818Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. Start in the exhibition room where the visitor stands."
+            },
+            {
+              "step": 1,
+              "active": "edge:exhibits",
+              "reading": "In focus Gallery exhibits Seaport print. At this level, the seaport print is an object hanging on the wall."
+            },
+            {
+              "step": 2,
+              "active": "edge:depicts",
+              "reading": "In focus Seaport print depicts Seaport scene. Look into the picture at the buildings along the waterfront."
+            },
+            {
+              "step": 3,
+              "active": "edge:return",
+              "reading": "In focus Seaport scene contains Gallery. The gallery appears among the seaport buildings. The arrow points back to the room where the print hangs."
+            },
+            {
+              "step": 4,
+              "active": "node:Gallery",
+              "reading": "In focus Gallery. You are back at the starting point. The room that holds the picture also appears inside it."
+            }
+          ],
+          "returned": true
+        },
+        {
+          "name": "loop-restart",
+          "at": "2026-11-21T03:26:28.594Z",
+          "url": "/tools/catalog/geb2:302",
+          "fits": true,
+          "slider": "4",
+          "focused": "range"
+        },
+        {
+          "name": "isomorphism",
+          "at": "2026-11-21T03:26:29.301Z",
+          "url": "/tools/catalog/geb1:65",
+          "fits": true,
+          "heading": "Isomorphism",
+          "worked": "THE WORKED EXAMPLE Follow the same pair, L and R, along both paths. Write their digits 1 and 2 together in base three and their value is 1 × 3 + 2 = 5. Encode the letters separately and combine the two codes by shifting and adding, and you also get 5. The last step tests the fixed candidate 3. Open Gödel numbering to run the encoder and try other candidate numbers.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:joinWords",
+              "reading": "In focus L then R join to form LR. Start with L followed by R. Join the words by putting R after L."
+            },
+            {
+              "step": 1,
+              "active": "edge:encodeWord",
+              "reading": "In focus LR encodes as 5. LR gives the digits 12 in base three, which represent 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:encodePair",
+              "reading": "In focus L then R encode as 1 then 2. Start again with the same pair. This time encode L and R separately."
+            },
+            {
+              "step": 3,
+              "active": "edge:joinCodes",
+              "reading": "In focus 1 then 2 combine to give 5. Shift 1 by one base-three place and add 2. Both routes meet at 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus 5 decodes to LR. Read the digits 12 from left to right and turn them back into L and R."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. In base three, 3 is written 10. The digit 0 has no letter, so this positive number lies outside the image."
+            }
+          ]
+        },
+        {
+          "name": "godel",
+          "at": "2026-11-21T03:26:30.472Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "heading": "Gödel numbering",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:encodePair",
+              "reading": "In focus Words L and R encode as Codes 1 and 2. Start each code at zero. Multiply by three and add the digit for each letter in order."
+            },
+            {
+              "step": 1,
+              "active": "edge:joinCodes",
+              "reading": "In focus Codes 1 and 2 combine to give code 5. The number of base-three places on the right is 1. The join is 1 × 3 + 2 = 5."
+            },
+            {
+              "step": 2,
+              "active": "edge:joinWords",
+              "reading": "In focus Words L and R join to form word LR. Write the second word after the first to see the same join on the word side."
+            },
+            {
+              "step": 3,
+              "active": "edge:encodeWord",
+              "reading": "In focus word LR encodes as code 5. Encoding the joined word gives 5. Joining the codes gives 5."
+            },
+            {
+              "step": 4,
+              "active": "edge:decode",
+              "reading": "In focus code 5 decodes to word LR. Repeatedly divide 5 by three. Read the remainders in reverse order to recover LR."
+            },
+            {
+              "step": 5,
+              "active": "node:Candidate 3",
+              "reading": "In focus Candidate 3. The numeral 10 in base three has a zero digit. Dividing 3 by three exposes that remainder, so the candidate is outside the image."
+            }
+          ],
+          "model": "Executable model libs/features/tools/src/lib/studies/geb/godel-numbering.model.ts The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps.",
+          "specNote": "The TypeScript model runs this example and is tested in libs/features/tools/src/lib/studies/geb/godel-numbering.model.spec.ts. The ordinary pseudocode above explains its steps."
+        },
+        {
+          "name": "godel-candidate-7",
+          "at": "2026-11-21T03:26:31.700Z",
+          "url": "/tools/catalog/geb1:228",
+          "fits": true,
+          "reading": "In focus Candidate 7 decodes to word RL. The candidate decodes to RL and belongs to the image.",
+          "nodes": [
+            "Words L and R",
+            "Codes 1 and 2",
+            "word LR",
+            "code 5",
+            "Candidate 7",
+            "word RL"
+          ]
+        },
+        {
+          "name": "teams",
+          "at": "2026-11-21T03:26:32.514Z",
+          "url": "/tools/catalog",
+          "fits": true,
+          "shelfEntry": "Team Topologies 637 concepts 10 studied teams",
+          "studiedLinks": [
+            "Conway's law (1968)",
+            "Homomorphic force",
+            "Reverse Conway manoeuvre",
+            "Team-scoped flow",
+            "Seven-to-nine maximum effective team size",
+            "Platform as a product",
+            "Collaboration mode",
+            "X-as-a-Service mode",
+            "Facilitating mode",
+            "Organizational sensing"
+          ]
+        },
+        {
+          "name": "mode-1",
+          "at": "2026-11-21T03:26:33.552Z",
+          "url": "/tools/catalog/tt3:7",
+          "fits": true,
+          "heading": "Collaboration mode",
+          "intro": "When a decision needs knowledge from two teams, bring their examples and prototypes into the same trial. Both teams help interpret the results and change the design. Give that work a question and a deadline so everyone knows when to return to their own work.",
+          "specimen": "CAN THE JOINT SESSIONS END? Imagine Checkout needs a running copy of a change to test it. Release Platform can provide one, but the two teams have to agree when a preview is ready and what happens when a build fails. We wrote these trial notes for the example. During joint work · Checkout brought a passing and a failing build. Both teams agreed to show the link only when the preview was ready. At handoff · A Checkout engineer who missed the sessions used the instructions to create and remove a preview and diagnose the failed build. Release Platform checked that the failed run left nothing running. At first, each team holds a piece the other needs. At the end, an engineer who missed the joint sessions can follow the instructions alone. Release Platform owns and supports the service. Checkout owns its builds. Would agreeing on the instructions be enough to end this trial?",
+          "caption": "Follow the highlighted exchange from joint design to separate ownership of the service and the builds.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "node:Checkout",
+              "reading": "In focus Checkout. Checkout and Release Platform agree to spend ten working days finding a way to create, diagnose and remove a preview from the docs."
+            },
+            {
+              "step": 1,
+              "active": "edge:share-builds",
+              "reading": "In focus Checkout brings test builds to Release Platform. Checkout shares a passing build and a failed build. Release Platform contributes a prototype and its rules for cleaning up environments."
+            },
+            {
+              "step": 2,
+              "active": "edge:try-prototype",
+              "reading": "In focus Release Platform tests a prototype with Checkout. An early URL fails to open. The teams agree to return a request ID first, then a working URL or a build error."
+            },
+            {
+              "step": 3,
+              "active": "edge:try-from-docs",
+              "reading": "In focus Checkout tests the draft Preview API. Checkout creates and removes a preview from the docs and diagnoses the failed build. Release Platform confirms the failed run leaves no resources."
+            },
+            {
+              "step": 4,
+              "active": "edge:publish-api",
+              "reading": "In focus Release Platform publishes and owns the Preview API. A fresh Checkout engineer built, diagnosed and cleaned up a preview from the docs alone. Joint sessions end and Release Platform owns the API. If that test still failed on day ten, this trial would end and the teams would revisit scope or ownership."
+            }
+          ]
+        },
+        {
+          "name": "mode-2",
+          "at": "2026-11-21T03:26:34.669Z",
+          "url": "/tools/catalog/tt3:8",
+          "fits": true,
+          "heading": "X-as-a-Service mode",
+          "intro": "Imagine you changed the Pay button in an online shop. Before you publish the change, you want to try the button on a private copy of the shop app. That test copy is a preview.",
+          "specimen": "WHEN CAN CHECKOUT GET A TEST COPY ON ITS OWN? An engineer wants to try a change to an online shop’s Pay page before shoppers see it. The Pay page is part of the app that the Checkout team builds. Another team, Release Platform, runs the Preview API. That tool makes a private copy of the whole app. We invented the team names and wrote both requests and replies below. Checkout asks, “Can I get a copy of our shop app to check the Pay button?” The tool replies, “Your copy is ready. Open the test link.” Checkout asks, “Can I start our shop app and a fake payments app that will decline my test payment?” The tool replies, “This tool starts only one app per preview.” Checkout gets the first copy through a tool that Release Platform runs. That is what “as a service” means here. Nobody at Release Platform has to set it up for the engineer. The second request exceeds the one-app limit. Now the teams need to work out how the tool can start both apps together. What would let Checkout run the second test alone next time?",
+          "caption": "Checkout builds the shop app that contains the Pay page. Release Platform runs the Preview API, the tool that makes a test copy of that app. An arrow from Checkout to the tool shows the engineer asking for a copy. An arrow from Checkout to Release Platform shows the engineer asking its owners about the two-app test. The sentence under the controls tells you what each highlighted arrow means.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:maintain",
+              "reading": "In focus Release Platform runs the Preview API. Release Platform writes the instructions. They tell Checkout what to send, how to get the link to its test copy and where to ask for help."
+            },
+            {
+              "step": 1,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout's pipeline sends a commit reference, receives a request ID and uses it to look up the preview's status."
+            },
+            {
+              "step": 2,
+              "active": "edge:respond",
+              "reading": "In focus Preview API returns a ready URL to Checkout. Checkout tests the commit at the returned URL and removes its preview after testing."
+            },
+            {
+              "step": 3,
+              "active": "edge:report",
+              "reading": "In focus Checkout reports a gap to Release Platform. Three two-app runs hit the documented one-app limit. Checkout brings their request IDs to Release Platform. Only this unsupported case needs joint design. Routine one-app previews continue through the API."
+            },
+            {
+              "step": 4,
+              "active": "edge:reopen",
+              "reading": "In focus Release Platform tries a revised contract with Checkout. The teams try readiness and cleanup rules for a two-app preview while routine one-app jobs keep using the supported version."
+            },
+            {
+              "step": 5,
+              "active": "edge:request",
+              "reading": "In focus Checkout requests a preview through the Preview API. Checkout now runs a fresh two-app preview from the revised instructions without Release Platform’s help. Two-app previews can return to routine service use. Release Platform supports the version and Checkout chooses when to adopt it."
+            }
+          ]
+        },
+        {
+          "name": "mode-3",
+          "at": "2026-11-21T03:26:35.735Z",
+          "url": "/tools/catalog/tt3:9",
+          "fits": true,
+          "heading": "Facilitating mode",
+          "intro": "A team can deploy its service and still lack practice undoing a faulty release. In facilitating mode, a second team coaches the service owners through that specific skill. The test of the engagement comes when the coach steps back. Can someone on the owning team recognize the failure, restore a healthy release and verify recovery alone?",
+          "specimen": null,
+          "caption": "Follow who drives the rollback drill. The last step shows who looks after the skill after the coaching ends.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:request",
+              "reading": "In focus Returns team requests coaching from Reliability team. Returns asks for help rolling back its API and sets a two-week coaching window with Reliability."
+            },
+            {
+              "step": 1,
+              "active": "edge:teach",
+              "reading": "In focus Reliability team coaches Returns team. Reliability shows how to spot a faulty release in staging, restore a healthy version and check for recovery."
+            },
+            {
+              "step": 2,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A Returns engineer runs the drill with Reliability coaching and records the checks in the Returns runbook."
+            },
+            {
+              "step": 3,
+              "active": "edge:practice",
+              "reading": "In focus Returns team runs Rollback drill. A second Returns engineer restores the healthy release and verifies recovery using the runbook alone."
+            },
+            {
+              "step": 4,
+              "active": "edge:maintain",
+              "reading": "In focus Returns team maintains Returns runbook. A second Returns engineer verified recovery alone. Coaching ends and Returns owns the runbook. If the two weeks expired first, this engagement would still end. The teams would record what remained to learn."
+            }
+          ]
+        },
+        {
+          "name": "conway",
+          "at": "2026-11-21T03:26:36.954Z",
+          "url": "/tools/catalog/tt1:92",
+          "fits": true,
+          "heading": "Conway's law (1968)",
+          "caption": "Teams on the left own components on the right. This toy gives one component to each team and copies selected design contacts into component dependencies. Conway followed system interfaces back to the groups that designed them. Several components can trace back to one group. Change a design contact under Try another value to test the toy’s assumption.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:owns-stock",
+              "reading": "In focus Step 0. Stock team owns Inventory. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 1,
+              "active": "edge:owns-checkout",
+              "reading": "In focus Step 1. Checkout team owns Order entry. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 2,
+              "active": "edge:owns-billing",
+              "reading": "In focus Step 2. Billing team owns Payment processing. The horizontal arrow pairs one team with the component it designs."
+            },
+            {
+              "step": 3,
+              "active": "edge:contact-checkout-stock",
+              "reading": "In focus Step 3. Checkout team starts design talks with Stock team. On the right, this contact becomes a dependency from Order entry to Inventory."
+            },
+            {
+              "step": 4,
+              "active": "edge:dependency-checkout-stock",
+              "reading": "In focus Step 4. Order entry depends on Inventory. On the left, this dependency corresponds to Checkout team initiating a design conversation with Stock team."
+            },
+            {
+              "step": 5,
+              "active": "edge:contact-checkout-billing",
+              "reading": "In focus Step 5. Checkout team starts design talks with Billing team. On the right, this contact becomes a dependency from Order entry to Payment processing."
+            },
+            {
+              "step": 6,
+              "active": "edge:dependency-checkout-billing",
+              "reading": "In focus Step 6. Order entry depends on Payment processing. On the left, this dependency corresponds to Checkout team initiating a design conversation with Billing team."
+            },
+            {
+              "step": 7,
+              "active": "node:Order entry",
+              "reading": "In focus Step 7. Order entry. The ownership pairs stay in place. Each direct dependency mirrors a design contact drawn on the left."
+            }
+          ],
+          "nearby": [
+            "Reverse Conway manoeuvre\nStart from the intended component boundaries and use them to plan who needs to work together.",
+            "Homomorphic force\nLook more closely at what a structure-preserving correspondence can retain when several subsystems share a design group.",
+            "Real communication paths as the value-creation structure\nFind the real conversations and handoffs underlying the communication graph."
+          ]
+        },
+        {
+          "name": "reverse-conway",
+          "at": "2026-11-21T03:26:38.116Z",
+          "url": "/tools/catalog/tt1:138",
+          "fits": true,
+          "heading": "Reverse Conway manoeuvre",
+          "worked": "THE WORKED EXAMPLE Checkout writes directly into Inventory’s reservation tables. Checkout and Stock have to agree on a database edit and release it together. The desired interface lets Order entry ask Inventory for a reservation. That goal guides a change in ownership. Stock will decide and deploy the reservation rule, and Checkout will own the call. In the pilot, watch whether Stock can change its rule without a joint release.",
+          "readings": [
+            {
+              "step": 0,
+              "active": "edge:reserve",
+              "reading": "In focus Step 0. Order entry reserves stock through Inventory. The proposed interface replaces direct reservation writes. Inventory will own the reservation rule."
+            },
+            {
+              "step": 1,
+              "active": "edge:authorize",
+              "reading": "In focus Step 1. Order entry requests authorization from Payment processing. Order entry requests payment authorization through a separate contract."
+            },
+            {
+              "step": 2,
+              "active": "edge:stock-owner",
+              "reading": "In focus Step 2. Inventory is owned by Stock team. Give the Stock team authority over Inventory’s reservation logic, data and releases."
+            },
+            {
+              "step": 3,
+              "active": "edge:checkout-owner",
+              "reading": "In focus Step 3. Order entry is owned by Checkout team. Give the Checkout team responsibility for the customer’s checkout and for consuming both contracts."
+            },
+            {
+              "step": 4,
+              "active": "edge:billing-owner",
+              "reading": "In focus Step 4. Payment processing is owned by Billing team. Give the Billing team responsibility for payment authorization."
+            },
+            {
+              "step": 5,
+              "active": "edge:reservation-contract",
+              "reading": "In focus Step 5. Checkout team agrees on the reservation contract with Stock team. Agree the reservation behavior and move Checkout’s direct writes behind Inventory’s interface."
+            },
+            {
+              "step": 6,
+              "active": "edge:payment-contract",
+              "reading": "In focus Step 6. Checkout team agrees on the authorization contract with Billing team. Agree how payment is authorized and what Order entry receives on failure."
+            },
+            {
+              "step": 7,
+              "active": "node:Stock team",
+              "reading": "In focus Step 7. Stock team. Try one reservation-rule change. Can the Stock team deploy Inventory on its own while checkout still works through the same contract?"
+            }
+          ]
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "overflow": []
+    }
+  ],
+  "finishedAt": "2026-11-21T03:26:38.514Z"
+}

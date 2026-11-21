@@ -8515,6 +8515,104 @@
         }
       ],
       "dispositions": []
+    },
+    {
+      "id": "FUP-3383b2823818a102",
+      "key": "decision:docs/evidence/WO-024/decisions.md#wo-024-d026",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "12c2740a24e2a97aaa161f11c65bd523d796669e4c6f8960b47b482c833d34fb",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d026",
+          "title": "WO-024-D026: The independent verifier judges the absent input against criterion 8 and the two documented resolution routes under D022.",
+          "summary": "{ \"id\": \"WO-024-D026\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: next\", \"decision\": \"Close the final architecture review. The review found one missing operator choice. Carry criterion 8 into verification as unmet.\", \"evidence\": [ \"Round 3 reviewed target tree 5123840469369a3186aaf4a2ee3bdbd81187dc94 against round 2. All 1,459 current target paths, contents and file modes matched the reviewed candidate.\", \"The combined reviewer identified the absent final comparison choice. Only the operator could supply that input. The operator ended the comparisons, and D022 records the response to the unclear screenshots. Treating either option as selected would admit an unsupported claim.\", \"The correcte",
+          "missing": false
+        }
+      ],
+      "dispositions": [
+        {
+          "sourceRevision": 1,
+          "status": "settled",
+          "reason": "VER-001 made the judgment this row asked for: it recorded criterion 8 defective in the host-behavior class (control ordinal 4, WO-024-D027), and FINAL-001 confirms the record on its own evidence. The wording of the criterion's pattern is carried by WO-024-D027's own row.",
+          "reopenWhen": "The operator retracts the defect record for criterion 8.",
+          "targets": [],
+          "at": "2026-11-21T03:50:06.917Z"
+        }
+      ]
+    },
+    {
+      "id": "FUP-cc94230a9af54d6b",
+      "key": "decision:docs/evidence/WO-024/decisions.md#wo-024-d027",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "2034960a839e5c01fb86fddeec053836679fd2cf94f9c4f292d1abd4e3d75176",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d027",
+          "title": "WO-024-D027: The next planning pass rewrites criterion 8's pattern for design rounds so a round the operator declines, or a series the operator ends without a pick, is recorded with that round's…",
+          "summary": "{ \"id\": \"WO-024-D027\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: verify\", \"decision\": \"Record criterion 8 defective in the host-behavior class and judge it unmet, defective in VER-001. Its two branches hold only through the operator's choices: a pick in every round after the first, or a delay before the first pick. The operator picked the stack in round 1, judged neither round 8 candidate explanatory and ended the comparisons after round 13 without a pick, which WS-001 rule 25 allows. No candidate can supply those picks or undo the round 1 pick, and the criterion names no fallback for a round the operator declines or a series the operator ends without a pick.\", \"evidence\": [ \"The verifier r",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-ba585709cbd79672",
+      "key": "decision:docs/evidence/WO-024/decisions.md#wo-024-d028",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "ceff6456d5969bf3d9abecda944c4ecc7ece538692f51f83477e61ca3aba2c98",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d028",
+          "title": "WO-024-D028: Give the X-as-a-Service map's reply and report arrows separate ports, or place the Preview API between the two teams, so no two arrows cross at a box edge; recheck at 2080 by 1460 and…",
+          "summary": "{ \"id\": \"WO-024-D028\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: verify\", \"decision\": \"Board a follow-up for the X-as-a-Service drawing. The Preview API's reply to Checkout and Checkout's report to Release Platform meet at Checkout's right edge and cross there, beside the head of Release Platform's return arrow, so three line ends crowd one short stretch of that box. The drawing stays legible at every size and the reading below the controls names each arrow, so no criterion fails.\", \"evidence\": [ \"The verifier's capture docs/evidence/WO-024/walkthrough/ver-15-x-as-a-service-mode-end-2080.png at 2080 by 1460, enlarged in session scratch.\", \"relations-layout.ts routes each edge between box po",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-535d067f6a90b148",
+      "key": "decision:docs/evidence/WO-024/decisions.md#wo-024-d029",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "856cd6cf881a607c6dd3de1be530b4ee2e6df7575f0bda05db4f3b3ba2b21a41",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d029",
+          "title": "WO-024-D029: Assert the trial's duration and its comparable-ticket count in the organizational-sensing results step itself, reading both from the record's parameters.",
+          "summary": "{ \"id\": \"WO-024-D029\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: verify\", \"decision\": \"Board a follow-up for the organizational-sensing browser check. It reads the trial's duration only in the step that approves the trial, and in the step that reports the results it accepts any occurrence of the ticket count, so a wrong placeholder for the duration there would still pass. The shipped text is correct, so this is a gap in the test, not in the product.\", \"evidence\": [ \"apps/dotln-e2e/src/catalog.spec.ts, the pilot and triage test, asserts the duration on the fourth mechanism step and only the ticket count on the fifth; the fifth step's message in studyTt/en.json carries both the duration and t",
+          "missing": false
+        },
+        {
+          "hash": "156edaae4495707d2b0963bbeb6e27e78e414d1e44caa20e97b683311cdf3334",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d029",
+          "title": "WO-024-D029: Assert the trial's duration and its comparable-ticket count in the organizational-sensing results step itself, reading both from the record's parameters.",
+          "summary": "{ \"id\": \"WO-024-D029\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: verify\", \"decision\": \"Board a follow-up for the organizational-sensing browser check. It reads the trial's duration only in the step that approves the trial, and in the step that reports the results it accepts any occurrence of the ticket count, so a wrong placeholder for the duration there would still pass. The shipped text is correct, so this is a gap in the test, not in the product.\", \"evidence\": [ \"apps/dotln-e2e/src/catalog.spec.ts, the pilot and triage test, asserts the duration on the fourth mechanism step and only the ticket count on the fifth; the fifth step's message in studyTt/en.json carries both the duration and t",
+          "missing": false
+        },
+        {
+          "hash": "722247aabeed3bd941085c01ca0e667320746b99f92f46cdc88b2b99d2a9eedc",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d029",
+          "title": "WO-024-D029: Assert the trial's duration and its comparable-ticket count in the organizational-sensing results step itself, reading both from the record's parameters.",
+          "summary": "{ \"id\": \"WO-024-D029\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: verify\", \"decision\": \"Board a follow-up for the organizational-sensing browser check. It reads the trial's duration only in the step that approves the trial, and in the step that reports the results it accepts any occurrence of the ticket count, so a wrong placeholder for the duration there would still pass. The shipped text is correct, so this is a gap in the test, not in the product.\", \"evidence\": [ \"apps/dotln-e2e/src/catalog.spec.ts, the pilot and triage test, asserts the duration on the fourth mechanism step and only the ticket count on the fifth; the fifth step's message in studyTt/en.json carries both the duration and t",
+          "missing": false
+        }
+      ],
+      "dispositions": []
+    },
+    {
+      "id": "FUP-d6cfab1da288f9ca",
+      "key": "decision:docs/evidence/WO-024/decisions.md#wo-024-d031",
+      "kind": "decision",
+      "revisions": [
+        {
+          "hash": "59906ca1e9a5f1952f0ba67035e4180015ae65070f804b209b1adbdd399d33b8",
+          "ref": "docs/evidence/WO-024/decisions.md#wo-024-d031",
+          "title": "WO-024-D031: The next planning pass writes the draft at verified into each open DotLn-Angular order as a named step of its verification, with the profile's command, so the session that records the…",
+          "summary": "{ \"id\": \"WO-024-D031\", \"date\": \"2026-11-21\", \"dispatch\": \"resume: final review\", \"decision\": \"Publish the target change ready after the passing review, with no draft before it. The verification session opened no draft pull request, and the kit admits the draft form only while the order is verified, a phase the final-review dispatch ends. The review judges on its own session, its own checks and the registered gate at the reviewed tree. It reads the pull request's workflow runs back after the ready publish and records them in host-qualification.md and preview-pr.json.\", \"evidence\": [ \"gh pr list --repo DylanBWood/DotLn-Angular --state all on 2026-11-21 listed #20 as the newest pull request, me",
+          "missing": false
+        }
+      ],
+      "dispositions": []
     }
   ]
 }

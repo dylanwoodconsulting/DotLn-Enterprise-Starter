@@ -1,0 +1,32 @@
+# WO-024 records
+
+This branch files the instance records of WO-024, levels, loops and teams: the catalog in DotLn-Angular gains ten studies for Gödel, Escher, Bach and ten for Team Topologies, each read as a map of named things and the relationships between them that the reader steps through, drawn by a new `relations` family that takes every study as data. Four of the studies run a small mechanism the reader can change. The change passed independent verification on its first run. The final review accepts it on tree `f246a4d2`, which is the verified tree with one comment corrected, committed as five commits ending at `edd0379`. It is published to `DylanBWood/DotLn-Angular` as a ready pull request on `feat/levels-loops-and-teams-studies` for the operator to merge. No launchpad code changes: the records, the captures and scripts under the evidence directory, the workstream's rows and one sentence, the profile's catalog map and the register rows are the whole of this branch.
+
+## What a reviewer gets
+
+- The order's [evidence](../../evidence/WO-024/README.md): what a reader can try, the bundle and baseline notes, the link check of 55 addresses, the [content review](../../evidence/WO-024/review.md) with both critics' findings and their dispositions, the [authoring and review accounting](../../evidence/WO-024/fan-out.md), the executor's [walkthrough](../../evidence/WO-024/walkthrough.md), [architecture review](../../evidence/WO-024/self-review.md) and handoff, and the [host observations](../../evidence/WO-024/host-qualification.md) of the execution and of the final review.
+- The [design comparisons](../../evidence/WO-024/design/comparisons.md): thirteen rounds of rendered pairs at 2080 by 1460 and 360, eleven with a pick, two with neither candidate chosen, and the series ended after the last. The [worked examples](../../evidence/WO-024/design/worked-examples.md) say what each opening teaches.
+- Decisions [D001 to D031](../../evidence/WO-024/decisions.md), [VER-001](../../verifications/WO-024/VER-001.md) (pass) and [FINAL-001](FINAL-001.md) (pass), which are filed in the target under `docs/dotln/` beside a copy of the order. [D016](../../evidence/WO-024/decisions.md#wo-024-d016) gives each of the sixteen illustrative studies its reason for running nothing. [D027](../../evidence/WO-024/decisions.md#wo-024-d027) is the verifier's record that criterion 8 is defective, [D030](../../evidence/WO-024/decisions.md#wo-024-d030) is the acceptance and [D031](../../evidence/WO-024/decisions.md#wo-024-d031) is the route taken without a draft. The publication bodies [TARGET-PR.md](TARGET-PR.md) and [RELEASE-NOTES.md](RELEASE-NOTES.md) stay beside this file.
+- The final review's own evidence: 22 captures under `walkthrough/final-001-*`, [the session script](../../evidence/WO-024/final-001-session.cjs) with [its readings](../../evidence/WO-024/final-001-session.json), [the restart recheck](../../evidence/WO-024/final-001-restart.cjs) and [the record checks](../../evidence/WO-024/final-001-records.cjs).
+- The [workstream](../../workstreams/WS-001-dotln-angular.md), whose two rows for this order read final-reviewed and whose Design section links the taxonomy to the two works' studies. Its two rows for WO-037 are corrected from awaiting a merge to merged and released. The [repository profile](../../repositories/dotln-angular.md) names the `relations` builder, its layout and its family in the catalog map and lists this order's design comparisons.
+- The control segment `docs/control/orders/WO-024.jsonl`, the current-state projection, the work-order index, the decisions index and the follow-up register.
+
+## Validation
+
+- The target's registered review gate (install, lint, type check, unit tests, format, build, e2e and visual) passed at the reviewed tree with no tracked-byte mutation, in a run the final review made after its one change. The review also ran the browser suite without the cache, 195 passed, and the twenty-two new specs with the model corpus and mapper specs, 63 tests passed.
+- Criteria 1 to 7 and 9 are met. Criterion 1, which the executor left for the verifier's session, is met by VER-001's walkthrough, and the final review performed the session again in the served production build at 2080 by 1460, 3840 by 1620 and 360 with no overflow, console error or failed request.
+- Criterion 8 is unmet and recorded defective. It asked for a pick in every design round after the first or a delay before the first pick. Round 1 had a pick, round 8 ended with neither candidate chosen, and the series was ended after round 13 without one, as WS-001 rule 25 allows. The verifier recorded the defect and the final review confirms it on its own evidence. The line below names the command that undoes the record if it is wrong.
+- Gates in this worktree: no launchpad code changed, so no launchpad complete run is owed. `npm run test:docs` passed after the review's last record edit.
+
+## Limits and follow-ups
+
+- Carried to planning from this order: criterion 8's pattern for design rounds (`FUP-cc94230a9af54d6b`); the crowded edge in the X-as-a-Service map (`FUP-ba585709cbd79672`); the organizational-sensing browser check, whose row now carries what limits its repair (`FUP-535d067f6a90b148`); and the draft at verified as a named step of each order's verification (`FUP-d6cfab1da288f9ca`). The row that asked the verifier to judge criterion 8 is settled (`FUP-3383b2823818a102`).
+- No draft pull request preceded this publication. The verification session opened none, and the kit refuses the draft form once final review is dispatched. The pull request's checks therefore run for the first time on the ready head, and the final review reads them back into [preview-pr.json](../../evidence/WO-024/preview-pr.json) and the host observations.
+- A failed check or a review thread on the target pull request that names a defect returns the order through `resume: fix`.
+- After both merges, the operator fast-forwards `main`, runs `node scripts/bootstrap.mjs` and dispatches `resume: release close` there. That closes the target worktree with the no-release outcome for the launchpad and cuts the target's minor release with the reviewed notes.
+
+<!-- dotln-criterion-records:start -->
+
+- Criterion 8: defective (host-behavior) by ordinal 4; npm run resume -- retract 4 --work-order WO-024 in the order's worktree undoes a wrong record before the merge.
+
+<!-- dotln-criterion-records:end -->

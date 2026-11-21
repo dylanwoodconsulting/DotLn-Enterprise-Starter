@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "workOrder": "WO-024",
+  "repository": "DylanBWood/DotLn-Angular",
+  "baseBranch": "main",
+  "headBranch": "feat/levels-loops-and-teams-studies",
+  "draft": {
+    "publication": "none",
+    "reason": "The verification session opened no draft pull request, and the kit admits the draft form only while the order is verified, a phase the final-review dispatch ends.",
+    "attempt": {
+      "command": "node scripts/worktree.mjs publish WO-024 --target-worktree --draft --branch feat/levels-loops-and-teams-studies --title \"feat: add concept studies for levels, loops and teams\" --body-file docs/final-reviews/WO-024/TARGET-PR.md",
+      "session": "the final-review session, before it recorded a result",
+      "output": "error: target publish refused: the draft form is legal at verified with a passing verification; WO-024 is final-review"
+    },
+    "verification": {
+      "id": "VER-001",
+      "verdict": "pass",
+      "treeHash": "5123840469369a3186aaf4a2ee3bdbd81187dc94"
+    }
+  },
+  "finalReview": {
+    "reviewedCommit": "edd0379ac1e6e0df1601dbdb55824f800d48137a",
+    "reviewedTree": "f246a4d2924c831e8da16ec41cc0a9aee1f8d3a0",
+    "targetGate": "target-gate:3d3e2191-e5ec-42e4-a27a-56643d0aeaf0 (review selection) at the reviewed tree, recorded 2026-11-21T03:37:48.161Z by the final review",
+    "pullRequest": null,
+    "workflowRuns": [],
+    "threads": [],
+    "routes": "No pull request existed when the final review recorded its result. The ready publication's number, head, workflow runs and threads are added here once the final review reads it back."
+  }
+}
