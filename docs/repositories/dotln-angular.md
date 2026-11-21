@@ -356,9 +356,10 @@ relations, hooks and verification notes, across six works.
 | The studies, one JSON per concept, and the coverage summary | `libs/shared/catalog/src/studies/<work>/`, `libs/shared/catalog/src/studies/studies-summary.json` |
 | The study check, with the report and the link check | `tools/scripts/catalog/check-studies.mjs` |
 | The study composite and the disclosures it defers | `libs/features/tools/src/lib/composites/study/`, `libs/features/tools/src/lib/composites/study-explanation/` |
-| The visual families, `motion`, `timeline`, `marbles`, `flow` and `states`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
+| The visual families, `motion`, `timeline`, `marbles`, `flow`, `states` and `relations`, and their controls | `libs/features/tools/src/lib/composites/study-visuals/` |
 | The model modules, one per drawn study, and the list of them | `libs/features/tools/src/lib/studies/movement/`, `libs/features/tools/src/lib/studies/eip/`, `libs/features/tools/src/lib/studies/poeaa/`, `libs/features/tools/src/lib/studies/study-models.ts` |
 | The `states` builder, which reads a simulation's snapshots into the steps the family draws | `libs/features/tools/src/lib/studies/states.ts` |
+| The `relations` builder and its layout, which draw a study's nodes, directed relationships and steps as a stack of levels or a graph in columns | `libs/features/tools/src/lib/studies/relations.ts`, `libs/features/tools/src/lib/studies/relations-layout.ts`; the examples under `libs/features/tools/src/lib/studies/geb/` and `libs/features/tools/src/lib/studies/tt/`, the four that run a mechanism as a `*.simulation.ts` with a `*.model.ts`; the family's composite under `libs/features/tools/src/lib/composites/study-visuals/relations/` |
 | The enterprise presentations' lookup tables and the helpers they share: a choice by an operation's kind, an on/off input and list joining | `libs/features/tools/src/lib/studies/match-kind.ts`, `libs/features/tools/src/lib/studies/parameters.ts`, `listOf` in `libs/features/tools/src/lib/studies/states.ts`; each `*.presentation.ts` under `libs/features/tools/src/lib/studies/poeaa/` reads its names and token letters from tables keyed by its own id union |
 | Movement presentation descriptions and number formatting | `libs/features/tools/src/lib/studies/movement/presentation.ts`, `libs/features/tools/src/lib/studies/number-format.ts`; each first-batch `*.presentation.ts` describes its own run and frames |
 | The flow builders: `flowModel` for a flow written step by step, `flowFromMarbles` for one drawn from a marble example that runs | `libs/features/tools/src/lib/studies/flow.ts` |
@@ -393,14 +394,18 @@ closed sections create no explanation view, and visited sections keep theirs on
 collapse. An enterprise-pattern study's drawing is a `states` register: the example's records
 as rows and their states as columns, each object moving between them step by step, built by
 `statesModel` from the snapshots the study's simulation produces, so the drawing and the spec
-read the same run. The `relations` family lands with the batch that needs it. The
+read the same run. A `relations` study steps through a graph of named ideas. Its shape, highlighted
+item and reading come from `relationsModel`. The four executable GEB and Team Topologies examples
+also use their simulation's results to build that graph. The
 design comparisons and their outcome are in the launchpad's
 [`docs/evidence/WO-019/design/`](../evidence/WO-019/design/),
 [`docs/evidence/WO-020/design/`](../evidence/WO-020/design/),
 [`docs/evidence/WO-021/design/`](../evidence/WO-021/design/),
-[`docs/evidence/WO-022/design/`](../evidence/WO-022/design/) and
+[`docs/evidence/WO-022/design/`](../evidence/WO-022/design/),
 [`docs/evidence/WO-023/design/`](../evidence/WO-023/design/comparisons.md), whose first round
-the operator delayed; it stays that order's own criterion (WS-001 rule 25). Menu behavior and its
+the operator delayed (it stays that order's own criterion, WS-001 rule 25), and
+[`docs/evidence/WO-024/design/`](../evidence/WO-024/design/comparisons.md), the `relations`
+family's thirteen rounds, which the operator ended after the last. Menu behavior and its
 small controlled filter composite stay on the lazy Tools path, with overlay
 providers supplied there instead of through the eager UI provider.
 
