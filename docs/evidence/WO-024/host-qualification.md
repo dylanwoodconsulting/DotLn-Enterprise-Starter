@@ -38,4 +38,4 @@ The verification session opened no draft pull request. Before recording a result
 node scripts/worktree.mjs publish WO-024 --target-worktree --draft --branch feat/levels-loops-and-teams-studies --title "feat: add concept studies for levels, loops and teams" --body-file docs/final-reviews/WO-024/TARGET-PR.md
 ```
 
-The hook admitted it, the host ran it, and the helper refused it before it read the target: `error: target publish refused: the draft form is legal at verified with a passing verification; WO-024 is final-review`. Nothing was pushed. [D031](decisions.md#wo-024-d031) records the route taken instead.
+The hook admitted it, the host ran it, and the helper refused it before it read the target: `error: target publish refused: the draft form is legal at verified with a passing verification; WO-024 is final-review`. Nothing was pushed. [D031](https://github.com/DylanBWood/DotLn-Angular/blob/4e58f94f74b899bea774ce8a5c1b1216843c35ac/docs/dotln/evidence/WO-024/decisions.md#wo-024-d031), filed in the target with the order's other decisions, records the route taken instead.
