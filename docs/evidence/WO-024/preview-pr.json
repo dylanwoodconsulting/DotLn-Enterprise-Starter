@@ -2,6 +2,8 @@
   "schemaVersion": 1,
   "workOrder": "WO-024",
   "repository": "DylanBWood/DotLn-Angular",
+  "number": 21,
+  "url": "https://github.com/DylanBWood/DotLn-Angular/pull/21",
   "baseBranch": "main",
   "headBranch": "feat/levels-loops-and-teams-studies",
   "draft": {
@@ -22,9 +24,65 @@
     "reviewedCommit": "edd0379ac1e6e0df1601dbdb55824f800d48137a",
     "reviewedTree": "f246a4d2924c831e8da16ec41cc0a9aee1f8d3a0",
     "targetGate": "target-gate:3d3e2191-e5ec-42e4-a27a-56643d0aeaf0 (review selection) at the reviewed tree, recorded 2026-11-21T03:37:48.161Z by the final review",
-    "pullRequest": null,
-    "workflowRuns": [],
+    "resultRecordedAt": "2026-11-21T04:08:31.922Z",
+    "publication": {
+      "command": "node scripts/worktree.mjs publish WO-024 --target-worktree --branch feat/levels-loops-and-teams-studies --title \":sparkles: Add Gödel, Escher, Bach and Team Topologies studies, each a relationship map to step through\" --body-file docs/final-reviews/WO-024/TARGET-PR.md",
+      "session": "the final-review session, after final-review-result pass and target-records",
+      "openedAt": "2026-11-21T04:11:45Z",
+      "headSha": "4e58f94f74b899bea774ce8a5c1b1216843c35ac",
+      "recordsCommit": "4e58f94f74b899bea774ce8a5c1b1216843c35ac",
+      "body": "docs/final-reviews/WO-024/TARGET-PR.md"
+    },
+    "observedAt": "2026-11-21T04:27:49Z",
+    "state": "OPEN",
+    "isDraft": false,
+    "headSha": "4e58f94f74b899bea774ce8a5c1b1216843c35ac",
+    "title": ":sparkles: Add Gödel, Escher, Bach and Team Topologies studies, each a relationship map to step through",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN",
+    "reviews": 0,
+    "comments": 0,
+    "reviewThreads": 0,
+    "titleEvents": [],
+    "workflowRuns": [
+      {
+        "workflow": "CI",
+        "runId": 44864885235,
+        "event": "pull_request",
+        "headSha": "4e58f94f74b899bea774ce8a5c1b1216843c35ac",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "checks",
+            "conclusion": "success",
+            "startedAt": "2026-11-21T04:11:51Z",
+            "completedAt": "2026-11-21T04:27:33Z"
+          },
+          {
+            "name": "visual",
+            "conclusion": "success",
+            "startedAt": "2026-11-21T04:11:52Z",
+            "completedAt": "2026-11-21T04:15:39Z"
+          }
+        ]
+      },
+      {
+        "workflow": "Pull request title",
+        "runId": 44864885274,
+        "event": "pull_request",
+        "headSha": "4e58f94f74b899bea774ce8a5c1b1216843c35ac",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "title",
+            "conclusion": "success",
+            "startedAt": "2026-11-21T04:11:52Z",
+            "completedAt": "2026-11-21T04:12:04Z"
+          }
+        ]
+      }
+    ],
     "threads": [],
-    "routes": "No pull request existed when the final review recorded its result. The ready publication's number, head, workflow runs and threads are added here once the final review reads it back."
+    "routes": "The workflow runs were first read after the result was recorded, because no draft existed: all three jobs passed on the published head. No review, comment or review thread existed at the reading, so no item needed a route, and the title workflow left the reviewed title as written."
   }
 }

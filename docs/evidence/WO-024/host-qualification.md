@@ -39,3 +39,15 @@ node scripts/worktree.mjs publish WO-024 --target-worktree --draft --branch feat
 ```
 
 The hook admitted it, the host ran it, and the helper refused it before it read the target: `error: target publish refused: the draft form is legal at verified with a passing verification; WO-024 is final-review`. Nothing was pushed. [D031](https://github.com/DylanBWood/DotLn-Angular/blob/4e58f94f74b899bea774ce8a5c1b1216843c35ac/docs/dotln/evidence/WO-024/decisions.md#wo-024-d031), filed in the target with the order's other decisions, records the route taken instead.
+
+## The ready publication
+
+`final-review-result pass` was recorded at 04:08 UTC. `target-records` then added the records commit `4e58f94f74b899bea774ce8a5c1b1216843c35ac` over the five reviewed commits, and the reviewer ran the profile's ready form plainly from the launchpad order worktree:
+
+```sh
+node scripts/worktree.mjs publish WO-024 --target-worktree --branch feat/levels-loops-and-teams-studies --title ":sparkles: Add Gödel, Escher, Bach and Team Topologies studies, each a relationship map to step through" --body-file docs/final-reviews/WO-024/TARGET-PR.md
+```
+
+The hook admitted it and the host ran it, with no refusal or denial. The helper pushed `feat/levels-loops-and-teams-studies` at `4e58f94` and opened pull request #21 on `github.com/DylanBWood/DotLn-Angular` at 04:11 UTC. Read back with `gh pr view 21 --repo DylanBWood/DotLn-Angular`, it was open, not a draft, on base `main` at that head, mergeable, with the reviewed title and no review, comment or thread. The published body is the reviewed one with the gate's table of the eight passing commands after it.
+
+These were the pull request's first workflow runs, since no draft preceded it. On head `4e58f94` the title run 44864885274 passed (04:11 to 04:12) and left the title as written, and CI run 44864885235 passed its `visual` job (04:11 to 04:15) and its `checks` job (04:11 to 04:27). Read back at 04:27, the pull request was open, not a draft, carried the reviewed title, merged clean and had no review, comment or thread. [preview-pr.json](preview-pr.json) holds the reading. No session merged, pushed `main` or published a release.
